@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/rafaelmardojai/Blanket">
+    <!-- UI Files -->
+    <file>window.ui</file>
+    <!-- Icons -->
+    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-rain.svg</file>
+    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-wind.svg</file>
+    <!-- Sounds -->
+    <file>sounds/rain.ogg</file>
+    <file>sounds/wind.ogg</file>
+  </gresource>
+</gresources>
