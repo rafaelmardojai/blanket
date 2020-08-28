@@ -55,6 +55,8 @@ class SoundWidget(Handy.ActionRow):
             sound.icon_name, Gtk.IconSize.DIALOG)
         Gtk.StyleContext.add_class(icon.get_style_context(), 'sound-icon')
         icon.set_pixel_size(64)
+        icon.props.margin_top = 6
+        icon.props.margin_bottom = 6
         self.add_prefix(icon)
 
     def change_vol(self, scale):
