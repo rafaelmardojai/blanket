@@ -22,7 +22,7 @@ gi.require_version('Gst', '1.0')
 gi.require_version('Gtk', '3.0')
 gi.require_version('Handy', '1')
 
-from gi.repository import GObject, Gst, Gtk, Gio, Handy
+from gi.repository import Gst, Gdk, Gio, Gtk, Handy
 
 from .window import BlanketWindow
 
@@ -35,11 +35,19 @@ class Application(Gtk.Application):
     def do_startup(self):
         # Startup application
         Gtk.Application.do_startup(self)
+        self.load_css()
 
         # Init GStreamer
         Gst.init()
         # Init Handy
         Handy.init()
+
+    def load_css(self):
+        css_provider = Gtk.CssProvider()
+        css_provider.load_from_resource('/com/rafaelmardojai/Blanket/style.css')
+        screen = Gdk.Screen.get_default()
+        style_context = Gtk.StyleContext()
+        style_context.add_provider_for_screen(screen, css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
 
     def do_activate(self):
         win = self.props.active_window

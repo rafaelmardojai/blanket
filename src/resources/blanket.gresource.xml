@@ -3,6 +3,10 @@
   <gresource prefix="/com/rafaelmardojai/Blanket">
     <!-- UI Files -->
     <file>window.ui</file>
+
+    <!-- CSS -->
+    <file>style.css</file>
+
     <!-- Icons -->
     <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-rain.svg</file>
     <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-wind.svg</file>
