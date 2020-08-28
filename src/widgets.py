@@ -21,10 +21,10 @@ from .sound import SoundObject, SoundPlayer
 
 
 '''
-SoundWidget
+Sound
 Create a widget to show, play and manage a Sound
 '''
-class SoundWidget(Handy.ActionRow):
+class Sound(Handy.ActionRow):
 
     def __init__(self, sound, **kwargs):
         super().__init__(**kwargs)
@@ -90,6 +90,6 @@ class SoundsGroup(Gtk.Box):
         self.model.append(sound)
 
     def _create_sound_widget(self, sound):
-        widget = SoundWidget(sound)
+        widget = Sound(sound)
         return widget
 
