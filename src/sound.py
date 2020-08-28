@@ -13,15 +13,15 @@
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.# window.py
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 from gi.repository import GObject, Gst, Gtk, Handy
 
 '''
-Sound object
+SoundObject
 Describe a sound with it's propeties
 '''
-class Sound(GObject.Object):
+class SoundObject(GObject.Object):
 
     def __init__(self, title, uri=None, icon=None, **kwargs):
         super().__init__(**kwargs)
@@ -36,48 +36,7 @@ class Sound(GObject.Object):
 
 
 '''
-SoundWidget object
-Create a widget to show, play and manage a Sound
-'''
-class SoundWidget(Handy.ActionRow):
-
-    def __init__(self, sound, **kwargs):
-        super().__init__(**kwargs)
-
-        self.set_activatable(False)
-        self.set_selectable(False)
-        # Set title
-        self.set_title(sound.title)
-
-        # Create a new SoundPlayer with the given Sound
-        self.player = SoundPlayer(sound)
-
-        # Create the box that will contain the player controls
-        controls = Gtk.Box(
-            orientation=Gtk.Orientation.HORIZONTAL,
-            spacing = 6)
-        self.add(controls)
-
-        # Create a scale to controll the SoundPlayer volume
-        self.scale = Gtk.Scale.new_with_range(Gtk.Orientation.HORIZONTAL, 0, 1, 0.1)
-        self.scale.set_draw_value(False)
-        self.scale.props.expand = True
-        self.scale.connect('value-changed', self.change_vol)
-        controls.pack_start(self.scale, True, True, 0)
-
-        # Create a icon for the Sound
-        icon = Gtk.Image.new_from_icon_name(
-            sound.icon_name, Gtk.IconSize.DIALOG)
-        icon.set_pixel_size(96)
-        self.add_prefix(icon)
-
-    def change_vol(self, scale):
-        volume = scale.get_value()
-        self.player.set_volume(volume)
-
-
-'''
-SoundPlayer object
+SoundPlayer
 Create and controll a GStreamer playbin with the given Sound
 
 Based on Focusli JavaScript code

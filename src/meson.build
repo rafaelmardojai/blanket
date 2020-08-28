@@ -23,6 +23,7 @@ sources = [
   'main.py',
   'window.py',
   'sound.py',
+  'widgets.py',
 ]
 
 install_data(sources, install_dir: moduledir)
