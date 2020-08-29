@@ -15,6 +15,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
+import os
+
 from gi.repository import Gtk, Handy
 
 from .sound import SoundObject
@@ -85,4 +88,37 @@ class BlanketWindow(Handy.ApplicationWindow):
         )
         add_row_box.pack_start(add_row_icon, True, True, 0)
         self.custom_sounds.listbox.add(add_row)
+        self.custom_sounds.listbox.connect('row-activated', self.open_audio)
+
+    def open_audio(self, _widget=None, _row=None):
+        otf_filter = Gtk.FileFilter()
+        otf_filter.set_name(_('OTF Fonts'))
+        otf_filter.add_mime_type('font/otf')
+        otf_filter.add_pattern('.otf')
+        ttf_filter = Gtk.FileFilter()
+        ttf_filter.set_name(_('TTF Fonts'))
+        ttf_filter.add_mime_type('font/ttf')
+        ttf_filter.add_pattern('.ttf')
+
+        filechooser = Gtk.FileChooserNative.new(
+            _('Open audio'),
+            self,
+            Gtk.FileChooserAction.OPEN,
+            None,
+            None)
+        response = filechooser.run()
+
+        if response == Gtk.ResponseType.ACCEPT:
+            filename = filechooser.get_filename()
+            if filename:
+                name = os.path.basename(filename).split('.')[0]
+                uri = filechooser.get_uri()
+                print(filename)
+                print(uri)
+
+                # Create a new SoundObject
+                sound = SoundObject(name, uri)
+                # Add SoundObject to SoundsGroup
+                self.custom_sounds.add(sound)
+                self.custom_sounds.show_all()
 

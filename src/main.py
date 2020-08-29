@@ -32,15 +32,25 @@ class Application(Gtk.Application):
         super().__init__(application_id='com.rafaelmardojai.Blanket',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
 
+        self.window = None
+
     def do_startup(self):
         # Startup application
         Gtk.Application.do_startup(self)
+        self.setup_actions()
         self.load_css()
 
         # Init GStreamer
         Gst.init()
         # Init Handy
         Handy.init()
+
+    def setup_actions(self):
+        # Add open action
+        open_action = Gio.SimpleAction.new('open', None)
+        open_action.connect('activate', self.on_open)
+        self.add_action(open_action)
+        self.set_accels_for_action('app.open', ['<Ctl>o'])
 
     def load_css(self):
         css_provider = Gtk.CssProvider()
@@ -50,11 +60,13 @@ class Application(Gtk.Application):
         style_context.add_provider_for_screen(screen, css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
 
     def do_activate(self):
-        win = self.props.active_window
-        if not win:
-            win = BlanketWindow(application=self)
-        win.present()
+        self.window = self.props.active_window
+        if not self.window:
+            self.window = BlanketWindow(application=self)
+        self.window.present()
 
+    def on_open(self, action, param):
+        self.window.open_audio()
 
 def main(version):
     app = Application()
