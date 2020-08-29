@@ -51,7 +51,7 @@ class SoundPlayer(object):
         self.playbin = Gst.ElementFactory.make('playbin', sound.name)
         self.playbin.set_property('uri', sound.uri)
         sink = Gst.ElementFactory.make('pulsesink', 'sink')
-        self.playbin.set_property('audio-sink',sink)
+        self.playbin.set_property('audio-sink', sink)
 
         self.prerolled = False
         playbin_bus = self.playbin.get_bus()
