@@ -30,6 +30,7 @@ class BlanketWindow(Handy.ApplicationWindow):
     sounds = {
         'Nature': [
             'Rain',
+            'Storm',
             'Wind',
             'Summer Night'
         ],
