@@ -91,28 +91,35 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.custom_sounds.listbox.connect('row-activated', self.open_audio)
 
     def open_audio(self, _widget=None, _row=None):
-        otf_filter = Gtk.FileFilter()
-        otf_filter.set_name(_('OTF Fonts'))
-        otf_filter.add_mime_type('font/otf')
-        otf_filter.add_pattern('.otf')
-        ttf_filter = Gtk.FileFilter()
-        ttf_filter.set_name(_('TTF Fonts'))
-        ttf_filter.add_mime_type('font/ttf')
-        ttf_filter.add_pattern('.ttf')
 
-        filechooser = Gtk.FileChooserNative.new(
+        filters = {
+            'OGG'  : ['audio/ogg'],
+            'FLAC' : ['audio/x-flac'],
+            'WAV'  : ['audio/x-wav', 'audio/wav'],
+            'MP3'  : ['audio/mpeg'],
+        }
+
+        self.filechooser = Gtk.FileChooserNative.new(
             _('Open audio'),
             self,
             Gtk.FileChooserAction.OPEN,
             None,
             None)
-        response = filechooser.run()
+
+        for f, mts in filters.items():
+            audio_filter = Gtk.FileFilter()
+            audio_filter.set_name(f)
+            for mt in mts:
+                  audio_filter.add_mime_type(mt)
+            self.filechooser.add_filter(audio_filter)
+
+        response = self.filechooser.run()
 
         if response == Gtk.ResponseType.ACCEPT:
-            filename = filechooser.get_filename()
+            filename = self.filechooser.get_filename()
             if filename:
                 name = os.path.basename(filename).split('.')[0]
-                uri = filechooser.get_uri()
+                uri = self.filechooser.get_uri()
                 print(filename)
                 print(uri)
 
