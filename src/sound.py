@@ -23,12 +23,13 @@ Describe a sound with it's propeties
 '''
 class SoundObject(GObject.Object):
 
-    def __init__(self, title, uri=None, icon=None, **kwargs):
+    def __init__(self, title, uri=None, icon=None, removable=False, **kwargs):
         super().__init__(**kwargs)
 
         resource_tmpl = 'resource:////com/rafaelmardojai/Blanket/sounds/{}.ogg'
         icon_tmpl = 'com.rafaelmardojai.Blanket-{}'
 
+        self.removable = removable
         self.title = title
         self.name = title.replace(' ', '-').lower()
         self.uri = uri if uri else resource_tmpl.format(self.name)
@@ -48,10 +49,10 @@ Ported to Python by Rafael Mardojai CM
 class SoundPlayer(object):
 
     def __init__(self, sound):
-        self.playbin = Gst.ElementFactory.make('playbin', sound.name)
-        self.playbin.set_property('uri', sound.uri)
-        sink = Gst.ElementFactory.make('pulsesink', 'sink')
-        self.playbin.set_property('audio-sink', sink)
+        self.sound = sound
+
+        self.playbin = Gst.ElementFactory.make('playbin', self.sound.name)
+        self.playbin.set_property('uri', self.sound.uri)
 
         self.prerolled = False
         playbin_bus = self.playbin.get_bus()
@@ -72,6 +73,10 @@ class SoundPlayer(object):
             self.pause()
         elif state is not Gst.State.PLAYING:
             self.play()
+
+    def remove(self):
+        self.playbin.set_state(Gst.State.NULL)
+        self.playbin.unref()
 
     def _on_bus_message(self, bus, message):
         if message:

@@ -26,11 +26,16 @@ Create a widget to show, play and manage a Sound
 '''
 class Sound(Handy.ActionRow):
 
-    def __init__(self, sound, **kwargs):
+    def __init__(self, sound, model, **kwargs):
         super().__init__(**kwargs)
 
+        # Gio.ListStore
+        self.model = model
+
+        # Change GtkListBoxRow props
         self.set_activatable(False)
         self.set_selectable(False)
+
         # Set title
         self.set_title(sound.title)
 
@@ -59,9 +64,24 @@ class Sound(Handy.ActionRow):
         icon.props.margin_bottom = 6
         self.add_prefix(icon)
 
+        if sound.removable:
+            remove = Gtk.Button(valign=Gtk.Align.CENTER)
+            Gtk.StyleContext.add_class(remove.get_style_context(), 'destructive-action')
+            remove_icon = Gtk.Image.new_from_icon_name(
+                'edit-delete-symbolic', Gtk.IconSize.MENU)
+            remove.add(remove_icon)
+            controls.pack_end(remove, False, False, 0)
+            remove.connect('clicked', self.remove)
+
+
     def change_vol(self, scale):
         volume = scale.get_value()
         self.player.set_volume(volume)
+
+    def remove(self, widget):
+        self.model.remove(self.get_index())
+        self.player.remove()
+
 
 
 '''
@@ -90,6 +110,6 @@ class SoundsGroup(Gtk.Box):
         self.model.append(sound)
 
     def _create_sound_widget(self, sound):
-        widget = Sound(sound)
+        widget = Sound(sound, self.model)
         return widget
 

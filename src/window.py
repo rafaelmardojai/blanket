@@ -124,7 +124,7 @@ class BlanketWindow(Handy.ApplicationWindow):
                 print(uri)
 
                 # Create a new SoundObject
-                sound = SoundObject(name, uri)
+                sound = SoundObject(name, uri, removable=True)
                 # Add SoundObject to SoundsGroup
                 self.custom_sounds.add(sound)
                 self.custom_sounds.show_all()
