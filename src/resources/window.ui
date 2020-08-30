@@ -5,7 +5,7 @@
   <template class="BlanketWindow" parent="HdyApplicationWindow">
     <property name="can_focus">False</property>
     <property name="default_width">500</property>
-    <property name="default_height">500</property>
+    <property name="default_height">600</property>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
