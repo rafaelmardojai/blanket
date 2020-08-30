@@ -120,8 +120,6 @@ class BlanketWindow(Handy.ApplicationWindow):
             if filename:
                 name = os.path.basename(filename).split('.')[0]
                 uri = self.filechooser.get_uri()
-                print(filename)
-                print(uri)
 
                 # Create a new SoundObject
                 sound = SoundObject(name, uri, removable=True)
