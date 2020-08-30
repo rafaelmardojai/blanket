@@ -126,7 +126,8 @@ class BlanketWindow(Handy.ApplicationWindow):
                 uri = self.filechooser.get_uri()
 
                 # Create a new SoundObject
-                sound = SoundObject(name, uri, removable=True)
+                sound = SoundObject(name, uri,
+                    'com.rafaelmardojai.Blanket-sound-wave', removable=True)
                 # Add SoundObject to SoundsGroup
                 self.custom_sounds.add(sound)
                 self.custom_sounds.show_all()
