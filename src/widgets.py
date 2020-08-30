@@ -43,9 +43,7 @@ class Sound(Handy.ActionRow):
         self.player = SoundPlayer(sound)
 
         # Create the box that will contain the player controls
-        controls = Gtk.Box(
-            orientation=Gtk.Orientation.HORIZONTAL,
-            spacing = 6)
+        controls = Gtk.Box(spacing=6)
         self.add(controls)
 
         # Create a scale to controll the SoundPlayer volume
