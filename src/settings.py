@@ -33,16 +33,13 @@ class Settings(object):
         # Check if Settings file exists
         if not os.path.exists(self.settings_file):
             # Create empty settings dict
-            self.settings = {}
-            self.settings['profiles'] = {'Default': {}}
-            self.settings['audios'] = {}
-
-            # Write dict to file
-            os.makedirs(os.path.dirname(self.settings_file), exist_ok=True)
-            self.save()
+            self.__setup_file()
         else:
-            with open(self.settings_file) as json_file:
-                self.settings = json.load(json_file)
+            try:
+                with open(self.settings_file) as json_file:
+                    self.settings = json.load(json_file)
+            except Exception:
+                self.__setup_file()
 
             if 'profiles' not in self.settings:
                 settings['profiles'] = {'Default': {}}
@@ -92,4 +89,13 @@ class Settings(object):
     def save(self):
         with open(self.settings_file, 'w') as outfile:
             json.dump(self.settings, outfile, indent=2)
+
+    def __setup_file(self):
+        self.settings = {}
+        self.settings['profiles'] = {'Default': {}}
+        self.settings['audios'] = {}
+
+        # Write dict to file
+        os.makedirs(os.path.dirname(self.settings_file), exist_ok=True)
+        self.save()
 
