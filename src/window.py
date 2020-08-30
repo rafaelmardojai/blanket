@@ -50,6 +50,10 @@ class BlanketWindow(Handy.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
+        # GtkSizeGroup for sound labels
+        self.label_group = Gtk.SizeGroup()
+        self.label_group.set_mode(Gtk.SizeGroupMode.HORIZONTAL)
+
         self.setup_sounds()
         self.setup_custom_sounds()
 
@@ -59,7 +63,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         # Setup default sounds
         for g, sl in self.sounds.items():
             # Create a new SoundsGroup
-            group = SoundsGroup(g)
+            group = SoundsGroup(g, self.label_group)
             # Iterate sounds
             for s in sl:
                 # Create a new SoundObject
@@ -72,7 +76,7 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     def setup_custom_sounds(self):
         # Setup user custom sounds
-        self.custom_sounds = SoundsGroup('Custom')
+        self.custom_sounds = SoundsGroup('Custom', self.label_group)
         self.box.pack_start(self.custom_sounds, False, True, 0)
 
         # Add sound button row

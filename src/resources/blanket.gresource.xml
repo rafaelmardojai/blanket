@@ -3,6 +3,7 @@
   <gresource prefix="/com/rafaelmardojai/Blanket">
     <!-- UI Files -->
     <file>window.ui</file>
+    <file>sound-row.ui</file>
 
     <!-- CSS -->
     <file>style.css</file>

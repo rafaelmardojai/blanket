@@ -21,56 +21,52 @@ from .sound import SoundObject, SoundPlayer
 
 
 '''
-Sound
+SoundRow
 Create a widget to show, play and manage a Sound
 '''
-class Sound(Handy.ActionRow):
+@Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/sound-row.ui')
+class SoundRow(Gtk.ListBoxRow):
+    __gtype_name__ = 'SoundRow'
 
-    def __init__(self, sound, model, **kwargs):
+    icon = Gtk.Template.Child()
+    title = Gtk.Template.Child()
+    controls = Gtk.Template.Child()
+    volume = Gtk.Template.Child()
+    #remove = Gtk.Template.Child()
+
+    def __init__(self, sound, model, label_group, **kwargs):
         super().__init__(**kwargs)
 
         # Gio.ListStore
         self.model = model
 
-        # Change GtkListBoxRow props
-        self.set_activatable(False)
-        self.set_selectable(False)
-
-        # Set title
-        self.set_title(sound.title)
-
         # Create a new SoundPlayer with the given Sound
         self.player = SoundPlayer(sound)
 
-        # Create the box that will contain the player controls
-        controls = Gtk.Box(spacing=6)
-        self.add(controls)
-
-        # Create a scale to controll the SoundPlayer volume
-        self.scale = Gtk.Scale.new_with_range(Gtk.Orientation.HORIZONTAL, 0, 1, 0.1)
-        self.scale.set_draw_value(False)
-        self.scale.props.expand = True
-        self.scale.connect('value-changed', self.change_vol)
-        controls.pack_start(self.scale, True, True, 0)
-
-        # Create a icon for the Sound
-        icon = Gtk.Image.new_from_icon_name(
+        # Set icon for the Sound
+        self.icon.set_from_icon_name(
             sound.icon_name, Gtk.IconSize.DIALOG)
-        Gtk.StyleContext.add_class(icon.get_style_context(), 'sound-icon')
-        icon.set_pixel_size(64)
-        icon.props.margin_top = 6
-        icon.props.margin_bottom = 6
-        self.add_prefix(icon)
 
+        # Set title
+        self.title.set_label(sound.title)
+        # Add title to AddGtkSizeGroup for sound labels
+        label_group.add_widget(self.title)
+
+        # Connnect scale with volume function
+        self.volume.connect('value-changed', self.change_vol)
+
+        # Add a remove button if the sound is removable
         if sound.removable:
+            # Create button
             remove = Gtk.Button(valign=Gtk.Align.CENTER)
+            remove.connect('clicked', self.remove)
+            self.controls.pack_end(remove, False, True, 0)
+            # Add destructive-action CSS class
             Gtk.StyleContext.add_class(remove.get_style_context(), 'destructive-action')
+            # Create button icon
             remove_icon = Gtk.Image.new_from_icon_name(
                 'edit-delete-symbolic', Gtk.IconSize.MENU)
             remove.add(remove_icon)
-            controls.pack_end(remove, False, False, 0)
-            remove.connect('clicked', self.remove)
-
 
     def change_vol(self, scale):
         volume = scale.get_value()
@@ -81,33 +77,41 @@ class Sound(Handy.ActionRow):
         self.player.remove()
 
 
-
 '''
 SoundsGroup
 '''
 class SoundsGroup(Gtk.Box):
 
-    def __init__(self, title, **kwargs):
+    def __init__(self, title, label_group, **kwargs):
         super().__init__(**kwargs)
 
+        # Setup box props
         self.props.orientation = Gtk.Orientation.VERTICAL
         self.props.spacing = 6
 
+        # GtkSizeGroup for sound labels
+        self.label_group = label_group
+
+        # Create GioListStore to store sounds
         self.model = Gio.ListStore.new(SoundObject)
 
+        # Create group name label
         label = Gtk.Label(title, halign=Gtk.Align.START)
         Gtk.StyleContext.add_class(label.get_style_context(), 'h1')
         self.pack_start(label, False, False, 0)
 
+        # Create group GtkListBox
         self.listbox = Gtk.ListBox()
         Gtk.StyleContext.add_class(self.listbox.get_style_context(), 'content')
         self.pack_start(self.listbox, True, False, 0)
+
+        # Bind GtkListBox with GioListStore
         self.listbox.bind_model(self.model, self._create_sound_widget)
 
     def add(self, sound):
         self.model.append(sound)
 
     def _create_sound_widget(self, sound):
-        widget = Sound(sound, self.model)
+        widget = SoundRow(sound, self.model, self.label_group)
         return widget
 
