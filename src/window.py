@@ -15,13 +15,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-
 import os
 
 from gi.repository import Gtk, Handy
 
 from .sound import SoundObject
 from .widgets import SoundsGroup
+from .settings import Settings
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/window.ui')
@@ -50,6 +50,8 @@ class BlanketWindow(Handy.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
+        self.settings = Settings()
+
         # GtkSizeGroup for sound labels
         self.label_group = Gtk.SizeGroup()
         self.label_group.set_mode(Gtk.SizeGroupMode.HORIZONTAL)
@@ -63,7 +65,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         # Setup default sounds
         for g, sl in self.sounds.items():
             # Create a new SoundsGroup
-            group = SoundsGroup(g, self.label_group)
+            group = SoundsGroup(g, self.settings, self.label_group)
             # Iterate sounds
             for s in sl:
                 # Create a new SoundObject
@@ -76,7 +78,8 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     def setup_custom_sounds(self):
         # Setup user custom sounds
-        self.custom_sounds = SoundsGroup('Custom', self.label_group)
+        self.custom_sounds = SoundsGroup('Custom',
+            self.settings, self.label_group)
         self.box.pack_start(self.custom_sounds, False, True, 0)
 
         # Add sound button row
@@ -93,6 +96,17 @@ class BlanketWindow(Handy.ApplicationWindow):
         add_row_box.pack_start(add_row_icon, True, True, 0)
         self.custom_sounds.listbox.add(add_row)
         self.custom_sounds.listbox.connect('row-activated', self.open_audio)
+
+        # Load saved custom audios
+        # Get saved audios from settings
+        saved = self.settings.get_custom_audios()
+        # Iterate audios
+        for name, uri in saved.items():
+            # Create a new SoundObject
+            sound = SoundObject(name, uri,
+                    'com.rafaelmardojai.Blanket-sound-wave', removable=True)
+            # Add SoundObject to SoundsGroup
+            self.custom_sounds.add(sound)
 
     def open_audio(self, _widget=None, _row=None):
 
@@ -128,6 +142,8 @@ class BlanketWindow(Handy.ApplicationWindow):
                 # Create a new SoundObject
                 sound = SoundObject(name, uri,
                     'com.rafaelmardojai.Blanket-sound-wave', removable=True)
+                # Save to settings
+                self.settings.add_custom_audio(sound.name, sound.uri)
                 # Add SoundObject to SoundsGroup
                 self.custom_sounds.add(sound)
                 self.custom_sounds.show_all()

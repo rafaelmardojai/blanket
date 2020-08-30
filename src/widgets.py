@@ -18,6 +18,7 @@
 from gi.repository import Gio, Gtk, Handy
 
 from .sound import SoundObject, SoundPlayer
+from .settings import Settings
 
 
 '''
@@ -34,29 +35,37 @@ class SoundRow(Gtk.ListBoxRow):
     volume = Gtk.Template.Child()
     #remove = Gtk.Template.Child()
 
-    def __init__(self, sound, model, label_group, **kwargs):
+    def __init__(self, sound, model, settings, label_group, **kwargs):
         super().__init__(**kwargs)
 
+        # SoundObject
+        self.sound = sound
         # Gio.ListStore
         self.model = model
+        # Settings
+        self.settings = settings
 
         # Create a new SoundPlayer with the given Sound
-        self.player = SoundPlayer(sound)
+        self.player = SoundPlayer(self.sound)
 
         # Set icon for the Sound
         self.icon.set_from_icon_name(
-            sound.icon_name, Gtk.IconSize.DIALOG)
+            self.sound.icon_name, Gtk.IconSize.DIALOG)
 
         # Set title
-        self.title.set_label(sound.title)
+        self.title.set_label(self.sound.title)
         # Add title to AddGtkSizeGroup for sound labels
         label_group.add_widget(self.title)
 
         # Connnect scale with volume function
         self.volume.connect('value-changed', self.change_vol)
+        # Load saved volume
+        saved_vol = self.settings.get_sound_volume(self.sound.name)
+        if saved_vol and saved_vol > 0:
+            self.volume.set_value(saved_vol)
 
         # Add a remove button if the sound is removable
-        if sound.removable:
+        if self.sound.removable:
             # Create button
             remove = Gtk.Button(valign=Gtk.Align.CENTER)
             remove.connect('clicked', self.remove)
@@ -71,10 +80,14 @@ class SoundRow(Gtk.ListBoxRow):
     def change_vol(self, scale):
         volume = scale.get_value()
         self.player.set_volume(volume)
+        # Save volume on settings
+        self.settings.set_sound_volume(self.sound.name, volume)
 
     def remove(self, widget):
         self.model.remove(self.get_index())
         self.player.remove()
+        # Remove audio from settings
+        self.settings.remove_custom_audio(self.sound.name)
 
 
 '''
@@ -82,12 +95,15 @@ SoundsGroup
 '''
 class SoundsGroup(Gtk.Box):
 
-    def __init__(self, title, label_group, **kwargs):
+    def __init__(self, title, settings, label_group, **kwargs):
         super().__init__(**kwargs)
 
         # Setup box props
         self.props.orientation = Gtk.Orientation.VERTICAL
         self.props.spacing = 6
+
+        # Settings
+        self.settings = settings
 
         # GtkSizeGroup for sound labels
         self.label_group = label_group
@@ -112,6 +128,6 @@ class SoundsGroup(Gtk.Box):
         self.model.append(sound)
 
     def _create_sound_widget(self, sound):
-        widget = SoundRow(sound, self.model, self.label_group)
+        widget = SoundRow(sound, self.model, self.settings, self.label_group)
         return widget
 
