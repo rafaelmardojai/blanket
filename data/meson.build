@@ -1,3 +1,5 @@
+subdir('resources')
+
 desktop_file = i18n.merge_file(
   input: 'com.rafaelmardojai.Blanket.desktop.in',
   output: 'com.rafaelmardojai.Blanket.desktop',
