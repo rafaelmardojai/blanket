@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import Gio, Gtk, Handy
+from gi.repository import GLib, Gio, Gtk, Handy
 
 from .sound import SoundObject, SoundPlayer
 from .settings import Settings
@@ -81,13 +81,15 @@ class SoundRow(Gtk.ListBoxRow):
         volume = scale.get_value()
         self.player.set_volume(volume)
         # Save volume on settings
-        self.settings.set_sound_volume(self.sound.name, volume)
+        GLib.idle_add(self.settings.set_sound_volume,
+                      self.sound.name, volume)
 
     def remove(self, widget):
         self.model.remove(self.get_index())
         self.player.remove()
         # Remove audio from settings
-        self.settings.remove_custom_audio(self.sound.name)
+        GLib.idle_add(self.settings.remove_custom_audio,
+                      self.sound.name)
 
 
 '''

@@ -17,7 +17,7 @@
 
 import os
 
-from gi.repository import Gtk, Handy
+from gi.repository import GLib, Gtk, Handy
 
 from .sound import SoundObject
 from .widgets import SoundsGroup
@@ -143,7 +143,8 @@ class BlanketWindow(Handy.ApplicationWindow):
                 sound = SoundObject(name, uri,
                     'com.rafaelmardojai.Blanket-sound-wave', removable=True)
                 # Save to settings
-                self.settings.add_custom_audio(sound.name, sound.uri)
+                GLib.idle_add(self.settings.add_custom_audio,
+                              sound.name, sound.uri)
                 # Add SoundObject to SoundsGroup
                 self.custom_sounds.add(sound)
                 self.custom_sounds.show_all()
