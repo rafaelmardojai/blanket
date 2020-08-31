@@ -14,6 +14,7 @@
     <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-storm.svg</file>
     <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-summer-night.svg</file>
     <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-pink-noise.svg</file>
+    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-white-noise.svg</file>
     <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-sound-wave.svg</file>
 
     <!-- Sounds -->
