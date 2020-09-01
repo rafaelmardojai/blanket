@@ -107,7 +107,7 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     def setup_custom_sounds(self):
         # Setup user custom sounds
-        self.custom_sounds = SoundsGroup('Custom', self.settings)
+        self.custom_sounds = SoundsGroup(_('Custom'), self.settings)
         self.box.pack_start(self.custom_sounds, False, True, 0)
 
         # Add sound button row
