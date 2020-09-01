@@ -25,6 +25,16 @@ Improve focus and increase your productivity by listening to different sounds. O
 
 Clone and run from GNOME Builder.
 
+### Requirements
+
+- Python 3 `python`
+- PyGObject `python-gobject`
+- GTK3 `gtk3`
+- GStreamer `gstreamer`
+- `python-gst`
+- Meson `meson`
+- Ninja `ninja`
+
 ### Meson
 ```bash
 meson builddir --prefix=/usr/local
