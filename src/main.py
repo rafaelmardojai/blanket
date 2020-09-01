@@ -49,8 +49,6 @@ class Application(Gtk.Application):
         self.setup_actions()
         self.load_css()
 
-        # Init GStreamer
-        Gst.init(None)
         # Init Handy
         Handy.init()
 
