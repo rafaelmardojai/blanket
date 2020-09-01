@@ -169,7 +169,7 @@ class BlanketWindow(Handy.ApplicationWindow):
 
                 # Create a new SoundObject
                 sound = SoundObject(name, uri,
-                    'com.rafaelmardojai.Blanket-sound-wave', removable=True)
+                    icon='com.rafaelmardojai.Blanket-sound-wave', removable=True)
                 # Save to settings
                 GLib.idle_add(self.settings.add_custom_audio,
                               sound.name, sound.uri)
