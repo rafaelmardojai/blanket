@@ -25,6 +25,8 @@ gi.require_version('Handy', '1')
 
 from gettext import gettext as _
 from gi.repository import GLib, Gst, Gdk, Gio, Gtk, Handy
+# Init GStreamer
+Gst.init(None)
 
 from .window import BlanketWindow
 from .about import AboutDialog
