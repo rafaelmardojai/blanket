@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg height="16px" viewBox="0 0 16 16" width="16px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <image height="152" transform="matrix(1 0 0 1 -168 -16)" width="192" xlink:href="data:image/png;base64,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"/>
+<svg width="16px" height="16px" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <filter id="filter1436" x="-2.2312e-5" y="-4.5769e-5" width="1" height="1.0001" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.008162181"/>
+  </filter>
+ </defs>
+ <g transform="translate(-160,-172)" enable-background="new" filter="url(#filter1436)">
+  <path d="m164 172v8e-3c0.0496-5e-3 0.0993-8e-3 0.15-8e-3zm0.15 0c1.0803 0 1.85 0.892 1.85 2v2h4v-2c0-1.108-0.86969-2-1.95-2-0.0507 0-0.10035 5e-3 -0.15 8e-3v-8e-3z" stroke-width="1.8181" style="paint-order:stroke fill markers"/>
+  <rect x="166" y="178" width="4" height="4" opacity=".99971" stroke-width="10" style="paint-order:stroke fill markers"/>
+  <path transform="translate(-8,156)" d="m174 28v4h2v-2h2v-2z" opacity=".99971" stroke-width="10" style="paint-order:stroke fill markers"/>
+  <path transform="translate(-8,156)" d="m170 16c-1.108 0-2 0.7805-2 1.75v12.25h2v-2h2v-10.25c0-0.9695-0.892-1.75-2-1.75z" stroke-width="1.3886" style="paint-order:stroke fill markers"/>
+  <path d="m170 172v8e-3c0.0496-5e-3 0.0993-8e-3 0.15-8e-3zm0.15 0c1.0803 0 1.85 0.892 1.85 2v2h4v-2c0-1.108-0.86969-2-1.95-2-0.0507 0-0.10035 5e-3 -0.15 8e-3v-8e-3z" stroke-width="1.8181" style="paint-order:stroke fill markers"/>
+  <rect x="172" y="178" width="4" height="4" opacity=".99971" stroke-width="10" style="paint-order:stroke fill markers"/>
+  <path d="m176 184v4h-2v-2h-2v-2z" opacity=".99971" stroke-width="10" style="paint-order:stroke fill markers"/>
+ </g>
 </svg>
