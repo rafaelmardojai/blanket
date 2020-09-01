@@ -26,6 +26,7 @@ gi.require_version('Handy', '1')
 from gi.repository import GLib, Gst, Gdk, Gio, Gtk, Handy
 
 from .window import BlanketWindow
+from .about import AboutDialog
 
 
 class Application(Gtk.Application):
@@ -54,6 +55,11 @@ class Application(Gtk.Application):
         self.add_action(open_action)
         self.set_accels_for_action('app.open', ['<Ctl>o'])
 
+        # Add about action
+        about_action = Gio.SimpleAction.new('about', None)
+        about_action.connect('activate', self.on_about)
+        self.add_action(about_action)
+
     def load_css(self):
         css_provider = Gtk.CssProvider()
         css_provider.load_from_resource('/com/rafaelmardojai/Blanket/style.css')
@@ -69,6 +75,13 @@ class Application(Gtk.Application):
 
     def on_open(self, action, param):
         self.window.open_audio()
+
+    def on_about(self, action, param):
+        dialog = AboutDialog()
+        dialog.set_transient_for(self.window)
+        dialog.set_modal(True)
+        dialog.present()
+        dialog.show_all()
 
 def main(version):
     app = Application()

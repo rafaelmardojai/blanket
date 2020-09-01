@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.0 -->
+<interface>
+  <requires lib="gtk+" version="3.22"/>
+  <template class="AboutDialog" parent="GtkAboutDialog">
+    <property name="can_focus">False</property>
+    <property name="type_hint">dialog</property>
+    <property name="program_name">Blanket</property>
+    <property name="copyright" translatable="yes">Copyright 2020 Rafael Mardojai CM</property>
+    <property name="website">https://github.com/rafaelmardojai/blanket/</property>
+    <property name="logo_icon_name">com.rafaelmardojai.Blanket</property>
+    <property name="license_type">gpl-3-0</property>
+  </template>
+</interface>

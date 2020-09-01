@@ -17,6 +17,23 @@
             <property name="can_focus">False</property>
             <property name="title">Blanket</property>
             <property name="show_close_button">True</property>
+            <child>
+              <object class="GtkButton">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="action_name">app.about</property>
+                <child>
+                  <object class="GtkImage" id="icon">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="icon_name">preferences-system-details-symbolic</property>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="pack_type">end</property>
+              </packing>
+            </child>
           </object>
         </child>
         <child>
