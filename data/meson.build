@@ -17,11 +17,11 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-  input: 'com.rafaelmardojai.Blanket.appdata.xml.in',
-  output: 'com.rafaelmardojai.Blanket.appdata.xml',
+  input: 'com.rafaelmardojai.Blanket.metainfo.xml.in',
+  output: 'com.rafaelmardojai.Blanket.metainfo.xml',
   po_dir: '../po',
   install: true,
-  install_dir: join_paths(get_option('datadir'), 'appdata')
+  install_dir: join_paths(get_option('datadir'), 'metainfo')
 )
 
 appstream_util = find_program('appstream-util', required: false)

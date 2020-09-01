@@ -1,7 +1,9 @@
 [Desktop Entry]
-Name=blanket
+Name=Blanket
+Comment=Listen to different sounds
 Exec=blanket
+Icon=com.rafaelmardojai.Blanket
 Terminal=false
 Type=Application
-Categories=GTK;
+Categories=AudioVideo;Audio;GTK;
 StartupNotify=true
