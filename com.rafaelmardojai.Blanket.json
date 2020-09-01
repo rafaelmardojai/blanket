@@ -6,6 +6,7 @@
     "command" : "blanket",
     "finish-args" : [
         "--share=ipc",
+        "--device=dri",
         "--socket=fallback-x11",
         "--socket=wayland",
         "--socket=pulseaudio"
