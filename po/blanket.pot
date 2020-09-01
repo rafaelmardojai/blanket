@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-01 00:13-0500\n"
+"POT-Creation-Date: 2020-09-01 00:21-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgid "Blanket"
 msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:9
 msgid "Listen to different sounds"
 msgstr ""
 
@@ -37,7 +37,7 @@ msgstr ""
 msgid "Rafael Mardojai CM"
 msgstr ""
 
-#: data/resources/about.ui:9
+#: data/resources/about.ui:10
 msgid "Copyright 2020 Rafael Mardojai CM"
 msgstr ""
 

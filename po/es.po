@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-01 00:13-0500\n"
+"POT-Creation-Date: 2020-09-01 00:21-0500\n"
 "PO-Revision-Date: 2020-09-01 00:14-0500\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
 "Language-Team: Spanish; Castilian <mardojai.cardenas@gmail.com>\n"
@@ -25,7 +25,7 @@ msgid "Blanket"
 msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:9
 msgid "Listen to different sounds"
 msgstr "Escuche diferentes sonidos"
 
@@ -41,7 +41,7 @@ msgstr ""
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
-#: data/resources/about.ui:9
+#: data/resources/about.ui:10
 msgid "Copyright 2020 Rafael Mardojai CM"
 msgstr "Copyright 2020 Rafael Mardojai CM"
 
