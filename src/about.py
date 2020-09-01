@@ -47,11 +47,16 @@ SOUND_ARTISTS = [
 class AboutDialog(Gtk.AboutDialog):
     __gtype_name__ = 'AboutDialog'
 
-    def __init__(self, **kwargs):
+    def __init__(self, version, **kwargs):
         super().__init__(**kwargs)
 
-        self.set_authors(AUTHORS)
-        self.set_artists(ARTISTS)
+        # Set build version
+        self.set_version(version)
 
+        # Set authors list
+        self.set_authors(AUTHORS)
+        # Set artists list
+        self.set_artists(ARTISTS)
+        # Set sound artists list
         self.add_credit_section(_('Sounds by'), SOUND_ARTISTS)
 

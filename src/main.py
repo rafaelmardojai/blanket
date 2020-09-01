@@ -30,12 +30,13 @@ from .about import AboutDialog
 
 
 class Application(Gtk.Application):
-    def __init__(self):
+    def __init__(self, version):
         super().__init__(application_id='com.rafaelmardojai.Blanket',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
         GLib.set_application_name('Blanket')
 
         self.window = None
+        self.version = version
 
     def do_startup(self):
         # Startup application
@@ -77,12 +78,12 @@ class Application(Gtk.Application):
         self.window.open_audio()
 
     def on_about(self, action, param):
-        dialog = AboutDialog()
+        dialog = AboutDialog(self.version)
         dialog.set_transient_for(self.window)
         dialog.set_modal(True)
         dialog.present()
         dialog.show_all()
 
 def main(version):
-    app = Application()
+    app = Application(version)
     return app.run(sys.argv)
