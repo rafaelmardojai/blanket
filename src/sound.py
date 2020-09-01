@@ -23,16 +23,16 @@ Describe a sound with it's propeties
 '''
 class SoundObject(GObject.Object):
 
-    def __init__(self, title, uri=None, icon=None, removable=False, **kwargs):
+    def __init__(self, name, uri=None, title=None, icon=None, removable=False, **kwargs):
         super().__init__(**kwargs)
 
         resource_tmpl = 'resource:////com/rafaelmardojai/Blanket/sounds/{}.ogg'
         icon_tmpl = 'com.rafaelmardojai.Blanket-{}'
 
         self.removable = removable
-        self.title = title
-        self.name = title.replace(' ', '-').lower()
+        self.name = name
         self.uri = uri if uri else resource_tmpl.format(self.name)
+        self.title = title if title else name
         self.icon_name = icon if icon else icon_tmpl.format(self.name)
 
 

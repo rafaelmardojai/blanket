@@ -17,35 +17,68 @@
 
 import os
 
+from gettext import gettext as _
 from gi.repository import GLib, Gtk, Handy
 
 from .sound import SoundObject
 from .widgets import SoundsGroup
 from .settings import Settings
 
+SOUNDS = [
+    {
+        'name': _('Nature'),
+        'sounds': [
+            {
+                'name': 'rain',
+                'title': _('Rain')
+            },
+            {
+                'name': 'storm',
+                'title': _('Storm')
+            },
+            {
+                'name': 'wind',
+                'title': _('Wind')
+            },
+            {
+                'name': 'summer-night',
+                'title': _('Summer Night')
+            }
+        ]
+    },
+    {
+        'name': _('Interiors'),
+        'sounds': [
+            {
+                'name': 'coffee-shop',
+                'title': _('Coffee Shop')
+            },
+            {
+                'name': 'fireplace',
+                'title': _('Fireplace')
+            }
+        ]
+    },
+    {
+        'name': _('Noise'),
+        'sounds': [
+            {
+                'name': 'pink-noise',
+                'title': _('Pink Noise')
+            },
+            {
+                'name': 'white-noise',
+                'title': _('White Noise')
+            }
+        ]
+    }
+]
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/window.ui')
 class BlanketWindow(Handy.ApplicationWindow):
     __gtype_name__ = 'BlanketWindow'
 
     box = Gtk.Template.Child()
-
-    sounds = {
-        'Nature': [
-            'Rain',
-            'Storm',
-            'Wind',
-            'Summer Night'
-        ],
-        'Interiors': [
-            'Coffee Shop',
-            'Fireplace'
-        ],
-        'Noise': [
-            'Pink Noise',
-            'White Noise'
-        ]
-    }
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -59,13 +92,13 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     def setup_sounds(self):
         # Setup default sounds
-        for g, sl in self.sounds.items():
+        for g in SOUNDS:
             # Create a new SoundsGroup
-            group = SoundsGroup(g, self.settings)
+            group = SoundsGroup(g['name'], self.settings)
             # Iterate sounds
-            for s in sl:
+            for s in g['sounds']:
                 # Create a new SoundObject
-                sound = SoundObject(s)
+                sound = SoundObject(s['name'], title=s['title'])
                 # Add SoundObject to SoundsGroup
                 group.add(sound)
 
@@ -99,7 +132,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         for name, uri in saved.items():
             # Create a new SoundObject
             sound = SoundObject(name, uri,
-                    'com.rafaelmardojai.Blanket-sound-wave', removable=True)
+                    icon='com.rafaelmardojai.Blanket-sound-wave', removable=True)
             # Add SoundObject to SoundsGroup
             self.custom_sounds.add(sound)
 

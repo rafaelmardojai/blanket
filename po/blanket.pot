@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blanket package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: blanket\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-31 23:57-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:3
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:37
+msgid "Blanket"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:4
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
+msgid "Listen to different sounds"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+msgid ""
+"Improve focus and increase your productivity by listening to different sounds. "
+"Or allows you to fall asleep in a noisy environment."
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+msgid "Rafael Mardojai CM"
+msgstr ""
+
+#: data/resources/about.ui:9
+msgid "Copyright 2020 Rafael Mardojai CM"
+msgstr ""
+
+#: src/window.py:29
+msgid "Nature"
+msgstr ""
+
+#: src/window.py:33
+msgid "Rain"
+msgstr ""
+
+#: src/window.py:37
+msgid "Storm"
+msgstr ""
+
+#: src/window.py:41
+msgid "Wind"
+msgstr ""
+
+#: src/window.py:45
+msgid "Summer Night"
+msgstr ""
+
+#: src/window.py:50
+msgid "Interiors"
+msgstr ""
+
+#: src/window.py:54
+msgid "Coffee Shop"
+msgstr ""
+
+#: src/window.py:58
+msgid "Fireplace"
+msgstr ""
+
+#: src/window.py:63
+msgid "Noise"
+msgstr ""
+
+#: src/window.py:67
+msgid "Pink Noise"
+msgstr ""
+
+#: src/window.py:71
+msgid "White Noise"
+msgstr ""
+
+#: src/window.py:149
+msgid "Open audio"
+msgstr ""

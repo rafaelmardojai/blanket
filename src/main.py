@@ -23,6 +23,7 @@ gi.require_version('Gdk', '3.0')
 gi.require_version('Gtk', '3.0')
 gi.require_version('Handy', '1')
 
+from gettext import gettext as _
 from gi.repository import GLib, Gst, Gdk, Gio, Gtk, Handy
 
 from .window import BlanketWindow
@@ -33,7 +34,7 @@ class Application(Gtk.Application):
     def __init__(self, version):
         super().__init__(application_id='com.rafaelmardojai.Blanket',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
-        GLib.set_application_name('Blanket')
+        GLib.set_application_name(_('Blanket'))
 
         self.window = None
         self.version = version

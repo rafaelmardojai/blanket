@@ -1,7 +1,8 @@
 data/com.rafaelmardojai.Blanket.desktop.in
-data/com.rafaelmardojai.Blanket.appdata.xml.in
+data/com.rafaelmardojai.Blanket.metainfo.xml.in
 data/com.rafaelmardojai.Blanket.gschema.xml
-src/window.ui
+data/resources/window.ui
+data/resources/about.ui
 src/main.py
 src/window.py
 
