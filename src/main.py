@@ -35,6 +35,8 @@ class Application(Gtk.Application):
         super().__init__(application_id='com.rafaelmardojai.Blanket',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
         GLib.set_application_name(_('Blanket'))
+        GLib.setenv("PULSE_PROP_application.icon_name",
+                    "com.rafaelmardojai.Blanket-symbolic", True)
 
         self.window = None
         self.version = version
