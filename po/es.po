@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-01 00:21-0500\n"
-"PO-Revision-Date: 2020-09-01 00:14-0500\n"
+"POT-Creation-Date: 2020-09-01 08:07-0500\n"
+"PO-Revision-Date: 2020-09-01 08:08-0500\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
 "Language-Team: Spanish; Castilian <mardojai.cardenas@gmail.com>\n"
 "Language: es\n"
@@ -88,6 +88,11 @@ msgstr "Ruido Rosa"
 #: src/window.py:71
 msgid "White Noise"
 msgstr "Ruido Blanco"
+
+#. Setup user custom sounds
+#: src/window.py:110
+msgid "Custom"
+msgstr "Personalizado"
 
 #: src/window.py:149
 msgid "Open audio"
