@@ -32,10 +32,10 @@ ARTISTS = [
 SOUND_ARTISTS = [
 '''Digifish music:
     storm sound''',
+'''Jorge Stolfi
+    white-noise sound''',
 '''JPolito:
     rain sound''',
-'''Mike Koenig:
-    white-noise sound''',
 '''Omegatron:
     pink-noise sound''',
 '''Stilgar:
