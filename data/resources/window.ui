@@ -4,7 +4,7 @@
   <requires lib="gtk+" version="3.24"/>
   <template class="BlanketWindow" parent="HdyApplicationWindow">
     <property name="can_focus">False</property>
-    <property name="default_width">800</property>
+    <property name="default_width">600</property>
     <property name="default_height">600</property>
     <child>
       <object class="GtkBox">
@@ -48,8 +48,8 @@
                 <child>
                   <object class="HdyClamp">
                     <property name="visible">True</property>
-                    <property name="maximum-size">600</property>
-                    <property name="tightening-threshold">600</property>
+                    <property name="maximum-size">500</property>
+                    <property name="tightening-threshold">400</property>
                     <child>
                       <object class="GtkBox" id="box">
                         <property name="visible">True</property>

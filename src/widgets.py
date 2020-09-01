@@ -29,13 +29,12 @@ Create a widget to show, play and manage a Sound
 class SoundRow(Gtk.ListBoxRow):
     __gtype_name__ = 'SoundRow'
 
+    box = Gtk.Template.Child()
     icon = Gtk.Template.Child()
     title = Gtk.Template.Child()
-    controls = Gtk.Template.Child()
     volume = Gtk.Template.Child()
-    #remove = Gtk.Template.Child()
 
-    def __init__(self, sound, model, settings, label_group, **kwargs):
+    def __init__(self, sound, model, settings, **kwargs):
         super().__init__(**kwargs)
 
         # SoundObject
@@ -54,8 +53,6 @@ class SoundRow(Gtk.ListBoxRow):
 
         # Set title
         self.title.set_label(self.sound.title)
-        # Add title to AddGtkSizeGroup for sound labels
-        label_group.add_widget(self.title)
 
         # Connnect scale with volume function
         self.volume.connect('value-changed', self.change_vol)
@@ -69,7 +66,7 @@ class SoundRow(Gtk.ListBoxRow):
             # Create button
             remove = Gtk.Button(valign=Gtk.Align.CENTER)
             remove.connect('clicked', self.remove)
-            self.controls.pack_end(remove, False, True, 0)
+            self.box.pack_end(remove, False, True, 0)
             # Add destructive-action CSS class
             Gtk.StyleContext.add_class(remove.get_style_context(), 'destructive-action')
             # Create button icon
@@ -97,7 +94,7 @@ SoundsGroup
 '''
 class SoundsGroup(Gtk.Box):
 
-    def __init__(self, title, settings, label_group, **kwargs):
+    def __init__(self, title, settings, **kwargs):
         super().__init__(**kwargs)
 
         # Setup box props
@@ -106,9 +103,6 @@ class SoundsGroup(Gtk.Box):
 
         # Settings
         self.settings = settings
-
-        # GtkSizeGroup for sound labels
-        self.label_group = label_group
 
         # Create GioListStore to store sounds
         self.model = Gio.ListStore.new(SoundObject)
@@ -130,6 +124,6 @@ class SoundsGroup(Gtk.Box):
         self.model.append(sound)
 
     def _create_sound_widget(self, sound):
-        widget = SoundRow(sound, self.model, self.settings, self.label_group)
+        widget = SoundRow(sound, self.model, self.settings)
         return widget
 

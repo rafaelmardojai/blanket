@@ -12,71 +12,62 @@
     <property name="activatable">False</property>
     <property name="selectable">False</property>
     <child>
-      <object class="GtkBox">
+      <object class="GtkBox"  id="box">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="spacing">8</property>
+        <property name="spacing">24</property>
         <property name="margin">8</property>
+        <child>
+          <object class="GtkImage" id="icon">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="pixel_size">96</property>
+            <style>
+              <class name="sound-icon"/>
+            </style>
+          </object>
+        </child>
         <child>
           <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="spacing">8</property>
-            <child>
-              <object class="GtkImage" id="icon">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="pixel_size">64</property>
-                <style>
-                  <class name="sound-icon"/>
-                </style>
-              </object>
-            </child>
+            <property name="valign">center</property>
+            <property name="orientation">vertical</property>
             <child>
               <object class="GtkLabel" id="title">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="margin_top">10</property>
+                <property name="margin_start">10</property>
                 <property name="ellipsize">end</property>
-                <property name="max_width_chars">16</property>
                 <property name="xalign">0</property>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child>
-          <object class="GtkBox" id="controls">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="spacing">6</property>
-            <child>
-              <object class="GtkScale" id="volume">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="adjustment">adjustment</property>
-                <property name="round_digits">1</property>
-                <property name="draw_value">False</property>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-              </packing>
-            </child>
-            <!--<child>
-              <object class="GtkButton" id="remove">
-                <property name="visible">False</property>
-                <property name="can_focus">True</property>
-                <property name="valign">center</property>
+                <attributes>
+                  <attribute name="weight" value="bold"/>
+                </attributes>
                 <style>
-                  <class name="destructive-action"/>
+                  <class name="dim-label"/>
                 </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="spacing">6</property>
                 <child>
-                  <object class="GtkImage">
+                  <object class="GtkScale" id="volume">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="icon_name">edit-delete-symbolic</property>
+                    <property name="can_focus">True</property>
+                    <property name="adjustment">adjustment</property>
+                    <property name="round_digits">1</property>
+                    <property name="draw_value">False</property>
                   </object>
+                  <packing>
+                    <property name="expand">True</property>
+                  </packing>
                 </child>
               </object>
-            </child>-->
+            </child>
           </object>
           <packing>
             <property name="expand">True</property>
