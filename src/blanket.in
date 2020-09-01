@@ -30,6 +30,12 @@ sys.path.insert(1, pkgdatadir)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 gettext.install('blanket', localedir)
 
+locale.bindtextdomain('blanket', localedir)
+locale.textdomain('blanket')
+gettext.bindtextdomain('blanket', localedir)
+gettext.textdomain('blanket')
+locale.setlocale(locale.LC_ALL, '')
+
 if __name__ == '__main__':
     import gi
 
