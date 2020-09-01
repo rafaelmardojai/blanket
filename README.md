@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img src="data/com.rafaelmardojai.Blanket.svg" alt="Blanket" width="100" height="100"/><br>
+	<img src="data/com.rafaelmardojai.Blanket.svg" alt="Blanket" width="128" height="128"/><br>
 	Blanket
 </h1>
 
@@ -8,6 +8,10 @@
 [![Donate](https://img.shields.io/badge/PayPal-Donate-gray.svg?style=flat&logo=paypal&colorA=0071bb&logoColor=fff)](https://paypal.me/RafaelMardojaiCM)
 
 <p align="center"><strong>Listen to different sounds</strong></p>
+
+<p align="center">
+  <a href="https://flathub.org/apps/details/com.rafaelmardojai.Blanket"><img width="200" alt="Download on Flathub" src="https://flathub.org/assets/badges/flathub-badge-en.png"/></a>
+</p>
 
 <p align="center">
   <img src="data/screenshot.png"/>
