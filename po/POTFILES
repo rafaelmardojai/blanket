@@ -5,4 +5,4 @@ data/resources/window.ui
 data/resources/about.ui
 src/main.py
 src/window.py
-
+src/about.py

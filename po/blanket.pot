@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-31 23:57-0500\n"
+"POT-Creation-Date: 2020-09-01 00:13-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,8 +29,8 @@ msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds. "
-"Or allows you to fall asleep in a noisy environment."
+"Improve focus and increase your productivity by listening to different "
+"sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
@@ -87,4 +87,9 @@ msgstr ""
 
 #: src/window.py:149
 msgid "Open audio"
+msgstr ""
+
+#. Set sound artists list
+#: src/about.py:62
+msgid "Sounds by"
 msgstr ""

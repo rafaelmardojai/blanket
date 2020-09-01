@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-31 23:57-0500\n"
-"PO-Revision-Date: 2020-09-01 00:01-0500\n"
+"POT-Creation-Date: 2020-09-01 00:13-0500\n"
+"PO-Revision-Date: 2020-09-01 00:14-0500\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
 "Language-Team: Spanish; Castilian <mardojai.cardenas@gmail.com>\n"
 "Language: es\n"
@@ -92,3 +92,8 @@ msgstr "Ruido Blanco"
 #: src/window.py:149
 msgid "Open audio"
 msgstr "Abrir audio"
+
+#. Set sound artists list
+#: src/about.py:62
+msgid "Sounds by"
+msgstr "Sonidos por"
