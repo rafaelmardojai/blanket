@@ -81,11 +81,11 @@ msgstr "Rumore"
 
 #: src/window.py:67
 msgid "Pink Noise"
-msgstr ""
+msgstr "Rumore Rosa"
 
 #: src/window.py:71
 msgid "White Noise"
-msgstr ""
+msgstr "Rumore Bianco"
 
 #. Setup user custom sounds
 #: src/window.py:110
