@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="blanket">
 	<schema id="com.rafaelmardojai.Blanket" path="/com/rafaelmardojai/Blanket/">
-	  <key type="i" name="scroll-position">
+    <key type="i" name="scroll-position">
         <default>0</default>
         <summary></summary>
         <description></description>
     </key>
-	  <key type="a{ss}" name="custom-audios">
+    <key type="a{ss}" name="custom-audios">
         <default>{}</default>
         <summary></summary>
         <description></description>
     </key>
-	  <key type="a{sd}" name="volume">
+    <key type="a{sd}" name="volume">
         <default>{}</default>
         <summary></summary>
         <description></description>
