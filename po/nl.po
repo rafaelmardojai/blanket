@@ -1,20 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# ALBANO BATTISTELLA <albano_battistella@hotmail.com>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-01 08:07-0500\n"
-"PO-Revision-Date: 2020-09-01 22:00+0100\n"
-"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
-"Language-Team: Italian <LL@li.org>\n"
-"Language: it\n"
+"PO-Revision-Date: 2020-09-02 17:49+0200\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:37
@@ -24,16 +26,15 @@ msgstr "Blanket"
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:9
 msgid "Listen to different sounds"
-msgstr "Ascolta suoni diversi"
+msgstr "Luister naar verschillende geluiden"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
-"Migliora la concentrazione e aumenta la tua produttività ascoltando diversi"
-"suoni. Oppure ti permette di addormentarti in un ambiente rumoroso."
-
+"Verbeter je focus en verhoog je productiviteit door te luisteren naar "
+"verschillende geluiden. Of val sneller in slaap."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "Rafael Mardojai CM"
@@ -45,58 +46,58 @@ msgstr "Copyright 2020 Rafael Mardojai CM"
 
 #: src/window.py:29
 msgid "Nature"
-msgstr "Natura"
+msgstr "Natuur"
 
 #: src/window.py:33
 msgid "Rain"
-msgstr "Pioggia"
+msgstr "Regen"
 
 #: src/window.py:37
 msgid "Storm"
-msgstr "Temporale"
+msgstr "Storm"
 
 #: src/window.py:41
 msgid "Wind"
-msgstr "Vento"
+msgstr "Wind"
 
 #: src/window.py:45
 msgid "Summer Night"
-msgstr "Notte d'estate"
+msgstr "Zomeravond"
 
 #: src/window.py:50
 msgid "Interiors"
-msgstr "Interni"
+msgstr "Binnen"
 
 #: src/window.py:54
 msgid "Coffee Shop"
-msgstr "Caffetteria"
+msgstr "Koffietent"
 
 #: src/window.py:58
 msgid "Fireplace"
-msgstr "Caminetto"
+msgstr "Open haard"
 
 #: src/window.py:63
 msgid "Noise"
-msgstr "Rumore"
+msgstr "Ruis"
 
 #: src/window.py:67
 msgid "Pink Noise"
-msgstr "Rumore Rosa"
+msgstr "Roze ruis"
 
 #: src/window.py:71
 msgid "White Noise"
-msgstr "Rumore Bianco"
+msgstr "Witte ruis"
 
 #. Setup user custom sounds
 #: src/window.py:110
 msgid "Custom"
-msgstr "Personalizzato"
+msgstr "Aangepast"
 
 #: src/window.py:149
 msgid "Open audio"
-msgstr "Apri audio"
+msgstr "Audio openen"
 
 #. Set sound artists list
 #: src/about.py:62
 msgid "Sounds by"
-msgstr "Suoni di"
+msgstr "Geluiden van"
