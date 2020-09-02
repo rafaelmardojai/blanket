@@ -75,7 +75,7 @@ class SoundRow(Gtk.ListBoxRow):
             remove.add(remove_icon)
 
     def change_vol(self, scale):
-        volume = scale.get_value()
+        volume = round(scale.get_value(), 2)
         self.player.set_volume(volume)
         # Save volume on settings
         GLib.idle_add(self.settings.set_sound_volume,
