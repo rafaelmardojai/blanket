@@ -84,6 +84,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         super().__init__(**kwargs)
 
         self.settings = Settings()
+        self.settings.migrate_json()
 
         self.setup_sounds()
         self.setup_custom_sounds()

@@ -18,84 +18,80 @@
 import os
 import json
 
-from gi.repository import GLib
+from gi.repository import GLib, Gio
 
 
 class Settings(object):
 
-    xdg_user_config_dir = GLib.get_user_config_dir()
-    settings_file = os.path.join(xdg_user_config_dir, 'blanket', 'settings.json')
-
     def __init__(self):
 
-        self.profile = 'Default'
-
-        # Check if Settings file exists
-        if not os.path.exists(self.settings_file):
-            # Create empty settings dict
-            self.__setup_file()
-        else:
-            try:
-                with open(self.settings_file) as json_file:
-                    self.settings = json.load(json_file)
-            except Exception:
-                self.__setup_file()
-
-            if 'profiles' not in self.settings:
-                settings['profiles'] = {'Default': {}}
-                self.save()
-
-            if 'audios' not in self.settings:
-                settings['audios'] = {}
-                self.save()
+        self.settings = Gio.Settings.new('com.rafaelmardojai.Blanket')
+        # New dict with saved custom audios
+        self.custom_audios = dict(self.settings.get_value('custom-audios'))
+        # New dict with saved volume levels
+        self.volume = dict(self.settings.get_value('volume'))
 
     def get_custom_audios(self):
-        return self.settings['audios']
+        return self.custom_audios
 
     def add_custom_audio(self, name, uri):
-        if name in self.settings['audios']:
-            # TODO: Do something
-            pass
-        else:
-            self.settings['audios'][name] = uri
-            self.save()
+        # Add the audio if the name is not already present
+        # TODO: Do something if True
+        if not name in self.custom_audios:
+            # Add custom audio to audios dict, name: uri
+            self.custom_audios[name] = uri
+            # Save new dict to GSettings
+            self.settings.set_value('custom-audios', GLib.Variant('a{ss}', self.custom_audios))
 
     def remove_custom_audio(self, name):
-        if name in self.settings['audios']:
-            del self.settings['audios'][name]
-            profile = self.settings['profiles'][self.profile]
-            if name in profile:
-                del profile[name]
-            self.save()
-        else:
-            # TODO: Do something
-            pass
+        # If name present in audios dict
+        if name in self.custom_audios:
+            # Remove sound from dict
+            del self.custom_audios[name]
+            # Save new dict to GSettings
+            self.settings.set_value('custom-audios', GLib.Variant('a{ss}', self.custom_audios))
+
+            if name in self.volume:
+                # Remove audio also from volume dict
+                del self.volume[name]
+                # Save new dict to GSettings
+                self.settings.set_value('volume', GLib.Variant('a{sd}', self.volume))
 
     def get_sound_volume(self, name):
-        profile = self.settings['profiles'][self.profile]
-        if name in profile:
-            volume = profile[name]['volume']
+        # If sound is set on volume dict
+        if name in self.volume:
+            volume = self.volume[name]
             return volume if volume else None
         else:
             return None
 
     def set_sound_volume(self, name, volume):
-        profile = self.settings['profiles'][self.profile]
-        if name not in profile:
-            profile[name] = {}
-        profile[name]['volume'] = volume
-        self.save()
+        # Set volume level to audio on volume dict
+        self.volume[name] = volume
+        # Save new dict to GSettings
+        self.settings.set_value('volume', GLib.Variant('a{sd}', self.volume))
 
-    def save(self):
-        with open(self.settings_file, 'w') as outfile:
-            json.dump(self.settings, outfile, indent=2)
+    def migrate_json(self):
+        '''
+        Migration
+        Remove on Next release
+        '''
+        xdg_user_config_dir = GLib.get_user_config_dir()
+        json_settings_file = os.path.join(xdg_user_config_dir, 'blanket', 'settings.json')
 
-    def __setup_file(self):
-        self.settings = {}
-        self.settings['profiles'] = {'Default': {}}
-        self.settings['audios'] = {}
+        if os.path.exists(json_settings_file):
+            try:
+                with open(json_settings_file) as json_file:
+                    self.json_settings = json.load(json_file)
 
-        # Write dict to file
-        os.makedirs(os.path.dirname(self.settings_file), exist_ok=True)
-        self.save()
+                    for k, v in self.json_settings['audios'].items():
+                        self.add_custom_audio(k, v)
 
+                    for k, v in self.json_settings['profiles']['Default'].items():
+                        print(k)
+                        self.set_sound_volume(k, v['volume'])
+
+                    os.remove(json_settings_file)
+
+            except Exception:
+                os.remove(json_settings_file) 
