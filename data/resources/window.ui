@@ -22,9 +22,6 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="action_name">app.about</property>
-                <style>
-                  <class name="flat"/>
-                </style>
                 <child>
                   <object class="GtkImage" id="icon">
                     <property name="visible">True</property>
