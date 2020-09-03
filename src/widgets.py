@@ -44,7 +44,7 @@ class SoundRow(Gtk.ListBoxRow):
         # Settings
         self.settings = settings
 
-        # Create a new SoundPlayer with the given Sound
+        # Create a new SoundPlayer
         self.player = SoundPlayer(self.sound)
 
         # Set icon for the Sound
@@ -75,7 +75,9 @@ class SoundRow(Gtk.ListBoxRow):
             remove.add(remove_icon)
 
     def change_vol(self, scale):
+        # Round volume value
         volume = round(scale.get_value(), 2)
+        # Set player volume
         self.player.set_volume(volume)
         # Save volume on settings
         GLib.idle_add(self.settings.set_sound_volume,

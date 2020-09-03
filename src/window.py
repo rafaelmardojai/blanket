@@ -20,7 +20,7 @@ import os
 from gettext import gettext as _
 from gi.repository import GLib, Gtk, Handy
 
-from .sound import SoundObject
+from .sound import MainPlayer, SoundObject
 from .widgets import SoundsGroup
 from .settings import Settings
 
@@ -86,6 +86,9 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.settings = Settings()
         self.settings.migrate_json()
 
+        # App main player
+        self.mainplayer = MainPlayer()
+
         self.setup_sounds()
         self.setup_custom_sounds()
 
@@ -99,7 +102,8 @@ class BlanketWindow(Handy.ApplicationWindow):
             # Iterate sounds
             for s in g['sounds']:
                 # Create a new SoundObject
-                sound = SoundObject(s['name'], title=s['title'])
+                sound = SoundObject(s['name'], title=s['title'],
+                                    mainplayer=self.mainplayer)
                 # Add SoundObject to SoundsGroup
                 group.add(sound)
 
@@ -133,7 +137,8 @@ class BlanketWindow(Handy.ApplicationWindow):
         for name, uri in saved.items():
             # Create a new SoundObject
             sound = SoundObject(name, uri,
-                    icon='com.rafaelmardojai.Blanket-sound-wave', removable=True)
+                    icon='com.rafaelmardojai.Blanket-sound-wave',
+                    removable=True, mainplayer=self.mainplayer)
             # Add SoundObject to SoundsGroup
             self.custom_sounds.add(sound)
 
@@ -170,7 +175,8 @@ class BlanketWindow(Handy.ApplicationWindow):
 
                 # Create a new SoundObject
                 sound = SoundObject(name, uri,
-                    icon='com.rafaelmardojai.Blanket-sound-wave', removable=True)
+                    icon='com.rafaelmardojai.Blanket-sound-wave',
+                    removable=True, mainplayer=self.mainplayer)
                 # Save to settings
                 GLib.idle_add(self.settings.add_custom_audio,
                               sound.name, sound.uri)
