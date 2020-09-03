@@ -75,15 +75,21 @@ class Application(Gtk.Application):
                 'func'  : self.on_about
             },
             {
+                'name'  : 'close',
+                'func'  : self.on_close,
+                'accels': ['<Ctl>w']
+            },
+            {
                 'name'  : 'quit',
-                'func'  : self.on_quit
+                'func'  : self.on_quit,
+                'accels': ['<Ctl>q']
             }
         ]
 
         for a in actions:
             if 'state' in a:
                 action = Gio.SimpleAction.new_stateful(
-                    a['name'], None,  self.gsettings.get_value(a['name']))
+                    a['name'], None, self.gsettings.get_value(a['name']))
                 action.connect('change-state', a['func'])
             else:
                 action = Gio.SimpleAction.new(a['name'], None)
@@ -107,7 +113,7 @@ class Application(Gtk.Application):
             self.window = BlanketWindow(application=self)
         self.window.present()
 
-        self.window.connect('delete-event', self.on_close)
+        self.window.connect('delete-event', self._do_close)
 
     def on_open(self, action, param):
         self.window.open_audio()
@@ -130,7 +136,10 @@ class Application(Gtk.Application):
         dialog.present()
         dialog.show_all()
 
-    def on_close(self, widget, event):
+    def on_close(self, action, param):
+        self.window.close()
+
+    def _do_close(self, widget, event):
         background = self.gsettings.get_value('background-playback')
 
         if background:
@@ -140,7 +149,6 @@ class Application(Gtk.Application):
 
     def on_quit(self, action, param):
         self.quit()
-
 
 def main(version):
     app = Application(version)
