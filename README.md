@@ -21,7 +21,13 @@
 ## Description
 Improve focus and increase your productivity by listening to different sounds. Or allows you to fall asleep in a noisy environment.
 
-## Build
+## Other Methods of Installation
+> We are looking for volunteers to help us make native packages of Blanket for Debian, Fedora, and other major distributions. It would be great if you could help.
+
+### AUR
+For Arch Linux and its derivatives you can install the [`blanket`](https://aur.archlinux.org/packages/blanket) package from AUR.
+
+## Build from source
 
 Clone and run from GNOME Builder.
 
@@ -41,7 +47,6 @@ Clone and run from GNOME Builder.
 meson builddir --prefix=/usr/local
 sudo ninja -C builddir install
 ```
-
 ## Credits
 Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/blanket/graphs/contributors).
 
