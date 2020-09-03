@@ -53,16 +53,36 @@ class Application(Gtk.Application):
         Handy.init()
 
     def setup_actions(self):
-        # Add open action
-        open_action = Gio.SimpleAction.new('open', None)
-        open_action.connect('activate', self.on_open)
-        self.add_action(open_action)
-        self.set_accels_for_action('app.open', ['<Ctl>o'])
+        actions = [
+            {
+                'name'  : 'open',
+                'func'  : self.on_open,
+                'accels': ['<Ctl>o']
+            },
+            {
+                'name'  : 'playpause',
+                'func'  : self.on_playpause,
+                'accels': ['<Ctl>m']
+            },
+            {
+                'name'  : 'about',
+                'func'  : self.on_about
+            }
+        ]
 
-        # Add about action
-        about_action = Gio.SimpleAction.new('about', None)
-        about_action.connect('activate', self.on_about)
-        self.add_action(about_action)
+        for a in actions:
+            if 'state' in a:
+                action = Gio.SimpleAction.new_stateful(
+                    a['name'], None, GLib.Variant.new_boolean(False))
+                action.connect('change-state', a['func'])
+            else:
+                action = Gio.SimpleAction.new(a['name'], None)
+                action.connect('activate', a['func'])
+
+            self.add_action(action)
+
+            if 'accels' in a:
+                self.set_accels_for_action('app.' + a['name'], a['accels'])
 
     def load_css(self):
         css_provider = Gtk.CssProvider()
@@ -79,6 +99,9 @@ class Application(Gtk.Application):
 
     def on_open(self, action, param):
         self.window.open_audio()
+
+    def on_playpause(self, action, param):
+        self.window.on_playpause_toggle()
 
     def on_about(self, action, param):
         dialog = AboutDialog(self.version)

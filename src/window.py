@@ -80,18 +80,35 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     box = Gtk.Template.Child()
 
+    playpause_btn = Gtk.Template.Child()
+    playpause_icon = Gtk.Template.Child()
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
+        # Settings wrapper
         self.settings = Settings()
-        self.settings.migrate_json()
+        self.settings.migrate_json() # Migrate old json settings
+
+        # App Playing state
+        self.playing = self.settings.gsettings.get_value('playing')
+        self.first_play = True
 
         # App main player
         self.mainplayer = MainPlayer()
 
+        # Setup widgets
+        self.setup()
+
+    def setup(self):
+        # First run of on_playpause_toggle to setup all
+        self.on_playpause_toggle()
+
+        # Setup included/saved sounds
         self.setup_sounds()
         self.setup_custom_sounds()
 
+        # Show all widgets added to window
         self.show_all()
 
     def setup_sounds(self):
@@ -141,6 +158,30 @@ class BlanketWindow(Handy.ApplicationWindow):
                     removable=True, mainplayer=self.mainplayer)
             # Add SoundObject to SoundsGroup
             self.custom_sounds.add(sound)
+
+    def on_playpause_toggle(self, _widget=None):
+        # Change mainplayer mute
+        self.mainplayer.set_muted(self.playing)
+
+        # Reverse self.playing bool value
+        if not self.first_play:
+            self.playing = False if self.playing else True
+
+        # Save playing state
+        self.settings.gsettings.set_value('playing',
+                                          GLib.Variant('b', self.playing))
+
+        # Change widgets states
+        if self.playing:
+            self.playpause_icon.set_from_icon_name(
+                    'media-playback-pause-symbolic', Gtk.IconSize.MENU)
+            self.box.set_sensitive(True)
+        else:
+            self.playpause_icon.set_from_icon_name(
+                    'media-playback-start-symbolic', Gtk.IconSize.MENU)
+            self.box.set_sensitive(False)
+
+        self.first_play = False
 
     def open_audio(self, _widget=None, _row=None):
 
