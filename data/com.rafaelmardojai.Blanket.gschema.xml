@@ -6,6 +6,11 @@
         <summary></summary>
         <description></description>
     </key>
+    <key type="d" name="volume">
+        <default>1</default>
+        <summary></summary>
+        <description></description>
+    </key>
     <key type="b" name="playing">
         <default>true</default>
         <summary></summary>
@@ -21,7 +26,7 @@
         <summary></summary>
         <description></description>
     </key>
-    <key type="a{sd}" name="volume">
+    <key type="a{sd}" name="sounds-volume">
         <default>{}</default>
         <summary></summary>
         <description></description>

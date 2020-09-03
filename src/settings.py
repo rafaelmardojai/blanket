@@ -29,7 +29,7 @@ class Settings(object):
         # New dict with saved custom audios
         self.custom_audios = dict(self.gsettings.get_value('custom-audios'))
         # New dict with saved volume levels
-        self.volume = dict(self.gsettings.get_value('volume'))
+        self.volume = dict(self.gsettings.get_value('sounds-volume'))
 
     def get_custom_audios(self):
         return self.custom_audios
@@ -55,7 +55,7 @@ class Settings(object):
                 # Remove audio also from volume dict
                 del self.volume[name]
                 # Save new dict to GSettings
-                self.gsettings.set_value('volume', GLib.Variant('a{sd}', self.volume))
+                self.gsettings.set_value('sounds-volume', GLib.Variant('a{sd}', self.volume))
 
     def get_sound_volume(self, name):
         # If sound is set on volume dict
@@ -69,7 +69,7 @@ class Settings(object):
         # Set volume level to audio on volume dict
         self.volume[name] = volume
         # Save new dict to GSettings
-        self.gsettings.set_value('volume', GLib.Variant('a{sd}', self.volume))
+        self.gsettings.set_value('sounds-volume', GLib.Variant('a{sd}', self.volume))
 
     def migrate_json(self):
         '''
