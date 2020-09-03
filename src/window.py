@@ -83,6 +83,8 @@ class BlanketWindow(Handy.ApplicationWindow):
     playpause_btn = Gtk.Template.Child()
     playpause_icon = Gtk.Template.Child()
 
+    quit_revealer = Gtk.Template.Child()
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
@@ -103,6 +105,10 @@ class BlanketWindow(Handy.ApplicationWindow):
     def setup(self):
         # First run of on_playpause_toggle to setup all
         self.on_playpause_toggle()
+
+        # If background-playback enabled show quit action on menu
+        if self.settings.gsettings.get_value('background-playback'):
+            self.quit_revealer.set_reveal_child(True)
 
         # Setup included/saved sounds
         self.setup_sounds()

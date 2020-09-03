@@ -11,6 +11,11 @@
         <summary></summary>
         <description></description>
     </key>
+    <key type="b" name="background-playback">
+        <default>false</default>
+        <summary></summary>
+        <description></description>
+    </key>
     <key type="a{ss}" name="custom-audios">
         <default>{}</default>
         <summary></summary>

@@ -42,6 +42,7 @@ class Application(Gtk.Application):
 
         self.window = None
         self.version = version
+        self.gsettings = Gio.Settings.new('com.rafaelmardojai.Blanket')
 
     def do_startup(self):
         # Startup application
@@ -65,15 +66,24 @@ class Application(Gtk.Application):
                 'accels': ['<Ctl>m']
             },
             {
+                'name'  : 'background-playback',
+                'func'  : self.on_background,
+                'state' : True
+            },
+            {
                 'name'  : 'about',
                 'func'  : self.on_about
+            },
+            {
+                'name'  : 'quit',
+                'func'  : self.on_quit
             }
         ]
 
         for a in actions:
             if 'state' in a:
                 action = Gio.SimpleAction.new_stateful(
-                    a['name'], None, GLib.Variant.new_boolean(False))
+                    a['name'], None,  self.gsettings.get_value(a['name']))
                 action.connect('change-state', a['func'])
             else:
                 action = Gio.SimpleAction.new(a['name'], None)
@@ -97,11 +107,21 @@ class Application(Gtk.Application):
             self.window = BlanketWindow(application=self)
         self.window.present()
 
+        self.window.connect('delete-event', self.on_close)
+
     def on_open(self, action, param):
         self.window.open_audio()
 
     def on_playpause(self, action, param):
         self.window.on_playpause_toggle()
+
+    def on_background(self, action, value):
+        action.set_state(GLib.Variant('b', value))
+        self.gsettings.set_value('background-playback', GLib.Variant('b', value))
+        if value:
+            self.window.quit_revealer.set_reveal_child(True)
+        else:
+            self.window.quit_revealer.set_reveal_child(False)
 
     def on_about(self, action, param):
         dialog = AboutDialog(self.version)
@@ -109,6 +129,18 @@ class Application(Gtk.Application):
         dialog.set_modal(True)
         dialog.present()
         dialog.show_all()
+
+    def on_close(self, widget, event):
+        background = self.gsettings.get_value('background-playback')
+
+        if background:
+            return widget.hide_on_delete()
+        else:
+            self.quit()
+
+    def on_quit(self, action, param):
+        self.quit()
+
 
 def main(version):
     app = Application(version)
