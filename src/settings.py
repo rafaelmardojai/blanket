@@ -24,12 +24,12 @@ from gi.repository import GLib, Gio
 class Settings(object):
 
     def __init__(self):
-
-        self.settings = Gio.Settings.new('com.rafaelmardojai.Blanket')
+        # New GSettings instance
+        self.gsettings = Gio.Settings.new('com.rafaelmardojai.Blanket')
         # New dict with saved custom audios
-        self.custom_audios = dict(self.settings.get_value('custom-audios'))
+        self.custom_audios = dict(self.gsettings.get_value('custom-audios'))
         # New dict with saved volume levels
-        self.volume = dict(self.settings.get_value('volume'))
+        self.volume = dict(self.gsettings.get_value('volume'))
 
     def get_custom_audios(self):
         return self.custom_audios
@@ -41,7 +41,7 @@ class Settings(object):
             # Add custom audio to audios dict, name: uri
             self.custom_audios[name] = uri
             # Save new dict to GSettings
-            self.settings.set_value('custom-audios', GLib.Variant('a{ss}', self.custom_audios))
+            self.gsettings.set_value('custom-audios', GLib.Variant('a{ss}', self.custom_audios))
 
     def remove_custom_audio(self, name):
         # If name present in audios dict
@@ -49,13 +49,13 @@ class Settings(object):
             # Remove sound from dict
             del self.custom_audios[name]
             # Save new dict to GSettings
-            self.settings.set_value('custom-audios', GLib.Variant('a{ss}', self.custom_audios))
+            self.gsettings.set_value('custom-audios', GLib.Variant('a{ss}', self.custom_audios))
 
             if name in self.volume:
                 # Remove audio also from volume dict
                 del self.volume[name]
                 # Save new dict to GSettings
-                self.settings.set_value('volume', GLib.Variant('a{sd}', self.volume))
+                self.gsettings.set_value('volume', GLib.Variant('a{sd}', self.volume))
 
     def get_sound_volume(self, name):
         # If sound is set on volume dict
@@ -69,7 +69,7 @@ class Settings(object):
         # Set volume level to audio on volume dict
         self.volume[name] = volume
         # Save new dict to GSettings
-        self.settings.set_value('volume', GLib.Variant('a{sd}', self.volume))
+        self.gsettings.set_value('volume', GLib.Variant('a{sd}', self.volume))
 
     def migrate_json(self):
         '''
