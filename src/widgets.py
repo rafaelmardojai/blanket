@@ -78,7 +78,7 @@ class SoundRow(Gtk.ListBoxRow):
         # Round volume value
         volume = round(scale.get_value(), 2)
         # Set player volume
-        self.player.set_volume(volume)
+        self.player.set_virtual_volume(volume)
         # Save volume on settings
         GLib.idle_add(self.settings.set_sound_volume,
                       self.sound.name, volume)

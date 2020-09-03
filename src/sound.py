@@ -40,6 +40,9 @@ class MainPlayer(GObject.GObject):
         self.volume = volume
         self.emit('volume-changed', volume)
 
+    def get_volume(self):
+        return self.volume
+
 
 class SoundObject(GObject.Object):
     '''
@@ -67,20 +70,35 @@ class SoundPlayer(GstPlayer.Player):
 
     def __init__(self, sound):
         super().__init__()
+        self.sound = sound
+        #
+        self.saved_volume = 0.0
         # Alwas start with volume in 0
         self.set_volume(0)
 
         # Set SoundObject.uri as player uri
-        self.set_uri(sound.uri)
-        self.name = sound.name
+        self.set_uri(self.sound.uri)
+        self.name = self.sound.name
 
+        # Connect mainplayer volume-changed signal
+        self.sound.mainplayer.connect('volume-changed', self._on_main_volume_changed)
         # Connect mainplayer muted signal
-        sound.mainplayer.connect('muted', self._on_mute)
+        self.sound.mainplayer.connect('muted', self._on_mute)
 
         # Connect volume-changed signal
         self.connect('volume-changed', self._on_volume_changed)
         # Connect end-of-stream signal
         self.connect('end-of-stream', self._on_eos)
+
+    def set_virtual_volume(self, volume):
+        # Get mainplayer volume
+        main_volume = self.sound.mainplayer.get_volume()
+        # Get last saved sound volume
+        self.saved_volume = volume
+        # Multiply sound volume with mainplayer volume
+        volume = self.saved_volume * main_volume
+        # Set final volume to player
+        self.set_volume(volume)
 
     def remove(self):
         # Stop player
@@ -91,7 +109,6 @@ class SoundPlayer(GstPlayer.Player):
     def _on_mute(self, player, mute):
         self.set_mute(mute)
 
-
     def _on_volume_changed(self, player):
         # Always play if volume > 0
         volume = self.get_volume()
@@ -100,7 +117,11 @@ class SoundPlayer(GstPlayer.Player):
         else:
             self.play()
 
+    def _on_main_volume_changed(self, player, volume):
+        # Set volume again when mainplayer volume changes
+        self.set_virtual_volume(self.saved_volume)
+
     def _on_eos(self, player):
         # Seek player to 0
         self.seek(0)
-
+        

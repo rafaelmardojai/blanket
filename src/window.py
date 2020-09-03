@@ -83,6 +83,8 @@ class BlanketWindow(Handy.ApplicationWindow):
     playpause_btn = Gtk.Template.Child()
     playpause_icon = Gtk.Template.Child()
 
+    volume = Gtk.Template.Child()
+
     quit_revealer = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
@@ -92,9 +94,10 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.settings = Settings()
         self.settings.migrate_json() # Migrate old json settings
 
-        # App Playing state
-        self.playing = self.settings.gsettings.get_value('playing')
+        # App playing state
+        self.playing = self.settings.gsettings.get_boolean('playing')
         self.first_play = True
+        self.saved_volume = self.settings.gsettings.get_double('volume')
 
         # App main player
         self.mainplayer = MainPlayer()
@@ -103,6 +106,12 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.setup()
 
     def setup(self):
+        # Connect vulume scale to volume function
+        self.volume.connect('value-changed', self._on_change_vol)
+        # Set saved volume value to menu scale
+        self.volume.set_value(self.saved_volume)
+        self._on_change_vol(self.volume)
+
         # First run of on_playpause_toggle to setup all
         self.on_playpause_toggle()
 
@@ -230,4 +239,13 @@ class BlanketWindow(Handy.ApplicationWindow):
                 # Add SoundObject to SoundsGroup
                 self.custom_sounds.add(sound)
                 self.custom_sounds.show_all()
+
+    def _on_change_vol(self, scale):
+        # Round volume value
+        volume = round(scale.get_value(), 2)
+        # Set mainplayer volume
+        self.mainplayer.set_volume(volume)
+        # Save volume on settings
+        self.settings.gsettings.set_double('volume', volume)
+
 
