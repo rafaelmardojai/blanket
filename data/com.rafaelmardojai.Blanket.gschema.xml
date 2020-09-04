@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="blanket">
 	<schema id="com.rafaelmardojai.Blanket" path="/com/rafaelmardojai/Blanket/">
-    <key type="i" name="scroll-position">
+    <key type="d" name="scroll-position">
         <default>0</default>
         <summary></summary>
         <description></description>
