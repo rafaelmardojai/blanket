@@ -3,33 +3,21 @@
 	<schema id="com.rafaelmardojai.Blanket" path="/com/rafaelmardojai/Blanket/">
     <key type="d" name="scroll-position">
         <default>0</default>
-        <summary></summary>
-        <description></description>
     </key>
     <key type="d" name="volume">
         <default>1</default>
-        <summary></summary>
-        <description></description>
     </key>
     <key type="b" name="playing">
         <default>true</default>
-        <summary></summary>
-        <description></description>
     </key>
     <key type="b" name="background-playback">
         <default>false</default>
-        <summary></summary>
-        <description></description>
     </key>
     <key type="a{ss}" name="custom-audios">
         <default>{}</default>
-        <summary></summary>
-        <description></description>
     </key>
     <key type="a{sd}" name="sounds-volume">
         <default>{}</default>
-        <summary></summary>
-        <description></description>
     </key>
 	</schema>
 </schemalist>
