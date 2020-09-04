@@ -24,7 +24,8 @@ sources = [
   'about.py',
   'sound.py',
   'widgets.py',
-  'settings.py'
+  'settings.py',
+  'mpris.py'
 ]
 
 install_data(sources, install_dir: moduledir)

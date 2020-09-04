@@ -28,6 +28,8 @@ from gi.repository import GLib, Gst, Gdk, Gio, Gtk, Handy
 # Init GStreamer
 Gst.init(None)
 
+from .mpris import MPRIS
+from .sound import MainPlayer
 from .window import BlanketWindow
 from .about import AboutDialog
 
@@ -39,10 +41,26 @@ class Application(Gtk.Application):
         GLib.set_application_name(_('Blanket'))
         GLib.setenv("PULSE_PROP_application.icon_name",
                     "com.rafaelmardojai.Blanket-symbolic", True)
-
+        # App window
         self.window = None
+        # App version
         self.version = version
+        # GSettings
         self.gsettings = Gio.Settings.new('com.rafaelmardojai.Blanket')
+        # App main player
+        self.mainplayer = MainPlayer()
+        # Connect mainplayer to volume function
+        self.mainplayer.connect('notify::volume', self._on_volume_changed)
+
+        # Get saved playing state
+        self.playing = self.gsettings.get_boolean('playing')
+        self.mainplayer.set_property('playing', self.playing)
+        # Get saved volume
+        self.saved_volume = self.gsettings.get_double('volume')
+        self.mainplayer.set_property('volume', self.saved_volume)
+
+        # Start MPRIS server
+        MPRIS(self)
 
     def do_startup(self):
         # Startup application
@@ -110,16 +128,29 @@ class Application(Gtk.Application):
     def do_activate(self):
         self.window = self.props.active_window
         if not self.window:
-            self.window = BlanketWindow(application=self)
+            self.window = BlanketWindow(self.mainplayer, application=self)
         self.window.present()
 
+        # Update window elements to saved playing state
+        self.window.update_playing_ui(self.playing)
+        # Connect window delete-event signal to _do_close
         self.window.connect('delete-event', self._do_close)
 
     def on_open(self, action, param):
         self.window.open_audio()
 
-    def on_playpause(self, action, param):
-        self.window.on_playpause_toggle()
+    def on_playpause(self, action=None, param=None):
+        # Reverse self.playing bool value
+        self.playing = False if self.playing else True
+
+        # Change mainplayer playing
+        self.mainplayer.set_property('playing', self.playing)
+
+        # Save playing state
+        self.gsettings.set_boolean('playing', self.playing)
+
+        # Update window elements to new playing state
+        self.window.update_playing_ui(self.playing)
 
     def on_background(self, action, value):
         action.set_state(GLib.Variant('b', value))
@@ -139,6 +170,9 @@ class Application(Gtk.Application):
     def on_close(self, action, param):
         self.window.close()
 
+    def on_quit(self, action, param):
+        self.quit()
+
     def _do_close(self, widget, event):
         background = self.gsettings.get_value('background-playback')
 
@@ -147,8 +181,10 @@ class Application(Gtk.Application):
         else:
             self.quit()
 
-    def on_quit(self, action, param):
-        self.quit()
+    def _on_volume_changed(self, player, volume):
+        # Save volume on settings
+        volume = player.get_property('volume')
+        self.gsettings.set_double('volume', volume)
 
 def main(version):
     app = Application(version)

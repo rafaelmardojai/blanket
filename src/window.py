@@ -18,9 +18,9 @@
 import os
 
 from gettext import gettext as _
-from gi.repository import GLib, Gtk, Handy
+from gi.repository import GLib, GObject, Gtk, Handy
 
-from .sound import MainPlayer, SoundObject
+from .sound import SoundObject
 from .widgets import SoundsGroup
 from .settings import Settings
 
@@ -87,33 +87,26 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     quit_revealer = Gtk.Template.Child()
 
-    def __init__(self, **kwargs):
+    def __init__(self, mainplayer, **kwargs):
         super().__init__(**kwargs)
 
         # Settings wrapper
         self.settings = Settings()
         self.settings.migrate_json() # Migrate old json settings
 
-        # App playing state
-        self.playing = self.settings.gsettings.get_boolean('playing')
-        self.first_play = True
-        self.saved_volume = self.settings.gsettings.get_double('volume')
-
-        # App main player
-        self.mainplayer = MainPlayer()
+        # Main player
+        self.mainplayer = mainplayer
 
         # Setup widgets
         self.setup()
 
     def setup(self):
-        # Connect vulume scale to volume function
-        self.volume.connect('value-changed', self._on_change_vol)
-        # Set saved volume value to menu scale
-        self.volume.set_value(self.saved_volume)
-        self._on_change_vol(self.volume)
-
-        # First run of on_playpause_toggle to setup all
-        self.on_playpause_toggle()
+        # Get volume scale adjustment
+        vol_adjustment = self.volume.get_adjustment()
+        # Bind volume scale value with main player volume
+        vol_adjustment.bind_property('value', self.mainplayer,
+                                     'volume',
+                                     GObject.BindingFlags.BIDIRECTIONAL)
 
         # If background-playback enabled show quit action on menu
         if self.settings.gsettings.get_value('background-playback'):
@@ -174,20 +167,9 @@ class BlanketWindow(Handy.ApplicationWindow):
             # Add SoundObject to SoundsGroup
             self.custom_sounds.add(sound)
 
-    def on_playpause_toggle(self, _widget=None):
-        # Change mainplayer mute
-        self.mainplayer.set_muted(self.playing)
-
-        # Reverse self.playing bool value
-        if not self.first_play:
-            self.playing = False if self.playing else True
-
-        # Save playing state
-        self.settings.gsettings.set_value('playing',
-                                          GLib.Variant('b', self.playing))
-
+    def update_playing_ui(self, playing):
         # Change widgets states
-        if self.playing:
+        if playing:
             self.playpause_icon.set_from_icon_name(
                     'media-playback-pause-symbolic', Gtk.IconSize.MENU)
             self.box.set_sensitive(True)
@@ -196,7 +178,6 @@ class BlanketWindow(Handy.ApplicationWindow):
                     'media-playback-start-symbolic', Gtk.IconSize.MENU)
             self.box.set_sensitive(False)
 
-        self.first_play = False
 
     def open_audio(self, _widget=None, _row=None):
 
@@ -239,13 +220,4 @@ class BlanketWindow(Handy.ApplicationWindow):
                 # Add SoundObject to SoundsGroup
                 self.custom_sounds.add(sound)
                 self.custom_sounds.show_all()
-
-    def _on_change_vol(self, scale):
-        # Round volume value
-        volume = round(scale.get_value(), 2)
-        # Set mainplayer volume
-        self.mainplayer.set_volume(volume)
-        # Save volume on settings
-        self.settings.gsettings.set_double('volume', volume)
-
 

@@ -25,23 +25,14 @@ class MainPlayer(GObject.GObject):
 
     __gsignals__ = {
         'volume-changed': (GObject.SignalFlags.RUN_FIRST, None, (int,)),
-        'muted': (GObject.SignalFlags.RUN_FIRST, None, (bool,)),
+        'playing-changed': (GObject.SignalFlags.RUN_FIRST, None, (bool,)),
     }
+
+    playing = GObject.Property(type=bool, default=True)
+    volume = GObject.Property(type=float, default=0)
 
     def __init__(self):
         super().__init__()
-
-        self.volume = 1
-
-    def set_muted(self, muted):
-        self.emit('muted', muted)
-
-    def set_volume(self, volume):
-        self.volume = volume
-        self.emit('volume-changed', volume)
-
-    def get_volume(self):
-        return self.volume
 
 
 class SoundObject(GObject.Object):
@@ -81,9 +72,9 @@ class SoundPlayer(GstPlayer.Player):
         self.name = self.sound.name
 
         # Connect mainplayer volume-changed signal
-        self.sound.mainplayer.connect('volume-changed', self._on_main_volume_changed)
+        self.sound.mainplayer.connect('notify::volume', self._on_main_volume_changed)
         # Connect mainplayer muted signal
-        self.sound.mainplayer.connect('muted', self._on_mute)
+        self.sound.mainplayer.connect('notify::playing', self._on_playing_changed)
 
         # Connect volume-changed signal
         self.connect('volume-changed', self._on_volume_changed)
@@ -92,7 +83,7 @@ class SoundPlayer(GstPlayer.Player):
 
     def set_virtual_volume(self, volume):
         # Get mainplayer volume
-        main_volume = self.sound.mainplayer.get_volume()
+        main_volume = self.sound.mainplayer.get_property('volume')
         # Get last saved sound volume
         self.saved_volume = volume
         # Multiply sound volume with mainplayer volume
@@ -106,15 +97,21 @@ class SoundPlayer(GstPlayer.Player):
         # Unref player
         self.unref()
 
-    def _on_mute(self, player, mute):
-        self.set_mute(mute)
+    def _on_playing_changed(self, player, playing):
+        playing = self.sound.mainplayer.get_property('playing')
+        if playing:
+            self.play()
+        else:
+            self.pause()
 
     def _on_volume_changed(self, player):
         # Always play if volume > 0
         volume = self.get_volume()
+        playing = self.sound.mainplayer.get_property('playing')
+
         if volume == 0:
             self.pause()
-        else:
+        elif playing:
             self.play()
 
     def _on_main_volume_changed(self, player, volume):
