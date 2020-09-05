@@ -108,6 +108,8 @@ class BlanketWindow(Handy.ApplicationWindow):
         vol_adjustment.bind_property('value', self.mainplayer,
                                      'volume',
                                      GObject.BindingFlags.BIDIRECTIONAL)
+        # Set volume scale value on first run
+        self.volume.set_value(self.mainplayer.get_property('volume'))
 
         # If background-playback enabled show quit action on menu
         if self.settings.gsettings.get_value('background-playback'):
