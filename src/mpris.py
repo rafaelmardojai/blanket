@@ -136,7 +136,9 @@ class MPRIS(Server):
         self.__metadata = {}
 
         track_id = 0 + randint(10000000, 90000000)
-        self.__metadata["mpris:trackid"] = GLib.Variant("o", "/com/rafaelmardojai/Blanket/Track/%s" % track_id)
+        self.__metadata["mpris:trackid"] = GLib.Variant(
+            "o",
+            "/com/rafaelmardojai/Blanket/Track/%s" % track_id)
         self.__metadata["xesam:title"] = GLib.Variant("s", "Listen to different sounds")
         self.__metadata["xesam:album"] = GLib.Variant("s", "Listen to different sounds")
         self.__metadata["xesam:artist"] = GLib.Variant("as", ["Blanket"])
@@ -174,7 +176,8 @@ class MPRIS(Server):
             return GLib.Variant("a{sv}", self.__metadata)
         elif property_name == "Volume":
             return GLib.Variant("d", self.app.mainplayer.get_property('volume'))
-
+        else:
+            return GLib.Variant("b", False)
 
     def GetAll(self, interface):
         ret = {}
