@@ -3,6 +3,7 @@ data/com.rafaelmardojai.Blanket.metainfo.xml.in
 data/com.rafaelmardojai.Blanket.gschema.xml
 data/resources/window.ui
 data/resources/about.ui
+data/resources/shortcuts.ui
 src/main.py
 src/window.py
 src/about.py

@@ -4,6 +4,7 @@
     <!-- UI Files -->
     <file>window.ui</file>
     <file>about.ui</file>
+    <file>shortcuts.ui</file>
     <file>sound-row.ui</file>
 
     <!-- CSS -->

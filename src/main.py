@@ -90,6 +90,10 @@ class Application(Gtk.Application):
                 'state' : True
             },
             {
+                'name'  : 'shortcuts',
+                'func'  : self.on_shortcuts
+            },
+            {
                 'name'  : 'about',
                 'func'  : self.on_about
             },
@@ -160,6 +164,16 @@ class Application(Gtk.Application):
             self.window.quit_revealer.set_reveal_child(True)
         else:
             self.window.quit_revealer.set_reveal_child(False)
+
+    def on_shortcuts(self, action, param):
+        window = Gtk.Builder.new_from_resource(
+            '/com/rafaelmardojai/Blanket/shortcuts.ui'
+        ).get_object('shortcuts')
+        window.set_transient_for(self.window)
+        window.props.section_name = 'shortcuts'
+        window.set_modal(True)
+        window.present()
+        window.show_all()
 
     def on_about(self, action, param):
         dialog = AboutDialog(self.version)
