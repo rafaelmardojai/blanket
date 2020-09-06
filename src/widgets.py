@@ -80,15 +80,15 @@ class SoundRow(Gtk.ListBoxRow):
         # Set player volume
         self.player.set_virtual_volume(volume)
         # Save volume on settings
-        GLib.idle_add(self.settings.set_sound_volume,
-                      self.sound.name, volume)
+        self.settings.set_sound_volume(self.sound.name, volume)
 
     def remove(self, widget):
+        # Remove audio from list
         self.model.remove(self.get_index())
+        # Remove player
         self.player.remove()
         # Remove audio from settings
-        GLib.idle_add(self.settings.remove_custom_audio,
-                      self.sound.name)
+        self.settings.remove_custom_audio(self.sound.name)
 
 
 '''

@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import GObject, GstPlayer
+from gi.repository import GObject, Gst, GstPlayer
 
 
 class MainPlayer(GObject.GObject):
@@ -67,7 +67,7 @@ class SoundPlayer(GstPlayer.Player):
     def __init__(self, sound):
         super().__init__()
         self.sound = sound
-        #
+        # Create a var to save saved volume
         self.saved_volume = 0.0
         # Alwas start with volume in 0
         self.set_volume(0)
@@ -77,9 +77,13 @@ class SoundPlayer(GstPlayer.Player):
         self.name = self.sound.name
 
         # Connect mainplayer volume-changed signal
-        self.sound.mainplayer.connect('notify::volume', self._on_main_volume_changed)
+        self.volume_hdlr = self.sound.mainplayer.connect(
+            'notify::volume',
+            self._on_main_volume_changed)
         # Connect mainplayer muted signal
-        self.sound.mainplayer.connect('notify::playing', self._on_playing_changed)
+        self.playing_hdlr = self.sound.mainplayer.connect(
+            'notify::playing',
+            self._on_playing_changed)
 
         # Connect volume-changed signal
         self.connect('volume-changed', self._on_volume_changed)
@@ -99,8 +103,9 @@ class SoundPlayer(GstPlayer.Player):
     def remove(self):
         # Stop player
         self.stop()
-        # Unref player
-        self.unref()
+        # Disconnect main player signals
+        self.sound.mainplayer.disconnect(self.volume_hdlr)
+        self.sound.mainplayer.disconnect(self.playing_hdlr)
 
     def _on_playing_changed(self, player, playing):
         playing = self.sound.mainplayer.get_property('playing')
