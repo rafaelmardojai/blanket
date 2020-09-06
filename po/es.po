@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-01 08:07-0500\n"
-"PO-Revision-Date: 2020-09-01 08:08-0500\n"
+"POT-Creation-Date: 2020-09-05 21:20-0500\n"
+"PO-Revision-Date: 2020-09-05 21:17-0500\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
 "Language-Team: Spanish; Castilian <mardojai.cardenas@gmail.com>\n"
 "Language: es\n"
@@ -20,12 +20,14 @@ msgstr ""
 "X-Generator: Gtranslator 3.36.0\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:37
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:41
+#: src/mpris.py:145
 msgid "Blanket"
 msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:9
+#: src/mpris.py:143 src/mpris.py:144
 msgid "Listen to different sounds"
 msgstr "Escuche diferentes sonidos"
 
@@ -40,6 +42,22 @@ msgstr ""
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
+
+#: data/resources/window.ui:145
+msgid "Keep playing when closed"
+msgstr "Continuar reproduciendo al cerrar"
+
+#: data/resources/window.ui:164
+msgid "Keyboard Shortcuts"
+msgstr "Atajos de teclado"
+
+#: data/resources/window.ui:173
+msgid "About Blanket"
+msgstr "Acerca de Blanket"
+
+#: data/resources/window.ui:199
+msgid "Quit"
+msgstr "Salir"
 
 #: data/resources/about.ui:10
 msgid "Copyright 2020 Rafael Mardojai CM"
@@ -90,11 +108,11 @@ msgid "White Noise"
 msgstr "Ruido Blanco"
 
 #. Setup user custom sounds
-#: src/window.py:110
+#: src/window.py:152
 msgid "Custom"
 msgstr "Personalizado"
 
-#: src/window.py:149
+#: src/window.py:204
 msgid "Open audio"
 msgstr "Abrir audio"
 

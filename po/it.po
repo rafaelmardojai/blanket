@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-01 08:07-0500\n"
+"POT-Creation-Date: 2020-09-05 21:20-0500\n"
 "PO-Revision-Date: 2020-09-01 22:00+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -17,12 +17,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:37
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:41
+#: src/mpris.py:145
 msgid "Blanket"
 msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:9
+#: src/mpris.py:143 src/mpris.py:144
 msgid "Listen to different sounds"
 msgstr "Ascolta suoni diversi"
 
@@ -31,13 +33,29 @@ msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
-"Migliora la concentrazione e aumenta la tua produttività ascoltando diversi"
-"suoni. Oppure ti permette di addormentarti in un ambiente rumoroso."
-
+"Migliora la concentrazione e aumenta la tua produttività ascoltando "
+"diversisuoni. Oppure ti permette di addormentarti in un ambiente rumoroso."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
+
+#: data/resources/window.ui:145
+msgid "Keep playing when closed"
+msgstr ""
+
+#: data/resources/window.ui:164
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/resources/window.ui:173
+#, fuzzy
+msgid "About Blanket"
+msgstr "Blanket"
+
+#: data/resources/window.ui:199
+msgid "Quit"
+msgstr ""
 
 #: data/resources/about.ui:10
 msgid "Copyright 2020 Rafael Mardojai CM"
@@ -88,11 +106,11 @@ msgid "White Noise"
 msgstr "Rumore Bianco"
 
 #. Setup user custom sounds
-#: src/window.py:110
+#: src/window.py:152
 msgid "Custom"
 msgstr "Personalizzato"
 
-#: src/window.py:149
+#: src/window.py:204
 msgid "Open audio"
 msgstr "Apri audio"
 
