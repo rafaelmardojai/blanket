@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img src="data/com.rafaelmardojai.Blanket.svg" alt="Blanket" width="128" height="128"/><br>
+	<img src="brand/logo.svg" alt="Blanket" width="128" height="128"/><br>
 	Blanket
 </h1>
 
@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <img src="data/screenshot.png"/>
+  <img src="brand/screenshot-1.png"/>
 </p>
 
 
