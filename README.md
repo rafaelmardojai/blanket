@@ -35,6 +35,7 @@ Clone and run from GNOME Builder.
 
 - Python 3 `python`
 - PyGObject `python-gobject`
+- `appstream-glib`
 - GTK3 `gtk3`
 - Handy `libhandy >= 0.90.0`
 - GStreamer `gstreamer`
