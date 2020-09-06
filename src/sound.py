@@ -40,7 +40,8 @@ class SoundObject(GObject.Object):
     Describe a sound with it's propeties
     '''
 
-    def __init__(self, name, uri=None, title=None, icon=None, removable=False, mainplayer=None, **kwargs):
+    def __init__(self, name, uri=None, title=None, icon=None, mainplayer=None,
+    settings=None, removable=False, **kwargs):
         super().__init__(**kwargs)
 
         resource_tmpl = 'resource:////com/rafaelmardojai/Blanket/sounds/{}.ogg'
@@ -50,8 +51,12 @@ class SoundObject(GObject.Object):
         self.uri = uri if uri else resource_tmpl.format(self.name)
         self.title = title if title else name
         self.icon_name = icon if icon else icon_tmpl.format(self.name)
-        self.removable = removable
         self.mainplayer = mainplayer
+        self.settings = settings
+        self.removable = removable
+
+    def get_saved_volume(self):
+        return self.settings.get_sound_volume(self.name)
 
 
 class SoundPlayer(GstPlayer.Player):
@@ -99,26 +104,32 @@ class SoundPlayer(GstPlayer.Player):
 
     def _on_playing_changed(self, player, playing):
         playing = self.sound.mainplayer.get_property('playing')
-        if playing:
-            self.play()
-        else:
-            self.pause()
+
+        if not self.__vol_zero():
+            if playing:
+                self.play()
+            else:
+                self.pause()
 
     def _on_volume_changed(self, player):
         # Always play if volume > 0
-        volume = self.get_volume()
         playing = self.sound.mainplayer.get_property('playing')
 
-        if volume == 0:
+        if self.__vol_zero():
             self.pause()
         elif playing:
             self.play()
 
     def _on_main_volume_changed(self, player, volume):
-        # Set volume again when mainplayer volume changes
-        self.set_virtual_volume(self.saved_volume)
+        if not self.__vol_zero(self.sound.get_saved_volume()):
+            # Set volume again when mainplayer volume changes
+            self.set_virtual_volume(self.saved_volume)
 
     def _on_eos(self, player):
         # Seek player to 0
         self.seek(0)
         
+    def __vol_zero(self, volume=None):
+        volume = volume if volume else self.get_volume()
+        return True if volume == 0 else False
+

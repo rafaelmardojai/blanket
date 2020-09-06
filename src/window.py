@@ -140,7 +140,8 @@ class BlanketWindow(Handy.ApplicationWindow):
             for s in g['sounds']:
                 # Create a new SoundObject
                 sound = SoundObject(s['name'], title=s['title'],
-                                    mainplayer=self.mainplayer)
+                                    mainplayer=self.mainplayer,
+                                    settings=self.settings)
                 # Add SoundObject to SoundsGroup
                 group.add(sound)
 
@@ -175,7 +176,9 @@ class BlanketWindow(Handy.ApplicationWindow):
             # Create a new SoundObject
             sound = SoundObject(name, uri,
                     icon='com.rafaelmardojai.Blanket-sound-wave',
-                    removable=True, mainplayer=self.mainplayer)
+                    mainplayer=self.mainplayer,
+                    settings=self.settings,
+                    removable=True)
             # Add SoundObject to SoundsGroup
             self.custom_sounds.add(sound)
 
@@ -225,7 +228,9 @@ class BlanketWindow(Handy.ApplicationWindow):
                 # Create a new SoundObject
                 sound = SoundObject(name, uri,
                     icon='com.rafaelmardojai.Blanket-sound-wave',
-                    removable=True, mainplayer=self.mainplayer)
+                    mainplayer=self.mainplayer,
+                    settings=self.settings,
+                    removable=True)
                 # Save to settings
                 GLib.idle_add(self.settings.add_custom_audio,
                               sound.name, sound.uri)
