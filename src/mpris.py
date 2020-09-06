@@ -17,6 +17,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
+from gettext import gettext as _
 from gi.repository import Gio, Gst, GLib, Gtk
 
 from random import randint
@@ -139,9 +140,9 @@ class MPRIS(Server):
         self.__metadata["mpris:trackid"] = GLib.Variant(
             "o",
             "/com/rafaelmardojai/Blanket/Track/%s" % track_id)
-        self.__metadata["xesam:title"] = GLib.Variant("s", "Listen to different sounds")
-        self.__metadata["xesam:album"] = GLib.Variant("s", "Listen to different sounds")
-        self.__metadata["xesam:artist"] = GLib.Variant("as", ["Blanket"])
+        self.__metadata["xesam:title"] = GLib.Variant("s", _("Listen to different sounds"))
+        self.__metadata["xesam:album"] = GLib.Variant("s", _("Listen to different sounds"))
+        self.__metadata["xesam:artist"] = GLib.Variant("as", [_("Blanket")])
 
         self.__bus = Gio.bus_get_sync(Gio.BusType.SESSION, None)
         Gio.bus_own_name_on_connection(self.__bus,
