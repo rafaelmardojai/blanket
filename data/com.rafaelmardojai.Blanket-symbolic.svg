@@ -1,26 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
- <metadata>
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:title/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <defs>
-  <filter id="filter1436" x="-2.2312e-5" y="-4.5769e-5" width="1" height="1.0001" color-interpolation-filters="sRGB">
-   <feGaussianBlur stdDeviation="0.008162181"/>
-  </filter>
- </defs>
- <g transform="translate(-160,-172)" enable-background="new" filter="url(#filter1436)">
-  <path d="m164 172v8e-3c0.0496-5e-3 0.0993-8e-3 0.15-8e-3zm0.15 0c1.0803 0 1.85 0.892 1.85 2v2h4v-2c0-1.108-0.86969-2-1.95-2-0.0507 0-0.10035 5e-3 -0.15 8e-3v-8e-3z" stroke-width="1.8181" style="paint-order:stroke fill markers"/>
-  <rect x="166" y="178" width="4" height="4" opacity=".99971" stroke-width="10" style="paint-order:stroke fill markers"/>
-  <path transform="translate(-8,156)" d="m174 28v4h2v-2h2v-2z" opacity=".99971" stroke-width="10" style="paint-order:stroke fill markers"/>
-  <path transform="translate(-8,156)" d="m170 16c-1.108 0-2 0.7805-2 1.75v12.25h2v-2h2v-10.25c0-0.9695-0.892-1.75-2-1.75z" stroke-width="1.3886" style="paint-order:stroke fill markers"/>
-  <path d="m170 172v8e-3c0.0496-5e-3 0.0993-8e-3 0.15-8e-3zm0.15 0c1.0803 0 1.85 0.892 1.85 2v2h4v-2c0-1.108-0.86969-2-1.95-2-0.0507 0-0.10035 5e-3 -0.15 8e-3v-8e-3z" stroke-width="1.8181" style="paint-order:stroke fill markers"/>
-  <rect x="172" y="178" width="4" height="4" opacity=".99971" stroke-width="10" style="paint-order:stroke fill markers"/>
-  <path d="m176 184v4h-2v-2h-2v-2z" opacity=".99971" stroke-width="10" style="paint-order:stroke fill markers"/>
- </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16px"
+   height="16px"
+   version="1.1"
+   viewBox="0 0 16 16"
+   id="svg25"
+   sodipodi:docname="com.rafaelmardojai.Blanket-symbolic.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)">
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     id="namedview27"
+     showgrid="false"
+     inkscape:zoom="32"
+     inkscape:cx="9.9537591"
+     inkscape:cy="6.309056"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg25" />
+  <metadata
+     id="metadata2">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs7">
+    <filter
+       id="filter1436"
+       x="-2.2312e-5"
+       y="-4.5769e-5"
+       width="1"
+       height="1.0001"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         stdDeviation="0.008162181"
+         id="feGaussianBlur4" />
+    </filter>
+  </defs>
+  <g
+     style="display:inline;filter:url(#filter1436);enable-background:new"
+     id="g1405"
+     transform="translate(-159.99967,-173.00006)">
+    <path
+       d="m 164,180 c -2.216,0 -4,1.784 -4,4 0,2.216 1.784,4 4,4 h 8 3 c 0.554,0 1,-0.446 1,-1 0,-0.554 -0.446,-1 -1,-1 h -11 c -1.10707,-0.0453 -2,-0.892 -2,-2 0,-1.108 0.892,-2 2,-2 h 0.0508 9.44922 c 0.277,0 0.5,0.223 0.5,0.5 0,0.277 -0.223,0.5 -0.5,0.5 H 171 164.05078 164 c -0.554,0 -1,0.446 -1,1 0,0.554 0.446,1 1,1 h 2.5 4.5 2.5 c 1.385,0 2.5,-1.115 2.5,-2.5 0,-1.385 -1.115,-2.5 -2.5,-2.5 h -1.5 -5.5 z"
+       style="opacity:0.999707;fill:#000000;stroke-width:20;paint-order:stroke fill markers"
+       id="rect1339" />
+    <path
+       sodipodi:nodetypes="ccsccsccccc"
+       transform="translate(-8,156)"
+       d="M 172.01758,18 C 168,18 167.82084,22.29254 168,25 c 0.59457,-1 1.91158,-2 4.01758,-2 H 175 175.00781 180 c 2.29007,0 3,0.13966 4,1 0.17916,-2.70746 0,-6 -4,-6 H 175.0332 175 Z"
+       style="opacity:0.999707;fill:#000000;stroke-width:8.75;paint-order:stroke fill markers"
+       id="rect1377" />
+  </g>
 </svg>
