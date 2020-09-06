@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 11:55-0500\n"
-"PO-Revision-Date: 2020-09-01 22:00+0100\n"
+"PO-Revision-Date: 2020-09-06 20:00+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -42,20 +42,19 @@ msgstr "Rafael Mardojai CM"
 
 #: data/resources/window.ui:145
 msgid "Keep playing when closed"
-msgstr ""
+msgstr "Continua a suonare quando è chiuso"
 
 #: data/resources/window.ui:165
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Scorciatoie da tastiera"
 
 #: data/resources/window.ui:174
-#, fuzzy
 msgid "About Blanket"
-msgstr "Blanket"
+msgstr "Informazioni su Blanket"
 
 #: data/resources/window.ui:200 data/resources/shortcuts.ui:34
 msgid "Quit"
-msgstr ""
+msgstr "Esci"
 
 #: data/resources/about.ui:10
 msgid "Copyright 2020 Rafael Mardojai CM"
@@ -63,19 +62,19 @@ msgstr "Copyright 2020 Rafael Mardojai CM"
 
 #: data/resources/shortcuts.ui:12
 msgid "General"
-msgstr ""
+msgstr "Generale"
 
 #: data/resources/shortcuts.ui:16
 msgid "Play/Pause sounds"
-msgstr ""
+msgstr "Riproduci/Metti in pausa i suoni"
 
 #: data/resources/shortcuts.ui:22
 msgid "Add custom sound"
-msgstr ""
+msgstr "Aggiungi un suono personalizzato"
 
 #: data/resources/shortcuts.ui:28
 msgid "Close window"
-msgstr ""
+msgstr "Chiudi finestra"
 
 #: src/window.py:29
 msgid "Nature"
