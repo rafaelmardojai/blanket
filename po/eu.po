@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blanket package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blanket\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-06 11:55-0500\n"
+"PO-Revision-Date: 2020-09-07 19:09+0200\n"
+"Last-Translator: Porrumentzio <porrumentzio@riseup.net>\n"
+"Language-Team: \n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:3
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:42
+#: src/mpris.py:145
+msgid "Blanket"
+msgstr "Blanket"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:4
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:9
+#: src/mpris.py:143 src/mpris.py:144
+msgid "Listen to different sounds"
+msgstr "Entzun hainbat soinu"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+msgid ""
+"Improve focus and increase your productivity by listening to different "
+"sounds. Or allows you to fall asleep in a noisy environment."
+msgstr ""
+"Hobetu arreta eta handitu produktibitatea, hainbat soinu entzunez. Edo "
+"erraztu giro zaratatsuetan lokartzea."
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: data/resources/window.ui:145
+msgid "Keep playing when closed"
+msgstr "Jarraitu erreproduzitzen ixtean"
+
+#: data/resources/window.ui:165
+msgid "Keyboard Shortcuts"
+msgstr "Laster-teklak"
+
+#: data/resources/window.ui:174
+msgid "About Blanket"
+msgstr "Honi buruz"
+
+#: data/resources/window.ui:200 data/resources/shortcuts.ui:34
+msgid "Quit"
+msgstr "Irten"
+
+#: data/resources/about.ui:10
+msgid "Copyright 2020 Rafael Mardojai CM"
+msgstr "Copyright 2020 Rafael Mardojai CM"
+
+#: data/resources/shortcuts.ui:12
+msgid "General"
+msgstr "Orokorra"
+
+#: data/resources/shortcuts.ui:16
+msgid "Play/Pause sounds"
+msgstr "Erreproduzitu/Gelditu soinuak"
+
+#: data/resources/shortcuts.ui:22
+msgid "Add custom sound"
+msgstr "Gehitu soinu pertsonalizatua"
+
+#: data/resources/shortcuts.ui:28
+msgid "Close window"
+msgstr "Itxi leihoa"
+
+#: src/window.py:29
+msgid "Nature"
+msgstr "Natura"
+
+#: src/window.py:33
+msgid "Rain"
+msgstr "Euria"
+
+#: src/window.py:37
+msgid "Storm"
+msgstr "Ekaitza"
+
+#: src/window.py:41
+msgid "Wind"
+msgstr "Haizea"
+
+#: src/window.py:45
+msgid "Summer Night"
+msgstr "Udako gaua"
+
+#: src/window.py:50
+msgid "Interiors"
+msgstr "Barrualdeak"
+
+#: src/window.py:54
+msgid "Coffee Shop"
+msgstr "Kafetegia"
+
+#: src/window.py:58
+msgid "Fireplace"
+msgstr "Sutondoa"
+
+#: src/window.py:63
+msgid "Noise"
+msgstr "Zarata"
+
+#: src/window.py:67
+msgid "Pink Noise"
+msgstr "Soinu arrosa"
+
+#: src/window.py:71
+msgid "White Noise"
+msgstr "Soinu zuria"
+
+#. Setup user custom sounds
+#: src/window.py:153
+msgid "Custom"
+msgstr "Pertsonalizatua"
+
+#: src/window.py:207
+msgid "Open audio"
+msgstr "Ireki audioa"
+
+#. Set sound artists list
+#: src/about.py:62
+msgid "Sounds by"
+msgstr "Soinuak"
