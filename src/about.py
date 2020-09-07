@@ -57,7 +57,6 @@ class AboutDialog(Gtk.AboutDialog):
         # Set authors list
         self.set_authors(AUTHORS)
         # Set artists list
-        self.set_artists(ARTISTS)
+        self.set_artists(_('Artwork by'), ARTISTS)
         # Set sound artists list
         self.add_credit_section(_('Sounds by'), SOUND_ARTISTS)
-
