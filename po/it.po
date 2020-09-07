@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-06 11:55-0500\n"
+"POT-Creation-Date: 2020-09-07 12:48-0500\n"
 "PO-Revision-Date: 2020-09-06 20:00+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -60,6 +60,12 @@ msgstr "Esci"
 msgid "Copyright 2020 Rafael Mardojai CM"
 msgstr "Copyright 2020 Rafael Mardojai CM"
 
+#. Replace me with your names
+#: data/resources/about.ui:14
+msgctxt "Add your names here, do not remove previous names!"
+msgid "translator1, translator2, ..."
+msgstr "Albano Battistella"
+
 #: data/resources/shortcuts.ui:12
 msgid "General"
 msgstr "Generale"
@@ -80,19 +86,19 @@ msgstr "Chiudi finestra"
 msgid "Nature"
 msgstr "Natura"
 
-#: src/window.py:33
+#: src/window.py:33 src/about.py:26 src/about.py:32
 msgid "Rain"
 msgstr "Pioggia"
 
-#: src/window.py:37
+#: src/window.py:37 src/about.py:26 src/about.py:30
 msgid "Storm"
 msgstr "Temporale"
 
-#: src/window.py:41
+#: src/window.py:41 src/about.py:26 src/about.py:34
 msgid "Wind"
 msgstr "Vento"
 
-#: src/window.py:45
+#: src/window.py:45 src/about.py:26 src/about.py:35
 msgid "Summer Night"
 msgstr "Notte d'estate"
 
@@ -104,7 +110,7 @@ msgstr "Interni"
 msgid "Coffee Shop"
 msgstr "Caffetteria"
 
-#: src/window.py:58
+#: src/window.py:58 src/about.py:35
 msgid "Fireplace"
 msgstr "Caminetto"
 
@@ -112,11 +118,11 @@ msgstr "Caminetto"
 msgid "Noise"
 msgstr "Rumore"
 
-#: src/window.py:67
+#: src/window.py:67 src/about.py:33
 msgid "Pink Noise"
 msgstr "Rumore Rosa"
 
-#: src/window.py:71
+#: src/window.py:71 src/about.py:31
 msgid "White Noise"
 msgstr "Rumore Bianco"
 
@@ -129,7 +135,12 @@ msgstr "Personalizzato"
 msgid "Open audio"
 msgstr "Apri audio"
 
+#: src/about.py:35
+#, fuzzy
+msgid "Coffee  Shop"
+msgstr "Caffetteria"
+
 #. Set sound artists list
-#: src/about.py:62
+#: src/about.py:56
 msgid "Sounds by"
 msgstr "Suoni di"

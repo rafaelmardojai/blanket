@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-06 11:55-0500\n"
+"POT-Creation-Date: 2020-09-07 12:48-0500\n"
 "PO-Revision-Date: 2020-09-07 17:33+0200\n"
+"Last-Translator: Porrumentzio <porrumentzio@riseup.net>\n"
 "Language-Team: \n"
+"Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.1\n"
-"Last-Translator: Porrumentzio <porrumentzio@riseup.net>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: eo\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:42
@@ -62,6 +62,12 @@ msgstr "Eliri"
 msgid "Copyright 2020 Rafael Mardojai CM"
 msgstr "Copyright 2020 Rafael Mardojai CM"
 
+#. Replace me with your names
+#: data/resources/about.ui:14
+msgctxt "Add your names here, do not remove previous names!"
+msgid "translator1, translator2, ..."
+msgstr "Porrumentzio"
+
 #: data/resources/shortcuts.ui:12
 msgid "General"
 msgstr "Ĝenerala"
@@ -82,19 +88,19 @@ msgstr "Fermi fenestron"
 msgid "Nature"
 msgstr "Naturo"
 
-#: src/window.py:33
+#: src/window.py:33 src/about.py:26 src/about.py:32
 msgid "Rain"
 msgstr "Pluvo"
 
-#: src/window.py:37
+#: src/window.py:37 src/about.py:26 src/about.py:30
 msgid "Storm"
 msgstr "Ŝtormo"
 
-#: src/window.py:41
+#: src/window.py:41 src/about.py:26 src/about.py:34
 msgid "Wind"
 msgstr "Vento"
 
-#: src/window.py:45
+#: src/window.py:45 src/about.py:26 src/about.py:35
 msgid "Summer Night"
 msgstr "Somera nokto"
 
@@ -106,7 +112,7 @@ msgstr "Internoj"
 msgid "Coffee Shop"
 msgstr "Kafejo"
 
-#: src/window.py:58
+#: src/window.py:58 src/about.py:35
 msgid "Fireplace"
 msgstr "Fajrejo"
 
@@ -114,11 +120,11 @@ msgstr "Fajrejo"
 msgid "Noise"
 msgstr "Bruo"
 
-#: src/window.py:67
+#: src/window.py:67 src/about.py:33
 msgid "Pink Noise"
 msgstr "Rozkolora bruo"
 
-#: src/window.py:71
+#: src/window.py:71 src/about.py:31
 msgid "White Noise"
 msgstr "Blanka bruo"
 
@@ -131,7 +137,12 @@ msgstr "Personecigita"
 msgid "Open audio"
 msgstr "Malfermi sondosieron"
 
+#: src/about.py:35
+#, fuzzy
+msgid "Coffee  Shop"
+msgstr "Kafejo"
+
 #. Set sound artists list
-#: src/about.py:62
+#: src/about.py:56
 msgid "Sounds by"
 msgstr "Sonoj de"
