@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-06 11:55-0500\n"
-"PO-Revision-Date: 2020-09-02 17:49+0200\n"
+"PO-Revision-Date: 2020-09-07 13:44+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -44,20 +44,19 @@ msgstr "Rafael Mardojai CM"
 
 #: data/resources/window.ui:145
 msgid "Keep playing when closed"
-msgstr ""
+msgstr "Doorgaan met afspelen na afsluiten"
 
 #: data/resources/window.ui:165
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Sneltoetsen"
 
 #: data/resources/window.ui:174
-#, fuzzy
 msgid "About Blanket"
-msgstr "Blanket"
+msgstr "Over Blanket"
 
 #: data/resources/window.ui:200 data/resources/shortcuts.ui:34
 msgid "Quit"
-msgstr ""
+msgstr "Afsluiten"
 
 #: data/resources/about.ui:10
 msgid "Copyright 2020 Rafael Mardojai CM"
@@ -65,19 +64,19 @@ msgstr "Copyright 2020 Rafael Mardojai CM"
 
 #: data/resources/shortcuts.ui:12
 msgid "General"
-msgstr ""
+msgstr "Algemeen"
 
 #: data/resources/shortcuts.ui:16
 msgid "Play/Pause sounds"
-msgstr ""
+msgstr "Geluiden afspelen/onderbreken"
 
 #: data/resources/shortcuts.ui:22
 msgid "Add custom sound"
-msgstr ""
+msgstr "Eigen geluid toevoegen"
 
 #: data/resources/shortcuts.ui:28
 msgid "Close window"
-msgstr ""
+msgstr "Venster sluiten"
 
 #: src/window.py:29
 msgid "Nature"
