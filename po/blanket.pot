@@ -128,6 +128,11 @@ msgstr ""
 msgid "Open audio"
 msgstr ""
 
+#. set artwork artist list
+#: src/about.py:60
+msgid "Artwork by"
+msgstr ""
+
 #. Set sound artists list
 #: src/about.py:62
 msgid "Sounds by"
