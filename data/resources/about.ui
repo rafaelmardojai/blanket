@@ -11,5 +11,6 @@
     <property name="website">https://github.com/rafaelmardojai/blanket/</property>
     <property name="logo_icon_name">com.rafaelmardojai.Blanket</property>
     <property name="license_type">gpl-3-0</property>
+    <property name="translator-credits" translatable="yes" context="Add your names here, do not remove previous names!" comments="Replace me with your names">translator1, translator2, ...</property>
   </template>
 </interface>
