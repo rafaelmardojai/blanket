@@ -1,0 +1,147 @@
+# Catalan translation for Blanket.
+# Copyright (C) 2020 Adolfo Jayme Barrientos
+# This file is distributed under the same license as the blanket package.
+# Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blanket\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-07 12:48-0500\n"
+"PO-Revision-Date: 2020-09-08 06:49-0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ca\n"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:3
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:42
+#: src/mpris.py:145
+msgid "Blanket"
+msgstr "Blanket"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:4
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:9
+#: src/mpris.py:143 src/mpris.py:144
+msgid "Listen to different sounds"
+msgstr "Escolteu diferents sons"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+msgid ""
+"Improve focus and increase your productivity by listening to different "
+"sounds. Or allows you to fall asleep in a noisy environment."
+msgstr ""
+"Milloreu la vostra concentració i augmenteu la vostra productivitat en "
+"escoltar diferents sons. També us permet dormir en un ambient sorollós."
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai C. M."
+
+#: data/resources/window.ui:145
+msgid "Keep playing when closed"
+msgstr "Continua reproduint en tancar"
+
+#: data/resources/window.ui:165
+msgid "Keyboard Shortcuts"
+msgstr "Dreceres de teclat"
+
+#: data/resources/window.ui:174
+msgid "About Blanket"
+msgstr "Quant al Blanket"
+
+#: data/resources/window.ui:200 data/resources/shortcuts.ui:34
+msgid "Quit"
+msgstr "Surt"
+
+#: data/resources/about.ui:10
+msgid "Copyright 2020 Rafael Mardojai CM"
+msgstr "Drets d’autor © 2020 Rafael Mardojai C. M."
+
+#. Replace me with your names
+#: data/resources/about.ui:14
+msgctxt "Add your names here, do not remove previous names!"
+msgid "translator1, translator2, ..."
+msgstr "Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2020"
+
+#: data/resources/shortcuts.ui:12
+msgid "General"
+msgstr "Generals"
+
+#: data/resources/shortcuts.ui:16
+msgid "Play/Pause sounds"
+msgstr "Reprodueix/posa en pausa els sons"
+
+#: data/resources/shortcuts.ui:22
+msgid "Add custom sound"
+msgstr "Afegeix un so personalitzat"
+
+#: data/resources/shortcuts.ui:28
+msgid "Close window"
+msgstr "Tanca la finestra"
+
+#: src/window.py:29
+msgid "Nature"
+msgstr "Natura"
+
+#: src/window.py:33 src/about.py:26 src/about.py:32
+msgid "Rain"
+msgstr "Pluja"
+
+#: src/window.py:37 src/about.py:26 src/about.py:30
+msgid "Storm"
+msgstr "Tempesta"
+
+#: src/window.py:41 src/about.py:26 src/about.py:34
+msgid "Wind"
+msgstr "Vent"
+
+#: src/window.py:45 src/about.py:26 src/about.py:35
+msgid "Summer Night"
+msgstr "Nit estiuenca"
+
+#: src/window.py:50
+msgid "Interiors"
+msgstr "Interiors"
+
+#: src/window.py:54
+msgid "Coffee Shop"
+msgstr "Cafè"
+
+#: src/window.py:58 src/about.py:35
+msgid "Fireplace"
+msgstr "Llar de foc"
+
+#: src/window.py:63
+msgid "Noise"
+msgstr "Soroll"
+
+#: src/window.py:67 src/about.py:33
+msgid "Pink Noise"
+msgstr "Soroll rosa"
+
+#: src/window.py:71 src/about.py:31
+msgid "White Noise"
+msgstr "Soroll blanc"
+
+#. Setup user custom sounds
+#: src/window.py:153
+msgid "Custom"
+msgstr "Personalitzat"
+
+#: src/window.py:207
+msgid "Open audio"
+msgstr "Obre un àudio"
+
+#: src/about.py:35
+msgid "Coffee  Shop"
+msgstr "Cafè"
+
+#. Set sound artists list
+#: src/about.py:56
+msgid "Sounds by"
+msgstr "Sons de"
