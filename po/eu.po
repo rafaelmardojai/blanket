@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-07 12:48-0500\n"
-"PO-Revision-Date: 2020-09-07 19:09+0200\n"
+"PO-Revision-Date: 2020-09-08 11:55+0200\n"
 "Last-Translator: Porrumentzio <porrumentzio@riseup.net>\n"
 "Language-Team: \n"
 "Language: eu\n"
@@ -138,7 +138,6 @@ msgid "Open audio"
 msgstr "Ireki audioa"
 
 #: src/about.py:35
-#, fuzzy
 msgid "Coffee  Shop"
 msgstr "Kafetegia"
 
