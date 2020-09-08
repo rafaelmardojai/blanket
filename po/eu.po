@@ -66,7 +66,7 @@ msgstr "Copyright 2020 Rafael Mardojai CM"
 #: data/resources/about.ui:14
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator1, translator2, ..."
-msgstr "Porrumentzio"
+msgstr "Porrumentzio <porrumentzio@riseup.net>"
 
 #: data/resources/shortcuts.ui:12
 msgid "General"

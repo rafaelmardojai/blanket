@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-07 12:48-0500\n"
-"PO-Revision-Date: 2020-09-08 11:55+0200\n"
+"PO-Revision-Date: 2020-09-07 17:33+0200\n"
 "Last-Translator: Porrumentzio <porrumentzio@riseup.net>\n"
 "Language-Team: \n"
 "Language: eo\n"
@@ -66,7 +66,7 @@ msgstr "Copyright 2020 Rafael Mardojai CM"
 #: data/resources/about.ui:14
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator1, translator2, ..."
-msgstr "Porrumentzio"
+msgstr "Porrumentzio <porrumentzio@riseup.net>"
 
 #: data/resources/shortcuts.ui:12
 msgid "General"
