@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-07 12:48-0500\n"
-"PO-Revision-Date: 2020-09-06 11:56-0500\n"
+"POT-Creation-Date: 2020-09-08 18:25-0500\n"
+"PO-Revision-Date: 2020-09-08 18:26-0500\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
 "Language-Team: Spanish; Castilian <mardojai.cardenas@gmail.com>\n"
 "Language: es\n"
@@ -139,7 +139,10 @@ msgid "Open audio"
 msgstr "Abrir audio"
 
 #: src/about.py:35
-#, fuzzy
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: src/about.py:35
 msgid "Coffee  Shop"
 msgstr "Tienda de Café"
 

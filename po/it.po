@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-07 12:48-0500\n"
+"POT-Creation-Date: 2020-09-08 18:25-0500\n"
 "PO-Revision-Date: 2020-09-06 20:00+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -134,6 +134,10 @@ msgstr "Personalizzato"
 #: src/window.py:207
 msgid "Open audio"
 msgstr "Apri audio"
+
+#: src/about.py:35
+msgid "Unknown"
+msgstr ""
 
 #: src/about.py:35
 #, fuzzy

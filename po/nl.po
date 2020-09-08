@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-07 12:48-0500\n"
+"POT-Creation-Date: 2020-09-08 18:25-0500\n"
 "PO-Revision-Date: 2020-09-07 13:44+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
@@ -136,6 +136,10 @@ msgstr "Aangepast"
 #: src/window.py:207
 msgid "Open audio"
 msgstr "Audio openen"
+
+#: src/about.py:35
+msgid "Unknown"
+msgstr ""
 
 #: src/about.py:35
 #, fuzzy
