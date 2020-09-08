@@ -32,7 +32,7 @@ SOUND_ARTISTS = {
     'JPolito': [_('Rain')],
     'Omegatron': [_('Pink Noise')],
     'Stilgar': [_('Wind')],
-    'Unknown': [_('Summer Night'), _('Coffee  Shop'), _('Fireplace')],
+    _('Unknown'): [_('Summer Night'), _('Coffee  Shop'), _('Fireplace')],
 }
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/about.ui')
