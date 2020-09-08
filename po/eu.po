@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-07 12:48-0500\n"
-"PO-Revision-Date: 2020-09-08 11:55+0200\n"
+"POT-Creation-Date: 2020-09-08 12:35+0200\n"
+"PO-Revision-Date: 2020-09-08 12:39+0200\n"
 "Last-Translator: Porrumentzio <porrumentzio@riseup.net>\n"
 "Language-Team: \n"
 "Language: eu\n"
@@ -41,6 +41,26 @@ msgstr ""
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:33
+msgid "Better White Noise"
+msgstr "Soinu zuri hobea"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:34
+msgid "Added Italian translation"
+msgstr "Italierarako itzulpena gehituta"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:35
+msgid "Fix GStreamer init bug"
+msgstr "GStreamer init arazoa konponduta"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:36
+msgid "UI tweaks and improvements"
+msgstr "Interfaze doikuntzak eta hobekuntzak"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:42
+msgid "Initial release."
+msgstr "Lehen argitalpena."
 
 #: data/resources/window.ui:145
 msgid "Keep playing when closed"
