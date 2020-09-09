@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-07 12:48-0500\n"
+"POT-Creation-Date: 2020-09-09 08:21-0500\n"
 "PO-Revision-Date: 2020-09-08 06:49-0500\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: \n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.1\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: ca\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:42
@@ -29,6 +29,11 @@ msgstr "Blanket"
 #: src/mpris.py:143 src/mpris.py:144
 msgid "Listen to different sounds"
 msgstr "Escolteu diferents sons"
+
+#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/com.rafaelmardojai.Blanket.desktop.in:10
+msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
@@ -136,6 +141,10 @@ msgstr "Personalitzat"
 #: src/window.py:207
 msgid "Open audio"
 msgstr "Obre un àudio"
+
+#: src/about.py:35
+msgid "Unknown"
+msgstr ""
 
 #: src/about.py:35
 msgid "Coffee  Shop"

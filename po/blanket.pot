@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-08 18:25-0500\n"
+"POT-Creation-Date: 2020-09-09 08:21-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,6 +27,11 @@ msgstr ""
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:9
 #: src/mpris.py:143 src/mpris.py:144
 msgid "Listen to different sounds"
+msgstr ""
+
+#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/com.rafaelmardojai.Blanket.desktop.in:10
+msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
