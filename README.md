@@ -22,28 +22,33 @@
 Improve focus and increase your productivity by listening to different sounds. Or allows you to fall asleep in a noisy environment.
 
 ## Other Methods of Installation
-> We are looking for volunteers to help us make native packages of Blanket for Debian, Fedora, and other major distributions. It would be great if you could help.
+> We are looking for volunteers to help us make native packages of Blanket for Fedora, Solus and other major distributions. It would be great if you could help either by packaging, or by getting the following into the official repositories.
 
-### AUR
-For Arch Linux and its derivatives you can install the [`blanket`](https://aur.archlinux.org/packages/blanket) package from AUR.
+| Distribution | Package Name | Maintainer |
+|:-:|:-:|:-:|
+| Arch Linux (AUR) | [`blanket`](https://aur.archlinux.org/packages/blanket) | [Mark Wagie](https://github.com/yochananmarqos) |
+| Ubuntu (PPA) | [`blanket`](https://launchpad.net/~apandada1/+archive/ubuntu/blanket) | [Archisman Panigrahi](https://github.com/apandada1) |
 
 ## Build from source
 
-Clone and run from GNOME Builder.
+- You can clone and run from GNOME Builder.
 
 ### Requirements
 
-- Python 3 `python`
-- PyGObject `python-gobject`
-- `appstream-glib`
-- GTK3 `gtk3`
-- Handy `libhandy >= 0.90.0`
-- GStreamer `gstreamer`
-- `python-gst`
-- Meson `meson`
-- Ninja `ninja`
+| Dependency | RPM Package | Debian Package |
+|:-:|:-:|:-:|
+| meson (>= 0.50) | `meson` | `meson` |
+| ninja | `ninja` | `ninja-build` |
+| appstream and glib | `appstream-glib` | `libglib2.0-dev`,`appstream` |
+| Python 3 | `python` | `python3` |
+| libhandy (>= 0.90.0) | `libhandy` | `libhandy-1-dev` |
+| gstreamer | `python-gst` | `gir1.2-gst-plugins-bad-1.0` |
+| GTK3 | `gtk3` | `gir1.2-gtk-3.0` |
+| PyGObject  | `python3-gobject` |  |
+| Build dependencies <br>for packaging |  | `gettext`, `pkg-config` |
 
-### Meson
+
+- Alternatively, use the following commands to build it with meson.
 ```bash
 meson builddir --prefix=/usr/local
 sudo ninja -C builddir install
@@ -53,3 +58,4 @@ Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [co
 
 ## Donate
 If you want to support development, consider donating via [PayPal](https://paypal.me/RafaelMardojaiCM).
+
