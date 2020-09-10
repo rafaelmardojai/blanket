@@ -56,6 +56,8 @@ sudo ninja -C builddir install
 ## Credits
 Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/blanket/graphs/contributors).
 
+Thanks to Jorge Toledo for the name idea.
+
 ## Donate
 If you want to support development, consider donating via [PayPal](https://paypal.me/RafaelMardojaiCM).
 
