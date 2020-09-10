@@ -24,10 +24,10 @@ Improve focus and increase your productivity by listening to different sounds. O
 ## Other Methods of Installation
 > We are looking for volunteers to help us make native packages of Blanket for Fedora, Solus and other major distributions. It would be great if you could help either by packaging, or by getting the following into the official repositories.
 
-| Distribution | Package Name | Maintainer |
+| Distribution | Package | Maintainer |
 |:-:|:-:|:-:|
 | Arch Linux (AUR) | [`blanket`](https://aur.archlinux.org/packages/blanket) | [Mark Wagie](https://github.com/yochananmarqos) |
-| Ubuntu (PPA) | [`blanket`](https://launchpad.net/~apandada1/+archive/ubuntu/blanket) | [Archisman Panigrahi](https://github.com/apandada1) |
+| Ubuntu (PPA) | [`Stable Releases`](https://launchpad.net/~apandada1/+archive/ubuntu/blanket), [`Daily Builds`](https://launchpad.net/~apandada1/+archive/ubuntu/blanket-daily) | [Archisman Panigrahi](https://github.com/apandada1) |
 
 ## Build from source
 
