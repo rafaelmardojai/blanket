@@ -42,8 +42,8 @@ class AboutDialog(Gtk.AboutDialog):
     def __init__(self, version, **kwargs):
         super().__init__(**kwargs)
 
-        artists = self.get_credits_list(ARTISTS)
-        sound_artists = self.get_credits_list(SOUND_ARTISTS)
+        artists = self._get_credits_list(ARTISTS)
+        sound_artists = self._get_credits_list(SOUND_ARTISTS)
 
         # Set build version
         self.set_version(version)
@@ -55,7 +55,7 @@ class AboutDialog(Gtk.AboutDialog):
         # Set sound artists list
         self.add_credit_section(_('Sounds by'), sound_artists)
 
-    def get_credits_list(self, _dict):
+    def _get_credits_list(self, _dict):
         l = ['']
         for k, vs in _dict.items():
             s = k + '\n	' + ', '.join(vs)
