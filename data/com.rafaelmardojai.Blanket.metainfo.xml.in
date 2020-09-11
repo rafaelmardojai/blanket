@@ -21,12 +21,31 @@
   <translation type="gettext">blanket</translation>
 
   <screenshots>
+    <screenshot  type="default">
+      <image>https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshot-1.png</image>
+    </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/rafaelmardojai/blanket/master/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshot-2.png</image>
     </screenshot>
   </screenshots>
 
   <releases>
+    <release version="0.3.0" date="2020-09-11">
+      <description>
+        <ul>
+          <li>Added play/pause action</li>
+          <li>Added general volume controll</li>
+          <li>Added MPRIS support</li>
+          <li>Allow playback when window is closed</li>
+          <li>Save window scroll position</li>
+          <li>Added Dutch translation</li>
+          <li>Added Basque translation</li>
+          <li>Added Esperanto translation</li>
+          <li>Added Catalan translation</li>
+          <li>UI tweaks and improvements</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.2.0" date="2020-09-02">
       <description>
         <ul>
