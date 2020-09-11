@@ -35,17 +35,17 @@ Improve focus and increase your productivity by listening to different sounds. O
 
 ### Requirements
 
-| Dependency | RPM Package | Debian Package |
-|:-:|:-:|:-:|
-| meson (>= 0.50) | `meson` | `meson` |
-| ninja | `ninja` | `ninja-build` |
-| appstream and glib | `appstream-glib` | `libglib2.0-dev`,`appstream` |
-| Python 3 | `python` | `python3` |
-| libhandy (>= 0.90.0) | `libhandy` | `libhandy-1-dev` |
-| gstreamer | `python-gst` | `gir1.2-gst-plugins-bad-1.0` |
-| GTK3 | `gtk3` | `gir1.2-gtk-3.0` |
-| PyGObject  | `python3-gobject` |  |
-| Build dependencies <br>for packaging |  | `gettext`, `pkg-config` |
+| Dependency                           | RPM Package       | Debian Package               | Arch Package
+|:-:                                   |:-:                |:-:                           | :-:
+| meson (>= 0.50)                      | `meson`           | `meson`                      | `meson`
+| ninja                                | `ninja`           | `ninja-build`                | `ninja`
+| appstream and glib                   | `appstream-glib`  | `libglib2.0-dev`,`appstream` | `appstream-glib`
+| Python 3                             | `python`          | `python3`                    | `python`
+| libhandy (>= 0.90.0)                 | `libhandy`        | `libhandy-1-dev`             | `libhandy1` (AUR)
+| gstreamer                            | `python-gst`      | `gir1.2-gst-plugins-bad-1.0` | `gst-python`
+| GTK3                                 | `gtk3`            | `gir1.2-gtk-3.0`             | `gtk3`
+| PyGObject                            | `python3-gobject` |                              | `python-gobject`
+| Build dependencies <br>for packaging |                   | `gettext`, `pkg-config`      |
 
 
 - Alternatively, use the following commands to build it with meson.
