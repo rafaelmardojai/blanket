@@ -1,3 +1,9 @@
+blanket (0.3.0-1) focal; urgency=medium
+
+  * New version
+
+ -- Archisman Panigrahi <apandada1@gmail.com>  Fri, 11 Sep 2020 20:24:15 +0530
+
 blanket (0.2.0-1) focal; urgency=medium
 
   * PPA package
