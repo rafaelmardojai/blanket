@@ -173,14 +173,12 @@ class Application(Gtk.Application):
         window.props.section_name = 'shortcuts'
         window.set_modal(True)
         window.present()
-        window.show_all()
 
     def on_about(self, action, param):
         dialog = AboutDialog(self.version)
         dialog.set_transient_for(self.window)
         dialog.set_modal(True)
         dialog.present()
-        dialog.show_all()
 
     def on_close(self, action, param):
         self.window.close()
