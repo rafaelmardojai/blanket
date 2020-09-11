@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-09 08:21-0500\n"
-"PO-Revision-Date: 2020-09-09 10:25+0200\n"
+"PO-Revision-Date: 2020-09-11 11:31+0200\n"
 "Last-Translator: Porrumentzio <porrumentzio@riseup.net>\n"
 "Language-Team: \n"
 "Language: eu\n"
@@ -33,7 +33,7 @@ msgstr "Entzun hainbat soinu"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr ""
+msgstr "Kontzentratu;Arreta;Zarata;Soinua;Produktibitatea;Lo;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""

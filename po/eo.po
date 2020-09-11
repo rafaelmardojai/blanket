@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-09 08:21-0500\n"
-"PO-Revision-Date: 2020-09-09 10:25+0200\n"
+"PO-Revision-Date: 2020-09-11 11:31+0200\n"
 "Last-Translator: Porrumentzio <porrumentzio@riseup.net>\n"
 "Language-Team: \n"
 "Language: eo\n"
@@ -33,14 +33,14 @@ msgstr "Aŭskultu diversajn sonojn"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr ""
+msgstr "Koncentriĝi;Atenton;Bruo;Sono;Produktemo;Dormi;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
-"Plibonigu vian atenton kaj produktemecon aŭskultante diversajn sonojn. Aŭ "
+"Plibonigu vian atenton kaj produktemon aŭskultante diversajn sonojn. Aŭ "
 "helpos al vi endormiĝi en bruaj medioj."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
