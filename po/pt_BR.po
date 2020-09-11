@@ -34,7 +34,7 @@ msgstr "Escute diferentes sons"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Concentração;Foco;Ruído;Produtividade;Sono"
+msgstr "Concentração;Foco;Ruído;Produtividade;Sono;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
