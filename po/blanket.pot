@@ -64,7 +64,7 @@ msgstr ""
 msgid "Copyright 2020 Rafael Mardojai CM"
 msgstr ""
 
-#. Replace me with your names
+#. Replace me with your names. You can make a mailto link: translator_name <user@domain.org>
 #: data/resources/about.ui:14
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator1, translator2, ..."
