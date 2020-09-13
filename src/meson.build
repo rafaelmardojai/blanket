@@ -5,7 +5,6 @@ if revision == ''
   revision=meson.project_version()
 endif
 
-
 python = import('python')
 
 conf = configuration_data()
