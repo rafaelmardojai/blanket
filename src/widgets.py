@@ -44,6 +44,15 @@ class SoundRow(Gtk.ListBoxRow):
         # Settings
         self.settings = settings
 
+        # Get playing state
+        playing = self.sound.mainplayer.get_property('playing')
+        if not playing:
+            # If not playing set insensitive
+            self.set_sensitive(False)
+        # Connect playing state signal
+        self.sound.mainplayer.connect('notify::playing',
+                                      self._on_playing_changed)
+
         # Create a new SoundPlayer
         self.player = SoundPlayer(self.sound)
 
@@ -89,6 +98,15 @@ class SoundRow(Gtk.ListBoxRow):
         self.player.remove()
         # Remove audio from settings
         self.settings.remove_custom_audio(self.sound.name)
+
+    def _on_playing_changed(self, player, playing):
+        playing = self.sound.mainplayer.get_property('playing')
+
+        if playing:
+            self.set_sensitive(True)
+        else:
+            self.set_sensitive(False)
+
 
 
 '''

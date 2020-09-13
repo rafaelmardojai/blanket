@@ -187,12 +187,9 @@ class BlanketWindow(Handy.ApplicationWindow):
         if playing:
             self.playpause_icon.set_from_icon_name(
                     'media-playback-pause-symbolic', Gtk.IconSize.MENU)
-            self.box.set_sensitive(True)
         else:
             self.playpause_icon.set_from_icon_name(
                     'media-playback-start-symbolic', Gtk.IconSize.MENU)
-            self.box.set_sensitive(False)
-
 
     def open_audio(self, _widget=None, _row=None):
 
