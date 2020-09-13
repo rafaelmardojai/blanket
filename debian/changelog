@@ -1,3 +1,9 @@
+blanket (0.3.1) focal; urgency=medium
+
+  * bug fixes and translations
+
+ -- Archisman Panigrahi <apandada1@gmail.com>  Sun, 13 Sep 2020 08:16:37 +0530
+
 blanket (0.3.0-1) focal; urgency=medium
 
   * New version
