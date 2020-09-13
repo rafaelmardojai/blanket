@@ -108,7 +108,6 @@ class SoundRow(Gtk.ListBoxRow):
             self.set_sensitive(False)
 
 
-
 '''
 SoundsGroup
 '''
