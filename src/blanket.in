@@ -24,6 +24,7 @@ import locale
 import gettext
 
 VERSION = '@VERSION@'
+REVISION = '@REVISION@'
 pkgdatadir = '@pkgdatadir@'
 localedir = '@localedir@'
 
@@ -45,4 +46,4 @@ if __name__ == '__main__':
     resource._register()
 
     from blanket import main
-    sys.exit(main.main(VERSION))
+    sys.exit(main.main(REVISION))
