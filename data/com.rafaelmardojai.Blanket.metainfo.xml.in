@@ -30,6 +30,14 @@
   </screenshots>
 
   <releases>
+    <release version="0.3.1" date="2020-09-12">
+      <description>
+        <ul>
+          <li>Added Brazilian Portuguese translation</li>
+          <li>Bug fixes</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.3.0" date="2020-09-11">
       <description>
         <ul>
