@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-09 08:21-0500\n"
+"POT-Creation-Date: 2020-09-12 19:34-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgid "Blanket"
 msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:9
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
 #: src/mpris.py:143 src/mpris.py:144
 msgid "Listen to different sounds"
 msgstr ""
@@ -56,33 +56,33 @@ msgstr ""
 msgid "About Blanket"
 msgstr ""
 
-#: data/resources/window.ui:200 data/resources/shortcuts.ui:34
+#: data/resources/window.ui:200 data/resources/shortcuts.ui:39
 msgid "Quit"
 msgstr ""
 
-#: data/resources/about.ui:10
+#: data/resources/about.ui:11
 msgid "Copyright 2020 Rafael Mardojai CM"
 msgstr ""
 
 #. Replace me with your names. You can make a mailto link: translator_name <user@domain.org>
-#: data/resources/about.ui:14
+#: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator1, translator2, ..."
 msgstr ""
 
-#: data/resources/shortcuts.ui:12
+#: data/resources/shortcuts.ui:13
 msgid "General"
 msgstr ""
 
-#: data/resources/shortcuts.ui:16
+#: data/resources/shortcuts.ui:18
 msgid "Play/Pause sounds"
 msgstr ""
 
-#: data/resources/shortcuts.ui:22
+#: data/resources/shortcuts.ui:25
 msgid "Add custom sound"
 msgstr ""
 
-#: data/resources/shortcuts.ui:28
+#: data/resources/shortcuts.ui:32
 msgid "Close window"
 msgstr ""
 
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Custom"
 msgstr ""
 
-#: src/window.py:207
+#: src/window.py:204
 msgid "Open audio"
 msgstr ""
 
@@ -148,6 +148,6 @@ msgid "Coffee  Shop"
 msgstr ""
 
 #. Set sound artists list
-#: src/about.py:56
+#: src/about.py:58
 msgid "Sounds by"
 msgstr ""

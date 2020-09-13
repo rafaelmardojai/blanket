@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-09 08:21-0500\n"
+"POT-Creation-Date: 2020-09-12 19:34-0500\n"
 "PO-Revision-Date: 2020-09-06 20:00+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -23,7 +23,7 @@ msgid "Blanket"
 msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:9
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
 #: src/mpris.py:143 src/mpris.py:144
 msgid "Listen to different sounds"
 msgstr "Ascolta suoni diversi"
@@ -57,33 +57,33 @@ msgstr "Scorciatoie da tastiera"
 msgid "About Blanket"
 msgstr "Informazioni su Blanket"
 
-#: data/resources/window.ui:200 data/resources/shortcuts.ui:34
+#: data/resources/window.ui:200 data/resources/shortcuts.ui:39
 msgid "Quit"
 msgstr "Esci"
 
-#: data/resources/about.ui:10
+#: data/resources/about.ui:11
 msgid "Copyright 2020 Rafael Mardojai CM"
 msgstr "Copyright 2020 Rafael Mardojai CM"
 
 #. Replace me with your names
-#: data/resources/about.ui:14
+#: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator1, translator2, ..."
 msgstr "Albano Battistella"
 
-#: data/resources/shortcuts.ui:12
+#: data/resources/shortcuts.ui:13
 msgid "General"
 msgstr "Generale"
 
-#: data/resources/shortcuts.ui:16
+#: data/resources/shortcuts.ui:18
 msgid "Play/Pause sounds"
 msgstr "Riproduci/Metti in pausa i suoni"
 
-#: data/resources/shortcuts.ui:22
+#: data/resources/shortcuts.ui:25
 msgid "Add custom sound"
 msgstr "Aggiungi un suono personalizzato"
 
-#: data/resources/shortcuts.ui:28
+#: data/resources/shortcuts.ui:32
 msgid "Close window"
 msgstr "Chiudi finestra"
 
@@ -136,7 +136,7 @@ msgstr "Rumore Bianco"
 msgid "Custom"
 msgstr "Personalizzato"
 
-#: src/window.py:207
+#: src/window.py:204
 msgid "Open audio"
 msgstr "Apri audio"
 
@@ -150,6 +150,6 @@ msgid "Coffee  Shop"
 msgstr "Caffetteria"
 
 #. Set sound artists list
-#: src/about.py:56
+#: src/about.py:58
 msgid "Sounds by"
 msgstr "Suoni di"
