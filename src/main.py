@@ -46,19 +46,21 @@ class Application(Gtk.Application):
         self.window = None
         # App version
         self.version = version
+
         # GSettings
         self.gsettings = Gio.Settings.new('com.rafaelmardojai.Blanket')
+        # Playing state
+        self.playing = self.gsettings.get_boolean('playing')
+
         # App main player
         self.mainplayer = MainPlayer()
-        # Connect mainplayer to volume function
-        self.mainplayer.connect('notify::volume', self._on_volume_changed)
-
-        # Get saved playing state
-        self.playing = self.gsettings.get_boolean('playing')
-        self.mainplayer.set_property('playing', self.playing)
-        # Get saved volume
-        self.saved_volume = self.gsettings.get_double('volume')
-        self.mainplayer.set_property('volume', self.saved_volume)
+        # Bind mainplayer with settings
+        self.gsettings.bind('volume',
+                            self.mainplayer, 'volume',
+                            Gio.SettingsBindFlags.DEFAULT)
+        self.gsettings.bind('playing',
+                            self.mainplayer, 'playing',
+                            Gio.SettingsBindFlags.DEFAULT)
 
         # Start MPRIS server
         MPRIS(self)
@@ -151,9 +153,6 @@ class Application(Gtk.Application):
         # Change mainplayer playing
         self.mainplayer.set_property('playing', self.playing)
 
-        # Save playing state
-        self.gsettings.set_boolean('playing', self.playing)
-
         # Update window elements to new playing state
         self.window.update_playing_ui(self.playing)
 
@@ -193,11 +192,6 @@ class Application(Gtk.Application):
             return widget.hide_on_delete()
         else:
             self.quit()
-
-    def _on_volume_changed(self, player, volume):
-        # Save volume on settings
-        volume = player.get_property('volume')
-        self.gsettings.set_double('volume', volume)
 
 def main(version):
     app = Application(version)
