@@ -36,7 +36,6 @@ locale.bindtextdomain('blanket', localedir)
 locale.textdomain('blanket')
 gettext.bindtextdomain('blanket', localedir)
 gettext.textdomain('blanket')
-locale.setlocale(locale.LC_ALL, '')
 
 if __name__ == '__main__':
     import gi
