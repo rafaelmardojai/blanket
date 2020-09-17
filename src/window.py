@@ -18,7 +18,7 @@
 import os
 
 from gettext import gettext as _
-from gi.repository import GLib, GObject, Gtk, Handy
+from gi.repository import GLib, GObject, Gio, Gtk, Handy
 
 from .sound import SoundObject
 from .widgets import SoundsGroup
@@ -126,10 +126,11 @@ class BlanketWindow(Handy.ApplicationWindow):
         saved_scroll = self.settings.gsettings.get_double('scroll-position')
         # Get scrolled window vertical adjustment
         vscroll = self.scrolled_window.get_vadjustment()
-        # Set saved scroll to vertical adjustment
-        vscroll.set_value(saved_scroll)
-        # Connect vertical adjustment value-changed signal to function
-        vscroll.connect('value-changed', self._on_scroll_changed)
+        # Bind vertical adjustment value with scroll-position setting
+        self.settings.gsettings.bind(
+            'scroll-position',
+            vscroll, 'value',
+            Gio.SettingsBindFlags.DEFAULT)
 
     def setup_sounds(self):
         # Setup default sounds
@@ -234,10 +235,4 @@ class BlanketWindow(Handy.ApplicationWindow):
                 # Add SoundObject to SoundsGroup
                 self.custom_sounds.add(sound)
                 self.custom_sounds.show_all()
-
-    def _on_scroll_changed(self, adjustment):
-        # Get adjustment value
-        value = adjustment.get_value()
-        # Save value to GSettings
-        self.settings.gsettings.set_double('scroll-position', value)
 
