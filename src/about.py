@@ -23,7 +23,7 @@ AUTHORS = [
 ]
 
 ARTISTS = {
-    'Jakub Steiner' : [_('Rain'), _('Storm'), _('Wind'), _('Summer Night')]
+    'Jakub Steiner' : [_('Rain'), _('Summer Night'), _('Storm'), _('Wind')]
 }
 
 SOUND_ARTISTS = {
@@ -34,8 +34,8 @@ SOUND_ARTISTS = {
     'Luftrum': [_('Waves')],
     'Omegatron': [_('Pink Noise')],
     'Stilgar': [_('Wind')],
-    'vahid': [_('Train')]
-    _('Unknown'): [_('Summer Night'), _('Coffee  Shop'), _('Fireplace')],
+    'vahid': [_('Train')],
+    _('Unknown'): [_('Coffee  Shop'), _('Fireplace'), _('Summer Night')],
 }
 
 SOUND_EDITORS = {
@@ -53,6 +53,7 @@ class AboutDialog(Gtk.AboutDialog):
 
         artists = self._get_credits_list(ARTISTS)
         sound_artists = self._get_credits_list(SOUND_ARTISTS)
+        sound_editors = self._get_credits_list(SOUND_EDITORS)
 
         # Set build version
         self.set_version(version)
@@ -63,6 +64,8 @@ class AboutDialog(Gtk.AboutDialog):
         self.set_artists(artists)
         # Set sound artists list
         self.add_credit_section(_('Sounds by'), sound_artists)
+        # Set sound editors list
+        self.add_credit_section(_('Sounds edited by'), sound_editors)
 
     def _get_credits_list(self, _dict):
         l = ['']
