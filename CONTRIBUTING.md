@@ -42,5 +42,9 @@ After setting app the faders, the sound source must be connected to an analyzer:
 * **LUFS Int.** and **Max. LUFS** can be modified changing the clip's **gain** (volume). The change on dBs is approximated to LUFS, so fit and analyze until you have it 😄
 * **True Peak** tends to be some very-short-in-time transients, peaks. For fitting those peaks to about at least -6 dBs, use a **limiter** with the _threshold_ a bit more than -6 and short _release times_ (<5 ms).
 
+### Where to put the soundclips
+The soundclips are all under [`data/resources/sounds`](https://github.com/rafaelmardojai/blanket/tree/master/data/resources/sounds) directory with `.ogg` file extension, `Ogg Vorbis` encoding format.
+If your sounds passed the criterion, you can add the sounds in your cloned local repo, at the specified directory, and the Pull Request to the main repository. _Open an issue if you don't know how to do this._
+
 _______
 _More documentation here:_ [**Sounds_documentation.md**](https://github.com/rafaelmardojai/blanket/tree/master/doc/Sounds_documentation.md)
