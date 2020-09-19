@@ -27,9 +27,11 @@ ARTISTS = {
 }
 
 SOUND_ARTISTS = {
+    'alex36917': [_('Rain')],
     'Digifish music': [_('Storm')],
     'Jorge Stolfi': [_('White Noise')],
-    'JPolito': [_('Rain')],
+    'kvgarlic': [_('Birds')],
+    'Luftrum': [_('Waves')],
     'Omegatron': [_('Pink Noise')],
     'Stilgar': [_('Wind')],
     _('Unknown'): [_('Summer Night'), _('Coffee  Shop'), _('Fireplace')],
