@@ -34,6 +34,7 @@ SOUND_ARTISTS = {
     'Luftrum': [_('Waves')],
     'Omegatron': [_('Pink Noise')],
     'Stilgar': [_('Wind')],
+    'vahid': [_('Train')]
     _('Unknown'): [_('Summer Night'), _('Coffee  Shop'), _('Fireplace')],
 }
 
