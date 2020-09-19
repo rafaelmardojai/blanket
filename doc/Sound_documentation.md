@@ -48,9 +48,27 @@ After setting app the faders, the sound source must be connected to an analyzer:
 
 ### Criterion that every clip should pass
 As the maximum comfortable perceived level is directly correlated to the range, there could be variations, but here is a table:
-| Criterion    | LUFS (Int.) | Range | True Peak (dBTP) | Max LUFS
-| :-:            | :-:               |  :-:        | :-:                          | :-:
-| Minimum | -35             | 5-7   | -30                          | -30
-| Ideal        | -27             | 7-🔝     | -7,5                       | -25
-| Maximum | -23           | 🔝        | -6                         | -18
+| Criterion | LUFS (Int.) | Range | True Peak (dBTP) | Max LUFS
+| :-:       | :-:         |  :-:  | :-:              | :-:
+| Minimum   | -35         | 5-7   | -30              | -30
+| Ideal     | -27         | 7-🔝  | -7,5             | -25
+| Maximum   | -23         | 🔝    | -6               | -18
 
+_________
+
+## Made changes
+**New sounds:**
+| Sound                                                         | App version | Author   | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications
+| :-:                                                           | :-:         | :-:      | :-:      | :-:         | :-:   | :-:              |  :-:
+| [Waves](https://freesound.org/people/Luftrum/sounds/48412/)   | `4.0`       | Luftrum  | CC BY    | -23         | 9,8   | -0,4             | -2,5 dB & Lim -6,5 dB : 2,5 ms 
+| [Birds](https://freesound.org/people/kvgarlic/sounds/156826/) | `4.0`       | kvgarlic | CC0      | -39,8       | 16,4  | -24,4            | +12 dB 
+
+**Replaced sounds:**
+| Sound                                                         | App version | Author    | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications
+| :-:                                                           | :-:         | :-:       | :-:      | :-:         | :-:   | :-:              |  :-:
+| [Rain](https://freesound.org/people/alex36917/sounds/524605/) | `4.0`       | alex36917 | CC BY    | -29,3       | 4,6   | 0                | +2 dB & Lim -6,1 dB : 3,2 ms
+
+**Modified sounds:**
+| Sound   | App version | Author        | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications
+| :-:     | :-:         | :-:           | :-:      | :-:         | :-:   | :-:              |  :-:
+| Storm   | `4.0`       | Jakub Steiner | Unknown  | -17,9       | 9,7   | 0                | -7 dB
