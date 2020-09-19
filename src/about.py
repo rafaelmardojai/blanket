@@ -35,6 +35,10 @@ SOUND_ARTISTS = {
     _('Unknown'): [_('Summer Night'), _('Coffee  Shop'), _('Fireplace')],
 }
 
+SOUND_EDITORS = {
+    'Porrumentzio': [_('Birds'), _('Rain'), _('Storm'), _('Waves')]
+}
+
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/about.ui')
 class AboutDialog(Gtk.AboutDialog):
     __gtype_name__ = 'AboutDialog'
