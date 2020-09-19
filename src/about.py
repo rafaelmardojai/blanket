@@ -27,12 +27,19 @@ ARTISTS = {
 }
 
 SOUND_ARTISTS = {
+    'alex36917': [_('Rain')],
     'Digifish music': [_('Storm')],
     'Jorge Stolfi': [_('White Noise')],
-    'JPolito': [_('Rain')],
+    'kvgarlic': [_('Birds')],
+    'Luftrum': [_('Waves')],
     'Omegatron': [_('Pink Noise')],
     'Stilgar': [_('Wind')],
+    'vahid': [_('Train')]
     _('Unknown'): [_('Summer Night'), _('Coffee  Shop'), _('Fireplace')],
+}
+
+SOUND_EDITORS = {
+    'Porrumentzio': [_('Birds'), _('Rain'), _('Storm'), _('Waves')]
 }
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/about.ui')
