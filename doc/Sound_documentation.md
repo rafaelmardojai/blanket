@@ -70,6 +70,6 @@ _________
 | [Rain](https://freesound.org/people/alex36917/sounds/524605/) | `4.0`       | alex36917 | CC BY    | -29,3       | 4,6   | 0                | +2 dB & Lim -6,1 dB : 3,2 ms
 
 **Modified sounds:**
-| Sound   | App version | Author        | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications
-| :-:     | :-:         | :-:           | :-:      | :-:         | :-:   | :-:              |  :-:
-| Storm   | `4.0`       | Jakub Steiner | Unknown  | -17,9       | 9,7   | 0                | -7 dB
+| Sound   | App version | Author         | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications
+| :-:     | :-:         | :-:            | :-:      | :-:         | :-:   | :-:              |  :-:
+| Storm   | `4.0`       | Digifish music | Unknown  | -17,9       | 9,7   | 0                | -7 dB
