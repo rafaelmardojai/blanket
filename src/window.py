@@ -91,6 +91,9 @@ class BlanketWindow(Handy.ApplicationWindow):
     def __init__(self, mainplayer, **kwargs):
         super().__init__(**kwargs)
 
+        # Set default window icon for window managers
+        self.set_default_icon_name('com.rafaelmardojai.Blanket')
+
         # Settings wrapper
         self.settings = Settings()
         self.settings.migrate_json() # Migrate old json settings
