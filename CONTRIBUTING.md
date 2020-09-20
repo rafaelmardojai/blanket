@@ -19,8 +19,8 @@ Here is a table with the orientative values:
 | Criteria    | LUFS (Int.) | Range | True Peak (dBTP) | Max LUFS
 | :-:         | :-:         |  :-:  | :-:              | :-:
 | Minimum     | -35         | 5-7   | -30              | -30
-| Ideal       | -27         | 7-🔝 | -7,5             | -25
-| Maximum     | -23         | 🔝   | -6               | -18
+| Ideal       | -27         | 7-🔝  | -7,5             | -25
+| Maximum     | -23         | 🔝    | -6               | -18
 
 The parameters ordered according to their priority:
 
@@ -46,5 +46,9 @@ After setting app the faders, the sound source must be connected to an analyzer:
 The soundclips are all under [`data/resources/sounds`](https://github.com/rafaelmardojai/blanket/tree/master/data/resources/sounds) directory with `.ogg` file extension, `Ogg Vorbis` encoding format.
 If your sounds passed the criterion, you can add the sounds in your cloned local repo, at the specified directory, and the Pull Request to the main repository. _Open an issue if you don't know how to do this._
 
+### Icons
+Sounds must have a colorfull icon folowing [GNOME HIG](https://developer.gnome.org/hig/stable/icon-design.html.en). 
+
+If you don't have an icon and your sound has been aproved, you can wait for someone in the communty to contribute one. But no sound will be included in the app without a proper icon.
 _______
 _More documentation here:_ [**Sounds_documentation.md**](https://github.com/rafaelmardojai/blanket/tree/master/doc/Sounds_documentation.md)
