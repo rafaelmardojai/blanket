@@ -41,8 +41,37 @@ SOUNDS = [
                 'title': _('Wind')
             },
             {
+                'name': 'waves',
+                'title': _('Waves')
+            },
+            {
+                'name': 'stream',
+                'title': _('Stream')
+            },
+            {
+                'name': 'birds',
+                'title': _('Birds')
+            },
+            {
                 'name': 'summer-night',
                 'title': _('Summer Night')
+            }
+        ]
+    },
+    {
+        'name': _('Travel'),
+        'sounds': [
+            {
+                'name': 'train',
+                'title': _('Train')
+            },
+            {
+                'name': 'boat',
+                'title': _('Boat')
+            },
+            {
+                'name': 'city',
+                'title': _('City')
             }
         ]
     },
