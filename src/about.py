@@ -29,6 +29,8 @@ ARTISTS = {
 SOUND_ARTISTS = {
     'alex36917': [_('Rain')],
     'Digifish music': [_('Storm')],
+    'Falcet': [_('Boat')],
+    'gezortenplotz': [_('City')],
     'gluckose': [_('Stream')],
     'Jorge Stolfi': [_('White Noise')],
     'kvgarlic': [_('Birds')],
@@ -40,7 +42,7 @@ SOUND_ARTISTS = {
 }
 
 SOUND_EDITORS = {
-    'Porrumentzio': [_('Birds'), _('Rain'), _('Storm'), _('Waves')]
+    'Porrumentzio': [_('Birds'), _('Rain'), _('Storm'), _('Waves'), _('Boat'), _('City')]
 }
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/about.ui')
