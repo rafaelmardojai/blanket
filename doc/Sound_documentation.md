@@ -63,6 +63,7 @@ _________
 | [Waves](https://freesound.org/people/Luftrum/sounds/48412/)   | `4.0`       | Luftrum  | CC BY    | -23         | 9,8   | -0,4             | -2,5 dB & Lim -6,5 dB : 2,5 ms 
 | [Birds](https://freesound.org/people/kvgarlic/sounds/156826/) | `4.0`       | kvgarlic | CC0      | -39,8       | 16,4  | -24,4            | +12 dB
 | [Train](https://trains.ambient-mixer.com/rainy-train)         | `4.0`       | vahid    | CC Sampling + | -27    | 8,7   | -8,1             | None
+| [Stream](https://freesound.org/people/gluckose/sounds/333987/) | `4.0`      | gluckose | CC0      | -39,2       | 1     | -15,7            | None
 
 **Replaced sounds:**
 | Sound                                                         | App version | Author    | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications

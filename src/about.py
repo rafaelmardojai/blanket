@@ -29,6 +29,7 @@ ARTISTS = {
 SOUND_ARTISTS = {
     'alex36917': [_('Rain')],
     'Digifish music': [_('Storm')],
+    'gluckose': [_('Stream')],
     'Jorge Stolfi': [_('White Noise')],
     'kvgarlic': [_('Birds')],
     'Luftrum': [_('Waves')],

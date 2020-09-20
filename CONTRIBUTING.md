@@ -51,4 +51,4 @@ Sounds must have a colorfull icon folowing [GNOME HIG](https://developer.gnome.o
 
 If you don't have an icon and your sound has been aproved, you can wait for someone in the communty to contribute one. But no sound will be included in the app without a proper icon.
 _______
-_More documentation here:_ [**Sounds_documentation.md**](https://github.com/rafaelmardojai/blanket/tree/master/doc/Sounds_documentation.md)
+_More documentation here:_ [**Sounds_documentation.md**](https://github.com/rafaelmardojai/blanket/blob/master/doc/Sounds_documentation.md)
