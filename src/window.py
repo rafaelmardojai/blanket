@@ -92,7 +92,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         super().__init__(**kwargs)
 
         # Set default window icon for window managers
-        self.set_default_icon_name('com.rafaelmardojai.Blanket')
+        self.set_default_icon_name('com.rafaelmardojai.Blanket-symbolic')
 
         # Settings wrapper
         self.settings = Settings()
