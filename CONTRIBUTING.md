@@ -47,4 +47,4 @@ The soundclips are all under [`data/resources/sounds`](https://github.com/rafael
 If your sounds passed the criterion, you can add the sounds in your cloned local repo, at the specified directory, and the Pull Request to the main repository. _Open an issue if you don't know how to do this._
 
 _______
-_More documentation here:_ [**Sounds_documentation.md**](https://github.com/rafaelmardojai/blanket/tree/master/doc/Sounds_documentation.md)
+_More documentation here:_ [**Sounds_documentation.md**](https://github.com/rafaelmardojai/blanket/blob/master/doc/Sounds_documentation.md)
