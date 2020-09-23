@@ -41,8 +41,8 @@ class Application(Gtk.Application):
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
         GLib.set_application_name(_('Blanket'))
         GLib.set_prgname('com.rafaelmardojai.Blanket')
-        GLib.setenv("PULSE_PROP_application.icon_name",
-                    "com.rafaelmardojai.Blanket-symbolic", True)
+        GLib.setenv('PULSE_PROP_application.icon_name',
+                    'com.rafaelmardojai.Blanket-symbolic', True)
         # App window
         self.window = None
         # App version
