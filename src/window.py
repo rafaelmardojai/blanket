@@ -130,6 +130,9 @@ class BlanketWindow(Handy.ApplicationWindow):
         # Main player
         self.mainplayer = mainplayer
 
+        #
+        self.scroll_timeout = None
+
         # Setup widgets
         self.setup()
 
@@ -158,11 +161,10 @@ class BlanketWindow(Handy.ApplicationWindow):
         saved_scroll = self.settings.gsettings.get_double('scroll-position')
         # Get scrolled window vertical adjustment
         vscroll = self.scrolled_window.get_vadjustment()
-        # Bind vertical adjustment value with scroll-position setting
-        self.settings.gsettings.bind(
-            'scroll-position',
-            vscroll, 'value',
-            Gio.SettingsBindFlags.DEFAULT)
+        # Set saved scroll to vertical adjustment
+        vscroll.set_value(saved_scroll)
+        # Connect vertical adjustment value-changed
+        vscroll.connect('value-changed', self._on_scroll_changed)
 
     def setup_sounds(self):
         # Setup default sounds
@@ -267,4 +269,22 @@ class BlanketWindow(Handy.ApplicationWindow):
                 # Add SoundObject to SoundsGroup
                 self.custom_sounds.add(sound)
                 self.custom_sounds.show_all()
+
+    def _on_scroll_changed(self, adjustment):
+        # If there is a timeout running
+        if self.scroll_timeout:
+            # Remove it
+            GLib.source_remove(self.scroll_timeout)
+
+        # Add new timeout to save scroll
+        self.scroll_timeout = GLib.timeout_add_seconds(
+            1, self._save_scroll_position, adjustment)
+
+    def _save_scroll_position(self, adjustment):
+        # Get scroll value
+        value = adjustment.get_value()
+        # Save value to GSettings
+        self.settings.gsettings.set_double('scroll-position', value)
+        # Set scroll_timeout to None again
+        self.scroll_timeout = None
 
