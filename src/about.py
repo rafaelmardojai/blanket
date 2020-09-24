@@ -38,7 +38,7 @@ SOUND_ARTISTS = {
     'Omegatron': [_('Pink Noise')],
     'Stilgar': [_('Wind')],
     'vahid': [_('Train')],
-    _('Unknown'): [_('Coffee  Shop'), _('Fireplace'), _('Summer Night')],
+    _('Unknown'): [_('Coffee Shop'), _('Fireplace'), _('Summer Night')],
 }
 
 SOUND_EDITORS = {

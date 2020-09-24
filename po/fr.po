@@ -1,0 +1,253 @@
+#
+# Romain F. T. <rrroschan@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unnamed project\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-24 23:10+0200\n"
+"PO-Revision-Date: 2020-09-24 23:13+0200\n"
+"Last-Translator: Romain F. T. <rrroschan@gmail.com>\n"
+"Language-Team: French <aaaa@bbbb.com>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 3.38.0\n"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:3
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:42
+#: src/mpris.py:145
+msgid "Blanket"
+msgstr "Blanket"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:4
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
+#: src/mpris.py:143 src/mpris.py:144
+msgid "Listen to different sounds"
+msgstr "Écoutez différents sons d'ambiance"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:6
+msgid "com.rafaelmardojai.Blanket"
+msgstr "com.rafaelmardojai.Blanket"
+
+#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/com.rafaelmardojai.Blanket.desktop.in:10
+msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
+msgstr "Concentration;Focus;Bruit,Productivité;Ambiance:Dormir;"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+msgid ""
+"Improve focus and increase your productivity by listening to different "
+"sounds. Or allows you to fall asleep in a noisy environment."
+msgstr ""
+"Améliorez votre concentration et augmentez votre productivité en écoutant "
+"diverses ambiances sonores. Peut aussi vous aider à vous endormir dans un "
+"environnement bruyant."
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:36
+msgid "Added Brazilian Portuguese translation"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:37
+msgid "Bug fixes"
+msgstr "Correction de bugs"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:44
+msgid "Added play/pause action"
+msgstr "Ajout de l'action \"lecture/pause\""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:45
+msgid "Added general volume control"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:46
+msgid "Added MPRIS support"
+msgstr "Ajout du support MPRIS"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:47
+msgid "Allow playback when window is closed"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:48
+msgid "Save window scroll position"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:49
+msgid "Added Dutch translation"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:50
+msgid "Added Basque translation"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:51
+msgid "Added Esperanto translation"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:52
+msgid "Added Catalan translation"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:53
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:63
+msgid "UI tweaks and improvements"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:60
+msgid "Better White Noise"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:61
+msgid "Added Italian translation"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
+msgid "Fix GStreamer init bug"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:69
+msgid "Initial release."
+msgstr "Publication initiale"
+
+#: data/resources/window.ui:145
+msgid "Keep playing when closed"
+msgstr "Continuer à lire après fermeture"
+
+#: data/resources/window.ui:165
+msgid "Keyboard Shortcuts"
+msgstr "Raccourcis claviers"
+
+#: data/resources/window.ui:174
+msgid "About Blanket"
+msgstr "À propos de Blanket"
+
+#: data/resources/window.ui:200 data/resources/shortcuts.ui:39
+msgid "Quit"
+msgstr "Quitter"
+
+#: data/resources/about.ui:11
+msgid "Copyright 2020 Rafael Mardojai CM"
+msgstr "Copyright 2020 Rafael Mardojai CM"
+
+#. Replace me with your names
+#: data/resources/about.ui:15
+msgctxt "Add your names here, do not remove previous names!"
+msgid "translation-credits"
+msgstr "Romain F. T."
+
+#: data/resources/shortcuts.ui:13
+msgid "General"
+msgstr "Général"
+
+#: data/resources/shortcuts.ui:18
+msgid "Play/Pause sounds"
+msgstr "Lire/pauser les sons"
+
+#: data/resources/shortcuts.ui:25
+msgid "Add custom sound"
+msgstr "Ajouter un son personnalisé"
+
+#: data/resources/shortcuts.ui:32
+msgid "Close window"
+msgstr "Fermer la fenêtre"
+
+#: src/window.py:29
+msgid "Nature"
+msgstr "Nature"
+
+#: src/window.py:33 src/about.py:26 src/about.py:30 src/about.py:45
+msgid "Rain"
+msgstr "Pluie"
+
+#: src/window.py:37 src/about.py:26 src/about.py:31 src/about.py:45
+msgid "Storm"
+msgstr "Tempête"
+
+#: src/window.py:41 src/about.py:26 src/about.py:39
+msgid "Wind"
+msgstr "Vent"
+
+#: src/window.py:45 src/about.py:37 src/about.py:45
+msgid "Waves"
+msgstr "Vagues"
+
+#: src/window.py:49 src/about.py:34
+msgid "Stream"
+msgstr "Ruisseau"
+
+#: src/window.py:53 src/about.py:36 src/about.py:45
+msgid "Birds"
+msgstr "Oiseaux"
+
+#: src/window.py:57 src/about.py:26 src/about.py:41
+msgid "Summer Night"
+msgstr "Nuit d'été"
+
+#: src/window.py:62
+msgid "Travel"
+msgstr "Voyage"
+
+#: src/window.py:66 src/about.py:40
+msgid "Train"
+msgstr "Train"
+
+#: src/window.py:70 src/about.py:32 src/about.py:45
+msgid "Boat"
+msgstr "Bateau"
+
+#: src/window.py:74 src/about.py:33 src/about.py:45
+msgid "City"
+msgstr "Ville"
+
+#: src/window.py:79
+msgid "Interiors"
+msgstr "Intérieurs"
+
+#: src/window.py:83 src/about.py:41
+msgid "Coffee Shop"
+msgstr ""
+
+#: src/window.py:87 src/about.py:41
+msgid "Fireplace"
+msgstr "Cheminée"
+
+#: src/window.py:92
+msgid "Noise"
+msgstr "Bruit"
+
+#: src/window.py:96 src/about.py:38
+msgid "Pink Noise"
+msgstr "Bruit rose"
+
+#: src/window.py:100 src/about.py:35
+msgid "White Noise"
+msgstr "Bruit blanc"
+
+#. Setup user custom sounds
+#: src/window.py:188
+msgid "Custom"
+msgstr "Personnalisé"
+
+#: src/window.py:239
+msgid "Open audio"
+msgstr "Ouvrir l'audio"
+
+#: src/about.py:41
+msgid "Unknown"
+msgstr "Inconnu"
+
+#. Set sound artists list
+#: src/about.py:69
+msgid "Sounds by"
+msgstr "Sons par"
+
+#. Set sound editors list
+#: src/about.py:71
+msgid "Sounds edited by"
+msgstr "Sons édités par"
