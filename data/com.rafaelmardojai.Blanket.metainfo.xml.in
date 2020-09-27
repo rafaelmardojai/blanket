@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-	<id>com.rafaelmardojai.Blanket</id>
-	<metadata_license>CC0-1.0</metadata_license>
-	<project_license>GPL-3.0-or-later</project_license>
+  <id>com.rafaelmardojai.Blanket</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
   <name>Blanket</name>
   <summary>Listen to different sounds</summary>
   <description>
@@ -42,7 +42,7 @@
       <description>
         <ul>
           <li>Added play/pause action</li>
-          <li>Added general volume controll</li>
+          <li>Added general volume control</li>
           <li>Added MPRIS support</li>
           <li>Allow playback when window is closed</li>
           <li>Save window scroll position</li>

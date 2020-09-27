@@ -67,7 +67,7 @@ msgstr ""
 #. Replace me with your names. You can make a mailto link: translator_name <user@domain.org>
 #: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
-msgid "translator1, translator2, ..."
+msgid "translation-credits"
 msgstr ""
 
 #: data/resources/shortcuts.ui:13
@@ -90,64 +90,93 @@ msgstr ""
 msgid "Nature"
 msgstr ""
 
-#: src/window.py:33 src/about.py:26 src/about.py:32
+#: src/window.py:33 src/about.py:26 src/about.py:30 src/about.py:45
 msgid "Rain"
 msgstr ""
 
-#: src/window.py:37 src/about.py:26 src/about.py:30
+#: src/window.py:37 src/about.py:26 src/about.py:31 src/about.py:45
 msgid "Storm"
 msgstr ""
 
-#: src/window.py:41 src/about.py:26 src/about.py:34
+#: src/window.py:41 src/about.py:26 src/about.py:39
 msgid "Wind"
 msgstr ""
 
-#: src/window.py:45 src/about.py:26 src/about.py:35
+#: src/window.py:45 src/about.py:37 src/about.py:45
+msgid "Waves"
+msgstr ""
+
+#: src/window.py:49 src/about.py:34
+msgid "Stream"
+msgstr ""
+
+#: src/window.py:53 src/about.py:36 src/about.py:45
+msgid "Birds"
+msgstr ""
+
+#: src/window.py:57 src/about.py:26 src/about.py:41
 msgid "Summer Night"
 msgstr ""
 
-#: src/window.py:50
+#: src/window.py:62
+msgid "Travel"
+msgstr ""
+
+#: src/window.py:66 src/about.py:40
+msgid "Train"
+msgstr ""
+
+#: src/window.py:70 src/about.py:32 src/about.py:45
+msgid "Boat"
+msgstr ""
+
+#: src/window.py:74 src/about.py:33 src/about.py:45
+msgid "City"
+msgstr ""
+
+#: src/window.py:79
 msgid "Interiors"
 msgstr ""
 
-#: src/window.py:54
+#: src/window.py:83 src/about.py:41
 msgid "Coffee Shop"
 msgstr ""
 
-#: src/window.py:58 src/about.py:35
+#: src/window.py:87 src/about.py:41
 msgid "Fireplace"
 msgstr ""
 
-#: src/window.py:63
+#: src/window.py:92
 msgid "Noise"
 msgstr ""
 
-#: src/window.py:67 src/about.py:33
+#: src/window.py:96 src/about.py:38
 msgid "Pink Noise"
 msgstr ""
 
-#: src/window.py:71 src/about.py:31
+#: src/window.py:100 src/about.py:35
 msgid "White Noise"
 msgstr ""
 
 #. Setup user custom sounds
-#: src/window.py:153
+#: src/window.py:188
 msgid "Custom"
 msgstr ""
 
-#: src/window.py:204
+#: src/window.py:239
 msgid "Open audio"
 msgstr ""
 
-#: src/about.py:35
+#: src/about.py:41
 msgid "Unknown"
 msgstr ""
 
-#: src/about.py:35
-msgid "Coffee  Shop"
+#. Set sound artists list
+#: src/about.py:69
+msgid "Sounds by"
 msgstr ""
 
-#. Set sound artists list
-#: src/about.py:58
-msgid "Sounds by"
+#. Set sound editors list
+#: src/about.py:71
+msgid "Sounds edited by"
 msgstr ""
