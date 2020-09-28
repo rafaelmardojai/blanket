@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-12 19:34-0500\n"
-"PO-Revision-Date: 2020-09-11 11:31+0200\n"
+"PO-Revision-Date: 2020-09-28 16:59+0200\n"
 "Last-Translator: Porrumentzio <porrumentzio@riseup.net>\n"
 "Language-Team: \n"
 "Language: eo\n"
@@ -67,10 +67,10 @@ msgstr "Eliri"
 msgid "Copyright 2020 Rafael Mardojai CM"
 msgstr "Copyright 2020 Rafael Mardojai CM"
 
-#. Replace me with your names
+#. Replace me with your names. You can make a mailto link: translator_name <user@domain.org>
 #: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
-msgid "translator1, translator2, ..."
+msgid "translation-credits"
 msgstr "Porrumentzio <porrumentzio@riseup.net>"
 
 #: data/resources/shortcuts.ui:13
@@ -93,64 +93,100 @@ msgstr "Fermi fenestron"
 msgid "Nature"
 msgstr "Naturo"
 
-#: src/window.py:33 src/about.py:26 src/about.py:32
+#: src/window.py:33 src/about.py:26 src/about.py:30 src/about.py:45
 msgid "Rain"
 msgstr "Pluvo"
 
-#: src/window.py:37 src/about.py:26 src/about.py:30
+#: src/window.py:37 src/about.py:26 src/about.py:31 src/about.py:45
 msgid "Storm"
 msgstr "Ŝtormo"
 
-#: src/window.py:41 src/about.py:26 src/about.py:34
+#: src/window.py:41 src/about.py:26 src/about.py:39
 msgid "Wind"
 msgstr "Vento"
 
-#: src/window.py:45 src/about.py:26 src/about.py:35
+#: src/window.py:45 src/about.py:37 src/about.py:45
+msgid "Waves"
+msgstr "Ondoj"
+
+#: src/window.py:49 src/about.py:34
+msgid "Stream"
+msgstr "Torento"
+
+#: src/window.py:53 src/about.py:36 src/about.py:45
+msgid "Birds"
+msgstr "Birdoj"
+
+#: src/window.py:57 src/about.py:26 src/about.py:41
 msgid "Summer Night"
 msgstr "Somera nokto"
 
-#: src/window.py:50
+#: src/window.py:62
+msgid "Travel"
+msgstr "Veturo"
+
+#: src/window.py:66 src/about.py:40
+msgid "Train"
+msgstr "Trajno"
+
+#: src/window.py:70 src/about.py:32 src/about.py:45
+msgid "Boat"
+msgstr "Barko"
+
+#: src/window.py:74 src/about.py:33 src/about.py:45
+msgid "City"
+msgstr "Urbo"
+
+#: src/window.py:79
 msgid "Interiors"
 msgstr "Internoj"
 
-#: src/window.py:54
+#: src/window.py:83 src/about.py:41
 msgid "Coffee Shop"
 msgstr "Kafejo"
 
-#: src/window.py:58 src/about.py:35
+#: src/window.py:87 src/about.py:41
 msgid "Fireplace"
 msgstr "Fajrejo"
 
-#: src/window.py:63
+#: src/window.py:92
 msgid "Noise"
 msgstr "Bruo"
 
-#: src/window.py:67 src/about.py:33
+#: src/window.py:96 src/about.py:38
 msgid "Pink Noise"
 msgstr "Rozkolora bruo"
 
-#: src/window.py:71 src/about.py:31
+#: src/window.py:100 src/about.py:35
 msgid "White Noise"
 msgstr "Blanka bruo"
 
 #. Setup user custom sounds
-#: src/window.py:153
+#: src/window.py:188
 msgid "Custom"
 msgstr "Personecigita"
 
-#: src/window.py:204
+#: src/window.py:239
 msgid "Open audio"
 msgstr "Malfermi sondosieron"
 
-#: src/about.py:35
+#: src/about.py:41
 msgid "Unknown"
 msgstr "Nekonato"
 
-#: src/about.py:35
-msgid "Coffee  Shop"
-msgstr "Kafejo"
-
 #. Set sound artists list
-#: src/about.py:58
+#: src/about.py:69
 msgid "Sounds by"
 msgstr "Sonoj de"
+
+#. Set sound editors list
+#: src/about.py:71
+msgid "Sounds edited by"
+msgstr "Sonoj redaktitaj de"
+
+#~ msgctxt "Add your names here, do not remove previous names!"
+#~ msgid "translator1, translator2, ..."
+#~ msgstr "Porrumentzio <porrumentzio@riseup.net>"
+
+#~ msgid "Coffee  Shop"
+#~ msgstr "Kafejo"
