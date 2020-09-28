@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-24 23:10+0200\n"
+"POT-Creation-Date: 2020-09-28 10:43-0500\n"
 "PO-Revision-Date: 2020-09-24 23:13+0200\n"
 "Last-Translator: Romain F. T. <rrroschan@gmail.com>\n"
 "Language-Team: French <aaaa@bbbb.com>\n"
@@ -28,10 +28,6 @@ msgstr "Blanket"
 msgid "Listen to different sounds"
 msgstr "Écoutez différents sons d'ambiance"
 
-#: data/com.rafaelmardojai.Blanket.desktop.in:6
-msgid "com.rafaelmardojai.Blanket"
-msgstr "com.rafaelmardojai.Blanket"
-
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
@@ -49,71 +45,6 @@ msgstr ""
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:36
-msgid "Added Brazilian Portuguese translation"
-msgstr ""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:37
-msgid "Bug fixes"
-msgstr "Correction de bugs"
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:44
-msgid "Added play/pause action"
-msgstr "Ajout de l'action \"lecture/pause\""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:45
-msgid "Added general volume control"
-msgstr ""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:46
-msgid "Added MPRIS support"
-msgstr "Ajout du support MPRIS"
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:47
-msgid "Allow playback when window is closed"
-msgstr ""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:48
-msgid "Save window scroll position"
-msgstr ""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:49
-msgid "Added Dutch translation"
-msgstr ""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:50
-msgid "Added Basque translation"
-msgstr ""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:51
-msgid "Added Esperanto translation"
-msgstr ""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:52
-msgid "Added Catalan translation"
-msgstr ""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:53
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:63
-msgid "UI tweaks and improvements"
-msgstr ""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:60
-msgid "Better White Noise"
-msgstr ""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:61
-msgid "Added Italian translation"
-msgstr ""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
-msgid "Fix GStreamer init bug"
-msgstr ""
-
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:69
-msgid "Initial release."
-msgstr "Publication initiale"
 
 #: data/resources/window.ui:145
 msgid "Keep playing when closed"
@@ -135,7 +66,7 @@ msgstr "Quitter"
 msgid "Copyright 2020 Rafael Mardojai CM"
 msgstr "Copyright 2020 Rafael Mardojai CM"
 
-#. Replace me with your names
+#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translation-credits"

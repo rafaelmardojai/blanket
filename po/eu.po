@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-12 19:34-0500\n"
+"POT-Creation-Date: 2020-09-28 10:43-0500\n"
 "PO-Revision-Date: 2020-09-28 16:54+0200\n"
 "Last-Translator: Porrumentzio <porrumentzio@riseup.net>\n"
 "Language-Team: \n"
@@ -67,7 +67,7 @@ msgstr "Irten"
 msgid "Copyright 2020 Rafael Mardojai CM"
 msgstr "Copyright 2020 Rafael Mardojai CM"
 
-#. Replace me with your names. You can make a mailto link: translator_name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translation-credits"
@@ -183,10 +183,3 @@ msgstr "Soinuak"
 #: src/about.py:71
 msgid "Sounds edited by"
 msgstr "Soinu-edizioa"
-
-#~ msgctxt "Add your names here, do not remove previous names!"
-#~ msgid "translator1, translator2, ..."
-#~ msgstr "Porrumentzio <porrumentzio@riseup.net>"
-
-#~ msgid "Coffee  Shop"
-#~ msgstr "Kafetegia"
