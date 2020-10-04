@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-28 10:43-0500\n"
-"PO-Revision-Date: 2020-09-07 13:44+0200\n"
+"PO-Revision-Date: 2020-10-04 13:49+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -33,7 +33,7 @@ msgstr "Luister naar verschillende geluiden"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr ""
+msgstr "Concentratie;Concentreren;Focus;Ruis;Productiviteit;Slaap;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
@@ -107,15 +107,15 @@ msgstr "Wind"
 
 #: src/window.py:45 src/about.py:37 src/about.py:45
 msgid "Waves"
-msgstr ""
+msgstr "Golven"
 
 #: src/window.py:49 src/about.py:34
 msgid "Stream"
-msgstr ""
+msgstr "Kabbelend beekje"
 
 #: src/window.py:53 src/about.py:36 src/about.py:45
 msgid "Birds"
-msgstr ""
+msgstr "Vogels"
 
 #: src/window.py:57 src/about.py:26 src/about.py:41
 msgid "Summer Night"
@@ -123,19 +123,19 @@ msgstr "Zomeravond"
 
 #: src/window.py:62
 msgid "Travel"
-msgstr ""
+msgstr "Reizen"
 
 #: src/window.py:66 src/about.py:40
 msgid "Train"
-msgstr ""
+msgstr "Trein"
 
 #: src/window.py:70 src/about.py:32 src/about.py:45
 msgid "Boat"
-msgstr ""
+msgstr "Boot"
 
 #: src/window.py:74 src/about.py:33 src/about.py:45
 msgid "City"
-msgstr ""
+msgstr "Stad"
 
 #: src/window.py:79
 msgid "Interiors"
@@ -172,7 +172,7 @@ msgstr "Audio openen"
 
 #: src/about.py:41
 msgid "Unknown"
-msgstr ""
+msgstr "Onbekend"
 
 #. Set sound artists list
 #: src/about.py:69
@@ -181,6 +181,5 @@ msgstr "Geluiden van"
 
 #. Set sound editors list
 #: src/about.py:71
-#, fuzzy
 msgid "Sounds edited by"
-msgstr "Geluiden van"
+msgstr "Geluiden bewerkt door"
