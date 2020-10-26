@@ -38,13 +38,18 @@ from .about import AboutDialog
 class Application(Gtk.Application):
     def __init__(self, version):
         super().__init__(application_id='com.rafaelmardojai.Blanket',
-                         flags=Gio.ApplicationFlags.FLAGS_NONE)
+                         flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
         GLib.set_application_name(_('Blanket'))
         GLib.set_prgname('com.rafaelmardojai.Blanket')
         GLib.setenv('PULSE_PROP_application.icon_name',
                     'com.rafaelmardojai.Blanket-symbolic', True)
+
+        # Add --hidden command line option
+        self.add_main_option('hidden', b'h', GLib.OptionFlags.NONE,
+                             GLib.OptionArg.NONE, 'Start window hidden', None)
         # App window
         self.window = None
+        self.window_hidden = False
         # App version
         self.version = version
 
@@ -137,12 +142,27 @@ class Application(Gtk.Application):
         self.window = self.props.active_window
         if not self.window:
             self.window = BlanketWindow(self.mainplayer, application=self)
-        self.window.present()
+
+        if self.window_hidden:
+            self.window.hide()
+            self.window_hidden = False
+        else:
+            self.window.present()
 
         # Update window elements to saved playing state
         self.window.update_playing_ui(self.playing)
         # Connect window delete-event signal to _do_close
         self.window.connect('delete-event', self._do_close)
+
+    def do_command_line(self, command_line):
+        options = command_line.get_options_dict()
+        options = options.end().unpack()
+
+        if 'hidden' in options and self.window is None:
+            self.window_hidden = True
+
+        self.activate()
+        return 0
 
     def on_open(self, action, param):
         self.window.open_audio()
@@ -159,7 +179,7 @@ class Application(Gtk.Application):
 
     def on_background(self, action, value):
         action.set_state(GLib.Variant('b', value))
-        self.gsettings.set_value('background-playback', GLib.Variant('b', value))
+        self.gsettings.set_boolean('background-playback', value)
         if value:
             self.window.quit_revealer.set_reveal_child(True)
         else:
