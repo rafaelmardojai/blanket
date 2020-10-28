@@ -73,6 +73,19 @@ _________
 | [Rain](https://freesound.org/people/alex36917/sounds/524605/) | `4.0`       | alex36917 | CC BY    | -29,3       | 4,6   | 0                | +2 dB & Lim -6,1 dB : 3,2 ms
 
 **Modified sounds:**
-| Sound   | App version | Author         | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications
-| :-:     | :-:         | :-:            | :-:      | :-:         | :-:   | :-:              |  :-:
-| Storm   | `4.0`       | Digifish music | Unknown  | -17,9       | 9,7   | 0                | -7 dB
+| Sound   | App version | Author         | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications | Needs replacement
+| :-:     | :-:         | :-:            | :-:      | :-:         | :-:   | :-:              |  :-:          | :-:
+| Storm   | `4.0`       | Digifish music | Unknown  | -17,9       | 9,7   | 0                | -7 dB         |
+| Pink noise | `4.0`    | Omegatron      | Unknown  | -11,7       | 4,8   | -0,7             | -10 dB        | X [#11](https://github.com/rafaelmardojai/blanket/issues/11)
+| Summer night | `4.0`  | Unknown        | Unknown  | -14,4       | 2,7   | -3,4             | -12 dB        | X
+| White noise | `4.0`   | Jorge Stolfi   | Unknown  | -1,1        | 1,8   | 4,6              | -25 dB        | X [#11](https://github.com/rafaelmardojai/blanket/issues/11)
+| Wind    | `4.0`       | Stilgar        | Unknown  | -16,6       | 0     | -3,1             | -6 dB         | X
+
+## Needs replacement
+**For `4.0`**
+* Wind
+* Summer night
+* Coffee Shop
+* Fireplace
+* Pink noise
+* White noise
