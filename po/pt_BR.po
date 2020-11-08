@@ -1,7 +1,6 @@
-# Catalan translation for Blanket.
-# Copyright (C) 2020 Adolfo Jayme Barrientos
+# Portuguese (BR) translation for Blanket.
+# Copyright (C) 2020 Rafael Mardojai CM
 # This file is distributed under the same license as the blanket package.
-# Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2020.
 # Pedro Fleck <pedrohk@ufcspa.edu.br>, 2020.
 #
 msgid ""
@@ -9,15 +8,15 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-28 10:43-0500\n"
-"PO-Revision-Date: 2020-09-11 15:52-0300\n"
-"Last-Translator: Pedro Fleck <pedrohk@ufcspa.edu.br>\n"
+"PO-Revision-Date: 2020-11-07 01:15-0300\n"
+"Last-Translator: Gustavo Costa <gusta@null.net>\n"
 "Language-Team: Brazilian Portuguese <pedrohk@ufcspa.edu.br>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 3.36.0\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:42
@@ -50,7 +49,7 @@ msgstr "Rafael Mardojai C. M."
 
 #: data/resources/window.ui:145
 msgid "Keep playing when closed"
-msgstr "Continue reproduzindo ao fechar"
+msgstr "Continuar reproduzindo ao fechar"
 
 #: data/resources/window.ui:165
 msgid "Keyboard Shortcuts"
@@ -72,7 +71,9 @@ msgstr "Direitos autorais © 2020 Rafael Mardojai C. M."
 #: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translation-credits"
-msgstr "Pedro Fleck <pedrohk@ufcspa.edu.br>, 2020"
+msgstr ""
+"Pedro Fleck <pedrohk@ufcspa.edu.br>, 2020\n"
+"Gustavo Costa <gusta@null.net>"
 
 #: data/resources/shortcuts.ui:13
 msgid "General"
@@ -108,15 +109,15 @@ msgstr "Vento"
 
 #: src/window.py:45 src/about.py:37 src/about.py:45
 msgid "Waves"
-msgstr ""
+msgstr "Ondas"
 
 #: src/window.py:49 src/about.py:34
 msgid "Stream"
-msgstr ""
+msgstr "Córrego"
 
 #: src/window.py:53 src/about.py:36 src/about.py:45
 msgid "Birds"
-msgstr ""
+msgstr "Pássaros"
 
 #: src/window.py:57 src/about.py:26 src/about.py:41
 msgid "Summer Night"
@@ -124,19 +125,19 @@ msgstr "Noite de verão"
 
 #: src/window.py:62
 msgid "Travel"
-msgstr ""
+msgstr "Viagem"
 
 #: src/window.py:66 src/about.py:40
 msgid "Train"
-msgstr ""
+msgstr "Trem"
 
 #: src/window.py:70 src/about.py:32 src/about.py:45
 msgid "Boat"
-msgstr ""
+msgstr "Barco"
 
 #: src/window.py:74 src/about.py:33 src/about.py:45
 msgid "City"
-msgstr ""
+msgstr "Cidade"
 
 #: src/window.py:79
 msgid "Interiors"
@@ -178,10 +179,9 @@ msgstr "Desconhecido"
 #. Set sound artists list
 #: src/about.py:69
 msgid "Sounds by"
-msgstr "Crédito dos sons"
+msgstr "Sons por"
 
 #. Set sound editors list
 #: src/about.py:71
-#, fuzzy
 msgid "Sounds edited by"
-msgstr "Crédito dos sons"
+msgstr "Sons editados por"
