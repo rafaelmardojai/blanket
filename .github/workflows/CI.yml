@@ -16,3 +16,4 @@ jobs:
       with:
         bundle: "blanket-dev.flatpak"
         manifest-path: "com.rafaelmardojai.Blanket.json"
+        run-tests: "true"
