@@ -1,7 +1,7 @@
 {
     "app-id" : "com.rafaelmardojai.Blanket",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "3.36",
+    "runtime-version" : "3.38",
     "sdk" : "org.gnome.Sdk",
     "command" : "blanket",
     "finish-args" : [
@@ -53,8 +53,8 @@
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "."
+                    "type" : "dir",
+                    "path" : "."
                 }
             ]
         }
