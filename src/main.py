@@ -90,7 +90,7 @@ class Application(Gtk.Application):
             {
                 'name'  : 'playpause',
                 'func'  : self.on_playpause,
-                'accels': ['<Ctl>m']
+                'accels': ['<Ctl>m', 'space']
             },
             {
                 'name'  : 'background-playback',
