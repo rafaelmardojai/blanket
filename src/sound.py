@@ -76,6 +76,13 @@ class SoundPlayer(GstPlayer.Player):
         self.set_uri(self.sound.uri)
         self.name = self.sound.name
 
+        # Loop setup
+        self.prerolled = False
+        self.pipeline = self.get_pipeline()
+        bus = self.pipeline.get_bus()
+        bus.add_signal_watch()
+        bus.connect('message', self._on_bus_message)
+
         # Connect mainplayer volume-changed signal
         self.volume_hdlr = self.sound.mainplayer.connect(
             'notify::volume',
@@ -87,8 +94,6 @@ class SoundPlayer(GstPlayer.Player):
 
         # Connect volume-changed signal
         self.connect('volume-changed', self._on_volume_changed)
-        # Connect end-of-stream signal
-        self.connect('end-of-stream', self._on_eos)
 
     def set_virtual_volume(self, volume):
         # Get mainplayer volume
@@ -130,9 +135,25 @@ class SoundPlayer(GstPlayer.Player):
             # Set volume again when mainplayer volume changes
             self.set_virtual_volume(self.saved_volume)
 
-    def _on_eos(self, player):
-        # Seek player to 0
-        self.seek(0)
+    def _on_bus_message(self, bus, message):
+        if message:
+            if message.type is Gst.MessageType.SEGMENT_DONE:
+                self.pipeline.seek_simple(
+                    Gst.Format.TIME,
+                    Gst.SeekFlags.SEGMENT,
+                    0
+                )
+
+            if message.type is Gst.MessageType.ASYNC_DONE:
+                if not self.prerolled:
+                    self.pipeline.seek_simple(
+                        Gst.Format.TIME,
+                        Gst.SeekFlags.FLUSH | Gst.SeekFlags.SEGMENT,
+                        0
+                    )
+                    self.prerolled = True
+
+            return True
         
     def __vol_zero(self, volume=None):
         volume = volume if volume else self.get_volume()
