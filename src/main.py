@@ -43,6 +43,8 @@ class Application(Gtk.Application):
         GLib.set_prgname('com.rafaelmardojai.Blanket')
         GLib.setenv('PULSE_PROP_application.icon_name',
                     'com.rafaelmardojai.Blanket-symbolic', True)
+        # Connect app shutdown signal
+        self.connect('shutdown', self._on_shutdown)
 
         # Add --hidden command line option
         self.add_main_option('hidden', b'h', GLib.OptionFlags.NONE,
@@ -50,23 +52,21 @@ class Application(Gtk.Application):
         # App window
         self.window = None
         self.window_hidden = False
+        self.quit_from_window = False
         # App version
         self.version = version
 
         # GSettings
         self.gsettings = Gio.Settings.new('com.rafaelmardojai.Blanket')
-        # Playing state
+        # Saved playing state
+        self.volume = self.gsettings.get_double('volume')
         self.playing = self.gsettings.get_boolean('playing')
 
         # App main player
         self.mainplayer = MainPlayer()
-        # Bind mainplayer with settings
-        self.gsettings.bind('volume',
-                            self.mainplayer, 'volume',
-                            Gio.SettingsBindFlags.DEFAULT)
-        self.gsettings.bind('playing',
-                            self.mainplayer, 'playing',
-                            Gio.SettingsBindFlags.DEFAULT)
+        # Load saved props
+        self.mainplayer.set_property('volume', self.volume)
+        self.mainplayer.set_property('playing', self.playing)
 
         # Start MPRIS server
         MPRIS(self)
@@ -151,8 +151,8 @@ class Application(Gtk.Application):
 
         # Update window elements to saved playing state
         self.window.update_playing_ui(self.playing)
-        # Connect window delete-event signal to _do_close
-        self.window.connect('delete-event', self._do_close)
+        # Connect window delete-event signal to _on_window_delete
+        self.window.connect('delete-event', self._on_window_delete)
 
     def do_command_line(self, command_line):
         options = command_line.get_options_dict()
@@ -206,13 +206,33 @@ class Application(Gtk.Application):
     def on_quit(self, action, param):
         self.quit()
 
-    def _do_close(self, widget, event):
+    def _save_settings(self):
+        # Save scroll position
+        scroll_position = self.window.vscroll.get_value()
+        self.gsettings.set_double('scroll-position', scroll_position)
+
+        # Save mainplayer volume
+        volume = self.mainplayer.get_property('volume')
+        self.gsettings.set_double('volume', volume)
+        # Save mainplayer playing state
+        playing = self.mainplayer.get_property('playing')
+        self.gsettings.set_boolean('playing', playing)
+
+    def _on_window_delete(self, widget, event):
         background = self.gsettings.get_value('background-playback')
+
+        # Save settings
+        self._save_settings()
 
         if background:
             return widget.hide_on_delete()
         else:
+            self.quit_from_window = True
             self.quit()
+
+    def _on_shutdown(self, _app):
+        if not self.quit_from_window:
+            self._save_settings()
 
 def main(version):
     app = Application(version)
