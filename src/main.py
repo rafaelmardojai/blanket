@@ -52,7 +52,6 @@ class Application(Gtk.Application):
         # App window
         self.window = None
         self.window_hidden = False
-        self.quit_from_window = False
         # App version
         self.version = version
 
@@ -221,18 +220,15 @@ class Application(Gtk.Application):
     def _on_window_delete(self, widget, event):
         background = self.gsettings.get_value('background-playback')
 
-        # Save settings
-        self._save_settings()
-
         if background:
+            self._save_settings() # Save settings
             return widget.hide_on_delete()
         else:
             self.quit_from_window = True
             self.quit()
 
     def _on_shutdown(self, _app):
-        if not self.quit_from_window:
-            self._save_settings()
+        self._save_settings()
 
 def main(version):
     app = Application(version)
