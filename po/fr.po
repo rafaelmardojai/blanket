@@ -1,14 +1,15 @@
 #
 # Romain F. T. <rrroschan@gmail.com>, 2020.
+# Julien Humbert <julroy67@gmail.com>, 2020.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: unnamed project\n"
+"Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-09-28 10:43-0500\n"
-"PO-Revision-Date: 2020-09-24 23:13+0200\n"
-"Last-Translator: Romain F. T. <rrroschan@gmail.com>\n"
-"Language-Team: French <aaaa@bbbb.com>\n"
+"PO-Revision-Date: 2020-12-26 10:34+0900\n"
+"Last-Translator: Julien Humbert <julroy67@gmail.com>\n"
+"Language-Team: French <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +27,7 @@ msgstr "Blanket"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
 #: src/mpris.py:143 src/mpris.py:144
 msgid "Listen to different sounds"
-msgstr "Écoutez différents sons d'ambiance"
+msgstr "Écoutez différents sons d’ambiance"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
@@ -70,7 +71,9 @@ msgstr "Copyright 2020 Rafael Mardojai CM"
 #: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translation-credits"
-msgstr "Romain F. T."
+msgstr ""
+"Romain F. T.\n"
+"Julien Humbert <julroy67@gmail.com>"
 
 #: data/resources/shortcuts.ui:13
 msgid "General"
@@ -78,7 +81,7 @@ msgstr "Général"
 
 #: data/resources/shortcuts.ui:18
 msgid "Play/Pause sounds"
-msgstr "Lire/pauser les sons"
+msgstr "Lire/Mettre en pause les sons"
 
 #: data/resources/shortcuts.ui:25
 msgid "Add custom sound"
@@ -118,7 +121,7 @@ msgstr "Oiseaux"
 
 #: src/window.py:57 src/about.py:26 src/about.py:41
 msgid "Summer Night"
-msgstr "Nuit d'été"
+msgstr "Nuit d’été"
 
 #: src/window.py:62
 msgid "Travel"
@@ -142,7 +145,7 @@ msgstr "Intérieurs"
 
 #: src/window.py:83 src/about.py:41
 msgid "Coffee Shop"
-msgstr ""
+msgstr "Café"
 
 #: src/window.py:87 src/about.py:41
 msgid "Fireplace"
@@ -167,7 +170,7 @@ msgstr "Personnalisé"
 
 #: src/window.py:239
 msgid "Open audio"
-msgstr "Ouvrir l'audio"
+msgstr "Ouvrir l’audio"
 
 #: src/about.py:41
 msgid "Unknown"
