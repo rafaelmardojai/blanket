@@ -21,7 +21,10 @@ import json
 from gi.repository import GLib, Gio
 
 
-class Settings(object):
+class SoundsSettings(object):
+    """
+    Manages sounds settings
+    """
 
     def __init__(self):
         # New GSettings instance
@@ -40,22 +43,16 @@ class Settings(object):
         if not name in self.custom_audios:
             # Add custom audio to audios dict, name: uri
             self.custom_audios[name] = uri
-            # Save new dict to GSettings
-            self.gsettings.set_value('custom-audios', GLib.Variant('a{ss}', self.custom_audios))
 
     def remove_custom_audio(self, name):
         # If name present in audios dict
         if name in self.custom_audios:
             # Remove sound from dict
             del self.custom_audios[name]
-            # Save new dict to GSettings
-            self.gsettings.set_value('custom-audios', GLib.Variant('a{ss}', self.custom_audios))
 
             if name in self.volume:
                 # Remove audio also from volume dict
                 del self.volume[name]
-                # Save new dict to GSettings
-                self.gsettings.set_value('sounds-volume', GLib.Variant('a{sd}', self.volume))
 
     def get_sound_volume(self, name):
         # If sound is set on volume dict
@@ -68,8 +65,13 @@ class Settings(object):
     def set_sound_volume(self, name, volume):
         # Set volume level to audio on volume dict
         self.volume[name] = volume
-        # Save new dict to GSettings
+
+    def save_all(self):
+        # Save custom audios
+        self.gsettings.set_value('custom-audios', GLib.Variant('a{ss}', self.custom_audios))
+        # Save sounds volume levels
         self.gsettings.set_value('sounds-volume', GLib.Variant('a{sd}', self.volume))
+
 
     def migrate_json(self):
         '''
@@ -94,4 +96,5 @@ class Settings(object):
                     os.remove(json_settings_file)
 
             except Exception:
-                os.remove(json_settings_file) 
+                os.remove(json_settings_file)
+

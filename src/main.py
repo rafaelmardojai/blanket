@@ -31,6 +31,7 @@ Gst.init(None)
 
 from .mpris import MPRIS
 from .sound import MainPlayer
+from .sounds_settings import SoundsSettings
 from .window import BlanketWindow
 from .about import AboutDialog
 
@@ -55,11 +56,12 @@ class Application(Gtk.Application):
         # App version
         self.version = version
 
-        # GSettings
-        self.gsettings = Gio.Settings.new('com.rafaelmardojai.Blanket')
+        # Settings
+        self.settings = Gio.Settings.new('com.rafaelmardojai.Blanket')
+        self.sounds_settings = SoundsSettings()
         # Saved playing state
-        self.volume = self.gsettings.get_double('volume')
-        self.playing = self.gsettings.get_boolean('playing')
+        self.volume = self.settings.get_double('volume')
+        self.playing = self.settings.get_boolean('playing')
 
         # App main player
         self.mainplayer = MainPlayer()
@@ -119,7 +121,7 @@ class Application(Gtk.Application):
         for a in actions:
             if 'state' in a:
                 action = Gio.SimpleAction.new_stateful(
-                    a['name'], None, self.gsettings.get_value(a['name']))
+                    a['name'], None, self.settings.get_value(a['name']))
                 action.connect('change-state', a['func'])
             else:
                 action = Gio.SimpleAction.new(a['name'], None)
@@ -140,7 +142,8 @@ class Application(Gtk.Application):
     def do_activate(self):
         self.window = self.props.active_window
         if not self.window:
-            self.window = BlanketWindow(self.mainplayer, application=self)
+            self.window = BlanketWindow(self.mainplayer, self.settings,
+                                        self.sounds_settings, application=self)
 
         if self.window_hidden:
             self.window.hide()
@@ -177,8 +180,8 @@ class Application(Gtk.Application):
         self.window.update_playing_ui(self.playing)
 
     def on_background(self, action, value):
-        action.set_state(GLib.Variant('b', value))
-        self.gsettings.set_boolean('background-playback', value)
+        action.set_state(value)
+        self.settings.set_boolean('background-playback', value)
         if value:
             self.window.quit_revealer.set_reveal_child(True)
         else:
@@ -208,17 +211,20 @@ class Application(Gtk.Application):
     def _save_settings(self):
         # Save scroll position
         scroll_position = self.window.vscroll.get_value()
-        self.gsettings.set_double('scroll-position', scroll_position)
+        self.settings.set_double('scroll-position', scroll_position)
 
         # Save mainplayer volume
         volume = self.mainplayer.get_property('volume')
-        self.gsettings.set_double('volume', volume)
+        self.settings.set_double('volume', volume)
         # Save mainplayer playing state
         playing = self.mainplayer.get_property('playing')
-        self.gsettings.set_boolean('playing', playing)
+        self.settings.set_boolean('playing', playing)
+
+        # Save sounds settings
+        self.sounds_settings.save_all()
 
     def _on_window_delete(self, widget, event):
-        background = self.gsettings.get_value('background-playback')
+        background = self.settings.get_value('background-playback')
 
         if background:
             self._save_settings() # Save settings

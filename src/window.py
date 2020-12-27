@@ -22,7 +22,6 @@ from gi.repository import GLib, GObject, Gio, Gtk, Handy
 
 from .sound import SoundObject
 from .widgets import SoundsGroup
-from .settings import Settings
 
 SOUNDS = [
     {
@@ -117,18 +116,18 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     quit_revealer = Gtk.Template.Child()
 
-    def __init__(self, mainplayer, **kwargs):
+    def __init__(self, mainplayer, settings, sounds_settings, **kwargs):
         super().__init__(**kwargs)
 
         # Set default window icon for window managers
         self.set_default_icon_name('com.rafaelmardojai.Blanket-wm')
 
-        # Settings wrapper
-        self.settings = Settings()
-        self.settings.migrate_json() # Migrate old json settings
-
         # Main player
         self.mainplayer = mainplayer
+
+        # Settings
+        self.settings = settings
+        self.sounds_settings = sounds_settings
 
         # Setup widgets
         self.setup()
@@ -144,7 +143,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.volume.set_value(self.mainplayer.get_property('volume'))
 
         # If background-playback enabled show quit action on menu
-        if self.settings.gsettings.get_value('background-playback'):
+        if self.settings.get_value('background-playback'):
             self.quit_revealer.set_reveal_child(True)
 
         # Setup included/saved sounds
@@ -155,7 +154,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.show_all()
 
         # Get saved scroll position
-        saved_scroll = self.settings.gsettings.get_double('scroll-position')
+        saved_scroll = self.settings.get_double('scroll-position')
         # Get scrolled window vertical adjustment
         self.vscroll = self.scrolled_window.get_vadjustment()
         # Set saved scroll to vertical adjustment
@@ -165,13 +164,13 @@ class BlanketWindow(Handy.ApplicationWindow):
         # Setup default sounds
         for g in SOUNDS:
             # Create a new SoundsGroup
-            group = SoundsGroup(g['name'], self.settings)
+            group = SoundsGroup(g['name'], self.sounds_settings)
             # Iterate sounds
             for s in g['sounds']:
                 # Create a new SoundObject
                 sound = SoundObject(s['name'], title=s['title'],
                                     mainplayer=self.mainplayer,
-                                    settings=self.settings)
+                                    settings=self.sounds_settings)
                 # Add SoundObject to SoundsGroup
                 group.add(sound)
 
@@ -180,7 +179,7 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     def setup_custom_sounds(self):
         # Setup user custom sounds
-        self.custom_sounds = SoundsGroup(_('Custom'), self.settings)
+        self.custom_sounds = SoundsGroup(_('Custom'), self.sounds_settings)
         self.box.pack_start(self.custom_sounds, False, True, 0)
 
         # Add sound button row
@@ -200,15 +199,15 @@ class BlanketWindow(Handy.ApplicationWindow):
 
         # Load saved custom audios
         # Get saved audios from settings
-        saved = self.settings.get_custom_audios()
+        saved = self.sounds_settings.get_custom_audios()
         # Iterate audios
         for name, uri in saved.items():
             # Create a new SoundObject
             sound = SoundObject(name, uri,
                     icon='com.rafaelmardojai.Blanket-sound-wave',
                     mainplayer=self.mainplayer,
-                    settings=self.settings,
                     removable=True)
+                    settings=self.sounds_settings,
             # Add SoundObject to SoundsGroup
             self.custom_sounds.add(sound)
 
@@ -256,10 +255,10 @@ class BlanketWindow(Handy.ApplicationWindow):
                 sound = SoundObject(name, uri,
                     icon='com.rafaelmardojai.Blanket-sound-wave',
                     mainplayer=self.mainplayer,
-                    settings=self.settings,
                     removable=True)
+                    settings=self.sounds_settings,
                 # Save to settings
-                GLib.idle_add(self.settings.add_custom_audio,
+                GLib.idle_add(self.sounds_settings.add_custom_audio,
                               sound.name, sound.uri)
                 # Add SoundObject to SoundsGroup
                 self.custom_sounds.add(sound)
