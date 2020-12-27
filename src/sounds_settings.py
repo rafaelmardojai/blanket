@@ -26,9 +26,9 @@ class SoundsSettings(object):
     Manages sounds settings
     """
 
-    def __init__(self):
+    def __init__(self, gsettings):
         # New GSettings instance
-        self.gsettings = Gio.Settings.new('com.rafaelmardojai.Blanket')
+        self.gsettings = gsettings
         # New dict with saved custom audios
         self.custom_audios = dict(self.gsettings.get_value('custom-audios'))
         # New dict with saved volume levels

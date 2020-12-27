@@ -58,7 +58,7 @@ class Application(Gtk.Application):
 
         # Settings
         self.settings = Gio.Settings.new('com.rafaelmardojai.Blanket')
-        self.sounds_settings = SoundsSettings()
+        self.sounds_settings = SoundsSettings(self.settings)
         # Saved playing state
         self.volume = self.settings.get_double('volume')
         self.playing = self.settings.get_boolean('playing')
