@@ -31,6 +31,7 @@ class SoundRow(Gtk.ListBoxRow):
 
     box = Gtk.Template.Child()
     title = Gtk.Template.Child()
+    playing = Gtk.Template.Child()
     volume = Gtk.Template.Child()
 
     def __init__(self, sound, model, settings, **kwargs):
@@ -97,6 +98,11 @@ class SoundRow(Gtk.ListBoxRow):
         self.player.set_virtual_volume(volume)
         # Save volume on settings
         self.settings.set_sound_volume(self.sound.name, volume)
+        # Toggle playing indicator
+        if volume == 0:
+            self.playing.set_reveal_child(False)
+        else:
+            self.playing.set_reveal_child(True)
 
     def remove(self, widget):
         # Remove audio from list
