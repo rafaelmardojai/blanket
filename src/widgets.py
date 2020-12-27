@@ -72,7 +72,7 @@ class SoundRow(Gtk.ListBoxRow):
             self.box.pack_end(remove, False, True, 0)
             # Add destructive-action CSS class
             Gtk.StyleContext.add_class(remove.get_style_context(),
-                                       'destructive-action')
+                                       'image-button')
             # Create button icon
             remove_icon = Gtk.Image.new_from_icon_name(
                 'edit-delete-symbolic', Gtk.IconSize.MENU)
