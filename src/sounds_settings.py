@@ -74,10 +74,10 @@ class SoundsSettings(object):
 
 
     def migrate_json(self):
-        '''
-        Migration
+        """
+        Migrate old JSON settings
         Remove on Next release
-        '''
+        """
         xdg_user_config_dir = GLib.get_user_config_dir()
         json_settings_file = os.path.join(xdg_user_config_dir, 'blanket', 'settings.json')
 

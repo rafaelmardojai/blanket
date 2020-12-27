@@ -18,16 +18,16 @@
 from gi.repository import GLib, Gio, Gtk, Handy
 
 from .sound import SoundObject, SoundPlayer
-from .settings import Settings
 
 
-'''
-SoundRow
-Create a widget to show, play and manage a Sound
-'''
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/sound-row.ui')
 class SoundRow(Gtk.ListBoxRow):
     __gtype_name__ = 'SoundRow'
+
+    """
+    SoundRow
+    Widget to show, play and manage a sound
+    """
 
     box = Gtk.Template.Child()
     title = Gtk.Template.Child()
@@ -46,9 +46,7 @@ class SoundRow(Gtk.ListBoxRow):
 
         # Get playing state
         playing = self.sound.mainplayer.get_property('playing')
-        if not playing:
-            # If not playing set insensitive
-            self.set_sensitive(False)
+        self.set_sensitive(playing)
         # Connect playing state signal
         self.sound.mainplayer.connect('notify::playing',
                                       self._on_playing_changed)
@@ -114,17 +112,13 @@ class SoundRow(Gtk.ListBoxRow):
 
     def _on_playing_changed(self, player, playing):
         playing = self.sound.mainplayer.get_property('playing')
+        self.set_sensitive(playing)
 
-        if playing:
-            self.set_sensitive(True)
-        else:
-            self.set_sensitive(False)
-
-
-'''
-SoundsGroup
-'''
 class SoundsGroup(Gtk.Box):
+    """
+    SoundsGroup
+    Group SoundRow with a title
+    """
 
     def __init__(self, title, settings, **kwargs):
         super().__init__(**kwargs)

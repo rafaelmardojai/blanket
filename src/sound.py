@@ -19,9 +19,9 @@ from gi.repository import GObject, Gst, GstPlayer
 
 
 class MainPlayer(GObject.GObject):
-    '''
+    """
     Virtual app sounds player
-    '''
+    """
 
     __gsignals__ = {
         'volume-changed': (GObject.SignalFlags.RUN_FIRST, None, (int,)),
@@ -36,9 +36,9 @@ class MainPlayer(GObject.GObject):
 
 
 class SoundObject(GObject.Object):
-    '''
+    """
     Describe a sound with it's propeties
-    '''
+    """
 
     def __init__(self, name, uri=None, title=None, mainplayer=None,
                  settings=None, custom=False, **kwargs):
@@ -60,9 +60,9 @@ class SoundObject(GObject.Object):
 
 
 class SoundPlayer(GstPlayer.Player):
-    '''
+    """
     GstPlayer.Player with modifications
-    '''
+    """
 
     def __init__(self, sound):
         super().__init__()
