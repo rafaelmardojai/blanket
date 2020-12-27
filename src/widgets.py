@@ -30,7 +30,6 @@ class SoundRow(Gtk.ListBoxRow):
     __gtype_name__ = 'SoundRow'
 
     box = Gtk.Template.Child()
-    icon = Gtk.Template.Child()
     title = Gtk.Template.Child()
     volume = Gtk.Template.Child()
 
@@ -56,10 +55,6 @@ class SoundRow(Gtk.ListBoxRow):
         # Create a new SoundPlayer
         self.player = SoundPlayer(self.sound)
 
-        # Set icon for the Sound
-        self.icon.set_from_icon_name(
-            self.sound.icon_name, Gtk.IconSize.DIALOG)
-
         # Set title
         self.title.set_label(self.sound.title)
 
@@ -70,18 +65,30 @@ class SoundRow(Gtk.ListBoxRow):
         if saved_vol and saved_vol > 0:
             self.volume.set_value(saved_vol)
 
-        # Add a remove button if the sound is removable
-        if self.sound.removable:
-            # Create button
+        if self.sound.custom:
+            # Add a remove button
             remove = Gtk.Button(valign=Gtk.Align.CENTER)
             remove.connect('clicked', self.remove)
             self.box.pack_end(remove, False, True, 0)
             # Add destructive-action CSS class
-            Gtk.StyleContext.add_class(remove.get_style_context(), 'destructive-action')
+            Gtk.StyleContext.add_class(remove.get_style_context(),
+                                       'destructive-action')
             # Create button icon
             remove_icon = Gtk.Image.new_from_icon_name(
                 'edit-delete-symbolic', Gtk.IconSize.MENU)
             remove.add(remove_icon)
+            # Compact widget
+            self.box.props.margin_top = 0
+            self.box.props.margin_bottom = 0
+        else:
+            # Set icon for the sound
+            icon = Gtk.Image.new_from_icon_name(self.sound.icon_name,
+                                                Gtk.IconSize.DIALOG)
+            icon.set_pixel_size(64)
+            Gtk.StyleContext.add_class(icon.get_style_context(),
+                                       'icon-dropshadow')
+            self.box.pack_start(icon, False, True, 0)
+            self.box.child_set_property(icon, 'position', 0)
 
     def change_vol(self, scale):
         # Round volume value

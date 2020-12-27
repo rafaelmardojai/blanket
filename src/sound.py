@@ -40,20 +40,20 @@ class SoundObject(GObject.Object):
     Describe a sound with it's propeties
     '''
 
-    def __init__(self, name, uri=None, title=None, icon=None, mainplayer=None,
-    settings=None, removable=False, **kwargs):
+    def __init__(self, name, uri=None, title=None, mainplayer=None,
+                 settings=None, custom=False, **kwargs):
         super().__init__(**kwargs)
 
-        resource_tmpl = 'resource:////com/rafaelmardojai/Blanket/sounds/{}.ogg'
+        resource_tmpl = 'resource:/com/rafaelmardojai/Blanket/sounds/{}.ogg'
         icon_tmpl = 'com.rafaelmardojai.Blanket-{}'
 
         self.name = name
-        self.uri = uri if uri else resource_tmpl.format(self.name)
+        self.uri = uri if uri else resource_tmpl.format(name)
         self.title = title if title else name
-        self.icon_name = icon if icon else icon_tmpl.format(self.name)
+        self.icon_name = icon_tmpl.format(name)
         self.mainplayer = mainplayer
         self.settings = settings
-        self.removable = removable
+        self.custom = custom
 
     def get_saved_volume(self):
         return self.settings.get_sound_volume(self.name)

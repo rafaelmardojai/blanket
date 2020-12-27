@@ -20,16 +20,6 @@
         <property name="spacing">24</property>
         <property name="margin">8</property>
         <child>
-          <object class="GtkImage" id="icon">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="pixel_size">96</property>
-            <style>
-              <class name="icon-dropshadow"/>
-            </style>
-          </object>
-        </child>
-        <child>
           <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>

@@ -203,11 +203,10 @@ class BlanketWindow(Handy.ApplicationWindow):
         # Iterate audios
         for name, uri in saved.items():
             # Create a new SoundObject
-            sound = SoundObject(name, uri,
-                    icon='com.rafaelmardojai.Blanket-sound-wave',
+            sound = SoundObject(name, uri=uri,
                     mainplayer=self.mainplayer,
-                    removable=True)
                     settings=self.sounds_settings,
+                    custom=True)
             # Add SoundObject to SoundsGroup
             self.custom_sounds.add(sound)
 
@@ -252,11 +251,10 @@ class BlanketWindow(Handy.ApplicationWindow):
                 uri = self.filechooser.get_uri()
 
                 # Create a new SoundObject
-                sound = SoundObject(name, uri,
-                    icon='com.rafaelmardojai.Blanket-sound-wave',
+                sound = SoundObject(name, uri=uri,
                     mainplayer=self.mainplayer,
-                    removable=True)
                     settings=self.sounds_settings,
+                    custom=True)
                 # Save to settings
                 GLib.idle_add(self.sounds_settings.add_custom_audio,
                               sound.name, sound.uri)
