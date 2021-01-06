@@ -12,7 +12,7 @@
    width="64"
    version="1.1"
    id="svg57"
-   sodipodi:docname="com.rafaelmardojai.Blanket-storm.svg"
+   sodipodi:docname="com.rafaelmardojai.Blanket-waves.svg"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
   <metadata
      id="metadata61">
@@ -38,7 +38,7 @@
      inkscape:window-width="640"
      inkscape:window-height="480"
      id="namedview59"
-     showgrid="false"
+     showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:current-layer="svg57">
@@ -61,6 +61,23 @@
   </sodipodi:namedview>
   <defs
      id="defs29">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect4921"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,1,1,0,0,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,13,0,1 @ F,0,0,1,0,12,0,1 @ F,0,0,1,0,4,0,1 @ F,0,0,1,0,4,0,1 @ F,0,0,1,0,4,0,1 @ F,0,0,1,0,4,0,1 @ F,0,0,1,0,4,0,1 @ F,0,0,1,0,4,0,1 @ F,0,0,1,0,6,0,1 @ F,0,0,1,0,6,0,1 @ F,0,0,1,0,0,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
     <linearGradient
        id="b">
       <stop
@@ -125,24 +142,15 @@
        gradientUnits="userSpaceOnUse" />
   </defs>
   <path
-     id="path71"
-     style="fill:none;stroke:#77767b;stroke-width:2.00001;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000"
-     d="m 37,39.006499 c 5.361415,-0.03435 3.267087,0.04286 7.974591,-0.0089 5.77071,0 10.029233,-4.977207 10.029166,-10.74682 -4.7e-5,-5.940107 -4.815445,-11.197444 -10.755553,-11.197494 -0.500899,2.2e-5 -1.001182,0.03505 -1.497201,0.104807 -2.845763,-4.48998 -6.519764,-7.064718 -12.298175,-7.064718 -7.83292,0 -14.19401,6.770505 -14.234752,14.603319 -0.05153,-0.0012 -0.103069,-0.0018 -0.154611,-0.0018 -3.952044,-1.6e-5 -7.1558099,3.20375 -7.1558099,7.155796 0,3.952045 3.2037659,7.15581 7.1558099,7.15581 H 27"
-     sodipodi:nodetypes="cccccsccssc" />
-  <path
-     style="fill:none;stroke:#77767b;stroke-width:2.00001;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;font-variation-settings:normal;opacity:1;vector-effect:none;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stop-color:#000000;stop-opacity:1"
-     d="m 32,29 v 22 h 11 l 5,5"
-     id="path1138" />
-  <path
-     style="fill:none;stroke:#77767b;stroke-width:2.00001;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;font-variation-settings:normal;opacity:1;vector-effect:none;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stop-color:#000000;stop-opacity:1"
-     d="m 32,47 h -8 v 9"
-     id="path1154" />
-  <path
-     style="fill:none;stroke:#77767b;stroke-width:2.00001;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;font-variation-settings:normal;opacity:1;vector-effect:none;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stop-color:#000000;stop-opacity:1"
-     d="m 24,52 h -8 l -2,2"
-     id="path1161" />
-  <path
-     style="fill:none;stroke:#77767b;stroke-width:2.00001;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;font-variation-settings:normal;opacity:1;vector-effect:none;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stop-color:#000000;stop-opacity:1"
-     d="m 37,51 v 5"
-     id="path1168" />
+     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#77767b;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+     d="M 9,55 A 24.020868,24.020868 112.38014 0 0 16,38 V 29 A 13,13 135 0 1 29,16 h 7 a 12,12 45 0 1 12,12 4,4 135 0 1 -4,4 4,4 135 0 0 -4,4 4,4 135 0 1 -4,4 4,4 45 0 1 -4,-4 v -8 a 4,4 45 0 0 -4,-4 4,4 135 0 0 -4,4 V 42 A 14.485281,14.485281 67.5 0 0 28.242641,52.242641 13.661165,13.661165 21.060674 0 0 38,56 h 18"
+     id="path4759"
+     inkscape:path-effect="#path-effect4921"
+     inkscape:original-d="m 9,55 7,-7 V 16 h 32 v 16 h -8 v 8 H 32 V 24 h -8 v 24 l 8,8 h 24" />
+  <circle
+     style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#77767b;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+     id="path4923"
+     cx="45.919067"
+     cy="43.003174"
+     r="3.0365601" />
 </svg>
