@@ -12,9 +12,17 @@
 
     <!-- Icons -->
     <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-rain.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-wind.svg</file>
     <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-storm.svg</file>
+    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-wind.svg</file>
+    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-waves.svg</file>
+    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-stream.svg</file>
+    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-birds.svg</file>
     <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-summer-night.svg</file>
+
+    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-train.svg</file>
+    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-boat.svg</file>
+
+    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-city.svg</file>
     <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-coffee-shop.svg</file>
     <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-fireplace.svg</file>
     <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-pink-noise.svg</file>

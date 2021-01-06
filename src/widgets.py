@@ -70,8 +70,6 @@ class SoundRow(Gtk.ListBoxRow):
             icon = Gtk.Image.new_from_icon_name(self.sound.icon_name,
                                                 Gtk.IconSize.DIALOG)
             icon.set_pixel_size(64)
-            Gtk.StyleContext.add_class(icon.get_style_context(),
-                                       'icon-dropshadow')
             self.box.pack_start(icon, False, True, 0)
             self.box.child_set_property(icon, 'position', 0)
 
