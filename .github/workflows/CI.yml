@@ -6,9 +6,9 @@ name: CI
 jobs:
   flatpak-builder:
     name: "Flatpak Builder"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     container:
-      image: docker.io/bilelmoussaoui/flatpak-github-actions
+      image: bilelmoussaoui/flatpak-github-actions:gnome-3.38
       options: --privileged
     steps:
     - uses: actions/checkout@v2
