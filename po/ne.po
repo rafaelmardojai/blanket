@@ -1,4 +1,4 @@
-# Nepali (NP) translation for Blanket.
+# Nepali (ne) translation for Blanket.
 # Copyright (C) 2021 Rafael Mardojai CM
 # This file is distributed under the same license as the blanket package.
 # IBA4 <nabin7076@protonmail.com>, 2021.
