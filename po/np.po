@@ -1,0 +1,185 @@
+# Nepali (NP) translation for Blanket.
+# Copyright (C) 2021 Rafael Mardojai CM
+# This file is distributed under the same license as the blanket package.
+# IBA4 <nabin7076@protonmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blanket\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-28 10:43-0500\n"
+"PO-Revision-Date: 2021-02-10 23:05+0545\n"
+"Last-Translator: IBA4 <nabin7076@protonmail.com>\n"
+"Language-Team: Nepali <>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 3.38.0\n"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:3
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:42
+#: src/mpris.py:145
+msgid "Blanket"
+msgstr "Blanket"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:4
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
+#: src/mpris.py:143 src/mpris.py:144
+msgid "Listen to different sounds"
+msgstr "बिभिन्न आवाज सुन्नुहोस्"
+
+#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/com.rafaelmardojai.Blanket.desktop.in:10
+msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
+msgstr "एकाग्र गर्नुहोस्;ध्यान दिनुहोस्;हल्ला;उत्पादकता;निद्रा;आनन्द;"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+msgid ""
+"Improve focus and increase your productivity by listening to different "
+"sounds. Or allows you to fall asleep in a noisy environment."
+msgstr ""
+"ध्यान सुधार्नुहोस् र विभिन्न ध्वनिको आवाज सुनेर तपाईंको उत्पादकता बढाउनुहोस्। वा यसले "
+"तपाईंलाई हल्लाको वातावरणमा  निदाउन अनुमति दिन्छ।"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+msgid "Rafael Mardojai CM"
+msgstr "राफेल मार्डोजाई सीएम"
+
+#: data/resources/window.ui:145
+msgid "Keep playing when closed"
+msgstr "बन्द हुँदा पनि बजाई राख्नुहोस्"
+
+#: data/resources/window.ui:165
+msgid "Keyboard Shortcuts"
+msgstr "कीबोर्ड शर्टकटहरू"
+
+#: data/resources/window.ui:174
+msgid "About Blanket"
+msgstr "Blanketको बारेमा"
+
+#: data/resources/window.ui:200 data/resources/shortcuts.ui:39
+msgid "Quit"
+msgstr "छोड्नुहोस्"
+
+#: data/resources/about.ui:11
+msgid "Copyright 2020 Rafael Mardojai CM"
+msgstr "प्रतिलिपि अधिकार २०२० राफेल मार्डोजाई सीएम"
+
+#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#: data/resources/about.ui:15
+msgctxt "Add your names here, do not remove previous names!"
+msgid "translation-credits"
+msgstr "IBA4 <nabin7076@protonmail.com>"
+
+#: data/resources/shortcuts.ui:13
+msgid "General"
+msgstr "साधारण"
+
+#: data/resources/shortcuts.ui:18
+msgid "Play/Pause sounds"
+msgstr "आवाजहरू प्ले / पज  गर्ने"
+
+#: data/resources/shortcuts.ui:25
+msgid "Add custom sound"
+msgstr "अनुकूलन ध्वनी जोड्नुहोस्"
+
+#: data/resources/shortcuts.ui:32
+msgid "Close window"
+msgstr "विन्डो बन्द गर्नुहोस्"
+
+#: src/window.py:29
+msgid "Nature"
+msgstr "प्रकृति"
+
+#: src/window.py:33 src/about.py:26 src/about.py:30 src/about.py:45
+msgid "Rain"
+msgstr "वर्षा"
+
+#: src/window.py:37 src/about.py:26 src/about.py:31 src/about.py:45
+msgid "Storm"
+msgstr "आँधी"
+
+#: src/window.py:41 src/about.py:26 src/about.py:39
+msgid "Wind"
+msgstr "हावा"
+
+#: src/window.py:45 src/about.py:37 src/about.py:45
+msgid "Waves"
+msgstr "छालहरू"
+
+#: src/window.py:49 src/about.py:34
+msgid "Stream"
+msgstr "धारा"
+
+#: src/window.py:53 src/about.py:36 src/about.py:45
+msgid "Birds"
+msgstr "चराहरु"
+
+#: src/window.py:57 src/about.py:26 src/about.py:41
+msgid "Summer Night"
+msgstr "गर्मी रात"
+
+#: src/window.py:62
+msgid "Travel"
+msgstr "यात्रा"
+
+#: src/window.py:66 src/about.py:40
+msgid "Train"
+msgstr "रेल"
+
+#: src/window.py:70 src/about.py:32 src/about.py:45
+msgid "Boat"
+msgstr "डुङ्गा"
+
+#: src/window.py:74 src/about.py:33 src/about.py:45
+msgid "City"
+msgstr "सहर"
+
+#: src/window.py:79
+msgid "Interiors"
+msgstr "भित्री भाग"
+
+#: src/window.py:83 src/about.py:41
+msgid "Coffee Shop"
+msgstr "कफी पसल"
+
+#: src/window.py:87 src/about.py:41
+msgid "Fireplace"
+msgstr "अगेनु"
+
+#: src/window.py:92
+msgid "Noise"
+msgstr "हल्ला"
+
+#: src/window.py:96 src/about.py:38
+msgid "Pink Noise"
+msgstr "गुलाबी आवाज"
+
+#: src/window.py:100 src/about.py:35
+msgid "White Noise"
+msgstr "सेतो शोर"
+
+#. Setup user custom sounds
+#: src/window.py:188
+msgid "Custom"
+msgstr "अनुकूल"
+
+#: src/window.py:239
+msgid "Open audio"
+msgstr "अडियो खोल्नुहोस्"
+
+#: src/about.py:41
+msgid "Unknown"
+msgstr "अज्ञात"
+
+#. Set sound artists list
+#: src/about.py:69
+msgid "Sounds by"
+msgstr "ध्वनि"
+
+#. Set sound editors list
+#: src/about.py:71
+msgid "Sounds edited by"
+msgstr "ध्वनि सम्पादन"
