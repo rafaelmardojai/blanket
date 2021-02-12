@@ -1,9 +1,8 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# German translation for Blanket
+# Copyright (C) 2021 Rafael Mardojai CM
 # This file is distributed under the same license as the blanket package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Fridolin Weisser <weisser.fridolin@gmail.com>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
@@ -69,7 +68,7 @@ msgstr "Copyright 2020 Rafael Mardojai CM"
 #: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translation-credits"
-msgstr "Fridolin Weisser"
+msgstr "Fridolin Weisser <weisser.fridolin@gmail.com>"
 
 #: data/resources/shortcuts.ui:13
 msgid "General"
