@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blanket package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: blanket\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-12 13:53+0100\n"
+"PO-Revision-Date: 2021-02-12 14:41+0100\n"
+"Last-Translator: Fridolin Weisser <weisser.fridolin@gmail.com>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:3
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:42
+#: src/mpris.py:145
+msgid "Blanket"
+msgstr "Blanket"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:4
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
+#: src/mpris.py:143 src/mpris.py:144
+msgid "Listen to different sounds"
+msgstr "Höre dir unterschiedliche Klänge an"
+
+#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/com.rafaelmardojai.Blanket.desktop.in:10
+msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
+msgstr "Konzentration;Fokus;Geräusch;Produktivität;Schlaf;"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+msgid ""
+"Improve focus and increase your productivity by listening to different "
+"sounds. Or allows you to fall asleep in a noisy environment."
+msgstr "Fokussiere dich und erhöhe deine Produktivität, indem du zu unterschiedlichen Klängen arbeitest."
+"Ermöglicht dir auch, in lauten Umgebungen einzuschlafen."
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: data/resources/window.ui:145
+msgid "Keep playing when closed"
+msgstr "Nach Beenden weiterspielen"
+
+#: data/resources/window.ui:165
+msgid "Keyboard Shortcuts"
+msgstr "Tastenkürzel"
+
+#: data/resources/window.ui:174
+msgid "About Blanket"
+msgstr "Über Blanket"
+
+#: data/resources/window.ui:200 data/resources/shortcuts.ui:39
+msgid "Quit"
+msgstr "Beenden"
+
+#: data/resources/about.ui:11
+msgid "Copyright 2020 Rafael Mardojai CM"
+msgstr "Copyright 2020 Rafael Mardojai CM"
+
+#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#: data/resources/about.ui:15
+msgctxt "Add your names here, do not remove previous names!"
+msgid "translation-credits"
+msgstr "Fridolin Weisser"
+
+#: data/resources/shortcuts.ui:13
+msgid "General"
+msgstr "Allgemein"
+
+#: data/resources/shortcuts.ui:18
+msgid "Play/Pause sounds"
+msgstr "Klänge pausieren/fortsetzen"
+
+#: data/resources/shortcuts.ui:25
+msgid "Add custom sound"
+msgstr "Eigenen Klang hinzufügen"
+
+#: data/resources/shortcuts.ui:32
+msgid "Close window"
+msgstr "Fenster schließen"
+
+#: src/window.py:29
+msgid "Nature"
+msgstr "Natur"
+
+#: src/window.py:33 src/about.py:26 src/about.py:30 src/about.py:45
+msgid "Rain"
+msgstr "Regen"
+
+#: src/window.py:37 src/about.py:26 src/about.py:31 src/about.py:45
+msgid "Storm"
+msgstr "Gewitter"
+
+#: src/window.py:41 src/about.py:26 src/about.py:39
+msgid "Wind"
+msgstr "Wind"
+
+#: src/window.py:45 src/about.py:37 src/about.py:45
+msgid "Waves"
+msgstr "Wellen"
+
+#: src/window.py:49 src/about.py:34
+msgid "Stream"
+msgstr "Fluss"
+
+#: src/window.py:53 src/about.py:36 src/about.py:45
+msgid "Birds"
+msgstr "Vögel"
+
+#: src/window.py:57 src/about.py:26 src/about.py:41
+msgid "Summer Night"
+msgstr "Sommernacht"
+
+#: src/window.py:62
+msgid "Travel"
+msgstr "Reisen"
+
+#: src/window.py:66 src/about.py:40
+msgid "Train"
+msgstr "Zug"
+
+#: src/window.py:70 src/about.py:32 src/about.py:45
+msgid "Boat"
+msgstr "Boot"
+
+#: src/window.py:74 src/about.py:33 src/about.py:45
+msgid "City"
+msgstr "Stadt"
+
+#: src/window.py:79
+msgid "Interiors"
+msgstr "Innenbereich"
+
+#: src/window.py:83 src/about.py:41
+msgid "Coffee Shop"
+msgstr "Café"
+
+#: src/window.py:87 src/about.py:41
+msgid "Fireplace"
+msgstr "Feuerstelle"
+
+#: src/window.py:92
+msgid "Noise"
+msgstr "Rauschen"
+
+#: src/window.py:96 src/about.py:38
+msgid "Pink Noise"
+msgstr "Rosa Rauschen"
+
+#: src/window.py:100 src/about.py:35
+msgid "White Noise"
+msgstr "Weißes Rauschen"
+
+#. Setup user custom sounds
+#: src/window.py:188
+msgid "Custom"
+msgstr "Eigene Klänge"
+
+#: src/window.py:239
+msgid "Open audio"
+msgstr "Audiodatei öffnen"
+
+#: src/about.py:41
+msgid "Unknown"
+msgstr "Unbekannt"
+
+#. Set sound artists list
+#: src/about.py:69
+msgid "Sounds by"
+msgstr "Klänge von"
+
+#. Set sound editors list
+#: src/about.py:71
+msgid "Sounds edited by"
+msgstr "Klänge bearbeitet von"
