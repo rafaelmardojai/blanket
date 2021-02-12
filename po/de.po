@@ -46,7 +46,7 @@ msgstr "Rafael Mardojai CM"
 
 #: data/resources/window.ui:145
 msgid "Keep playing when closed"
-msgstr "Nach Beenden weiterspielen"
+msgstr "Nach Schließen weiterspielen"
 
 #: data/resources/window.ui:165
 msgid "Keyboard Shortcuts"
