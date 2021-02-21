@@ -2,3 +2,7 @@
   font-size: 22px;
   font-weight: bold;
 }
+
+.playing .sound-icon {
+  color: @theme_selected_bg_color;
+}

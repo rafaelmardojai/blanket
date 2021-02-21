@@ -69,6 +69,7 @@ class SoundRow(Gtk.ListBoxRow):
             # Set icon for the sound
             icon = Gtk.Image.new_from_icon_name(self.sound.icon_name,
                                                 Gtk.IconSize.DIALOG)
+            Gtk.StyleContext.add_class(icon.get_style_context(), 'sound-icon')
             icon.set_pixel_size(64)
             self.box.pack_start(icon, False, True, 0)
             self.box.child_set_property(icon, 'position', 0)
@@ -83,8 +84,10 @@ class SoundRow(Gtk.ListBoxRow):
         # Toggle playing indicator
         if volume == 0:
             self.playing.set_reveal_child(False)
-        else:
+            Gtk.StyleContext.remove_class(self.get_style_context(), 'playing')
+        elif not self.playing.get_reveal_child():
             self.playing.set_reveal_child(True)
+            Gtk.StyleContext.add_class(self.get_style_context(), 'playing')
 
     def remove(self, widget):
         # Remove audio from list
