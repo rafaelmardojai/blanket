@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="64"
+   width="64"
+   version="1.1"
+   id="svg57"
+   sodipodi:docname="com.rafaelmardojai.Blanket-pink-noise-symbolic.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata61">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview59"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:current-layer="svg57"
+     inkscape:document-rotation="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid63"
+       empspacing="8" />
+    <sodipodi:guide
+       position="8,0"
+       orientation="1,0"
+       id="guide65" />
+    <sodipodi:guide
+       position="72,8"
+       orientation="0,-1"
+       id="guide67" />
+    <sodipodi:guide
+       position="56,-16"
+       orientation="1,0"
+       id="guide69" />
+  </sodipodi:namedview>
+  <defs
+     id="defs29">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect4921"
+       is_visible="true"
+       lpeversion="1"
+       satellites_param="F,0,1,1,0,0,0,1 @ F,0,0,1,0,10,0,1 @ F,0,0,1,0,13,0,1 @ F,0,0,1,0,12,0,1 @ F,0,0,1,0,4,0,1 @ F,0,0,1,0,4,0,1 @ F,0,0,1,0,4,0,1 @ F,0,0,1,0,4,0,1 @ F,0,0,1,0,4,0,1 @ F,0,0,1,0,4,0,1 @ F,0,0,1,0,6,0,1 @ F,0,0,1,0,6,0,1 @ F,0,0,1,0,0,0,1"
+       unit="px"
+       method="auto"
+       mode="F"
+       radius="0"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <linearGradient
+       id="b">
+      <stop
+         offset="0"
+         stop-color="#646368"
+         id="stop2" />
+      <stop
+         offset=".06"
+         stop-color="#88878b"
+         id="stop4" />
+      <stop
+         offset=".133"
+         stop-color="#77767b"
+         id="stop6" />
+      <stop
+         offset=".827"
+         stop-color="#77767b"
+         id="stop8" />
+      <stop
+         offset=".915"
+         stop-color="#9f9ea2"
+         id="stop10" />
+      <stop
+         offset="1"
+         stop-color="#656468"
+         id="stop12" />
+    </linearGradient>
+    <linearGradient
+       id="a">
+      <stop
+         offset="0"
+         stop-color="#3584e4"
+         id="stop15" />
+      <stop
+         offset=".091"
+         stop-color="#6ba5ec"
+         id="stop17" />
+      <stop
+         offset=".173"
+         stop-color="#3584e4"
+         id="stop19" />
+      <stop
+         offset=".835"
+         stop-color="#3584e4"
+         id="stop21" />
+      <stop
+         offset=".922"
+         stop-color="#8db9f0"
+         id="stop23" />
+      <stop
+         offset="1"
+         stop-color="#3584e4"
+         id="stop25" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#b"
+       id="c"
+       x1="7.165"
+       y1="56.174"
+       x2="120"
+       y2="56.174"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     id="g1272"
+     style="opacity:1">
+    <path
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:0;fill-rule:nonzero;stroke:none;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1.0;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1;"
+       d="m 54,31 v 2.021484 L 56,35 54,37.05127 V 38 M 47,24 v 0.946289 l 2,2.022217 -2,1.926269 v 4.108399 l 2,2.003445 -2,2.059787 V 41 M 40,20 v 4.911621 l 2,2.175293 -2,1.815674 v 4.135498 l 2,1.987868 -2,1.840257 V 44 m -8,-3 v -4.01416 l 2,-2.064156 -2,-1.939262 v -4.089111 l 2,-2.005127 -2,-1.903077 V 24 M 25,49 V 36.942139 l 2,-1.977642 -2,-1.942768 V 28.80957 L 27,26.926514 25,24.94165 V 16 M 10,38 v -1.079101 l 2,-1.961236 -2,-2.064155 V 31 m 7,10 v -4.019287 l 2,-2.170205 -2,-1.915244 V 28.883057 L 19,27 17,25 v -2"
+       id="path1274" />
+    <path
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#77767b;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1.0;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1;"
+       d="M 25 15 A 0.99999499 0.99999499 0 0 0 24 16 L 24 25.357422 L 25.560547 26.908203 L 24 28.376953 L 24 33.445312 L 25.572266 34.970703 L 24 36.525391 L 24 49 A 0.99999499 0.99999499 0 0 0 25 50 A 0.99999499 0.99999499 0 0 0 26 49 L 26 37.359375 L 28.427734 34.958984 L 26 32.599609 L 26 29.242188 L 28.439453 26.945312 L 26 24.525391 L 26 16 A 0.99999499 0.99999499 0 0 0 25 15 z M 40 19 A 0.99999499 0.99999499 0 0 0 39 20 L 39 25.300781 L 40.582031 27.023438 L 39 28.458984 L 39 33.453125 L 40.554688 34.998047 L 39 36.427734 L 39 44 A 0.99999499 0.99999499 0 0 0 40 45 A 0.99999499 0.99999499 0 0 0 41 44 L 41 37.304688 L 43.447266 35.054688 L 41 32.623047 L 41 29.345703 L 43.417969 27.150391 L 41 24.521484 L 41 20 A 0.99999499 0.99999499 0 0 0 40 19 z M 17 22 A 0.99999499 0.99999499 0 0 0 16 23 L 16 25.414062 L 17.564453 26.978516 L 16 28.451172 L 16 33.322266 L 17.599609 34.853516 L 16 36.589844 L 16 41 A 0.99999499 0.99999499 0 0 0 17 42 A 0.99999499 0.99999499 0 0 0 18 41 L 18 37.371094 L 20.400391 34.767578 L 18 32.46875 L 18 29.314453 L 20.435547 27.021484 L 18 24.585938 L 18 23 A 0.99999499 0.99999499 0 0 0 17 22 z M 32 23 A 0.99999499 0.99999499 0 0 0 31 24 L 31 25.414062 L 32.568359 26.90625 L 31 28.480469 L 31 33.40625 L 32.585938 34.943359 L 31 36.580078 L 31 41 A 0.99999499 0.99999499 0 0 0 32 42 A 0.99999499 0.99999499 0 0 0 33 41 L 33 37.390625 L 35.414062 34.900391 L 33 32.558594 L 33 29.306641 L 35.431641 26.869141 L 33 24.556641 L 33 24 A 0.99999499 0.99999499 0 0 0 32 23 z M 47 23 A 0.99999499 0.99999499 0 0 0 46 24 L 46 25.357422 L 47.576172 26.951172 L 46 28.46875 L 46 33.416016 L 47.597656 35.015625 L 46 36.660156 L 46 41 A 0.99999499 0.99999499 0 0 0 47 42 A 0.99999499 0.99999499 0 0 0 48 41 L 48 37.472656 L 50.402344 34.996094 L 48 32.589844 L 48 29.320312 L 50.423828 26.986328 L 48 24.535156 L 48 24 A 0.99999499 0.99999499 0 0 0 47 23 z M 10 30 A 0.99999499 0.99999499 0 0 0 9 31 L 9 33.300781 L 10.589844 34.941406 L 9 36.5 L 9 38 A 0.99999499 0.99999499 0 0 0 10 39 A 0.99999499 0.99999499 0 0 0 11 38 L 11 37.341797 L 13.410156 34.978516 L 11 32.490234 L 11 31 A 0.99999499 0.99999499 0 0 0 10 30 z M 54 30 A 0.99999499 0.99999499 0 0 0 53 31 L 53 33.439453 L 54.591797 35.013672 L 53 36.644531 L 53 38 A 0.99999499 0.99999499 0 0 0 54 39 A 0.99999499 0.99999499 0 0 0 55 38 L 55 37.458984 L 57.408203 34.986328 L 55 32.603516 L 55 31 A 0.99999499 0.99999499 0 0 0 54 30 z "
+       id="path1276" />
+  </g>
+</svg>
