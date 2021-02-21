@@ -32,7 +32,7 @@ class SoundRow(Gtk.ListBoxRow):
 
         # Get playing state
         playing = self.sound.mainplayer.get_property('playing')
-        self.set_sensitive(playing)
+        self.volume.set_sensitive(playing)
         # Connect playing state signal
         self.sound.mainplayer.connect('notify::playing',
                                       self._on_playing_changed)
@@ -99,7 +99,7 @@ class SoundRow(Gtk.ListBoxRow):
 
     def _on_playing_changed(self, player, playing):
         playing = self.sound.mainplayer.get_property('playing')
-        self.set_sensitive(playing)
+        self.volume.set_sensitive(playing)
 
 class SoundsGroup(Gtk.Box):
     """
