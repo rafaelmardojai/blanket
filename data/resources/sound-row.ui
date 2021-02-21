@@ -13,6 +13,9 @@
     <property name="can_focus">False</property>
     <property name="activatable">False</property>
     <property name="selectable">False</property>
+    <style>
+      <class name="soundrow"/>
+    </style>
     <child>
       <object class="GtkBox" id="box">
         <property name="visible">True</property>
