@@ -9,22 +9,25 @@ AUTHORS = [
 ]
 
 ARTISTS = {
-    'Jakub Steiner' : [_('Rain'), _('Summer Night'), _('Storm'), _('Wind')]
+    'Jakub Steiner' : [_('Sounds icons')],
+    'Rafael Mardojai CM' : [ _('App icon')]
 }
 
 SOUND_ARTISTS = {
     'alex36917': [_('Rain')],
     'Digifish music': [_('Storm')],
+    'ezwa' : [_('Fireplace')],
     'Falcet': [_('Boat')],
     'gezortenplotz': [_('City')],
     'gluckose': [_('Stream')],
     'Jorge Stolfi': [_('White Noise')],
     'kvgarlic': [_('Birds')],
+    'Lisa Redfern': [_('Summer Night')],
     'Luftrum': [_('Waves')],
     'Omegatron': [_('Pink Noise')],
+    'Stephan' : [_('Coffee Shop')],
     'Stilgar': [_('Wind')],
-    'vahid': [_('Train')],
-    _('Unknown'): [_('Coffee Shop'), _('Fireplace'), _('Summer Night')],
+    'vahid': [_('Train')]
 }
 
 SOUND_EDITORS = {
