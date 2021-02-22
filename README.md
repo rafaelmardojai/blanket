@@ -60,6 +60,8 @@ Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [co
 
 Thanks to Jorge Toledo for the name idea.
 
+For detailed information about sounds licensing, [check this file](https://github.com/rafaelmardojai/blanket/blob/master/SOUNDS_LICENSING.md).
+
 ## Donate
 If you want to support development, consider donating via [PayPal](https://paypal.me/RafaelMardojaiCM).
 
