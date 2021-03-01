@@ -8,7 +8,7 @@
     <property name="destroy_with_parent">True</property>
     <property name="program_name">Blanket</property>
     <property name="comments" translatable="yes">Listen to different sounds</property>
-    <property name="copyright" translatable="yes">Copyright 2020 Rafael Mardojai CM</property>
+    <property name="copyright" translatable="yes">Copyright 2020-2021 Rafael Mardojai CM</property>
     <property name="website">https://github.com/rafaelmardojai/blanket/</property>
     <property name="logo_icon_name">com.rafaelmardojai.Blanket</property>
     <property name="license_type">gpl-3-0</property>
