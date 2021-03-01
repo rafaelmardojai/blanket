@@ -6,8 +6,8 @@ import os
 from gettext import gettext as _
 from gi.repository import GLib, GObject, Gio, Gtk, Handy
 
-from .sound import SoundObject
-from .widgets import SoundsGroup
+from blanket.sound import SoundObject
+from blanket.widgets import SoundsGroup
 
 SOUNDS = [
     {

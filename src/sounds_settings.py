@@ -4,7 +4,7 @@
 import os
 import json
 
-from gi.repository import GLib, Gio
+from gi.repository import Gio, GLib
 
 
 class SoundsSettings(object):

@@ -15,11 +15,11 @@ from gi.repository import GLib, Gst, Gdk, Gio, Gtk, Handy
 # Init GStreamer
 Gst.init(None)
 
-from .mpris import MPRIS
-from .sound import MainPlayer
-from .sounds_settings import SoundsSettings
-from .window import BlanketWindow
-from .about import AboutDialog
+from blanket.mpris import MPRIS
+from blanket.sound import MainPlayer
+from blanket.sounds_settings import SoundsSettings
+from blanket.window import BlanketWindow
+from blanket.about import AboutDialog
 
 
 class Application(Gtk.Application):

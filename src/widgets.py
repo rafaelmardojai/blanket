@@ -1,9 +1,9 @@
-# Copyright 2020 Rafael Mardojai CM
+# Copyright 2020-2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import GLib, Gio, Gtk, Handy
 
-from .sound import SoundObject, SoundPlayer
+from blanket.sound import SoundObject, SoundPlayer
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/sound-row.ui')

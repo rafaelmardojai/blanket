@@ -8,7 +8,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
-from gi.repository import Gio, Gst, GLib, Gtk
+from gi.repository import Gio, GLib, Gst, Gtk
 
 from random import randint
 
