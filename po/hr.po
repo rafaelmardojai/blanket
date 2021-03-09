@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blanket package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blanket\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-28 10:43-0500\n"
+"PO-Revision-Date: 2021-03-09 14:22+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: hr\n"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:3
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:42
+#: src/mpris.py:145
+msgid "Blanket"
+msgstr "Pokrivač"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:4
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
+#: src/mpris.py:143 src/mpris.py:144
+msgid "Listen to different sounds"
+msgstr "Slušaj razne zvukove"
+
+#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/com.rafaelmardojai.Blanket.desktop.in:10
+msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
+msgstr "Koncentracija;fokusiranje;buka;produktivnost;spavanje;"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+msgid ""
+"Improve focus and increase your productivity by listening to different "
+"sounds. Or allows you to fall asleep in a noisy environment."
+msgstr ""
+"Fokusiraj se i povećaj produktivnost slušajući razne zvukove. Ili zaspi u "
+"bučnom okruženju."
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: data/resources/window.ui:145
+msgid "Keep playing when closed"
+msgstr "Nastavi svirati nakon zatvaranja"
+
+#: data/resources/window.ui:165
+msgid "Keyboard Shortcuts"
+msgstr "Tipkovni prečaci"
+
+#: data/resources/window.ui:174
+msgid "About Blanket"
+msgstr "Pokrivač informacije"
+
+#: data/resources/window.ui:200 data/resources/shortcuts.ui:39
+msgid "Quit"
+msgstr "Izađi"
+
+#: data/resources/about.ui:11
+msgid "Copyright 2020 Rafael Mardojai CM"
+msgstr "Autorska prava 2020. Rafael Mardojai CM"
+
+#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#: data/resources/about.ui:15
+msgctxt "Add your names here, do not remove previous names!"
+msgid "translation-credits"
+msgstr "Milo Ivir <mail@milotype.de>, 2021."
+
+#: data/resources/shortcuts.ui:13
+msgid "General"
+msgstr "Opće"
+
+#: data/resources/shortcuts.ui:18
+msgid "Play/Pause sounds"
+msgstr "Pokreni/Zaustavi zvukove"
+
+#: data/resources/shortcuts.ui:25
+msgid "Add custom sound"
+msgstr "Dodaj vlastiti zvuk"
+
+#: data/resources/shortcuts.ui:32
+msgid "Close window"
+msgstr "Zatvori prozor"
+
+#: src/window.py:29
+msgid "Nature"
+msgstr "Priroda"
+
+#: src/window.py:33 src/about.py:26 src/about.py:30 src/about.py:45
+msgid "Rain"
+msgstr "Kiša"
+
+#: src/window.py:37 src/about.py:26 src/about.py:31 src/about.py:45
+msgid "Storm"
+msgstr "Oluja"
+
+#: src/window.py:41 src/about.py:26 src/about.py:39
+msgid "Wind"
+msgstr "Vjetar"
+
+#: src/window.py:45 src/about.py:37 src/about.py:45
+msgid "Waves"
+msgstr "Valovi"
+
+#: src/window.py:49 src/about.py:34
+msgid "Stream"
+msgstr "Strujanje"
+
+#: src/window.py:53 src/about.py:36 src/about.py:45
+msgid "Birds"
+msgstr "Ptice"
+
+#: src/window.py:57 src/about.py:26 src/about.py:41
+msgid "Summer Night"
+msgstr "Ljetna noć"
+
+#: src/window.py:62
+msgid "Travel"
+msgstr "Putovanje"
+
+#: src/window.py:66 src/about.py:40
+msgid "Train"
+msgstr "Vlak"
+
+#: src/window.py:70 src/about.py:32 src/about.py:45
+msgid "Boat"
+msgstr "Brod"
+
+#: src/window.py:74 src/about.py:33 src/about.py:45
+msgid "City"
+msgstr "Grad"
+
+#: src/window.py:79
+msgid "Interiors"
+msgstr "Zatvoreni prostor"
+
+#: src/window.py:83 src/about.py:41
+msgid "Coffee Shop"
+msgstr "Kavana"
+
+#: src/window.py:87 src/about.py:41
+msgid "Fireplace"
+msgstr "Kamin"
+
+#: src/window.py:92
+msgid "Noise"
+msgstr "Šum"
+
+#: src/window.py:96 src/about.py:38
+msgid "Pink Noise"
+msgstr "Ružičasta buka"
+
+#: src/window.py:100 src/about.py:35
+msgid "White Noise"
+msgstr "Bijela buka"
+
+#. Setup user custom sounds
+#: src/window.py:188
+msgid "Custom"
+msgstr "Prilagođeno"
+
+#: src/window.py:239
+msgid "Open audio"
+msgstr "Otvori audiosnimku"
+
+#: src/about.py:41
+msgid "Unknown"
+msgstr "Nepoznato"
+
+#. Set sound artists list
+#: src/about.py:69
+msgid "Sounds by"
+msgstr "Autor zvukova"
+
+#. Set sound editors list
+#: src/about.py:71
+msgid "Sounds edited by"
+msgstr "Uređivač zvukova"
