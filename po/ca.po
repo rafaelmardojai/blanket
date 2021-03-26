@@ -212,7 +212,7 @@ msgstr "La sol·licitud d'inici automàtic ha fallat."
 
 #: src/about.py:12
 msgid "Sounds icons"
-msgstr "Sons de"
+msgstr "Icones dels sons"
 
 #: src/about.py:13
 msgid "App icon"
