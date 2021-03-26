@@ -53,7 +53,7 @@ msgstr "Jarraitu erreproduzitzen ixtean"
 
 #: data/resources/window.ui:165
 msgid "Preferences"
-msgstr ""
+msgstr "Hobespenak"
 
 #: data/resources/window.ui:174
 msgid "Keyboard Shortcuts"
@@ -69,20 +69,18 @@ msgstr "Irten"
 
 #: data/resources/preferences.ui:16
 msgid "Behavior"
-msgstr ""
+msgstr "Portaera"
 
 #: data/resources/preferences.ui:20
 msgid "Autostart on background"
-msgstr ""
+msgstr "Hasi abioan"
 
 #: data/resources/about.ui:11
-#, fuzzy
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Copyright 2020 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
-#, fuzzy
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr "Porrumentzio <porrumentzio@riseup.net>"
@@ -186,11 +184,11 @@ msgstr "Ireki audioa"
 
 #: src/preferences.py:40
 msgid "Autostart Blanket on background."
-msgstr ""
+msgstr "Abiarazi Blanket atzealdean."
 
 #: src/preferences.py:77
 msgid "Authorization failed"
-msgstr ""
+msgstr "Baimentzeak huts egin du"
 
 #: src/preferences.py:79
 msgid ""
@@ -198,23 +196,26 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
+"Ziurtatu Blanketek atzealdean abiarazteko \n"
+"baimena duela, Ezarpenak → Aplikazioak → \n"
+"Blanket atalean, eta saiatu berriro."
 
 #: src/preferences.py:88
 msgid "Request error"
-msgstr ""
+msgstr "Eskaera errorea"
 
 #: src/preferences.py:89
 msgid "The autostart request failed."
-msgstr ""
+msgstr "Bakarrik abiarazteko eskaerak huts egin du."
 
 #: src/about.py:12
 #, fuzzy
 msgid "Sounds icons"
-msgstr "Soinuak"
+msgstr "Soinuen ikonoak"
 
 #: src/about.py:13
 msgid "App icon"
-msgstr ""
+msgstr "Aplikazioaren ikonoa"
 
 #. Set sound artists list
 #: src/about.py:58
