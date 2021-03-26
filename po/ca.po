@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-26 00:24-0500\n"
-"PO-Revision-Date: 2020-09-08 06:49-0500\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"PO-Revision-Date: 2021-03-26 12:17+0100\n"
+"Last-Translator: Ícar N. S. <icar.nin@protonmail.com>\n"
 "Language-Team: \n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,7 @@ msgstr "Escolteu diferents sons"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr ""
+msgstr "Concentració;Focus;Soroll;Productivitat;Dormir;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
@@ -45,7 +45,7 @@ msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "Rafael Mardojai CM"
-msgstr "Rafael Mardojai C. M."
+msgstr "Rafael Mardojai C.M."
 
 #: data/resources/window.ui:145
 msgid "Keep playing when closed"
@@ -53,7 +53,7 @@ msgstr "Continua reproduint en tancar"
 
 #: data/resources/window.ui:165
 msgid "Preferences"
-msgstr ""
+msgstr "Preferències"
 
 #: data/resources/window.ui:174
 msgid "Keyboard Shortcuts"
@@ -69,23 +69,23 @@ msgstr "Surt"
 
 #: data/resources/preferences.ui:16
 msgid "Behavior"
-msgstr ""
+msgstr "Comportament"
 
 #: data/resources/preferences.ui:20
 msgid "Autostart on background"
-msgstr ""
+msgstr "Inici automàtic en segon pla"
 
 #: data/resources/about.ui:11
-#, fuzzy
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Drets d’autor © 2020 Rafael Mardojai C. M."
+msgstr "Drets d’autor © 2020 Rafael Mardojai C.M."
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
-#, fuzzy
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2020"
+msgstr ""
+"Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2020\n"
+"Ícar Nin Solana <icar.nin@pm.me>"
 
 #: data/resources/shortcuts.ui:13
 msgid "General"
@@ -121,15 +121,15 @@ msgstr "Vent"
 
 #: src/window.py:30 src/about.py:26 src/about.py:34
 msgid "Waves"
-msgstr ""
+msgstr "Onades"
 
 #: src/window.py:34 src/about.py:22
 msgid "Stream"
-msgstr ""
+msgstr "Corrent d'aigua"
 
 #: src/window.py:38 src/about.py:24 src/about.py:34
 msgid "Birds"
-msgstr ""
+msgstr "Ocells"
 
 #: src/window.py:42 src/about.py:25
 msgid "Summer Night"
@@ -137,19 +137,19 @@ msgstr "Nit estiuenca"
 
 #: src/window.py:47
 msgid "Travel"
-msgstr ""
+msgstr "Viatjar"
 
 #: src/window.py:51 src/about.py:30
 msgid "Train"
-msgstr ""
+msgstr "Tren"
 
 #: src/window.py:55 src/about.py:20 src/about.py:34
 msgid "Boat"
-msgstr ""
+msgstr "Vaixell"
 
 #: src/window.py:59 src/about.py:21 src/about.py:34
 msgid "City"
-msgstr ""
+msgstr "Ciutat"
 
 #: src/window.py:64
 msgid "Interiors"
@@ -186,11 +186,11 @@ msgstr "Obre un àudio"
 
 #: src/preferences.py:40
 msgid "Autostart Blanket on background."
-msgstr ""
+msgstr "Inicia automàticament Blanket en segon pla."
 
 #: src/preferences.py:77
 msgid "Authorization failed"
-msgstr ""
+msgstr "Autorització fallida"
 
 #: src/preferences.py:79
 msgid ""
@@ -198,23 +198,25 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
+"Assegura't que Blanket té permisos per córrer en \n"
+"segon pla a Preferències → Aplicacions → \n"
+"Blanket i torna-ho a provar."
 
 #: src/preferences.py:88
 msgid "Request error"
-msgstr ""
+msgstr "Error de sol·licitud"
 
 #: src/preferences.py:89
 msgid "The autostart request failed."
-msgstr ""
+msgstr "La sol·licitud d'inici automàtic ha fallat."
 
 #: src/about.py:12
-#, fuzzy
 msgid "Sounds icons"
 msgstr "Sons de"
 
 #: src/about.py:13
 msgid "App icon"
-msgstr ""
+msgstr "Icona de l'aplicació"
 
 #. Set sound artists list
 #: src/about.py:58
@@ -223,6 +225,5 @@ msgstr "Sons de"
 
 #. Set sound editors list
 #: src/about.py:60
-#, fuzzy
 msgid "Sounds edited by"
-msgstr "Sons de"
+msgstr "Sons editats per"
