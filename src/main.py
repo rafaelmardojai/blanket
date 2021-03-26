@@ -19,6 +19,7 @@ from blanket.mpris import MPRIS
 from blanket.sound import MainPlayer
 from blanket.sounds_settings import SoundsSettings
 from blanket.window import BlanketWindow
+from blanket.preferences import PreferencesWindow
 from blanket.about import AboutDialog
 
 
@@ -83,6 +84,10 @@ class Application(Gtk.Application):
                 'name'  : 'background-playback',
                 'func'  : self.on_background,
                 'state' : True
+            },
+            {
+                'name'  : 'preferences',
+                'func'  : self.on_preferences
             },
             {
                 'name'  : 'shortcuts',
@@ -172,6 +177,12 @@ class Application(Gtk.Application):
             self.window.quit_revealer.set_reveal_child(True)
         else:
             self.window.quit_revealer.set_reveal_child(False)
+
+    def on_preferences(self, action, param):
+        window = PreferencesWindow(self.window, self.settings)
+        window.set_transient_for(self.window)
+        window.set_modal(True)
+        window.present()
 
     def on_shortcuts(self, action, param):
         window = Gtk.Builder.new_from_resource(

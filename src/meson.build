@@ -26,6 +26,7 @@ sources = [
   '__init__.py',
   'main.py',
   'window.py',
+  'preferences.py',
   'about.py',
   'sound.py',
   'widgets.py',
