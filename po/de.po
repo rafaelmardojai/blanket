@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the blanket package.
 # Fridolin Weisser <weisser.fridolin@gmail.com>, 2021.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-26 00:24-0500\n"
-"PO-Revision-Date: 2021-02-12 14:41+0100\n"
+"PO-Revision-Date: 2021-03-26 22:02+0100\n"
 "Last-Translator: Fridolin Weisser <weisser.fridolin@gmail.com>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -39,7 +40,7 @@ msgid ""
 "sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
 "Fokussiere dich und erhöhe deine Produktivität, indem du zu "
-"unterschiedlichen Klängen arbeitest.Ermöglicht dir auch, in lauten "
+"unterschiedlichen Klängen arbeitest. Ermöglicht dir auch, in lauten "
 "Umgebungen einzuschlafen."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
@@ -52,7 +53,7 @@ msgstr "Nach Schließen weiterspielen"
 
 #: data/resources/window.ui:165
 msgid "Preferences"
-msgstr ""
+msgstr "Einstellungen"
 
 #: data/resources/window.ui:174
 msgid "Keyboard Shortcuts"
@@ -68,20 +69,18 @@ msgstr "Beenden"
 
 #: data/resources/preferences.ui:16
 msgid "Behavior"
-msgstr ""
+msgstr "Verhalten"
 
 #: data/resources/preferences.ui:20
 msgid "Autostart on background"
-msgstr ""
+msgstr "Im Hintergrund starten"
 
 #: data/resources/about.ui:11
-#, fuzzy
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Copyright 2020 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
-#, fuzzy
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr "Fridolin Weisser <weisser.fridolin@gmail.com>"
@@ -185,11 +184,11 @@ msgstr "Audiodatei öffnen"
 
 #: src/preferences.py:40
 msgid "Autostart Blanket on background."
-msgstr ""
+msgstr "Blanket im Hintergrund starten"
 
 #: src/preferences.py:77
 msgid "Authorization failed"
-msgstr ""
+msgstr "Autorisierung fehlgeschlagen"
 
 #: src/preferences.py:79
 msgid ""
@@ -197,23 +196,25 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
+"Überprüfe unter Einstellungen → Anwendungen →\n"
+"Blanket, ob Blanket die Berechtigung hat, im \n"
+"Hintergrund zu laufen und versuche es erneut."
 
 #: src/preferences.py:88
 msgid "Request error"
-msgstr ""
+msgstr "Fehler bei der Anfrage"
 
 #: src/preferences.py:89
 msgid "The autostart request failed."
-msgstr ""
+msgstr "Die Anfrage zum Autostarten ist fehlgeschlagen"
 
 #: src/about.py:12
-#, fuzzy
 msgid "Sounds icons"
 msgstr "Klänge von"
 
 #: src/about.py:13
 msgid "App icon"
-msgstr ""
+msgstr "Anwendungssymbol"
 
 #. Set sound artists list
 #: src/about.py:58
@@ -224,6 +225,3 @@ msgstr "Klänge von"
 #: src/about.py:60
 msgid "Sounds edited by"
 msgstr "Klänge bearbeitet von"
-
-#~ msgid "Unknown"
-#~ msgstr "Unbekannt"
