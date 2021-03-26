@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-26 00:24-0500\n"
-"PO-Revision-Date: 2020-10-04 13:49+0200\n"
+"PO-Revision-Date: 2021-03-26 13:50+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
@@ -40,8 +40,8 @@ msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
-"Verbeter je focus en verhoog je productiviteit door te luisteren naar "
-"verschillende geluiden. Of val sneller in slaap."
+"Verbeter je focus en verhoog je productiviteit of val sneller in slaap door "
+"te luisteren naar verschillende geluiden."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "Rafael Mardojai CM"
@@ -53,7 +53,7 @@ msgstr "Doorgaan met afspelen na afsluiten"
 
 #: data/resources/window.ui:165
 msgid "Preferences"
-msgstr ""
+msgstr "Voorkeuren"
 
 #: data/resources/window.ui:174
 msgid "Keyboard Shortcuts"
@@ -69,20 +69,18 @@ msgstr "Afsluiten"
 
 #: data/resources/preferences.ui:16
 msgid "Behavior"
-msgstr ""
+msgstr "Gedrag"
 
 #: data/resources/preferences.ui:20
 msgid "Autostart on background"
-msgstr ""
+msgstr "Automatisch opstarten"
 
 #: data/resources/about.ui:11
-#, fuzzy
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Copyright 2020 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
-#, fuzzy
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr "Heimen Stoffels"
@@ -186,11 +184,11 @@ msgstr "Audio openen"
 
 #: src/preferences.py:40
 msgid "Autostart Blanket on background."
-msgstr ""
+msgstr "Start Blanket automatisch op op de achtergrond."
 
 #: src/preferences.py:77
 msgid "Authorization failed"
-msgstr ""
+msgstr "Verificatie mislukt"
 
 #: src/preferences.py:79
 msgid ""
@@ -198,23 +196,25 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
+"Zorg er voor dat Blanket bevoegd is om op de\n"
+"achtergrond te draaien via Instellingen → Toepassingen →\n"
+"Blanket en probeer het opnieuw."
 
 #: src/preferences.py:88
 msgid "Request error"
-msgstr ""
+msgstr "Verzoek mislukt"
 
 #: src/preferences.py:89
 msgid "The autostart request failed."
-msgstr ""
+msgstr "Het verzoek tot automatisch opstarten is afgewezen."
 
 #: src/about.py:12
-#, fuzzy
 msgid "Sounds icons"
-msgstr "Geluiden van"
+msgstr "Geluidspictogrammen"
 
 #: src/about.py:13
 msgid "App icon"
-msgstr ""
+msgstr "App-pictogram"
 
 #. Set sound artists list
 #: src/about.py:58
