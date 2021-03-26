@@ -53,7 +53,7 @@ msgstr "Plu ludi kiam fermite"
 
 #: data/resources/window.ui:165
 msgid "Preferences"
-msgstr ""
+msgstr "Preferoj"
 
 #: data/resources/window.ui:174
 msgid "Keyboard Shortcuts"
@@ -69,20 +69,18 @@ msgstr "Eliri"
 
 #: data/resources/preferences.ui:16
 msgid "Behavior"
-msgstr ""
+msgstr "Konduto"
 
 #: data/resources/preferences.ui:20
 msgid "Autostart on background"
-msgstr ""
+msgstr "Aŭtolanĉi en la fono"
 
 #: data/resources/about.ui:11
-#, fuzzy
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Copyright 2020 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
-#, fuzzy
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr "Porrumentzio <porrumentzio@riseup.net>"
@@ -186,11 +184,11 @@ msgstr "Malfermi sondosieron"
 
 #: src/preferences.py:40
 msgid "Autostart Blanket on background."
-msgstr ""
+msgstr "Aŭtolanĉi Blanket en la fono."
 
 #: src/preferences.py:77
 msgid "Authorization failed"
-msgstr ""
+msgstr "Rajtigo malsukcesis"
 
 #: src/preferences.py:79
 msgid ""
@@ -198,23 +196,25 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
+"Kontroli ĉu Blanket estas permesita funkcii \n"
+"en la fono, en Agordoj → Aplikacioj → \n"
+"Blanket, kaj reprovu."
 
 #: src/preferences.py:88
 msgid "Request error"
-msgstr ""
+msgstr "Petado eraro"
 
 #: src/preferences.py:89
 msgid "The autostart request failed."
-msgstr ""
+msgstr "La aŭtolanĉa petado malsukcesis."
 
 #: src/about.py:12
-#, fuzzy
 msgid "Sounds icons"
-msgstr "Sonoj de"
+msgstr "Ikonoj por sonoj de"
 
 #: src/about.py:13
 msgid "App icon"
-msgstr ""
+msgstr "Ikono por aplikacio"
 
 #. Set sound artists list
 #: src/about.py:58
