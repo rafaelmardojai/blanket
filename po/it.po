@@ -1,14 +1,14 @@
-# SOME DESCRIPTIVE TITLE.
+# ITALIAN TRANSLATION FOR BLANKET.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# ALBANO BATTISTELLA <albano_battistella@hotmail.com>, 2020.
+# ALBANO BATTISTELLA <albano_battistella@hotmail.com>, 2020,2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-26 00:24-0500\n"
-"PO-Revision-Date: 2020-09-30 20:00+0100\n"
+"PO-Revision-Date: 2021-03-26 16:00+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
 "Language: it\n"
@@ -31,7 +31,7 @@ msgstr "Ascolta suoni diversi"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Concentrazione; Focus; Rumore; Produttività; Sonno;"
+msgstr "Concentrazione;Focus;Rumore;Produttività;Sonno;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
@@ -51,7 +51,7 @@ msgstr "Continua a suonare quando è chiuso"
 
 #: data/resources/window.ui:165
 msgid "Preferences"
-msgstr ""
+msgstr "Preferenze"
 
 #: data/resources/window.ui:174
 msgid "Keyboard Shortcuts"
@@ -67,20 +67,18 @@ msgstr "Esci"
 
 #: data/resources/preferences.ui:16
 msgid "Behavior"
-msgstr ""
+msgstr "Comportamento"
 
 #: data/resources/preferences.ui:20
 msgid "Autostart on background"
-msgstr ""
+msgstr "Avvio automatico in background"
 
 #: data/resources/about.ui:11
-#, fuzzy
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Copyright 2020 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
-#, fuzzy
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr "Albano Battistella"
@@ -184,11 +182,11 @@ msgstr "Apri audio"
 
 #: src/preferences.py:40
 msgid "Autostart Blanket on background."
-msgstr ""
+msgstr "Avvio automatico di Blanket in background."
 
 #: src/preferences.py:77
 msgid "Authorization failed"
-msgstr ""
+msgstr "Autorizzazione fallita"
 
 #: src/preferences.py:79
 msgid ""
@@ -196,23 +194,25 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
+"Assicurati che Blanket abbia il permesso di funzionare \n"
+"in background in Impostazioni → Applicazioni → \n"
+"Blanket e riprova."
 
 #: src/preferences.py:88
 msgid "Request error"
-msgstr ""
+msgstr "Richiedi errore"
 
 #: src/preferences.py:89
 msgid "The autostart request failed."
-msgstr ""
+msgstr "La richiesta di avvio automatico non è riuscita."
 
 #: src/about.py:12
-#, fuzzy
 msgid "Sounds icons"
-msgstr "Suoni di"
+msgstr "Icone suoni"
 
 #: src/about.py:13
 msgid "App icon"
-msgstr ""
+msgstr "Icona dell'app"
 
 #. Set sound artists list
 #: src/about.py:58
