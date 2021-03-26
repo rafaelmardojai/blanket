@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-26 00:24-0500\n"
-"PO-Revision-Date: 2020-10-13 04:07+0300\n"
+"PO-Revision-Date: 2021-03-26 20:40+0200\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: \n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 
@@ -54,7 +54,7 @@ msgstr "Продовжити відтворення після закриття"
 
 #: data/resources/window.ui:165
 msgid "Preferences"
-msgstr ""
+msgstr "Параметри"
 
 #: data/resources/window.ui:174
 msgid "Keyboard Shortcuts"
@@ -70,11 +70,11 @@ msgstr "Вийти"
 
 #: data/resources/preferences.ui:16
 msgid "Behavior"
-msgstr ""
+msgstr "Поведінка"
 
 #: data/resources/preferences.ui:20
 msgid "Autostart on background"
-msgstr ""
+msgstr "Автозапуск у фоні"
 
 #: data/resources/about.ui:11
 #, fuzzy
@@ -187,11 +187,11 @@ msgstr "Відкрити аудіо"
 
 #: src/preferences.py:40
 msgid "Autostart Blanket on background."
-msgstr ""
+msgstr "Автозапуск Blanket у фоні"
 
 #: src/preferences.py:77
 msgid "Authorization failed"
-msgstr ""
+msgstr "Не вдалося авторизуватись"
 
 #: src/preferences.py:79
 msgid ""
@@ -199,23 +199,25 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
+"Переконайтеся, що Blanket має дозвіл на \n"
+"запуск у фоні в Налаштування → Програми → \n"
+"Blanket та повторіть спробу."
 
 #: src/preferences.py:88
 msgid "Request error"
-msgstr ""
+msgstr "Помилка запиту"
 
 #: src/preferences.py:89
 msgid "The autostart request failed."
-msgstr ""
+msgstr "Не вдалося надіслати запит на автозапуск"
 
 #: src/about.py:12
-#, fuzzy
 msgid "Sounds icons"
-msgstr "Звуки від"
+msgstr "Піктограми звуків"
 
 #: src/about.py:13
 msgid "App icon"
-msgstr ""
+msgstr "Піктограма програми"
 
 #. Set sound artists list
 #: src/about.py:58
