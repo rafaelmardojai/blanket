@@ -2,14 +2,14 @@
 # Copyright (C) 2020 THE blanket'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
 # Automatically generated, 2020.
-# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2020.
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2020-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-28 10:43-0500\n"
-"PO-Revision-Date: 2020-09-10 10:06-0500\n"
+"POT-Creation-Date: 2021-03-26 00:24-0500\n"
+"PO-Revision-Date: 2021-03-26 00:29-0500\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
 "Language-Team: Spanish; Castilian <mardojai.cardenas@gmail.com>\n"
 "Language: es\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:42
-#: src/mpris.py:145
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:30
+#: src/mpris.py:135
 msgid "Blanket"
 msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
-#: src/mpris.py:143 src/mpris.py:144
+#: src/mpris.py:133 src/mpris.py:134
 msgid "Listen to different sounds"
 msgstr "Escuche diferentes sonidos"
 
@@ -53,25 +53,37 @@ msgid "Keep playing when closed"
 msgstr "Continuar reproduciendo al cerrar"
 
 #: data/resources/window.ui:165
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: data/resources/window.ui:174
 msgid "Keyboard Shortcuts"
 msgstr "Atajos de teclado"
 
-#: data/resources/window.ui:174
+#: data/resources/window.ui:183
 msgid "About Blanket"
 msgstr "Acerca de Blanket"
 
-#: data/resources/window.ui:200 data/resources/shortcuts.ui:39
+#: data/resources/window.ui:209 data/resources/shortcuts.ui:39
 msgid "Quit"
 msgstr "Salir"
 
+#: data/resources/preferences.ui:16
+msgid "Behavior"
+msgstr "Comportamiento"
+
+#: data/resources/preferences.ui:20
+msgid "Autostart on background"
+msgstr "Inicio automático en segundo plano "
+
 #: data/resources/about.ui:11
-msgid "Copyright 2020 Rafael Mardojai CM"
-msgstr "Copyright 2020 Rafael Mardojai CM"
+msgid "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
-msgid "translation-credits"
+msgid "translator-credits"
 msgstr "Rafael Mardojai CM"
 
 #: data/resources/shortcuts.ui:13
@@ -90,98 +102,130 @@ msgstr "Agregar sonido personalizado"
 msgid "Close window"
 msgstr "Cerrar ventana"
 
-#: src/window.py:29
+#: src/window.py:14
 msgid "Nature"
 msgstr "Naturaleza"
 
-#: src/window.py:33 src/about.py:26 src/about.py:30 src/about.py:45
+#: src/window.py:18 src/about.py:17 src/about.py:34
 msgid "Rain"
 msgstr "Lluvia"
 
-#: src/window.py:37 src/about.py:26 src/about.py:31 src/about.py:45
+#: src/window.py:22 src/about.py:18 src/about.py:34
 msgid "Storm"
 msgstr "Tormenta"
 
-#: src/window.py:41 src/about.py:26 src/about.py:39
+#: src/window.py:26 src/about.py:29
 msgid "Wind"
 msgstr "Viento"
 
-#: src/window.py:45 src/about.py:37 src/about.py:45
+#: src/window.py:30 src/about.py:26 src/about.py:34
 msgid "Waves"
-msgstr ""
+msgstr "Olas"
 
-#: src/window.py:49 src/about.py:34
+#: src/window.py:34 src/about.py:22
 msgid "Stream"
-msgstr ""
+msgstr "Arroyo"
 
-#: src/window.py:53 src/about.py:36 src/about.py:45
+#: src/window.py:38 src/about.py:24 src/about.py:34
 msgid "Birds"
-msgstr ""
+msgstr "Aves"
 
-#: src/window.py:57 src/about.py:26 src/about.py:41
+#: src/window.py:42 src/about.py:25
 msgid "Summer Night"
 msgstr "Noche de Verano"
 
-#: src/window.py:62
+#: src/window.py:47
 msgid "Travel"
-msgstr ""
+msgstr "Viaje"
 
-#: src/window.py:66 src/about.py:40
+#: src/window.py:51 src/about.py:30
 msgid "Train"
-msgstr ""
+msgstr "Tren"
 
-#: src/window.py:70 src/about.py:32 src/about.py:45
+#: src/window.py:55 src/about.py:20 src/about.py:34
 msgid "Boat"
-msgstr ""
+msgstr "Barco"
 
-#: src/window.py:74 src/about.py:33 src/about.py:45
+#: src/window.py:59 src/about.py:21 src/about.py:34
 msgid "City"
-msgstr ""
+msgstr "Ciudad"
 
-#: src/window.py:79
+#: src/window.py:64
 msgid "Interiors"
 msgstr "Interiores"
 
-#: src/window.py:83 src/about.py:41
+#: src/window.py:68 src/about.py:28
 msgid "Coffee Shop"
 msgstr "Cafetería"
 
-#: src/window.py:87 src/about.py:41
+#: src/window.py:72 src/about.py:19
 msgid "Fireplace"
 msgstr "Chimenea"
 
-#: src/window.py:92
+#: src/window.py:77
 msgid "Noise"
 msgstr "Ruido"
 
-#: src/window.py:96 src/about.py:38
+#: src/window.py:81 src/about.py:27
 msgid "Pink Noise"
 msgstr "Ruido Rosa"
 
-#: src/window.py:100 src/about.py:35
+#: src/window.py:85 src/about.py:23
 msgid "White Noise"
 msgstr "Ruido Blanco"
 
 #. Setup user custom sounds
-#: src/window.py:188
+#: src/window.py:168
 msgid "Custom"
 msgstr "Personalizado"
 
-#: src/window.py:239
+#: src/window.py:218
 msgid "Open audio"
 msgstr "Abrir audio"
 
-#: src/about.py:41
-msgid "Unknown"
-msgstr "Desconocido"
+#: src/preferences.py:40
+msgid "Autostart Blanket on background."
+msgstr "Iniciar automáticamente Blanket en segundo plano."
+
+#: src/preferences.py:77
+msgid "Authorization failed"
+msgstr "Autorización fallida"
+
+#: src/preferences.py:79
+msgid ""
+"Make sure Blanket has permission to run in \n"
+"the background in Settings → Applications → \n"
+"Blanket and try again."
+msgstr ""
+"Asegúrese de que Blanket tenga permiso para ejecutarse\n"
+"en segundo plano en Configuración → Aplicaciones →\n"
+"Blanket y vuelve a intentarlo. "
+
+#: src/preferences.py:88
+msgid "Request error"
+msgstr "Error de solicitud"
+
+#: src/preferences.py:89
+msgid "The autostart request failed."
+msgstr "La solicitud de inicio automático falló."
+
+#: src/about.py:12
+msgid "Sounds icons"
+msgstr "Iconos de sonidos"
+
+#: src/about.py:13
+msgid "App icon"
+msgstr "Icono de aplicación "
 
 #. Set sound artists list
-#: src/about.py:69
+#: src/about.py:58
 msgid "Sounds by"
 msgstr "Sonidos por"
 
 #. Set sound editors list
-#: src/about.py:71
-#, fuzzy
+#: src/about.py:60
 msgid "Sounds edited by"
-msgstr "Sonidos por"
+msgstr "Sonidos editados por"
+
+#~ msgid "Unknown"
+#~ msgstr "Desconocido"

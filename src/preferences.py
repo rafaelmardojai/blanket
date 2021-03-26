@@ -37,7 +37,7 @@ class PreferencesWindow(Handy.PreferencesWindow):
         token = 0 + randint(10000000, 90000000)
         options = {
             'handle_token': GLib.Variant('s', f'com/rafaelmardojai/Blanket/{token}'),
-            'reason': GLib.Variant('s', _('Autostart Blanket on login.')),
+            'reason': GLib.Variant('s', _('Autostart Blanket on background.')),
             'autostart': GLib.Variant('b', active),
             'commandline': GLib.Variant('as', ['blanket', '--hidden']),
             'dbus-activatable': GLib.Variant('b', False)

@@ -2,9 +2,11 @@ data/com.rafaelmardojai.Blanket.desktop.in
 data/com.rafaelmardojai.Blanket.metainfo.xml.in
 data/com.rafaelmardojai.Blanket.gschema.xml
 data/resources/window.ui
+data/resources/preferences.ui
 data/resources/about.ui
 data/resources/shortcuts.ui
 src/main.py
 src/window.py
+src/preferences.py
 src/about.py
 src/mpris.py
