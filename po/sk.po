@@ -53,7 +53,7 @@ msgstr "Prehrávať aj po zatvorení"
 
 #: data/resources/window.ui:165
 msgid "Preferences"
-msgstr ""
+msgstr "Nastavenia"
 
 #: data/resources/window.ui:174
 msgid "Keyboard Shortcuts"
@@ -69,23 +69,23 @@ msgstr "Ukončiť"
 
 #: data/resources/preferences.ui:16
 msgid "Behavior"
-msgstr ""
+msgstr "Správanie"
 
 #: data/resources/preferences.ui:20
 msgid "Autostart on background"
-msgstr ""
+msgstr "Automaticky spustiť na pozadí"
 
 #: data/resources/about.ui:11
 #, fuzzy
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Copyright 2020 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
 #, fuzzy
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "martin-sk <https://github.com/martin-sk>"
+msgstr "MartinIIOT <https://github.com/MartinIIOT>"
 
 #: data/resources/shortcuts.ui:13
 msgid "General"
@@ -186,11 +186,11 @@ msgstr "Otvoriť zvuk"
 
 #: src/preferences.py:40
 msgid "Autostart Blanket on background."
-msgstr ""
+msgstr "Spustiť Blanket na pozadí po štarte."
 
 #: src/preferences.py:77
 msgid "Authorization failed"
-msgstr ""
+msgstr "Autorizácia zlyhala"
 
 #: src/preferences.py:79
 msgid ""
@@ -198,14 +198,17 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
+"Uistite sa, že má Blanket povolenie na \n"
+"spustenie aplikácie na pozadí v Settings → Applications → \n"
+"Blanket a vyskúšajte znovu."
 
 #: src/preferences.py:88
 msgid "Request error"
-msgstr ""
+msgstr "Chyba požiadavky"
 
 #: src/preferences.py:89
 msgid "The autostart request failed."
-msgstr ""
+msgstr "Požiadavka na automatické spustenie zlyhala."
 
 #: src/about.py:12
 #, fuzzy
@@ -214,7 +217,7 @@ msgstr "Zvuky od"
 
 #: src/about.py:13
 msgid "App icon"
-msgstr ""
+msgstr "Ikona aplikácie"
 
 #. Set sound artists list
 #: src/about.py:58
