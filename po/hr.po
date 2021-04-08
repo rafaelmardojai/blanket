@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-03-26 00:24-0500\n"
-"PO-Revision-Date: 2021-03-09 14:22+0100\n"
+"PO-Revision-Date: 2021-04-08 14:57+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -54,7 +54,7 @@ msgstr "Nastavi svirati nakon zatvaranja"
 
 #: data/resources/window.ui:165
 msgid "Preferences"
-msgstr ""
+msgstr "Postavke"
 
 #: data/resources/window.ui:174
 msgid "Keyboard Shortcuts"
@@ -62,28 +62,26 @@ msgstr "Tipkovni prečaci"
 
 #: data/resources/window.ui:183
 msgid "About Blanket"
-msgstr "Pokrivač informacije"
+msgstr "O programu Pokrivač"
 
 #: data/resources/window.ui:209 data/resources/shortcuts.ui:39
 msgid "Quit"
-msgstr "Izađi"
+msgstr "Zatvori program"
 
 #: data/resources/preferences.ui:16
 msgid "Behavior"
-msgstr ""
+msgstr "Ponašanje"
 
 #: data/resources/preferences.ui:20
 msgid "Autostart on background"
-msgstr ""
+msgstr "Pokreni automatski u pozadini"
 
 #: data/resources/about.ui:11
-#, fuzzy
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Autorska prava 2020. Rafael Mardojai CM"
+msgstr "Autorska prava 2020. – 2021. Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
-#, fuzzy
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr "Milo Ivir <mail@milotype.de>, 2021."
@@ -98,7 +96,7 @@ msgstr "Pokreni/Zaustavi zvukove"
 
 #: data/resources/shortcuts.ui:25
 msgid "Add custom sound"
-msgstr "Dodaj vlastiti zvuk"
+msgstr "Dodaj prilagođeni zvuk"
 
 #: data/resources/shortcuts.ui:32
 msgid "Close window"
@@ -187,11 +185,11 @@ msgstr "Otvori audiosnimku"
 
 #: src/preferences.py:40
 msgid "Autostart Blanket on background."
-msgstr ""
+msgstr "Pokreni „Pokrivač” automatski u pozadini."
 
 #: src/preferences.py:77
 msgid "Authorization failed"
-msgstr ""
+msgstr "Neuspjela autorizacija"
 
 #: src/preferences.py:79
 msgid ""
@@ -199,23 +197,25 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
+"Aktiviraj pokretanje programa „Pokrivač” u pozadini \n"
+"putem Postavke → Aplikacije → Pokrivač \n"
+"i pokušaj ponovo."
 
 #: src/preferences.py:88
 msgid "Request error"
-msgstr ""
+msgstr "Greška zahtjeva"
 
 #: src/preferences.py:89
 msgid "The autostart request failed."
-msgstr ""
+msgstr "Neuspio zahtjev za automatskim pokretanjem."
 
 #: src/about.py:12
-#, fuzzy
 msgid "Sounds icons"
-msgstr "Autor zvukova"
+msgstr "Ikone zvukova"
 
 #: src/about.py:13
 msgid "App icon"
-msgstr ""
+msgstr "Ikona programa"
 
 #. Set sound artists list
 #: src/about.py:58
@@ -225,7 +225,4 @@ msgstr "Autor zvukova"
 #. Set sound editors list
 #: src/about.py:60
 msgid "Sounds edited by"
-msgstr "Uređivač zvukova"
-
-#~ msgid "Unknown"
-#~ msgstr "Nepoznato"
+msgstr "Urednik zvukova"
