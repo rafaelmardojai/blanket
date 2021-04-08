@@ -62,6 +62,9 @@ Thanks to Jorge Toledo for the name idea.
 
 For detailed information about sounds licensing, [check this file](https://github.com/rafaelmardojai/blanket/blob/master/SOUNDS_LICENSING.md).
 
+## Translations
+Blanket is translated into several languages. If your language is missing or incomplete, please help to [translate Blanket](https://github.com/rafaelmardojai/blanket/tree/master/po).
+
 ## Donate
 If you want to support development, consider donating via [PayPal](https://paypal.me/RafaelMardojaiCM).
 
