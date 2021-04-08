@@ -9,11 +9,6 @@ class MainPlayer(GObject.GObject):
     Virtual app sounds player
     """
 
-    __gsignals__ = {
-        'volume-changed': (GObject.SignalFlags.RUN_FIRST, None, (int,)),
-        'playing-changed': (GObject.SignalFlags.RUN_FIRST, None, (bool,)),
-    }
-
     playing = GObject.Property(type=bool, default=True)
     volume = GObject.Property(type=float, default=0)
 
