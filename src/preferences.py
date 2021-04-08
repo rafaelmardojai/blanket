@@ -1,6 +1,7 @@
 # Copyright 2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+import os
 from random import randint
 
 from gettext import gettext as _
@@ -34,6 +35,7 @@ class PreferencesWindow(Handy.PreferencesWindow):
                                    '/org/freedesktop/portal/desktop',
                                    'org.freedesktop.portal.Background', None)
 
+        identifier = self.__get_window_identifier()
         token = 0 + randint(10000000, 90000000)
         options = {
             'handle_token': GLib.Variant('s', f'com/rafaelmardojai/Blanket/{token}'),
@@ -44,7 +46,7 @@ class PreferencesWindow(Handy.PreferencesWindow):
         }
 
         try:
-            request = proxy.RequestBackground('(sa{sv})', '', options)
+            request = proxy.RequestBackground('(sa{sv})', identifier, options)
             if request is None:
                 raise Exception("The DBus proxy didn't return an object path." \
                                 + "\nThe portal can't suscribe to the signal.")
@@ -95,4 +97,14 @@ class PreferencesWindow(Handy.PreferencesWindow):
         self.autostart.set_active(autostart)
         self.settings.set_boolean('autostart', autostart)
         return
+
+    def __get_window_identifier(self):
+        session = os.getenv('XDG_SESSION_TYPE')
+        window = self.window.get_window()
+
+        if session == 'x11':
+            return f'x11:{str(window.get_xid())}'
+        elif session == 'wayland':
+            return 'wayland:'
+        return ''
 
