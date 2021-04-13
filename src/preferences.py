@@ -31,9 +31,10 @@ class PreferencesWindow(Handy.PreferencesWindow):
     def __request_autostart(self, active):
         bus = Gio.bus_get_sync(Gio.BusType.SESSION, None)
         proxy = Gio.DBusProxy.new_sync(bus, Gio.DBusProxyFlags.NONE, None,
-                                   'org.freedesktop.portal.Desktop',
-                                   '/org/freedesktop/portal/desktop',
-                                   'org.freedesktop.portal.Background', None)
+                                       'org.freedesktop.portal.Desktop',
+                                       '/org/freedesktop/portal/desktop',
+                                       'org.freedesktop.portal.Background',
+                                       None)
 
         identifier = self.__get_window_identifier()
         token = 0 + randint(10000000, 90000000)
