@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-26 00:24-0500\n"
+"POT-Creation-Date: 2021-04-15 22:28-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,27 +40,27 @@ msgid ""
 "sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
 msgid "Rafael Mardojai CM"
 msgstr ""
 
-#: data/resources/window.ui:145
+#: data/resources/window.ui:146
 msgid "Keep playing when closed"
 msgstr ""
 
-#: data/resources/window.ui:165
+#: data/resources/window.ui:168
 msgid "Preferences"
 msgstr ""
 
-#: data/resources/window.ui:174
+#: data/resources/window.ui:177
 msgid "Keyboard Shortcuts"
 msgstr ""
 
-#: data/resources/window.ui:183
+#: data/resources/window.ui:186
 msgid "About Blanket"
 msgstr ""
 
-#: data/resources/window.ui:209 data/resources/shortcuts.ui:39
+#: data/resources/window.ui:213 data/resources/shortcuts.ui:39
 msgid "Quit"
 msgstr ""
 
@@ -179,27 +179,27 @@ msgstr ""
 msgid "Open audio"
 msgstr ""
 
-#: src/preferences.py:40
+#: src/preferences.py:48
 msgid "Autostart Blanket on background."
 msgstr ""
 
-#: src/preferences.py:77
+#: src/preferences.py:75 src/preferences.py:106
+msgid "Request error"
+msgstr ""
+
+#: src/preferences.py:76 src/preferences.py:107
+msgid "The autostart request failed."
+msgstr ""
+
+#: src/preferences.py:96
 msgid "Authorization failed"
 msgstr ""
 
-#: src/preferences.py:79
+#: src/preferences.py:98
 msgid ""
 "Make sure Blanket has permission to run in \n"
 "the background in Settings → Applications → \n"
 "Blanket and try again."
-msgstr ""
-
-#: src/preferences.py:88
-msgid "Request error"
-msgstr ""
-
-#: src/preferences.py:89
-msgid "The autostart request failed."
 msgstr ""
 
 #: src/about.py:12

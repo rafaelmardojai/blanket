@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-26 00:24-0500\n"
+"POT-Creation-Date: 2021-04-15 22:28-0500\n"
 "PO-Revision-Date: 2021-04-08 14:57+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
@@ -44,27 +44,27 @@ msgstr ""
 "Fokusiraj se i povećaj produktivnost slušajući razne zvukove. Ili zaspi u "
 "bučnom okruženju."
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
-#: data/resources/window.ui:145
+#: data/resources/window.ui:146
 msgid "Keep playing when closed"
 msgstr "Nastavi svirati nakon zatvaranja"
 
-#: data/resources/window.ui:165
+#: data/resources/window.ui:168
 msgid "Preferences"
 msgstr "Postavke"
 
-#: data/resources/window.ui:174
+#: data/resources/window.ui:177
 msgid "Keyboard Shortcuts"
 msgstr "Tipkovni prečaci"
 
-#: data/resources/window.ui:183
+#: data/resources/window.ui:186
 msgid "About Blanket"
 msgstr "O programu Pokrivač"
 
-#: data/resources/window.ui:209 data/resources/shortcuts.ui:39
+#: data/resources/window.ui:213 data/resources/shortcuts.ui:39
 msgid "Quit"
 msgstr "Zatvori program"
 
@@ -183,15 +183,23 @@ msgstr "Prilagođeno"
 msgid "Open audio"
 msgstr "Otvori audiosnimku"
 
-#: src/preferences.py:40
+#: src/preferences.py:48
 msgid "Autostart Blanket on background."
 msgstr "Pokreni „Pokrivač” automatski u pozadini."
 
-#: src/preferences.py:77
+#: src/preferences.py:75 src/preferences.py:106
+msgid "Request error"
+msgstr "Greška zahtjeva"
+
+#: src/preferences.py:76 src/preferences.py:107
+msgid "The autostart request failed."
+msgstr "Neuspio zahtjev za automatskim pokretanjem."
+
+#: src/preferences.py:96
 msgid "Authorization failed"
 msgstr "Neuspjela autorizacija"
 
-#: src/preferences.py:79
+#: src/preferences.py:98
 msgid ""
 "Make sure Blanket has permission to run in \n"
 "the background in Settings → Applications → \n"
@@ -200,14 +208,6 @@ msgstr ""
 "Aktiviraj pokretanje programa „Pokrivač” u pozadini \n"
 "putem Postavke → Aplikacije → Pokrivač \n"
 "i pokušaj ponovo."
-
-#: src/preferences.py:88
-msgid "Request error"
-msgstr "Greška zahtjeva"
-
-#: src/preferences.py:89
-msgid "The autostart request failed."
-msgstr "Neuspio zahtjev za automatskim pokretanjem."
 
 #: src/about.py:12
 msgid "Sounds icons"

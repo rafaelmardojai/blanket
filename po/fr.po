@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-26 00:24-0500\n"
+"POT-Creation-Date: 2021-04-15 22:28-0500\n"
 "PO-Revision-Date: 2020-12-26 10:34+0900\n"
 "Last-Translator: Julien Humbert <julroy67@gmail.com>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
@@ -43,27 +43,27 @@ msgstr ""
 "diverses ambiances sonores. Peut aussi vous aider à vous endormir dans un "
 "environnement bruyant."
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
-#: data/resources/window.ui:145
+#: data/resources/window.ui:146
 msgid "Keep playing when closed"
 msgstr "Continuer à lire après fermeture"
 
-#: data/resources/window.ui:165
+#: data/resources/window.ui:168
 msgid "Preferences"
 msgstr "Préférences"
 
-#: data/resources/window.ui:174
+#: data/resources/window.ui:177
 msgid "Keyboard Shortcuts"
 msgstr "Raccourcis claviers"
 
-#: data/resources/window.ui:183
+#: data/resources/window.ui:186
 msgid "About Blanket"
 msgstr "À propos de Blanket"
 
-#: data/resources/window.ui:209 data/resources/shortcuts.ui:39
+#: data/resources/window.ui:213 data/resources/shortcuts.ui:39
 msgid "Quit"
 msgstr "Quitter"
 
@@ -186,15 +186,23 @@ msgstr "Personnalisé"
 msgid "Open audio"
 msgstr "Ouvrir l’audio"
 
-#: src/preferences.py:40
+#: src/preferences.py:48
 msgid "Autostart Blanket on background."
 msgstr "Démarrage automatique de Blanket en arrière-plan"
 
-#: src/preferences.py:77
+#: src/preferences.py:75 src/preferences.py:106
+msgid "Request error"
+msgstr "Erreur de demande"
+
+#: src/preferences.py:76 src/preferences.py:107
+msgid "The autostart request failed."
+msgstr "La demande de démarrage automatique a échoué"
+
+#: src/preferences.py:96
 msgid "Authorization failed"
 msgstr "Échec de l'autorisation"
 
-#: src/preferences.py:79
+#: src/preferences.py:98
 msgid ""
 "Make sure Blanket has permission to run in \n"
 "the background in Settings → Applications → \n"
@@ -203,14 +211,6 @@ msgstr ""
 "Assurez-vous que Blanket a la permission de s'exécuter en \n"
 "l'arrière-plan dans Paramètres → Applications → \n"
 "Blanket et réessayer."
-
-#: src/preferences.py:88
-msgid "Request error"
-msgstr "Erreur de demande"
-
-#: src/preferences.py:89
-msgid "The autostart request failed."
-msgstr "La demande de démarrage automatique a échoué"
 
 #: src/about.py:12
 #, fuzzy

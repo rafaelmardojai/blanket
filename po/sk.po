@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-26 00:24-0500\n"
+"POT-Creation-Date: 2021-04-15 22:28-0500\n"
 "PO-Revision-Date: 2020-10-25 05:01+0100\n"
 "Last-Translator: \n"
 "Language-Team: https://github.com/martin-sk\n"
@@ -43,27 +43,27 @@ msgstr ""
 "Zlepšite zameranie a zvýšte svoju produktivitu počúvaním rôznych zvukov. "
 "Alebo vám umožní zaspať v hlučnom prostredí."
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
-#: data/resources/window.ui:145
+#: data/resources/window.ui:146
 msgid "Keep playing when closed"
 msgstr "Prehrávať aj po zatvorení"
 
-#: data/resources/window.ui:165
+#: data/resources/window.ui:168
 msgid "Preferences"
 msgstr "Nastavenia"
 
-#: data/resources/window.ui:174
+#: data/resources/window.ui:177
 msgid "Keyboard Shortcuts"
 msgstr "Klávesové skratky"
 
-#: data/resources/window.ui:183
+#: data/resources/window.ui:186
 msgid "About Blanket"
 msgstr "O Blankete"
 
-#: data/resources/window.ui:209 data/resources/shortcuts.ui:39
+#: data/resources/window.ui:213 data/resources/shortcuts.ui:39
 msgid "Quit"
 msgstr "Ukončiť"
 
@@ -184,15 +184,23 @@ msgstr "Vlastné"
 msgid "Open audio"
 msgstr "Otvoriť zvuk"
 
-#: src/preferences.py:40
+#: src/preferences.py:48
 msgid "Autostart Blanket on background."
 msgstr "Spustiť Blanket na pozadí po štarte."
 
-#: src/preferences.py:77
+#: src/preferences.py:75 src/preferences.py:106
+msgid "Request error"
+msgstr "Chyba požiadavky"
+
+#: src/preferences.py:76 src/preferences.py:107
+msgid "The autostart request failed."
+msgstr "Požiadavka na automatické spustenie zlyhala."
+
+#: src/preferences.py:96
 msgid "Authorization failed"
 msgstr "Autorizácia zlyhala"
 
-#: src/preferences.py:79
+#: src/preferences.py:98
 msgid ""
 "Make sure Blanket has permission to run in \n"
 "the background in Settings → Applications → \n"
@@ -201,14 +209,6 @@ msgstr ""
 "Uistite sa, že má Blanket povolenie na \n"
 "spustenie aplikácie na pozadí v Settings → Applications → \n"
 "Blanket a vyskúšajte znovu."
-
-#: src/preferences.py:88
-msgid "Request error"
-msgstr "Chyba požiadavky"
-
-#: src/preferences.py:89
-msgid "The autostart request failed."
-msgstr "Požiadavka na automatické spustenie zlyhala."
 
 #: src/about.py:12
 #, fuzzy

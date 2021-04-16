@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-26 00:24-0500\n"
+"POT-Creation-Date: 2021-04-15 22:28-0500\n"
 "PO-Revision-Date: 2021-03-26 13:50+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
@@ -43,27 +43,27 @@ msgstr ""
 "Verbeter je focus en verhoog je productiviteit of val sneller in slaap door "
 "te luisteren naar verschillende geluiden."
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
-#: data/resources/window.ui:145
+#: data/resources/window.ui:146
 msgid "Keep playing when closed"
 msgstr "Doorgaan met afspelen na afsluiten"
 
-#: data/resources/window.ui:165
+#: data/resources/window.ui:168
 msgid "Preferences"
 msgstr "Voorkeuren"
 
-#: data/resources/window.ui:174
+#: data/resources/window.ui:177
 msgid "Keyboard Shortcuts"
 msgstr "Sneltoetsen"
 
-#: data/resources/window.ui:183
+#: data/resources/window.ui:186
 msgid "About Blanket"
 msgstr "Over Blanket"
 
-#: data/resources/window.ui:209 data/resources/shortcuts.ui:39
+#: data/resources/window.ui:213 data/resources/shortcuts.ui:39
 msgid "Quit"
 msgstr "Afsluiten"
 
@@ -182,15 +182,23 @@ msgstr "Aangepast"
 msgid "Open audio"
 msgstr "Audio openen"
 
-#: src/preferences.py:40
+#: src/preferences.py:48
 msgid "Autostart Blanket on background."
 msgstr "Start Blanket automatisch op op de achtergrond."
 
-#: src/preferences.py:77
+#: src/preferences.py:75 src/preferences.py:106
+msgid "Request error"
+msgstr "Verzoek mislukt"
+
+#: src/preferences.py:76 src/preferences.py:107
+msgid "The autostart request failed."
+msgstr "Het verzoek tot automatisch opstarten is afgewezen."
+
+#: src/preferences.py:96
 msgid "Authorization failed"
 msgstr "Verificatie mislukt"
 
-#: src/preferences.py:79
+#: src/preferences.py:98
 msgid ""
 "Make sure Blanket has permission to run in \n"
 "the background in Settings → Applications → \n"
@@ -199,14 +207,6 @@ msgstr ""
 "Zorg er voor dat Blanket bevoegd is om op de\n"
 "achtergrond te draaien via Instellingen → Toepassingen →\n"
 "Blanket en probeer het opnieuw."
-
-#: src/preferences.py:88
-msgid "Request error"
-msgstr "Verzoek mislukt"
-
-#: src/preferences.py:89
-msgid "The autostart request failed."
-msgstr "Het verzoek tot automatisch opstarten is afgewezen."
 
 #: src/about.py:12
 msgid "Sounds icons"
