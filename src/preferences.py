@@ -20,8 +20,9 @@ class PreferencesWindow(Handy.PreferencesWindow):
         self.window = window
         self.settings = settings
 
-        state = self.settings.get_boolean('autostart')
-        self.autostart.set_active(state)
+        self.autostart_failed = False
+        self.autostart_saved = self.settings.get_boolean('autostart')
+        self.autostart.set_active(self.autostart_saved)
         self.autostart.connect('notify::active', self._toggle_autostart)
 
     def _toggle_autostart(self, switch, _active):
@@ -29,6 +30,10 @@ class PreferencesWindow(Handy.PreferencesWindow):
         self.__request_autostart(active)
 
     def __request_autostart(self, active):
+        if self.autostart_failed:
+            self.autostart_failed = False
+            return
+
         bus = Gio.bus_get_sync(Gio.BusType.SESSION, None)
         proxy = Gio.DBusProxy.new_sync(bus, Gio.DBusProxyFlags.NONE, None,
                                        'org.freedesktop.portal.Desktop',
@@ -62,8 +67,19 @@ class PreferencesWindow(Handy.PreferencesWindow):
 				self.__receive_autostart,
 				None
 			)
+
         except Exception as e:
             print(e)
+
+            error_dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,
+                                             Gtk.ButtonsType.OK, _('Request error'))
+            error_dialog.format_secondary_text(_('The autostart request failed.'))
+            error_response = error_dialog.run()
+            if error_response == Gtk.ResponseType.OK:
+                error_dialog.destroy()
+
+            self.autostart_failed = True
+            self.autostart.set_active(self.autostart_saved)
 
     def __receive_autostart(self, *args):
         self.window.present()
@@ -83,15 +99,13 @@ class PreferencesWindow(Handy.PreferencesWindow):
                       '\nthe background in Settings → Applications → ' \
                       '\nBlanket and try again.'))
                 error_response = error_dialog.run()
-
                 if error_response == Gtk.ResponseType.OK:
                     error_dialog.destroy()
         elif state == 2:
-            error_dialog = Gtk.MessageDialog(self.window, 0, Gtk.MessageType.WARNING,
+            error_dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,
                                              Gtk.ButtonsType.OK, _('Request error'))
             error_dialog.format_secondary_text(_('The autostart request failed.'))
             error_response = error_dialog.run()
-
             if error_response == Gtk.ResponseType.OK:
                 error_dialog.destroy()
 
