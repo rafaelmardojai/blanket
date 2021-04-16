@@ -51,7 +51,3 @@ install_data(
   'com.rafaelmardojai.Blanket-symbolic.svg',
   install_dir: join_paths(get_option('datadir'), 'icons/hicolor/symbolic/apps')
 )
-install_data(
-  'com.rafaelmardojai.Blanket-wm.svg',
-  install_dir: join_paths(get_option('datadir'), 'icons/hicolor/symbolic/apps')
-)

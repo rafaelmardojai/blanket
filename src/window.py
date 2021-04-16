@@ -106,7 +106,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         super().__init__(**kwargs)
 
         # Set default window icon for window managers
-        self.set_default_icon_name('com.rafaelmardojai.Blanket-wm')
+        self.set_default_icon_name('com.rafaelmardojai.Blanket')
 
         # Main player
         self.mainplayer = mainplayer
