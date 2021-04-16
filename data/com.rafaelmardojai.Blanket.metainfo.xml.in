@@ -31,6 +31,25 @@
   </screenshots>
 
   <releases>
+    <release version="0.4.0" date="2021-04-15">
+      <description>
+        <ul>
+          <li>Added autostart on background feature</li>
+          <li>Added six new sounds</li>
+          <li>New sounds icons, thanks to Jakub Steiner</li>
+          <li>Sounds improvements</li>
+          <li>Added French translation</li>
+          <li>Added Ukrainian translation</li>
+          <li>Added Slovak translation</li>
+          <li>Added Nepali translation</li>
+          <li>Added German translation</li>
+          <li>Added Croatian translation</li>
+          <li>Performance improvements</li>
+          <li>UI improvements</li>
+          <li>Bug fixes</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.3.1" date="2020-09-12">
       <description>
         <ul>
