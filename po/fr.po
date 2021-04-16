@@ -53,7 +53,7 @@ msgstr "Continuer à lire après fermeture"
 
 #: data/resources/window.ui:165
 msgid "Preferences"
-msgstr ""
+msgstr "Préférences"
 
 #: data/resources/window.ui:174
 msgid "Keyboard Shortcuts"
@@ -69,16 +69,16 @@ msgstr "Quitter"
 
 #: data/resources/preferences.ui:16
 msgid "Behavior"
-msgstr ""
+msgstr "Comportement"
 
 #: data/resources/preferences.ui:20
 msgid "Autostart on background"
-msgstr ""
+msgstr "Démarrage automatique en arrière-plan"
 
 #: data/resources/about.ui:11
 #, fuzzy
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Copyright 2020 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
@@ -188,11 +188,11 @@ msgstr "Ouvrir l’audio"
 
 #: src/preferences.py:40
 msgid "Autostart Blanket on background."
-msgstr ""
+msgstr "Démarrage automatique de Blanket en arrière-plan"
 
 #: src/preferences.py:77
 msgid "Authorization failed"
-msgstr ""
+msgstr "Échec de l'autorisation"
 
 #: src/preferences.py:79
 msgid ""
@@ -200,14 +200,17 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
+"Assurez-vous que Blanket a la permission de s'exécuter en \n"
+"l'arrière-plan dans Paramètres → Applications → \n"
+"Blanket et réessayer."
 
 #: src/preferences.py:88
 msgid "Request error"
-msgstr ""
+msgstr "Erreur de demande"
 
 #: src/preferences.py:89
 msgid "The autostart request failed."
-msgstr ""
+msgstr "La demande de démarrage automatique a échoué"
 
 #: src/about.py:12
 #, fuzzy
@@ -216,7 +219,7 @@ msgstr "Sons par"
 
 #: src/about.py:13
 msgid "App icon"
-msgstr ""
+msgstr "Icône de l'application"
 
 #. Set sound artists list
 #: src/about.py:58
