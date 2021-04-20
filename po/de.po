@@ -210,7 +210,7 @@ msgstr ""
 
 #: src/about.py:12
 msgid "Sounds icons"
-msgstr "Klänge von"
+msgstr "Klang Symbole"
 
 #: src/about.py:13
 msgid "App icon"

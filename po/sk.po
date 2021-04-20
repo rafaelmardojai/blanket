@@ -213,7 +213,7 @@ msgstr ""
 #: src/about.py:12
 #, fuzzy
 msgid "Sounds icons"
-msgstr "Zvuky od"
+msgstr "Zvukové ikony"
 
 #: src/about.py:13
 msgid "App icon"
