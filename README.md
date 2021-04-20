@@ -21,8 +21,7 @@
 ## Description
 Improve focus and increase your productivity by listening to different sounds. Or allows you to fall asleep in a noisy environment.
 
-## Other Methods of Installation
-> We are looking for volunteers to help us make native packages of Blanket for Fedora, Solus and other major distributions. It would be great if you could help either by packaging, or by getting the following into the official repositories.
+## Third Party Packages 
 
 | Distribution | Package | Maintainer |
 |:-:|:-:|:-:|
