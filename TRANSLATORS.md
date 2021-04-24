@@ -14,6 +14,7 @@ it | Italian | @albanobattistella
 ne | Nepali | @IBA4
 nl | Dutch | @Vistaus
 pt_BR | Brazilian Portuguese | @pedrofleck
+oc | Occitan | @Mejans
 sk | Slovak | @MartinIIOT
 tr | Turkish | @caglarturali
 uk | Ukrainian | @IhorHordiichuk
