@@ -119,6 +119,11 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.setup()
 
     def setup(self):
+        # Load dark theme
+        gtk_settings = Gtk.Settings.get_default()
+        gtk_settings.set_property('gtk-application-prefer-dark-theme',
+                                  self.settings.get_boolean('dark-mode'))
+
         # Get volume scale adjustment
         vol_adjustment = self.volume.get_adjustment()
         # Bind volume scale value with main player volume

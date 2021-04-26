@@ -12,6 +12,7 @@ from gi.repository import Gio, GLib, Gtk, Handy
 class PreferencesWindow(Handy.PreferencesWindow):
     __gtype_name__ = 'PreferencesWindow'
 
+    dark = Gtk.Template.Child()
     autostart = Gtk.Template.Child()
 
     def __init__(self, window, settings, **kwargs):
@@ -20,10 +21,19 @@ class PreferencesWindow(Handy.PreferencesWindow):
         self.window = window
         self.settings = settings
 
+        self.settings.bind('dark-mode', self.dark, 'active',
+                           Gio.SettingsBindFlags.DEFAULT)
+        self.dark.connect('notify::active', self._toggle_dark)
+
         self.autostart_failed = False
         self.autostart_saved = self.settings.get_boolean('autostart')
         self.autostart.set_active(self.autostart_saved)
         self.autostart.connect('notify::active', self._toggle_autostart)
+
+    def _toggle_dark(self, switch, _active):
+        gtk_settings = Gtk.Settings.get_default()
+        active = switch.get_active()
+        gtk_settings.set_property('gtk-application-prefer-dark-theme', active)
 
     def _toggle_autostart(self, switch, _active):
         active = switch.get_active()
