@@ -31,6 +31,15 @@
   </screenshots>
 
   <releases>
+    <release version="0.4.1" date="2021-04-26">
+      <description>
+        <ul>
+          <li>Added Turkish translation</li>
+          <li>Added Occitan translation</li>
+          <li>Fix German and Slovak translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.4.0" date="2021-04-15">
       <description>
         <ul>
