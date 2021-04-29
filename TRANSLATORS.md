@@ -19,3 +19,4 @@ sk | Slovak | @MartinIIOT
 tr | Turkish | @caglarturali
 uk | Ukrainian | @IhorHordiichuk
 ta | Tamil | @123survesh
+zh_CN | Simplified Chinese | @apocelipes
