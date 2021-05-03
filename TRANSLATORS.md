@@ -1,5 +1,5 @@
 # Translators
-This files list all the translations maintainers. It's used to call translators to update translations.
+This files list all the translations maintainers.  It's used to call translators on new version releases.
 
 Code  | Language             | Maintainers (GitHub usernames)
 :---: | :------------------: | :-----------------------------
