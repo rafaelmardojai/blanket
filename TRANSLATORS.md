@@ -9,6 +9,7 @@ eo    | Esperanto            | @Porrumentzio
 es    | Spanish              | @rafaelmardojai 
 eu    | Basque               | @Porrumentzio
 fr    | French               | @maoschanz @julroy67
+ga    | Irish                | @Moilleadoir
 hr    | Croatian             | @milotype
 it    | Italian              | @albanobattistella
 ne    | Nepali               | @IBA4
