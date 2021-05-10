@@ -12,6 +12,7 @@ fr    | French               | @maoschanz @julroy67
 ga    | Irish                | @Moilleadoir
 hr    | Croatian             | @milotype
 it    | Italian              | @albanobattistella
+ja    | Japanese             | 
 ne    | Nepali               | @IBA4
 nl    | Dutch                | @Vistaus
 oc    | Occitan              | @Mejans
