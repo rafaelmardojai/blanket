@@ -1,0 +1,227 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blanket package.
+# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blanket\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-15 22:28-0500\n"
+"PO-Revision-Date: 2021-05-11 09:31+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: id\n"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:3
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:30
+#: src/mpris.py:135
+msgid "Blanket"
+msgstr "Blanket"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:4
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
+#: src/mpris.py:133 src/mpris.py:134
+msgid "Listen to different sounds"
+msgstr "Dengarkan suara yang berbeda"
+
+#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/com.rafaelmardojai.Blanket.desktop.in:10
+msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
+msgstr "Konsentrasi;Fokus;Kebisingan;Produktivitas;Tidur;"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+msgid ""
+"Improve focus and increase your productivity by listening to different "
+"sounds. Or allows you to fall asleep in a noisy environment."
+msgstr ""
+"Tingkatkan fokus dan produktivitas Anda dengan mendengarkan suara yang "
+"berbeda. Atau memungkinkan Anda untuk tertidur di lingkungan yang bising."
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: data/resources/window.ui:146
+msgid "Keep playing when closed"
+msgstr "Terus putar ketika ditutup"
+
+#: data/resources/window.ui:168
+msgid "Preferences"
+msgstr "Preferensi"
+
+#: data/resources/window.ui:177
+msgid "Keyboard Shortcuts"
+msgstr "Pintasan Papan Tik"
+
+#: data/resources/window.ui:186
+msgid "About Blanket"
+msgstr "Tentang Blanket"
+
+#: data/resources/window.ui:213 data/resources/shortcuts.ui:39
+msgid "Quit"
+msgstr "Keluar"
+
+#: data/resources/preferences.ui:16
+msgid "Behavior"
+msgstr "Perilaku"
+
+#: data/resources/preferences.ui:20
+msgid "Autostart on background"
+msgstr "Mulai otomatis di latar belakang"
+
+#: data/resources/about.ui:11
+msgid "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "Hak Cipta 2020-2021 Rafael Mardojai CM"
+
+#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#: data/resources/about.ui:15
+msgctxt "Add your names here, do not remove previous names!"
+msgid "translator-credits"
+msgstr "Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021."
+
+#: data/resources/shortcuts.ui:13
+msgid "General"
+msgstr "Umum"
+
+#: data/resources/shortcuts.ui:18
+msgid "Play/Pause sounds"
+msgstr "Putar/Jedakan suara"
+
+#: data/resources/shortcuts.ui:25
+msgid "Add custom sound"
+msgstr "Tambah suara ubahan"
+
+#: data/resources/shortcuts.ui:32
+msgid "Close window"
+msgstr "Tutup jendela"
+
+#: src/window.py:14
+msgid "Nature"
+msgstr "Alam"
+
+#: src/window.py:18 src/about.py:17 src/about.py:34
+msgid "Rain"
+msgstr "Hujan"
+
+#: src/window.py:22 src/about.py:18 src/about.py:34
+msgid "Storm"
+msgstr "Badai"
+
+#: src/window.py:26 src/about.py:29
+msgid "Wind"
+msgstr "Angin"
+
+#: src/window.py:30 src/about.py:26 src/about.py:34
+msgid "Waves"
+msgstr "Ombak"
+
+#: src/window.py:34 src/about.py:22
+msgid "Stream"
+msgstr "Aliran"
+
+#: src/window.py:38 src/about.py:24 src/about.py:34
+msgid "Birds"
+msgstr "Burung"
+
+#: src/window.py:42 src/about.py:25
+msgid "Summer Night"
+msgstr "Malam Musim Panas"
+
+#: src/window.py:47
+msgid "Travel"
+msgstr "Perjalanan"
+
+#: src/window.py:51 src/about.py:30
+msgid "Train"
+msgstr "Kereta Api"
+
+#: src/window.py:55 src/about.py:20 src/about.py:34
+msgid "Boat"
+msgstr "Perahu"
+
+#: src/window.py:59 src/about.py:21 src/about.py:34
+msgid "City"
+msgstr "Kota"
+
+#: src/window.py:64
+msgid "Interiors"
+msgstr "Interior"
+
+#: src/window.py:68 src/about.py:28
+msgid "Coffee Shop"
+msgstr "Kedai Kopi"
+
+#: src/window.py:72 src/about.py:19
+msgid "Fireplace"
+msgstr "Perapian"
+
+#: src/window.py:77
+msgid "Noise"
+msgstr "Kebisingan"
+
+#: src/window.py:81 src/about.py:27
+msgid "Pink Noise"
+msgstr "Kebisingan Merah Muda"
+
+#: src/window.py:85 src/about.py:23
+msgid "White Noise"
+msgstr "Kebisingan Putih"
+
+#. Setup user custom sounds
+#: src/window.py:168
+msgid "Custom"
+msgstr "Ubahan"
+
+#: src/window.py:218
+msgid "Open audio"
+msgstr "Buka suara"
+
+#: src/preferences.py:48
+msgid "Autostart Blanket on background."
+msgstr "Mulai otomatis Blanket di latar belakang."
+
+#: src/preferences.py:75 src/preferences.py:106
+msgid "Request error"
+msgstr "Galat permintaan"
+
+#: src/preferences.py:76 src/preferences.py:107
+msgid "The autostart request failed."
+msgstr "Permintaan mulai otomatis gagal."
+
+#: src/preferences.py:96
+msgid "Authorization failed"
+msgstr "Autorisasi gagal"
+
+#: src/preferences.py:98
+msgid ""
+"Make sure Blanket has permission to run in \n"
+"the background in Settings → Applications → \n"
+"Blanket and try again."
+msgstr ""
+"Pastikan Blanket memiliki izin untuk berjalan di\n"
+"latar belakang pada Pengaturan → Aplikasi → \n"
+"Blanket dan coba lagi."
+
+#: src/about.py:12
+msgid "Sounds icons"
+msgstr "Ikon suara"
+
+#: src/about.py:13
+msgid "App icon"
+msgstr "Ikon aplikasi"
+
+#. Set sound artists list
+#: src/about.py:58
+msgid "Sounds by"
+msgstr "Suara oleh"
+
+#. Set sound editors list
+#: src/about.py:60
+msgid "Sounds edited by"
+msgstr "Suara disunting oleh"

@@ -11,6 +11,7 @@ eu    | Basque               | @Porrumentzio
 fr    | French               | @maoschanz @julroy67
 ga    | Irish                | @Moilleadoir
 hr    | Croatian             | @milotype
+id    | Indonesian           | @cho2
 it    | Italian              | @albanobattistella
 ja    | Japanese             | 
 ne    | Nepali               | @IBA4
