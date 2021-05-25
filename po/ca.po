@@ -45,7 +45,7 @@ msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
 msgid "Rafael Mardojai CM"
-msgstr "Rafael Mardojai C.M."
+msgstr "Rafael Mardojai C. M."
 
 #: data/resources/window.ui:146
 msgid "Keep playing when closed"
@@ -77,7 +77,7 @@ msgstr "Inici automàtic en segon pla"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Drets d’autor © 2020 Rafael Mardojai C.M."
+msgstr "Drets d’autor © 2020 Rafael Mardojai C. M."
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
@@ -85,7 +85,7 @@ msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr ""
 "Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2020\n"
-"Ícar Nin Solana <icar.nin@pm.me>"
+"Ícar Nin Solana <icar.nin@pm.me>, 2021"
 
 #: data/resources/shortcuts.ui:13
 msgid "General"
@@ -186,7 +186,7 @@ msgstr "Obre un àudio"
 
 #: src/preferences.py:48
 msgid "Autostart Blanket on background."
-msgstr "Inicia automàticament Blanket en segon pla."
+msgstr "Inicia automàticament el Blanket en segon pla."
 
 #: src/preferences.py:75 src/preferences.py:106
 msgid "Request error"
@@ -206,7 +206,7 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"Assegura't que Blanket té permisos per córrer en \n"
+"Assegureu-vos que el Blanket té permisos per córrer en \n"
 "segon pla a Preferències → Aplicacions → \n"
 "Blanket i torna-ho a provar."
 
