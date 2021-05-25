@@ -8,6 +8,7 @@ de    | German               | @eladyn
 eo    | Esperanto            | @Porrumentzio
 es    | Spanish              | @rafaelmardojai 
 eu    | Basque               | @Porrumentzio
+fi    | Finnish              | @heidiwenger
 fr    | French               | @maoschanz @julroy67
 ga    | Irish                | @Moilleadoir
 hr    | Croatian             | @milotype

@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
+# Finnish translation for Blanket
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Heidi Wenger <heidi.wenger@protonmail.com>, 2021.
 #
 msgid ""
 msgstr ""
@@ -83,7 +83,7 @@ msgstr "Tekijänoikeus 2020-2021 Rafael Mardojai CM"
 #: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "heidi wenger <heidi.wenger@protonmail.com>"
+msgstr "Heidi Wenger <heidi.wenger@protonmail.com>"
 
 #: data/resources/shortcuts.ui:13
 msgid "General"
