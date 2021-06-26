@@ -26,7 +26,7 @@ Improve focus and increase your productivity by listening to different sounds. O
 
 | Distribution | Package | Maintainer |
 |:-:|:-:|:-:|
-| Arch Linux (AUR) | [`blanket`](https://aur.archlinux.org/packages/blanket) | [Mark Wagie](https://github.com/yochananmarqos) |
+| Arch Linux (community) | [`blanket`](https://archlinux.org/packages/community/any/blanket/) | [Balló György](https://github.com/City-busz) |
 | Ubuntu (PPA) | [`Stable Releases`](https://launchpad.net/~apandada1/+archive/ubuntu/blanket), [`Daily Builds`](https://launchpad.net/~apandada1/+archive/ubuntu/blanket-daily) | [Archisman Panigrahi](https://github.com/apandada1) |
 | Fedora (Copr) | Copr: [`tuxino/blanket`](https://copr.fedorainfracloud.org/coprs/tuxino/blanket/), package: `blanket` | Tuxino |
 | openSUSE  | [`blanket`](https://build.opensuse.org/package/show/multimedia%3Aapps/blanket) | [Michael Vetter](https://github.com/jubalh) |
