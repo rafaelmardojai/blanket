@@ -18,6 +18,7 @@ ja    | Japanese             |
 ne    | Nepali               | @IBA4
 nl    | Dutch                | @Vistaus
 oc    | Occitan              | @Mejans
+pt    | Portuguese           | @JulianoSCbah
 pt_BR | Brazilian Portuguese | @pedrofleck
 ru_RU | Russian              | @LeftyDeMilo
 sk    | Slovak               | @MartinIIOT
