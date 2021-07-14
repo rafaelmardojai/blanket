@@ -22,6 +22,7 @@ pt    | Portuguese           | @JulianoSCbah
 pt_BR | Brazilian Portuguese | @pedrofleck
 ru_RU | Russian              | @LeftyDeMilo
 sk    | Slovak               | @MartinIIOT
+sv    | Swedish              | @eson57
 ta    | Tamil                | @123survesh
 tr    | Turkish              | @caglarturali
 uk    | Ukrainian            | @IhorHordiichuk
