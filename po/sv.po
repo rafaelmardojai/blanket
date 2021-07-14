@@ -1,0 +1,235 @@
+# Swedish translation for com.rafaelmardojai.Blanket.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blanket package.
+# Åke Engelbrektson <eson@svenskasprakfiler.se>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blanket\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-15 22:28-0500\n"
+"PO-Revision-Date: 2021-07-13 16:47+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: sv\n"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:3
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:30
+#: src/mpris.py:135
+msgid "Blanket"
+msgstr "Blanket"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:4
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
+#: src/mpris.py:133 src/mpris.py:134
+msgid "Listen to different sounds"
+msgstr "Lyssna på olika ljud"
+
+#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/com.rafaelmardojai.Blanket.desktop.in:10
+msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
+msgstr "Koncentrera; Fokusera; Brus; Produktivitet. Sov;"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+msgid ""
+"Improve focus and increase your productivity by listening to different "
+"sounds. Or allows you to fall asleep in a noisy environment."
+msgstr ""
+"Förbättra fokus och öka din produktivitet genom att lyssna på olika ljud. "
+"Eller låt dig somna i en bullrig miljö."
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: data/resources/window.ui:146
+msgid "Keep playing when closed"
+msgstr "Fortsätt spela efter stängning"
+
+#: data/resources/window.ui:168
+msgid "Preferences"
+msgstr "Inställningar"
+
+#: data/resources/window.ui:177
+msgid "Keyboard Shortcuts"
+msgstr "Tangentbordsgenvägar"
+
+#: data/resources/window.ui:186
+msgid "About Blanket"
+msgstr "Om Blanket"
+
+#: data/resources/window.ui:213 data/resources/shortcuts.ui:39
+msgid "Quit"
+msgstr "Avsluta"
+
+#: data/resources/preferences.ui:16
+msgid "Appearance"
+msgstr "Utseende"
+
+#: data/resources/preferences.ui:20
+msgid "Dark Mode"
+msgstr "Mörkt läge"
+
+#: data/resources/preferences.ui:36
+msgid "Behavior"
+msgstr "Beteende"
+
+#: data/resources/preferences.ui:40
+msgid "Autostart on background"
+msgstr "Starta automatiskt i bakgrunden"
+
+#: data/resources/about.ui:11
+msgid "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
+
+#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#: data/resources/about.ui:15
+msgctxt "Add your names here, do not remove previous names!"
+msgid "translator-credits"
+msgstr "Åke Engelbrektson <eson@svenskasprakfiler.se>"
+
+#: data/resources/shortcuts.ui:13
+msgid "General"
+msgstr "Allmänt"
+
+#: data/resources/shortcuts.ui:18
+msgid "Play/Pause sounds"
+msgstr "Spela upp/Pausa ljud"
+
+#: data/resources/shortcuts.ui:25
+msgid "Add custom sound"
+msgstr "Lägga till anpassat ljud"
+
+#: data/resources/shortcuts.ui:32
+msgid "Close window"
+msgstr "Stäng fönster"
+
+#: src/window.py:14
+msgid "Nature"
+msgstr "Natur"
+
+#: src/window.py:18 src/about.py:17 src/about.py:34
+msgid "Rain"
+msgstr "Regn"
+
+#: src/window.py:22 src/about.py:18 src/about.py:34
+msgid "Storm"
+msgstr "Storm"
+
+#: src/window.py:26 src/about.py:29
+msgid "Wind"
+msgstr "Vind"
+
+#: src/window.py:30 src/about.py:26 src/about.py:34
+msgid "Waves"
+msgstr "Vågor"
+
+#: src/window.py:34 src/about.py:22
+msgid "Stream"
+msgstr "Ström"
+
+#: src/window.py:38 src/about.py:24 src/about.py:34
+msgid "Birds"
+msgstr "Fåglar"
+
+#: src/window.py:42 src/about.py:25
+msgid "Summer Night"
+msgstr "Sommarnatt"
+
+#: src/window.py:47
+msgid "Travel"
+msgstr "Resa"
+
+#: src/window.py:51 src/about.py:30
+msgid "Train"
+msgstr "Tåg"
+
+#: src/window.py:55 src/about.py:20 src/about.py:34
+msgid "Boat"
+msgstr "Båt"
+
+#: src/window.py:59 src/about.py:21 src/about.py:34
+msgid "City"
+msgstr "Stad"
+
+#: src/window.py:64
+msgid "Interiors"
+msgstr "Interiörer"
+
+#: src/window.py:68 src/about.py:28
+msgid "Coffee Shop"
+msgstr "Kafé"
+
+#: src/window.py:72 src/about.py:19
+msgid "Fireplace"
+msgstr "Eldstad"
+
+#: src/window.py:77
+msgid "Noise"
+msgstr "Brus"
+
+#: src/window.py:81 src/about.py:27
+msgid "Pink Noise"
+msgstr "Rosa brus"
+
+#: src/window.py:85 src/about.py:23
+msgid "White Noise"
+msgstr "Vitt brus"
+
+#. Setup user custom sounds
+#: src/window.py:168
+msgid "Custom"
+msgstr "Anpassat"
+
+#: src/window.py:218
+msgid "Open audio"
+msgstr "Öppna ljud"
+
+#: src/preferences.py:48
+msgid "Autostart Blanket on background."
+msgstr "Starta Blanket automatiskt i bakgrunden."
+
+#: src/preferences.py:75 src/preferences.py:106
+msgid "Request error"
+msgstr "Fel vid begäran"
+
+#: src/preferences.py:76 src/preferences.py:107
+msgid "The autostart request failed."
+msgstr "Begäran om automatisk start misslyckades."
+
+#: src/preferences.py:96
+msgid "Authorization failed"
+msgstr "Auktorisering misslyckades"
+
+#: src/preferences.py:98
+msgid ""
+"Make sure Blanket has permission to run in \n"
+"the background in Settings → Applications → \n"
+"Blanket and try again."
+msgstr ""
+"Tillse att Blanket har behörighet att köras i \n"
+"bakgrunden i Inställningar → Program → \n"
+"Blanket och försök igen."
+
+#: src/about.py:12
+msgid "Sounds icons"
+msgstr "Ljudikoner"
+
+#: src/about.py:13
+msgid "App icon"
+msgstr "Programikon"
+
+#. Set sound artists list
+#: src/about.py:58
+msgid "Sounds by"
+msgstr "Ljud av"
+
+#. Set sound editors list
+#: src/about.py:60
+msgid "Sounds edited by"
+msgstr "Ljud redigerade av"
