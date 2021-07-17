@@ -9,7 +9,7 @@ from blanket.settings import Settings
 class PresetObject(GObject.Object):
     __gtype_name__ = 'PresetObject'
 
-    visible_name = GObject.Property(type=str, default='')
+    name = GObject.Property(type=str)
 
     def __init__(self, preset_id, model):
         super().__init__()
@@ -19,16 +19,8 @@ class PresetObject(GObject.Object):
 
         # Bind preset name with settings one
         Settings.get().get_preset_settings(self.id).bind(
-            'visible-name', self, 'visible-name', Gio.SettingsBindFlags.DEFAULT
+            'visible-name', self, 'name', Gio.SettingsBindFlags.DEFAULT
         )
-
-    @property
-    def name(self):
-        return self.get_property('visible-name')
-    
-    @name.setter
-    def name(self, name):
-        self.set_property('visible-name', name)
 
     def remove(self):
         if self.id != Settings.get().default_preset:
@@ -177,9 +169,8 @@ class PresetControl(Gtk.Box):
         # Set initial preset
         self.default_preset = Settings.get().default_preset
         self.preset = self.chooser.selected
-        self.toggle_btn.set_label(self.preset.name)
         self.name_binding = self.preset.bind_property(
-            'visible-name', self.toggle_btn, 'label', GObject.BindingFlags.DEFAULT
+            'name', self.toggle_btn, 'label', GObject.BindingFlags.SYNC_CREATE
         )
 
         # If it's default preset, don't allow rename or delete
@@ -191,7 +182,6 @@ class PresetControl(Gtk.Box):
 
     def _rename(self, button):
         name = self.rename_entry.get_text()
-        #self.preset.name = name
         Settings.get().set_preset_name(self.preset.id, name)
         self._go_back(button)
 
@@ -223,9 +213,8 @@ class PresetControl(Gtk.Box):
 
         # Update preset
         self.preset = preset
-        self.toggle_btn.set_label(self.preset.name)
         self.name_binding = self.preset.bind_property(
-            'visible-name', self.toggle_btn, 'label', GObject.BindingFlags.DEFAULT
+            'name', self.toggle_btn, 'label', GObject.BindingFlags.SYNC_CREATE
         )
 
         # If it's default preset, don't allow rename or delete
@@ -241,5 +230,4 @@ class PresetRow(Gtk.ListBoxRow):
     def __init__(self, preset):
         super().__init__()
 
-        self.name.set_label(preset.name)
-        preset.bind_property('visible-name', self.name, 'label', GObject.BindingFlags.DEFAULT)
+        preset.bind_property('name', self.name, 'label', GObject.BindingFlags.SYNC_CREATE)

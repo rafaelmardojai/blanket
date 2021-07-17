@@ -38,8 +38,8 @@ SOUND_EDITORS = {
 class AboutDialog(Gtk.AboutDialog):
     __gtype_name__ = 'AboutDialog'
 
-    def __init__(self, version, **kwargs):
-        super().__init__(**kwargs)
+    def __init__(self, version):
+        super().__init__()
         # Connect "Close" button
         self.connect('response', self._on_about_response)
 
@@ -59,13 +59,13 @@ class AboutDialog(Gtk.AboutDialog):
         # Set sound editors list
         self.add_credit_section(_('Sounds edited by'), sound_editors)
 
-    def _get_credits_list(self, _dict):
+    def _get_credits_list(self, dict_):
         l = ['']
-        for k, vs in _dict.items():
+        for k, vs in dict_.items():
             s = k + '\n	' + ', '.join(vs)
             l.append(s)
         return l
 
-    def _on_about_response(self, dialog, response_id):
+    def _on_about_response(self, _dialog, _response_id):
         self.destroy()
 

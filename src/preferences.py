@@ -22,8 +22,9 @@ class PreferencesWindow(Handy.PreferencesWindow):
 
         self.window = window
 
-        Settings.get().bind('dark-mode', self.dark, 'active',
-                           Gio.SettingsBindFlags.DEFAULT)
+        Settings.get().bind(
+            'dark-mode', self.dark, 'active', Gio.SettingsBindFlags.DEFAULT
+        )
         self.dark.connect('notify::active', self._toggle_dark)
 
         self.autostart_failed = False

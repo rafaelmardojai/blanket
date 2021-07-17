@@ -9,6 +9,7 @@ class MainPlayer(GObject.GObject):
     """
     Virtual app sounds player
     """
+    __gtype_name__ = 'MainPlayer'
     __gsignals__ = {
         'preset-changed': (GObject.SIGNAL_RUN_FIRST, None, ())
     }
@@ -20,7 +21,7 @@ class MainPlayer(GObject.GObject):
         super().__init__()
 
     def preset_changed(self):
-        self.set_property('playing', True)
+        self.playing = True
         self.emit('preset-changed')
 
 
@@ -28,6 +29,7 @@ class SoundObject(GObject.Object):
     """
     Describe a sound with it's propeties
     """
+    __gtype_name__ = 'SoundObject'
 
     def __init__(self, name, uri=None, title=None, mainplayer=None,
                  custom=False, **kwargs):
@@ -60,6 +62,7 @@ class SoundPlayer(GstPlayer.Player):
     """
     GstPlayer.Player with modifications
     """
+    __gtype_name__ = 'SoundPlayer'
 
     def __init__(self, sound):
         super().__init__()
@@ -109,30 +112,26 @@ class SoundPlayer(GstPlayer.Player):
         self.sound.mainplayer.disconnect(self.volume_hdlr)
         self.sound.mainplayer.disconnect(self.playing_hdlr)
 
-    def _on_playing_changed(self, player, playing):
-        playing = self.sound.mainplayer.get_property('playing')
-
+    def _on_playing_changed(self, _player, _volume):
         if not self.__vol_zero():
-            if playing:
+            if self.sound.mainplayer.playing:
                 self.play()
             else:
                 self.pause()
 
-    def _on_volume_changed(self, player):
-        # Always play if volume > 0
-        playing = self.sound.mainplayer.get_property('playing')
-
+    def _on_volume_changed(self, _player):
+        # Only play if volume > 0
         if self.__vol_zero():
             self.pause()
-        elif playing:
+        elif self.sound.mainplayer.playing:
             self.play()
 
-    def _on_main_volume_changed(self, player, volume):
+    def _on_main_volume_changed(self, _player, _volume):
         if not self.__vol_zero(self.sound.saved_volume):
             # Set volume again when mainplayer volume changes
             self.set_virtual_volume(self.saved_volume)
 
-    def _on_bus_message(self, bus, message):
+    def _on_bus_message(self, _bus, message):
         if message:
             if message.type is Gst.MessageType.SEGMENT_DONE:
                 self.pipeline.seek_simple(

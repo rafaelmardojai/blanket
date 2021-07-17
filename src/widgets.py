@@ -46,8 +46,8 @@ class SoundRow(Gtk.ListBoxRow):
     playing = Gtk.Template.Child()
     volume = Gtk.Template.Child()
 
-    def __init__(self, sound, model, **kwargs):
-        super().__init__(**kwargs)
+    def __init__(self, sound, model):
+        super().__init__()
 
         # SoundObject
         self.sound = sound
@@ -55,8 +55,7 @@ class SoundRow(Gtk.ListBoxRow):
         self.model = model
 
         # Get playing state
-        playing = self.sound.mainplayer.get_property('playing')
-        self.volume.set_sensitive(playing)
+        self.volume.set_sensitive(self.sound.mainplayer.playing)
         # Connect playing state signal
         self.sound.mainplayer.connect(
             'notify::playing',
@@ -74,8 +73,8 @@ class SoundRow(Gtk.ListBoxRow):
         # Set title
         self.title.set_label(self.sound.title)
 
-        # Connnect scale with volume function
-        self.volume.connect('value-changed', self.change_vol)
+        # Connect scale with volume function
+        self.volume.connect('value-changed', self._on_volume_changed)
         # Load saved volume
         if self.sound.saved_volume and self.sound.saved_volume > 0:
             self.volume.set_value(self.sound.saved_volume)
@@ -104,7 +103,15 @@ class SoundRow(Gtk.ListBoxRow):
             self.box.pack_start(icon, False, True, 0)
             self.box.child_set_property(icon, 'position', 0)
 
-    def change_vol(self, scale):
+    def remove(self, _button):
+        # Remove audio from list
+        self.model.remove(self.get_index())
+        # Remove player
+        self.player.remove()
+        # Remove audio from settings
+        self.sound.remove()
+    
+    def _on_volume_changed(self, scale):
         # Round volume value
         volume = round(scale.get_value(), 2)
         # Set player volume
@@ -119,20 +126,10 @@ class SoundRow(Gtk.ListBoxRow):
             self.playing.set_reveal_child(True)
             Gtk.StyleContext.add_class(self.get_style_context(), 'playing')
 
-    def remove(self, widget):
-        # Remove audio from list
-        self.model.remove(self.get_index())
-        # Remove player
-        self.player.remove()
-        # Remove audio from settings
-        self.sound.remove()
+    def _on_playing_changed(self, _player, _pspec):
+        self.volume.set_sensitive(self.sound.mainplayer.playing)
 
-    def _on_playing_changed(self, player, playing):
-        playing = self.sound.mainplayer.get_property('playing')
-        self.volume.set_sensitive(playing)
-
-    def _on_preset_changed(self, player):
-        self.sound.mainplayer.set_property('playing', True)
+    def _on_preset_changed(self, _player):
         if self.sound.saved_volume:
             self.volume.set_value(self.sound.saved_volume)
             self.player.play()
@@ -146,8 +143,8 @@ class SoundsGroup(Gtk.Box):
     Group SoundRow with a title
     """
 
-    def __init__(self, title, **kwargs):
-        super().__init__(**kwargs)
+    def __init__(self, title):
+        super().__init__()
 
         # Setup box props
         self.props.orientation = Gtk.Orientation.VERTICAL

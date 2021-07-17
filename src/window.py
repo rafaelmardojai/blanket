@@ -100,9 +100,7 @@ class BlanketWindow(Handy.ApplicationWindow):
     box = Gtk.Template.Child()
 
     playpause_btn = Gtk.Template.Child()
-
     volume = Gtk.Template.Child()
-
     quit_revealer = Gtk.Template.Child()
 
     def __init__(self, mainplayer, **kwargs):
@@ -134,9 +132,8 @@ class BlanketWindow(Handy.ApplicationWindow):
 
         # Wire playpause button
         self.mainplayer.bind_property(
-            'playing', self.playpause_btn, 'playing', GObject.BindingFlags.DEFAULT
+            'playing', self.playpause_btn, 'playing', GObject.BindingFlags.SYNC_CREATE
         )
-        self.playpause_btn.playing = self.mainplayer.playing
 
         # If background-playback enabled show quit action on menu
         if Settings.get().get_value('background-playback'):
@@ -255,5 +252,5 @@ class BlanketWindow(Handy.ApplicationWindow):
                 self.custom_sounds.add(sound)
                 self.custom_sounds.show_all()
 
-    def _on_preset_selected(self, _chooser, preset):
+    def _on_preset_selected(self, _chooser, _preset):
         self.mainplayer.preset_changed()

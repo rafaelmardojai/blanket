@@ -45,8 +45,8 @@ class Application(Gtk.Application):
         # App main player
         self.mainplayer = MainPlayer()
         # Load saved props
-        self.mainplayer.set_property('volume', Settings.get().volume)
-        self.mainplayer.set_property('playing', Settings.get().playing)
+        self.mainplayer.volume = Settings.get().volume
+        self.mainplayer.playing = Settings.get().playing
 
         # Start MPRIS server
         MPRIS(self)
@@ -146,32 +146,30 @@ class Application(Gtk.Application):
         self.activate()
         return 0
 
-    def on_open(self, action, param):
+    def on_open(self, _action, _param):
         self.window.open_audio()
 
-    def on_playpause(self, action=None, param=None):
+    def on_playpause(self, _action=None, _param=None):
         # Reverse self.playing bool value
-        playing = self.mainplayer.get_property('playing')
+        playing = self.mainplayer.playing
         playing = False if playing else True
 
         # Change mainplayer playing
-        self.mainplayer.set_property('playing', playing)
+        self.mainplayer.playing = playing
 
     def on_background(self, action, value):
         action.set_state(value)
         Settings.get().set_boolean('background-playback', value)
-        if value:
-            self.window.quit_revealer.set_reveal_child(True)
-        else:
-            self.window.quit_revealer.set_reveal_child(False)
 
-    def on_preferences(self, action, param):
+        self.window.quit_revealer.set_reveal_child(value)
+
+    def on_preferences(self, _action, _param):
         window = PreferencesWindow(self.window)
         window.set_transient_for(self.window)
         window.set_modal(True)
         window.present()
 
-    def on_shortcuts(self, action, param):
+    def on_shortcuts(self, _action, _param):
         window = Gtk.Builder.new_from_resource(
             '/com/rafaelmardojai/Blanket/shortcuts.ui'
         ).get_object('shortcuts')
@@ -180,27 +178,27 @@ class Application(Gtk.Application):
         window.set_modal(True)
         window.present()
 
-    def on_about(self, action, param):
+    def on_about(self, _action, _param):
         dialog = AboutDialog(self.version)
         dialog.set_transient_for(self.window)
         dialog.set_modal(True)
         dialog.present()
 
-    def on_close(self, action, param):
+    def on_close(self, _action, _param):
         self.window.close()
 
-    def on_quit(self, action, param):
+    def on_quit(self, _action, _param):
         self.quit()
 
     def _save_settings(self):
         # Save scroll position
         Settings.get().scroll_position = self.window.vscroll.get_value()
         # Save mainplayer volume
-        Settings.get().volume = self.mainplayer.get_property('volume')
+        Settings.get().volume = self.mainplayer.volume
         # Save mainplayer playing state
-        Settings.get().playing = self.mainplayer.get_property('playing')
+        Settings.get().playing = self.mainplayer.playing
 
-    def _on_window_delete(self, widget, event):
+    def _on_window_delete(self, _widget, _event):
         background = Settings.get().get_value('background-playback')
 
         if background:
