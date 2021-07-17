@@ -30,7 +30,7 @@ sources = [
   'about.py',
   'sound.py',
   'widgets.py',
-  'sounds_settings.py',
+  'settings.py',
   'mpris.py'
 ]
 

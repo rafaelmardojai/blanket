@@ -17,7 +17,7 @@ Gst.init(None)
 
 from blanket.mpris import MPRIS
 from blanket.sound import MainPlayer
-from blanket.sounds_settings import SoundsSettings
+from blanket.settings import Settings
 from blanket.window import BlanketWindow
 from blanket.preferences import PreferencesWindow
 from blanket.about import AboutDialog
@@ -42,19 +42,11 @@ class Application(Gtk.Application):
         self.window_hidden = False
         # App version
         self.version = version
-
-        # Settings
-        self.settings = Gio.Settings.new('com.rafaelmardojai.Blanket')
-        self.sounds_settings = SoundsSettings(self.settings)
-        # Saved playing state
-        self.volume = self.settings.get_double('volume')
-        self.playing = self.settings.get_boolean('playing')
-
         # App main player
         self.mainplayer = MainPlayer()
         # Load saved props
-        self.mainplayer.set_property('volume', self.volume)
-        self.mainplayer.set_property('playing', self.playing)
+        self.mainplayer.set_property('volume', Settings.get().volume)
+        self.mainplayer.set_property('playing', Settings.get().playing)
 
         # Start MPRIS server
         MPRIS(self)
@@ -112,7 +104,7 @@ class Application(Gtk.Application):
         for a in actions:
             if 'state' in a:
                 action = Gio.SimpleAction.new_stateful(
-                    a['name'], None, self.settings.get_value(a['name']))
+                    a['name'], None, Settings.get().get_value(a['name']))
                 action.connect('change-state', a['func'])
             else:
                 action = Gio.SimpleAction.new(a['name'], None)
@@ -133,8 +125,7 @@ class Application(Gtk.Application):
     def do_activate(self):
         self.window = self.props.active_window
         if not self.window:
-            self.window = BlanketWindow(self.mainplayer, self.settings,
-                                        self.sounds_settings, application=self)
+            self.window = BlanketWindow(self.mainplayer, application=self)
 
         if self.window_hidden:
             self.window.hide()
@@ -143,7 +134,7 @@ class Application(Gtk.Application):
             self.window.present()
 
         # Update window elements to saved playing state
-        self.window.update_playing_ui(self.playing)
+        self.window.update_playing_ui(Settings.get().playing)
         # Connect window delete-event signal to _on_window_delete
         self.window.connect('delete-event', self._on_window_delete)
 
@@ -162,24 +153,24 @@ class Application(Gtk.Application):
 
     def on_playpause(self, action=None, param=None):
         # Reverse self.playing bool value
-        self.playing = False if self.playing else True
+        playing = self.mainplayer.get_property('playing')
+        playing = False if playing else True
 
         # Change mainplayer playing
-        self.mainplayer.set_property('playing', self.playing)
-
+        self.mainplayer.set_property('playing', playing)
         # Update window elements to new playing state
-        self.window.update_playing_ui(self.playing)
+        self.window.update_playing_ui(playing)
 
     def on_background(self, action, value):
         action.set_state(value)
-        self.settings.set_boolean('background-playback', value)
+        Settings.get().set_boolean('background-playback', value)
         if value:
             self.window.quit_revealer.set_reveal_child(True)
         else:
             self.window.quit_revealer.set_reveal_child(False)
 
     def on_preferences(self, action, param):
-        window = PreferencesWindow(self.window, self.settings)
+        window = PreferencesWindow(self.window)
         window.set_transient_for(self.window)
         window.set_modal(True)
         window.present()
@@ -207,21 +198,14 @@ class Application(Gtk.Application):
 
     def _save_settings(self):
         # Save scroll position
-        scroll_position = self.window.vscroll.get_value()
-        self.settings.set_double('scroll-position', scroll_position)
-
+        Settings.get().scroll_position = self.window.vscroll.get_value()
         # Save mainplayer volume
-        volume = self.mainplayer.get_property('volume')
-        self.settings.set_double('volume', volume)
+        Settings.get().volume = self.mainplayer.get_property('volume')
         # Save mainplayer playing state
-        playing = self.mainplayer.get_property('playing')
-        self.settings.set_boolean('playing', playing)
-
-        # Save sounds settings
-        self.sounds_settings.save_all()
+        Settings.get().playing = self.mainplayer.get_property('playing')
 
     def _on_window_delete(self, widget, event):
-        background = self.settings.get_value('background-playback')
+        background = Settings.get().get_value('background-playback')
 
         if background:
             self._save_settings() # Save settings

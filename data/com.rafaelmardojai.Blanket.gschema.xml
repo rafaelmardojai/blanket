@@ -1,29 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="blanket">
-	<schema id="com.rafaelmardojai.Blanket" path="/com/rafaelmardojai/Blanket/">
-	  <key type="b" name="autostart">
-        <default>false</default>
-    </key>
-	  <key type="b" name="dark-mode">
-        <default>false</default>
-    </key>
-    <key type="d" name="scroll-position">
-        <default>0</default>
-    </key>
-    <key type="d" name="volume">
-        <default>1</default>
-    </key>
-    <key type="b" name="playing">
-        <default>true</default>
-    </key>
-    <key type="b" name="background-playback">
-        <default>false</default>
-    </key>
-    <key type="a{ss}" name="custom-audios">
-        <default>{}</default>
-    </key>
-    <key type="a{sd}" name="sounds-volume">
-        <default>{}</default>
-    </key>
-	</schema>
+    <!-- Global Settings -->
+    <schema id="com.rafaelmardojai.Blanket" path="/com/rafaelmardojai/Blanket/">
+        <key type="b" name="autostart">
+            <default>false</default>
+        </key>
+        <key type="b" name="dark-mode">
+            <default>false</default>
+        </key>
+        <key type="d" name="scroll-position">
+            <default>0</default>
+        </key>
+        <key type="d" name="volume">
+            <default>1</default>
+        </key>
+        <key type="b" name="playing">
+            <default>true</default>
+        </key>
+        <key type="b" name="background-playback">
+            <default>false</default>
+        </key>
+        <key type="a{ss}" name="custom-audios">
+            <default>{}</default>
+        </key>
+        <key type="as" name="presets">
+            <default>['e52f7134-cff9-463b-9f7d-3740d2cc1d57']</default>
+        </key>
+        <key type="s" name="active-preset">
+            <default>'e52f7134-cff9-463b-9f7d-3740d2cc1d57'</default>
+        </key>
+        <!-- Deprecated: Use presets -->
+        <key type="a{sd}" name="sounds-volume">
+            <default>{}</default>
+        </key>
+    </schema>
+
+    <!-- Preset -->
+    <schema id="com.rafaelmardojai.Blanket.preset">
+        <key name="visible-name" type="s">
+            <!-- Translators: Keep single quote please! -->
+            <default l10n="messages" context="visible-name">'Default'</default>
+        </key>
+
+        <key type="a{sd}" name="sounds-volume">
+            <default>{}</default>
+        </key>
+    </schema>
 </schemalist>

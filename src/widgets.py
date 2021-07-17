@@ -20,15 +20,13 @@ class SoundRow(Gtk.ListBoxRow):
     playing = Gtk.Template.Child()
     volume = Gtk.Template.Child()
 
-    def __init__(self, sound, model, settings, **kwargs):
+    def __init__(self, sound, model, **kwargs):
         super().__init__(**kwargs)
 
         # SoundObject
         self.sound = sound
         # Gio.ListStore
         self.model = model
-        # Settings
-        self.settings = settings
 
         # Get playing state
         playing = self.sound.mainplayer.get_property('playing')
@@ -46,9 +44,8 @@ class SoundRow(Gtk.ListBoxRow):
         # Connnect scale with volume function
         self.volume.connect('value-changed', self.change_vol)
         # Load saved volume
-        saved_vol = self.settings.get_sound_volume(self.sound.name)
-        if saved_vol and saved_vol > 0:
-            self.volume.set_value(saved_vol)
+        if self.sound.saved_volume and self.sound.saved_volume > 0:
+            self.volume.set_value(self.sound.saved_volume)
 
         if self.sound.custom:
             # Add a remove button
@@ -80,7 +77,7 @@ class SoundRow(Gtk.ListBoxRow):
         # Set player volume
         self.player.set_virtual_volume(volume)
         # Save volume on settings
-        self.settings.set_sound_volume(self.sound.name, volume)
+        self.sound.saved_volume = volume
         # Toggle playing indicator
         if volume == 0:
             self.playing.set_reveal_child(False)
@@ -95,7 +92,7 @@ class SoundRow(Gtk.ListBoxRow):
         # Remove player
         self.player.remove()
         # Remove audio from settings
-        self.settings.remove_custom_audio(self.sound.name)
+        self.sound.remove()
 
     def _on_playing_changed(self, player, playing):
         playing = self.sound.mainplayer.get_property('playing')
@@ -107,15 +104,12 @@ class SoundsGroup(Gtk.Box):
     Group SoundRow with a title
     """
 
-    def __init__(self, title, settings, **kwargs):
+    def __init__(self, title, **kwargs):
         super().__init__(**kwargs)
 
         # Setup box props
         self.props.orientation = Gtk.Orientation.VERTICAL
         self.props.spacing = 6
-
-        # Settings
-        self.settings = settings
 
         # Create GioListStore to store sounds
         self.model = Gio.ListStore.new(SoundObject)
@@ -137,6 +131,6 @@ class SoundsGroup(Gtk.Box):
         self.model.append(sound)
 
     def _create_sound_widget(self, sound):
-        widget = SoundRow(sound, self.model, self.settings)
+        widget = SoundRow(sound, self.model)
         return widget
 

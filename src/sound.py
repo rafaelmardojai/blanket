@@ -3,6 +3,7 @@
 
 from gi.repository import GObject, Gst, GstPlayer
 
+from blanket.settings import Settings
 
 class MainPlayer(GObject.GObject):
     """
@@ -22,7 +23,7 @@ class SoundObject(GObject.Object):
     """
 
     def __init__(self, name, uri=None, title=None, mainplayer=None,
-                 settings=None, custom=False, **kwargs):
+                 custom=False, **kwargs):
         super().__init__(**kwargs)
 
         resource_tmpl = 'resource:/com/rafaelmardojai/Blanket/sounds/{}.ogg'
@@ -33,11 +34,19 @@ class SoundObject(GObject.Object):
         self.title = title if title else name
         self.icon_name = icon_tmpl.format(name)
         self.mainplayer = mainplayer
-        self.settings = settings
         self.custom = custom
 
-    def get_saved_volume(self):
-        return self.settings.get_sound_volume(self.name)
+    @property
+    def saved_volume(self):
+        return Settings.get().get_sound_volume(self.name)
+    
+    @saved_volume.setter
+    def saved_volume(self, volume):
+        Settings.get().set_sound_volume(self.name, volume)
+
+    def remove(self):
+        if self.custom:
+            Settings.get().remove_custom_audio(self.name)
 
 
 class SoundPlayer(GstPlayer.Player):
@@ -64,7 +73,7 @@ class SoundPlayer(GstPlayer.Player):
         bus.add_signal_watch()
         bus.connect('message', self._on_bus_message)
 
-        # Connect mainplayer volume-changed signal
+        # Connect mainplayer volume signal
         self.volume_hdlr = self.sound.mainplayer.connect(
             'notify::volume',
             self._on_main_volume_changed)
@@ -112,7 +121,7 @@ class SoundPlayer(GstPlayer.Player):
             self.play()
 
     def _on_main_volume_changed(self, player, volume):
-        if not self.__vol_zero(self.sound.get_saved_volume()):
+        if not self.__vol_zero(self.sound.saved_volume):
             # Set volume again when mainplayer volume changes
             self.set_virtual_volume(self.saved_volume)
 

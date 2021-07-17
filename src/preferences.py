@@ -7,6 +7,8 @@ from random import randint
 from gettext import gettext as _
 from gi.repository import Gio, GLib, Gtk, Handy
 
+from blanket.settings import Settings
+
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preferences.ui')
 class PreferencesWindow(Handy.PreferencesWindow):
@@ -15,18 +17,17 @@ class PreferencesWindow(Handy.PreferencesWindow):
     dark = Gtk.Template.Child()
     autostart = Gtk.Template.Child()
 
-    def __init__(self, window, settings, **kwargs):
+    def __init__(self, window, **kwargs):
         super().__init__(**kwargs)
 
         self.window = window
-        self.settings = settings
 
-        self.settings.bind('dark-mode', self.dark, 'active',
+        Settings.get().bind('dark-mode', self.dark, 'active',
                            Gio.SettingsBindFlags.DEFAULT)
         self.dark.connect('notify::active', self._toggle_dark)
 
         self.autostart_failed = False
-        self.autostart_saved = self.settings.get_boolean('autostart')
+        self.autostart_saved = Settings.get().get_boolean('autostart')
         self.autostart.set_active(self.autostart_saved)
         self.autostart.connect('notify::active', self._toggle_autostart)
 
@@ -120,7 +121,7 @@ class PreferencesWindow(Handy.PreferencesWindow):
                 error_dialog.destroy()
 
         self.autostart.set_active(autostart)
-        self.settings.set_boolean('autostart', autostart)
+        Settings.get().set_boolean('autostart', autostart)
         return
 
     def __get_window_identifier(self):
