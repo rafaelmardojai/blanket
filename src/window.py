@@ -136,6 +136,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.mainplayer.bind_property(
             'playing', self.playpause_btn, 'playing', GObject.BindingFlags.DEFAULT
         )
+        self.playpause_btn.playing = self.mainplayer.playing
 
         # If background-playback enabled show quit action on menu
         if Settings.get().get_value('background-playback'):

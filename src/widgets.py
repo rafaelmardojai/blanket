@@ -1,7 +1,7 @@
 # Copyright 2020-2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import GLib, Gio, Gtk, Handy
+from gi.repository import GLib, Gio, GObject, Gtk, Handy
 
 from blanket.sound import SoundObject, SoundPlayer
 
@@ -14,8 +14,14 @@ class PlayPauseButton(Gtk.Button):
     def __init__(self):
         super().__init__()
 
-        self.pause_img = Gtk.Image.new_from_icon_name('media-playback-pause-symbolic')
-        self.play_img = Gtk.Image.new_from_icon_name('media-playback-start-symbolic')
+        self.pause_img = Gtk.Image.new_from_icon_name(
+            'media-playback-pause-symbolic',
+            Gtk.IconSize.MENU
+        )
+        self.play_img = Gtk.Image.new_from_icon_name(
+            'media-playback-start-symbolic',
+            Gtk.IconSize.MENU
+        )
 
         self.connect('notify::playing', self._on_playing_changed)
 

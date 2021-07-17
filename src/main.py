@@ -133,8 +133,6 @@ class Application(Gtk.Application):
         else:
             self.window.present()
 
-        # Update window elements to saved playing state
-        self.window.update_playing_ui(Settings.get().playing)
         # Connect window delete-event signal to _on_window_delete
         self.window.connect('delete-event', self._on_window_delete)
 
