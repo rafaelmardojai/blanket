@@ -54,13 +54,6 @@ class SoundRow(Gtk.ListBoxRow):
         # Gio.ListStore
         self.model = model
 
-        # Get playing state
-        self.volume.set_sensitive(self.sound.mainplayer.playing)
-        # Connect playing state signal
-        self.sound.mainplayer.connect(
-            'notify::playing',
-            self._on_playing_changed
-        )
         # Connect mainplayer preset-changed signal
         self.sound.mainplayer.connect(
             'preset-changed',
@@ -69,6 +62,7 @@ class SoundRow(Gtk.ListBoxRow):
 
         # Create a new SoundPlayer
         self.player = SoundPlayer(self.sound)
+        self.player.connect('state_changed', self._on_player_state_changed)
 
         # Set title
         self.title.set_label(self.sound.title)
@@ -110,7 +104,13 @@ class SoundRow(Gtk.ListBoxRow):
         self.player.remove()
         # Remove audio from settings
         self.sound.remove()
-    
+
+    def _toggle_playing_indicator(self, show):
+        if not show:
+            self.playing.set_reveal_child(False)
+        elif not self.playing.get_reveal_child():
+            self.playing.set_reveal_child(True)
+
     def _on_volume_changed(self, scale):
         # Round volume value
         volume = round(scale.get_value(), 2)
@@ -118,16 +118,17 @@ class SoundRow(Gtk.ListBoxRow):
         self.player.set_virtual_volume(volume)
         # Save volume on settings
         self.sound.saved_volume = volume
-        # Toggle playing indicator
+        # Toggle active indicator
         if volume == 0:
-            self.playing.set_reveal_child(False)
-            Gtk.StyleContext.remove_class(self.get_style_context(), 'playing')
-        elif not self.playing.get_reveal_child():
-            self.playing.set_reveal_child(True)
-            Gtk.StyleContext.add_class(self.get_style_context(), 'playing')
+            self.get_style_context().remove_class('playing')
+        elif not self.get_style_context().has_class('playing'):
+            self.get_style_context().add_class('playing')
 
-    def _on_playing_changed(self, _player, _pspec):
-        self.volume.set_sensitive(self.sound.mainplayer.playing)
+    def _on_player_state_changed(self, _player, state):
+        if state == GstPlayer.PlayerState.PLAYING:
+            self._toggle_playing_indicator(True)
+        else:
+            self._toggle_playing_indicator(False)
 
     def _on_preset_changed(self, _player):
         if self.sound.saved_volume:
