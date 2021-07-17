@@ -9,6 +9,7 @@ from gi.repository import GLib, GObject, Gio, Gtk, Handy
 from blanket.settings import Settings
 from blanket.sound import SoundObject
 from blanket.widgets import SoundsGroup
+from blanket.presets import PresetChooser, PresetControl
 
 SOUNDS = [
     {
@@ -93,6 +94,8 @@ SOUNDS = [
 class BlanketWindow(Handy.ApplicationWindow):
     __gtype_name__ = 'BlanketWindow'
 
+    headerbar = Gtk.Template.Child()
+    flap = Gtk.Template.Child()
     scrolled_window = Gtk.Template.Child()
     box = Gtk.Template.Child()
 
@@ -134,6 +137,8 @@ class BlanketWindow(Handy.ApplicationWindow):
         if Settings.get().get_value('background-playback'):
             self.quit_revealer.set_reveal_child(True)
 
+        # Setup presets widgets
+        self.setup_presets()
         # Setup included/saved sounds
         self.setup_sounds()
         self.setup_custom_sounds()
@@ -147,6 +152,16 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.vscroll = self.scrolled_window.get_vadjustment()
         # Set saved scroll to vertical adjustment
         self.vscroll.set_value(saved_scroll)
+
+    def setup_presets(self):
+        self.presets = PresetChooser(self)
+        self.flap.set_flap(self.presets)
+
+        self.presets_chooser = PresetControl(self)
+        self.headerbar.pack_start(self.presets_chooser)
+        self.headerbar.child_set_property(self.presets_chooser, 'position', 0)
+
+        self.presets.connect('selected', self._on_preset_selected)
 
     def setup_sounds(self):
         # Setup default sounds
@@ -244,3 +259,5 @@ class BlanketWindow(Handy.ApplicationWindow):
                 self.custom_sounds.add(sound)
                 self.custom_sounds.show_all()
 
+    def _on_preset_selected(self, _chooser, preset):
+        self.mainplayer.preset_changed()

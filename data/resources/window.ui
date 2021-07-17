@@ -12,7 +12,7 @@
         <property name="can_focus">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="HdyHeaderBar" id="header_bar">
+          <object class="HdyHeaderBar" id="headerbar">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="title">Blanket</property>
@@ -54,29 +54,42 @@
           </object>
         </child>
         <child>
-          <object class="GtkScrolledWindow" id="scrolled_window">
+          <object class="HdyFlap" id="flap">
             <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="hscrollbar_policy">never</property>
-            <child>
-              <object class="GtkViewport">
+            <property name="reveal-flap">False</property>
+            <property name="fold-policy">always</property>
+            <child type="separator">
+              <object class="GtkSeparator">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow" id="scrolled_window">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="hscrollbar_policy">never</property>
                 <child>
-                  <object class="HdyClamp">
+                  <object class="GtkViewport">
                     <property name="visible">True</property>
-                    <property name="maximum-size">500</property>
-                    <property name="tightening-threshold">400</property>
+                    <property name="can_focus">False</property>
                     <child>
-                      <object class="GtkBox" id="box">
+                      <object class="HdyClamp">
                         <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="orientation">vertical</property>
-                        <property name="spacing">24</property>
-                        <property name="margin_top">24</property>
-                        <property name="margin_bottom">24</property>
-                        <property name="margin_start">6</property>
-                        <property name="margin_end">6</property>
+                        <property name="maximum-size">500</property>
+                        <property name="tightening-threshold">400</property>
+                        <child>
+                          <object class="GtkBox" id="box">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">24</property>
+                            <property name="margin_top">24</property>
+                            <property name="margin_bottom">24</property>
+                            <property name="margin_start">6</property>
+                            <property name="margin_end">6</property>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>

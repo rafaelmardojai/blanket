@@ -3,6 +3,10 @@
   font-weight: bold;
 }
 
+.h4 {
+  font-weight: bold;
+}
+
 .soundrow.playing .sound-icon {
   color: @theme_selected_bg_color;
 }

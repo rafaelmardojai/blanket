@@ -32,8 +32,15 @@ class SoundRow(Gtk.ListBoxRow):
         playing = self.sound.mainplayer.get_property('playing')
         self.volume.set_sensitive(playing)
         # Connect playing state signal
-        self.sound.mainplayer.connect('notify::playing',
-                                      self._on_playing_changed)
+        self.sound.mainplayer.connect(
+            'notify::playing',
+            self._on_playing_changed
+        )
+        # Connect mainplayer preset-changed signal
+        self.sound.mainplayer.connect(
+            'preset-changed',
+            self._on_preset_changed
+        )
 
         # Create a new SoundPlayer
         self.player = SoundPlayer(self.sound)
@@ -97,6 +104,15 @@ class SoundRow(Gtk.ListBoxRow):
     def _on_playing_changed(self, player, playing):
         playing = self.sound.mainplayer.get_property('playing')
         self.volume.set_sensitive(playing)
+
+    def _on_preset_changed(self, player):
+        self.sound.mainplayer.set_property('playing', True)
+        if self.sound.saved_volume:
+            self.volume.set_value(self.sound.saved_volume)
+            self.player.play()
+        else:
+            self.volume.set_value(0.0)
+
 
 class SoundsGroup(Gtk.Box):
     """

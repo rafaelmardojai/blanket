@@ -9,12 +9,19 @@ class MainPlayer(GObject.GObject):
     """
     Virtual app sounds player
     """
+    __gsignals__ = {
+        'preset-changed': (GObject.SIGNAL_RUN_FIRST, None, ())
+    }
 
     playing = GObject.Property(type=bool, default=True)
     volume = GObject.Property(type=float, default=0)
 
     def __init__(self):
         super().__init__()
+
+    def preset_changed(self):
+        self.set_property('playing', True)
+        self.emit('preset-changed')
 
 
 class SoundObject(GObject.Object):

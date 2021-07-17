@@ -4,6 +4,9 @@
     <!-- UI Files -->
     <file>window.ui</file>
     <file>preferences.ui</file>
+    <file>preset-chooser.ui</file>
+    <file>preset-control.ui</file>
+    <file>preset-row.ui</file>
     <file>about.ui</file>
     <file>shortcuts.ui</file>
     <file>sound-row.ui</file>

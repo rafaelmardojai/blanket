@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.0 -->
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <template class="PresetChooser" parent="GtkBox">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="orientation">vertical</property>
+    <property name="width-request">250</property>
+    <style>
+      <class name="background"/>
+    </style>
+    <child>
+      <object class="GtkListBox" id="presets_list">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+      <packing>
+        <property name="expand">True</property>
+      </packing>
+    </child>
+    <child>
+      <object class="GtkSeparator">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="margin">8</property>
+        <child>
+          <object class="GtkMenuButton" id="add_btn">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="popover">add_preset</property>
+            <property name="label">Add Preset</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </template>
+  <object class="GtkPopover" id="add_preset">
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">6</property>
+        <property name="margin">8</property>
+        <child>
+          <object class="GtkLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="xalign">0</property>
+            <property name="label" translatable="yes">Preset Name</property>
+            <style>
+              <class name="h4"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="spacing">6</property>
+            <child>
+              <object class="GtkEntry" id="name_entry">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="create_btn">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label">Create</property>
+                <style>
+                  <class name="suggested-action"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
