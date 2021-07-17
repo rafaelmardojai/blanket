@@ -6,6 +6,26 @@ from gi.repository import GLib, Gio, Gtk, Handy
 from blanket.sound import SoundObject, SoundPlayer
 
 
+class PlayPauseButton(Gtk.Button):
+    __gtype_name__ = 'PlayPauseButton'
+
+    playing = GObject.Property(type=bool, default=True)
+
+    def __init__(self):
+        super().__init__()
+
+        self.pause_img = Gtk.Image.new_from_icon_name('media-playback-pause-symbolic')
+        self.play_img = Gtk.Image.new_from_icon_name('media-playback-start-symbolic')
+
+        self.connect('notify::playing', self._on_playing_changed)
+
+    def _on_playing_changed(self, _object, _pspec):
+        if self.playing:
+            self.set_image(self.pause_img)
+        else:
+            self.set_image(self.play_img)
+
+
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/sound-row.ui')
 class SoundRow(Gtk.ListBoxRow):
     __gtype_name__ = 'SoundRow'

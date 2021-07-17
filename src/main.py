@@ -158,8 +158,6 @@ class Application(Gtk.Application):
 
         # Change mainplayer playing
         self.mainplayer.set_property('playing', playing)
-        # Update window elements to new playing state
-        self.window.update_playing_ui(playing)
 
     def on_background(self, action, value):
         action.set_state(value)

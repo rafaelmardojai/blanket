@@ -8,7 +8,7 @@ from gi.repository import GLib, GObject, Gio, Gtk, Handy
 
 from blanket.settings import Settings
 from blanket.sound import SoundObject
-from blanket.widgets import SoundsGroup
+from blanket.widgets import PlayPauseButton, SoundsGroup
 from blanket.presets import PresetChooser, PresetControl
 
 SOUNDS = [
@@ -100,7 +100,6 @@ class BlanketWindow(Handy.ApplicationWindow):
     box = Gtk.Template.Child()
 
     playpause_btn = Gtk.Template.Child()
-    playpause_icon = Gtk.Template.Child()
 
     volume = Gtk.Template.Child()
 
@@ -132,6 +131,11 @@ class BlanketWindow(Handy.ApplicationWindow):
                                      GObject.BindingFlags.BIDIRECTIONAL)
         # Set volume scale value on first run
         self.volume.set_value(self.mainplayer.get_property('volume'))
+
+        # Wire playpause button
+        self.mainplayer.bind_property(
+            'playing', self.playpause_btn, 'playing', GObject.BindingFlags.DEFAULT
+        )
 
         # If background-playback enabled show quit action on menu
         if Settings.get().get_value('background-playback'):
@@ -207,15 +211,6 @@ class BlanketWindow(Handy.ApplicationWindow):
                     custom=True)
             # Add SoundObject to SoundsGroup
             self.custom_sounds.add(sound)
-
-    def update_playing_ui(self, playing):
-        # Change widgets states
-        if playing:
-            self.playpause_icon.set_from_icon_name(
-                    'media-playback-pause-symbolic', Gtk.IconSize.MENU)
-        else:
-            self.playpause_icon.set_from_icon_name(
-                    'media-playback-start-symbolic', Gtk.IconSize.MENU)
 
     def open_audio(self, _widget=None, _row=None):
 
