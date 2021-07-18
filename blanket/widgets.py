@@ -59,6 +59,11 @@ class SoundRow(Gtk.ListBoxRow):
             'preset-changed',
             self._on_preset_changed
         )
+        # Connect mainplayer reset-volumes signal
+        self.sound.mainplayer.connect(
+            'reset-volumes',
+            self._on_reset_volumes
+        )
 
         # Create a new SoundPlayer
         self.player = SoundPlayer(self.sound)
@@ -136,6 +141,9 @@ class SoundRow(Gtk.ListBoxRow):
             self.player.play()
         else:
             self.volume.set_value(0.0)
+
+    def _on_reset_volumes(self, _player):
+        self.volume.set_value(0.0)
 
 
 class SoundsGroup(Gtk.Box):

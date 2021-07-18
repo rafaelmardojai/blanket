@@ -161,11 +161,12 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.presets = PresetChooser(self)
         self.flap.set_flap(self.presets)
 
-        self.presets_chooser = PresetControl(self)
-        self.headerbar.pack_start(self.presets_chooser)
-        self.headerbar.child_set_property(self.presets_chooser, 'position', 0)
+        self.presets_control = PresetControl(self)
+        self.headerbar.pack_start(self.presets_control)
+        self.headerbar.child_set_property(self.presets_control, 'position', 0)
 
         self.presets.connect('selected', self._on_preset_selected)
+        self.presets_control.connect('reset', self._on_reset_volumes)
 
     def setup_sounds(self):
         # Setup default sounds
@@ -256,3 +257,6 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     def _on_preset_selected(self, _chooser, _preset):
         self.mainplayer.preset_changed()
+
+    def _on_reset_volumes(self, _control, _preset):
+        self.mainplayer.reset_volumes()

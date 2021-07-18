@@ -107,6 +107,9 @@ class PresetChooser(Gtk.Box):
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preset-control.ui')
 class PresetControl(Gtk.Box):
     __gtype_name__ = 'PresetControl'
+    __gsignals__ = {
+        'reset': (GObject.SIGNAL_RUN_FIRST, None, (PresetObject,))
+    }
 
     toggle_btn = Gtk.Template.Child()
     preset_name = Gtk.Template.Child()
@@ -143,6 +146,7 @@ class PresetControl(Gtk.Box):
         self.chooser.connect('selected', self.__on_preset_changed)
 
         # Wire buttons
+        self.volume_btn.connect('clicked', self._reset_volumes)
         self.rename_btn.connect('clicked', self._show_rename)
         self.delete_btn.connect('clicked', self._show_delete)
         self.rename_cancel_btn.connect('clicked', self._go_back)
@@ -159,6 +163,9 @@ class PresetControl(Gtk.Box):
 
         # If it's default preset, don't allow rename or delete
         self._update_sensitives()
+
+    def _reset_volumes(self, _button):
+        self.emit('reset', self.preset)
 
     def _show_rename(self, _button):
         self.rename.popup()

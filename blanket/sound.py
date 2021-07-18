@@ -12,7 +12,8 @@ class MainPlayer(GObject.GObject):
     """
     __gtype_name__ = 'MainPlayer'
     __gsignals__ = {
-        'preset-changed': (GObject.SIGNAL_RUN_FIRST, None, ())
+        'preset-changed': (GObject.SIGNAL_RUN_FIRST, None, ()),
+        'reset-volumes': (GObject.SIGNAL_RUN_FIRST, None, ())
     }
 
     playing = GObject.Property(type=bool, default=True)
@@ -24,6 +25,9 @@ class MainPlayer(GObject.GObject):
     def preset_changed(self):
         self.playing = True
         self.emit('preset-changed')
+
+    def reset_volumes(self):
+        self.emit('reset-volumes')
 
 
 class SoundObject(GObject.Object):
