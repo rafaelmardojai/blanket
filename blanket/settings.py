@@ -24,6 +24,7 @@ class Settings(Gio.Settings):
         """Return an active instance of Settings."""
         if Settings.instance is None:
             Settings.instance = Settings.new()
+            Settings.instance.migrate_legacy_volumes()
 
         return Settings.instance
 
@@ -187,3 +188,10 @@ class Settings(Gio.Settings):
     @legacy_sounds_volume.setter
     def legacy_sounds_volume(self, volumes_dict):
         self.set_value('sounds-volume', GLib.Variant('a{sd}', volumes_dict))
+
+    def migrate_legacy_volumes(self):
+        """ Migrate legacy volumes to Default preset. """
+        legacy_volumes = self.legacy_sounds_volume
+        if legacy_volumes:
+            self.set_preset_volumes(self.default_preset, legacy_volumes)
+            self.legacy_sounds_volume = {}
