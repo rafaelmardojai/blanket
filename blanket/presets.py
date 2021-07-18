@@ -125,6 +125,7 @@ class PresetControl(Gtk.Box):
     __gtype_name__ = 'PresetControl'
 
     toggle_btn = Gtk.Template.Child()
+    preset_name = Gtk.Template.Child()
 
     menu = Gtk.Template.Child()
     volume_btn = Gtk.Template.Child()
@@ -141,7 +142,6 @@ class PresetControl(Gtk.Box):
     delete_cancel_btn = Gtk.Template.Child()
 
     preset = None
-    preset_name = None
     default_preset = None
     name_binding = None
 
@@ -170,7 +170,7 @@ class PresetControl(Gtk.Box):
         self.default_preset = Settings.get().default_preset
         self.preset = self.chooser.selected
         self.name_binding = self.preset.bind_property(
-            'name', self.toggle_btn, 'label', GObject.BindingFlags.SYNC_CREATE
+            'name', self.preset_name, 'label', GObject.BindingFlags.SYNC_CREATE
         )
 
         # If it's default preset, don't allow rename or delete
@@ -214,7 +214,7 @@ class PresetControl(Gtk.Box):
         # Update preset
         self.preset = preset
         self.name_binding = self.preset.bind_property(
-            'name', self.toggle_btn, 'label', GObject.BindingFlags.SYNC_CREATE
+            'name', self.preset_name, 'label', GObject.BindingFlags.SYNC_CREATE
         )
 
         # If it's default preset, don't allow rename or delete
