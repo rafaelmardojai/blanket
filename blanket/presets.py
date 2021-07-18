@@ -35,8 +35,8 @@ class PresetChooser(Gtk.Box):
     __gsignals__ = {
         'selected': (GObject.SIGNAL_RUN_FIRST, None, (PresetObject,))
     }
-    selected_preset = GObject.Property(type=PresetObject)
-    selected_index = GObject.Property(type=int)
+    selected = GObject.Property(type=PresetObject)
+    index = GObject.Property(type=int)
 
     presets_list = Gtk.Template.Child()
     add_btn = Gtk.Template.Child()
@@ -54,22 +54,6 @@ class PresetChooser(Gtk.Box):
         self.presets_list.bind_model(self.model, self._create_widget)
 
         self.setup()
-
-    @property
-    def selected(self):
-        return self.get_property('selected-preset')
-
-    @selected.setter
-    def selected(self, preset):
-        self.set_property('selected-preset', preset)
-
-    @property
-    def index(self):
-        return self.get_property('selected-index')
-
-    @index.setter
-    def index(self, index):
-        self.set_property('selected-index', index)
 
     def setup(self):
         self.presets_list.connect('row-selected', self._on_preset_selected)
