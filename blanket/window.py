@@ -119,8 +119,9 @@ class BlanketWindow(Handy.ApplicationWindow):
     def setup(self):
         # Load dark theme
         gtk_settings = Gtk.Settings.get_default()
-        gtk_settings.set_property('gtk-application-prefer-dark-theme',
-                                  Settings.get().get_boolean('dark-mode'))
+        gtk_settings.set_property(
+            'gtk-application-prefer-dark-theme', Settings.get().dark_mode
+        )
 
         # Get volume scale adjustment
         vol_adjustment = self.volume.get_adjustment()
@@ -138,8 +139,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         )
 
         # If background-playback enabled show quit action on menu
-        if Settings.get().get_value('background-playback'):
-            self.quit_revealer.set_reveal_child(True)
+        self.quit_revealer.set_reveal_child(Settings.get().background)
 
         # Setup presets widgets
         self.setup_presets()

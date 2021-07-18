@@ -28,7 +28,7 @@ class PreferencesWindow(Handy.PreferencesWindow):
         self.dark.connect('notify::active', self._toggle_dark)
 
         self.autostart_failed = False
-        self.autostart_saved = Settings.get().get_boolean('autostart')
+        self.autostart_saved = Settings.get().autostart
         self.autostart.set_active(self.autostart_saved)
         self.autostart.connect('notify::active', self._toggle_autostart)
 
@@ -134,7 +134,7 @@ class PreferencesWindow(Handy.PreferencesWindow):
                 error_dialog.destroy()
 
         self.autostart.set_active(autostart)
-        Settings.get().set_boolean('autostart', autostart)
+        Settings.get().autostart = autostart
         return
 
     def __get_window_identifier(self):

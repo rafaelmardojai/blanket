@@ -162,7 +162,7 @@ class Application(Gtk.Application):
 
     def on_background(self, action, value):
         action.set_state(value)
-        Settings.get().set_boolean('background-playback', value)
+        Settings.get().background = value
 
         self.window.quit_revealer.set_reveal_child(value)
 
@@ -202,9 +202,7 @@ class Application(Gtk.Application):
         Settings.get().playing = self.mainplayer.playing
 
     def _on_window_delete(self, window, _event):
-        background = Settings.get().get_value('background-playback')
-
-        if background:
+        if Settings.get().background:
             self._save_settings()  # Save settings
             return window.hide_on_delete()
         else:

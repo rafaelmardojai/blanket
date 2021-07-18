@@ -28,6 +28,24 @@ class Settings(Gio.Settings):
 
         return Settings.instance
 
+    """ Autostart """
+    @property
+    def autostart(self):
+        return self.get_boolean('autostart')
+
+    @autostart.setter
+    def autostart(self, autostart):
+        self.set_boolean('autostart', autostart)
+
+    """ Dark Mode """
+    @property
+    def dark_mode(self):
+        return self.get_boolean('dark-mode')
+
+    @dark_mode.setter
+    def dark_mode(self, dark):
+        self.set_boolean('dark-mode', dark)
+
     """ Sounds view scroll position """
     @property
     def scroll_position(self):
@@ -54,6 +72,15 @@ class Settings(Gio.Settings):
     @playing.setter
     def playing(self, state):
         self.set_boolean('playing', state)
+
+    """ Background playing """
+    @property
+    def background(self):
+        return self.get_boolean('background-playback')
+
+    @background.setter
+    def background(self, background):
+        self.set_boolean('background-playback', background)
 
     """ Custom sounds """
     @property
