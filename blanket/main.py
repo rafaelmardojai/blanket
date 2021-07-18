@@ -63,40 +63,40 @@ class Application(Gtk.Application):
     def setup_actions(self):
         actions = [
             {
-                'name'  : 'open',
-                'func'  : self.on_open,
+                'name': 'open',
+                'func': self.on_open,
                 'accels': ['<Ctl>o']
             },
             {
-                'name'  : 'playpause',
-                'func'  : self.on_playpause,
+                'name': 'playpause',
+                'func': self.on_playpause,
                 'accels': ['<Ctl>m', 'space']
             },
             {
-                'name'  : 'background-playback',
-                'func'  : self.on_background,
-                'state' : True
+                'name': 'background-playback',
+                'func': self.on_background,
+                'state': True
             },
             {
-                'name'  : 'preferences',
-                'func'  : self.on_preferences
+                'name': 'preferences',
+                'func': self.on_preferences
             },
             {
-                'name'  : 'shortcuts',
-                'func'  : self.on_shortcuts
+                'name': 'shortcuts',
+                'func': self.on_shortcuts
             },
             {
-                'name'  : 'about',
-                'func'  : self.on_about
+                'name': 'about',
+                'func': self.on_about
             },
             {
-                'name'  : 'close',
-                'func'  : self.on_close,
+                'name': 'close',
+                'func': self.on_close,
                 'accels': ['<Ctl>w']
             },
             {
-                'name'  : 'quit',
-                'func'  : self.on_quit,
+                'name': 'quit',
+                'func': self.on_quit,
                 'accels': ['<Ctl>q']
             }
         ]
@@ -117,10 +117,13 @@ class Application(Gtk.Application):
 
     def load_css(self):
         css_provider = Gtk.CssProvider()
-        css_provider.load_from_resource('/com/rafaelmardojai/Blanket/style.css')
+        css_provider.load_from_resource(
+            '/com/rafaelmardojai/Blanket/style.css')
         screen = Gdk.Screen.get_default()
         style_context = Gtk.StyleContext()
-        style_context.add_provider_for_screen(screen, css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
+        style_context.add_provider_for_screen(
+            screen, css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER
+        )
 
     def do_activate(self):
         self.window = self.props.active_window
@@ -198,18 +201,19 @@ class Application(Gtk.Application):
         # Save mainplayer playing state
         Settings.get().playing = self.mainplayer.playing
 
-    def _on_window_delete(self, _widget, _event):
+    def _on_window_delete(self, window, _event):
         background = Settings.get().get_value('background-playback')
 
         if background:
-            self._save_settings() # Save settings
-            return widget.hide_on_delete()
+            self._save_settings()  # Save settings
+            return window.hide_on_delete()
         else:
             self.quit_from_window = True
             self.quit()
 
     def _on_shutdown(self, _app):
         self._save_settings()
+
 
 def main(version):
     app = Application(version)

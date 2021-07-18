@@ -5,6 +5,7 @@ from gi.repository import GObject, Gst, GstPlayer
 
 from blanket.settings import Settings
 
+
 class MainPlayer(GObject.GObject):
     """
     Virtual app sounds player
@@ -48,7 +49,7 @@ class SoundObject(GObject.Object):
     @property
     def saved_volume(self):
         return Settings.get().get_sound_volume(self.name)
-    
+
     @saved_volume.setter
     def saved_volume(self, volume):
         Settings.get().set_sound_volume(self.name, volume)
@@ -150,8 +151,7 @@ class SoundPlayer(GstPlayer.Player):
                     self.prerolled = True
 
             return True
-        
+
     def __vol_zero(self, volume=None):
         volume = volume if volume else self.get_volume()
         return True if volume == 0 else False
-

@@ -1,4 +1,6 @@
-# Forked from https://gitlab.gnome.org/World/lollypop/-/blob/master/lollypop/mpris.py
+# Forked from:
+# https://gitlab.gnome.org/World/lollypop/-/blob/master/lollypop/mpris.py
+#
 # Copyright (c) 2014-2020 Cedric Bellegarde <cedric.bellegarde@adishatz.org>
 # Copyright (c) 2016 Gaurav Narula
 # Copyright (c) 2016 Felipe Borges <felipeborges@gnome.org>
@@ -8,7 +10,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
-from gi.repository import Gio, GLib, Gst, Gtk
+from gi.repository import Gio, GLib, Gtk
 
 from random import randint
 
@@ -63,8 +65,8 @@ class Server:
                 invocation.return_value(variant)
             else:
                 invocation.return_value(None)
-        except:
-            pass
+        except Exception as e:
+            print(e)
 
 
 class MPRIS(Server):
@@ -130,8 +132,12 @@ class MPRIS(Server):
         self.__metadata["mpris:trackid"] = GLib.Variant(
             "o",
             "/com/rafaelmardojai/Blanket/Track/%s" % track_id)
-        self.__metadata["xesam:title"] = GLib.Variant("s", _("Listen to different sounds"))
-        self.__metadata["xesam:album"] = GLib.Variant("s", _("Listen to different sounds"))
+        self.__metadata["xesam:title"] = GLib.Variant(
+            "s", _("Listen to different sounds")
+        )
+        self.__metadata["xesam:album"] = GLib.Variant(
+            "s", _("Listen to different sounds")
+        )
         self.__metadata["xesam:artist"] = GLib.Variant("as", [_("Blanket")])
 
         self.__bus = Gio.bus_get_sync(Gio.BusType.SESSION, None)
@@ -142,7 +148,9 @@ class MPRIS(Server):
                                        None)
         Server.__init__(self, self.__bus, self.__MPRIS_PATH)
 
-        self.app.mainplayer.connect("notify::playing", self._on_playing_changed)
+        self.app.mainplayer.connect(
+            "notify::playing", self._on_playing_changed
+        )
         self.app.mainplayer.connect("notify::volume", self._on_volume_changed)
 
     def Raise(self):
@@ -155,7 +163,9 @@ class MPRIS(Server):
         self.app.on_playpause()
 
     def Get(self, interface, property_name):
-        if property_name in ["CanQuit", "CanRaise", "CanControl", "CanPlay", "CanPause"]:
+        if property_name in [
+            "CanQuit", "CanRaise", "CanControl", "CanPlay", "CanPause"
+        ]:
             return GLib.Variant("b", True)
         elif property_name == "Identity":
             return GLib.Variant("s", "Blanket")
@@ -166,7 +176,9 @@ class MPRIS(Server):
         elif property_name == "Metadata":
             return GLib.Variant("a{sv}", self.__metadata)
         elif property_name == "Volume":
-            return GLib.Variant("d", self.app.mainplayer.get_property('volume'))
+            return GLib.Variant(
+                "d", self.app.mainplayer.get_property('volume')
+            )
         else:
             return GLib.Variant("b", False)
 
@@ -206,7 +218,6 @@ class MPRIS(Server):
     def Introspect(self):
         return self.__doc__
 
-
     def _get_status(self):
         playing = self.app.mainplayer.get_property('playing')
         if playing:
@@ -215,13 +226,17 @@ class MPRIS(Server):
             return "Paused"
 
     def _on_volume_changed(self, player, volume):
-        self.PropertiesChanged(self.__MPRIS_PLAYER_IFACE,
-                               {"Volume": GLib.Variant("d",
-                                                       self.app.mainplayer.get_property('volume')), },
-                               [])
-
+        self.PropertiesChanged(
+            self.__MPRIS_PLAYER_IFACE,
+            {
+                "Volume": GLib.Variant(
+                    "d",
+                    self.app.mainplayer.get_property('volume')
+                ),
+            },
+            []
+        )
 
     def _on_playing_changed(self, player, playing):
         properties = {"PlaybackStatus": GLib.Variant("s", self._get_status())}
         self.PropertiesChanged(self.__MPRIS_PLAYER_IFACE, properties, [])
-

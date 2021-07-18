@@ -4,7 +4,7 @@
 import os
 
 from gettext import gettext as _
-from gi.repository import GLib, GObject, Gio, Gtk, Handy
+from gi.repository import GLib, GObject, Gtk, Handy
 
 from blanket.settings import Settings
 from blanket.sound import SoundObject
@@ -90,6 +90,7 @@ SOUNDS = [
     }
 ]
 
+
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/window.ui')
 class BlanketWindow(Handy.ApplicationWindow):
     __gtype_name__ = 'BlanketWindow'
@@ -132,7 +133,8 @@ class BlanketWindow(Handy.ApplicationWindow):
 
         # Wire playpause button
         self.mainplayer.bind_property(
-            'playing', self.playpause_btn, 'playing', GObject.BindingFlags.SYNC_CREATE
+            'playing', self.playpause_btn, 'playing',
+            GObject.BindingFlags.SYNC_CREATE
         )
 
         # If background-playback enabled show quit action on menu
@@ -190,7 +192,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         add_row = Gtk.ListBoxRow()
         add_row.set_selectable(False)
         add_row_box = Gtk.Box(
-            height_request = 34
+            height_request=34
         )
         add_row.add(add_row_box)
         add_row_icon = Gtk.Image.new_from_icon_name(
@@ -204,19 +206,19 @@ class BlanketWindow(Handy.ApplicationWindow):
         # Load saved custom audios
         for name, uri in Settings.get().custom_audios.items():
             # Create a new SoundObject
-            sound = SoundObject(name, uri=uri,
-                    mainplayer=self.mainplayer,
-                    custom=True)
+            sound = SoundObject(
+                name, uri=uri, mainplayer=self.mainplayer, custom=True
+            )
             # Add SoundObject to SoundsGroup
             self.custom_sounds.add(sound)
 
     def open_audio(self, _widget=None, _row=None):
 
         filters = {
-            'OGG'  : ['audio/ogg'],
-            'FLAC' : ['audio/x-flac'],
-            'WAV'  : ['audio/x-wav', 'audio/wav'],
-            'MP3'  : ['audio/mpeg'],
+            'OGG': ['audio/ogg'],
+            'FLAC': ['audio/x-flac'],
+            'WAV': ['audio/x-wav', 'audio/wav'],
+            'MP3': ['audio/mpeg'],
         }
 
         self.filechooser = Gtk.FileChooserNative.new(
@@ -230,7 +232,7 @@ class BlanketWindow(Handy.ApplicationWindow):
             audio_filter = Gtk.FileFilter()
             audio_filter.set_name(f)
             for mt in mts:
-                  audio_filter.add_mime_type(mt)
+                audio_filter.add_mime_type(mt)
             self.filechooser.add_filter(audio_filter)
 
         response = self.filechooser.run()
@@ -242,9 +244,9 @@ class BlanketWindow(Handy.ApplicationWindow):
                 uri = self.filechooser.get_uri()
 
                 # Create a new SoundObject
-                sound = SoundObject(name, uri=uri,
-                    mainplayer=self.mainplayer,
-                    custom=True)
+                sound = SoundObject(
+                    name, uri=uri, mainplayer=self.mainplayer, custom=True
+                )
                 # Save to settings
                 GLib.idle_add(Settings.get().add_custom_audio,
                               sound.name, sound.uri)

@@ -1,7 +1,7 @@
 # Copyright 2020-2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import GLib, Gio, GObject, Gtk
+from gi.repository import Gio, GObject, Gtk
 
 from blanket.settings import Settings
 
@@ -42,13 +42,13 @@ class PresetChooser(Gtk.Box):
     add_btn = Gtk.Template.Child()
     add_preset = Gtk.Template.Child()
     name_entry = Gtk.Template.Child()
-    create_btn  = Gtk.Template.Child()
+    create_btn = Gtk.Template.Child()
 
     def __init__(self, window, **kwargs):
         super().__init__(**kwargs)
 
         self.window = window
-        
+
         # Create GioListStore to store Presets
         self.model = Gio.ListStore.new(PresetObject)
         self.presets_list.bind_model(self.model, self._create_widget)
@@ -58,15 +58,15 @@ class PresetChooser(Gtk.Box):
     @property
     def selected(self):
         return self.get_property('selected-preset')
-    
+
     @selected.setter
     def selected(self, preset):
         self.set_property('selected-preset', preset)
-    
+
     @property
     def index(self):
         return self.get_property('selected-index')
-    
+
     @index.setter
     def index(self, index):
         self.set_property('selected-index', index)
@@ -92,13 +92,13 @@ class PresetChooser(Gtk.Box):
         self.presets_list.select_row(row)
 
     def _on_preset_selected(self, _listbox, row):
-        index = 0 if row == None else row.get_index()
+        index = 0 if row is None else row.get_index()
         preset = self.model.get_item(index)
         if preset is not None:
             if Settings.get().active_preset != preset.id:
                 Settings.get().active_preset = preset.id
                 self.window.flap.set_reveal_flap(False)
-        
+
         self.selected = preset
         self.index = index
         self.emit('selected', preset)
@@ -201,12 +201,12 @@ class PresetControl(Gtk.Box):
     def _go_back(self, button=None):
         popover = button.get_ancestor(Gtk.Popover.__gtype__)
         popover.popdown()
-    
+
     def _update_sensitives(self):
         sensitive = self.preset.id != self.default_preset
         self.rename_btn.set_sensitive(sensitive)
         self.delete_btn.set_sensitive(sensitive)
-    
+
     def __on_preset_changed(self, _chooser, preset):
         # Remove previous binding
         self.name_binding.unbind()
@@ -230,4 +230,6 @@ class PresetRow(Gtk.ListBoxRow):
     def __init__(self, preset):
         super().__init__()
 
-        preset.bind_property('name', self.name, 'label', GObject.BindingFlags.SYNC_CREATE)
+        preset.bind_property(
+            'name', self.name, 'label', GObject.BindingFlags.SYNC_CREATE
+        )

@@ -1,11 +1,9 @@
 # Copyright 2020 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-import os
-import json
 import uuid
 
-from gi.repository import Gio, GLib, GObject
+from gi.repository import Gio, GLib
 
 
 class Settings(Gio.Settings):
@@ -37,7 +35,7 @@ class Settings(Gio.Settings):
     @scroll_position.setter
     def scroll_position(self, position):
         self.set_double('scroll-position', position)
-    
+
     """ General volume level """
     @property
     def volume(self):
@@ -60,7 +58,7 @@ class Settings(Gio.Settings):
     @property
     def custom_audios(self):
         return dict(self.get_value('custom-audios'))
-    
+
     @custom_audios.setter
     def custom_audios(self, audios):
         self.set_value('custom-audios', GLib.Variant('a{ss}', audios))
@@ -68,7 +66,7 @@ class Settings(Gio.Settings):
     """ Custom sounds helper functions  """
     def add_custom_audio(self, name, uri):
         # Add the audio if the name is not already present
-        if not name in self.custom_audios:
+        if name not in self.custom_audios:
             saved_audios = self.custom_audios
             saved_audios[name] = uri
             self.custom_audios = saved_audios
@@ -92,15 +90,15 @@ class Settings(Gio.Settings):
     @property
     def presets(self):
         return list(self.get_value('presets'))
-    
+
     @presets.setter
     def presets(self, presets):
         self.set_value('presets', GLib.Variant('as', presets))
-    
+
     @property
     def active_preset(self):
         return self.get_string('active-preset')
-    
+
     @active_preset.setter
     def active_preset(self, preset):
         self.set_string('active-preset', preset)
@@ -132,7 +130,7 @@ class Settings(Gio.Settings):
         self.presets = saved_presets
 
         self.set_preset_name(preset_id, name)
-        
+
         return preset_id
 
     def remove_preset(self, preset_id):
@@ -185,7 +183,7 @@ class Settings(Gio.Settings):
     @property
     def legacy_sounds_volume(self):
         return dict(self.get_value('sounds-volume'))
-    
+
     @legacy_sounds_volume.setter
     def legacy_sounds_volume(self, volumes_dict):
         self.set_value('sounds-volume', GLib.Variant('a{sd}', volumes_dict))

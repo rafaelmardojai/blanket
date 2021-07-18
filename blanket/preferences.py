@@ -56,7 +56,9 @@ class PreferencesWindow(Handy.PreferencesWindow):
         identifier = self.__get_window_identifier()
         token = 0 + randint(10000000, 90000000)
         options = {
-            'handle_token': GLib.Variant('s', f'com/rafaelmardojai/Blanket/{token}'),
+            'handle_token': GLib.Variant(
+                's', f'com/rafaelmardojai/Blanket/{token}'
+            ),
             'reason': GLib.Variant('s', _('Autostart Blanket on background.')),
             'autostart': GLib.Variant('b', active),
             'commandline': GLib.Variant('as', ['blanket', '--hidden']),
@@ -66,26 +68,30 @@ class PreferencesWindow(Handy.PreferencesWindow):
         try:
             request = proxy.RequestBackground('(sa{sv})', identifier, options)
             if request is None:
-                raise Exception("The DBus proxy didn't return an object path." \
+                raise Exception("The DBus proxy didn't return an object path."
                                 + "\nThe portal can't suscribe to the signal.")
 
-            response_id = bus.signal_subscribe(
-				'org.freedesktop.portal.Desktop',
-				'org.freedesktop.portal.Request',
-				'Response',
-				request,
-				None,
-				Gio.DBusSignalFlags.NO_MATCH_RULE,
-				self.__receive_autostart,
-				None
-			)
+            bus.signal_subscribe(
+                'org.freedesktop.portal.Desktop',
+                'org.freedesktop.portal.Request',
+                'Response',
+                request,
+                None,
+                Gio.DBusSignalFlags.NO_MATCH_RULE,
+                self.__receive_autostart,
+                None
+            )
 
         except Exception as e:
             print(e)
 
-            error_dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,
-                                             Gtk.ButtonsType.OK, _('Request error'))
-            error_dialog.format_secondary_text(_('The autostart request failed.'))
+            error_dialog = Gtk.MessageDialog(
+                self, 0, Gtk.MessageType.WARNING,
+                Gtk.ButtonsType.OK, _('Request error')
+            )
+            error_dialog.format_secondary_text(
+                _('The autostart request failed.')
+            )
             error_response = error_dialog.run()
             if error_response == Gtk.ResponseType.OK:
                 error_dialog.destroy()
@@ -104,19 +110,25 @@ class PreferencesWindow(Handy.PreferencesWindow):
             pass
         elif state == 1:
             if active:
-                error_dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,
-                                                 Gtk.ButtonsType.OK, _('Authorization failed'))
+                error_dialog = Gtk.MessageDialog(
+                    self, 0, Gtk.MessageType.WARNING, Gtk.ButtonsType.OK,
+                    _('Authorization failed')
+                )
                 error_dialog.format_secondary_text(
-                    _('Make sure Blanket has permission to run in ' \
-                      '\nthe background in Settings → Applications → ' \
+                    _('Make sure Blanket has permission to run in '
+                      '\nthe background in Settings → Applications → '
                       '\nBlanket and try again.'))
                 error_response = error_dialog.run()
                 if error_response == Gtk.ResponseType.OK:
                     error_dialog.destroy()
         elif state == 2:
-            error_dialog = Gtk.MessageDialog(self, 0, Gtk.MessageType.WARNING,
-                                             Gtk.ButtonsType.OK, _('Request error'))
-            error_dialog.format_secondary_text(_('The autostart request failed.'))
+            error_dialog = Gtk.MessageDialog(
+                self, 0, Gtk.MessageType.WARNING, Gtk.ButtonsType.OK,
+                _('Request error')
+            )
+            error_dialog.format_secondary_text(
+                _('The autostart request failed.')
+            )
             error_response = error_dialog.run()
             if error_response == Gtk.ResponseType.OK:
                 error_dialog.destroy()
@@ -134,4 +146,3 @@ class PreferencesWindow(Handy.PreferencesWindow):
         elif session == 'wayland':
             return 'wayland:'
         return ''
-

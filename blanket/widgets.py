@@ -1,7 +1,7 @@
 # Copyright 2020-2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import GLib, Gio, GObject, Gtk, Handy
+from gi.repository import Gio, GObject, Gtk, GstPlayer
 
 from blanket.sound import SoundObject, SoundPlayer
 
@@ -79,11 +79,11 @@ class SoundRow(Gtk.ListBoxRow):
             remove.connect('clicked', self.remove)
             self.box.pack_end(remove, False, True, 0)
             # Add destructive-action CSS class
-            Gtk.StyleContext.add_class(remove.get_style_context(),
-                                       'image-button')
+            remove.get_style_context().add_class('image-button')
             # Create button icon
             remove_icon = Gtk.Image.new_from_icon_name(
-                'edit-delete-symbolic', Gtk.IconSize.MENU)
+                'edit-delete-symbolic', Gtk.IconSize.MENU
+            )
             remove.add(remove_icon)
             # Compact widget
             self.box.props.margin_top = 0
@@ -92,7 +92,7 @@ class SoundRow(Gtk.ListBoxRow):
             # Set icon for the sound
             icon = Gtk.Image.new_from_icon_name(self.sound.icon_name,
                                                 Gtk.IconSize.DIALOG)
-            Gtk.StyleContext.add_class(icon.get_style_context(), 'sound-icon')
+            icon.get_style_context().add_class('sound-icon')
             icon.set_pixel_size(64)
             self.box.pack_start(icon, False, True, 0)
             self.box.child_set_property(icon, 'position', 0)
@@ -156,12 +156,12 @@ class SoundsGroup(Gtk.Box):
 
         # Create group name label
         label = Gtk.Label(title, halign=Gtk.Align.START)
-        Gtk.StyleContext.add_class(label.get_style_context(), 'h1')
+        label.get_style_context().add_class('h1')
         self.pack_start(label, False, False, 0)
 
         # Create group GtkListBox
         self.listbox = Gtk.ListBox()
-        Gtk.StyleContext.add_class(self.listbox.get_style_context(), 'content')
+        self.listbox.get_style_context().add_class('content')
         self.pack_start(self.listbox, True, False, 0)
 
         # Bind GtkListBox with GioListStore
@@ -173,4 +173,3 @@ class SoundsGroup(Gtk.Box):
     def _create_sound_widget(self, sound):
         widget = SoundRow(sound, self.model)
         return widget
-

@@ -9,14 +9,14 @@ AUTHORS = [
 ]
 
 ARTISTS = {
-    'Jakub Steiner' : [_('Sounds icons')],
-    'Rafael Mardojai CM' : [ _('App icon')]
+    'Jakub Steiner': [_('Sounds icons')],
+    'Rafael Mardojai CM': [_('App icon')]
 }
 
 SOUND_ARTISTS = {
     'alex36917': [_('Rain')],
     'Digifish music': [_('Storm')],
-    'ezwa' : [_('Fireplace')],
+    'ezwa': [_('Fireplace')],
     'Falcet': [_('Boat')],
     'gezortenplotz': [_('City')],
     'gluckose': [_('Stream')],
@@ -25,14 +25,17 @@ SOUND_ARTISTS = {
     'Lisa Redfern': [_('Summer Night')],
     'Luftrum': [_('Waves')],
     'Omegatron': [_('Pink Noise')],
-    'Stephan' : [_('Coffee Shop')],
+    'Stephan': [_('Coffee Shop')],
     'Stilgar': [_('Wind')],
     'vahid': [_('Train')]
 }
 
 SOUND_EDITORS = {
-    'Porrumentzio': [_('Birds'), _('Rain'), _('Storm'), _('Waves'), _('Boat'), _('City')]
+    'Porrumentzio': [
+        _('Birds'), _('Rain'), _('Storm'), _('Waves'), _('Boat'), _('City')
+    ]
 }
+
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/about.ui')
 class AboutDialog(Gtk.AboutDialog):
@@ -60,12 +63,11 @@ class AboutDialog(Gtk.AboutDialog):
         self.add_credit_section(_('Sounds edited by'), sound_editors)
 
     def _get_credits_list(self, dict_):
-        l = ['']
+        credits_list = ['']
         for k, vs in dict_.items():
             s = k + '\n	' + ', '.join(vs)
-            l.append(s)
-        return l
+            credits_list.append(s)
+        return credits_list
 
     def _on_about_response(self, _dialog, _response_id):
         self.destroy()
-
