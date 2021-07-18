@@ -105,14 +105,14 @@
               <object class="GtkButton" id="rename_cancel_btn">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label">Cancel</property>
+                <property name="label" translatable="yes">Cancel</property>
               </object>
             </child>
             <child>
               <object class="GtkButton" id="rename_confirm_btn">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label">Rename</property>
+                <property name="label" translatable="yes">Rename</property>
                 <style>
                   <class name="suggested-action"/>
                 </style>
@@ -170,14 +170,14 @@
               <object class="GtkButton" id="delete_cancel_btn">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label">Cancel</property>
+                <property name="label" translatable="yes">Cancel</property>
               </object>
             </child>
             <child>
               <object class="GtkButton" id="delete_confirm_btn">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label">Delete</property>
+                <property name="label" translatable="yes">Delete</property>
                 <style>
                   <class name="destructive-action"/>
                 </style>

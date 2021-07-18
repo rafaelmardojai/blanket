@@ -35,7 +35,7 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="popover">add_preset</property>
-            <property name="label">Add Preset</property>
+            <property name="label" translatable="yes">Add Preset</property>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -81,7 +81,7 @@
               <object class="GtkButton" id="create_btn">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label">Create</property>
+                <property name="label" translatable="yes">Create</property>
                 <style>
                   <class name="suggested-action"/>
                 </style>
