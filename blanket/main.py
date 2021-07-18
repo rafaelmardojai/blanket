@@ -200,6 +200,8 @@ class Application(Gtk.Application):
         Settings.get().volume = self.mainplayer.volume
         # Save mainplayer playing state
         Settings.get().playing = self.mainplayer.playing
+        # Save presets settings
+        Settings.get().save_presets()
 
     def _on_window_delete(self, window, _event):
         if Settings.get().background:

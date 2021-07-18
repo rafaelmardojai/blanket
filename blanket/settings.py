@@ -8,6 +8,7 @@ from gi.repository import Gio, GLib
 
 class Settings(Gio.Settings):
     instance = None
+    presets_settings = {}
 
     def __init__(self):
         Gio.Settings.__init__(self)
@@ -174,6 +175,7 @@ class Settings(Gio.Settings):
     def set_preset_name(self, preset_id, name):
         preset = self.get_preset_settings(preset_id)
         preset.set_string('visible-name', name)
+        preset.apply()  # Always apply changes on name change
 
     def get_preset_volumes(self, preset_id):
         settings = self.get_preset_settings(preset_id)
@@ -183,16 +185,7 @@ class Settings(Gio.Settings):
         settings = self.get_preset_settings(preset_id)
         settings.set_value('sounds-volume', GLib.Variant('a{sd}', volumes))
 
-    def get_preset_settings(self, preset_id):
-        """ Get Preset Gio.Settings instance. """
-        path = self.get_property('path')
-        if not path.endswith('/'):
-            path += '/'
-        path += preset_id + '/'
-
-        return Gio.Settings('com.rafaelmardojai.Blanket.preset', path)
-
-    """ Sounds volume """
+    """ Preset sound volume """
     def get_sound_volume(self, name):
         volumes = self.get_preset_volumes(self.active_preset)
         # If sound is set on volume dict
@@ -206,6 +199,37 @@ class Settings(Gio.Settings):
         saved_volumes = self.get_preset_volumes(self.active_preset)
         saved_volumes[name] = volume
         self.set_preset_volumes(self.active_preset, saved_volumes)
+
+    """ Preset settings helper functions """
+    def get_preset_settings(self, preset_id=None):
+        """ Get Preset Gio.Settings instance. """
+
+        # By default return active preset
+        if preset_id is None:
+            preset_id = self.active_preset
+
+        if preset_id not in self.presets_settings:
+            path = self.get_property('path')
+            if not path.endswith('/'):
+                path += '/'
+            path += preset_id + '/'
+            self.presets_settings[preset_id] = Gio.Settings(
+                'com.rafaelmardojai.Blanket.preset', path
+            )
+            # Set on ‘delay-apply’ mode so it only applies changes when we want
+            self.presets_settings[preset_id].delay()
+
+        return self.presets_settings[preset_id]
+
+    def save_presets(self, preset_id=None):
+        """ Apply all the changes made to presets,
+            or to a specific preset. """
+
+        if preset_id is not None and preset_id in self.presets_settings:
+            self.presets_settings[preset_id].apply()
+        else:
+            for key, settings in self.presets_settings.items():
+                settings.apply()
 
     """ Legacy sounds volume """
     @property
