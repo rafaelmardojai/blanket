@@ -24,9 +24,9 @@ class PresetObject(GObject.Object):
 
     def remove(self):
         if self.id != Settings.get().default_preset:
-            Settings.get().remove_preset(self.id)
-            return True
-        return False
+            index = Settings.get().remove_preset(self.id)
+            return index  # Return the index where the preset where positioned
+        return None
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preset-chooser.ui')

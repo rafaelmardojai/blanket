@@ -163,14 +163,20 @@ class Settings(Gio.Settings):
         return preset_id
 
     def remove_preset(self, preset_id):
+        index = None
+
         if preset_id in self.presets:
             saved_presets = self.presets
+            index = saved_presets.index(preset_id)
             saved_presets.remove(preset_id)
             self.presets = saved_presets
 
             # Remove settings instance
             if preset_id in self.presets_settings:
                 del self.presets_settings[preset_id]
+
+        # Return the index where the preset where positioned
+        return index
 
     def get_preset_name(self, preset_id):
         settings = self.get_preset_settings(preset_id)
