@@ -94,14 +94,16 @@ class PresetChooser(Gtk.Box):
     def _on_create_clicked(self, _button):
         # Hide popover
         self.add_preset.popdown()
-        # Save new preset
+
         name = self.name_entry.get_text()
-        preset_id = Settings.get().add_preset(name)
+        name = name.strip()  # Strip nane
+        if name:
+            preset_id = Settings.get().add_preset(name)  # Save new preset
+            preset = PresetObject(preset_id, self.model)  # Add preset to model
+            self.model.append(preset)
+
         # Clear name entry
         self.name_entry.set_text('')
-        # Add preset to model
-        preset = PresetObject(preset_id, self.model)
-        self.model.append(preset)
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preset-control.ui')
