@@ -53,11 +53,10 @@ class PresetChooser(Gtk.Box):
         self.model = Gio.ListStore.new(PresetObject)
         self.presets_list.bind_model(self.model, self._create_widget)
 
-        self.setup()
-
-    def setup(self):
+        # Wire widgets
         self.presets_list.connect('row-selected', self._on_preset_selected)
-        self.create_btn.connect('clicked', self._on_create_clicked)
+        self.create_btn.connect('clicked', self._on_create_preset)
+        self.name_entry.connect('activate', self._on_create_preset)
 
         self.load_presets()
 
@@ -91,7 +90,7 @@ class PresetChooser(Gtk.Box):
         widget = PresetRow(preset)
         return widget
 
-    def _on_create_clicked(self, _button):
+    def _on_create_preset(self, _widget):
         # Hide popover
         self.add_preset.popdown()
 
@@ -153,6 +152,7 @@ class PresetControl(Gtk.Box):
         self.delete_btn.connect('clicked', self._show_delete)
         self.rename_cancel_btn.connect('clicked', self._go_back)
         self.rename_confirm_btn.connect('clicked', self._rename)
+        self.rename_entry.connect('activate', self._rename)
         self.delete_cancel_btn.connect('clicked', self._go_back)
         self.delete_confirm_btn.connect('clicked', self._delete)
 
@@ -173,15 +173,17 @@ class PresetControl(Gtk.Box):
         self.rename.popup()
         self.rename_entry.set_text(Settings.get().active_preset_name)
 
-    def _rename(self, button):
+    def _rename(self, widget):
+        self._go_back(widget)
         name = self.rename_entry.get_text()
         Settings.get().set_preset_name(self.preset.id, name)
-        self._go_back(button)
 
     def _show_delete(self, _button):
         self.delete.popup()
 
     def _delete(self, button):
+        self._go_back(button)
+
         if self.preset.remove():
             self.chooser.model.remove(self.chooser.index)
 
@@ -189,10 +191,8 @@ class PresetControl(Gtk.Box):
         row = self.chooser.presets_list.get_row_at_index(0)
         self.chooser.presets_list.select_row(row)
 
-        self._go_back(button)
-
-    def _go_back(self, button=None):
-        popover = button.get_ancestor(Gtk.Popover.__gtype__)
+    def _go_back(self, widget):
+        popover = widget.get_ancestor(Gtk.Popover.__gtype__)
         popover.popdown()
 
     def _update_sensitives(self):
