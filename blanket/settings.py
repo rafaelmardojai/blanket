@@ -118,11 +118,11 @@ class Settings(Gio.Settings):
     """ Presets """
     @property
     def presets(self):
-        return list(self.get_value('presets'))
+        return list(self.get_strv('presets'))
 
     @presets.setter
     def presets(self, presets):
-        self.set_value('presets', GLib.Variant('as', presets))
+        self.set_strv('presets', presets)
 
     @property
     def active_preset(self):
