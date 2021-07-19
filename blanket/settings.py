@@ -168,6 +168,10 @@ class Settings(Gio.Settings):
             saved_presets.remove(preset_id)
             self.presets = saved_presets
 
+            # Remove settings instance
+            if preset_id in self.presets_settings:
+                del self.presets_settings[preset_id]
+
     def get_preset_name(self, preset_id):
         settings = self.get_preset_settings(preset_id)
         return settings.get_string('visible-name')
