@@ -101,12 +101,10 @@ class SoundPlayer(GstPlayer.Player):
         self.connect('volume-changed', self._on_volume_changed)
 
     def set_virtual_volume(self, volume):
-        # Get mainplayer volume
-        main_volume = self.sound.mainplayer.get_property('volume')
         # Get last saved sound volume
         self.saved_volume = volume
         # Multiply sound volume with mainplayer volume
-        volume = self.saved_volume * main_volume
+        volume = self.saved_volume * self.sound.mainplayer.volume
         # Set final volume to player
         self.set_volume(volume)
 
@@ -125,6 +123,11 @@ class SoundPlayer(GstPlayer.Player):
                 self.pause()
 
     def _on_volume_changed(self, _player):
+        # Fix external changes to player volume
+        volume = self.saved_volume * self.sound.mainplayer.volume
+        if volume > 0 and self.get_volume() == 0.0:
+            self.set_volume(self.saved_volume)
+            return
         # Only play if volume > 0
         if self.__vol_zero():
             self.pause()
