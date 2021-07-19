@@ -9,7 +9,7 @@ from gi.repository import GLib, GObject, Gtk, Handy
 from blanket.settings import Settings
 from blanket.sound import SoundObject
 from blanket.widgets import PlayPauseButton, SoundsGroup
-from blanket.presets import PresetChooser, PresetControl
+from blanket.presets import PresetChooser
 
 SOUNDS = [
     {
@@ -96,13 +96,16 @@ class BlanketWindow(Handy.ApplicationWindow):
     __gtype_name__ = 'BlanketWindow'
 
     headerbar = Gtk.Template.Child()
-    flap = Gtk.Template.Child()
     scrolled_window = Gtk.Template.Child()
     box = Gtk.Template.Child()
 
     playpause_btn = Gtk.Template.Child()
     volume = Gtk.Template.Child()
     quit_revealer = Gtk.Template.Child()
+
+    presets_chooser = Gtk.Template.Child()
+
+    name_binding = None
 
     def __init__(self, mainplayer, **kwargs):
         super().__init__(**kwargs)
@@ -147,6 +150,9 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.setup_sounds()
         self.setup_custom_sounds()
 
+        # Window title
+        self.update_title(self.presets_chooser.selected)
+
         # Show all widgets added to window
         self.show_all()
 
@@ -158,15 +164,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.vscroll.set_value(saved_scroll)
 
     def setup_presets(self):
-        self.presets = PresetChooser(self)
-        self.flap.set_flap(self.presets)
-
-        self.presets_control = PresetControl(self)
-        self.headerbar.pack_start(self.presets_control)
-        self.headerbar.child_set_property(self.presets_control, 'position', 0)
-
-        self.presets.connect('selected', self._on_preset_selected)
-        self.presets_control.connect('reset', self._on_reset_volumes)
+        self.presets_chooser.connect('selected', self._on_preset_selected)
 
     def setup_sounds(self):
         # Setup default sounds
@@ -255,8 +253,21 @@ class BlanketWindow(Handy.ApplicationWindow):
                 self.custom_sounds.add(sound)
                 self.custom_sounds.show_all()
 
-    def _on_preset_selected(self, _chooser, _preset):
+    def update_title(self, preset):
+        if self.name_binding is not None:
+            self.name_binding.unbind()
+
+        if preset.id != Settings.get().default_preset:
+            self.name_binding = preset.bind_property(
+                'name', self.headerbar, 'title',
+                GObject.BindingFlags.SYNC_CREATE
+            )
+        else:
+            self.headerbar.set_title(_('Blanket'))
+
+    def _on_preset_selected(self, _chooser, preset):
         self.mainplayer.preset_changed()
+        self.update_title(preset)
 
     def _on_reset_volumes(self, _control, _preset):
         self.mainplayer.reset_volumes()

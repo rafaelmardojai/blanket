@@ -20,6 +20,7 @@ from blanket.sound import MainPlayer
 from blanket.settings import Settings
 from blanket.window import BlanketWindow
 from blanket.preferences import PreferencesWindow
+from blanket.presets import PresetDialog
 from blanket.about import AboutDialog
 
 
@@ -71,6 +72,14 @@ class Application(Gtk.Application):
                 'name': 'playpause',
                 'func': self.on_playpause,
                 'accels': ['<Ctl>m', 'space']
+            },
+            {
+                'name': 'reset-volumes',
+                'func': self.on_reset_volumes,
+            },
+            {
+                'name': 'add-preset',
+                'func': self.on_add_preset,
             },
             {
                 'name': 'background-playback',
@@ -159,6 +168,15 @@ class Application(Gtk.Application):
 
         # Change mainplayer playing
         self.mainplayer.playing = playing
+
+    def on_reset_volumes(self, _action, _param):
+        self.mainplayer.reset_volumes()
+
+    def on_add_preset(self, _action, _param):
+        dialog = PresetDialog()
+        dialog.set_transient_for(self.window)
+        dialog.set_modal(True)
+        dialog.present()
 
     def on_background(self, action, value):
         action.set_state(value)

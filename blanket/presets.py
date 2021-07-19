@@ -1,7 +1,8 @@
 # Copyright 2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gio, GObject, Gtk
+from gettext import gettext as _
+from gi.repository import Gio, GObject, Gtk, Handy
 
 from blanket.settings import Settings
 
@@ -39,15 +40,10 @@ class PresetChooser(Gtk.Box):
     index = GObject.Property(type=int)
 
     presets_list = Gtk.Template.Child()
-    add_btn = Gtk.Template.Child()
-    add_preset = Gtk.Template.Child()
-    name_entry = Gtk.Template.Child()
-    create_btn = Gtk.Template.Child()
+    revealer = Gtk.Template.Child()
 
-    def __init__(self, window, **kwargs):
-        super().__init__(**kwargs)
-
-        self.window = window
+    def __init__(self):
+        super().__init__()
 
         # Create GioListStore to store Presets
         self.model = Gio.ListStore.new(PresetObject)
@@ -55,8 +51,7 @@ class PresetChooser(Gtk.Box):
 
         # Wire widgets
         self.presets_list.connect('row-selected', self._on_preset_selected)
-        self.create_btn.connect('clicked', self._on_create_preset)
-        self.name_entry.connect('activate', self._on_create_preset)
+        self.model.connect('items-changed', self._on_items_changed)
 
         self.load_presets()
 
@@ -80,138 +75,132 @@ class PresetChooser(Gtk.Box):
         if preset is not None:
             if Settings.get().active_preset != preset.id:
                 Settings.get().active_preset = preset.id
-                self.window.flap.set_reveal_flap(False)
 
         self.selected = preset
         self.index = index
         self.emit('selected', preset)
 
+        if row:
+            for row_ in self.presets_list.get_children():
+                row_.selected = False
+            row.selected = True
+
+    def _on_items_changed(self, model, _position, _removed, _added):
+        self.revealer.set_reveal_child(model.get_n_items() > 1)
+
     def _create_widget(self, preset):
         widget = PresetRow(preset)
         return widget
 
-    def _on_create_preset(self, _widget):
-        # Hide popover
-        self.add_preset.popdown()
 
-        name = self.name_entry.get_text()
-        name = name.strip()  # Strip nane
+@Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preset-dialog.ui')
+class PresetDialog(Handy.Window):
+    __gtype_name__ = 'PresetDialog'
+
+    headerbar = Gtk.Template.Child()
+    accept_btn = Gtk.Template.Child()
+    cancel_btn = Gtk.Template.Child()
+
+    name_entry = Gtk.Template.Child()
+    delete_btn = Gtk.Template.Child()
+
+    def __init__(self, preset=None, **kwargs):
+        super().__init__()
+
+        self.preset = preset
+        app = Gio.Application.get_default()
+        self.window = app.get_active_window()
+
+        # Wire widgets
+        self.cancel_btn.connect(
+            'clicked',
+            lambda _button: self.destroy()
+        )
+        self.name_entry.connect('changed', self._on_entry_changed)
+
+        if self.preset is None:
+            self.headerbar.set_title(_('Add Preset'))
+            self.accept_btn.set_label(_('Create'))
+            # Wire buttons
+            self.accept_btn.connect('clicked', self._on_create_preset)
+        else:
+            self.headerbar.set_title(_('Edit Preset'))
+            self.headerbar.set_subtitle(self.preset.name)
+            self.accept_btn.set_label(_('Save'))
+            self.name_entry.set_text(self.preset.name)
+            self.delete_btn.set_visible(True)
+            # Wire buttons
+            self.accept_btn.connect('clicked', self._on_rename_preset)
+            self.delete_btn.connect('clicked', self._on_delete_preset)
+
+    def _on_entry_changed(self, _entry):
+        name = self.__get_name()
+
+        if self.preset is not None and self.preset.name == name:
+            self.accept_btn.set_sensitive(False)
+            return
+
         if name:
+            self.accept_btn.set_sensitive(True)
+        else:
+            self.accept_btn.set_sensitive(False)
+
+    def _on_create_preset(self, _button):
+        name = self.__get_name()
+        if name:
+            chooser = self.window.presets_chooser
             preset_id = Settings.get().add_preset(name)  # Save new preset
-            preset = PresetObject(preset_id, self.model)  # Add preset to model
-            self.model.append(preset)
+            # Add preset to model
+            preset = PresetObject(preset_id, chooser.model)
+            chooser.model.append(preset)
+
+            # Select new preset
+            row = chooser.presets_list.get_row_at_index(
+                chooser.model.get_n_items() - 1
+            )
+            chooser.presets_list.select_row(row)
+        else:
+            self.__invalid_name()
+            return
 
         # Clear name entry
         self.name_entry.set_text('')
 
+        self.destroy()
 
-@Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preset-control.ui')
-class PresetControl(Gtk.Box):
-    __gtype_name__ = 'PresetControl'
-    __gsignals__ = {
-        'reset': (GObject.SIGNAL_RUN_FIRST, None, (PresetObject,))
-    }
+    def _on_rename_preset(self, _button):
+        name = self.__get_name()
+        if name:
+            Settings.get().set_preset_name(self.preset.id, name)
+        else:
+            self.__invalid_name()
+            return
 
-    toggle_btn = Gtk.Template.Child()
-    preset_name = Gtk.Template.Child()
+        self.destroy()
 
-    menu = Gtk.Template.Child()
-    volume_btn = Gtk.Template.Child()
-    rename_btn = Gtk.Template.Child()
-    delete_btn = Gtk.Template.Child()
+    def _on_delete_preset(self, _button):
+        active = self.preset.id == Settings.get().active_preset
+        index = self.preset.remove()
 
-    rename = Gtk.Template.Child()
-    rename_entry = Gtk.Template.Child()
-    rename_confirm_btn = Gtk.Template.Child()
-    rename_cancel_btn = Gtk.Template.Child()
+        if index is not None:
+            chooser = self.window.presets_chooser
+            chooser.model.remove(index)
 
-    delete = Gtk.Template.Child()
-    delete_confirm_btn = Gtk.Template.Child()
-    delete_cancel_btn = Gtk.Template.Child()
+            # Select default preset row
+            if active:
+                row = chooser.presets_list.get_row_at_index(0)
+                chooser.presets_list.select_row(row)
 
-    preset = None
-    default_preset = None
-    name_binding = None
+        self.destroy()
 
-    def __init__(self, window):
-        super().__init__()
+    def __get_name(self):
+        name = self.name_entry.get_text()
+        name = name.strip()  # Strip name
 
-        self.chooser = window.presets
+        return name
 
-        # Wire toggle with window flap
-        self.toggle_btn.bind_property(
-            'active', window.flap, 'reveal-flap',
-            GObject.BindingFlags.BIDIRECTIONAL
-        )
-        #
-        self.chooser.connect('selected', self.__on_preset_changed)
-
-        # Wire buttons
-        self.volume_btn.connect('clicked', self._reset_volumes)
-        self.rename_btn.connect('clicked', self._show_rename)
-        self.delete_btn.connect('clicked', self._show_delete)
-        self.rename_cancel_btn.connect('clicked', self._go_back)
-        self.rename_confirm_btn.connect('clicked', self._rename)
-        self.rename_entry.connect('activate', self._rename)
-        self.delete_cancel_btn.connect('clicked', self._go_back)
-        self.delete_confirm_btn.connect('clicked', self._delete)
-
-        # Set initial preset
-        self.default_preset = Settings.get().default_preset
-        self.preset = self.chooser.selected
-        self.name_binding = self.preset.bind_property(
-            'name', self.preset_name, 'label', GObject.BindingFlags.SYNC_CREATE
-        )
-
-        # If it's default preset, don't allow rename or delete
-        self._update_sensitives()
-
-    def _reset_volumes(self, _button):
-        self.emit('reset', self.preset)
-
-    def _show_rename(self, _button):
-        self.rename.popup()
-        self.rename_entry.set_text(Settings.get().active_preset_name)
-
-    def _rename(self, widget):
-        self._go_back(widget)
-        name = self.rename_entry.get_text()
-        Settings.get().set_preset_name(self.preset.id, name)
-
-    def _show_delete(self, _button):
-        self.delete.popup()
-
-    def _delete(self, button):
-        self._go_back(button)
-
-        if self.preset.remove():
-            self.chooser.model.remove(self.chooser.index)
-
-        # Select default preset row
-        row = self.chooser.presets_list.get_row_at_index(0)
-        self.chooser.presets_list.select_row(row)
-
-    def _go_back(self, widget):
-        popover = widget.get_ancestor(Gtk.Popover.__gtype__)
-        popover.popdown()
-
-    def _update_sensitives(self):
-        sensitive = self.preset.id != self.default_preset
-        self.rename_btn.set_sensitive(sensitive)
-        self.delete_btn.set_sensitive(sensitive)
-
-    def __on_preset_changed(self, _chooser, preset):
-        # Remove previous binding
-        self.name_binding.unbind()
-
-        # Update preset
-        self.preset = preset
-        self.name_binding = self.preset.bind_property(
-            'name', self.preset_name, 'label', GObject.BindingFlags.SYNC_CREATE
-        )
-
-        # If it's default preset, don't allow rename or delete
-        self._update_sensitives()
+    def __invalid_name(self):
+        pass
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preset-row.ui')
@@ -219,10 +208,33 @@ class PresetRow(Gtk.ListBoxRow):
     __gtype_name__ = 'PresetRow'
 
     name = Gtk.Template.Child()
+    settings_btn = Gtk.Template.Child()
 
     def __init__(self, preset):
         super().__init__()
 
+        self.preset = preset
+
+        self.settings_btn.connect('clicked', self._show_settings)
+        if self.preset.id != Settings.get().default_preset:
+            self.settings_btn.set_visible(True)
+
         preset.bind_property(
             'name', self.name, 'label', GObject.BindingFlags.SYNC_CREATE
         )
+
+    @property
+    def selected(self):
+        return self.is_selected()
+
+    @selected.setter
+    def selected(self, value):
+        pass
+
+    def _show_settings(self, _button):
+        app = Gio.Application.get_default()
+        window = app.get_active_window()
+        dialog = PresetDialog(self.preset)
+        dialog.set_transient_for(window)
+        dialog.set_modal(True)
+        dialog.present()

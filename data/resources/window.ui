@@ -16,6 +16,7 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="show_close_button">True</property>
+            <property name="title" translatable="yes">Blanket</property>
             <child>
               <object class="PlayPauseButton" id="playpause_btn">
                 <property name="visible">True</property>
@@ -46,42 +47,29 @@
           </object>
         </child>
         <child>
-          <object class="HdyFlap" id="flap">
+          <object class="GtkScrolledWindow" id="scrolled_window">
             <property name="visible">True</property>
-            <property name="reveal-flap">False</property>
-            <property name="fold-policy">always</property>
-            <child type="separator">
-              <object class="GtkSeparator">
+            <property name="can_focus">True</property>
+            <property name="hscrollbar_policy">never</property>
+            <child>
+              <object class="GtkViewport">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkScrolledWindow" id="scrolled_window">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="hscrollbar_policy">never</property>
                 <child>
-                  <object class="GtkViewport">
+                  <object class="HdyClamp">
                     <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                    <property name="maximum-size">500</property>
+                    <property name="tightening-threshold">400</property>
                     <child>
-                      <object class="HdyClamp">
+                      <object class="GtkBox" id="box">
                         <property name="visible">True</property>
-                        <property name="maximum-size">500</property>
-                        <property name="tightening-threshold">400</property>
-                        <child>
-                          <object class="GtkBox" id="box">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="orientation">vertical</property>
-                            <property name="spacing">24</property>
-                            <property name="margin_top">24</property>
-                            <property name="margin_bottom">24</property>
-                            <property name="margin_start">6</property>
-                            <property name="margin_end">6</property>
-                          </object>
-                        </child>
+                        <property name="can_focus">False</property>
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">24</property>
+                        <property name="margin_top">24</property>
+                        <property name="margin_bottom">24</property>
+                        <property name="margin_start">6</property>
+                        <property name="margin_end">6</property>
                       </object>
                     </child>
                   </object>
@@ -91,13 +79,12 @@
           </object>
           <packing>
             <property name="expand">True</property>
-            <property name="fill">True</property>
           </packing>
         </child>
       </object>
     </child>
   </template>
-  <object class="GtkPopover" id="menu">
+  <object class="GtkPopoverMenu" id="menu">
     <property name="can_focus">False</property>
     <child>
       <object class="GtkBox">
@@ -147,8 +134,17 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
-            <property name="action_name">app.background-playback</property>
-            <property name="text" translatable="yes">Keep playing when closed</property>
+            <property name="menu_name">presets</property>
+            <property name="text" translatable="yes">Presets</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="action_name">app.reset-volumes</property>
+            <property name="text" translatable="yes">Reset Volume Levels</property>
           </object>
         </child>
         <child>
@@ -158,11 +154,23 @@
             <property name="margin-top">6</property>
             <property name="margin-bottom">6</property>
           </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">3</property>
-          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="action_name">app.background-playback</property>
+            <property name="text" translatable="yes">Keep Playing When Closed</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkSeparator">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin-top">6</property>
+            <property name="margin-bottom">6</property>
+          </object>
         </child>
         <child>
           <object class="GtkModelButton">
@@ -223,6 +231,44 @@
           </object>
         </child>
       </object>
+    </child>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="margin">12</property>
+        <property name="spacing">6</property>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="inverted">True</property>
+            <property name="centered">True</property>
+            <property name="menu-name">main</property>
+            <property name="text" translatable="yes">Presets</property>
+          </object>
+        </child>
+        <child>
+          <object class="PresetChooser" id="presets_chooser">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="action_name">app.add-preset</property>
+            <property name="text" translatable="yes">Add Preset</property>
+          </object>
+        </child>
+      </object>
+      <packing>
+        <property name="submenu">presets</property>
+      </packing>
     </child>
   </object>
   <object class="GtkAdjustment" id="volume_adjustment">

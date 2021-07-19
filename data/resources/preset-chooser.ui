@@ -6,103 +6,35 @@
     <property name="visible">True</property>
     <property name="can_focus">False</property>
     <property name="orientation">vertical</property>
-    <property name="width-request">250</property>
-    <style>
-      <class name="background"/>
-    </style>
     <child>
-      <object class="GtkScrolledWindow">
-        <property name="visible">True</property>
-        <property name="can_focus">True</property>
-        <property name="hscrollbar_policy">never</property>
-        <child>
-          <object class="GtkViewport">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <child>
-              <object class="GtkListBox" id="presets_list">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-              </object>
-            </child>
-          </object>
-        </child>
-      </object>
-      <packing>
-        <property name="expand">True</property>
-      </packing>
-    </child>
-    <child>
-      <object class="GtkSeparator">
+      <object class="GtkRevealer" id="revealer">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkBox">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="margin">8</property>
-        <child>
-          <object class="GtkMenuButton" id="add_btn">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="popover">add_preset</property>
-            <property name="label" translatable="yes">Add Preset</property>
-          </object>
-          <packing>
-            <property name="expand">True</property>
-          </packing>
-        </child>
-      </object>
-    </child>
-  </template>
-  <object class="GtkPopover" id="add_preset">
-    <property name="can_focus">False</property>
-    <child>
-      <object class="GtkBox">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="orientation">vertical</property>
-        <property name="spacing">6</property>
-        <property name="margin">8</property>
-        <child>
-          <object class="GtkLabel">
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="xalign">0</property>
-            <property name="label" translatable="yes">Preset Name</property>
-            <style>
-              <class name="h4"/>
-            </style>
-          </object>
-        </child>
+        <property name="reveal-child">False</property>
         <child>
           <object class="GtkBox">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
             <property name="spacing">6</property>
             <child>
-              <object class="GtkEntry" id="name_entry">
-                <property name="visible">True</property>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton" id="create_btn">
+              <object class="GtkListBox" id="presets_list">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Create</property>
                 <style>
-                  <class name="suggested-action"/>
+                  <class name="content"/>
                 </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSeparator">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
               </object>
             </child>
           </object>
         </child>
       </object>
     </child>
-  </object>
+  </template>
 </interface>

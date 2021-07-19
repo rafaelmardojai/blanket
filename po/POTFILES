@@ -3,12 +3,12 @@ data/com.rafaelmardojai.Blanket.metainfo.xml.in
 data/com.rafaelmardojai.Blanket.gschema.xml
 data/resources/window.ui
 data/resources/preferences.ui
-data/resources/preset-chooser.ui
-data/resources/preset-control.ui
+data/resources/preset-dialog.ui
 data/resources/about.ui
 data/resources/shortcuts.ui
 src/main.py
 src/window.py
 src/preferences.py
+src/presets.py
 src/about.py
 src/mpris.py
