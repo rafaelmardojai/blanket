@@ -130,7 +130,7 @@ class BlanketWindow(Handy.ApplicationWindow):
                                      'volume',
                                      GObject.BindingFlags.BIDIRECTIONAL)
         # Set volume scale value on first run
-        self.volume.set_value(self.mainplayer.get_property('volume'))
+        self.volume.set_value(self.mainplayer.volume)
 
         # Wire playpause button
         self.mainplayer.bind_property(

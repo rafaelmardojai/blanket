@@ -177,7 +177,7 @@ class MPRIS(Server):
             return GLib.Variant("a{sv}", self.__metadata)
         elif property_name == "Volume":
             return GLib.Variant(
-                "d", self.app.mainplayer.get_property('volume')
+                "d", self.app.mainplayer.volume
             )
         else:
             return GLib.Variant("b", False)
@@ -202,7 +202,7 @@ class MPRIS(Server):
 
     def Set(self, interface, property_name, new_value):
         if property_name == "Volume":
-            self.app.mainplayer.set_property('volume', new_value)
+            self.app.mainplayer.volume = new_value
 
     def PropertiesChanged(self, interface_name, changed_properties,
                           invalidated_properties):
@@ -219,7 +219,7 @@ class MPRIS(Server):
         return self.__doc__
 
     def _get_status(self):
-        playing = self.app.mainplayer.get_property('playing')
+        playing = self.app.mainplayer.playing
         if playing:
             return "Playing"
         else:
@@ -231,7 +231,7 @@ class MPRIS(Server):
             {
                 "Volume": GLib.Variant(
                     "d",
-                    self.app.mainplayer.get_property('volume')
+                    self.app.mainplayer.volume
                 ),
             },
             []
