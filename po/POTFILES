@@ -4,6 +4,7 @@ data/com.rafaelmardojai.Blanket.gschema.xml
 data/resources/window.ui
 data/resources/preferences.ui
 data/resources/preset-dialog.ui
+data/resources/preset-row.ui
 data/resources/about.ui
 data/resources/shortcuts.ui
 src/main.py
