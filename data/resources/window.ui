@@ -86,6 +86,7 @@
   </template>
   <object class="GtkPopoverMenu" id="menu">
     <property name="can_focus">False</property>
+    <property name="width-request">300</property>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
@@ -130,12 +131,21 @@
           </object>
         </child>
         <child>
-          <object class="GtkModelButton">
-            <property name="visible">True</property>
+          <object class="GtkModelButton" id="presets_btn">
+            <property name="visible">False</property>
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
             <property name="menu_name">presets</property>
             <property name="text" translatable="yes">Presets</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkModelButton" id="new_preset_btn">
+            <property name="visible">False</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+            <property name="action_name">app.add-preset</property>
+            <property name="text" translatable="yes">Add Preset...</property>
           </object>
         </child>
         <child>
@@ -262,7 +272,7 @@
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
             <property name="action_name">app.add-preset</property>
-            <property name="text" translatable="yes">Add Preset</property>
+            <property name="text" translatable="yes">Add Preset...</property>
           </object>
         </child>
       </object>

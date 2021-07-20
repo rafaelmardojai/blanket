@@ -40,7 +40,6 @@ class PresetChooser(Gtk.Box):
     index = GObject.Property(type=int)
 
     presets_list = Gtk.Template.Child()
-    revealer = Gtk.Template.Child()
 
     def __init__(self):
         super().__init__()
@@ -51,7 +50,6 @@ class PresetChooser(Gtk.Box):
 
         # Wire widgets
         self.presets_list.connect('row-selected', self._on_preset_selected)
-        self.model.connect('items-changed', self._on_items_changed)
 
         self.load_presets()
 
@@ -85,8 +83,7 @@ class PresetChooser(Gtk.Box):
                 row_.selected = False
             row.selected = True
 
-    def _on_items_changed(self, model, _position, _removed, _added):
-        self.revealer.set_reveal_child(model.get_n_items() > 1)
+        self.emit('selected', self.selected)
 
     def _create_widget(self, preset):
         widget = PresetRow(preset)

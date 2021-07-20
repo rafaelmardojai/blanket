@@ -100,9 +100,12 @@ class BlanketWindow(Handy.ApplicationWindow):
     box = Gtk.Template.Child()
 
     playpause_btn = Gtk.Template.Child()
+
+    menu = Gtk.Template.Child()
     volume = Gtk.Template.Child()
     quit_revealer = Gtk.Template.Child()
-
+    presets_btn = Gtk.Template.Child()
+    new_preset_btn = Gtk.Template.Child()
     presets_chooser = Gtk.Template.Child()
 
     name_binding = None
@@ -165,6 +168,14 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     def setup_presets(self):
         self.presets_chooser.connect('selected', self._on_preset_selected)
+
+        self.presets_chooser.model.connect(
+            'items-changed',
+            self._on_presets_changed
+        )
+        items = self.presets_chooser.model.get_n_items()
+        self.presets_btn.set_visible(items > 1)
+        self.new_preset_btn.set_visible(items == 1)
 
     def setup_sounds(self):
         # Setup default sounds
@@ -271,3 +282,11 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     def _on_reset_volumes(self, _control, _preset):
         self.mainplayer.reset_volumes()
+
+    def _on_presets_changed(self, model, _position, _removed, _added):
+        items = model.get_n_items()
+        self.presets_btn.set_visible(items > 1)
+        self.new_preset_btn.set_visible(items == 1)
+
+        if items == 1:
+            self.menu.open_submenu('main')
