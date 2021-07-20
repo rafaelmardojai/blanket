@@ -11,3 +11,9 @@
   color: @theme_selected_bg_color;
 }
 
+.preset-selector {
+  border-radius: 6px;
+}
+.preset-selector.selected label {
+  font-weight: bold;
+}

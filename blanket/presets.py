@@ -37,7 +37,6 @@ class PresetChooser(Gtk.Box):
         'selected': (GObject.SIGNAL_RUN_FIRST, None, (PresetObject,))
     }
     selected = GObject.Property(type=PresetObject)
-    index = GObject.Property(type=int)
 
     presets_list = Gtk.Template.Child()
 
@@ -47,46 +46,42 @@ class PresetChooser(Gtk.Box):
         # Create GioListStore to store Presets
         self.model = Gio.ListStore.new(PresetObject)
         self.presets_list.bind_model(self.model, self._create_widget)
+        self.connect('notify::selected', self._on_selected_changed)
 
         # Wire widgets
-        self.presets_list.connect('row-selected', self._on_preset_selected)
+        self.presets_list.connect('row-activated', self._on_preset_activated)
 
         self.load_presets()
 
     def load_presets(self):
         presets = Settings.get().get_presets_dict()
-        active = Settings.get().active_preset
-        selected = 0
         for index, (preset_id, name) in enumerate(presets.items()):
             preset = PresetObject(preset_id, self.model)
             self.model.append(preset)
 
-            if preset_id == active:
-                selected = index
+            if preset_id == Settings.get().active_preset:
+                self.selected = preset
 
-        row = self.presets_list.get_row_at_index(selected)
-        self.presets_list.select_row(row)
-
-    def _on_preset_selected(self, _listbox, row):
+    def _on_preset_activated(self, _listbox, row):
         index = 0 if row is None else row.get_index()
         preset = self.model.get_item(index)
-        if preset is not None:
-            if Settings.get().active_preset != preset.id:
-                Settings.get().active_preset = preset.id
 
         self.selected = preset
-        self.index = index
-        self.emit('selected', preset)
 
-        if row:
-            for row_ in self.presets_list.get_children():
-                row_.selected = False
-            row.selected = True
+    def _on_selected_changed(self, _chooser, _pspec):
+        if self.selected is not None:
+            if Settings.get().active_preset != self.selected.id:
+                Settings.get().active_preset = self.selected.id
+
+        for row in self.presets_list.get_children():
+            row.selected = row.preset.id == self.selected.id
 
         self.emit('selected', self.selected)
 
     def _create_widget(self, preset):
         widget = PresetRow(preset)
+        if preset.id == Settings.get().active_preset:
+            widget.selected = True
         return widget
 
 
@@ -97,9 +92,7 @@ class PresetDialog(Handy.Window):
     headerbar = Gtk.Template.Child()
     accept_btn = Gtk.Template.Child()
     cancel_btn = Gtk.Template.Child()
-
     name_entry = Gtk.Template.Child()
-    delete_btn = Gtk.Template.Child()
 
     def __init__(self, preset=None, **kwargs):
         super().__init__()
@@ -125,10 +118,8 @@ class PresetDialog(Handy.Window):
             self.headerbar.set_subtitle(self.preset.name)
             self.accept_btn.set_label(_('Save'))
             self.name_entry.set_text(self.preset.name)
-            self.delete_btn.set_visible(True)
             # Wire buttons
             self.accept_btn.connect('clicked', self._on_rename_preset)
-            self.delete_btn.connect('clicked', self._on_delete_preset)
 
     def _on_entry_changed(self, _entry):
         name = self.__get_name()
@@ -152,10 +143,7 @@ class PresetDialog(Handy.Window):
             chooser.model.append(preset)
 
             # Select new preset
-            row = chooser.presets_list.get_row_at_index(
-                chooser.model.get_n_items() - 1
-            )
-            chooser.presets_list.select_row(row)
+            chooser.selected = preset
         else:
             self.__invalid_name()
             return
@@ -175,21 +163,6 @@ class PresetDialog(Handy.Window):
 
         self.destroy()
 
-    def _on_delete_preset(self, _button):
-        active = self.preset.id == Settings.get().active_preset
-        index = self.preset.remove()
-
-        if index is not None:
-            chooser = self.window.presets_chooser
-            chooser.model.remove(index)
-
-            # Select default preset row
-            if active:
-                row = chooser.presets_list.get_row_at_index(0)
-                chooser.presets_list.select_row(row)
-
-        self.destroy()
-
     def __get_name(self):
         name = self.name_entry.get_text()
         name = name.strip()  # Strip name
@@ -205,16 +178,20 @@ class PresetRow(Gtk.ListBoxRow):
     __gtype_name__ = 'PresetRow'
 
     name = Gtk.Template.Child()
-    settings_btn = Gtk.Template.Child()
+    indicator = Gtk.Template.Child()
+    rename_btn = Gtk.Template.Child()
+    delete_btn = Gtk.Template.Child()
 
     def __init__(self, preset):
         super().__init__()
 
         self.preset = preset
 
-        self.settings_btn.connect('clicked', self._show_settings)
+        self.rename_btn.connect('clicked', self._on_show_rename)
+        self.delete_btn.connect('clicked', self._on_delete_preset)
         if self.preset.id != Settings.get().default_preset:
-            self.settings_btn.set_visible(True)
+            self.rename_btn.set_visible(True)
+            self.delete_btn.set_visible(True)
 
         preset.bind_property(
             'name', self.name, 'label', GObject.BindingFlags.SYNC_CREATE
@@ -222,16 +199,34 @@ class PresetRow(Gtk.ListBoxRow):
 
     @property
     def selected(self):
-        return self.is_selected()
+        return self.indicator.get_visible()
 
     @selected.setter
     def selected(self, value):
-        pass
+        self.indicator.set_visible(value)
+        if value:
+            self.get_style_context().add_class('selected')
+        else:
+            self.get_style_context().remove_class('selected')
 
-    def _show_settings(self, _button):
+    def _on_show_rename(self, _button):
         app = Gio.Application.get_default()
         window = app.get_active_window()
         dialog = PresetDialog(self.preset)
         dialog.set_transient_for(window)
         dialog.set_modal(True)
         dialog.present()
+
+    def _on_delete_preset(self, _button):
+        app = Gio.Application.get_default()
+        window = app.get_active_window()
+        active = self.preset.id == Settings.get().active_preset
+        index = self.preset.remove()
+
+        if index is not None:
+            chooser = window.presets_chooser
+            chooser.model.remove(index)
+
+            # Select default preset row
+            if active:
+                chooser.selected = chooser.model.get_item(0)

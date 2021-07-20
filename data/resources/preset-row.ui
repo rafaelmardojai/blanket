@@ -5,12 +5,16 @@
   <template class="PresetRow" parent="GtkListBoxRow">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="height-request">54</property>
+    <property name="height-request">38</property>
+    <style>
+      <class name="preset-selector"/>
+    </style>
     <child>
       <object class="GtkBox">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="margin">8</property>
+        <property name="margin-start">4</property>
+        <property name="margin-end">4</property>
         <child>
           <object class="GtkLabel" id="name">
             <property name="visible">True</property>
@@ -18,19 +22,51 @@
             <property name="ellipsize">end</property>
             <property name="xalign">0</property>
           </object>
-          <packing>
-            <property name="expand">True</property>
-          </packing>
         </child>
         <child>
-          <object class="GtkButton" id="settings_btn">
+          <object class="GtkImage" id="indicator">
             <property name="visible">False</property>
             <property name="can_focus">False</property>
+            <property name="icon-name">object-select-symbolic</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="delete_btn">
+            <property name="visible">False</property>
+            <property name="can_focus">False</property>
+            <property name="width-request">34</property>
+            <property name="tooltip-text" translatable="yes">Delete Preset</property>
+            <style>
+              <class name="flat"/>
+              <class name="circular"/>
+            </style>
             <child>
               <object class="GtkImage">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="icon_name">gear-symbolic</property>
+                <property name="icon_name">edit-delete-symbolic</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="pack_type">end</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="rename_btn">
+            <property name="visible">False</property>
+            <property name="can_focus">False</property>
+            <property name="width-request">34</property>
+            <property name="tooltip-text" translatable="yes">Rename Preser</property>
+            <style>
+              <class name="flat"/>
+              <class name="circular"/>
+            </style>
+            <child>
+              <object class="GtkImage">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="icon_name">document-edit-symbolic</property>
               </object>
             </child>
           </object>

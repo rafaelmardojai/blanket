@@ -153,9 +153,6 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.setup_sounds()
         self.setup_custom_sounds()
 
-        # Window title
-        self.update_title(self.presets_chooser.selected)
-
         # Show all widgets added to window
         self.show_all()
 
@@ -168,6 +165,7 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     def setup_presets(self):
         self.presets_chooser.connect('selected', self._on_preset_selected)
+        self.update_title(self.presets_chooser.selected)
 
         self.presets_chooser.model.connect(
             'items-changed',
