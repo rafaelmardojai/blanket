@@ -136,7 +136,7 @@
             <property name="can_focus">True</property>
             <property name="receives_default">True</property>
             <property name="menu_name">presets</property>
-            <property name="text" translatable="yes">Presets</property>
+            <property name="text" translatable="yes">Saved Presets</property>
           </object>
         </child>
         <child>
@@ -257,7 +257,7 @@
             <property name="inverted">True</property>
             <property name="centered">True</property>
             <property name="menu-name">main</property>
-            <property name="text" translatable="yes">Presets</property>
+            <property name="text" translatable="yes">Saved Presets</property>
           </object>
         </child>
         <child>
