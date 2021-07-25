@@ -37,7 +37,7 @@
             <property name="visible">True</property>
             <child>
               <object class="HdyActionRow">
-                <property name="title" translatable="yes">Autostart on background</property>
+                <property name="title" translatable="yes">Autostart in background</property>
                 <property name="visible">True</property>
                 <property name="activatable_widget">autostart</property>
                 <child>

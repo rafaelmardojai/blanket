@@ -59,7 +59,7 @@ class PreferencesWindow(Handy.PreferencesWindow):
             'handle_token': GLib.Variant(
                 's', f'com/rafaelmardojai/Blanket/{token}'
             ),
-            'reason': GLib.Variant('s', _('Autostart Blanket on background.')),
+            'reason': GLib.Variant('s', _('Autostart Blanket in background.')),
             'autostart': GLib.Variant('b', active),
             'commandline': GLib.Variant('as', ['blanket', '--hidden']),
             'dbus-activatable': GLib.Variant('b', False)
