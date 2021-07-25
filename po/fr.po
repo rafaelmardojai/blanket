@@ -72,7 +72,7 @@ msgid "Behavior"
 msgstr "Comportement"
 
 #: data/resources/preferences.ui:20
-msgid "Autostart on background"
+msgid "Autostart in background"
 msgstr "Démarrage automatique en arrière-plan"
 
 #: data/resources/about.ui:11

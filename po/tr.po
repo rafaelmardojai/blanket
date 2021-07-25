@@ -72,7 +72,7 @@ msgid "Behavior"
 msgstr "Davranış"
 
 #: data/resources/preferences.ui:20
-msgid "Autostart on background"
+msgid "Autostart in background"
 msgstr "Arka planda otomatik başlat"
 
 #: data/resources/about.ui:11

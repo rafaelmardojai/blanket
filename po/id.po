@@ -72,7 +72,7 @@ msgid "Behavior"
 msgstr "Perilaku"
 
 #: data/resources/preferences.ui:20
-msgid "Autostart on background"
+msgid "Autostart in background"
 msgstr "Mulai otomatis di latar belakang"
 
 #: data/resources/about.ui:11

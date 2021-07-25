@@ -71,7 +71,7 @@ msgid "Behavior"
 msgstr "நடத்தை"
 
 #: data/resources/preferences.ui:20
-msgid "Autostart on background"
+msgid "Autostart in background"
 msgstr "பின்னணியில் தானாக துவங்கு"
 
 #: data/resources/about.ui:11

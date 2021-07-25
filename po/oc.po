@@ -71,7 +71,7 @@ msgid "Behavior"
 msgstr "Compòrtament"
 
 #: data/resources/preferences.ui:20
-msgid "Autostart on background"
+msgid "Autostart in background"
 msgstr "Aviada automatica en rèireplan"
 
 #: data/resources/about.ui:11
