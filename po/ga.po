@@ -73,7 +73,7 @@ msgid "Behavior"
 msgstr "Iompraíocht"
 
 #: data/resources/preferences.ui:20
-msgid "Autostart on background"
+msgid "Autostart in background"
 msgstr "Uath-thosú sa chúlra"
 
 #: data/resources/about.ui:11

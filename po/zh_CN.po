@@ -70,7 +70,7 @@ msgid "Behavior"
 msgstr "行为"
 
 #: data/resources/preferences.ui:20
-msgid "Autostart on background"
+msgid "Autostart in background"
 msgstr "系统启动后自动在后台运行"
 
 #: data/resources/about.ui:11
