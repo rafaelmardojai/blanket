@@ -45,5 +45,8 @@
         <key type="a{sd}" name="sounds-volume">
             <default>{}</default>
         </key>
+        <key type="a{sb}" name="sounds-mute">
+            <default>{}</default>
+        </key>
     </schema>
 </schemalist>

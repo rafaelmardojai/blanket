@@ -58,6 +58,14 @@ class SoundObject(GObject.Object):
     def saved_volume(self, volume):
         Settings.get().set_sound_volume(self.name, volume)
 
+    @property
+    def saved_mute(self):
+        return Settings.get().get_sound_mute(self.name)
+
+    @saved_mute.setter
+    def saved_mute(self, mute):
+        Settings.get().set_sound_mute(self.name, mute)
+
     def remove(self):
         if self.custom:
             Settings.get().remove_custom_audio(self.name)

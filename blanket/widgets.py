@@ -1,6 +1,7 @@
 # Copyright 2020-2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+from gettext import gettext as _
 from gi.repository import Gio, GObject, Gtk, GstPlayer
 
 from blanket.sound import SoundObject, SoundPlayer
@@ -49,6 +50,7 @@ class SoundRow(Gtk.ListBoxRow):
     def __init__(self, sound, model):
         super().__init__()
 
+        self.first_load = True
         # SoundObject
         self.sound = sound
         # Gio.ListStore
@@ -74,9 +76,9 @@ class SoundRow(Gtk.ListBoxRow):
 
         # Connect scale with volume function
         self.volume.connect('value-changed', self._on_volume_changed)
+
         # Load saved volume
-        if self.sound.saved_volume and self.sound.saved_volume > 0:
-            self.volume.set_value(self.sound.saved_volume)
+        self.volume.set_value(self.sound.saved_volume)
 
         if self.sound.custom:
             # Add a remove button
@@ -110,21 +112,43 @@ class SoundRow(Gtk.ListBoxRow):
         # Remove audio from settings
         self.sound.remove()
 
-    def _toggle_playing_indicator(self, show):
-        if not show:
-            self.playing.set_reveal_child(False)
-        elif not self.playing.get_reveal_child():
-            self.playing.set_reveal_child(True)
+    def toggle_mute(self):
+        # Toggle player mute state
+        if self.sound.saved_volume > 0:
+            self.sound.saved_mute = not self.sound.saved_mute
+
+        if self.sound.saved_mute:
+            self.player.set_virtual_volume(0)
+        elif self.sound.saved_volume > 0:
+            self.player.set_virtual_volume(self.sound.saved_volume)
+        else:
+            self.volume.set_value(0.5)
+
+        self._update_active_state()
 
     def _on_volume_changed(self, scale):
         # Round volume value
         volume = round(scale.get_value(), 2)
-        # Set player volume
-        self.player.set_virtual_volume(volume)
         # Save volume on settings
         self.sound.saved_volume = volume
-        # Toggle active indicator
-        if volume == 0:
+
+        if self.first_load and self.sound.saved_mute:
+            self.player.set_virtual_volume(0)
+            self.first_load = False
+        else:
+            self.player.set_virtual_volume(volume)
+            self.sound.saved_mute = False
+
+        self._update_active_state()
+
+    def _update_active_state(self):
+        if self.sound.saved_mute or self.sound.saved_volume == 0:
+            self._show_active_indicator(False)
+        else:
+            self._show_active_indicator(True)
+
+    def _show_active_indicator(self, show):
+        if not show:
             self.get_style_context().remove_class('playing')
         elif not self.get_style_context().has_class('playing'):
             self.get_style_context().add_class('playing')
@@ -135,24 +159,32 @@ class SoundRow(Gtk.ListBoxRow):
         else:
             self._toggle_playing_indicator(False)
 
+    def _toggle_playing_indicator(self, show):
+        if not show:
+            self.playing.set_reveal_child(False)
+        elif not self.playing.get_reveal_child():
+            self.playing.set_reveal_child(True)
+
     def _on_preset_changed(self, _player):
-        if self.sound.saved_volume:
-            self.volume.set_value(self.sound.saved_volume)
-            self.player.play()
-        else:
-            self.volume.set_value(0.0)
+        self.first_load = True
+        self.volume.set_value(self.sound.saved_volume)
 
     def _on_reset_volumes(self, _player):
         self.volume.set_value(0.0)
 
 
 class SoundsGroup(Gtk.Box):
+    __gtype_name__ = 'SoundsGroup'
     """
     SoundsGroup
     Group SoundRow with a title
     """
 
-    def __init__(self, title):
+    __gsignals__ = {
+        'add-clicked': (GObject.SIGNAL_RUN_FIRST, None, ()),
+    }
+
+    def __init__(self, title, custom=False):
         super().__init__()
 
         # Setup box props
@@ -174,6 +206,15 @@ class SoundsGroup(Gtk.Box):
 
         # Bind GtkListBox with GioListStore
         self.listbox.bind_model(self.model, self._create_sound_widget)
+        # Connect row activated signal
+        self.listbox.connect('row-activated', self._on_row_activated)
+
+        # Show add button if group is for custom sounds
+        if custom:
+            add_btn = Gtk.Button(_('Add Custom Sound...'))
+            # add_btn.get_style_context().add_class('suggested-action')
+            add_btn.connect('clicked', self.__on_add_clicked)
+            self.pack_start(add_btn, True, False, 0)
 
     def add(self, sound):
         self.model.append(sound)
@@ -181,3 +222,11 @@ class SoundsGroup(Gtk.Box):
     def _create_sound_widget(self, sound):
         widget = SoundRow(sound, self.model)
         return widget
+
+    def _on_row_activated(self, _list, row):
+        if isinstance(row, SoundRow):
+            # Toggle sound mute state
+            row.toggle_mute()
+
+    def __on_add_clicked(self, _button):
+        self.emit('add-clicked')

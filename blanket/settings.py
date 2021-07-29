@@ -195,20 +195,46 @@ class Settings(Gio.Settings):
         settings = self.get_preset_settings(preset_id)
         settings.set_value('sounds-volume', GLib.Variant('a{sd}', volumes))
 
+    def get_preset_mutes(self, preset_id):
+        settings = self.get_preset_settings(preset_id)
+        return dict(settings.get_value('sounds-mute'))
+
+    def set_preset_mutes(self, preset_id, mutes):
+        settings = self.get_preset_settings(preset_id)
+        settings.set_value('sounds-mute', GLib.Variant('a{sb}', mutes))
+
     """ Preset sound volume """
     def get_sound_volume(self, name):
         volumes = self.get_preset_volumes(self.active_preset)
         # If sound is set on volume dict
         if name in volumes:
             volume = volumes[name]
-            return volume if volume else None
-        else:
-            return None
+            if volume:
+                return volume
+        return 0.0
 
     def set_sound_volume(self, name, volume):
         saved_volumes = self.get_preset_volumes(self.active_preset)
         saved_volumes[name] = volume
         self.set_preset_volumes(self.active_preset, saved_volumes)
+
+        if volume == 0:
+            self.set_sound_mute(name, False)
+
+    """ Preset sound mute """
+    def get_sound_mute(self, name):
+        mutes = self.get_preset_mutes(self.active_preset)
+        # If sound is set on mute dict
+        if name in mutes:
+            mute = mutes[name]
+            if mute:
+                return mute
+        return False
+
+    def set_sound_mute(self, name, mute):
+        saved_mutes = self.get_preset_mutes(self.active_preset)
+        saved_mutes[name] = mute
+        self.set_preset_mutes(self.active_preset, saved_mutes)
 
     """ Preset settings helper functions """
     def get_preset_settings(self, preset_id=None):

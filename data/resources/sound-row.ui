@@ -11,7 +11,6 @@
   <template class="SoundRow" parent="GtkListBoxRow">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="activatable">False</property>
     <property name="selectable">False</property>
     <style>
       <class name="soundrow"/>

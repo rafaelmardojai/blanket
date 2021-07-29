@@ -193,23 +193,9 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     def setup_custom_sounds(self):
         # Setup user custom sounds
-        self.custom_sounds = SoundsGroup(_('Custom'))
+        self.custom_sounds = SoundsGroup(_('Custom'), True)
+        self.custom_sounds.connect('add-clicked', self._on_add_sound_clicked)
         self.box.pack_start(self.custom_sounds, False, True, 0)
-
-        # Add sound button row
-        add_row = Gtk.ListBoxRow()
-        add_row.set_selectable(False)
-        add_row_box = Gtk.Box(
-            height_request=34
-        )
-        add_row.add(add_row_box)
-        add_row_icon = Gtk.Image.new_from_icon_name(
-            'list-add-symbolic',
-            Gtk.IconSize.MENU
-        )
-        add_row_box.pack_start(add_row_icon, True, True, 0)
-        self.custom_sounds.listbox.add(add_row)
-        self.custom_sounds.listbox.connect('row-activated', self.open_audio)
 
         # Load saved custom audios
         for name, uri in Settings.get().custom_audios.items():
@@ -220,8 +206,7 @@ class BlanketWindow(Handy.ApplicationWindow):
             # Add SoundObject to SoundsGroup
             self.custom_sounds.add(sound)
 
-    def open_audio(self, _widget=None, _row=None):
-
+    def open_audio(self):
         filters = {
             'OGG': ['audio/ogg'],
             'FLAC': ['audio/x-flac'],
@@ -288,3 +273,6 @@ class BlanketWindow(Handy.ApplicationWindow):
 
         if items == 1:
             self.menu.open_submenu('main')
+
+    def _on_add_sound_clicked(self, _group):
+        self.open_audio()
