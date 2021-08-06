@@ -4,6 +4,7 @@ This files list all the translations maintainers.  It's used to call translators
 Code  | Language             | Maintainers (GitHub usernames)
 :---: | :------------------: | :-----------------------------
 ca    | Catalan              | @fitojb @juxuanu
+cs    | Czech                | @pervoj
 de    | German               | @eladyn
 eo    | Esperanto            | @Porrumentzio
 es    | Spanish              | @rafaelmardojai 
