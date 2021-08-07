@@ -24,10 +24,10 @@ SOUND_ARTISTS = {
     'kvgarlic': [_('Birds')],
     'Lisa Redfern': [_('Summer Night')],
     'Luftrum': [_('Waves')],
+    'stephan': [_('Coffee Shop')],
     'Omegatron': [_('Pink Noise')],
     'felix.blume': [_('Wind')],
     'vahid': [_('Train')],
-    _('Unknown'): [_('Coffee Shop'), _('Fireplace'), _('Summer Night')],
 }
 
 SOUND_EDITORS = {
