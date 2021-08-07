@@ -25,7 +25,6 @@ SOUND_ARTISTS = {
     'Lisa Redfern': [_('Summer Night')],
     'Luftrum': [_('Waves')],
     'Omegatron': [_('Pink Noise')],
-    'Stephan': [_('Coffee Shop')],
     'felix.blume': [_('Wind')],
     'vahid': [_('Train')],
     _('Unknown'): [_('Coffee Shop'), _('Fireplace'), _('Summer Night')],
