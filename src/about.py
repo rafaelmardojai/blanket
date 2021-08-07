@@ -36,13 +36,13 @@ SOUND_ARTISTS = {
     'kvgarlic': [_('Birds')],
     'Luftrum': [_('Waves')],
     'Omegatron': [_('Pink Noise')],
-    'Stilgar': [_('Wind')],
+    'felix.blume': [_('Wind')],
     'vahid': [_('Train')],
     _('Unknown'): [_('Coffee Shop'), _('Fireplace'), _('Summer Night')],
 }
 
 SOUND_EDITORS = {
-    'Porrumentzio': [_('Birds'), _('Rain'), _('Storm'), _('Waves'), _('Boat'), _('City')]
+    'Porrumentzio': [_('Birds'), _('Rain'), _('Storm'), _('Waves'), _('Boat'), _('City'), _('Wind')]
 }
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/about.ui')
