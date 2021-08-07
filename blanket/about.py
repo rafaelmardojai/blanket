@@ -26,14 +26,14 @@ SOUND_ARTISTS = {
     'Luftrum': [_('Waves')],
     'Omegatron': [_('Pink Noise')],
     'Stephan': [_('Coffee Shop')],
-    'Stilgar': [_('Wind')],
-    'vahid': [_('Train')]
+    'felix.blume': [_('Wind')],
+    'vahid': [_('Train')],
+    _('Unknown'): [_('Coffee Shop'), _('Fireplace'), _('Summer Night')],
 }
 
 SOUND_EDITORS = {
     'Porrumentzio': [
-        _('Birds'), _('Rain'), _('Storm'), _('Waves'), _('Boat'), _('City')
-    ]
+        _('Birds'), _('Rain'), _('Storm'), _('Waves'), _('Boat'), _('City'), _('Wind')]
 }
 
 
