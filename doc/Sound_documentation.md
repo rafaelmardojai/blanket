@@ -60,30 +60,29 @@ _________
 **New sounds:**
 | Sound                                                         | App version | Author   | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications
 | :-:                                                           | :-:         | :-:      | :-:      | :-:         | :-:   | :-:              |  :-:
-| [Waves](https://freesound.org/people/Luftrum/sounds/48412/)   | `4.0`       | Luftrum  | CC BY    | -23         | 9,8   | -0,4             | -2,5 dB & Lim -6,5 dB : 2,5 ms 
-| [Birds](https://freesound.org/people/kvgarlic/sounds/156826/) | `4.0`       | kvgarlic | CC0      | -39,8       | 16,4  | -24,4            | +12 dB
-| [Train](https://trains.ambient-mixer.com/rainy-train)         | `4.0`       | vahid    | CC Sampling + | -27    | 8,7   | -8,1             | None
-| [Stream](https://freesound.org/people/gluckose/sounds/333987/) | `4.0`      | gluckose | CC0      | -39,2       | 1     | -15,7            | None
-| [Boat](https://freesound.org/people/Falcet/sounds/439365/)    | `4.0`       | Falcet   | CC0      | -50,5       | 6,6   | -26              | +20 dB
-| [City](ttps://freesound.org/people/gezortenplotz/sounds/44796/) | `4.0`   | gezortenplotz | CC BY | -38,7       | 4     | -18,9            | +11 dB
+| [Waves](https://freesound.org/people/Luftrum/sounds/48412/)   | `0.4.0`       | Luftrum  | CC BY    | -23         | 9,8   | -0,4             | -2,5 dB & Lim -6,5 dB : 2,5 ms 
+| [Birds](https://freesound.org/people/kvgarlic/sounds/156826/) | `0.4.0`       | kvgarlic | CC0      | -39,8       | 16,4  | -24,4            | +12 dB
+| [Train](https://trains.ambient-mixer.com/rainy-train)         | `0.4.0`       | vahid    | CC Sampling + | -27    | 8,7   | -8,1             | None
+| [Stream](https://freesound.org/people/gluckose/sounds/333987/) | `0.4.0`      | gluckose | CC0      | -39,2       | 1     | -15,7            | None
+| [Boat](https://freesound.org/people/Falcet/sounds/439365/)    | `0.4.0`       | Falcet   | CC0      | -50,5       | 6,6   | -26              | +20 dB
+| [City](ttps://freesound.org/people/gezortenplotz/sounds/44796/) | `0.4.0`   | gezortenplotz | CC BY | -38,7       | 4     | -18,9            | +11 dB
 
 **Replaced sounds:**
 | Sound                                                         | App version | Author    | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications
 | :-:                                                           | :-:         | :-:       | :-:      | :-:         | :-:   | :-:              |  :-:
-| [Rain](https://freesound.org/people/alex36917/sounds/524605/) | `4.0`       | alex36917 | CC BY    | -29,3       | 4,6   | 0                | +2 dB & Lim -6,1 dB : 3,2 ms
+| [Rain](https://freesound.org/people/alex36917/sounds/524605/) | `0.4.0`     | alex36917 | CC BY    | -29,3       | 4,6   | 0                | +2 dB & Lim -6,1 dB : 3,2 ms
+| [Wind](https://freesound.org/people/felix.blume/sounds/217506/)| `0.4.2`    | felix.blume | CC0    | -17,9       | 8     | -0,5             | -9 dB (its an extract, not whole clip)
 
 **Modified sounds:**
 | Sound   | App version | Author         | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications | Needs replacement
 | :-:     | :-:         | :-:            | :-:      | :-:         | :-:   | :-:              |  :-:          | :-:
-| Storm   | `4.0`       | Digifish music | Unknown  | -17,9       | 9,7   | 0                | -7 dB         |
-| Pink noise | `4.0`    | Omegatron      | Unknown  | -11,7       | 4,8   | -0,7             | -10 dB        | X [#11](https://github.com/rafaelmardojai/blanket/issues/11)
-| Summer night | `4.0`  | Unknown        | Unknown  | -14,4       | 2,7   | -3,4             | -12 dB        | X
-| White noise | `4.0`   | Jorge Stolfi   | Unknown  | -1,1        | 1,8   | 4,6              | -25 dB        | X [#11](https://github.com/rafaelmardojai/blanket/issues/11)
-| Wind    | `4.0`       | Stilgar        | Unknown  | -16,6       | 0     | -3,1             | -6 dB         | X
+| Storm   | `0.4.0`       | Digifish music | Unknown  | -17,9       | 9,7   | 0                | -7 dB         |
+| Pink noise | `0.4.0`    | Omegatron      | Unknown  | -11,7       | 4,8   | -0,7             | -10 dB        | X [#11](https://github.com/rafaelmardojai/blanket/issues/11)
+| Summer night | `0.4.0`  | Unknown        | Unknown  | -14,4       | 2,7   | -3,4             | -12 dB        | X
+| White noise | `0.4.0`   | Jorge Stolfi   | Unknown  | -1,1        | 1,8   | 4,6              | -25 dB        | X [#11](https://github.com/rafaelmardojai/blanket/issues/11)
 
 ## Needs replacement
-**For `4.0`**
-* Wind
+**For `0.4.2`**
 * Summer night
 * Coffee Shop
 * Fireplace
