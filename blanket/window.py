@@ -208,7 +208,7 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     def open_audio(self):
         filters = {
-            'OGG': ['audio/ogg'],
+            'Ogg': ['audio/ogg'],
             'FLAC': ['audio/x-flac'],
             'WAV': ['audio/x-wav', 'audio/wav'],
             'MP3': ['audio/mpeg'],
