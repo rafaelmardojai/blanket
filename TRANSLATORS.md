@@ -10,6 +10,7 @@ This files list all the translations maintainers.  It's used to call translators
 | eo    | Esperanto            | @Porrumentzio                  |
 | es    | Spanish              | @rafaelmardojai                |
 | eu    | Basque               | @Porrumentzio                  |
+| fa    | Persian              | @mskf1383                      |
 | fi    | Finnish              | @heidiwenger                   |
 | fr    | French               | @maoschanz @julroy67           |
 | ga    | Irish                | @Moilleadoir                   |
