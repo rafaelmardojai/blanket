@@ -17,23 +17,23 @@
     <!-- Icons -->
 
     <!-- Sounds Icons -->
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-rain-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-storm-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-wind-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-waves-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-stream-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-birds-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-summer-night-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-rain-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-storm-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-wind-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-waves-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-stream-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-birds-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-summer-night-symbolic.svg</file>
 
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-train-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-boat-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-train-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-boat-symbolic.svg</file>
 
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-city-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-coffee-shop-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-fireplace-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-pink-noise-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-white-noise-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/com.rafaelmardojai.Blanket-sound-wave-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-city-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-coffee-shop-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-fireplace-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-pink-noise-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-white-noise-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-sound-wave-symbolic.svg</file>
 
     <!-- Sounds -->
     <file>sounds/rain.ogg</file>

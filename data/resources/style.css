@@ -1,5 +1,5 @@
 .soundrow.playing .sound-icon {
-  color: @theme_selected_bg_color;
+  color: @accent_color;
 }
 
 .preset-selector.selected label {
