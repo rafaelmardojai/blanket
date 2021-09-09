@@ -6,12 +6,12 @@ import gi
 
 gi.require_version('Gst', '1.0')
 gi.require_version('GstPlayer', '1.0')
-gi.require_version('Gdk', '3.0')
-gi.require_version('Gtk', '3.0')
-gi.require_version('Handy', '1')
+gi.require_version('Gdk', '4.0')
+gi.require_version('Gtk', '4.0')
+gi.require_version('Adw', '1')
 
 from gettext import gettext as _
-from gi.repository import GLib, Gst, Gdk, Gio, Gtk, Handy
+from gi.repository import GLib, Gst, Gdk, Gio, Gtk, Adw
 # Init GStreamer
 Gst.init(None)
 
@@ -24,12 +24,11 @@ from blanket.presets import PresetDialog
 from blanket.about import AboutDialog
 
 
-class Application(Gtk.Application):
+class Application(Adw.Application):
     def __init__(self, version):
         super().__init__(application_id='com.rafaelmardojai.Blanket',
                          flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
         GLib.set_application_name(_('Blanket'))
-        GLib.set_prgname('com.rafaelmardojai.Blanket')
         GLib.setenv('PULSE_PROP_application.icon_name',
                     'com.rafaelmardojai.Blanket-symbolic', True)
         # Connect app shutdown signal
@@ -54,12 +53,8 @@ class Application(Gtk.Application):
 
     def do_startup(self):
         # Startup application
-        Gtk.Application.do_startup(self)
+        Adw.Application.do_startup(self)
         self.setup_actions()
-        self.load_css()
-
-        # Init Handy
-        Handy.init()
 
     def setup_actions(self):
         actions = [
@@ -124,20 +119,12 @@ class Application(Gtk.Application):
             if 'accels' in a:
                 self.set_accels_for_action('app.' + a['name'], a['accels'])
 
-    def load_css(self):
-        css_provider = Gtk.CssProvider()
-        css_provider.load_from_resource(
-            '/com/rafaelmardojai/Blanket/style.css')
-        screen = Gdk.Screen.get_default()
-        style_context = Gtk.StyleContext()
-        style_context.add_provider_for_screen(
-            screen, css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER
-        )
-
     def do_activate(self):
         self.window = self.props.active_window
         if not self.window:
             self.window = BlanketWindow(self.mainplayer, application=self)
+
+        self.window.props.hide_on_close = Settings.get().background
 
         if self.window_hidden:
             self.window.hide()
@@ -145,8 +132,8 @@ class Application(Gtk.Application):
         else:
             self.window.present()
 
-        # Connect window delete-event signal to _on_window_delete
-        self.window.connect('delete-event', self._on_window_delete)
+        # Connect window close-request signal to _on_window_close_request
+        self.window.connect('close-request', self._on_window_close_request)
 
     def do_command_line(self, command_line):
         options = command_line.get_options_dict()
@@ -181,8 +168,7 @@ class Application(Gtk.Application):
     def on_background(self, action, value):
         action.set_state(value)
         Settings.get().background = value
-
-        self.window.quit_revealer.set_reveal_child(value)
+        self.window.props.hide_on_close = value
 
     def on_preferences(self, _action, _param):
         window = PreferencesWindow(self.window)
@@ -221,10 +207,10 @@ class Application(Gtk.Application):
         # Save presets settings
         Settings.get().save_presets()
 
-    def _on_window_delete(self, window, _event):
+    def _on_window_close_request(self, window):
         if Settings.get().background:
             self._save_settings()  # Save settings
-            return window.hide_on_delete()
+            window.hide()
         else:
             self.quit_from_window = True
             self.quit()

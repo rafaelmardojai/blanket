@@ -1,19 +1,7 @@
-.h1 {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.h4 {
-  font-weight: bold;
-}
-
 .soundrow.playing .sound-icon {
   color: @theme_selected_bg_color;
 }
 
-.preset-selector {
-  border-radius: 6px;
-}
 .preset-selector.selected label {
   font-weight: bold;
 }

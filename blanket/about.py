@@ -42,8 +42,6 @@ class AboutDialog(Gtk.AboutDialog):
 
     def __init__(self, version):
         super().__init__()
-        # Connect "Close" button
-        self.connect('response', self._on_about_response)
 
         artists = self._get_credits_list(ARTISTS)
         sound_artists = self._get_credits_list(SOUND_ARTISTS)
@@ -67,6 +65,3 @@ class AboutDialog(Gtk.AboutDialog):
             s = k + '\n	' + ', '.join(vs)
             credits_list.append(s)
         return credits_list
-
-    def _on_about_response(self, _dialog, _response_id):
-        self.destroy()

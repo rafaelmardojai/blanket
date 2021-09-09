@@ -5,13 +5,13 @@ import os
 from random import randint
 
 from gettext import gettext as _
-from gi.repository import Gio, GLib, Gtk, Handy
+from gi.repository import Gio, GLib, Gtk, Adw
 
 from blanket.settings import Settings
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preferences.ui')
-class PreferencesWindow(Handy.PreferencesWindow):
+class PreferencesWindow(Adw.PreferencesWindow):
     __gtype_name__ = 'PreferencesWindow'
 
     dark = Gtk.Template.Child()
