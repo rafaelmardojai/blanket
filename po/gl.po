@@ -1,0 +1,227 @@
+# Galician translations for blanket package.
+# Copyright (C) 2020 THE blanket'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blanket package.
+# Fran Dieguez <frandieguez@gnome.org>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blanket\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-15 22:28-0500\n"
+"PO-Revision-Date: 2021-09-10 09:37+0200\n"
+"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 40.0\n"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:3
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:30
+#: src/mpris.py:135
+msgid "Blanket"
+msgstr "Blanket"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:4
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
+#: src/mpris.py:133 src/mpris.py:134
+msgid "Listen to different sounds"
+msgstr "Escoite diferentes sons"
+
+#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/com.rafaelmardojai.Blanket.desktop.in:10
+msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
+msgstr "Concentracion;Ruido;Productividade;Durmir;"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+msgid ""
+"Improve focus and increase your productivity by listening to different "
+"sounds. Or allows you to fall asleep in a noisy environment."
+msgstr ""
+"Mellore i enfoque e aumente a súa productividade escoitando diferentes sons. "
+"Ou permítelle quedarse durmido nun entorno ruidoso."
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#: data/resources/window.ui:146
+msgid "Keep playing when closed"
+msgstr "Continuar reproducindo ao pechar"
+
+#: data/resources/window.ui:168
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: data/resources/window.ui:177
+msgid "Keyboard Shortcuts"
+msgstr "Atallos de teclado"
+
+#: data/resources/window.ui:186
+msgid "About Blanket"
+msgstr "Sobre Blanket"
+
+#: data/resources/window.ui:213 data/resources/shortcuts.ui:39
+msgid "Quit"
+msgstr "Saír"
+
+#: data/resources/preferences.ui:16
+msgid "Behavior"
+msgstr "Comportamento"
+
+#: data/resources/preferences.ui:20
+msgid "Autostart in background"
+msgstr "Inicio automático en segundo plano"
+
+#: data/resources/about.ui:11
+msgid "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
+
+#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#: data/resources/about.ui:15
+msgctxt "Add your names here, do not remove previous names!"
+msgid "translator-credits"
+msgstr "Fran Diéguez <frandieguez@gnome.org>, 2021"
+
+#: data/resources/shortcuts.ui:13
+msgid "General"
+msgstr "Xeral"
+
+#: data/resources/shortcuts.ui:18
+msgid "Play/Pause sounds"
+msgstr "Reproducir/Pausar sons"
+
+#: data/resources/shortcuts.ui:25
+msgid "Add custom sound"
+msgstr "Engadir son personalizado"
+
+#: data/resources/shortcuts.ui:32
+msgid "Close window"
+msgstr "Pechar xanela"
+
+#: src/window.py:14
+msgid "Nature"
+msgstr "Natureza"
+
+#: src/window.py:18 src/about.py:17 src/about.py:34
+msgid "Rain"
+msgstr "Chuvia"
+
+#: src/window.py:22 src/about.py:18 src/about.py:34
+msgid "Storm"
+msgstr "Tormenta"
+
+#: src/window.py:26 src/about.py:29
+msgid "Wind"
+msgstr "Vento"
+
+#: src/window.py:30 src/about.py:26 src/about.py:34
+msgid "Waves"
+msgstr "Olas"
+
+#: src/window.py:34 src/about.py:22
+msgid "Stream"
+msgstr "Arroio"
+
+#: src/window.py:38 src/about.py:24 src/about.py:34
+msgid "Birds"
+msgstr "Páxaros"
+
+#: src/window.py:42 src/about.py:25
+msgid "Summer Night"
+msgstr "Noite de Verán"
+
+#: src/window.py:47
+msgid "Travel"
+msgstr "Viaxe"
+
+#: src/window.py:51 src/about.py:30
+msgid "Train"
+msgstr "Tren"
+
+#: src/window.py:55 src/about.py:20 src/about.py:34
+msgid "Boat"
+msgstr "Barco"
+
+#: src/window.py:59 src/about.py:21 src/about.py:34
+msgid "City"
+msgstr "Cidade"
+
+#: src/window.py:64
+msgid "Interiors"
+msgstr "Interiores"
+
+#: src/window.py:68 src/about.py:28
+msgid "Coffee Shop"
+msgstr "Cafetería"
+
+#: src/window.py:72 src/about.py:19
+msgid "Fireplace"
+msgstr "Chimenea"
+
+#: src/window.py:77
+msgid "Noise"
+msgstr "Ruido"
+
+#: src/window.py:81 src/about.py:27
+msgid "Pink Noise"
+msgstr "Ruido Rosa"
+
+#: src/window.py:85 src/about.py:23
+msgid "White Noise"
+msgstr "Ruido Branco"
+
+#. Setup user custom sounds
+#: src/window.py:168
+msgid "Custom"
+msgstr "Personalizado"
+
+#: src/window.py:218
+msgid "Open audio"
+msgstr "Abrir audio"
+
+#: src/preferences.py:48
+msgid "Autostart Blanket on background."
+msgstr "Iniciar automaticamente Blanket en segundo plano."
+
+#: src/preferences.py:75 src/preferences.py:106
+msgid "Request error"
+msgstr "Erro de solicitude"
+
+#: src/preferences.py:76 src/preferences.py:107
+msgid "The autostart request failed."
+msgstr "A solicitude de inicio automático fallou."
+
+#: src/preferences.py:96
+msgid "Authorization failed"
+msgstr "Autorización fallida"
+
+#: src/preferences.py:98
+msgid ""
+"Make sure Blanket has permission to run in \n"
+"the background in Settings → Applications → \n"
+"Blanket and try again."
+msgstr ""
+"Asegúrese que Blanket teña permiso para executarse\n"
+"en segundo plano en Preferencias → Aplicacións →\n"
+"Blanket e volva tentalo. "
+
+#: src/about.py:12
+msgid "Sounds icons"
+msgstr "Iconas de sons"
+
+#: src/about.py:13
+msgid "App icon"
+msgstr "Icona de aplicación"
+
+#. Set sound artists list
+#: src/about.py:58
+msgid "Sounds by"
+msgstr "Sons por"
+
+#. Set sound editors list
+#: src/about.py:60
+msgid "Sounds edited by"
+msgstr "Sons editados por"
