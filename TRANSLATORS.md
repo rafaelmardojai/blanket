@@ -14,6 +14,7 @@ This files list all the translations maintainers.  It's used to call translators
 | fi    | Finnish              | @heidiwenger                   |
 | fr    | French               | @maoschanz @julroy67           |
 | ga    | Irish                | @Moilleadoir                   |
+| gl    | Galician             | @frandieguez                   |
 | hr    | Croatian             | @milotype                      |
 | hu    | Hungarian            | @osiixy                        |
 | id    | Indonesian           | @cho2                          |
