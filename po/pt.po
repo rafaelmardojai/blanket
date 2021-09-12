@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-15 22:28-0500\n"
-"PO-Revision-Date: 2021-08-26 23:25+0100\n"
+"PO-Revision-Date: 2021-09-12 18:23+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
-"Language-Team: Portuguese < >\n"
+"Language-Team: Portuguese (https://l10n.gnome.org/teams/pt/)\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,12 +29,12 @@ msgstr "Blanket"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
 #: src/mpris.py:133 src/mpris.py:134
 msgid "Listen to different sounds"
-msgstr "Ouvir diferentes sons"
+msgstr "Ouça diferentes sons"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Concentrate;Focus;Noise;Productivity;Sleep;"
+msgstr "Concentrar;Foco;Ruído;Produtividade;Dormir;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
@@ -42,7 +42,7 @@ msgid ""
 "sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
 "Melhore o foco e aumente a sua produtividade ao ouvir a diferentes sons. Ou "
-"permite-se dormir num ambiente barulhento."
+"permita-se adormecer num ambiente ruidoso."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
 msgid "Rafael Mardojai CM"
@@ -134,7 +134,7 @@ msgstr "Pássaros"
 
 #: src/window.py:42 src/about.py:25
 msgid "Summer Night"
-msgstr "Noite de Verão"
+msgstr "Noite de verão"
 
 #: src/window.py:47
 msgid "Travel"
@@ -195,7 +195,7 @@ msgstr "Erro de solicitação"
 
 #: src/preferences.py:76 src/preferences.py:107
 msgid "The autostart request failed."
-msgstr "O pedido para iniciar automaticamente falhou."
+msgstr "A solicitação para iniciar automaticamente falhou."
 
 #: src/preferences.py:96
 msgid "Authorization failed"
@@ -207,9 +207,9 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"Tenha a certeza de que é permitido ao Blanket\n"
-"executar em segundo plano em Definições → \n"
-"Aplicações → Blanket e volte a tentar."
+"Certifique-se que o Blanket tem permissão para\n"
+"ser executado em segundo plano em Definições → \n"
+"Aplicações → Blanket e tente novamente."
 
 #: src/about.py:12
 msgid "Sounds icons"
