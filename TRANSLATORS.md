@@ -23,7 +23,7 @@ This files list all the translations maintainers.  It's used to call translators
 | ne    | Nepali               | @IBA4                          |
 | nl    | Dutch                | @Vistaus                       |
 | oc    | Occitan              | @Mejans                        |
-| pt    | Portuguese           | @JulianoSCbah                  |
+| pt    | Portuguese           | @JulianoSCbah @hugok79         |
 | pt_BR | Brazilian Portuguese | @pedrofleck                    |
 | ru_RU | Russian              | @LeftyDeMilo                   |
 | sk    | Slovak               | @MartinIIOT                    |
