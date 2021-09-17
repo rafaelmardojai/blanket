@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
-from gi.repository import Gio, GObject, Gtk, GstPlayer
+from gi.repository import Gio, GObject, Gtk
 
 from blanket.sound import SoundObject, SoundPlayer
 
@@ -44,7 +44,6 @@ class SoundRow(Gtk.ListBoxRow):
 
     box = Gtk.Template.Child()
     title = Gtk.Template.Child()
-    playing = Gtk.Template.Child()
     volume = Gtk.Template.Child()
 
     def __init__(self, sound, model):
@@ -69,7 +68,6 @@ class SoundRow(Gtk.ListBoxRow):
 
         # Create a new SoundPlayer
         self.player = SoundPlayer(self.sound)
-        self.player.connect('state_changed', self._on_player_state_changed)
 
         # Set title
         self.title.set_label(self.sound.title)
@@ -152,18 +150,6 @@ class SoundRow(Gtk.ListBoxRow):
             self.get_style_context().remove_class('playing')
         elif not self.get_style_context().has_class('playing'):
             self.get_style_context().add_class('playing')
-
-    def _on_player_state_changed(self, _player, state):
-        if state == GstPlayer.PlayerState.PLAYING:
-            self._toggle_playing_indicator(True)
-        else:
-            self._toggle_playing_indicator(False)
-
-    def _toggle_playing_indicator(self, show):
-        if not show:
-            self.playing.set_reveal_child(False)
-        elif not self.playing.get_reveal_child():
-            self.playing.set_reveal_child(True)
 
     def _on_preset_changed(self, _player):
         self.first_load = True

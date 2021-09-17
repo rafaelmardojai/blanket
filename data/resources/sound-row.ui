@@ -41,20 +41,6 @@
                     <property name="xalign">0</property>
                   </object>
                 </child>
-                <child>
-                  <object class="GtkRevealer" id="playing">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="transition_type">crossfade</property>
-                    <child>
-                      <object class="GtkImage">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="icon_name">audio-speakers-symbolic</property>
-                      </object>
-                    </child>
-                  </object>
-                </child>
               </object>
             </child>
             <child>
