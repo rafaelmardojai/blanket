@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-15 22:28-0500\n"
+"POT-Creation-Date: 2021-09-17 17:21-0500\n"
 "PO-Revision-Date: 2021-03-27 09:29+0545\n"
 "Last-Translator: IBA4 <nabin7076@protonmail.com>\n"
 "Language-Team: Nepali <>\n"
@@ -19,14 +19,15 @@ msgstr ""
 "X-Generator: Gtranslator 3.38.0\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:30
-#: src/mpris.py:135
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6
+#: data/resources/window.ui:19 blanket/main.py:31 blanket/window.py:260
+#: blanket/mpris.py:141
 msgid "Blanket"
 msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
-#: src/mpris.py:133 src/mpris.py:134
+#: blanket/mpris.py:136 blanket/mpris.py:139
 msgid "Listen to different sounds"
 msgstr "बिभिन्न आवाज सुन्नुहोस्"
 
@@ -47,33 +48,76 @@ msgstr ""
 msgid "Rafael Mardojai CM"
 msgstr "राफेल मार्डोजाई सीएम"
 
-#: data/resources/window.ui:146
-msgid "Keep playing when closed"
+#. Translators: Keep single quote please!
+#: data/com.rafaelmardojai.Blanket.gschema.xml:42
+msgctxt "visible-name"
+msgid "'Default'"
+msgstr ""
+
+#: data/resources/window.ui:139 data/resources/window.ui:260
+msgid "Saved Presets"
+msgstr ""
+
+#: data/resources/window.ui:148 data/resources/window.ui:275
+msgid "Add Preset..."
+msgstr ""
+
+#: data/resources/window.ui:157
+msgid "Reset Volume Levels"
+msgstr ""
+
+#: data/resources/window.ui:174
+#, fuzzy
+msgid "Keep Playing When Closed"
 msgstr "बन्द हुँदा पनि बजाई राख्नुहोस्"
 
-#: data/resources/window.ui:168
+#: data/resources/window.ui:191
 msgid "Preferences"
 msgstr "अभिरुचिहरु"
 
-#: data/resources/window.ui:177
+#: data/resources/window.ui:200
 msgid "Keyboard Shortcuts"
 msgstr "कीबोर्ड शर्टकटहरू"
 
-#: data/resources/window.ui:186
+#: data/resources/window.ui:209
 msgid "About Blanket"
 msgstr "Blanketको बारेमा"
 
-#: data/resources/window.ui:213 data/resources/shortcuts.ui:39
+#: data/resources/window.ui:236 data/resources/shortcuts.ui:39
 msgid "Quit"
 msgstr "छोड्नुहोस्"
 
 #: data/resources/preferences.ui:16
+msgid "Appearance"
+msgstr ""
+
+#: data/resources/preferences.ui:20
+msgid "Dark Mode"
+msgstr ""
+
+#: data/resources/preferences.ui:36
 msgid "Behavior"
 msgstr "व्यवहार"
 
-#: data/resources/preferences.ui:20
+#: data/resources/preferences.ui:40
 msgid "Autostart in background"
 msgstr "पृष्ठभूमिमा अटोस्टार्ट होस्।"
+
+#: data/resources/preset-dialog.ui:25
+msgid "Cancel"
+msgstr ""
+
+#: data/resources/preset-dialog.ui:66
+msgid "Preset Name"
+msgstr ""
+
+#: data/resources/preset-row.ui:39
+msgid "Delete Preset"
+msgstr ""
+
+#: data/resources/preset-row.ui:61
+msgid "Rename Preset"
+msgstr ""
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -101,104 +145,105 @@ msgstr "अनुकूलन ध्वनी जोड्नुहोस्"
 msgid "Close window"
 msgstr "विन्डो बन्द गर्नुहोस्"
 
-#: src/window.py:14
+#: blanket/window.py:16
 msgid "Nature"
 msgstr "प्रकृति"
 
-#: src/window.py:18 src/about.py:17 src/about.py:34
+#: blanket/window.py:20 blanket/about.py:17 blanket/about.py:35
 msgid "Rain"
 msgstr "वर्षा"
 
-#: src/window.py:22 src/about.py:18 src/about.py:34
+#: blanket/window.py:24 blanket/about.py:18 blanket/about.py:35
 msgid "Storm"
 msgstr "आँधी"
 
-#: src/window.py:26 src/about.py:29
+#: blanket/window.py:28 blanket/about.py:29 blanket/about.py:35
 msgid "Wind"
 msgstr "हावा"
 
-#: src/window.py:30 src/about.py:26 src/about.py:34
+#: blanket/window.py:32 blanket/about.py:26 blanket/about.py:35
 msgid "Waves"
 msgstr "छालहरू"
 
-#: src/window.py:34 src/about.py:22
+#: blanket/window.py:36 blanket/about.py:22
 msgid "Stream"
 msgstr "धारा"
 
-#: src/window.py:38 src/about.py:24 src/about.py:34
+#: blanket/window.py:40 blanket/about.py:24 blanket/about.py:35
 msgid "Birds"
 msgstr "चराहरु"
 
-#: src/window.py:42 src/about.py:25
+#: blanket/window.py:44 blanket/about.py:25
 msgid "Summer Night"
 msgstr "गर्मी रात"
 
-#: src/window.py:47
+#: blanket/window.py:49
 msgid "Travel"
 msgstr "यात्रा"
 
-#: src/window.py:51 src/about.py:30
+#: blanket/window.py:53 blanket/about.py:30
 msgid "Train"
 msgstr "रेल"
 
-#: src/window.py:55 src/about.py:20 src/about.py:34
+#: blanket/window.py:57 blanket/about.py:20 blanket/about.py:35
 msgid "Boat"
 msgstr "डुङ्गा"
 
-#: src/window.py:59 src/about.py:21 src/about.py:34
+#: blanket/window.py:61 blanket/about.py:21 blanket/about.py:35
 msgid "City"
 msgstr "सहर"
 
-#: src/window.py:64
+#: blanket/window.py:66
 msgid "Interiors"
 msgstr "भित्री भाग"
 
-#: src/window.py:68 src/about.py:28
+#: blanket/window.py:70 blanket/about.py:27
 msgid "Coffee Shop"
 msgstr "कफी पसल"
 
-#: src/window.py:72 src/about.py:19
+#: blanket/window.py:74 blanket/about.py:19
 msgid "Fireplace"
 msgstr "अगेनु"
 
-#: src/window.py:77
+#: blanket/window.py:79
 msgid "Noise"
 msgstr "हल्ला"
 
-#: src/window.py:81 src/about.py:27
+#: blanket/window.py:83 blanket/about.py:28
 msgid "Pink Noise"
 msgstr "गुलाबी आवाज"
 
-#: src/window.py:85 src/about.py:23
+#: blanket/window.py:87 blanket/about.py:23
 msgid "White Noise"
 msgstr "सेतो आवाज"
 
 #. Setup user custom sounds
-#: src/window.py:168
+#: blanket/window.py:196
 msgid "Custom"
 msgstr "अनुकूल"
 
-#: src/window.py:218
+#: blanket/window.py:218
 msgid "Open audio"
 msgstr "अडियो खोल्नुहोस्"
 
-#: src/preferences.py:48
-msgid "Autostart Blanket on background."
+#: blanket/preferences.py:62
+#, fuzzy
+msgid "Autostart Blanket in background."
 msgstr "Blanket पृष्ठभूमिमा अटोस्टार्ट होस्।"
 
-#: src/preferences.py:75 src/preferences.py:106
+#: blanket/preferences.py:90 blanket/preferences.py:127
 msgid "Request error"
 msgstr "अनुरोध त्रुटि"
 
-#: src/preferences.py:76 src/preferences.py:107
+#: blanket/preferences.py:93 blanket/preferences.py:130
 msgid "The autostart request failed."
 msgstr "अटोस्टार्ट अनुरोध असफल भयो।"
 
-#: src/preferences.py:96
+#: blanket/preferences.py:115
 msgid "Authorization failed"
 msgstr "प्राधिकरण असफल भयो"
 
-#: src/preferences.py:98
+#: blanket/preferences.py:118
 msgid ""
 "Make sure Blanket has permission to run in \n"
 "the background in Settings → Applications → \n"
@@ -208,20 +253,36 @@ msgstr ""
 "पृष्ठभूमिमा चल्न अनुमति छ Settings → Applications → \n"
 "Blanket and try again."
 
-#: src/about.py:12
+#: blanket/presets.py:112
+msgid "Add Preset"
+msgstr ""
+
+#: blanket/presets.py:113
+msgid "Create"
+msgstr ""
+
+#: blanket/presets.py:117
+msgid "Edit Preset"
+msgstr ""
+
+#: blanket/presets.py:119
+msgid "Save"
+msgstr ""
+
+#: blanket/about.py:12
 msgid "Sounds icons"
 msgstr "ध्वनि आइकनहरु"
 
-#: src/about.py:13
+#: blanket/about.py:13
 msgid "App icon"
 msgstr "ए्याप आइकन"
 
 #. Set sound artists list
-#: src/about.py:58
+#: blanket/about.py:60
 msgid "Sounds by"
 msgstr "ध्वनि"
 
 #. Set sound editors list
-#: src/about.py:60
+#: blanket/about.py:62
 msgid "Sounds edited by"
 msgstr "ध्वनि सम्पादन"
