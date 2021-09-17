@@ -7,9 +7,9 @@ data/resources/preset-dialog.ui
 data/resources/preset-row.ui
 data/resources/about.ui
 data/resources/shortcuts.ui
-src/main.py
-src/window.py
-src/preferences.py
-src/presets.py
-src/about.py
-src/mpris.py
+blanket/main.py
+blanket/window.py
+blanket/preferences.py
+blanket/presets.py
+blanket/about.py
+blanket/mpris.py
