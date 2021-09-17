@@ -1,48 +1,47 @@
-# Portuguese translations for blanket package.
+# Czech translations for blanket package.
 # Copyright (C) 2021 THE blanket'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# Juliano de Souza Camargo <julianosc@pm.me>, 2021.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
+# Vojtěch Perník <translations@pervoj.cz>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-15 22:28-0500\n"
-"PO-Revision-Date: 2021-09-12 18:23+0100\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
-"Language-Team: Portuguese (https://l10n.gnome.org/teams/pt/)\n"
-"Language: pt\n"
+"PO-Revision-Date: 2021-08-06 11:10+0200\n"
+"Last-Translator: Vojtěch Perník <translations@pervoj.cz>\n"
+"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 src/main.py:30
 #: src/mpris.py:135
 msgid "Blanket"
-msgstr "Blanket"
+msgstr "Deka"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
 #: src/mpris.py:133 src/mpris.py:134
 msgid "Listen to different sounds"
-msgstr "Ouça diferentes sons"
+msgstr "Poslouchejte různé zvuky"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Concentrar;Foco;Ruído;Produtividade;Dormir;"
+msgstr "Koncentrace;Soustředění;Hluk;Produktivita;Spánek;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
-"Melhore o foco e aumente a sua produtividade ao ouvir a diferentes sons. Ou "
-"permita-se adormecer num ambiente ruidoso."
+"Pomůže vám soustředit se a zvýší vaši produktivitu poslechem různých zvuků. "
+"Nebo vám také umožní usnout v hlučném prostředí."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
 msgid "Rafael Mardojai CM"
@@ -50,156 +49,154 @@ msgstr "Rafael Mardojai CM"
 
 #: data/resources/window.ui:146
 msgid "Keep playing when closed"
-msgstr "Continuar a reproduzir quando fechado"
+msgstr "Pokračovat v přehrávání po zavření"
 
 #: data/resources/window.ui:168
 msgid "Preferences"
-msgstr "Preferências"
+msgstr "Předvolby"
 
 #: data/resources/window.ui:177
 msgid "Keyboard Shortcuts"
-msgstr "Teclas de atalho"
+msgstr "Klávesové zkratky"
 
 #: data/resources/window.ui:186
 msgid "About Blanket"
-msgstr "Acerca do Blanket"
+msgstr "O Dece"
 
 #: data/resources/window.ui:213 data/resources/shortcuts.ui:39
 msgid "Quit"
-msgstr "Sair"
+msgstr "Ukončit"
 
 #: data/resources/preferences.ui:16
 msgid "Behavior"
-msgstr "Comportamento"
+msgstr "Chování"
 
 #: data/resources/preferences.ui:20
 msgid "Autostart in background"
-msgstr "Iniciar automaticamente em segundo plano"
+msgstr "Automaticky spustit na pozadí"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Direitos de autor 2020-2021 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr ""
-"Juliano de Souza Camargo <julianosc@pm.me>\n"
-"Hugo Carvalho <hugokarvalho@hotmail.com>"
+msgstr "Vojtěch Perník <translations@pervoj.cz>"
 
 #: data/resources/shortcuts.ui:13
 msgid "General"
-msgstr "Geral"
+msgstr "Obecné"
 
 #: data/resources/shortcuts.ui:18
 msgid "Play/Pause sounds"
-msgstr "Reproduzir/Parar sons"
+msgstr "Přehrát/Pozastavit zvuky"
 
 #: data/resources/shortcuts.ui:25
 msgid "Add custom sound"
-msgstr "Adicionar som personalizado"
+msgstr "Přidat vlastní zvuk"
 
 #: data/resources/shortcuts.ui:32
 msgid "Close window"
-msgstr "Fechar janela"
+msgstr "Zavřít okno"
 
 #: src/window.py:14
 msgid "Nature"
-msgstr "Natureza"
+msgstr "Příroda"
 
 #: src/window.py:18 src/about.py:17 src/about.py:34
 msgid "Rain"
-msgstr "Chuva"
+msgstr "Déšť"
 
 #: src/window.py:22 src/about.py:18 src/about.py:34
 msgid "Storm"
-msgstr "Tempestade"
+msgstr "Bouřka"
 
 #: src/window.py:26 src/about.py:29
 msgid "Wind"
-msgstr "Vento"
+msgstr "Vítr"
 
 #: src/window.py:30 src/about.py:26 src/about.py:34
 msgid "Waves"
-msgstr "Ondas"
+msgstr "Vlny"
 
 #: src/window.py:34 src/about.py:22
 msgid "Stream"
-msgstr "Riacho"
+msgstr "Tok"
 
 #: src/window.py:38 src/about.py:24 src/about.py:34
 msgid "Birds"
-msgstr "Pássaros"
+msgstr "Ptáci"
 
 #: src/window.py:42 src/about.py:25
 msgid "Summer Night"
-msgstr "Noite de verão"
+msgstr "Letní noc"
 
 #: src/window.py:47
 msgid "Travel"
-msgstr "Viagem"
+msgstr "Cestování"
 
 #: src/window.py:51 src/about.py:30
 msgid "Train"
-msgstr "Comboio"
+msgstr "Vlak"
 
 #: src/window.py:55 src/about.py:20 src/about.py:34
 msgid "Boat"
-msgstr "Barco"
+msgstr "Loď"
 
 #: src/window.py:59 src/about.py:21 src/about.py:34
 msgid "City"
-msgstr "Cidade"
+msgstr "Město"
 
 #: src/window.py:64
 msgid "Interiors"
-msgstr "Interiores"
+msgstr "Interiéry"
 
 #: src/window.py:68 src/about.py:28
 msgid "Coffee Shop"
-msgstr "Café"
+msgstr "Kavárna"
 
 #: src/window.py:72 src/about.py:19
 msgid "Fireplace"
-msgstr "Lareira"
+msgstr "Ohniště"
 
 #: src/window.py:77
 msgid "Noise"
-msgstr "Ruído"
+msgstr "Šumy"
 
 #: src/window.py:81 src/about.py:27
 msgid "Pink Noise"
-msgstr "Ruído rosa"
+msgstr "Růžový šum"
 
 #: src/window.py:85 src/about.py:23
 msgid "White Noise"
-msgstr "Ruído branco"
+msgstr "Bílý šum"
 
 #. Setup user custom sounds
 #: src/window.py:168
 msgid "Custom"
-msgstr "Personalizado"
+msgstr "Vlastní"
 
 #: src/window.py:218
 msgid "Open audio"
-msgstr "Abrir áudio"
+msgstr "Otevřít audio"
 
 #: src/preferences.py:48
 msgid "Autostart Blanket on background."
-msgstr "Iniciar o Blanket automaticamente em segundo plano."
+msgstr "Automaticky spustit Deku na pozadí."
 
 #: src/preferences.py:75 src/preferences.py:106
 msgid "Request error"
-msgstr "Erro de solicitação"
+msgstr "Chyba požadavku"
 
 #: src/preferences.py:76 src/preferences.py:107
 msgid "The autostart request failed."
-msgstr "A solicitação para iniciar automaticamente falhou."
+msgstr "Požadavek na automatické spuštění se nezdařil."
 
 #: src/preferences.py:96
 msgid "Authorization failed"
-msgstr "Autorização falhada"
+msgstr "Autorizace se nezdařila"
 
 #: src/preferences.py:98
 msgid ""
@@ -207,24 +204,24 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"Certifique-se que o Blanket tem permissão para\n"
-"ser executado em segundo plano em Definições → \n"
-"Aplicações → Blanket e tente novamente."
+"Ujistěte se, že má Deka oprávnění ke spuštění\n"
+"na pozadí v Nastavení → Aplikace → Deka\n"
+"a zkuste to znovu."
 
 #: src/about.py:12
 msgid "Sounds icons"
-msgstr "Ícones sonoros"
+msgstr "Ikony zvuků"
 
 #: src/about.py:13
 msgid "App icon"
-msgstr "Ícone da aplicação"
+msgstr "Ikona aplikace"
 
 #. Set sound artists list
 #: src/about.py:58
 msgid "Sounds by"
-msgstr "Sons por"
+msgstr "Zvuky"
 
 #. Set sound editors list
 #: src/about.py:60
 msgid "Sounds edited by"
-msgstr "Sons editados por"
+msgstr "Úprava zvuků"

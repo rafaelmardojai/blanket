@@ -24,16 +24,15 @@ SOUND_ARTISTS = {
     'kvgarlic': [_('Birds')],
     'Lisa Redfern': [_('Summer Night')],
     'Luftrum': [_('Waves')],
+    'stephan': [_('Coffee Shop')],
     'Omegatron': [_('Pink Noise')],
-    'Stephan': [_('Coffee Shop')],
-    'Stilgar': [_('Wind')],
-    'vahid': [_('Train')]
+    'felix.blume': [_('Wind')],
+    'vahid': [_('Train')],
 }
 
 SOUND_EDITORS = {
     'Porrumentzio': [
-        _('Birds'), _('Rain'), _('Storm'), _('Waves'), _('Boat'), _('City')
-    ]
+        _('Birds'), _('Rain'), _('Storm'), _('Waves'), _('Boat'), _('City'), _('Wind')]
 }
 
 
