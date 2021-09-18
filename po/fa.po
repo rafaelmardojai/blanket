@@ -22,7 +22,7 @@ msgstr ""
 #: data/resources/window.ui:19 blanket/main.py:31 blanket/window.py:260
 #: blanket/mpris.py:141
 msgid "Blanket"
-msgstr "بلنکت"
+msgstr "بِلَنکِت"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
@@ -51,7 +51,7 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'پیش‌فرض'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
@@ -63,7 +63,7 @@ msgstr ""
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "بازنشانی سطحوح صدا"
 
 #: data/resources/window.ui:174
 #, fuzzy
@@ -80,7 +80,7 @@ msgstr "میانبرهای صفحه‌کلید"
 
 #: data/resources/window.ui:209
 msgid "About Blanket"
-msgstr "درباره‌ی بلنکت"
+msgstr "درباره‌ی بِلَنکِت"
 
 #: data/resources/window.ui:236 data/resources/shortcuts.ui:39
 msgid "Quit"
@@ -88,11 +88,11 @@ msgstr "خروج"
 
 #: data/resources/preferences.ui:16
 msgid "Appearance"
-msgstr ""
+msgstr "ظاهر"
 
 #: data/resources/preferences.ui:20
 msgid "Dark Mode"
-msgstr ""
+msgstr "حالت تاریک"
 
 #: data/resources/preferences.ui:36
 msgid "Behavior"
@@ -104,7 +104,7 @@ msgstr "شروع خودکار در پس‌زمینه"
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
-msgstr ""
+msgstr "لغو"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
@@ -228,7 +228,7 @@ msgstr "بازکردن صدا"
 #: blanket/preferences.py:62
 #, fuzzy
 msgid "Autostart Blanket in background."
-msgstr "شروع خودکار بلنکت در پس‌زمینه"
+msgstr "شروع خودکار بِلَنکِت در پس‌زمینه"
 
 #: blanket/preferences.py:90 blanket/preferences.py:127
 msgid "Request error"
@@ -248,9 +248,9 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"اطمینان حاصل کنید که بلنکت مجوز اجرا در \n"
+"اطمینان حاصل کنید که بِلَنکِت مجوز اجرا در \n"
 "پس‌زمینه را در تنظیمات ← برنامه‌های کاربردی ← \n"
-"بلنکت دارد و سپس دوباره سعی کنید."
+"بِلَنکِت دارد و سپس دوباره سعی کنید."
 
 #: blanket/presets.py:112
 msgid "Add Preset"
@@ -258,7 +258,7 @@ msgstr ""
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr ""
+msgstr "ایجاد"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
@@ -266,7 +266,7 @@ msgstr ""
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr ""
+msgstr "ذخیره"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
