@@ -1,14 +1,14 @@
-# SOME DESCRIPTIVE TITLE.
+# Croatian translation for blanket.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Milo Ivir <mail@milotype.de>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2021-04-08 14:57+0200\n"
+"PO-Revision-Date: 2021-09-18 19:57+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -53,22 +53,21 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Standardno'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr ""
+msgstr "Spremljene postave"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr ""
+msgstr "Dodaj postavu …"
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "Obnovi razine glasnoće"
 
 #: data/resources/window.ui:174
-#, fuzzy
 msgid "Keep Playing When Closed"
 msgstr "Nastavi svirati nakon zatvaranja"
 
@@ -90,11 +89,11 @@ msgstr "Zatvori program"
 
 #: data/resources/preferences.ui:16
 msgid "Appearance"
-msgstr ""
+msgstr "Izgled"
 
 #: data/resources/preferences.ui:20
 msgid "Dark Mode"
-msgstr ""
+msgstr "Tamni modus"
 
 #: data/resources/preferences.ui:36
 msgid "Behavior"
@@ -106,19 +105,19 @@ msgstr "Pokreni automatski u pozadini"
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
-msgstr ""
+msgstr "Odustani"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr ""
+msgstr "Ime postave"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr ""
+msgstr "Izbriši postavu"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr ""
+msgstr "Preimenuj postavu"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -140,7 +139,7 @@ msgstr "Pokreni/Zaustavi zvukove"
 
 #: data/resources/shortcuts.ui:25
 msgid "Add custom sound"
-msgstr "Dodaj prilagođeni zvuk"
+msgstr "Dodaj prilagođen zvuk"
 
 #: data/resources/shortcuts.ui:32
 msgid "Close window"
@@ -168,7 +167,7 @@ msgstr "Valovi"
 
 #: blanket/window.py:36 blanket/about.py:22
 msgid "Stream"
-msgstr "Strujanje"
+msgstr "Žubor"
 
 #: blanket/window.py:40 blanket/about.py:24 blanket/about.py:35
 msgid "Birds"
@@ -188,7 +187,7 @@ msgstr "Vlak"
 
 #: blanket/window.py:57 blanket/about.py:20 blanket/about.py:35
 msgid "Boat"
-msgstr "Brod"
+msgstr "Barka"
 
 #: blanket/window.py:61 blanket/about.py:21 blanket/about.py:35
 msgid "City"
@@ -225,10 +224,9 @@ msgstr "Prilagođeno"
 
 #: blanket/window.py:218
 msgid "Open audio"
-msgstr "Otvori audiosnimku"
+msgstr "Otvori audio snimku"
 
 #: blanket/preferences.py:62
-#, fuzzy
 msgid "Autostart Blanket in background."
 msgstr "Pokreni „Pokrivač” automatski u pozadini."
 
@@ -256,19 +254,19 @@ msgstr ""
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr ""
+msgstr "Dodaj postavu"
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr ""
+msgstr "Stvori"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr ""
+msgstr "Uredi postavu"
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr ""
+msgstr "Spremi"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
@@ -281,9 +279,9 @@ msgstr "Ikona programa"
 #. Set sound artists list
 #: blanket/about.py:60
 msgid "Sounds by"
-msgstr "Autor zvukova"
+msgstr "Autori zvukova"
 
 #. Set sound editors list
 #: blanket/about.py:62
 msgid "Sounds edited by"
-msgstr "Urednik zvukova"
+msgstr "Urednici zvukova"
