@@ -2,15 +2,15 @@
 # Copyright (C) 2021 Rafael Mardojai CM
 # This file is distributed under the same license as the blanket package.
 # Fridolin Weisser <weisser.fridolin@gmail.com>, 2021.
+# Milo Ivir <mail@milotype.de>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2021-03-26 22:02+0100\n"
-"Last-Translator: Fridolin Weisser <weisser.fridolin@gmail.com>\n"
+"PO-Revision-Date: 2021-09-18 21:02+0100\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -52,22 +52,21 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Standard'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr ""
+msgstr "Gespeicherte Voreinstellungen"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr ""
+msgstr "Voreinstellung hinzufügen …"
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "Lautstärken zurücksetzen"
 
 #: data/resources/window.ui:174
-#, fuzzy
 msgid "Keep Playing When Closed"
 msgstr "Nach Schließen weiterspielen"
 
@@ -89,11 +88,11 @@ msgstr "Beenden"
 
 #: data/resources/preferences.ui:16
 msgid "Appearance"
-msgstr ""
+msgstr "Aussehen"
 
 #: data/resources/preferences.ui:20
 msgid "Dark Mode"
-msgstr ""
+msgstr "Dunkler Modus"
 
 #: data/resources/preferences.ui:36
 msgid "Behavior"
@@ -105,19 +104,19 @@ msgstr "Im Hintergrund starten"
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr ""
+msgstr "Name der Voreinstellung"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr ""
+msgstr "Voreinstellung löschen"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr ""
+msgstr "Voreinstellung umbenennen"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -127,7 +126,8 @@ msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 #: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "Fridolin Weisser <weisser.fridolin@gmail.com>"
+msgstr "Fridolin Weisser <weisser.fridolin@gmail.com>\n"
+"Milo Ivir <mail@milotype.de>"
 
 #: data/resources/shortcuts.ui:13
 msgid "General"
@@ -135,7 +135,7 @@ msgstr "Allgemein"
 
 #: data/resources/shortcuts.ui:18
 msgid "Play/Pause sounds"
-msgstr "Klänge pausieren/fortsetzen"
+msgstr "Klänge abspielen/pausieren"
 
 #: data/resources/shortcuts.ui:25
 msgid "Add custom sound"
@@ -227,9 +227,8 @@ msgid "Open audio"
 msgstr "Audiodatei öffnen"
 
 #: blanket/preferences.py:62
-#, fuzzy
 msgid "Autostart Blanket in background."
-msgstr "Blanket im Hintergrund starten"
+msgstr "Blanket im Hintergrund starten."
 
 #: blanket/preferences.py:90 blanket/preferences.py:127
 msgid "Request error"
@@ -255,19 +254,19 @@ msgstr ""
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr ""
+msgstr "Voreinstellung hinzufügen"
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr ""
+msgstr "Erstellen"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr ""
+msgstr "Voreinstellung bearbeiten"
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr ""
+msgstr "Speichern"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
