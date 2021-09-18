@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2021-08-06 11:10+0200\n"
+"POT-Creation-Date: 2021-09-18 12:51+0200\n"
+"PO-Revision-Date: 2021-09-18 13:41+0200\n"
 "Last-Translator: Vojtěch Perník <translations@pervoj.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -48,26 +48,151 @@ msgstr ""
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:37
+msgid "Added Turkish translation"
+msgstr "Přidán turecký překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:38
+msgid "Added Occitan translation"
+msgstr "Přidán okcitánský překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:39
+msgid "Fix German and Slovak translations"
+msgstr "Opraven německý a slovenský překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:46
+msgid "Added autostart on background feature"
+msgstr "Přidána funkce automatického spuštění na pozadí"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:47
+msgid "Added six new sounds"
+msgstr "Přidáno 6 nových zvuků"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:48
+msgid "New sounds icons, thanks to Jakub Steiner"
+msgstr "Nové ikony zvuků, díky Jakubu Steinerovi"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:49
+msgid "Sounds improvements"
+msgstr "Vylepšení zvuků"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:50
+msgid "Added French translation"
+msgstr "Přidán francouzský překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:51
+msgid "Added Ukrainian translation"
+msgstr "Přidán ukrajinský překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:52
+msgid "Added Slovak translation"
+msgstr "Přidán slovenský překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:53
+msgid "Added Nepali translation"
+msgstr "Přidán nepálský překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:54
+msgid "Added German translation"
+msgstr "Přidán německý překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:55
+msgid "Added Croatian translation"
+msgstr "Přidán chorvatský překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:56
+msgid "Performance improvements"
+msgstr "Vylepšen výkon"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
+msgid "UI improvements"
+msgstr "Vylepšeno UI"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:58
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:66
+msgid "Bug fixes"
+msgstr "Opraveny chyby"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:65
+msgid "Added Brazilian Portuguese translation"
+msgstr "Přidán překlad do brazilské portugalštiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:73
+msgid "Added play/pause action"
+msgstr "Přidána akce přehrávat/pozastavit"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:74
+msgid "Added general volume control"
+msgstr "Přidáno hlavní ovládání hlasitosti"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:75
+msgid "Added MPRIS support"
+msgstr "Přidána podpora MPRIS"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:76
+msgid "Allow playback when window is closed"
+msgstr "Povoleno přehrávání při zavřeném okně"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:77
+msgid "Save window scroll position"
+msgstr "Uložení pozice scrollování okna"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:78
+msgid "Added Dutch translation"
+msgstr "Přidán holandský překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:79
+msgid "Added Basque translation"
+msgstr "Přidán baskický překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:80
+msgid "Added Esperanto translation"
+msgstr "Přidán překlad do esperanta"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:81
+msgid "Added Catalan translation"
+msgstr "Přidán katalánský překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:82
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:92
+msgid "UI tweaks and improvements"
+msgstr "Úpravy a vylepšení uživatelského rozhraní"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:89
+msgid "Better White Noise"
+msgstr "Lepší bílý šum"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:90
+msgid "Added Italian translation"
+msgstr "Přidán italský překlad"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:91
+msgid "Fix GStreamer init bug"
+msgstr "Opravena chyba GStreamer init"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:98
+msgid "Initial release."
+msgstr "První verze"
+
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Výchozí'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr ""
+msgstr "Uložená přednastavení"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr ""
+msgstr "Přidat přednastavení…"
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "Obnovení úrovní hlasitosti"
 
 #: data/resources/window.ui:174
-#, fuzzy
 msgid "Keep Playing When Closed"
 msgstr "Pokračovat v přehrávání po zavření"
 
@@ -89,11 +214,11 @@ msgstr "Ukončit"
 
 #: data/resources/preferences.ui:16
 msgid "Appearance"
-msgstr ""
+msgstr "Vzhled"
 
 #: data/resources/preferences.ui:20
 msgid "Dark Mode"
-msgstr ""
+msgstr "Tmavý režim"
 
 #: data/resources/preferences.ui:36
 msgid "Behavior"
@@ -105,19 +230,19 @@ msgstr "Automaticky spustit na pozadí"
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr ""
+msgstr "Jméno přednastavení"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr ""
+msgstr "Odebrat přednastavení"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr ""
+msgstr "Přejmenovat přenastavení"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -135,7 +260,7 @@ msgstr "Obecné"
 
 #: data/resources/shortcuts.ui:18
 msgid "Play/Pause sounds"
-msgstr "Přehrát/Pozastavit zvuky"
+msgstr "Přehrávat/Pozastavit zvuky"
 
 #: data/resources/shortcuts.ui:25
 msgid "Add custom sound"
@@ -227,7 +352,6 @@ msgid "Open audio"
 msgstr "Otevřít audio"
 
 #: blanket/preferences.py:62
-#, fuzzy
 msgid "Autostart Blanket in background."
 msgstr "Automaticky spustit Deku na pozadí."
 
@@ -255,19 +379,19 @@ msgstr ""
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr ""
+msgstr "Přidat přednastavení"
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr ""
+msgstr "Vytvořit"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr ""
+msgstr "Upravit přednastavení"
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr ""
+msgstr "Uložit"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
