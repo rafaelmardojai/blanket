@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2021-05-02 15:21+0300\n"
+"PO-Revision-Date: 2021-09-19 13:09+0300\n"
 "Last-Translator: Ivan Savochenko <iSavoch@Gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -52,19 +52,19 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'По умолчанию'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr ""
+msgstr "Сохраненные наборы настроек"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr ""
+msgstr "Добавить набор настроек..."
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "Сбросить уровни громкости"
 
 #: data/resources/window.ui:174
 #, fuzzy
@@ -89,11 +89,11 @@ msgstr "Выход"
 
 #: data/resources/preferences.ui:16
 msgid "Appearance"
-msgstr ""
+msgstr "Оформление"
 
 #: data/resources/preferences.ui:20
 msgid "Dark Mode"
-msgstr ""
+msgstr "Темная тема"
 
 #: data/resources/preferences.ui:36
 msgid "Behavior"
@@ -105,19 +105,19 @@ msgstr "Автозапуск в фоновом режиме"
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr ""
+msgstr "Название набора настроек"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr ""
+msgstr "Удалить набор настроек"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr ""
+msgstr "Переименовать набор настроек"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -257,19 +257,19 @@ msgstr ""
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr ""
+msgstr "Добавить набор настроек"
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr ""
+msgstr "Создать"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr ""
+msgstr "Редактировать набор настроек"
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
