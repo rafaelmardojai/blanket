@@ -52,19 +52,19 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Predvolené'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr ""
+msgstr "Uložené prednastavenia"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr ""
+msgstr "Pridať prednastavenie..."
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "Obnoviť hlasitosť"
 
 #: data/resources/window.ui:174
 #, fuzzy
@@ -89,11 +89,11 @@ msgstr "Ukončiť"
 
 #: data/resources/preferences.ui:16
 msgid "Appearance"
-msgstr ""
+msgstr "Vzhľad"
 
 #: data/resources/preferences.ui:20
 msgid "Dark Mode"
-msgstr ""
+msgstr "Tmavý režim"
 
 #: data/resources/preferences.ui:36
 msgid "Behavior"
@@ -105,19 +105,19 @@ msgstr "Automaticky spustiť na pozadí"
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr ""
+msgstr "Názov prednastavenia"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr ""
+msgstr "Vymazať prednastavenie"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr ""
+msgstr "Premenovať prednastavenie"
 
 #: data/resources/about.ui:11
 #, fuzzy
@@ -252,29 +252,29 @@ msgid ""
 "Blanket and try again."
 msgstr ""
 "Uistite sa, že má Blanket povolenie na \n"
-"spustenie aplikácie na pozadí v Settings → Applications → \n"
+"spustenie aplikácie na pozadí v Nastavenia → Aplikácie → \n"
 "Blanket a vyskúšajte znovu."
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr ""
+msgstr "Pridať prednastavenie"
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr ""
+msgstr "Vytvoriť"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr ""
+msgstr "Upraviť prednastavenie"
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr ""
+msgstr "Uložiť"
 
 #: blanket/about.py:12
 #, fuzzy
 msgid "Sounds icons"
-msgstr "Zvukové ikony"
+msgstr "Ikony zvukov"
 
 #: blanket/about.py:13
 msgid "App icon"
