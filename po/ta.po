@@ -51,19 +51,19 @@ msgstr "ரபேல் மார்டோசாய் சிஎம்"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "இயல்புநிலை"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr ""
+msgstr "சேமிக்கப்பட்ட முன்தொகுப்புகள்"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr ""
+msgstr "முன்தொகுப்பை சேர்..."
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "ஒலி அளவை மீட்டமை"
 
 #: data/resources/window.ui:174
 #, fuzzy
@@ -88,11 +88,11 @@ msgstr "விட்டுச்செல்"
 
 #: data/resources/preferences.ui:16
 msgid "Appearance"
-msgstr ""
+msgstr "தோற்றம்"
 
 #: data/resources/preferences.ui:20
 msgid "Dark Mode"
-msgstr ""
+msgstr "இருண்ட முறை"
 
 #: data/resources/preferences.ui:36
 msgid "Behavior"
@@ -104,19 +104,19 @@ msgstr "பின்னணியில் தானாக துவங்கு"
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
-msgstr ""
+msgstr "ரத்து செய்"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr ""
+msgstr "முன்தொகுப்பின் பெயர்"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr ""
+msgstr "முன்தொகுப்பை அழி"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr ""
+msgstr "முன்தொகுப்பை மறுபெயரிடு"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -254,19 +254,19 @@ msgstr ""
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr ""
+msgstr "முன்தொகுப்பை சேர்"
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr ""
+msgstr "உருவாக்கு"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr ""
+msgstr "முன்தொகுப்பை திருத்து"
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr ""
+msgstr "சேமி"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
