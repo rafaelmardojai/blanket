@@ -1,4 +1,4 @@
-# Nepali (NE) translation for Blanket.
+# Nepali (ne-NP) translation for Blanket.
 # Copyright (C) 2021 Rafael Mardojai CM
 # This file is distributed under the same license as the blanket package.
 # IBA4 <nabin7076@protonmail.com>, 2021.
@@ -8,15 +8,14 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2021-03-27 09:29+0545\n"
+"PO-Revision-Date: 2021-09-20 18:29+0545\n"
 "Last-Translator: IBA4 <nabin7076@protonmail.com>\n"
 "Language-Team: Nepali <>\n"
 "Language: ne\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6
@@ -52,22 +51,21 @@ msgstr "राफेल मार्डोजाई सीएम"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'पूर्वनिर्धारित'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr ""
+msgstr "सुरक्षित प्रिसेटहरु"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr ""
+msgstr "प्रिसेट जोड्नुहोस्..."
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "भोल्युम स्तर रिसेट गर्नुहोस्"
 
 #: data/resources/window.ui:174
-#, fuzzy
 msgid "Keep Playing When Closed"
 msgstr "बन्द हुँदा पनि बजाई राख्नुहोस्"
 
@@ -89,11 +87,11 @@ msgstr "छोड्नुहोस्"
 
 #: data/resources/preferences.ui:16
 msgid "Appearance"
-msgstr ""
+msgstr "उपस्थिती"
 
 #: data/resources/preferences.ui:20
 msgid "Dark Mode"
-msgstr ""
+msgstr "डार्क मोड"
 
 #: data/resources/preferences.ui:36
 msgid "Behavior"
@@ -105,19 +103,19 @@ msgstr "पृष्ठभूमिमा अटोस्टार्ट हो�
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
-msgstr ""
+msgstr "रद्द गर्नुहोस्"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr ""
+msgstr "प्रिसेटको नाम"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr ""
+msgstr "प्रिसेटहरु मेटाऊनुहोस्"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr ""
+msgstr "प्रिसेटको नाम सम्पादन गर्नुहोस्"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -220,14 +218,13 @@ msgstr "सेतो आवाज"
 #. Setup user custom sounds
 #: blanket/window.py:196
 msgid "Custom"
-msgstr "अनुकूल"
+msgstr "आफु अनुकूल"
 
 #: blanket/window.py:218
 msgid "Open audio"
 msgstr "अडियो खोल्नुहोस्"
 
 #: blanket/preferences.py:62
-#, fuzzy
 msgid "Autostart Blanket in background."
 msgstr "Blanket पृष्ठभूमिमा अटोस्टार्ट होस्।"
 
@@ -255,19 +252,19 @@ msgstr ""
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr ""
+msgstr "प्रिसेटहरु जोड्नुहोस्"
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr ""
+msgstr "सिर्जना गर्नुहोस्"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr ""
+msgstr "प्रिसेट सम्पादन गर्नुहोस्"
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr ""
+msgstr "सेभ"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
