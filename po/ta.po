@@ -51,7 +51,7 @@ msgstr "ரபேல் மார்டோசாய் சிஎம்"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "இயல்புநிலை"
+msgstr "'இயல்புநிலை'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
