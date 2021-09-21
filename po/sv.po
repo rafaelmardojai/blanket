@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2021-07-13 16:47+0200\n"
+"PO-Revision-Date: 2021-09-18 07:45+0200\n"
 "Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: \n"
 "Language: sv\n"
@@ -52,24 +52,23 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Standard'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr ""
+msgstr "Sparade förinställningar"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr ""
+msgstr "Lägg till förinställning..."
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "Återställ volymnivåer"
 
 #: data/resources/window.ui:174
-#, fuzzy
 msgid "Keep Playing When Closed"
-msgstr "Fortsätt spela efter stängning"
+msgstr "Fortsätt spela efter avslut"
 
 #: data/resources/window.ui:191
 msgid "Preferences"
@@ -105,19 +104,19 @@ msgstr "Starta automatiskt i bakgrunden"
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr ""
+msgstr "Förinställningens namn"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr ""
+msgstr "Ta bort förinställning"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr ""
+msgstr "Byt namn på förinställning"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -227,7 +226,6 @@ msgid "Open audio"
 msgstr "Öppna ljud"
 
 #: blanket/preferences.py:62
-#, fuzzy
 msgid "Autostart Blanket in background."
 msgstr "Starta Blanket automatiskt i bakgrunden."
 
@@ -255,19 +253,19 @@ msgstr ""
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr ""
+msgstr "Lägg till förinställning"
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr ""
+msgstr "Skapa"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr ""
+msgstr "Redigera förinställning"
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr ""
+msgstr "Spara"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
