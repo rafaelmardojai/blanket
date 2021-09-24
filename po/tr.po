@@ -34,7 +34,7 @@ msgstr "Farklı sesleri dinleyin"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr ""
+msgstr "Konsantrasyon;Odaklanma;Gürültü;Üretkenlik;Uyku;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
@@ -52,24 +52,24 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Varsayılan'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr ""
+msgstr "Kayıtlı Ön Ayarlar"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr ""
+msgstr "Ön Ayar Ekle..."
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "Ses Seviyelerini Sıfırla"
 
 #: data/resources/window.ui:174
 #, fuzzy
 msgid "Keep Playing When Closed"
-msgstr "Kapalıyken oynatmaya devam et"
+msgstr "Kapalıyken Oynatmaya Devam Et"
 
 #: data/resources/window.ui:191
 msgid "Preferences"
@@ -89,11 +89,11 @@ msgstr "Çıkış"
 
 #: data/resources/preferences.ui:16
 msgid "Appearance"
-msgstr ""
+msgstr "Görünüm"
 
 #: data/resources/preferences.ui:20
 msgid "Dark Mode"
-msgstr ""
+msgstr "Koyu Mod"
 
 #: data/resources/preferences.ui:36
 msgid "Behavior"
@@ -105,19 +105,19 @@ msgstr "Arka planda otomatik başlat"
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
-msgstr ""
+msgstr "İptal"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr ""
+msgstr "Ön Ayar Adı"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr ""
+msgstr "Ön Ayarı Sil"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr ""
+msgstr "Ön Ayarı Yeniden Adlandır"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -195,7 +195,7 @@ msgstr "Şehir"
 
 #: blanket/window.py:66
 msgid "Interiors"
-msgstr "İç mekanlar"
+msgstr "İç Mekanlar"
 
 #: blanket/window.py:70 blanket/about.py:27
 msgid "Coffee Shop"
@@ -255,19 +255,19 @@ msgstr ""
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr ""
+msgstr "Ön Ayar Ekle"
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr ""
+msgstr "Oluştur"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr ""
+msgstr "Ön Ayarı Düzenle"
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr ""
+msgstr "Kaydet"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
