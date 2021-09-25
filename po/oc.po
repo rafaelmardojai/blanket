@@ -71,7 +71,7 @@ msgstr "Téner de legir un còp tampat"
 
 #: data/resources/window.ui:191
 msgid "Preferences"
-msgstr "Peferéncias"
+msgstr "Preferéncias"
 
 #: data/resources/window.ui:200
 msgid "Keyboard Shortcuts"
