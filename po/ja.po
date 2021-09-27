@@ -51,19 +51,19 @@ msgstr ""
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'デフォルト'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr ""
+msgstr "保存されたプリセット"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr ""
+msgstr "プリセットを追加..."
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "音量レベルをリセット"
 
 #: data/resources/window.ui:174
 #, fuzzy
@@ -88,11 +88,11 @@ msgstr "終了"
 
 #: data/resources/preferences.ui:16
 msgid "Appearance"
-msgstr ""
+msgstr "外観"
 
 #: data/resources/preferences.ui:20
 msgid "Dark Mode"
-msgstr ""
+msgstr "ダークモード"
 
 #: data/resources/preferences.ui:36
 msgid "Behavior"
@@ -108,15 +108,15 @@ msgstr ""
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr ""
+msgstr "プリセット名"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr ""
+msgstr "プリセットを削除"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr ""
+msgstr "プリセットを名前変更"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -253,19 +253,19 @@ msgstr ""
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr ""
+msgstr "プリセットの追加"
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr ""
+msgstr "作成"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr ""
+msgstr "プリセットの編集"
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
