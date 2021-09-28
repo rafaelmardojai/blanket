@@ -31,6 +31,28 @@
   </screenshots>
 
   <releases>
+    <release version="0.5.0" date="2021-09-28">
+      <description>
+        <ul>
+          <li>Added new Presets feature</li>
+          <li>Now you can toggle sounds by clicking the row</li>
+          <li>Added new dark mode option</li>
+          <li>Added Tamil translation</li>
+          <li>Added Simplified Chinese translation</li>
+          <li>Added Russian translation</li>
+          <li>Added Irish translation</li>
+          <li>Added Japanese translation</li>
+          <li>Added Indonesian translation</li>
+          <li>Added Finnish translation</li>
+          <li>Added Portuguese translation</li>
+          <li>Added Swedish translation</li>
+          <li>Added Czech translation</li>
+          <li>Added Hungarian translation</li>
+          <li>Added Persian (Farsi) translation</li>
+          <li>Added Galician translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.4.1" date="2021-04-26">
       <description>
         <ul>
