@@ -3,15 +3,13 @@
 <interface>
   <requires lib="gtk+" version="3.24"/>
   <template class="PresetRow" parent="GtkListBoxRow">
-    <property name="height-request">38</property>
     <style>
       <class name="preset-selector"/>
     </style>
     <child>
       <object class="GtkBox">
         <property name="hexpand">True</property>
-        <property name="margin-start">6</property>
-        <property name="margin-end">6</property>
+        <property name="valign">center</property>
         <property name="spacing">6</property>
         <child>
           <object class="GtkLabel" id="name">
@@ -35,6 +33,8 @@
                 <property name="hexpand">True</property>
                 <property name="halign">end</property>
                 <property name="spacing">6</property>
+                <property name="margin-top">6</property>
+                <property name="margin-bottom">6</property>
                 <child>
                   <object class="GtkButton" id="rename_btn">
                     <property name="icon_name">document-edit-symbolic</property>
