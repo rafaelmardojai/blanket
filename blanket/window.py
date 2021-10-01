@@ -99,14 +99,14 @@ class BlanketWindow(Handy.ApplicationWindow):
     scrolled_window = Gtk.Template.Child()
     box = Gtk.Template.Child()
 
-    playpause_btn = Gtk.Template.Child()
+    playpause_btn: PlayPauseButton = Gtk.Template.Child()
 
     menu = Gtk.Template.Child()
     volume = Gtk.Template.Child()
     quit_revealer = Gtk.Template.Child()
     presets_btn = Gtk.Template.Child()
     new_preset_btn = Gtk.Template.Child()
-    presets_chooser = Gtk.Template.Child()
+    presets_chooser: PresetChooser = Gtk.Template.Child()
 
     name_binding = None
 
