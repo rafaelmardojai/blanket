@@ -54,6 +54,12 @@ class Application(Adw.Application):
     def do_startup(self):
         # Startup application
         Adw.Application.do_startup(self)
+
+        style_manager = Adw.StyleManager.get_default()
+        # if the system doesn't support libadwaita color schemes, fall back to our setting
+        if Settings.get().dark_mode and not style_manager.props.system_supports_color_schemes:
+            style_manager.props.color_scheme = Adw.ColorScheme.FORCE_DARK
+
         self.setup_actions()
 
     def setup_actions(self):
