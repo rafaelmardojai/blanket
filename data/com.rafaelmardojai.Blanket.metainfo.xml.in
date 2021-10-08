@@ -4,10 +4,19 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <name>Blanket</name>
+  <name xml:lang="hr">Pokrivač</name>
   <summary>Listen to different sounds</summary>
+  <summary xml:lang="de">Höre dir unterschiedliche Klänge an</summary>
+  <summary xml:lang="hr">Slušaj razne zvukove</summary>
   <description>
     <p>
       Improve focus and increase your productivity by listening to different sounds. Or allows you to fall asleep in a noisy environment.
+    </p>
+    <p xml:lang="de">
+      Fokusiere Dich aufs Wesentliche und steigere Deine Produktivität, indem Du verschiedene Geräusche hörst. Oder schlafe in einer lauten Umgebung ein.
+    </p>
+    <p xml:lang="hr">
+      Usredotoči se i povećaj svoju produktivnost slušajući različite zvukove. Ili zaspi u bučnom okruženju.
     </p>
   </description>
   <url type="homepage">https://github.com/rafaelmardojai/blanket</url>
