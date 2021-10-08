@@ -1,12 +1,17 @@
 [Desktop Entry]
 Name=Blanket
+Name[hr]=Pokrivač
 Comment=Listen to different sounds
+Comment[de]=Höre dir unterschiedliche Klänge an
+Comment[hr]=Slušaj razne zvukove
 Exec=blanket
 Icon=com.rafaelmardojai.Blanket
 Terminal=false
 Type=Application
 # Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 Keywords=Concentrate;Focus;Noise;Productivity;Sleep;
+Keywords[de]=Konzentration;Fokus;Geräusch;Produktivität;Schlaf;
+Keywords[hr]=Koncentracija;Fokusiranje;Buka;Produktivnost;Spavanje;
 Categories=AudioVideo;Audio;GTK;
 StartupNotify=true
 # Translators: Do NOT translate or transliterate this text (these are enum types)!
