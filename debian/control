@@ -1,5 +1,5 @@
 Source: blanket
-Section: gnome
+Section: utils
 Priority: optional
 Maintainer: Rafael Mardojai CM <email@rafaelmardojai.com>
 Build-Depends: debhelper-compat(=10),
@@ -8,6 +8,7 @@ Build-Depends: debhelper-compat(=10),
 	meson (>= 0.50),
 	pkg-config,
 	libglib2.0-dev,
+	libhandy-1-dev,
 	appstream
 Standards-Version: 4.5.0
 Rules-Requires-Root: no
@@ -18,7 +19,7 @@ Vcs-Git: https://github.com/rafaelmardojai/blanket.git
 Package: blanket
 Architecture: all
 Depends: ${misc:Depends},
-	libhandy-1-dev,
+	gir1.2-handy-1,
 	gir1.2-gst-plugins-bad-1.0,
 	gir1.2-gtk-3.0,
 	python3
