@@ -20,6 +20,7 @@ This files list all the translations maintainers.  It's used to call translators
 | id    | Indonesian           | @cho2                          |
 | it    | Italian              | @albanobattistella             |
 | ja    | Japanese             |                                |
+| ko    | Korean               | @OctopusET                     |
 | ne    | Nepali               | @IBA4                          |
 | nl    | Dutch                | @Vistaus                       |
 | oc    | Occitan              | @Mejans                        |
