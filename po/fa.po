@@ -40,7 +40,7 @@ msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
-"تمرکز و بهره‌وری خود را با گوش دادن به صداهای گوناگون افزایش دهید.یا به شما "
+"تمرکز و بهره‌وری خود را با گوش دادن به صداهای گوناگون افزایش دهید. یا به شما "
 "این اجازه را می‌دهد تا در محیطی پر از سروصدا بخوابید."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
@@ -55,11 +55,11 @@ msgstr "'پیش‌فرض'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr ""
+msgstr "پیش‌تنظیم‌های ذخیره شده"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr ""
+msgstr "افزودن پیش‌تنظیم"
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
@@ -72,7 +72,7 @@ msgstr "پس از بسته شدن همچنان پخش شود"
 
 #: data/resources/window.ui:191
 msgid "Preferences"
-msgstr "اولویت‌ها"
+msgstr "ترجیحات"
 
 #: data/resources/window.ui:200
 msgid "Keyboard Shortcuts"
@@ -108,15 +108,15 @@ msgstr "لغو"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr ""
+msgstr "نام پیش‌تنظیم"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr ""
+msgstr "حذف پیش‌تنظیم"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr ""
+msgstr "تغییر نام پیش‌تنظیم"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -254,7 +254,7 @@ msgstr ""
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr ""
+msgstr "افزودن پیش‌تنظیم"
 
 #: blanket/presets.py:113
 msgid "Create"
@@ -262,7 +262,7 @@ msgstr "ایجاد"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr ""
+msgstr "ویرایش پیش‌تنظیم"
 
 #: blanket/presets.py:119
 msgid "Save"
