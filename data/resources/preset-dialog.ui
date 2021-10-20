@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.22.0 -->
 <interface>
-  <requires lib="gtk+" version="3.24"/>
   <template class="PresetDialog" parent="AdwWindow">
     <property name="default_width">500</property>
     <property name="modal">True</property>
