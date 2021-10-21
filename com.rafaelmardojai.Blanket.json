@@ -10,6 +10,7 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--socket=pulseaudio",
+        "--device=dri",
         "--own-name=org.mpris.MediaPlayer2.Blanket"
     ],
     "cleanup" : [

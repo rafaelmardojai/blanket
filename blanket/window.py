@@ -4,7 +4,7 @@
 import os
 
 from gettext import gettext as _
-from gi.repository import GLib, GObject, Gtk, Handy
+from gi.repository import GLib, GObject, Gtk, Adw
 
 from blanket.settings import Settings
 from blanket.sound import SoundObject
@@ -92,7 +92,7 @@ SOUNDS = [
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/window.ui')
-class BlanketWindow(Handy.ApplicationWindow):
+class BlanketWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'BlanketWindow'
 
     headerbar = Gtk.Template.Child()
@@ -103,10 +103,7 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     menu = Gtk.Template.Child()
     volume = Gtk.Template.Child()
-    quit_revealer = Gtk.Template.Child()
-    presets_btn = Gtk.Template.Child()
-    new_preset_btn = Gtk.Template.Child()
-    presets_chooser: PresetChooser = Gtk.Template.Child()
+    presets_chooser : PresetChooser = Gtk.Template.Child()
 
     name_binding = None
 
@@ -123,12 +120,6 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.setup()
 
     def setup(self):
-        # Load dark theme
-        gtk_settings = Gtk.Settings.get_default()
-        gtk_settings.set_property(
-            'gtk-application-prefer-dark-theme', Settings.get().dark_mode
-        )
-
         # Get volume scale adjustment
         vol_adjustment = self.volume.get_adjustment()
         # Bind volume scale value with main player volume
@@ -144,17 +135,11 @@ class BlanketWindow(Handy.ApplicationWindow):
             GObject.BindingFlags.SYNC_CREATE
         )
 
-        # If background-playback enabled show quit action on menu
-        self.quit_revealer.set_reveal_child(Settings.get().background)
-
         # Setup presets widgets
         self.setup_presets()
         # Setup included/saved sounds
         self.setup_sounds()
         self.setup_custom_sounds()
-
-        # Show all widgets added to window
-        self.show_all()
 
         # Get saved scroll position
         saved_scroll = Settings.get().scroll_position
@@ -167,13 +152,7 @@ class BlanketWindow(Handy.ApplicationWindow):
         self.presets_chooser.connect('selected', self._on_preset_selected)
         self.update_title(self.presets_chooser.selected)
 
-        self.presets_chooser.model.connect(
-            'items-changed',
-            self._on_presets_changed
-        )
         items = self.presets_chooser.model.get_n_items()
-        self.presets_btn.set_visible(items > 1)
-        self.new_preset_btn.set_visible(items == 1)
 
     def setup_sounds(self):
         # Setup default sounds
@@ -189,13 +168,13 @@ class BlanketWindow(Handy.ApplicationWindow):
                 group.add(sound)
 
             # Add SoundsGroup to the window's main box
-            self.box.pack_start(group, False, True, 0)
+            self.box.append(group)
 
     def setup_custom_sounds(self):
         # Setup user custom sounds
         self.custom_sounds = SoundsGroup(_('Custom'), True)
         self.custom_sounds.connect('add-clicked', self._on_add_sound_clicked)
-        self.box.pack_start(self.custom_sounds, False, True, 0)
+        self.box.append(self.custom_sounds)
 
         # Load saved custom audios
         for name, uri in Settings.get().custom_audios.items():
@@ -245,7 +224,6 @@ class BlanketWindow(Handy.ApplicationWindow):
                               sound.name, sound.uri)
                 # Add SoundObject to SoundsGroup
                 self.custom_sounds.add(sound)
-                self.custom_sounds.show_all()
 
     def update_title(self, preset):
         if self.name_binding is not None:
@@ -253,11 +231,11 @@ class BlanketWindow(Handy.ApplicationWindow):
 
         if preset.id != Settings.get().default_preset:
             self.name_binding = preset.bind_property(
-                'name', self.headerbar, 'title',
+                'name', self, 'title',
                 GObject.BindingFlags.SYNC_CREATE
             )
         else:
-            self.headerbar.set_title(_('Blanket'))
+            self.set_title(_('Blanket'))
 
     def _on_preset_selected(self, _chooser, preset):
         self.mainplayer.preset_changed()
@@ -265,14 +243,6 @@ class BlanketWindow(Handy.ApplicationWindow):
 
     def _on_reset_volumes(self, _control, _preset):
         self.mainplayer.reset_volumes()
-
-    def _on_presets_changed(self, model, _position, _removed, _added):
-        items = model.get_n_items()
-        self.presets_btn.set_visible(items > 1)
-        self.new_preset_btn.set_visible(items == 1)
-
-        if items == 1:
-            self.menu.open_submenu('main')
 
     def _on_add_sound_clicked(self, _group):
         self.open_audio()

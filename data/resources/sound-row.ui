@@ -1,42 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.22.0 -->
 <interface>
-  <requires lib="gtk+" version="3.24"/>
-  <object class="GtkAdjustment" id="volume_adjustment">
-    <property name="lower">0</property>
-    <property name="upper">1</property>
-    <property name="step_increment">0.01</property>
-    <property name="page_increment">0.01</property>
-  </object>
   <template class="SoundRow" parent="GtkListBoxRow">
-    <property name="visible">True</property>
-    <property name="can_focus">True</property>
     <property name="selectable">False</property>
     <style>
       <class name="soundrow"/>
     </style>
     <child>
       <object class="GtkBox" id="box">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
         <property name="spacing">24</property>
-        <property name="margin">8</property>
+        <property name="margin_top">8</property>
+        <property name="margin_bottom">8</property>
+        <property name="margin_start">8</property>
+        <property name="margin_end">8</property>
         <child>
           <object class="GtkBox">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
             <property name="valign">center</property>
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkBox">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
                 <property name="margin_top">10</property>
                 <property name="spacing">6</property>
                 <child>
                   <object class="GtkLabel" id="title">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
                     <property name="ellipsize">end</property>
                     <property name="xalign">0</property>
                   </object>
@@ -45,19 +33,19 @@
             </child>
             <child>
               <object class="GtkScale" id="volume">
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="adjustment">volume_adjustment</property>
+                <property name="hexpand">True</property>
+                <property name="adjustment">
+                  <object class="GtkAdjustment" id="volume_adjustment">
+                    <property name="lower">0</property>
+                    <property name="upper">1</property>
+                    <property name="step_increment">0.01</property>
+                    <property name="page_increment">0.01</property>
+                  </object>
+                </property>
                 <property name="draw_value">False</property>
               </object>
-              <packing>
-                <property name="expand">True</property>
-              </packing>
             </child>
           </object>
-          <packing>
-            <property name="expand">True</property>
-          </packing>
         </child>
       </object>
     </child>

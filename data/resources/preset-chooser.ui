@@ -1,33 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.22.0 -->
 <interface>
-  <requires lib="gtk+" version="3.24"/>
   <template class="PresetChooser" parent="GtkBox">
-    <property name="visible">True</property>
-    <property name="can_focus">False</property>
     <property name="orientation">vertical</property>
     <child>
-      <object class="GtkBox">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="orientation">vertical</property>
-        <property name="spacing">6</property>
-        <child>
-          <object class="GtkListBox" id="presets_list">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="selection-mode">none</property>
-            <style>
-              <class name="background"/>
-            </style>
-          </object>
-        </child>
-        <child>
-          <object class="GtkSeparator">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-          </object>
-        </child>
+      <object class="GtkListBox" id="presets_list">
+        <property name="selection-mode">none</property>
       </object>
     </child>
   </template>

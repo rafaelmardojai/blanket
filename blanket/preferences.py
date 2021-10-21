@@ -5,15 +5,16 @@ import os
 from random import randint
 
 from gettext import gettext as _
-from gi.repository import Gio, GLib, Gtk, Handy
+from gi.repository import Gio, GLib, Gtk, Adw
 
 from blanket.settings import Settings
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preferences.ui')
-class PreferencesWindow(Handy.PreferencesWindow):
+class PreferencesWindow(Adw.PreferencesWindow):
     __gtype_name__ = 'PreferencesWindow'
 
+    dark_group = Gtk.Template.Child()
     dark = Gtk.Template.Child()
     autostart = Gtk.Template.Child()
 
@@ -27,15 +28,20 @@ class PreferencesWindow(Handy.PreferencesWindow):
         )
         self.dark.connect('notify::active', self._toggle_dark)
 
+        style_manager = Adw.StyleManager.get_default()
+        self.dark_group.props.visible = not style_manager.props.system_supports_color_schemes
+
         self.autostart_failed = False
         self.autostart_saved = Settings.get().autostart
         self.autostart.set_active(self.autostart_saved)
         self.autostart.connect('notify::active', self._toggle_autostart)
 
     def _toggle_dark(self, switch, _active):
-        gtk_settings = Gtk.Settings.get_default()
-        active = switch.get_active()
-        gtk_settings.set_property('gtk-application-prefer-dark-theme', active)
+        style_manager = Adw.StyleManager.get_default()
+        if switch.get_active():
+            style_manager.props.color_scheme = Adw.ColorScheme.FORCE_DARK
+        else:
+            style_manager.props.color_scheme = Adw.ColorScheme.PREFER_LIGHT
 
     def _toggle_autostart(self, switch, _active):
         active = switch.get_active()
@@ -86,16 +92,14 @@ class PreferencesWindow(Handy.PreferencesWindow):
             print(e)
 
             error_dialog = Gtk.MessageDialog(
-                self, 0, Gtk.MessageType.WARNING,
-                Gtk.ButtonsType.OK, _('Request error')
+                message_type=Gtk.MessageType.WARNING,
+                buttons=Gtk.ButtonsType.OK, text=_('Request error')
             )
-            error_dialog.format_secondary_text(
-                _('The autostart request failed.')
-            )
-            error_response = error_dialog.run()
-            if error_response == Gtk.ResponseType.OK:
-                error_dialog.destroy()
-
+            error_dialog.props.transient_for = self
+            error_dialog.props.modal = True
+            error_dialog.props.secondary_text =_('The autostart request failed.')
+            error_dialog.connect('response', self.__on_dialog_response)
+            error_dialog.present()
             self.autostart_failed = True
             self.autostart.set_active(self.autostart_saved)
 
@@ -111,38 +115,41 @@ class PreferencesWindow(Handy.PreferencesWindow):
         elif state == 1:
             if active:
                 error_dialog = Gtk.MessageDialog(
-                    self, 0, Gtk.MessageType.WARNING, Gtk.ButtonsType.OK,
-                    _('Authorization failed')
+                    message_type=Gtk.MessageType.WARNING, buttons=Gtk.ButtonsType.OK,
+                    text=_('Authorization failed')
                 )
-                error_dialog.format_secondary_text(
-                    _('Make sure Blanket has permission to run in '
-                      '\nthe background in Settings → Applications → '
-                      '\nBlanket and try again.'))
-                error_response = error_dialog.run()
-                if error_response == Gtk.ResponseType.OK:
-                    error_dialog.destroy()
+                error_dialog.props.transient_for = self
+                error_dialog.props.modal = True
+                error_dialog.props.secondary_text = _('Make sure Blanket has permission to run in '
+                                                    '\nthe background in Settings → Applications → '
+                                                    '\nBlanket and try again.')
+                error_dialog.connect('response', self.__on_dialog_response)
+                error_dialog.present()
         elif state == 2:
             error_dialog = Gtk.MessageDialog(
-                self, 0, Gtk.MessageType.WARNING, Gtk.ButtonsType.OK,
-                _('Request error')
+                message_type=Gtk.MessageType.WARNING, buttons=Gtk.ButtonsType.OK,
+                text=_('Request error')
             )
-            error_dialog.format_secondary_text(
-                _('The autostart request failed.')
-            )
-            error_response = error_dialog.run()
-            if error_response == Gtk.ResponseType.OK:
-                error_dialog.destroy()
+            error_dialog.props.transient_for = self
+            error_dialog.props.modal = True
+            error_dialog.props.secondary_text = _('The autostart request failed.')
+            error_dialog.connect('response', self.__on_dialog_response)
+            error_dialog.present()
 
         self.autostart.set_active(autostart)
         Settings.get().autostart = autostart
         return
 
+    def __on_dialog_response(self, dialog, response_id):
+        if response_id == Gtk.ResponseType.OK:
+            dialog.destroy()
+
     def __get_window_identifier(self):
         session = os.getenv('XDG_SESSION_TYPE')
-        window = self.window.get_window()
+        surface = self.window.get_surface()
 
         if session == 'x11':
-            return f'x11:{str(window.get_xid())}'
+            return f'x11:{str(surface.get_xid())}'
         elif session == 'wayland':
             return 'wayland:'
         return ''

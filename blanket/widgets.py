@@ -15,22 +15,13 @@ class PlayPauseButton(Gtk.Button):
     def __init__(self):
         super().__init__()
 
-        self.pause_img = Gtk.Image.new_from_icon_name(
-            'media-playback-pause-symbolic',
-            Gtk.IconSize.MENU
-        )
-        self.play_img = Gtk.Image.new_from_icon_name(
-            'media-playback-start-symbolic',
-            Gtk.IconSize.MENU
-        )
-
         self.connect('notify::playing', self._on_playing_changed)
 
     def _on_playing_changed(self, _object, _pspec):
         if self.playing:
-            self.set_image(self.pause_img)
+            self.set_icon_name('media-playback-pause-symbolic')
         else:
-            self.set_image(self.play_img)
+            self.set_icon_name('media-playback-start-symbolic')
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/sound-row.ui')
@@ -82,25 +73,19 @@ class SoundRow(Gtk.ListBoxRow):
             # Add a remove button
             remove = Gtk.Button(valign=Gtk.Align.CENTER)
             remove.connect('clicked', self.remove)
-            self.box.pack_end(remove, False, True, 0)
+            self.box.append(remove)
             # Add destructive-action CSS class
             remove.get_style_context().add_class('image-button')
-            # Create button icon
-            remove_icon = Gtk.Image.new_from_icon_name(
-                'edit-delete-symbolic', Gtk.IconSize.MENU
-            )
-            remove.add(remove_icon)
+            remove.set_icon_name('edit-delete-symbolic')
             # Compact widget
             self.box.props.margin_top = 0
             self.box.props.margin_bottom = 0
         else:
             # Set icon for the sound
-            icon = Gtk.Image.new_from_icon_name(self.sound.icon_name,
-                                                Gtk.IconSize.DIALOG)
-            icon.get_style_context().add_class('sound-icon')
+            icon = Gtk.Image.new_from_icon_name(self.sound.icon_name)
+            icon.add_css_class('sound-icon')
             icon.set_pixel_size(64)
-            self.box.pack_start(icon, False, True, 0)
-            self.box.child_set_property(icon, 'position', 0)
+            self.box.prepend(icon)
 
     def remove(self, _button):
         # Remove audio from list
@@ -181,14 +166,16 @@ class SoundsGroup(Gtk.Box):
         self.model = Gio.ListStore.new(SoundObject)
 
         # Create group name label
-        label = Gtk.Label(title, halign=Gtk.Align.START)
-        label.get_style_context().add_class('h1')
-        self.pack_start(label, False, False, 0)
+        label = Gtk.Label()
+        label.props.label = title
+        label.props.halign = Gtk.Align.START
+        label.add_css_class('title-3')
+        self.append(label)
 
         # Create group GtkListBox
         self.listbox = Gtk.ListBox()
-        self.listbox.get_style_context().add_class('content')
-        self.pack_start(self.listbox, True, False, 0)
+        self.listbox.add_css_class('content')
+        self.append(self.listbox)
 
         # Bind GtkListBox with GioListStore
         self.listbox.bind_model(self.model, self._create_sound_widget)
@@ -197,10 +184,11 @@ class SoundsGroup(Gtk.Box):
 
         # Show add button if group is for custom sounds
         if custom:
-            add_btn = Gtk.Button(_('Add Custom Sound...'))
+            add_btn = Gtk.Button()
+            add_btn.props.label = _('Add Custom Sound…')
             # add_btn.get_style_context().add_class('suggested-action')
             add_btn.connect('clicked', self.__on_add_clicked)
-            self.pack_start(add_btn, True, False, 0)
+            self.append(add_btn)
 
     def add(self, sound):
         self.model.append(sound)

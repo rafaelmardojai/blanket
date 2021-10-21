@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
-from gi.repository import Gio, GObject, Gtk, Handy
+from gi.repository import Gio, GObject, Gtk, Adw
 
 from blanket.settings import Settings
 
@@ -73,7 +73,8 @@ class PresetChooser(Gtk.Box):
             if Settings.get().active_preset != self.selected.id:
                 Settings.get().active_preset = self.selected.id
 
-        for row in self.presets_list.get_children():
+        for i in range(self.model.get_n_items()):
+            row = self.presets_list.get_row_at_index(i)
             row.selected = row.preset.id == self.selected.id
 
         self.emit('selected', self.selected)
@@ -86,10 +87,11 @@ class PresetChooser(Gtk.Box):
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preset-dialog.ui')
-class PresetDialog(Handy.Window):
+class PresetDialog(Adw.Window):
     __gtype_name__ = 'PresetDialog'
 
     headerbar = Gtk.Template.Child()
+    title_widget = Gtk.Template.Child()
     accept_btn = Gtk.Template.Child()
     cancel_btn = Gtk.Template.Child()
     name_entry = Gtk.Template.Child()
@@ -109,13 +111,13 @@ class PresetDialog(Handy.Window):
         self.name_entry.connect('changed', self._on_entry_changed)
 
         if self.preset is None:
-            self.headerbar.set_title(_('Add Preset'))
+            self.set_title(_('Add Preset'))
             self.accept_btn.set_label(_('Create'))
             # Wire buttons
             self.accept_btn.connect('clicked', self._on_create_preset)
         else:
-            self.headerbar.set_title(_('Edit Preset'))
-            self.headerbar.set_subtitle(self.preset.name)
+            self.set_title(_('Edit Preset'))
+            self.title_widget.set_subtitle(self.preset.name)
             self.accept_btn.set_label(_('Save'))
             self.name_entry.set_text(self.preset.name)
             # Wire buttons
@@ -181,6 +183,7 @@ class PresetRow(Gtk.ListBoxRow):
     indicator = Gtk.Template.Child()
     rename_btn = Gtk.Template.Child()
     delete_btn = Gtk.Template.Child()
+    revealer = Gtk.Template.Child()
 
     def __init__(self, preset):
         super().__init__()
@@ -189,9 +192,7 @@ class PresetRow(Gtk.ListBoxRow):
 
         self.rename_btn.connect('clicked', self._on_show_rename)
         self.delete_btn.connect('clicked', self._on_delete_preset)
-        if self.preset.id != Settings.get().default_preset:
-            self.rename_btn.set_visible(True)
-            self.delete_btn.set_visible(True)
+        self.revealer.props.reveal_child = self.preset.id != Settings.get().default_preset
 
         preset.bind_property(
             'name', self.name, 'label', GObject.BindingFlags.SYNC_CREATE

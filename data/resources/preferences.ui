@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="3.0"/>
-  <requires lib="libhandy" version="1.0"/>
-  <template class="PreferencesWindow" parent="HdyPreferencesWindow">
+  <template class="PreferencesWindow" parent="AdwPreferencesWindow">
     <property name="default_height">300</property>
     <property name="default_width">500</property>
     <property name="modal">True</property>
-    <property name="window_position">center-on-parent</property>
     <property name="search-enabled">False</property>
     <child>
-      <object class="HdyPreferencesPage">
-        <property name="visible">True</property>
+      <object class="AdwPreferencesPage">
         <child>
-          <object class="HdyPreferencesGroup">
+          <object class="AdwPreferencesGroup" id="dark_group">
             <property name="title" translatable="yes">Appearance</property>
-            <property name="visible">True</property>
             <child>
-              <object class="HdyActionRow">
+              <object class="AdwActionRow">
                 <property name="title" translatable="yes">Dark Mode</property>
-                <property name="visible">True</property>
                 <property name="activatable_widget">dark</property>
                 <child>
                   <object class="GtkSwitch" id="dark">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
                     <property name="valign">center</property>
                   </object>
                 </child>
@@ -32,18 +24,14 @@
           </object>
         </child>
         <child>
-          <object class="HdyPreferencesGroup">
+          <object class="AdwPreferencesGroup">
             <property name="title" translatable="yes">Behavior</property>
-            <property name="visible">True</property>
             <child>
-              <object class="HdyActionRow">
+              <object class="AdwActionRow">
                 <property name="title" translatable="yes">Autostart in background</property>
-                <property name="visible">True</property>
                 <property name="activatable_widget">autostart</property>
                 <child>
                   <object class="GtkSwitch" id="autostart">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
                     <property name="valign">center</property>
                   </object>
                 </child>
