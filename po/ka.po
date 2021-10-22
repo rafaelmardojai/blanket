@@ -1,4 +1,4 @@
-# Georgian Translation for Blaket
+# Georgian Translation for Blanket
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
 # Jacob Gogichaishvili <jggsecondary@gmail.com>, 2021.
