@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2021-10-12 00:49+0900\n"
+"PO-Revision-Date: 2021-10-25 09:13+0900\n"
+"Last-Translator: Moon Sungjoon <sumoon@seoulsaram.org>\n"
 "Language-Team: \n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0\n"
-"Last-Translator: Moon Sungjoon <sumoon@seoulsaram.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: ko\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6
@@ -41,8 +41,8 @@ msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
-"다양한 소리를 들음으로써 집중력을 높이고 생산성을 높일 수 있습니다. 또는 시끄"
-"러운 환경에서 잠들게 해 줍니다."
+"다양한 소리를 들으며 집중력과 생산성을 향상해 주거나 시끄러운 환경에서 잠들"
+"게 해 줍니다."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
 msgid "Rafael Mardojai CM"
@@ -56,11 +56,11 @@ msgstr "'기본'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr "저장된 프리셋"
+msgstr "저장된 사전 설정"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr "프리셋 추가..."
+msgstr "사전 설정 추가..."
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
@@ -68,7 +68,7 @@ msgstr "음량 초기화"
 
 #: data/resources/window.ui:174
 msgid "Keep Playing When Closed"
-msgstr "꺼졌을 때 도 계속 재생"
+msgstr "닫기 후에도 계속 재생"
 
 #: data/resources/window.ui:191
 msgid "Preferences"
@@ -100,7 +100,7 @@ msgstr "동작"
 
 #: data/resources/preferences.ui:40
 msgid "Autostart in background"
-msgstr "백그라운드에서 자동으로 실행"
+msgstr "백그라운드에서 자동 시작"
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
@@ -108,15 +108,15 @@ msgstr "취소"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr "프리셋 이름"
+msgstr "사전 설정 이름"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr "프리셋 삭제"
+msgstr "사전 설정 삭제"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr "프리셋 이름 바꾸기"
+msgstr "사전 설정 이름 바꾸기"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -134,7 +134,7 @@ msgstr "일반"
 
 #: data/resources/shortcuts.ui:18
 msgid "Play/Pause sounds"
-msgstr "재생/일시정지"
+msgstr "재생/일시 정지"
 
 #: data/resources/shortcuts.ui:25
 msgid "Add custom sound"
@@ -174,7 +174,7 @@ msgstr "새"
 
 #: blanket/window.py:44 blanket/about.py:25
 msgid "Summer Night"
-msgstr "여름밤"
+msgstr "여름 밤"
 
 #: blanket/window.py:49
 msgid "Travel"
@@ -235,7 +235,7 @@ msgstr "요청 오류"
 
 #: blanket/preferences.py:93 blanket/preferences.py:130
 msgid "The autostart request failed."
-msgstr "자동 시작 요청을 실패 했습니다."
+msgstr "자동 시작 요청을 실패했습니다."
 
 #: blanket/preferences.py:115
 msgid "Authorization failed"
@@ -261,7 +261,7 @@ msgstr "생성"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr "프리셋 수정"
+msgstr "사전 설정 수정"
 
 #: blanket/presets.py:119
 msgid "Save"
@@ -278,9 +278,9 @@ msgstr "앱 아이콘"
 #. Set sound artists list
 #: blanket/about.py:60
 msgid "Sounds by"
-msgstr "작곡가"
+msgstr "사운드 제작"
 
 #. Set sound editors list
 #: blanket/about.py:62
 msgid "Sounds edited by"
-msgstr "편곡가"
+msgstr "사운드 편집"
