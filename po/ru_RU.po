@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2021-11-06 17:14+0300\n"
+"PO-Revision-Date: 2021-11-28 16:37+0300\n"
 "Last-Translator: Ivan Savochenko <iSavoch@Gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -21,6 +21,7 @@ msgstr ""
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6
 #: data/resources/window.ui:19 blanket/main.py:31 blanket/window.py:260
 #: blanket/mpris.py:141
+#, fuzzy
 msgid "Blanket"
 msgstr "Попона"
 
