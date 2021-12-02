@@ -227,7 +227,7 @@ msgstr "Выберите аудио"
 
 #: blanket/preferences.py:62
 msgid "Autostart Blanket in background."
-msgstr "Запускать Попону в фоновом режиме."
+msgstr "Автозапуск в фоновом режиме."
 
 #: blanket/preferences.py:90 blanket/preferences.py:127
 msgid "Request error"
@@ -247,7 +247,7 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"Откройте Параметры → Приложения → Попона. \n"
+"Откройте Параметры → Приложения → Blanket. \n"
 "Убедитесь, что приложению позволен запуск \n"
 "в фоновом режиме и попробуйте снова."
 
