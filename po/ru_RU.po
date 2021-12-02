@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2021-09-19 13:09+0300\n"
+"PO-Revision-Date: 2021-12-02 08:22+0300\n"
 "Last-Translator: Ivan Savochenko <iSavoch@Gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -41,8 +41,8 @@ msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
-"Концентрируйте внимание и поднимайте производительность слушая разные звуки. "
-"Или быстрее засыпайте в шумном месте."
+"Концентрируйте внимание и поднимайте производительность настроив звуковое "
+"окружение. Так же может помочь быстрее заснуть в шумном месте."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
 msgid "Rafael Mardojai CM"
@@ -56,20 +56,19 @@ msgstr "'По умолчанию'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr "Сохраненные наборы настроек"
+msgstr "Мои профили"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr "Добавить набор настроек..."
+msgstr "Добавить профиль..."
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
 msgstr "Сбросить уровни громкости"
 
 #: data/resources/window.ui:174
-#, fuzzy
 msgid "Keep Playing When Closed"
-msgstr "Продолжать воспроизведение при закрытии"
+msgstr "Продолжать звучать при закрытии"
 
 #: data/resources/window.ui:191
 msgid "Preferences"
@@ -109,15 +108,15 @@ msgstr "Отмена"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr "Название набора настроек"
+msgstr "Название профиля"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr "Удалить набор настроек"
+msgstr "Удалить профиль"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr "Переименовать набор настроек"
+msgstr "Переименовать профиль"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -130,7 +129,6 @@ msgid "translator-credits"
 msgstr "Иван Савоченко <iSavoch@Gmail.com>"
 
 #: data/resources/shortcuts.ui:13
-#, fuzzy
 msgid "General"
 msgstr "Общее"
 
@@ -228,9 +226,8 @@ msgid "Open audio"
 msgstr "Выберите аудио"
 
 #: blanket/preferences.py:62
-#, fuzzy
 msgid "Autostart Blanket in background."
-msgstr "Автоматически запускать в фоновом режиме."
+msgstr "Автозапуск в фоновом режиме."
 
 #: blanket/preferences.py:90 blanket/preferences.py:127
 msgid "Request error"
@@ -245,19 +242,18 @@ msgid "Authorization failed"
 msgstr "Авторизация не удалась"
 
 #: blanket/preferences.py:118
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in \n"
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"Откройте Параметры → Приложения → Попона. \n"
+"Откройте Параметры → Приложения → Blanket. \n"
 "Убедитесь, что приложению позволен запуск \n"
 "в фоновом режиме и попробуйте снова."
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr "Добавить набор настроек"
+msgstr "Добавить профиль"
 
 #: blanket/presets.py:113
 msgid "Create"
@@ -265,7 +261,7 @@ msgstr "Создать"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr "Редактировать набор настроек"
+msgstr "Редактировать профиль"
 
 #: blanket/presets.py:119
 msgid "Save"
