@@ -28,6 +28,12 @@
     <screenshot>
       <image>https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshot-2.png</image>
     </screenshot>
+    <screenshot>
+      <image xml:lang="ru_RU">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots-ru_RU/ru_RU-over-0.5.0-screenshot-1.z.png</image>
+    </screenshot>
+    <screenshot>
+      <image xml:lang="ru_RU">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots-ru_RU/ru_RU-over-0.5.0-screenshot-2.z.png</image>
+    </screenshot>
   </screenshots>
 
   <releases>
