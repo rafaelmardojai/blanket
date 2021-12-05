@@ -28,14 +28,12 @@
     <screenshot>
       <image>https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshot-2.png</image>
     </screenshot>
-    <!--
     <screenshot>
-      <image xml:lang="ru_RU">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots/ru/screenshot-1-ru.z.png</image>
+      <image xml:lang="ru">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots/ru/screenshot-1-ru.z.png</image>
     </screenshot>
     <screenshot>
-      <image xml:lang="ru_RU">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots/ru/screenshot-2-ru.z.png</image>
+      <image xml:lang="ru">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots/ru/screenshot-2-ru.z.png</image>
     </screenshot>
-    -->
   </screenshots>
 
   <releases>
