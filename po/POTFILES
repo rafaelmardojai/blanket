@@ -13,3 +13,4 @@ blanket/preferences.py
 blanket/presets.py
 blanket/about.py
 blanket/mpris.py
+blanket/widgets.py
