@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2021-08-07 16:38+0200\n"
+"PO-Revision-Date: 2021-12-22 23:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hu\n"
@@ -52,22 +52,21 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Alapértelmezett'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr ""
+msgstr "Elmentett Beállítások"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr ""
+msgstr "Beállítás Hozzáadása..."
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "Hangszintek Alapértékre Állítása"
 
 #: data/resources/window.ui:174
-#, fuzzy
 msgid "Keep Playing When Closed"
 msgstr "Lejátszás folytatása bezáráskor"
 
@@ -89,11 +88,11 @@ msgstr "Kilépés"
 
 #: data/resources/preferences.ui:16
 msgid "Appearance"
-msgstr ""
+msgstr "Megjelenés"
 
 #: data/resources/preferences.ui:20
 msgid "Dark Mode"
-msgstr ""
+msgstr "Sötét Kinézet"
 
 #: data/resources/preferences.ui:36
 msgid "Behavior"
@@ -105,19 +104,19 @@ msgstr "Automatikus indítás a háttérben"
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
-msgstr ""
+msgstr "Mégsem"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr ""
+msgstr "Beállítás Elnvezése"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr ""
+msgstr "Beállítás Törlése"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr ""
+msgstr "Beállítás Átnevezése"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -227,7 +226,6 @@ msgid "Open audio"
 msgstr "Hang megnyitása"
 
 #: blanket/preferences.py:62
-#, fuzzy
 msgid "Autostart Blanket in background."
 msgstr "Blanket automatikus indítása a háttérben."
 
@@ -255,19 +253,19 @@ msgstr ""
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr ""
+msgstr "Beállítás Hozzáadása"
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr ""
+msgstr "Létrehozás"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr ""
+msgstr "Beállítás Szerkesztése"
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr ""
+msgstr "Mentés"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
