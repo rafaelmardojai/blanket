@@ -1,245 +1,244 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Hindi translation for Blanket
+# Copyright (C) 2021 Rafael Mardojai CM
 # This file is distributed under the same license as the blanket package.
-# FIRST AUTHOR osiixy, 2021.
+# Pipo Sipo <ray779@tuta.io>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2021-12-22 23:27+0100\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: hu\n"
+"PO-Revision-Date: 2021-12-23 01:43+0530\n"
+"Last-Translator: Pipo Sipo <ray779@tuta.io>\n"
+"Language-Team: Hindi <LL@li.org>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6
 #: data/resources/window.ui:19 blanket/main.py:31 blanket/window.py:260
 #: blanket/mpris.py:141
 msgid "Blanket"
-msgstr "Blanket"
+msgstr "कंबल"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
 #: blanket/mpris.py:136 blanket/mpris.py:139
 msgid "Listen to different sounds"
-msgstr "Hallgass különböző hangokat"
+msgstr "विभिन्न ध्वनियों को सुनें"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Concentrate;Focus;Noise;Productivity;Sleep;"
+msgstr "एकाग्र;केंद्रित;शोर;उत्पादकता;निद्रा;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds. Or allows you to fall asleep in a noisy environment."
 msgstr ""
-"Különböző hangokkal javítja a figyelmet és fokozza a produktivitást. Illetve "
-"segíti az elalvást zajos környezetben."
+"ध्यान केंद्रित करनें में सुधार करें और विभिन्न ध्वनियों को सुनकर अपनी उत्पादकता बढ़ाएँ। और "
+"आपको एक कोलाहलमय वातावरण में सोने की सहायता करे।"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
 msgid "Rafael Mardojai CM"
-msgstr "Rafael Mardojai CM"
+msgstr "राफेल मर्दोजाई सीएम"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "'Alapértelmezett'"
+msgstr "'प्रारंभिक'"
 
 #: data/resources/window.ui:139 data/resources/window.ui:260
 msgid "Saved Presets"
-msgstr "Elmentett Beállítások"
+msgstr "सहेजे गए पूर्वनिश्चित"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr "Beállítás Hozzáadása..."
+msgstr "पूर्वनिश्चित जोड़ें..."
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
-msgstr "Hangszintek Alapértékre Állítása"
+msgstr "आयतन स्तर पुनर्स्थापित करें"
 
 #: data/resources/window.ui:174
 msgid "Keep Playing When Closed"
-msgstr "Lejátszás folytatása bezáráskor"
+msgstr "बंद होने पर भी बजातें रहें"
 
 #: data/resources/window.ui:191
 msgid "Preferences"
-msgstr "Beállítások"
+msgstr "विन्यास"
 
 #: data/resources/window.ui:200
 msgid "Keyboard Shortcuts"
-msgstr "Billentyű Parancsok"
+msgstr "कुंजीपटल अल्प-मार्ग"
 
 #: data/resources/window.ui:209
 msgid "About Blanket"
-msgstr "A Blanket Névjegye"
+msgstr "कंबल के बारे में"
 
 #: data/resources/window.ui:236 data/resources/shortcuts.ui:39
 msgid "Quit"
-msgstr "Kilépés"
+msgstr "निस्तार"
 
 #: data/resources/preferences.ui:16
 msgid "Appearance"
-msgstr "Megjelenés"
+msgstr "रूप"
 
 #: data/resources/preferences.ui:20
 msgid "Dark Mode"
-msgstr "Sötét Kinézet"
+msgstr "काला रंग"
 
 #: data/resources/preferences.ui:36
 msgid "Behavior"
-msgstr "Viselkedés"
+msgstr "व्यवहार"
 
 #: data/resources/preferences.ui:40
 msgid "Autostart in background"
-msgstr "Automatikus indítás a háttérben"
+msgstr "पृष्ठभूमि में स्व-आरंभ करें"
 
 #: data/resources/preset-dialog.ui:25
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr "रद्द करें"
 
 #: data/resources/preset-dialog.ui:66
 msgid "Preset Name"
-msgstr "Beállítás Elnvezése"
+msgstr "पूर्वनिश्चित का नाम"
 
 #: data/resources/preset-row.ui:39
 msgid "Delete Preset"
-msgstr "Beállítás Törlése"
+msgstr "पूर्वनिश्चित नष्ट करें"
 
 #: data/resources/preset-row.ui:61
 msgid "Rename Preset"
-msgstr "Beállítás Átnevezése"
+msgstr "पूर्वनिश्चित का पुनःनामकरण करें"
 
 #: data/resources/about.ui:11
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Szerzői jog: 2020-2021 Rafael Mardojai CM"
+msgstr "प्रतिलिप्यधिकार २०२०-२०२१ राफेल मर्दोजाई सीएम"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "osiixy"
+msgstr "अनुवादक-आभार सूची"
 
 #: data/resources/shortcuts.ui:13
 msgid "General"
-msgstr "Általános"
+msgstr "साधारण"
 
 #: data/resources/shortcuts.ui:18
 msgid "Play/Pause sounds"
-msgstr "Hangok Indítása/Szüneteltetése"
+msgstr "ध्वनि बजाएँ/ठहराएँ"
 
 #: data/resources/shortcuts.ui:25
 msgid "Add custom sound"
-msgstr "Egyéni hang hozzáadása"
+msgstr "तदनुकूल ध्वनि जोड़ें"
 
 #: data/resources/shortcuts.ui:32
 msgid "Close window"
-msgstr "Ablak bezárása"
+msgstr "खिड़की बंद करें"
 
 #: blanket/window.py:16
 msgid "Nature"
-msgstr "Természet"
+msgstr "प्रकृति"
 
 #: blanket/window.py:20 blanket/about.py:17 blanket/about.py:35
 msgid "Rain"
-msgstr "Eső"
+msgstr "वर्षा"
 
 #: blanket/window.py:24 blanket/about.py:18 blanket/about.py:35
 msgid "Storm"
-msgstr "Vihar"
+msgstr "वात्या"
 
 #: blanket/window.py:28 blanket/about.py:29 blanket/about.py:35
 msgid "Wind"
-msgstr "Szél"
+msgstr "वायु"
 
 #: blanket/window.py:32 blanket/about.py:26 blanket/about.py:35
 msgid "Waves"
-msgstr "Hullámok"
+msgstr "ऊर्मि"
 
 #: blanket/window.py:36 blanket/about.py:22
 msgid "Stream"
-msgstr "Patak"
+msgstr "धारा"
 
 #: blanket/window.py:40 blanket/about.py:24 blanket/about.py:35
 msgid "Birds"
-msgstr "Madarak"
+msgstr "चिड़ियाँ"
 
 #: blanket/window.py:44 blanket/about.py:25
 msgid "Summer Night"
-msgstr "Nyári éj"
+msgstr "ग्रीष्म-ऋतु की रात्रि"
 
 #: blanket/window.py:49
 msgid "Travel"
-msgstr "Utazás"
+msgstr "यात्रा"
 
 #: blanket/window.py:53 blanket/about.py:30
 msgid "Train"
-msgstr "Vonat"
+msgstr "रेलगाड़ी"
 
 #: blanket/window.py:57 blanket/about.py:20 blanket/about.py:35
 msgid "Boat"
-msgstr "Hajó"
+msgstr "नौका"
 
 #: blanket/window.py:61 blanket/about.py:21 blanket/about.py:35
 msgid "City"
-msgstr "Város"
+msgstr "पट्टनम्"
 
 #: blanket/window.py:66
 msgid "Interiors"
-msgstr "Beltér"
+msgstr "अभ्यंतर"
 
 #: blanket/window.py:70 blanket/about.py:27
 msgid "Coffee Shop"
-msgstr "Kávézó"
+msgstr "कहवा का मण्डपक"
 
 #: blanket/window.py:74 blanket/about.py:19
 msgid "Fireplace"
-msgstr "Tűzrakás"
+msgstr "अंगीठी"
 
 #: blanket/window.py:79
 msgid "Noise"
-msgstr "Zajok"
+msgstr "परिघोष"
 
 #: blanket/window.py:83 blanket/about.py:28
 msgid "Pink Noise"
-msgstr "Rózsaszín Zaj"
+msgstr "पाटल परिघोष"
 
 #: blanket/window.py:87 blanket/about.py:23
 msgid "White Noise"
-msgstr "Fehér Zaj"
+msgstr "श्वेत परिघोष"
 
 #. Setup user custom sounds
 #: blanket/window.py:196
 msgid "Custom"
-msgstr "Egyéni"
+msgstr "तदनुकूल"
 
 #: blanket/window.py:218
 msgid "Open audio"
-msgstr "Hang megnyitása"
+msgstr "श्रव्य खोलें"
 
 #: blanket/preferences.py:62
 msgid "Autostart Blanket in background."
-msgstr "Blanket automatikus indítása a háttérben."
+msgstr "पृष्ठभूमि में कंबल को स्व-आरंभ करें।"
 
 #: blanket/preferences.py:90 blanket/preferences.py:127
 msgid "Request error"
-msgstr "Kérelem hiba"
+msgstr "अनुरोध में त्रुटि"
 
 #: blanket/preferences.py:93 blanket/preferences.py:130
 msgid "The autostart request failed."
-msgstr "Az automatikus indítási kérelem meghiúsult."
+msgstr "स्व-आरंभ अनुरोध विफल रहा।"
 
 #: blanket/preferences.py:115
 msgid "Authorization failed"
-msgstr "Jogosultság kérelem meghiúsult"
+msgstr "अधिकृतीकरण विफल"
 
 #: blanket/preferences.py:118
 msgid ""
@@ -247,40 +246,40 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"Győződj meg, hogy van-e jogosultság a Blanket-nek\n"
-"a háttérben futni a Beállítások → Alkalmazások →\n"
-"Blanket rész alatt, és próbáld újra!"
+"सुनिश्चित करें कि कंबल को पृष्ठभूमि में चलने की अनुमति है, \n"
+"विन्यास → अनुप्रयोग → कंबल में \n"
+"और पुनः प्रयास करें।"
 
 #: blanket/presets.py:112
 msgid "Add Preset"
-msgstr "Beállítás Hozzáadása"
+msgstr "पूर्वनिश्चित जोड़ें"
 
 #: blanket/presets.py:113
 msgid "Create"
-msgstr "Létrehozás"
+msgstr "रचें"
 
 #: blanket/presets.py:117
 msgid "Edit Preset"
-msgstr "Beállítás Szerkesztése"
+msgstr "पूर्वनिश्चित संपादित करें"
 
 #: blanket/presets.py:119
 msgid "Save"
-msgstr "Mentés"
+msgstr "सहेजें"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
-msgstr "Hangok ikonjai"
+msgstr "ध्वनि के अनुप्रतीक"
 
 #: blanket/about.py:13
 msgid "App icon"
-msgstr "Alkalmazás ikon"
+msgstr "अनुप्रयोग का अनुप्रतीक"
 
 #. Set sound artists list
 #: blanket/about.py:60
 msgid "Sounds by"
-msgstr "Hangok alkotója:"
+msgstr "के द्वारा ध्वनि"
 
 #. Set sound editors list
 #: blanket/about.py:62
 msgid "Sounds edited by"
-msgstr "A hangokat szerkesztették:"
+msgstr "के द्वारा ध्वनि संपादित की गई"
