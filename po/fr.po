@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2020-12-26 10:34+0900\n"
+"PO-Revision-Date: 2022-01-14 12:52+0900\n"
 "Last-Translator: Julien Humbert <julroy67@gmail.com>\n"
 "Language-Team: French <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 40.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6
@@ -60,14 +60,13 @@ msgstr "Préréglage enregistré"
 
 #: data/resources/window.ui:148 data/resources/window.ui:275
 msgid "Add Preset..."
-msgstr "Ajouter un préréglage..."
+msgstr "Ajouter un préréglage…"
 
 #: data/resources/window.ui:157
 msgid "Reset Volume Levels"
 msgstr "Réinitialiser les niveaux de volume"
 
 #: data/resources/window.ui:174
-#, fuzzy
 msgid "Keep Playing When Closed"
 msgstr "Continuer à lire après fermeture"
 
@@ -120,18 +119,16 @@ msgid "Rename Preset"
 msgstr "Renommer le préréglage"
 
 #: data/resources/about.ui:11
-#, fuzzy
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.ui:15
-#, fuzzy
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr ""
-"Romain F. T.\n"
-"Julien Humbert <julroy67@gmail.com>"
+"Julien Humbert <julroy67@gmail.com>\n"
+"Romain F. T."
 
 #: data/resources/shortcuts.ui:13
 msgid "General"
@@ -231,21 +228,20 @@ msgid "Open audio"
 msgstr "Ouvrir l’audio"
 
 #: blanket/preferences.py:62
-#, fuzzy
 msgid "Autostart Blanket in background."
-msgstr "Démarrage automatique de Blanket en arrière-plan"
+msgstr "Démarrer automatiquement Blanket en arrière-plan."
 
 #: blanket/preferences.py:90 blanket/preferences.py:127
 msgid "Request error"
-msgstr "Erreur de demande"
+msgstr "Erreur de requête"
 
 #: blanket/preferences.py:93 blanket/preferences.py:130
 msgid "The autostart request failed."
-msgstr "La demande de démarrage automatique a échoué"
+msgstr "La requête de démarrage automatique a échouée."
 
 #: blanket/preferences.py:115
 msgid "Authorization failed"
-msgstr "Échec de l'autorisation"
+msgstr "Échec de l’autorisation"
 
 #: blanket/preferences.py:118
 msgid ""
@@ -253,9 +249,9 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"Assurez-vous que Blanket a la permission de s'exécuter en \n"
-"l'arrière-plan dans Paramètres → Applications → \n"
-"Blanket et réessayer."
+"Assurez-vous que Blanket a la permission de s’exécuter en\n"
+"arrière-plan dans Paramètres → Applications →\n"
+"Blanket et réessayez."
 
 #: blanket/presets.py:112
 msgid "Add Preset"
@@ -274,13 +270,12 @@ msgid "Save"
 msgstr "Enregistrer"
 
 #: blanket/about.py:12
-#, fuzzy
 msgid "Sounds icons"
-msgstr "Sons par"
+msgstr "Icônes de sons"
 
 #: blanket/about.py:13
 msgid "App icon"
-msgstr "Icône de l'application"
+msgstr "Icône de l’application"
 
 #. Set sound artists list
 #: blanket/about.py:60
