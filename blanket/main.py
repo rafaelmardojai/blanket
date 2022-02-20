@@ -49,7 +49,7 @@ class Application(Adw.Application):
         self.mainplayer.playing = Settings.get().playing
 
         # Start MPRIS server
-        MPRIS(self)
+        self.mpris = MPRIS(self)
 
     def do_startup(self):
         # Startup application
@@ -128,7 +128,7 @@ class Application(Adw.Application):
     def do_activate(self):
         self.window = self.props.active_window
         if not self.window:
-            self.window = BlanketWindow(self.mainplayer, application=self)
+            self.window = BlanketWindow(self.mainplayer, self.mpris, application=self)
 
         self.window.props.hide_on_close = Settings.get().background
 

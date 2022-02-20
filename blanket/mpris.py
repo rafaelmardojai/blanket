@@ -218,6 +218,12 @@ class MPRIS(Server):
     def Introspect(self):
         return self.__doc__
 
+    def update_title(self, title):
+        # Used when changing presets
+        self.__metadata["xesam:title"] = GLib.Variant("s", _(title))
+        changed_properties = {"Metadata": GLib.Variant("a{sv}", self.__metadata)}
+        self.PropertiesChanged(self.__MPRIS_PLAYER_IFACE, changed_properties, [])
+
     def _get_status(self):
         playing = self.app.mainplayer.playing
         if playing:
