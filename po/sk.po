@@ -29,7 +29,7 @@ msgstr "Blanket"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
 #: blanket/mpris.py:136 blanket/mpris.py:139
 msgid "Listen to different sounds"
-msgstr "Počuvajte rôzne zvuky"
+msgstr "Počúvajte rôzne zvuky"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
