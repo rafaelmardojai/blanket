@@ -103,18 +103,19 @@ class BlanketWindow(Adw.ApplicationWindow):
 
     menu = Gtk.Template.Child()
     volume = Gtk.Template.Child()
-    presets_chooser : PresetChooser = Gtk.Template.Child()
+    presets_chooser: PresetChooser = Gtk.Template.Child()
 
     name_binding = None
 
-    def __init__(self, mainplayer, **kwargs):
+    def __init__(self, mainplayer, mpris, **kwargs):
         super().__init__(**kwargs)
 
         # Set default window icon for window managers
         self.set_default_icon_name('com.rafaelmardojai.Blanket')
 
-        # Main player
+        # Main player & MPRIS server object
         self.mainplayer = mainplayer
+        self.mpris = mpris
 
         # Setup widgets
         self.setup()
@@ -151,6 +152,7 @@ class BlanketWindow(Adw.ApplicationWindow):
     def setup_presets(self):
         self.presets_chooser.connect('selected', self._on_preset_selected)
         self.update_title(self.presets_chooser.selected)
+        self.mpris.update_title(self.presets_chooser.selected.name)
 
         items = self.presets_chooser.model.get_n_items()
 
@@ -240,6 +242,7 @@ class BlanketWindow(Adw.ApplicationWindow):
     def _on_preset_selected(self, _chooser, preset):
         self.mainplayer.preset_changed()
         self.update_title(preset)
+        self.mpris.update_title(preset.name)
 
     def _on_reset_volumes(self, _control, _preset):
         self.mainplayer.reset_volumes()
