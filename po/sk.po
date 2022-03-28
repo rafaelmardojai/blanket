@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# Slovak translation of blanket.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -7,26 +7,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-17 17:21-0500\n"
-"PO-Revision-Date: 2020-10-25 05:01+0100\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2021-12-22 07:47+0100\n"
+"PO-Revision-Date: 2021-12-22 08:13+0100\n"
+"Last-Translator: Jose Riha <jose1711@gmail.com>\n"
 "Language-Team: https://github.com/martin-sk\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6
-#: data/resources/window.ui:19 blanket/main.py:31 blanket/window.py:260
-#: blanket/mpris.py:141
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
+#: blanket/window.py:238 blanket/mpris.py:141
 msgid "Blanket"
 msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:7
 #: blanket/mpris.py:136 blanket/mpris.py:139
 msgid "Listen to different sounds"
 msgstr "Počúvajte rôzne zvuky"
@@ -48,102 +47,290 @@ msgstr ""
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:43
+msgid "Added new Presets feature"
+msgstr "Pridaná možnosť nových prednastavení"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:44
+msgid "Now you can toggle sounds by clicking the row"
+msgstr "Teraz môžete zapínať/vypínať zvuky kliknutím na riadok"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:45
+msgid "Added new dark mode option"
+msgstr "Pridaná možnosť prepnutia do tmavého režimu"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:46
+msgid "Added Tamil translation"
+msgstr "Pridaný preklad do tamilčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:47
+msgid "Added Simplified Chinese translation"
+msgstr "Pridaný preklad do zjednodušenej čínštiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:48
+msgid "Added Russian translation"
+msgstr "Pridaný preklad do ruštiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:49
+msgid "Added Irish translation"
+msgstr "Pridaný preklad do írčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:50
+msgid "Added Japanese translation"
+msgstr "Pridaný preklad do japončiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:51
+msgid "Added Indonesian translation"
+msgstr "Pridaný preklad do indonézštiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:52
+msgid "Added Finnish translation"
+msgstr "Pridaný preklad do fínčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:53
+msgid "Added Portuguese translation"
+msgstr "Pridaný preklad do portugalčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:54
+msgid "Added Swedish translation"
+msgstr "Pridaný preklad do švédčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:55
+msgid "Added Czech translation"
+msgstr "Pridaný preklad do češtiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:56
+msgid "Added Hungarian translation"
+msgstr "Pridaný preklad do maďarčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
+msgid "Added Persian (Farsi) translation"
+msgstr "Pridaný preklad do perzštiny (farsi)"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:58
+msgid "Added Galician translation"
+msgstr "Pridaný preklad do galčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:65
+msgid "Added Turkish translation"
+msgstr "Pridaný preklad do turečtiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:66
+msgid "Added Occitan translation"
+msgstr "Pridaný preklad do okcitánčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:67
+msgid "Fix German and Slovak translations"
+msgstr "Oprava nemeckého a slovenského prekladu"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:74
+msgid "Added autostart on background feature"
+msgstr "Pridaná možnosť automatického spustenia na pozadí"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:75
+msgid "Added six new sounds"
+msgstr "Pridaných šesť nových zvukov"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:76
+msgid "New sounds icons, thanks to Jakub Steiner"
+msgstr "Nové ikony zvukov, poďakovanie patrí Jakubovi Steinerovi"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:77
+msgid "Sounds improvements"
+msgstr "Vylepšenia zvukov"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:78
+msgid "Added French translation"
+msgstr "Pridaný preklad do francúzštiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:79
+msgid "Added Ukrainian translation"
+msgstr "Pridaný preklad do ukrajinčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:80
+msgid "Added Slovak translation"
+msgstr "Pridaný preklad do slovenčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:81
+msgid "Added Nepali translation"
+msgstr "Pridaný preklad do nepálčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:82
+msgid "Added German translation"
+msgstr "Pridaný preklad do nemčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:83
+msgid "Added Croatian translation"
+msgstr "Pridaný preklad do chorvátčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:84
+msgid "Performance improvements"
+msgstr "Zlepšenie výkonu"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:85
+msgid "UI improvements"
+msgstr "Vylepšenia rozhrania"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:86
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:94
+msgid "Bug fixes"
+msgstr "Opravy chýb"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:93
+msgid "Added Brazilian Portuguese translation"
+msgstr "Pridaný preklad do brazílskej portugalčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:101
+msgid "Added play/pause action"
+msgstr "Pridaná akcia prehrať/pozastaviť"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:102
+msgid "Added general volume control"
+msgstr "Pridané ovládanie celkovej hlasitosti zvuku"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:103
+msgid "Added MPRIS support"
+msgstr "Pridaná podpora pre MPRIS"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:104
+msgid "Allow playback when window is closed"
+msgstr "Povoliť prehrávanie pri zatvorenom okne"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:105
+msgid "Save window scroll position"
+msgstr "Uložiť stav posuvníka"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:106
+msgid "Added Dutch translation"
+msgstr "Pridaný preklad do holandčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:107
+msgid "Added Basque translation"
+msgstr "Pridaný preklad do baskičtiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:108
+msgid "Added Esperanto translation"
+msgstr "Pridaný preklad do esperanta"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:109
+msgid "Added Catalan translation"
+msgstr "Pridaný preklad do katalánčiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:110
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:120
+msgid "UI tweaks and improvements"
+msgstr "Úpravy a vylepšenia rozhrania"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:117
+msgid "Better White Noise"
+msgstr "Vylepšený biely šum"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:118
+msgid "Added Italian translation"
+msgstr "Pridaný preklad do taliančiny"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:119
+msgid "Fix GStreamer init bug"
+msgstr "Oprava chyby pri inicializácií GStreamera"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:126
+msgid "Initial release."
+msgstr "Úvodná verzia."
+
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
 msgstr "'Predvolené'"
 
-#: data/resources/window.ui:139 data/resources/window.ui:260
-msgid "Saved Presets"
-msgstr "Uložené prednastavenia"
+#: data/resources/window.ui:65
+msgid "Presets"
+msgstr "Prednastavenia"
 
-#: data/resources/window.ui:148 data/resources/window.ui:275
-msgid "Add Preset..."
-msgstr "Pridať prednastavenie..."
+#: data/resources/window.ui:73
+msgid "Add Preset…"
+msgstr "Pridať prednastavenie…"
 
-#: data/resources/window.ui:157
+#: data/resources/window.ui:79
 msgid "Reset Volume Levels"
 msgstr "Obnoviť hlasitosť"
 
-#: data/resources/window.ui:174
-#, fuzzy
+#: data/resources/window.ui:85
 msgid "Keep Playing When Closed"
 msgstr "Prehrávať aj po zatvorení"
 
-#: data/resources/window.ui:191
+#: data/resources/window.ui:91
 msgid "Preferences"
 msgstr "Nastavenia"
 
-#: data/resources/window.ui:200
+#: data/resources/window.ui:95
 msgid "Keyboard Shortcuts"
 msgstr "Klávesové skratky"
 
-#: data/resources/window.ui:209
+#: data/resources/window.ui:99
 msgid "About Blanket"
 msgstr "O Blankete"
 
-#: data/resources/window.ui:236 data/resources/shortcuts.ui:39
+#: data/resources/window.ui:105 data/resources/shortcuts.ui:32
 msgid "Quit"
 msgstr "Ukončiť"
 
-#: data/resources/preferences.ui:16
+#: data/resources/preferences.ui:12
 msgid "Appearance"
 msgstr "Vzhľad"
 
-#: data/resources/preferences.ui:20
+#: data/resources/preferences.ui:15
 msgid "Dark Mode"
 msgstr "Tmavý režim"
 
-#: data/resources/preferences.ui:36
+#: data/resources/preferences.ui:28
 msgid "Behavior"
 msgstr "Správanie"
 
-#: data/resources/preferences.ui:40
+#: data/resources/preferences.ui:31
 msgid "Autostart in background"
 msgstr "Automaticky spustiť na pozadí"
 
-#: data/resources/preset-dialog.ui:25
+#: data/resources/preset-dialog.ui:23
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: data/resources/preset-dialog.ui:66
+#: data/resources/preset-dialog.ui:55
 msgid "Preset Name"
 msgstr "Názov prednastavenia"
 
-#: data/resources/preset-row.ui:39
-msgid "Delete Preset"
-msgstr "Vymazať prednastavenie"
-
-#: data/resources/preset-row.ui:61
+#: data/resources/preset-row.ui:40
 msgid "Rename Preset"
 msgstr "Premenovať prednastavenie"
 
-#: data/resources/about.ui:11
-#, fuzzy
+#: data/resources/preset-row.ui:50
+msgid "Delete Preset"
+msgstr "Vymazať prednastavenie"
+
+#: data/resources/about.ui:8
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "Autorské práva 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
-#: data/resources/about.ui:15
-#, fuzzy
+#: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "MartinIIOT <https://github.com/MartinIIOT>"
+msgstr ""
+"MartinIIOT <https://github.com/MartinIIOT>, Jose Riha <jose1711@gmail.com>"
 
-#: data/resources/shortcuts.ui:13
+#: data/resources/shortcuts.ui:10
 msgid "General"
 msgstr "Všeobecné"
 
-#: data/resources/shortcuts.ui:18
+#: data/resources/shortcuts.ui:14
 msgid "Play/Pause sounds"
 msgstr "Spustiť/Pozastaviť zvuky"
 
-#: data/resources/shortcuts.ui:25
+#: data/resources/shortcuts.ui:20
 msgid "Add custom sound"
 msgstr "Pridať vlastný zvuk"
 
-#: data/resources/shortcuts.ui:32
+#: data/resources/shortcuts.ui:26
 msgid "Close window"
 msgstr "Zatvoriť okno"
 
@@ -169,7 +356,7 @@ msgstr "Vlny"
 
 #: blanket/window.py:36 blanket/about.py:22
 msgid "Stream"
-msgstr "Prúd"
+msgstr "Potok"
 
 #: blanket/window.py:40 blanket/about.py:24 blanket/about.py:35
 msgid "Birds"
@@ -220,32 +407,31 @@ msgid "White Noise"
 msgstr "Biely šum"
 
 #. Setup user custom sounds
-#: blanket/window.py:196
+#: blanket/window.py:175
 msgid "Custom"
 msgstr "Vlastné"
 
-#: blanket/window.py:218
+#: blanket/window.py:197
 msgid "Open audio"
 msgstr "Otvoriť zvuk"
 
-#: blanket/preferences.py:62
-#, fuzzy
+#: blanket/preferences.py:68
 msgid "Autostart Blanket in background."
 msgstr "Spustiť Blanket na pozadí po štarte."
 
-#: blanket/preferences.py:90 blanket/preferences.py:127
+#: blanket/preferences.py:96 blanket/preferences.py:131
 msgid "Request error"
 msgstr "Chyba požiadavky"
 
-#: blanket/preferences.py:93 blanket/preferences.py:130
+#: blanket/preferences.py:100 blanket/preferences.py:135
 msgid "The autostart request failed."
 msgstr "Požiadavka na automatické spustenie zlyhala."
 
-#: blanket/preferences.py:115
+#: blanket/preferences.py:119
 msgid "Authorization failed"
 msgstr "Autorizácia zlyhala"
 
-#: blanket/preferences.py:118
+#: blanket/preferences.py:123
 msgid ""
 "Make sure Blanket has permission to run in \n"
 "the background in Settings → Applications → \n"
@@ -255,24 +441,23 @@ msgstr ""
 "spustenie aplikácie na pozadí v Nastavenia → Aplikácie → \n"
 "Blanket a vyskúšajte znovu."
 
-#: blanket/presets.py:112
+#: blanket/presets.py:114
 msgid "Add Preset"
 msgstr "Pridať prednastavenie"
 
-#: blanket/presets.py:113
+#: blanket/presets.py:115
 msgid "Create"
 msgstr "Vytvoriť"
 
-#: blanket/presets.py:117
+#: blanket/presets.py:119
 msgid "Edit Preset"
 msgstr "Upraviť prednastavenie"
 
-#: blanket/presets.py:119
+#: blanket/presets.py:121
 msgid "Save"
 msgstr "Uložiť"
 
 #: blanket/about.py:12
-#, fuzzy
 msgid "Sounds icons"
 msgstr "Ikony zvukov"
 
@@ -281,14 +466,24 @@ msgid "App icon"
 msgstr "Ikona aplikácie"
 
 #. Set sound artists list
-#: blanket/about.py:60
+#: blanket/about.py:58
 msgid "Sounds by"
 msgstr "Zvuky od"
 
 #. Set sound editors list
-#: blanket/about.py:62
+#: blanket/about.py:60
 msgid "Sounds edited by"
 msgstr "Zvuky upravil"
+
+#: blanket/widgets.py:188
+msgid "Add Custom Sound…"
+msgstr "Pridať vlastný zvuk…"
+
+#~ msgid "Saved Presets"
+#~ msgstr "Uložené prednastavenia"
+
+#~ msgid "Add Preset..."
+#~ msgstr "Pridať prednastavenie..."
 
 #~ msgid "Unknown"
 #~ msgstr "Neznámy"
