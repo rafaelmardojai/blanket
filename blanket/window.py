@@ -188,6 +188,23 @@ class BlanketWindow(Adw.ApplicationWindow):
             self.custom_sounds.add(sound)
 
     def open_audio(self):
+        def on_response(_filechooser, _id):
+            gfile = self.filechooser.get_file()
+            if gfile:
+                filename = gfile.get_path()
+                name = os.path.basename(filename).split('.')[0]
+                uri = gfile.get_uri()
+
+                # Create a new SoundObject
+                sound = SoundObject(
+                    name, uri=uri, mainplayer=self.mainplayer, custom=True
+                )
+                # Save to settings
+                GLib.idle_add(Settings.get().add_custom_audio,
+                              sound.name, sound.uri)
+                # Add SoundObject to SoundsGroup
+                self.custom_sounds.add(sound)
+
         filters = {
             'Ogg': ['audio/ogg'],
             'FLAC': ['audio/flac'],
@@ -201,6 +218,7 @@ class BlanketWindow(Adw.ApplicationWindow):
             Gtk.FileChooserAction.OPEN,
             None,
             None)
+        self.filechooser.connect('response', on_response)
 
         for f, mts in filters.items():
             audio_filter = Gtk.FileFilter()
@@ -209,23 +227,7 @@ class BlanketWindow(Adw.ApplicationWindow):
                 audio_filter.add_mime_type(mt)
             self.filechooser.add_filter(audio_filter)
 
-        response = self.filechooser.run()
-
-        if response == Gtk.ResponseType.ACCEPT:
-            filename = self.filechooser.get_filename()
-            if filename:
-                name = os.path.basename(filename).split('.')[0]
-                uri = self.filechooser.get_uri()
-
-                # Create a new SoundObject
-                sound = SoundObject(
-                    name, uri=uri, mainplayer=self.mainplayer, custom=True
-                )
-                # Save to settings
-                GLib.idle_add(Settings.get().add_custom_audio,
-                              sound.name, sound.uri)
-                # Add SoundObject to SoundsGroup
-                self.custom_sounds.add(sound)
+        response = self.filechooser.show()
 
     def update_title(self, preset):
         if self.name_binding is not None:
