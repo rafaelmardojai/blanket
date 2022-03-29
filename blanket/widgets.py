@@ -69,6 +69,11 @@ class SoundRow(Gtk.ListBoxRow):
         # Load saved volume
         self.volume.set_value(self.sound.saved_volume)
 
+        icon = Gtk.Image.new_from_icon_name(self.sound.icon_name)
+        icon.add_css_class('sound-icon')
+        icon.set_pixel_size(64)
+        self.box.prepend(icon)
+
         if self.sound.custom:
             # Add a remove button
             remove = Gtk.Button(valign=Gtk.Align.CENTER)
@@ -77,15 +82,6 @@ class SoundRow(Gtk.ListBoxRow):
             # Add destructive-action CSS class
             remove.get_style_context().add_class('image-button')
             remove.set_icon_name('edit-delete-symbolic')
-            # Compact widget
-            self.box.props.margin_top = 0
-            self.box.props.margin_bottom = 0
-        else:
-            # Set icon for the sound
-            icon = Gtk.Image.new_from_icon_name(self.sound.icon_name)
-            icon.add_css_class('sound-icon')
-            icon.set_pixel_size(64)
-            self.box.prepend(icon)
 
     def remove(self, _button):
         # Remove audio from list

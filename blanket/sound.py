@@ -50,7 +50,7 @@ class SoundObject(GObject.Object):
         self.name = name
         self.uri = uri if uri else resource_tmpl.format(name)
         self.title = title if title else name
-        self.icon_name = icon_tmpl.format(name)
+        self.icon_name = icon_tmpl.format('sound-wave' if custom else name)
         self.mainplayer = mainplayer
         self.custom = custom
 
