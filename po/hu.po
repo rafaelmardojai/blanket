@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-17 17:21-0500\n"
+"POT-Creation-Date: 2022-03-29 11:33-0500\n"
 "PO-Revision-Date: 2021-12-22 23:27+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,14 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6
-#: data/resources/window.ui:19 blanket/main.py:31 blanket/window.py:260
-#: blanket/mpris.py:141
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
+#: blanket/window.py:242 blanket/mpris.py:141
 msgid "Blanket"
 msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:7
 #: blanket/mpris.py:136 blanket/mpris.py:139
 msgid "Listen to different sounds"
 msgstr "Hallgass különböző hangokat"
@@ -37,14 +36,116 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Concentrate;Focus;Noise;Productivity;Sleep;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different "
-"sounds. Or allows you to fall asleep in a noisy environment."
+"Improve focus and increase your productivity by listening to different sounds"
 msgstr ""
 "Különböző hangokkal javítja a figyelmet és fokozza a produktivitást. Illetve "
 "segíti az elalvást zajos környezetben."
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
+msgid "Also can help you to fall asleep in a noisy environment."
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
+#, fuzzy
+msgid "Features:"
+msgstr "Természet"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
+#, fuzzy
+msgid "Save presets"
+msgstr "Elmentett Beállítások"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
+#, fuzzy
+msgid "Add custom sounds"
+msgstr "Egyéni hang hozzáadása"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
+#, fuzzy
+msgid "Auto start in background"
+msgstr "Automatikus indítás a háttérben"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+msgid "MPRIS integration"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
+msgid "Included Sounds:"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
+#: blanket/about.py:24 blanket/about.py:35
+msgid "Birds"
+msgstr "Madarak"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:21 blanket/window.py:57
+#: blanket/about.py:20 blanket/about.py:35
+msgid "Boat"
+msgstr "Hajó"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:22 blanket/window.py:61
+#: blanket/about.py:21 blanket/about.py:35
+msgid "City"
+msgstr "Város"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:23 blanket/window.py:70
+#: blanket/about.py:27
+msgid "Coffee Shop"
+msgstr "Kávézó"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:24 blanket/window.py:74
+#: blanket/about.py:19
+msgid "Fireplace"
+msgstr "Tűzrakás"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/window.py:83
+#: blanket/about.py:28
+msgid "Pink Noise"
+msgstr "Rózsaszín Zaj"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:26 blanket/window.py:20
+#: blanket/about.py:17 blanket/about.py:35
+msgid "Rain"
+msgstr "Eső"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:27 blanket/window.py:44
+#: blanket/about.py:25
+msgid "Summer Night"
+msgstr "Nyári éj"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:28 blanket/window.py:24
+#: blanket/about.py:18 blanket/about.py:35
+msgid "Storm"
+msgstr "Vihar"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/window.py:36
+#: blanket/about.py:22
+msgid "Stream"
+msgstr "Patak"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/window.py:53
+#: blanket/about.py:30
+msgid "Train"
+msgstr "Vonat"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:31 blanket/window.py:32
+#: blanket/about.py:26 blanket/about.py:35
+msgid "Waves"
+msgstr "Hullámok"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:32 blanket/window.py:87
+#: blanket/about.py:23
+msgid "White Noise"
+msgstr "Fehér Zaj"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:33 blanket/window.py:28
+#: blanket/about.py:29 blanket/about.py:35
+msgid "Wind"
+msgstr "Szél"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:40
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
@@ -54,93 +155,95 @@ msgctxt "visible-name"
 msgid "'Default'"
 msgstr "'Alapértelmezett'"
 
-#: data/resources/window.ui:139 data/resources/window.ui:260
-msgid "Saved Presets"
-msgstr "Elmentett Beállítások"
+#: data/resources/window.ui:63
+#, fuzzy
+msgid "Presets"
+msgstr "Beállítás Hozzáadása"
 
-#: data/resources/window.ui:148 data/resources/window.ui:275
-msgid "Add Preset..."
-msgstr "Beállítás Hozzáadása..."
+#: data/resources/window.ui:71
+#, fuzzy
+msgid "Add Preset…"
+msgstr "Beállítás Hozzáadása"
 
-#: data/resources/window.ui:157
+#: data/resources/window.ui:77
 msgid "Reset Volume Levels"
 msgstr "Hangszintek Alapértékre Állítása"
 
-#: data/resources/window.ui:174
+#: data/resources/window.ui:83
 msgid "Keep Playing When Closed"
 msgstr "Lejátszás folytatása bezáráskor"
 
-#: data/resources/window.ui:191
+#: data/resources/window.ui:89
 msgid "Preferences"
 msgstr "Beállítások"
 
-#: data/resources/window.ui:200
+#: data/resources/window.ui:93
 msgid "Keyboard Shortcuts"
 msgstr "Billentyű Parancsok"
 
-#: data/resources/window.ui:209
+#: data/resources/window.ui:97
 msgid "About Blanket"
 msgstr "A Blanket Névjegye"
 
-#: data/resources/window.ui:236 data/resources/shortcuts.ui:39
+#: data/resources/window.ui:103 data/resources/shortcuts.ui:32
 msgid "Quit"
 msgstr "Kilépés"
 
-#: data/resources/preferences.ui:16
+#: data/resources/preferences.ui:12
 msgid "Appearance"
 msgstr "Megjelenés"
 
-#: data/resources/preferences.ui:20
+#: data/resources/preferences.ui:15
 msgid "Dark Mode"
 msgstr "Sötét Kinézet"
 
-#: data/resources/preferences.ui:36
+#: data/resources/preferences.ui:28
 msgid "Behavior"
 msgstr "Viselkedés"
 
-#: data/resources/preferences.ui:40
+#: data/resources/preferences.ui:31
 msgid "Autostart in background"
 msgstr "Automatikus indítás a háttérben"
 
-#: data/resources/preset-dialog.ui:25
+#: data/resources/preset-dialog.ui:23
 msgid "Cancel"
 msgstr "Mégsem"
 
-#: data/resources/preset-dialog.ui:66
+#: data/resources/preset-dialog.ui:55
 msgid "Preset Name"
 msgstr "Beállítás Elnvezése"
 
-#: data/resources/preset-row.ui:39
-msgid "Delete Preset"
-msgstr "Beállítás Törlése"
-
-#: data/resources/preset-row.ui:61
+#: data/resources/preset-row.ui:40
 msgid "Rename Preset"
 msgstr "Beállítás Átnevezése"
 
-#: data/resources/about.ui:11
+#: data/resources/preset-row.ui:50
+msgid "Delete Preset"
+msgstr "Beállítás Törlése"
+
+#: data/resources/about.ui:8
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Szerzői jog: 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
-#: data/resources/about.ui:15
+#: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr "osiixy"
 
-#: data/resources/shortcuts.ui:13
+#: data/resources/shortcuts.ui:10
 msgid "General"
 msgstr "Általános"
 
-#: data/resources/shortcuts.ui:18
+#: data/resources/shortcuts.ui:14
 msgid "Play/Pause sounds"
 msgstr "Hangok Indítása/Szüneteltetése"
 
-#: data/resources/shortcuts.ui:25
+#: data/resources/shortcuts.ui:20
 msgid "Add custom sound"
 msgstr "Egyéni hang hozzáadása"
 
-#: data/resources/shortcuts.ui:32
+#: data/resources/shortcuts.ui:26
 msgid "Close window"
 msgstr "Ablak bezárása"
 
@@ -148,100 +251,44 @@ msgstr "Ablak bezárása"
 msgid "Nature"
 msgstr "Természet"
 
-#: blanket/window.py:20 blanket/about.py:17 blanket/about.py:35
-msgid "Rain"
-msgstr "Eső"
-
-#: blanket/window.py:24 blanket/about.py:18 blanket/about.py:35
-msgid "Storm"
-msgstr "Vihar"
-
-#: blanket/window.py:28 blanket/about.py:29 blanket/about.py:35
-msgid "Wind"
-msgstr "Szél"
-
-#: blanket/window.py:32 blanket/about.py:26 blanket/about.py:35
-msgid "Waves"
-msgstr "Hullámok"
-
-#: blanket/window.py:36 blanket/about.py:22
-msgid "Stream"
-msgstr "Patak"
-
-#: blanket/window.py:40 blanket/about.py:24 blanket/about.py:35
-msgid "Birds"
-msgstr "Madarak"
-
-#: blanket/window.py:44 blanket/about.py:25
-msgid "Summer Night"
-msgstr "Nyári éj"
-
 #: blanket/window.py:49
 msgid "Travel"
 msgstr "Utazás"
-
-#: blanket/window.py:53 blanket/about.py:30
-msgid "Train"
-msgstr "Vonat"
-
-#: blanket/window.py:57 blanket/about.py:20 blanket/about.py:35
-msgid "Boat"
-msgstr "Hajó"
-
-#: blanket/window.py:61 blanket/about.py:21 blanket/about.py:35
-msgid "City"
-msgstr "Város"
 
 #: blanket/window.py:66
 msgid "Interiors"
 msgstr "Beltér"
 
-#: blanket/window.py:70 blanket/about.py:27
-msgid "Coffee Shop"
-msgstr "Kávézó"
-
-#: blanket/window.py:74 blanket/about.py:19
-msgid "Fireplace"
-msgstr "Tűzrakás"
-
 #: blanket/window.py:79
 msgid "Noise"
 msgstr "Zajok"
 
-#: blanket/window.py:83 blanket/about.py:28
-msgid "Pink Noise"
-msgstr "Rózsaszín Zaj"
-
-#: blanket/window.py:87 blanket/about.py:23
-msgid "White Noise"
-msgstr "Fehér Zaj"
-
 #. Setup user custom sounds
-#: blanket/window.py:196
+#: blanket/window.py:177
 msgid "Custom"
 msgstr "Egyéni"
 
-#: blanket/window.py:218
+#: blanket/window.py:216
 msgid "Open audio"
 msgstr "Hang megnyitása"
 
-#: blanket/preferences.py:62
+#: blanket/preferences.py:68
 msgid "Autostart Blanket in background."
 msgstr "Blanket automatikus indítása a háttérben."
 
-#: blanket/preferences.py:90 blanket/preferences.py:127
+#: blanket/preferences.py:96 blanket/preferences.py:131
 msgid "Request error"
 msgstr "Kérelem hiba"
 
-#: blanket/preferences.py:93 blanket/preferences.py:130
+#: blanket/preferences.py:100 blanket/preferences.py:135
 msgid "The autostart request failed."
 msgstr "Az automatikus indítási kérelem meghiúsult."
 
-#: blanket/preferences.py:115
+#: blanket/preferences.py:119
 msgid "Authorization failed"
 msgstr "Jogosultság kérelem meghiúsult"
 
-#: blanket/preferences.py:118
+#: blanket/preferences.py:123
 msgid ""
 "Make sure Blanket has permission to run in \n"
 "the background in Settings → Applications → \n"
@@ -251,19 +298,19 @@ msgstr ""
 "a háttérben futni a Beállítások → Alkalmazások →\n"
 "Blanket rész alatt, és próbáld újra!"
 
-#: blanket/presets.py:112
+#: blanket/presets.py:114
 msgid "Add Preset"
 msgstr "Beállítás Hozzáadása"
 
-#: blanket/presets.py:113
+#: blanket/presets.py:115
 msgid "Create"
 msgstr "Létrehozás"
 
-#: blanket/presets.py:117
+#: blanket/presets.py:119
 msgid "Edit Preset"
 msgstr "Beállítás Szerkesztése"
 
-#: blanket/presets.py:119
+#: blanket/presets.py:121
 msgid "Save"
 msgstr "Mentés"
 
@@ -276,11 +323,23 @@ msgid "App icon"
 msgstr "Alkalmazás ikon"
 
 #. Set sound artists list
-#: blanket/about.py:60
+#: blanket/about.py:58
 msgid "Sounds by"
 msgstr "Hangok alkotója:"
 
 #. Set sound editors list
-#: blanket/about.py:62
+#: blanket/about.py:60
 msgid "Sounds edited by"
 msgstr "A hangokat szerkesztették:"
+
+#: blanket/widgets.py:184
+#, fuzzy
+msgid "Add Custom Sound…"
+msgstr "Egyéni hang hozzáadása"
+
+#, fuzzy
+#~ msgid "Pink noise"
+#~ msgstr "Rózsaszín Zaj"
+
+#~ msgid "Add Preset..."
+#~ msgstr "Beállítás Hozzáadása..."

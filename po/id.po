@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-17 17:21-0500\n"
+"POT-Creation-Date: 2022-03-29 11:33-0500\n"
 "PO-Revision-Date: 2021-09-18 11:48+0700\n"
 "Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: \n"
@@ -19,14 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6
-#: data/resources/window.ui:19 blanket/main.py:31 blanket/window.py:260
-#: blanket/mpris.py:141
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
+#: blanket/window.py:242 blanket/mpris.py:141
 msgid "Blanket"
 msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:10
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:7
 #: blanket/mpris.py:136 blanket/mpris.py:139
 msgid "Listen to different sounds"
 msgstr "Dengarkan suara yang berbeda"
@@ -37,14 +36,116 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Konsentrasi;Fokus;Kebisingan;Produktivitas;Tidur;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different "
-"sounds. Or allows you to fall asleep in a noisy environment."
+"Improve focus and increase your productivity by listening to different sounds"
 msgstr ""
 "Tingkatkan fokus dan produktivitas Anda dengan mendengarkan suara yang "
 "berbeda. Atau memungkinkan Anda untuk tertidur di lingkungan yang bising."
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:17
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
+msgid "Also can help you to fall asleep in a noisy environment."
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
+#, fuzzy
+msgid "Features:"
+msgstr "Alam"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
+#, fuzzy
+msgid "Save presets"
+msgstr "Preset Tersimpan"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
+#, fuzzy
+msgid "Add custom sounds"
+msgstr "Tambah suara ubahan"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
+#, fuzzy
+msgid "Auto start in background"
+msgstr "Mulai otomatis di latar belakang"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+msgid "MPRIS integration"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
+msgid "Included Sounds:"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
+#: blanket/about.py:24 blanket/about.py:35
+msgid "Birds"
+msgstr "Burung"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:21 blanket/window.py:57
+#: blanket/about.py:20 blanket/about.py:35
+msgid "Boat"
+msgstr "Perahu"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:22 blanket/window.py:61
+#: blanket/about.py:21 blanket/about.py:35
+msgid "City"
+msgstr "Kota"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:23 blanket/window.py:70
+#: blanket/about.py:27
+msgid "Coffee Shop"
+msgstr "Kedai Kopi"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:24 blanket/window.py:74
+#: blanket/about.py:19
+msgid "Fireplace"
+msgstr "Perapian"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/window.py:83
+#: blanket/about.py:28
+msgid "Pink Noise"
+msgstr "Kebisingan Merah Muda"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:26 blanket/window.py:20
+#: blanket/about.py:17 blanket/about.py:35
+msgid "Rain"
+msgstr "Hujan"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:27 blanket/window.py:44
+#: blanket/about.py:25
+msgid "Summer Night"
+msgstr "Malam Musim Panas"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:28 blanket/window.py:24
+#: blanket/about.py:18 blanket/about.py:35
+msgid "Storm"
+msgstr "Badai"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/window.py:36
+#: blanket/about.py:22
+msgid "Stream"
+msgstr "Aliran"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/window.py:53
+#: blanket/about.py:30
+msgid "Train"
+msgstr "Kereta Api"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:31 blanket/window.py:32
+#: blanket/about.py:26 blanket/about.py:35
+msgid "Waves"
+msgstr "Ombak"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:32 blanket/window.py:87
+#: blanket/about.py:23
+msgid "White Noise"
+msgstr "Kebisingan Putih"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:33 blanket/window.py:28
+#: blanket/about.py:29 blanket/about.py:35
+msgid "Wind"
+msgstr "Angin"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:40
 msgid "Rafael Mardojai CM"
 msgstr "Rafael Mardojai CM"
 
@@ -54,93 +155,95 @@ msgctxt "visible-name"
 msgid "'Default'"
 msgstr "'Bawaan'"
 
-#: data/resources/window.ui:139 data/resources/window.ui:260
-msgid "Saved Presets"
-msgstr "Preset Tersimpan"
+#: data/resources/window.ui:63
+#, fuzzy
+msgid "Presets"
+msgstr "Tambah Preset"
 
-#: data/resources/window.ui:148 data/resources/window.ui:275
-msgid "Add Preset..."
-msgstr "Tambah Preset..."
+#: data/resources/window.ui:71
+#, fuzzy
+msgid "Add Preset…"
+msgstr "Tambah Preset"
 
-#: data/resources/window.ui:157
+#: data/resources/window.ui:77
 msgid "Reset Volume Levels"
 msgstr "Atur Ulang Tingkat Volume"
 
-#: data/resources/window.ui:174
+#: data/resources/window.ui:83
 msgid "Keep Playing When Closed"
 msgstr "Terus Putar Ketika Ditutup"
 
-#: data/resources/window.ui:191
+#: data/resources/window.ui:89
 msgid "Preferences"
 msgstr "Preferensi"
 
-#: data/resources/window.ui:200
+#: data/resources/window.ui:93
 msgid "Keyboard Shortcuts"
 msgstr "Pintasan Papan Tik"
 
-#: data/resources/window.ui:209
+#: data/resources/window.ui:97
 msgid "About Blanket"
 msgstr "Tentang Blanket"
 
-#: data/resources/window.ui:236 data/resources/shortcuts.ui:39
+#: data/resources/window.ui:103 data/resources/shortcuts.ui:32
 msgid "Quit"
 msgstr "Keluar"
 
-#: data/resources/preferences.ui:16
+#: data/resources/preferences.ui:12
 msgid "Appearance"
 msgstr "Tampilan"
 
-#: data/resources/preferences.ui:20
+#: data/resources/preferences.ui:15
 msgid "Dark Mode"
 msgstr "Mode Gelap"
 
-#: data/resources/preferences.ui:36
+#: data/resources/preferences.ui:28
 msgid "Behavior"
 msgstr "Perilaku"
 
-#: data/resources/preferences.ui:40
+#: data/resources/preferences.ui:31
 msgid "Autostart in background"
 msgstr "Mulai otomatis di latar belakang"
 
-#: data/resources/preset-dialog.ui:25
+#: data/resources/preset-dialog.ui:23
 msgid "Cancel"
 msgstr "Batal"
 
-#: data/resources/preset-dialog.ui:66
+#: data/resources/preset-dialog.ui:55
 msgid "Preset Name"
 msgstr "Nama Preset"
 
-#: data/resources/preset-row.ui:39
-msgid "Delete Preset"
-msgstr "Hapus Preset"
-
-#: data/resources/preset-row.ui:61
+#: data/resources/preset-row.ui:40
 msgid "Rename Preset"
 msgstr "Ganti Nama Preset"
 
-#: data/resources/about.ui:11
+#: data/resources/preset-row.ui:50
+msgid "Delete Preset"
+msgstr "Hapus Preset"
+
+#: data/resources/about.ui:8
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Hak Cipta 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
-#: data/resources/about.ui:15
+#: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr "Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021."
 
-#: data/resources/shortcuts.ui:13
+#: data/resources/shortcuts.ui:10
 msgid "General"
 msgstr "Umum"
 
-#: data/resources/shortcuts.ui:18
+#: data/resources/shortcuts.ui:14
 msgid "Play/Pause sounds"
 msgstr "Putar/Jedakan suara"
 
-#: data/resources/shortcuts.ui:25
+#: data/resources/shortcuts.ui:20
 msgid "Add custom sound"
 msgstr "Tambah suara ubahan"
 
-#: data/resources/shortcuts.ui:32
+#: data/resources/shortcuts.ui:26
 msgid "Close window"
 msgstr "Tutup jendela"
 
@@ -148,100 +251,44 @@ msgstr "Tutup jendela"
 msgid "Nature"
 msgstr "Alam"
 
-#: blanket/window.py:20 blanket/about.py:17 blanket/about.py:35
-msgid "Rain"
-msgstr "Hujan"
-
-#: blanket/window.py:24 blanket/about.py:18 blanket/about.py:35
-msgid "Storm"
-msgstr "Badai"
-
-#: blanket/window.py:28 blanket/about.py:29 blanket/about.py:35
-msgid "Wind"
-msgstr "Angin"
-
-#: blanket/window.py:32 blanket/about.py:26 blanket/about.py:35
-msgid "Waves"
-msgstr "Ombak"
-
-#: blanket/window.py:36 blanket/about.py:22
-msgid "Stream"
-msgstr "Aliran"
-
-#: blanket/window.py:40 blanket/about.py:24 blanket/about.py:35
-msgid "Birds"
-msgstr "Burung"
-
-#: blanket/window.py:44 blanket/about.py:25
-msgid "Summer Night"
-msgstr "Malam Musim Panas"
-
 #: blanket/window.py:49
 msgid "Travel"
 msgstr "Perjalanan"
-
-#: blanket/window.py:53 blanket/about.py:30
-msgid "Train"
-msgstr "Kereta Api"
-
-#: blanket/window.py:57 blanket/about.py:20 blanket/about.py:35
-msgid "Boat"
-msgstr "Perahu"
-
-#: blanket/window.py:61 blanket/about.py:21 blanket/about.py:35
-msgid "City"
-msgstr "Kota"
 
 #: blanket/window.py:66
 msgid "Interiors"
 msgstr "Interior"
 
-#: blanket/window.py:70 blanket/about.py:27
-msgid "Coffee Shop"
-msgstr "Kedai Kopi"
-
-#: blanket/window.py:74 blanket/about.py:19
-msgid "Fireplace"
-msgstr "Perapian"
-
 #: blanket/window.py:79
 msgid "Noise"
 msgstr "Kebisingan"
 
-#: blanket/window.py:83 blanket/about.py:28
-msgid "Pink Noise"
-msgstr "Kebisingan Merah Muda"
-
-#: blanket/window.py:87 blanket/about.py:23
-msgid "White Noise"
-msgstr "Kebisingan Putih"
-
 #. Setup user custom sounds
-#: blanket/window.py:196
+#: blanket/window.py:177
 msgid "Custom"
 msgstr "Ubahan"
 
-#: blanket/window.py:218
+#: blanket/window.py:216
 msgid "Open audio"
 msgstr "Buka suara"
 
-#: blanket/preferences.py:62
+#: blanket/preferences.py:68
 msgid "Autostart Blanket in background."
 msgstr "Mulai Otomatis Blanket di Latar Belakang."
 
-#: blanket/preferences.py:90 blanket/preferences.py:127
+#: blanket/preferences.py:96 blanket/preferences.py:131
 msgid "Request error"
 msgstr "Galat permintaan"
 
-#: blanket/preferences.py:93 blanket/preferences.py:130
+#: blanket/preferences.py:100 blanket/preferences.py:135
 msgid "The autostart request failed."
 msgstr "Permintaan mulai otomatis gagal."
 
-#: blanket/preferences.py:115
+#: blanket/preferences.py:119
 msgid "Authorization failed"
 msgstr "Autorisasi gagal"
 
-#: blanket/preferences.py:118
+#: blanket/preferences.py:123
 msgid ""
 "Make sure Blanket has permission to run in \n"
 "the background in Settings → Applications → \n"
@@ -251,19 +298,19 @@ msgstr ""
 "latar belakang pada Pengaturan → Aplikasi → \n"
 "Blanket dan coba lagi."
 
-#: blanket/presets.py:112
+#: blanket/presets.py:114
 msgid "Add Preset"
 msgstr "Tambah Preset"
 
-#: blanket/presets.py:113
+#: blanket/presets.py:115
 msgid "Create"
 msgstr "Buat"
 
-#: blanket/presets.py:117
+#: blanket/presets.py:119
 msgid "Edit Preset"
 msgstr "Sunting Preset"
 
-#: blanket/presets.py:119
+#: blanket/presets.py:121
 msgid "Save"
 msgstr "Simpan"
 
@@ -276,11 +323,23 @@ msgid "App icon"
 msgstr "Ikon aplikasi"
 
 #. Set sound artists list
-#: blanket/about.py:60
+#: blanket/about.py:58
 msgid "Sounds by"
 msgstr "Suara oleh"
 
 #. Set sound editors list
-#: blanket/about.py:62
+#: blanket/about.py:60
 msgid "Sounds edited by"
 msgstr "Suara disunting oleh"
+
+#: blanket/widgets.py:184
+#, fuzzy
+msgid "Add Custom Sound…"
+msgstr "Tambah suara ubahan"
+
+#, fuzzy
+#~ msgid "Pink noise"
+#~ msgstr "Kebisingan Merah Muda"
+
+#~ msgid "Add Preset..."
+#~ msgstr "Tambah Preset..."
