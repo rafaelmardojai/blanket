@@ -6,9 +6,32 @@
   <name>Blanket</name>
   <summary>Listen to different sounds</summary>
   <description>
-    <p>
-      Improve focus and increase your productivity by listening to different sounds. Or allows you to fall asleep in a noisy environment.
-    </p>
+    <p>Improve focus and increase your productivity by listening to different sounds</p>
+    <p>Also can help you to fall asleep in a noisy environment.</p>
+    <p>Features:</p>
+    <ul>
+      <li>Save presets</li>
+      <li>Add custom sounds</li>
+      <li>Auto start in background</li>
+      <li>MPRIS integration</li>
+    </ul>
+    <p>Included Sounds:</p>
+    <ul>
+      <li>Birds</li>
+      <li>Boat</li>
+      <li>City</li>
+      <li>Coffee Shop</li>
+      <li>Fireplace</li>
+      <li>Pink Noise</li>
+      <li>Rain</li>
+      <li>Summer Night</li>
+      <li>Storm</li>
+      <li>Stream</li>
+      <li>Train</li>
+      <li>Waves</li>
+      <li>White Noise</li>
+      <li>Wind</li>
+    </ul>
   </description>
   <url type="homepage">https://github.com/rafaelmardojai/blanket</url>
   <url type="bugtracker">https://github.com/rafaelmardojai/blanket/issues</url>
