@@ -1,7 +1,11 @@
 # Copyright 2020-2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import GObject, Gst, GstPlayer
+from gi.repository import GObject, Gst
+try:
+    from gi.repository.GstPlay import Play as GStreamerPlay
+except ImportError:
+    from gi.repository.GstPlayer import Player as GStreamerPlay
 
 from blanket.settings import Settings
 
@@ -46,7 +50,7 @@ class SoundObject(GObject.Object):
         self.name = name
         self.uri = uri if uri else resource_tmpl.format(name)
         self.title = title if title else name
-        self.icon_name = icon_tmpl.format(name)
+        self.icon_name = icon_tmpl.format('sound-wave' if custom else name)
         self.mainplayer = mainplayer
         self.custom = custom
 
@@ -71,7 +75,7 @@ class SoundObject(GObject.Object):
             Settings.get().remove_custom_audio(self.name)
 
 
-class SoundPlayer(GstPlayer.Player):
+class SoundPlayer(GStreamerPlay):
     """
     GstPlayer.Player with modifications
     """
@@ -106,7 +110,7 @@ class SoundPlayer(GstPlayer.Player):
             self._on_playing_changed)
 
         # Connect volume-changed signal
-        self.connect('volume-changed', self._on_volume_changed)
+        self.connect('notify::volume', self._on_volume_changed)
 
     def set_virtual_volume(self, volume):
         # Get last saved sound volume
@@ -130,7 +134,7 @@ class SoundPlayer(GstPlayer.Player):
             else:
                 self.pause()
 
-    def _on_volume_changed(self, _player):
+    def _on_volume_changed(self, _player, _volume):
         # Fix external changes to player volume
         volume = self.saved_volume * self.sound.mainplayer.volume
         if volume > 0 and self.get_volume() == 0.0:

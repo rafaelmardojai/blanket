@@ -6,11 +6,11 @@
 | [Birds](https://freesound.org/people/kvgarlic/sounds/156826/) | kvgarlic | Porrumentzio | CC0
 | [Boat](https://freesound.org/people/Falcet/sounds/439365/) | Falcet | Porrumentzio | CC0
 | [City](https://freesound.org/people/gezortenplotz/sounds/44796/) | gezortenplotz | Porrumentzio | CC BY
-| [Coffee Shop](https://soundbible.com/1664-Restaurant-Ambiance.html) | stephan | - | CC0
-| [Fireplace](https://soundbible.com/1543-Fireplace.html) | ezwa | - | CC0
+| [Coffee Shop](https://soundbible.com/1664-Restaurant-Ambiance.html) | stephan | - | Public Domain
+| [Fireplace](https://soundbible.com/1543-Fireplace.html) | ezwa | - | Public Domain
 | [Pink noise](https://es.wikipedia.org/wiki/Archivo:Pink_noise.ogg) | Omegatron | - | CC BY-SA
 | [Rain](https://freesound.org/people/alex36917/sounds/524605/) | alex36917 | Porrumentzio | CC BY
-| [Summer night](https://soundbible.com/2083-Crickets-Chirping-At-Night.html) | Lisa Redfern | - | CC0 | 
+| [Summer night](https://soundbible.com/2083-Crickets-Chirping-At-Night.html) | Lisa Redfern | - | Public Domain | 
 | [Storm](https://freesound.org/people/digifishmusic/sounds/41739/) | Digifish music | Porrumentzio | CC BY
 | [Stream](https://freesound.org/people/gluckose/sounds/333987/) | gluckose | - | CC0
 | [Train](https://trains.ambient-mixer.com/rainy-train) | vahid | - | CC Sampling +
