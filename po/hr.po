@@ -1,23 +1,23 @@
 # Croatian translation for blanket.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# Milo Ivir <mail@milotype.de>, 2021.
+# Milo Ivir <mail@milotype.de>, 2021., 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-09-18 19:57+0200\n"
+"PO-Revision-Date: 2022-04-04 22:43+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
@@ -37,44 +37,37 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Koncentracija;fokusiranje;buka;produktivnost;spavanje;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different sounds"
-msgstr ""
-"Fokusiraj se i povećaj produktivnost slušajući razne zvukove. Ili zaspi u "
-"bučnom okruženju."
+msgstr "Fokusiraj se i povećaj produktivnost slušajući razne zvukove"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Također može pomoći da zaspiš u bučnom okruženju."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Priroda"
+msgstr "Značajke:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "Spremljene postave"
+msgstr "Spremi predodređene postavke"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "Dodaj prilagođen zvuk"
+msgstr "Dodaj prilagođene zvukove"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "Pokreni automatski u pozadini"
+msgstr "Automatski pokreni u pozadini"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS integracija"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Uključeni zvukovi:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -157,14 +150,12 @@ msgid "'Default'"
 msgstr "'Standardno'"
 
 #: data/resources/window.ui:63
-#, fuzzy
 msgid "Presets"
-msgstr "Dodaj postavu"
+msgstr "Predodređene postavke"
 
 #: data/resources/window.ui:71
-#, fuzzy
 msgid "Add Preset…"
-msgstr "Dodaj postavu"
+msgstr "Dodaj predodređenu postavku …"
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
@@ -212,15 +203,15 @@ msgstr "Odustani"
 
 #: data/resources/preset-dialog.ui:55
 msgid "Preset Name"
-msgstr "Ime postave"
+msgstr "Ime predodređene postavke"
 
 #: data/resources/preset-row.ui:40
 msgid "Rename Preset"
-msgstr "Preimenuj postavu"
+msgstr "Preimenuj predodređenu postavku"
 
 #: data/resources/preset-row.ui:50
 msgid "Delete Preset"
-msgstr "Izbriši postavu"
+msgstr "Izbriši predodređenu postavku"
 
 #: data/resources/about.ui:8
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
@@ -230,7 +221,7 @@ msgstr "Autorska prava 2020. – 2021. Rafael Mardojai CM"
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "Milo Ivir <mail@milotype.de>, 2021."
+msgstr "Milo Ivir <mail@milotype.de>"
 
 #: data/resources/shortcuts.ui:10
 msgid "General"
@@ -301,7 +292,7 @@ msgstr ""
 
 #: blanket/presets.py:114
 msgid "Add Preset"
-msgstr "Dodaj postavu"
+msgstr "Dodaj predodređenu postavku"
 
 #: blanket/presets.py:115
 msgid "Create"
@@ -309,7 +300,7 @@ msgstr "Stvori"
 
 #: blanket/presets.py:119
 msgid "Edit Preset"
-msgstr "Uredi postavu"
+msgstr "Uredi predodređenu postavku"
 
 #: blanket/presets.py:121
 msgid "Save"
@@ -334,13 +325,5 @@ msgid "Sounds edited by"
 msgstr "Urednici zvukova"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "Dodaj prilagođen zvuk"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "Ružičasta buka"
-
-#~ msgid "Add Preset..."
-#~ msgstr "Dodaj postavu …"
+msgstr "Dodaj prilagođeni zvuk …"
