@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-12-02 08:22+0300\n"
+"PO-Revision-Date: 2022-04-03 14:42+0300\n"
 "Last-Translator: Ivan Savochenko <iSavoch@Gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -36,44 +36,38 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Концентрация;Фокусирование;Шум;Производительность;Сон;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different sounds"
 msgstr ""
-"Концентрируйте внимание и поднимайте производительность настроив звуковое "
-"окружение. Так же может помочь быстрее заснуть в шумном месте."
+"Концентрируйте внимание и поднимайте производительность слушая разные звуки."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Фон так же может помочь быстрее заснуть в шумном месте."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Природа"
+msgstr "Особенности:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "Мои профили"
+msgstr "Сохранить профили"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
 msgstr "Добавить свои звуки"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
 msgstr "Автозапуск в фоновом режиме"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "Внедрение в MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Добавлены звуки:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -156,14 +150,12 @@ msgid "'Default'"
 msgstr "'По умолчанию'"
 
 #: data/resources/window.ui:63
-#, fuzzy
 msgid "Presets"
-msgstr "Добавить профиль"
+msgstr "Профили"
 
 #: data/resources/window.ui:71
-#, fuzzy
 msgid "Add Preset…"
-msgstr "Добавить профиль"
+msgstr "Добавить профиль..."
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
@@ -333,13 +325,5 @@ msgid "Sounds edited by"
 msgstr "Звуки отредактированы:"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "Добавить свои звуки"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "Розовый шум"
-
-#~ msgid "Add Preset..."
-#~ msgstr "Добавить профиль..."
+msgstr "Добавить свои звуки..."
