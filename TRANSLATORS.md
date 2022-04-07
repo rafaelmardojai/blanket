@@ -1,6 +1,7 @@
 # Translators
 
-This files list all the translations maintainers.  It's used to call translators on new version releases.
+You can contribute translations joining us in [Transifex](https://www.transifex.com/rafaelmardojai/blanket/) or sending pull requests to GitHub.
+
 
 | Code  | Language             | Maintainers (GitHub usernames) |
 |:-----:|:--------------------:|:------------------------------ |

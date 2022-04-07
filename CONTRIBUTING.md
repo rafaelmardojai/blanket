@@ -1,7 +1,4 @@
 
-
-
-
 ## Sounds
 
 ### Adding new sounds
@@ -47,7 +44,7 @@ The soundclips are all under [`data/resources/sounds`](https://github.com/rafael
 If your sounds passed the criterion, you can add the sounds in your cloned local repo, at the specified directory, and the Pull Request to the main repository. _Open an issue if you don't know how to do this._
 
 ### Icons
-Sounds must have a colorfull icon folowing [GNOME HIG](https://developer.gnome.org/hig/stable/icon-design.html.en). 
+Sounds must have a hair-style symbolic icon. 
 
 If you don't have an icon and your sound has been aproved, you can wait for someone in the communty to contribute one. But no sound will be included in the app without a proper icon.
 _______
