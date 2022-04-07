@@ -1,23 +1,25 @@
-# Croatian translation for blanket.
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# Milo Ivir <mail@milotype.de>, 2021., 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2022-04-04 22:43+0200\n"
-"Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: \n"
-"Language: hr\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022\n"
+"Language-Team: Croatian (https://www.transifex.com/rafaelmardojai/teams/135055/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
@@ -31,14 +33,17 @@ msgstr "Pokrivač"
 msgid "Listen to different sounds"
 msgstr "Slušaj razne zvukove"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Koncentracija;fokusiranje;buka;produktivnost;spavanje;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
+"Improve focus and increase your productivity by listening to different "
+"sounds"
 msgstr "Fokusiraj se i povećaj produktivnost slušajući razne zvukove"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
@@ -217,7 +222,8 @@ msgstr "Izbriši predodređenu postavku"
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Autorska prava 2020. – 2021. Rafael Mardojai CM"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
