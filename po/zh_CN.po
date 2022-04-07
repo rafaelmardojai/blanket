@@ -37,21 +37,21 @@ msgstr "专注;集中注意力;白噪音;效率;助眠;"
 #, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different sounds"
-msgstr "通过白噪音使您集中注意力并提高您的生产力或帮助您入眠。"
+msgstr "通过白噪音使您集中注意力并提高生产力，"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "也能使您在嘈杂的环境中安然入睡。"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 #, fuzzy
 msgid "Features:"
-msgstr "自然"
+msgstr "功能特性："
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 #, fuzzy
 msgid "Save presets"
-msgstr "保存的预设"
+msgstr "保存预设"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
 #, fuzzy
@@ -61,15 +61,15 @@ msgstr "添加自定义音频"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 #, fuzzy
 msgid "Auto start in background"
-msgstr "系统启动后自动在后台运行"
+msgstr "系统启动后自动运行"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS集成"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "包含以下音频："
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -154,7 +154,7 @@ msgstr "'默认'"
 #: data/resources/window.ui:63
 #, fuzzy
 msgid "Presets"
-msgstr "新增预设"
+msgstr "预设"
 
 #: data/resources/window.ui:71
 #, fuzzy
@@ -192,7 +192,7 @@ msgstr "外观"
 
 #: data/resources/preferences.ui:15
 msgid "Dark Mode"
-msgstr "黑暗模式"
+msgstr "夜间模式"
 
 #: data/resources/preferences.ui:28
 msgid "Behavior"
