@@ -34,7 +34,6 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "专注;集中注意力;白噪音;效率;助眠;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different sounds"
 msgstr "通过白噪音使您集中注意力并提高生产力，"
@@ -44,22 +43,18 @@ msgid "Also can help you to fall asleep in a noisy environment."
 msgstr "也能使您在嘈杂的环境中安然入睡。"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
 msgstr "功能特性："
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
 msgstr "保存预设"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
 msgstr "添加自定义音频"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
 msgstr "系统启动后自动运行"
 
@@ -152,12 +147,10 @@ msgid "'Default'"
 msgstr "'默认'"
 
 #: data/resources/window.ui:63
-#, fuzzy
 msgid "Presets"
 msgstr "预设"
 
 #: data/resources/window.ui:71
-#, fuzzy
 msgid "Add Preset…"
 msgstr "新增预设"
 
@@ -166,7 +159,6 @@ msgid "Reset Volume Levels"
 msgstr "重置音量"
 
 #: data/resources/window.ui:83
-#, fuzzy
 msgid "Keep Playing When Closed"
 msgstr "关闭窗口后继续播放"
 
@@ -270,7 +262,6 @@ msgid "Open audio"
 msgstr "打开音频"
 
 #: blanket/preferences.py:68
-#, fuzzy
 msgid "Autostart Blanket in background."
 msgstr "系统启动后自动在后台运行"
 
@@ -331,7 +322,6 @@ msgid "Sounds edited by"
 msgstr "音频剪辑者"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
 msgstr "添加自定义音频"
 
