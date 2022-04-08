@@ -1,23 +1,26 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# Ihor Hordiichuk <igor_ck@outlook.com>, 2020.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# Ihor Hordiichuk, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-09-18 02:48+0300\n"
-"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: \n"
-"Language: uk\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: Ihor Hordiichuk, 2022\n"
+"Language-Team: Ukrainian (https://www.transifex.com/rafaelmardojai/teams/135055/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
@@ -31,52 +34,47 @@ msgstr "Blanket"
 msgid "Listen to different sounds"
 msgstr "Слухайте різні звуки"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr ""
-"Зосередження;Фокус;Звук;Продуктивність;Сон;Concentrate;Focus;Noise;"
-"Productivity;Sleep;"
+"Зосередження;Фокус;Звук;Продуктивність;Сон;Concentrate;Focus;Noise;Productivity;Sleep;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
-msgstr ""
-"Допомагає зосередитися та підвищити продуктивність, слухаючи різні звуки. "
-"Або допомагає заснути в гамірному оточенні."
+"Improve focus and increase your productivity by listening to different "
+"sounds"
+msgstr "Зосередьтеся та підвищіть продуктивність слухаючи різні звуки"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Також може допомогти вам заснути в гамірному середовищі."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Природа"
+msgstr "Можливості:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "Збережені поєднання"
+msgstr "Зберегти поєднання"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "Додати власний звук"
+msgstr "Додати власні звуки"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "Автозапуск у фоні"
+msgstr "Автозапуск у фоновому режимі"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "Інтеграція MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Включені звуки:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -159,14 +157,12 @@ msgid "'Default'"
 msgstr "'Типово'"
 
 #: data/resources/window.ui:63
-#, fuzzy
 msgid "Presets"
-msgstr "Додати поєднання"
+msgstr "Поєднання"
 
 #: data/resources/window.ui:71
-#, fuzzy
 msgid "Add Preset…"
-msgstr "Додати поєднання"
+msgstr "Додати поєднання…"
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
@@ -228,7 +224,8 @@ msgstr "Видалити поєднання"
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Усі права застережено 2020-2021 Rafael Mardojai CM"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
@@ -336,16 +333,5 @@ msgid "Sounds edited by"
 msgstr "Звуки змінено"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "Додати власний звук"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "Рожевий шум"
-
-#~ msgid "Add Preset..."
-#~ msgstr "Додати поєднання..."
-
-#~ msgid "Unknown"
-#~ msgstr "Невідоме"
+msgstr "Додати власні звуки…"
