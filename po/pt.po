@@ -1,23 +1,26 @@
-# Portuguese translations for blanket package.
-# Copyright (C) 2021 THE blanket'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# Juliano de Souza Camargo <julianosc@pm.me>, 2021.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2021.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-09-18 09:50+0100\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
-"Language-Team: Portuguese (https://l10n.gnome.org/teams/pt/)\n"
-"Language: pt\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2022\n"
+"Language-Team: Portuguese (https://www.transifex.com/rafaelmardojai/teams/135055/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: pt\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
@@ -31,50 +34,47 @@ msgstr "Blanket"
 msgid "Listen to different sounds"
 msgstr "Ouça diferentes sons"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Concentrar;Foco;Ruído;Produtividade;Dormir;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
+"Improve focus and increase your productivity by listening to different "
+"sounds"
 msgstr ""
-"Melhore o foco e aumente a sua produtividade ao ouvir a diferentes sons. Ou "
-"permita-se adormecer num ambiente ruidoso."
+"Melhorar o foco e aumentar a sua produtividade ouvindo diferentes sons"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Também o pode ajudar a adormecer num ambiente ruidoso."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Natureza"
+msgstr "Funcionalidades:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "Predefinições guardadas"
+msgstr "Guardar predefinições"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "Adicionar som personalizado"
+msgstr "Adicionar sons personalizados"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
 msgstr "Iniciar automaticamente em segundo plano"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "Integração a MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Sons incluídos:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -157,14 +157,12 @@ msgid "'Default'"
 msgstr "'Padrão'"
 
 #: data/resources/window.ui:63
-#, fuzzy
 msgid "Presets"
-msgstr "Adicionar predefinição"
+msgstr "Predefinições"
 
 #: data/resources/window.ui:71
-#, fuzzy
 msgid "Add Preset…"
-msgstr "Adicionar predefinição"
+msgstr "Adicionar predefinição…"
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
@@ -226,7 +224,8 @@ msgstr "Eliminar predefinição"
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Direitos de autor 2020-2021 Rafael Mardojai CM"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
@@ -336,13 +335,5 @@ msgid "Sounds edited by"
 msgstr "Sons editados por"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "Adicionar som personalizado"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "Ruído rosa"
-
-#~ msgid "Add Preset..."
-#~ msgstr "Adicionar predefinição..."
+msgstr "Adicionar som personalizado…"
