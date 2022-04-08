@@ -1,21 +1,26 @@
-# Nepali (ne-NP) translation for Blanket.
-# Copyright (C) 2021 Rafael Mardojai CM
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# IBA4 <nabin7076@protonmail.com>, 2021.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# Nabin Dhakal <nabin7076@protonmail.com>, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-09-20 18:29+0545\n"
-"Last-Translator: IBA4 <nabin7076@protonmail.com>\n"
-"Language-Team: Nepali <>\n"
-"Language: ne\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: Nabin Dhakal <nabin7076@protonmail.com>, 2022\n"
+"Language-Team: Nepali (https://www.transifex.com/rafaelmardojai/teams/135055/ne/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 40.0\n"
+"Language: ne\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
@@ -29,50 +34,47 @@ msgstr "Blanket"
 msgid "Listen to different sounds"
 msgstr "बिभिन्न आवाज सुन्नुहोस्"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "एकाग्र गर्नुहोस्;ध्यान दिनुहोस्;हल्ला;उत्पादकता;निद्रा;आनन्द;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
+"Improve focus and increase your productivity by listening to different "
+"sounds"
 msgstr ""
-"ध्यान सुधार्नुहोस् र विभिन्न ध्वनिको आवाज सुनेर तपाईंको उत्पादकता बढाउनुहोस्। वा यसले "
-"तपाईंलाई हल्लाको वातावरणमा  निदाउन अनुमति दिन्छ।"
+"विभिन्न ध्वनिको आवाज सुनेर तपाईंको ध्यान सुधार्नुहोस् र उत्पादकता बढाउनुहोस्"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "वा यसले तपाईंलाई हल्लाको वातावरणमा निदाउन अनुमति दिन्छ।"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "प्रकृति"
+msgstr "विशेषताहरु:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "सुरक्षित प्रिसेटहरु"
+msgstr "प्रिसेटहरू सुरक्षित गर्नुहोस्"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "अनुकूलन ध्वनी जोड्नुहोस्"
+msgstr "अनुकूल ध्वनी जोड्नुहोस्"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "पृष्ठभूमिमा अटोस्टार्ट होस्।"
+msgstr "पृष्ठभूमिमा अटोस्टार्ट होस्"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS एकीकरण"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "समावेश गरिएको ध्वनिहरू:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -155,12 +157,10 @@ msgid "'Default'"
 msgstr "'पूर्वनिर्धारित'"
 
 #: data/resources/window.ui:63
-#, fuzzy
 msgid "Presets"
-msgstr "प्रिसेटहरु जोड्नुहोस्"
+msgstr "प्रिसेटहरु"
 
 #: data/resources/window.ui:71
-#, fuzzy
 msgid "Add Preset…"
 msgstr "प्रिसेटहरु जोड्नुहोस्"
 
@@ -224,7 +224,8 @@ msgstr "प्रिसेटहरु मेटाऊनुहोस्"
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "प्रतिलिपि अधिकार २०२०-२०२१ राफेल मार्डोजाई सीएम"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
@@ -319,7 +320,7 @@ msgstr "ध्वनि आइकनहरु"
 
 #: blanket/about.py:13
 msgid "App icon"
-msgstr "ए्याप आइकन"
+msgstr "एप आइकन"
 
 #. Set sound artists list
 #: blanket/about.py:58
@@ -332,13 +333,5 @@ msgid "Sounds edited by"
 msgstr "ध्वनि सम्पादन"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "अनुकूलन ध्वनी जोड्नुहोस्"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "गुलाबी आवाज"
-
-#~ msgid "Add Preset..."
-#~ msgstr "प्रिसेट जोड्नुहोस्..."
+msgstr "आफू अनुकूल ध्वनि थप्नुहोस्..."
