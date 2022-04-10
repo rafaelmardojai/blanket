@@ -1,22 +1,26 @@
-# Galician translations for blanket package.
-# Copyright (C) 2020 THE blanket'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# Fran Dieguez <frandieguez@gnome.org>, 2021.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# Fran Diéguez <fran.dieguez@mabishu.com>, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-09-10 09:37+0200\n"
-"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
-"Language: gl\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: Fran Diéguez <fran.dieguez@mabishu.com>, 2022\n"
+"Language-Team: Galician (https://www.transifex.com/rafaelmardojai/teams/135055/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 40.0\n"
+"Language: gl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
@@ -30,49 +34,46 @@ msgstr "Blanket"
 msgid "Listen to different sounds"
 msgstr "Escoite diferentes sons"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Concentracion;Ruido;Productividade;Durmir;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
-msgstr ""
-"Mellore i enfoque e aumente a súa productividade escoitando diferentes sons. "
-"Ou permítelle quedarse durmido nun entorno ruidoso."
+"Improve focus and increase your productivity by listening to different "
+"sounds"
+msgstr "Mellore a concentración e a productividade escoitando distintos sons."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Tamén pode axudarlle a durmirse nun ambiente con ruído."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Natureza"
+msgstr "Características:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr ""
+msgstr "Gardar preconfiguracións"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
 msgstr "Engadir son personalizado"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "Inicio automático en segundo plano"
+msgstr "Autoarrincar en segundo plano"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "Integración con MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Sons incluídos:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -152,24 +153,23 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Predeterminado' "
 
 #: data/resources/window.ui:63
 msgid "Presets"
-msgstr ""
+msgstr "Preconfiguracións"
 
 #: data/resources/window.ui:71
 msgid "Add Preset…"
-msgstr ""
+msgstr "Engadir preconfiguración…"
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "Restabelecer niveis de volume"
 
 #: data/resources/window.ui:83
-#, fuzzy
 msgid "Keep Playing When Closed"
-msgstr "Continuar reproducindo ao pechar"
+msgstr "Manter reproducindo despois de pechar"
 
 #: data/resources/window.ui:89
 msgid "Preferences"
@@ -189,11 +189,11 @@ msgstr "Saír"
 
 #: data/resources/preferences.ui:12
 msgid "Appearance"
-msgstr ""
+msgstr "Aparencia"
 
 #: data/resources/preferences.ui:15
 msgid "Dark Mode"
-msgstr ""
+msgstr "Modo escuro"
 
 #: data/resources/preferences.ui:28
 msgid "Behavior"
@@ -205,25 +205,26 @@ msgstr "Inicio automático en segundo plano"
 
 #: data/resources/preset-dialog.ui:23
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: data/resources/preset-dialog.ui:55
 msgid "Preset Name"
-msgstr ""
+msgstr "Nome da preconfiguración"
 
 #: data/resources/preset-row.ui:40
 msgid "Rename Preset"
-msgstr ""
+msgstr "Renomear preconfiguración"
 
 #: data/resources/preset-row.ui:50
 msgid "Delete Preset"
-msgstr ""
+msgstr "Eliminar preconfiguración"
 
 #: data/resources/about.ui:8
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
@@ -271,7 +272,6 @@ msgid "Open audio"
 msgstr "Abrir audio"
 
 #: blanket/preferences.py:68
-#, fuzzy
 msgid "Autostart Blanket in background."
 msgstr "Iniciar automaticamente Blanket en segundo plano."
 
@@ -299,19 +299,19 @@ msgstr ""
 
 #: blanket/presets.py:114
 msgid "Add Preset"
-msgstr ""
+msgstr "Engadir preconfiguración…"
 
 #: blanket/presets.py:115
 msgid "Create"
-msgstr ""
+msgstr "Crear"
 
 #: blanket/presets.py:119
 msgid "Edit Preset"
-msgstr ""
+msgstr "Editar preconfiguración"
 
 #: blanket/presets.py:121
 msgid "Save"
-msgstr ""
+msgstr "Gardar"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
@@ -332,10 +332,5 @@ msgid "Sounds edited by"
 msgstr "Sons editados por"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "Engadir son personalizado"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "Ruido Rosa"
+msgstr "Engadir son personalizado…"
