@@ -1,21 +1,25 @@
-# Korean translations for blanket package.
-# Copyright (C) 2021 THE blanket'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# Moon Sungjoon <sumoon@seoulsaram.org>, 2021.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# Moon Sungjoon <sumoon@seoulsaram.org>, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-10-25 09:13+0900\n"
-"Last-Translator: Moon Sungjoon <sumoon@seoulsaram.org>\n"
-"Language-Team: \n"
-"Language: ko\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: Moon Sungjoon <sumoon@seoulsaram.org>, 2022\n"
+"Language-Team: Korean (https://www.transifex.com/rafaelmardojai/teams/135055/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
@@ -30,50 +34,46 @@ msgstr "Blanket"
 msgid "Listen to different sounds"
 msgstr "다양한 소리를 들으세요"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Concentrate;Focus;Noise;Productivity;Sleep;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
-msgstr ""
-"다양한 소리를 들으며 집중력과 생산성을 향상해 주거나 시끄러운 환경에서 잠들"
-"게 해 줍니다."
+"Improve focus and increase your productivity by listening to different "
+"sounds"
+msgstr "다양한 소리를 들으며 집중력과 생산성을 향상해 줍니다."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "시끄러운 환경에서 잠드는 것 또한 도와줍니다."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "자연"
+msgstr "기능:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "저장된 사전 설정"
+msgstr "사전 설정 저장"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
 msgstr "사용자 지정 사운드 추가"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
 msgstr "백그라운드에서 자동 시작"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS 통합"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "내장된 소리:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -156,14 +156,12 @@ msgid "'Default'"
 msgstr "'기본'"
 
 #: data/resources/window.ui:63
-#, fuzzy
 msgid "Presets"
-msgstr "프리셋 추가"
+msgstr "사전 설정"
 
 #: data/resources/window.ui:71
-#, fuzzy
 msgid "Add Preset…"
-msgstr "프리셋 추가"
+msgstr "사전 설정 추가…"
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
@@ -225,7 +223,8 @@ msgstr "사전 설정 삭제"
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
@@ -333,13 +332,5 @@ msgid "Sounds edited by"
 msgstr "사운드 편집"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "사용자 지정 사운드 추가"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "핑크 노이즈"
-
-#~ msgid "Add Preset..."
-#~ msgstr "사전 설정 추가..."
+msgstr "사용자 지정 소리 추가…"
