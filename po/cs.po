@@ -182,7 +182,7 @@ msgstr "Klávesové zkratky"
 
 #: data/resources/window.ui:97
 msgid "About Blanket"
-msgstr "O Dece"
+msgstr "O aplikaci Blanket"
 
 #: data/resources/window.ui:103 data/resources/shortcuts.ui:32
 msgid "Quit"
@@ -274,7 +274,7 @@ msgstr "Otevřít audio"
 
 #: blanket/preferences.py:68
 msgid "Autostart Blanket in background."
-msgstr "Automaticky spustit Deku na pozadí."
+msgstr "Automaticky spustit Blanket na pozadí."
 
 #: blanket/preferences.py:96 blanket/preferences.py:131
 msgid "Request error"
@@ -294,8 +294,8 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"Ujistěte se, že má Deka oprávnění ke spuštění\n"
-"na pozadí v Nastavení → Aplikace → Deka\n"
+"Ujistěte se, že má Blanket oprávnění ke spuštění\n"
+"na pozadí v Nastavení → Aplikace → Blanket\n"
 "a zkuste to znovu."
 
 #: blanket/presets.py:114
