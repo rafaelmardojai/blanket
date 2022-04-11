@@ -1,21 +1,25 @@
-# Catalan translation for Blanket.
-# Copyright (C) 2020 Adolfo Jayme Barrientos
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2020.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# Adolfo Jayme-Barrientos, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-09-18 14:28+0200\n"
-"Last-Translator: Ícar N. S. <icar.nin@protonmail.com>\n"
-"Language-Team: \n"
-"Language: ca\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: Adolfo Jayme-Barrientos, 2022\n"
+"Language-Team: Catalan (https://www.transifex.com/rafaelmardojai/teams/135055/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"Language: ca\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
@@ -30,50 +34,48 @@ msgstr "Blanket"
 msgid "Listen to different sounds"
 msgstr "Escolteu diferents sons"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Concentració;Focus;Soroll;Productivitat;Dormir;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
+"Improve focus and increase your productivity by listening to different "
+"sounds"
 msgstr ""
-"Milloreu la vostra concentració i augmenteu la vostra productivitat en "
-"escoltar diferents sons. També us permet dormir en un ambient sorollós."
+"Milloreu la vostra concentració i augmenteu la productivitat en escoltar "
+"diversos sons"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "També us pot ajudar a adormir en un entorn sorollós."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Natura"
+msgstr "Funcionalitats:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "Predefinits desats"
+msgstr "Desa les combinacions predefinides"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "Afegeix un so personalitzat"
+msgstr "Afegeix sons personalitzats"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "Inici automàtic en segon pla"
+msgstr "Inicia automàticament en segon pla"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "Integració amb MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Sons inclosos:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -156,18 +158,16 @@ msgid "'Default'"
 msgstr "'Per defecte'"
 
 #: data/resources/window.ui:63
-#, fuzzy
 msgid "Presets"
-msgstr "Afegeix una combinació predefinida"
+msgstr "Combinacions predefinides"
 
 #: data/resources/window.ui:71
-#, fuzzy
 msgid "Add Preset…"
-msgstr "Afegeix una combinació predefinida"
+msgstr "Afegeix una combinació predefinida…"
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
-msgstr "Restableix els nivells de volum"
+msgstr "Reinicialitza els nivells de volum"
 
 #: data/resources/window.ui:83
 msgid "Keep Playing When Closed"
@@ -219,18 +219,19 @@ msgstr "Reanomena la combinació predefinida"
 
 #: data/resources/preset-row.ui:50
 msgid "Delete Preset"
-msgstr "Esborra la combinació predefinida"
+msgstr "Suprimeix la combinació predefinida"
 
 #: data/resources/about.ui:8
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Drets d’autor © 2020-2021 Rafael Mardojai C. M."
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr ""
-"Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2020\n"
+"Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2020, 2022\n"
 "Ícar Nin Solana <icar.nin@protonmail.com>, 2021"
 
 #: data/resources/shortcuts.ui:10
@@ -284,7 +285,7 @@ msgstr "Error de sol·licitud"
 
 #: blanket/preferences.py:100 blanket/preferences.py:135
 msgid "The autostart request failed."
-msgstr "La sol·licitud d'inici automàtic ha fallat."
+msgstr "La sol·licitud d’inici automàtic ha fallat."
 
 #: blanket/preferences.py:119
 msgid "Authorization failed"
@@ -296,9 +297,9 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"Assegureu-vos que el Blanket té permisos per córrer en \n"
-"segon pla a Preferències → Aplicacions → \n"
-"Blanket i torna-ho a provar."
+"Assegureu-vos que el Blanket té permisos d’execució en \n"
+"segon pla a Preferències ▸ Aplicacions ▸ \n"
+"Blanket i torneu-ho a provar."
 
 #: blanket/presets.py:114
 msgid "Add Preset"
@@ -322,7 +323,7 @@ msgstr "Icones dels sons"
 
 #: blanket/about.py:13
 msgid "App icon"
-msgstr "Icona de l'aplicació"
+msgstr "Icona de l’aplicació"
 
 #. Set sound artists list
 #: blanket/about.py:58
@@ -335,13 +336,5 @@ msgid "Sounds edited by"
 msgstr "Sons editats per"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "Afegeix un so personalitzat"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "Soroll rosa"
-
-#~ msgid "Add Preset..."
-#~ msgstr "Afegeix un predefinit..."
+msgstr "Afegeix un so personalitzat…"
