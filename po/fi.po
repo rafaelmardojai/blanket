@@ -1,21 +1,25 @@
-# Finnish translation for Blanket
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# Heidi Wenger <heidi.wenger@protonmail.com>, 2021.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# heidi.wenger, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-05-23 15:58+0300\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: fi\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: heidi.wenger, 2022\n"
+"Language-Team: Finnish (https://www.transifex.com/rafaelmardojai/teams/135055/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
+"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
@@ -30,49 +34,48 @@ msgstr "Blanket"
 msgid "Listen to different sounds"
 msgstr "Kuuntele eri ääniä"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Keskity;Huomion kohdistus;Melu;Uni;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
+"Improve focus and increase your productivity by listening to different "
+"sounds"
 msgstr ""
-"Paranna keskittymiskykyäsi, lisää tuottavuuttasi kuunnellen erilaisia ääniä. "
-"Tai mahdollista uneen vaipuminen jopa meluisassa ympäristössä."
+"Paranna keskittymistasoasi ja korota tuottavuuttasi kuuntelemalla erilaisia "
+"ääniä "
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Voi myöskin auttaa sinua nukahtamaan meluisassa ympäristössä."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Luonto"
+msgstr "Ominaisuudet:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr ""
+msgstr "Tallenna vakiot"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "Lisää oma ääni"
+msgstr "Lisää omat äänet"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "Käynnistä taustalla automaattisesti"
+msgstr "Käynnistä automaattisesti taustalla"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS-sulautus"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Sisällytetyt äänet:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -152,24 +155,23 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Vakio'"
 
 #: data/resources/window.ui:63
 msgid "Presets"
-msgstr ""
+msgstr "Vakiot"
 
 #: data/resources/window.ui:71
 msgid "Add Preset…"
-msgstr ""
+msgstr "Lisää vakio..."
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "Nollaa äänenvoimakkuuden tasot"
 
 #: data/resources/window.ui:83
-#, fuzzy
 msgid "Keep Playing When Closed"
-msgstr "Jatka äänentoistoa suljettaessa"
+msgstr "Jatka toistoa sulkemisen jälkeen"
 
 #: data/resources/window.ui:89
 msgid "Preferences"
@@ -189,11 +191,11 @@ msgstr "Lopeta"
 
 #: data/resources/preferences.ui:12
 msgid "Appearance"
-msgstr ""
+msgstr "Ulkoasu"
 
 #: data/resources/preferences.ui:15
 msgid "Dark Mode"
-msgstr ""
+msgstr "Tumma"
 
 #: data/resources/preferences.ui:28
 msgid "Behavior"
@@ -205,25 +207,26 @@ msgstr "Käynnistä taustalla automaattisesti"
 
 #: data/resources/preset-dialog.ui:23
 msgid "Cancel"
-msgstr ""
+msgstr "Keskeytä"
 
 #: data/resources/preset-dialog.ui:55
 msgid "Preset Name"
-msgstr ""
+msgstr "Vakion nimi"
 
 #: data/resources/preset-row.ui:40
 msgid "Rename Preset"
-msgstr ""
+msgstr "Vakioäänen uudelleennimeäminen"
 
 #: data/resources/preset-row.ui:50
 msgid "Delete Preset"
-msgstr ""
+msgstr "Poista vakio"
 
 #: data/resources/about.ui:8
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Tekijänoikeus 2020-2021 Rafael Mardojai CM"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
@@ -271,9 +274,8 @@ msgid "Open audio"
 msgstr "Avaa ääntä"
 
 #: blanket/preferences.py:68
-#, fuzzy
 msgid "Autostart Blanket in background."
-msgstr "Käynnistä Blanket taustalle automaattisesti."
+msgstr "Käynnistä Blanket järjestelmän taustalla automaattisesti"
 
 #: blanket/preferences.py:96 blanket/preferences.py:131
 msgid "Request error"
@@ -299,19 +301,19 @@ msgstr ""
 
 #: blanket/presets.py:114
 msgid "Add Preset"
-msgstr ""
+msgstr "Lisää vakio"
 
 #: blanket/presets.py:115
 msgid "Create"
-msgstr ""
+msgstr "Luo"
 
 #: blanket/presets.py:119
 msgid "Edit Preset"
-msgstr ""
+msgstr "Muokkaa vakiota"
 
 #: blanket/presets.py:121
 msgid "Save"
-msgstr ""
+msgstr "Tallenna"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
@@ -332,10 +334,5 @@ msgid "Sounds edited by"
 msgstr "Äänet muokkasi"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "Lisää oma ääni"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "Vaaleanpunainen melu"
+msgstr "Lisää oma ääni..."
