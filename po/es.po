@@ -54,7 +54,7 @@ msgstr "También puede ayudarlo a conciliar el sueño en un ambiente ruidoso."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
-msgstr "Características:"
+msgstr "Funcionalidades:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
