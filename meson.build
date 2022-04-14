@@ -1,5 +1,5 @@
 project('blanket',  
-          version: '0.5.0',
+          version: '0.6.0',
     meson_version: '>= 0.50.0',
   default_options: [ 'warning_level=2',
                    ],

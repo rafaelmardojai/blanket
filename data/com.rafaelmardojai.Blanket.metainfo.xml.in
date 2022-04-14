@@ -15,7 +15,7 @@
       <li>Auto start in background</li>
       <li>MPRIS integration</li>
     </ul>
-    <p>Included Sounds:</p>
+    <p>Included Sounds in the App:</p>
     <ul>
       <li>Birds</li>
       <li>Boat</li>
@@ -49,9 +49,6 @@
       <image>https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshot-1.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshot-2.png</image>
-    </screenshot>
-    <screenshot>
       <image xml:lang="ru">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots/ru/screenshot-1-ru.z.png</image>
     </screenshot>
     <screenshot>
@@ -60,6 +57,16 @@
   </screenshots>
 
   <releases>
+    <release version="0.6.0" date="2022-04-13">
+      <description>
+        <ul>
+          <li>App ported to GTK 4 and libadwaita</li>
+          <li>User interface refinements</li>
+          <li>New translations added</li>
+          <li>Bug fixes</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.5.0" date="2021-09-28">
       <description>
         <ul>
