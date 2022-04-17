@@ -2,20 +2,24 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Sergio Varela <sergitroll9@gmail.com>, 2022
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2020-09-28 16:54+0200\n"
-"Last-Translator: Porrumentzio <porrumentzio@riseup.net>\n"
-"Language-Team: \n"
-"Language: eu\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022\n"
+"Language-Team: Basque (https://www.transifex.com/rafaelmardojai/teams/135055/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"Language: eu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
@@ -30,49 +34,47 @@ msgstr "Blanket"
 msgid "Listen to different sounds"
 msgstr "Entzun hainbat soinu"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Kontzentratu;Arreta;Zarata;Soinua;Produktibitatea;Lo;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
+"Improve focus and increase your productivity by listening to different "
+"sounds"
 msgstr ""
-"Hobetu arreta eta handitu produktibitatea, hainbat soinu entzunez. Edo "
-"erraztu giro zaratatsuetan lokartzea."
+"Kontzentrazioa hobetu eta produktibitatea handitu soinu desberdinak entzunez"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Ingurune zaratatsuan loak hartzen ere lagun dezake."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Natura"
+msgstr "Ezaugarriak:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr ""
+msgstr "Gorde aurredoikuntzak"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "Gehitu soinu pertsonalizatua"
+msgstr "Gehitu soinu pertsonalizatuak"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "Hasi abioan"
+msgstr "Hasiera automatikoa bigarren planoan"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRISen integrazioa"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Dagoeneko sartuta dauden soinuak:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -152,22 +154,21 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Lehenetsita'"
 
 #: data/resources/window.ui:63
 msgid "Presets"
-msgstr ""
+msgstr "Aurre-hautaketak"
 
 #: data/resources/window.ui:71
 msgid "Add Preset…"
-msgstr ""
+msgstr "Aurrehautaketa gehitu…"
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "Bolumen-mailak berrezartzea"
 
 #: data/resources/window.ui:83
-#, fuzzy
 msgid "Keep Playing When Closed"
 msgstr "Jarraitu erreproduzitzen ixtean"
 
@@ -189,11 +190,11 @@ msgstr "Irten"
 
 #: data/resources/preferences.ui:12
 msgid "Appearance"
-msgstr ""
+msgstr "Itxura"
 
 #: data/resources/preferences.ui:15
 msgid "Dark Mode"
-msgstr ""
+msgstr "Itxura iluna"
 
 #: data/resources/preferences.ui:28
 msgid "Behavior"
@@ -205,29 +206,32 @@ msgstr "Hasi abioan"
 
 #: data/resources/preset-dialog.ui:23
 msgid "Cancel"
-msgstr ""
+msgstr "Ezeztatu"
 
 #: data/resources/preset-dialog.ui:55
 msgid "Preset Name"
-msgstr ""
+msgstr "Aurrehautaketaren izena"
 
 #: data/resources/preset-row.ui:40
 msgid "Rename Preset"
-msgstr ""
+msgstr "Aldatu aurrehautaketaren izena"
 
 #: data/resources/preset-row.ui:50
 msgid "Delete Preset"
-msgstr ""
+msgstr "Ezabatu aurrehautaketa"
 
 #: data/resources/about.ui:8
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "Porrumentzio <porrumentzio@riseup.net>"
+msgstr ""
+"Porrumentzio <porrumentzio@riseup.net>\n"
+"Sergio Varela <sergiovg01@outlook.com>"
 
 #: data/resources/shortcuts.ui:10
 msgid "General"
@@ -271,9 +275,8 @@ msgid "Open audio"
 msgstr "Ireki audioa"
 
 #: blanket/preferences.py:68
-#, fuzzy
 msgid "Autostart Blanket in background."
-msgstr "Abiarazi Blanket atzealdean."
+msgstr "Abiarazi Blanket automatikoki atzealdean."
 
 #: blanket/preferences.py:96 blanket/preferences.py:131
 msgid "Request error"
@@ -299,22 +302,21 @@ msgstr ""
 
 #: blanket/presets.py:114
 msgid "Add Preset"
-msgstr ""
+msgstr "Gehitu aurrehautaketa"
 
 #: blanket/presets.py:115
 msgid "Create"
-msgstr ""
+msgstr "Sortu"
 
 #: blanket/presets.py:119
 msgid "Edit Preset"
-msgstr ""
+msgstr "Editatu aurrehautaketa"
 
 #: blanket/presets.py:121
 msgid "Save"
-msgstr ""
+msgstr "Gorde"
 
 #: blanket/about.py:12
-#, fuzzy
 msgid "Sounds icons"
 msgstr "Soinuen ikonoak"
 
@@ -333,13 +335,5 @@ msgid "Sounds edited by"
 msgstr "Soinu-edizioa"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "Gehitu soinu pertsonalizatua"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "Soinu arrosa"
-
-#~ msgid "Unknown"
-#~ msgstr "Ezezaguna"
+msgstr "Gehitu soinu pertsonalizatua…"
