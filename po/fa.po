@@ -1,27 +1,32 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# MohammadSahel Kamyab <mskf1383@protonmail.com>, 2021.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# MSKF, 2022
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: MohammadSahel Kamyab <mskf1383@protonmail.com>\n"
-"Language-Team: \n"
-"Language: fa\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: MSKF, 2022\n"
+"Language-Team: Persian (https://www.transifex.com/rafaelmardojai/teams/135055/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: fa\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
 #: blanket/window.py:242 blanket/mpris.py:141
 msgid "Blanket"
-msgstr "بِلَنکِت"
+msgstr "پتو"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:7
@@ -29,50 +34,50 @@ msgstr "بِلَنکِت"
 msgid "Listen to different sounds"
 msgstr "گوش دادن به صداهای گوناگون"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "تمرکز;آرامش;سر و صدا;بهره وری;خواب"
+msgstr ""
+"Blanket;Concentrate;Focus;Noise;Productivity;Sleep;تمرکز;آرامش;سر و "
+"صدا;بهره‌وری;خواب;بلنکت;پتو;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
+"Improve focus and increase your productivity by listening to different "
+"sounds"
 msgstr ""
-"تمرکز و بهره‌وری خود را با گوش دادن به صداهای گوناگون افزایش دهید. یا به شما "
-"این اجازه را می‌دهد تا در محیطی پر از سروصدا بخوابید."
+"با گوش دادن به صداهای گوناگون، تمرکزتان را بهبود ببخشید و بهره‌وری‌تان را "
+"افزایش دهید"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "همچنین می‌تواند به شما در خوابیدن در محیطی پر سر و صدا کمک کند."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "طبیعت"
+msgstr "ویژگی‌ها:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "پیش‌تنظیم‌های ذخیره شده"
+msgstr "ذخیرهٔ پیش‌تنظیم‌ها"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "افزودن صدای سفارشی"
+msgstr "افزودن صداهای سفارشی"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
 msgstr "شروع خودکار در پس‌زمینه"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "یک‌پارچه‌سازی با MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "صداهای مشمول:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -152,26 +157,23 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "'پیش‌فرض'"
+msgstr "'پیش‌گزیده'"
 
 #: data/resources/window.ui:63
-#, fuzzy
 msgid "Presets"
-msgstr "افزودن پیش‌تنظیم"
+msgstr "پیش‌تنظیم‌ها"
 
 #: data/resources/window.ui:71
-#, fuzzy
 msgid "Add Preset…"
-msgstr "افزودن پیش‌تنظیم"
+msgstr "افزودن پیش‌تنظیم…"
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
-msgstr "بازنشانی سطحوح صدا"
+msgstr "بازنشانی سطوح صدا"
 
 #: data/resources/window.ui:83
-#, fuzzy
 msgid "Keep Playing When Closed"
-msgstr "پس از بسته شدن همچنان پخش شود"
+msgstr "ادامهٔ پخش هنگام بستن"
 
 #: data/resources/window.ui:89
 msgid "Preferences"
@@ -179,15 +181,15 @@ msgstr "ترجیحات"
 
 #: data/resources/window.ui:93
 msgid "Keyboard Shortcuts"
-msgstr "میانبرهای صفحه‌کلید"
+msgstr "میان‌برهای صفحه‌کلید"
 
 #: data/resources/window.ui:97
 msgid "About Blanket"
-msgstr "درباره‌ی بِلَنکِت"
+msgstr "دربارهٔ پتو"
 
 #: data/resources/window.ui:103 data/resources/shortcuts.ui:32
 msgid "Quit"
-msgstr "خروج"
+msgstr "ترک"
 
 #: data/resources/preferences.ui:12
 msgid "Appearance"
@@ -223,13 +225,14 @@ msgstr "حذف پیش‌تنظیم"
 
 #: data/resources/about.ui:8
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "حق رونوشت ۲۰۲۰-۲۰۲۱ Rafael Mardojai CM"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "MohammadSaleh Kamyab <mskf1383@protonmail.com>"
+msgstr "محمدصالح کامیاب <mskf1383@protonmail.com>"
 
 #: data/resources/shortcuts.ui:10
 msgid "General"
@@ -237,7 +240,7 @@ msgstr "عمومی"
 
 #: data/resources/shortcuts.ui:14
 msgid "Play/Pause sounds"
-msgstr "پخش/توقف صدا"
+msgstr "پخش/مکث صداها"
 
 #: data/resources/shortcuts.ui:20
 msgid "Add custom sound"
@@ -270,12 +273,11 @@ msgstr "سفارشی"
 
 #: blanket/window.py:216
 msgid "Open audio"
-msgstr "بازکردن صدا"
+msgstr "گشودن صدا"
 
 #: blanket/preferences.py:68
-#, fuzzy
 msgid "Autostart Blanket in background."
-msgstr "شروع خودکار بِلَنکِت در پس‌زمینه"
+msgstr "شروع خودکار پتو در پس‌زمینه."
 
 #: blanket/preferences.py:96 blanket/preferences.py:131
 msgid "Request error"
@@ -283,11 +285,11 @@ msgstr "خطای درخواست"
 
 #: blanket/preferences.py:100 blanket/preferences.py:135
 msgid "The autostart request failed."
-msgstr "درخواست شروع خودکار موفقیت‌آمیز نبود."
+msgstr "درخواست شروع خودکار شکست خورد."
 
 #: blanket/preferences.py:119
 msgid "Authorization failed"
-msgstr "گرفتن مجوز موفقیت‌آمیز نبود"
+msgstr "گرفتن مجوز شکست خورد"
 
 #: blanket/preferences.py:123
 msgid ""
@@ -295,9 +297,9 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"اطمینان حاصل کنید که بِلَنکِت مجوز اجرا در \n"
+"اطمینان حاصل کنید که پتو مجوز اجرا در \n"
 "پس‌زمینه را در تنظیمات ← برنامه‌های کاربردی ← \n"
-"بِلَنکِت دارد و سپس دوباره سعی کنید."
+"پتو دارد و سپس دوباره سعی کنید."
 
 #: blanket/presets.py:114
 msgid "Add Preset"
@@ -317,30 +319,22 @@ msgstr "ذخیره"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
-msgstr "نماد‌های صداها"
+msgstr "نقشک‌های صداها"
 
 #: blanket/about.py:13
 msgid "App icon"
-msgstr "نماد برنامه"
+msgstr "نقشک کاره"
 
 #. Set sound artists list
 #: blanket/about.py:58
 msgid "Sounds by"
-msgstr "صدا توسط"
+msgstr "صداها توسط"
 
 #. Set sound editors list
 #: blanket/about.py:60
 msgid "Sounds edited by"
-msgstr "صدا ویرایش‌شده توسط"
+msgstr "صداها ویرایش شده توسط"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "افزودن صدای سفارشی"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "نویز صورتی"
-
-#~ msgid "Add Preset..."
-#~ msgstr "افزودن پیش‌تنظیم"
+msgstr "افزودن صدای سفارشی…"
