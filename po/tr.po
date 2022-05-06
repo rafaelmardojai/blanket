@@ -2,21 +2,25 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# Burak Bayezid, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-04-19 23:45+0300\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: tr\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: Burak Bayezid, 2022\n"
+"Language-Team: Turkish (https://www.transifex.com/rafaelmardojai/teams/135055/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
@@ -30,50 +34,48 @@ msgstr "Battaniye"
 msgid "Listen to different sounds"
 msgstr "Farklı sesleri dinleyin"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Konsantrasyon;Odaklanma;Gürültü;Üretkenlik;Uyku;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
+"Improve focus and increase your productivity by listening to different "
+"sounds"
 msgstr ""
-"Farklı sesleri dinleyerek odaklanma becerinizi geliştirin ve üretkenliğinizi "
-"artırın. Veya gürültülü bir ortamda uykuya dalmanızı sağlar."
+"Farklı sesleri dinleyerek odaklanma becerinizi geliştirin ve üretkenliğinizi"
+" artırın. "
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Ayrıca sesli ortamlarda uyumanıza da yardımcı olabilir."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Doğa"
+msgstr "Özellikler:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "Kayıtlı Ön Ayarlar"
+msgstr "Kayıtlı Ön Ayarlar:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
 msgstr "Özel ses ekle"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
 msgstr "Arka planda otomatik başlat"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS entegrasyonu"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Dahil Olan Sesler:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -156,12 +158,10 @@ msgid "'Default'"
 msgstr "'Varsayılan'"
 
 #: data/resources/window.ui:63
-#, fuzzy
 msgid "Presets"
-msgstr "Ön Ayar Ekle"
+msgstr "Ön Ayarlar"
 
 #: data/resources/window.ui:71
-#, fuzzy
 msgid "Add Preset…"
 msgstr "Ön Ayar Ekle"
 
@@ -170,7 +170,6 @@ msgid "Reset Volume Levels"
 msgstr "Ses Seviyelerini Sıfırla"
 
 #: data/resources/window.ui:83
-#, fuzzy
 msgid "Keep Playing When Closed"
 msgstr "Kapalıyken Oynatmaya Devam Et"
 
@@ -196,7 +195,7 @@ msgstr "Görünüm"
 
 #: data/resources/preferences.ui:15
 msgid "Dark Mode"
-msgstr "Koyu Mod"
+msgstr "Karanlık Mod"
 
 #: data/resources/preferences.ui:28
 msgid "Behavior"
@@ -226,11 +225,14 @@ msgstr "Ön Ayarı Sil"
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "Çağlar Turalı <turali.js.org>"
+msgstr ""
+"Çağlar Turalı <turali.js.org>\n"
+"Bayezid Atılgan <bayezid.org> "
 
 #: data/resources/shortcuts.ui:10
 msgid "General"
@@ -274,9 +276,8 @@ msgid "Open audio"
 msgstr "Ses dosyası seçin"
 
 #: blanket/preferences.py:68
-#, fuzzy
 msgid "Autostart Blanket in background."
-msgstr "Battaniye'yi arka planda otomatik başlat."
+msgstr "Blanket'i arka planda otomatik başlat."
 
 #: blanket/preferences.py:96 blanket/preferences.py:131
 msgid "Request error"
@@ -335,13 +336,5 @@ msgid "Sounds edited by"
 msgstr "Ses düzenlemeleri"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
 msgstr "Özel ses ekle"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "Pembe Gürültü"
-
-#~ msgid "Add Preset..."
-#~ msgstr "Ön Ayar Ekle..."
