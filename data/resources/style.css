@@ -1,7 +1,8 @@
-.soundrow.playing .sound-icon {
-  color: @accent_color;
+
+.soundrow {
+    padding: 8px;
 }
 
 .preset-selector.selected label {
-  font-weight: bold;
+    font-weight: bold;
 }

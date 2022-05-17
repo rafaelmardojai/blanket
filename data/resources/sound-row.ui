@@ -7,12 +7,13 @@
       <class name="soundrow"/>
     </style>
     <child>
-      <object class="GtkBox" id="box">
+      <object class="GtkBox">
         <property name="spacing">24</property>
-        <property name="margin_top">8</property>
-        <property name="margin_bottom">8</property>
-        <property name="margin_start">8</property>
-        <property name="margin_end">8</property>
+        <child>
+          <object class="GtkImage" id="icon">
+            <property name="pixel-size">64</property>
+          </object>
+        </child>
         <child>
           <object class="GtkBox">
             <property name="hexpand">True</property>
@@ -45,6 +46,19 @@
                 <property name="draw_value">False</property>
               </object>
             </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="remove_btn">
+            <style>
+              <class name="flat"/>
+              <class name="circular"/>
+            </style>
+            <binding name="visible">
+              <lookup name="custom">SoundRow</lookup>
+            </binding>
+            <property name="icon-name">com.rafaelmardojai.Blanket-remove-symbolic</property>
+            <property name="valign">center</property>
           </object>
         </child>
       </object>

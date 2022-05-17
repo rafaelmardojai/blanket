@@ -206,9 +206,9 @@ class PresetRow(Gtk.ListBoxRow):
     def selected(self, value):
         self.indicator.set_visible(value)
         if value:
-            self.get_style_context().add_class('selected')
+            self.add_css_class('selected')
         else:
-            self.get_style_context().remove_class('selected')
+            self.remove_css_class('selected')
 
     def _on_show_rename(self, _button):
         app = Gio.Application.get_default()

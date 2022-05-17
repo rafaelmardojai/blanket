@@ -33,18 +33,36 @@ class SoundRow(Gtk.ListBoxRow):
     Widget to show, play and manage a sound
     """
 
-    box = Gtk.Template.Child()
+    custom = GObject.Property(type=bool, default=False)
+
+    icon = Gtk.Template.Child()
     title = Gtk.Template.Child()
     volume = Gtk.Template.Child()
+    remove_btn = Gtk.Template.Child()
 
     def __init__(self, sound, model):
         super().__init__()
+
+        self.custom = sound.custom
 
         self.first_load = True
         # SoundObject
         self.sound = sound
         # Gio.ListStore
         self.model = model
+        # Create a new SoundPlayer
+        self.player = SoundPlayer(self.sound)
+
+        # Set title
+        self.title.set_label(self.sound.title)
+        # Connect scale with volume function
+        self.volume.connect('value-changed', self._on_volume_changed)
+        # Load saved volume
+        self.volume.set_value(self.sound.saved_volume)
+        # Set icon
+        self.icon.props.icon_name = self.sound.icon_name
+        # Connect remove
+        self.remove_btn.connect('clicked', self.remove)
 
         # Connect mainplayer preset-changed signal
         self.sound.mainplayer.connect(
@@ -57,39 +75,14 @@ class SoundRow(Gtk.ListBoxRow):
             self._on_reset_volumes
         )
 
-        # Create a new SoundPlayer
-        self.player = SoundPlayer(self.sound)
-
-        # Set title
-        self.title.set_label(self.sound.title)
-
-        # Connect scale with volume function
-        self.volume.connect('value-changed', self._on_volume_changed)
-
-        # Load saved volume
-        self.volume.set_value(self.sound.saved_volume)
-
-        icon = Gtk.Image.new_from_icon_name(self.sound.icon_name)
-        icon.add_css_class('sound-icon')
-        icon.set_pixel_size(64)
-        self.box.prepend(icon)
-
-        if self.sound.custom:
-            # Add a remove button
-            remove = Gtk.Button(valign=Gtk.Align.CENTER)
-            remove.connect('clicked', self.remove)
-            self.box.append(remove)
-            # Add destructive-action CSS class
-            remove.get_style_context().add_class('image-button')
-            remove.set_icon_name('edit-delete-symbolic')
-
     def remove(self, _button):
-        # Remove audio from list
-        self.model.remove(self.get_index())
-        # Remove player
-        self.player.remove()
-        # Remove audio from settings
-        self.sound.remove()
+        if self.sound.custom:
+            # Remove audio from list
+            self.model.remove(self.get_index())
+            # Remove player
+            self.player.remove()
+            # Remove audio from settings
+            self.sound.remove()
 
     def toggle_mute(self):
         # Toggle player mute state
@@ -128,9 +121,9 @@ class SoundRow(Gtk.ListBoxRow):
 
     def _show_active_indicator(self, show):
         if not show:
-            self.get_style_context().remove_class('playing')
-        elif not self.get_style_context().has_class('playing'):
-            self.get_style_context().add_class('playing')
+            self.icon.remove_css_class('accent')
+        elif not self.icon.has_css_class('accent'):
+            self.icon.add_css_class('accent')
 
     def _on_preset_changed(self, _player):
         self.first_load = True
@@ -170,7 +163,7 @@ class SoundsGroup(Gtk.Box):
 
         # Create group GtkListBox
         self.listbox = Gtk.ListBox()
-        self.listbox.add_css_class('content')
+        self.listbox.add_css_class('boxed-list')
         self.append(self.listbox)
 
         # Bind GtkListBox with GioListStore
@@ -182,7 +175,6 @@ class SoundsGroup(Gtk.Box):
         if custom:
             add_btn = Gtk.Button()
             add_btn.props.label = _('Add Custom Sound…')
-            # add_btn.get_style_context().add_class('suggested-action')
             add_btn.connect('clicked', self.__on_add_clicked)
             self.append(add_btn)
 
