@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-12-22 23:27+0100\n"
+"PO-Revision-Date: 2022-05-22 03:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
@@ -36,44 +36,36 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Concentrate;Focus;Noise;Productivity;Sleep;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
-msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
-msgstr ""
-"Különböző hangokkal javítja a figyelmet és fokozza a produktivitást. Illetve "
-"segíti az elalvást zajos környezetben."
+msgid "Improve focus and increase your productivity by listening to different sounds"
+msgstr "Különböző hangokkal javítja a figyelmet és fokozza a produktivitást"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Illetve segíti az elalvást zajos környezetben."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Természet"
+msgstr "Jellemzők:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "Elmentett Beállítások"
+msgstr "Elmentett előbeállítások"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
 msgstr "Egyéni hang hozzáadása"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
 msgstr "Automatikus indítás a háttérben"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS integráció"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Tartalmazott Hangok:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -156,14 +148,12 @@ msgid "'Default'"
 msgstr "'Alapértelmezett'"
 
 #: data/resources/window.ui:63
-#, fuzzy
 msgid "Presets"
-msgstr "Beállítás Hozzáadása"
+msgstr "Előbeállítások"
 
 #: data/resources/window.ui:71
-#, fuzzy
 msgid "Add Preset…"
-msgstr "Beállítás Hozzáadása"
+msgstr "Előbeállítások Hozzáadása…"
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
@@ -294,9 +284,9 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"Győződj meg, hogy van-e jogosultság a Blanket-nek\n"
+"Győződj meg, hogy van-e jogosultság a Blanket-nek \n"
 "a háttérben futni a Beállítások → Alkalmazások →\n"
-"Blanket rész alatt, és próbáld újra!"
+"Blanket rész alatt, és próbáld újra."
 
 #: blanket/presets.py:114
 msgid "Add Preset"
@@ -325,17 +315,16 @@ msgstr "Alkalmazás ikon"
 #. Set sound artists list
 #: blanket/about.py:58
 msgid "Sounds by"
-msgstr "Hangok alkotója:"
+msgstr "Hangok alkotója"
 
 #. Set sound editors list
 #: blanket/about.py:60
 msgid "Sounds edited by"
-msgstr "A hangokat szerkesztették:"
+msgstr "A hangokat szerkesztették"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "Egyéni hang hozzáadása"
+msgstr "Egyéni hang hozzáadása…"
 
 #, fuzzy
 #~ msgid "Pink noise"
