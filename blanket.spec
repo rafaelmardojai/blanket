@@ -17,7 +17,7 @@ BuildRequires:  meson
 BuildRequires:  ninja-build
 BuildRequires:  glib2-devel
 BuildRequires:  libhandy1-devel
-BuildRequires:  gtk3-devel
+BuildRequires:  gtk4-devel
 BuildRequires:  python3-gstreamer1
 BuildRequires:  libadwaita-devel
 
