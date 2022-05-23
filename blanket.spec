@@ -8,15 +8,18 @@ URL:            https://github.com/rafaelmardojai/blanket
 Source0:        %{url}/archive/%{version}/%{name}-%{version}.tar.gz
 
 Requires:       glib2
-Requires:       gtk3
+Requires:       gtk4
 Requires:       libhandy1
+Requires:       libadwaita
 Requires:       libappstream-glib
+Requires:       python3-gobject
 BuildRequires:  meson
 BuildRequires:  ninja-build
 BuildRequires:  glib2-devel
 BuildRequires:  libhandy1-devel
 BuildRequires:  gtk3-devel
 BuildRequires:  python3-gstreamer1
+BuildRequires:  libadwaita-devel
 
 BuildArch:      noarch
 
