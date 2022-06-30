@@ -1,22 +1,26 @@
-# Slovak translation of blanket.
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# Tomáš Kukumberg, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-12-22 08:13+0100\n"
-"Last-Translator: Jose Riha <jose1711@gmail.com>\n"
-"Language-Team: https://github.com/martin-sk\n"
-"Language: sk\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: Tomáš Kukumberg, 2022\n"
+"Language-Team: Slovak (https://www.transifex.com/rafaelmardojai/teams/135055/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
+"Language: sk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
@@ -30,50 +34,47 @@ msgstr "Blanket"
 msgid "Listen to different sounds"
 msgstr "Počúvajte rôzne zvuky"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Koncentrácia;Zameranie;Šum;Produktivita;Spánok;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
+"Improve focus and increase your productivity by listening to different "
+"sounds"
 msgstr ""
-"Zlepšite zameranie a zvýšte svoju produktivitu počúvaním rôznych zvukov. "
-"Alebo vám umožní zaspať v hlučnom prostredí."
+"Pomôže vám sústrediť sa a zvýši vašu produktivitu počúvaním rôznych zvukov"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Alebo vám môže pomôcť zaspať v rušnom prostredí."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Príroda"
+msgstr "Funkcie:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
 msgstr "Uložené prednastavenia"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "Pridať vlastný zvuk"
+msgstr "Pridanie vlastných zvukov"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "Automaticky spustiť na pozadí"
+msgstr "Automatické spustenie na pozadí"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS integrácia"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Dostupné zvuky:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -223,7 +224,8 @@ msgstr "Vymazať prednastavenie"
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Autorské práva 2020-2021 Rafael Mardojai CM"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
@@ -334,154 +336,3 @@ msgstr "Zvuky upravil"
 #: blanket/widgets.py:184
 msgid "Add Custom Sound…"
 msgstr "Pridať vlastný zvuk…"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "Ružový šum"
-
-#~ msgid "Added new Presets feature"
-#~ msgstr "Pridaná možnosť nových prednastavení"
-
-#~ msgid "Now you can toggle sounds by clicking the row"
-#~ msgstr "Teraz môžete zapínať/vypínať zvuky kliknutím na riadok"
-
-#~ msgid "Added new dark mode option"
-#~ msgstr "Pridaná možnosť prepnutia do tmavého režimu"
-
-#~ msgid "Added Tamil translation"
-#~ msgstr "Pridaný preklad do tamilčiny"
-
-#~ msgid "Added Simplified Chinese translation"
-#~ msgstr "Pridaný preklad do zjednodušenej čínštiny"
-
-#~ msgid "Added Russian translation"
-#~ msgstr "Pridaný preklad do ruštiny"
-
-#~ msgid "Added Irish translation"
-#~ msgstr "Pridaný preklad do írčiny"
-
-#~ msgid "Added Japanese translation"
-#~ msgstr "Pridaný preklad do japončiny"
-
-#~ msgid "Added Indonesian translation"
-#~ msgstr "Pridaný preklad do indonézštiny"
-
-#~ msgid "Added Finnish translation"
-#~ msgstr "Pridaný preklad do fínčiny"
-
-#~ msgid "Added Portuguese translation"
-#~ msgstr "Pridaný preklad do portugalčiny"
-
-#~ msgid "Added Swedish translation"
-#~ msgstr "Pridaný preklad do švédčiny"
-
-#~ msgid "Added Czech translation"
-#~ msgstr "Pridaný preklad do češtiny"
-
-#~ msgid "Added Hungarian translation"
-#~ msgstr "Pridaný preklad do maďarčiny"
-
-#~ msgid "Added Persian (Farsi) translation"
-#~ msgstr "Pridaný preklad do perzštiny (farsi)"
-
-#~ msgid "Added Galician translation"
-#~ msgstr "Pridaný preklad do galčiny"
-
-#~ msgid "Added Turkish translation"
-#~ msgstr "Pridaný preklad do turečtiny"
-
-#~ msgid "Added Occitan translation"
-#~ msgstr "Pridaný preklad do okcitánčiny"
-
-#~ msgid "Fix German and Slovak translations"
-#~ msgstr "Oprava nemeckého a slovenského prekladu"
-
-#~ msgid "Added autostart on background feature"
-#~ msgstr "Pridaná možnosť automatického spustenia na pozadí"
-
-#~ msgid "Added six new sounds"
-#~ msgstr "Pridaných šesť nových zvukov"
-
-#~ msgid "New sounds icons, thanks to Jakub Steiner"
-#~ msgstr "Nové ikony zvukov, poďakovanie patrí Jakubovi Steinerovi"
-
-#~ msgid "Sounds improvements"
-#~ msgstr "Vylepšenia zvukov"
-
-#~ msgid "Added French translation"
-#~ msgstr "Pridaný preklad do francúzštiny"
-
-#~ msgid "Added Ukrainian translation"
-#~ msgstr "Pridaný preklad do ukrajinčiny"
-
-#~ msgid "Added Slovak translation"
-#~ msgstr "Pridaný preklad do slovenčiny"
-
-#~ msgid "Added Nepali translation"
-#~ msgstr "Pridaný preklad do nepálčiny"
-
-#~ msgid "Added German translation"
-#~ msgstr "Pridaný preklad do nemčiny"
-
-#~ msgid "Added Croatian translation"
-#~ msgstr "Pridaný preklad do chorvátčiny"
-
-#~ msgid "Performance improvements"
-#~ msgstr "Zlepšenie výkonu"
-
-#~ msgid "UI improvements"
-#~ msgstr "Vylepšenia rozhrania"
-
-#~ msgid "Bug fixes"
-#~ msgstr "Opravy chýb"
-
-#~ msgid "Added Brazilian Portuguese translation"
-#~ msgstr "Pridaný preklad do brazílskej portugalčiny"
-
-#~ msgid "Added play/pause action"
-#~ msgstr "Pridaná akcia prehrať/pozastaviť"
-
-#~ msgid "Added general volume control"
-#~ msgstr "Pridané ovládanie celkovej hlasitosti zvuku"
-
-#~ msgid "Added MPRIS support"
-#~ msgstr "Pridaná podpora pre MPRIS"
-
-#~ msgid "Allow playback when window is closed"
-#~ msgstr "Povoliť prehrávanie pri zatvorenom okne"
-
-#~ msgid "Save window scroll position"
-#~ msgstr "Uložiť stav posuvníka"
-
-#~ msgid "Added Dutch translation"
-#~ msgstr "Pridaný preklad do holandčiny"
-
-#~ msgid "Added Basque translation"
-#~ msgstr "Pridaný preklad do baskičtiny"
-
-#~ msgid "Added Esperanto translation"
-#~ msgstr "Pridaný preklad do esperanta"
-
-#~ msgid "Added Catalan translation"
-#~ msgstr "Pridaný preklad do katalánčiny"
-
-#~ msgid "UI tweaks and improvements"
-#~ msgstr "Úpravy a vylepšenia rozhrania"
-
-#~ msgid "Better White Noise"
-#~ msgstr "Vylepšený biely šum"
-
-#~ msgid "Added Italian translation"
-#~ msgstr "Pridaný preklad do taliančiny"
-
-#~ msgid "Fix GStreamer init bug"
-#~ msgstr "Oprava chyby pri inicializácií GStreamera"
-
-#~ msgid "Initial release."
-#~ msgstr "Úvodná verzia."
-
-#~ msgid "Add Preset..."
-#~ msgstr "Pridať prednastavenie..."
-
-#~ msgid "Unknown"
-#~ msgstr "Neznámy"
