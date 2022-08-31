@@ -35,3 +35,4 @@ You can contribute translations joining us in [Transifex](https://www.transifex.
 | tr    | Turkish              | @caglarturali                  |
 | uk    | Ukrainian            | @IhorHordiichuk                |
 | zh_CN | Simplified Chinese   | @apocelipes                    |
+| gr    | Greek                | @Its-Juice
