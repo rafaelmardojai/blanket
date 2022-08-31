@@ -14,7 +14,7 @@
 [![Liberapay](https://img.shields.io/liberapay/receives/rafaelmardojai.svg?logo=liberapay)](https://liberapay.com/rafaelmardojai/donate)
 
 <p align="center">
-  <img src="brand/screenshot-1.png"/>
+  <img src="brand/screenshot-1-dark.png"/>
 </p>
 
 ## Description
