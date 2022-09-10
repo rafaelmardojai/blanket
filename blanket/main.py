@@ -162,6 +162,12 @@ class Application(Adw.Application):
         # Change mainplayer playing
         self.mainplayer.playing = playing
 
+    def on_play(self, _action=None, _param=None):
+        self.mainplayer.playing = True
+
+    def on_pause(self, _action=None, _param=None):
+        self.mainplayer.playing = False
+
     def on_reset_volumes(self, _action, _param):
         self.mainplayer.reset_volumes()
 
