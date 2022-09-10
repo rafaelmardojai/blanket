@@ -108,6 +108,8 @@ class MPRIS(Server):
         </interface>
         <interface name="org.mpris.MediaPlayer2.Player">
             <method name="PlayPause"/>
+            <method name="Play"/>
+            <method name="Pause"/>
             <property name="PlaybackStatus" type="s" access="read"/>
             <property name="Metadata" type="a{sv}" access="read">
             </property>
@@ -161,6 +163,12 @@ class MPRIS(Server):
 
     def PlayPause(self):
         self.app.on_playpause()
+
+    def Play(self):
+        self.app.on_play()
+
+    def Pause(self):
+        self.app.on_pause()
 
     def Get(self, interface, property_name):
         if property_name in [
