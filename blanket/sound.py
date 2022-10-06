@@ -23,12 +23,28 @@ class MainPlayer(GObject.GObject):
     def __init__(self):
         super().__init__()
 
+        self.cookie = 0
+
+        self.connect('notify::playing', self._on_playing)
+
     def preset_changed(self):
         self.playing = True
         self.emit('preset-changed')
 
     def reset_volumes(self):
         self.emit('reset-volumes')
+
+    def _on_playing(self, _player, _param):
+        app = Gtk.Application.get_default()
+
+        if self.playing:
+            self.cookie = app.inhibit(
+                None,
+                Gtk.ApplicationInhibitFlags.SUSPEND,
+                'Playback in progress'
+            )
+        elif self.cookie != 0:
+            app.uninhibit(self.cookie)
 
 
 class SoundObject(GObject.Object):
