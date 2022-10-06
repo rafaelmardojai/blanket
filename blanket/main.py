@@ -21,8 +21,38 @@ from blanket.settings import Settings
 from blanket.window import BlanketWindow
 from blanket.preferences import PreferencesWindow
 from blanket.presets import PresetDialog
-from blanket.about import AboutDialog
 
+
+AUTHORS = [
+    'Rafael Mardojai CM'
+]
+
+ARTISTS = {
+    'Jakub Steiner': [_('Sounds icons')],
+    'Rafael Mardojai CM': [_('App icon')]
+}
+
+SOUND_ARTISTS = {
+    'alex36917': [_('Rain')],
+    'Digifish music': [_('Storm')],
+    'ezwa': [_('Fireplace')],
+    'Falcet': [_('Boat')],
+    'gezortenplotz': [_('City')],
+    'gluckose': [_('Stream')],
+    'Jorge Stolfi': [_('White Noise')],
+    'kvgarlic': [_('Birds')],
+    'Lisa Redfern': [_('Summer Night')],
+    'Luftrum': [_('Waves')],
+    'stephan': [_('Coffee Shop')],
+    'Omegatron': [_('Pink Noise')],
+    'felix.blume': [_('Wind')],
+    'vahid': [_('Train')],
+}
+
+SOUND_EDITORS = {
+    'Porrumentzio': [
+        _('Birds'), _('Rain'), _('Storm'), _('Waves'), _('Boat'), _('City'), _('Wind')]
+}
 
 class Application(Adw.Application):
     def __init__(self, version):
@@ -202,10 +232,21 @@ class Application(Adw.Application):
         window.present()
 
     def on_about(self, _action, _param):
-        dialog = AboutDialog(self.version)
-        dialog.set_transient_for(self.window)
-        dialog.set_modal(True)
-        dialog.present()
+        builder = Gtk.Builder.new_from_resource('/com/rafaelmardojai/Blanket/about.ui')
+        about = builder.get_object('about')
+
+        artists = self.__get_credits_list(ARTISTS)
+        sound_artists = self.__get_credits_list(SOUND_ARTISTS)
+        sound_editors = self.__get_credits_list(SOUND_EDITORS)
+
+        about.set_version(self.version)
+        about.set_developers(AUTHORS)
+        about.set_designers(artists)
+        about.add_credit_section(_('Sounds by'), sound_artists)
+        about.add_credit_section(_('Sounds edited by'), sound_editors)
+
+        about.set_transient_for(self.window)
+        about.present()
 
     def on_close(self, _action, _param):
         self.window.close()
@@ -233,6 +274,13 @@ class Application(Adw.Application):
 
     def _on_shutdown(self, _app):
         self._save_settings()
+
+    def __get_credits_list(self, dict_):
+        credits_list = []
+        for k, vs in dict_.items():
+            s = k + ': ' + ', '.join(vs)
+            credits_list.append(s)
+        return credits_list
 
 
 def main(version):

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.0 -->
 <interface>
-  <template class="AboutDialog" parent="GtkAboutDialog">
+  <object class="AdwAboutWindow" id="about">
     <property name="destroy_with_parent">True</property>
-    <property name="program_name">Blanket</property>
+    <property name="application-name">Blanket</property>
     <property name="comments" translatable="yes">Listen to different sounds</property>
-    <property name="copyright" translatable="yes">Copyright 2020-2021 Rafael Mardojai CM</property>
+    <property name="copyright" translatable="yes">Copyright 2020-2022 Rafael Mardojai CM</property>
+    <property name="developer_name" translatable="yes">Rafael Mardojai CM</property>
     <property name="website">https://github.com/rafaelmardojai/blanket/</property>
-    <property name="logo_icon_name">com.rafaelmardojai.Blanket</property>
+    <property name="issue-url">https://github.com/rafaelmardojai/blanket/issues</property>
+    <property name="application_icon">com.rafaelmardojai.Blanket</property>
     <property name="license_type">gpl-3-0</property>
     <property name="translator-credits" translatable="yes" context="Add your names here, do not remove previous names!" comments="Replace me with your names, You can make a mailto link: translator-name &lt;user@domain.org&gt;">translator-credits</property>
-  </template>
+  </object>
 </interface>
