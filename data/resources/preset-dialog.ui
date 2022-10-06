@@ -51,15 +51,9 @@
                       <class name="content"/>
                     </style>
                     <child>
-                      <object class="AdwActionRow">
+                      <object class="AdwEntryRow" id="name_entry">
                         <property name="title" translatable="yes">Preset Name</property>
-                        <property name="activatable_widget">name_entry</property>
                         <property name="selectable">False</property>
-                        <child>
-                          <object class="GtkEntry" id="name_entry">
-                            <property name="valign">center</property>
-                          </object>
-                        </child>
                       </object>
                     </child>
                   </object>
