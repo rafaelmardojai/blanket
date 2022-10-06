@@ -5,7 +5,7 @@ import sys
 import gi
 
 gi.require_version('Gst', '1.0')
-gi.require_version('GstPlayer', '1.0')
+gi.require_version('GstPlay', '1.0')
 gi.require_version('Gdk', '4.0')
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')

@@ -1,11 +1,8 @@
 # Copyright 2020-2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import GObject, Gst
-try:
-    from gi.repository.GstPlay import Play as GStreamerPlay
-except ImportError:
-    from gi.repository.GstPlayer import Player as GStreamerPlay
+from gi.repository import Gio, GObject, Gtk, Gst
+from gi.repository.GstPlay import Play
 
 from blanket.settings import Settings
 
@@ -75,7 +72,7 @@ class SoundObject(GObject.Object):
             Settings.get().remove_custom_audio(self.name)
 
 
-class SoundPlayer(GStreamerPlay):
+class SoundPlayer(Play):
     """
     GstPlayer.Player with modifications
     """
