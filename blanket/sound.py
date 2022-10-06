@@ -138,7 +138,7 @@ class SoundPlayer(GStreamerPlay):
         # Fix external changes to player volume
         volume = self.saved_volume * self.sound.mainplayer.volume
         if volume > 0 and self.get_volume() == 0.0:
-            self.set_volume(self.saved_volume)
+            self.set_volume(volume)
             return
         # Only play if volume > 0
         if self.__vol_zero():

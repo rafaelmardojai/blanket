@@ -43,13 +43,7 @@ class Application(Adw.Application):
         # App version
         self.version = version
         # App main player
-        self.mainplayer = MainPlayer()
-        # Load saved props
-        self.mainplayer.volume = Settings.get().volume
-        self.mainplayer.playing = Settings.get().playing
-
-        # Start MPRIS server
-        self.mpris = MPRIS(self)
+        self.mainplayer = None
 
     def do_startup(self):
         # Startup application
@@ -59,6 +53,12 @@ class Application(Adw.Application):
         # if the system doesn't support libadwaita color schemes, fall back to our setting
         if Settings.get().dark_mode and not style_manager.props.system_supports_color_schemes:
             style_manager.props.color_scheme = Adw.ColorScheme.FORCE_DARK
+
+        # App main player
+        self.mainplayer = MainPlayer()
+
+        # Start MPRIS server
+        self.mpris = MPRIS(self)
 
         self.setup_actions()
 
@@ -140,6 +140,10 @@ class Application(Adw.Application):
 
         # Connect window close-request signal to _on_window_close_request
         self.window.connect('close-request', self._on_window_close_request)
+
+        # Load saved props
+        self.mainplayer.volume = Settings.get().volume
+        self.mainplayer.playing = Settings.get().playing
 
     def do_command_line(self, command_line):
         options = command_line.get_options_dict()
