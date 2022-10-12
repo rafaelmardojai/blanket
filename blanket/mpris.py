@@ -54,7 +54,7 @@ class Server:
         try:
             result = getattr(self, method_name)(*args)
 
-            # out_args is atleast (signature1).
+            # out_args is at least (signature1).
             # We therefore always wrap the result as a tuple.
             # Refer to https://bugzilla.gnome.org/show_bug.cgi?id=765603
             result = (result,)

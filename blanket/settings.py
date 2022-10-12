@@ -143,7 +143,7 @@ class Settings(Gio.Settings):
 
     """ Presets helper functions  """
     def get_presets_dict(self):
-        """ Return the presets formated as dict: ID => name. """
+        """ Return the presets formatted as dict: ID => name. """
         presets_dict = {}
         for preset in self.presets:
             presets_dict[preset] = self.get_preset_name(preset)
