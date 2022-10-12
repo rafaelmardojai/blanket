@@ -75,7 +75,7 @@ class PreferencesWindow(Adw.PreferencesWindow):
             request = proxy.RequestBackground('(sa{sv})', identifier, options)
             if request is None:
                 raise Exception("The DBus proxy didn't return an object path."
-                                + "\nThe portal can't suscribe to the signal.")
+                                + "\nThe portal can't subscribe to the signal.")
 
             bus.signal_subscribe(
                 'org.freedesktop.portal.Desktop',

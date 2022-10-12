@@ -48,7 +48,7 @@ class MainPlayer(GObject.GObject):
 
 class SoundObject(GObject.Object):
     """
-    Describe a sound with it's propeties
+    Describe a sound with it's properties
     """
     __gtype_name__ = 'SoundObject'
 
@@ -98,7 +98,7 @@ class SoundPlayer(GstPlay.Play):
         self.sound = sound
         # Create a var to save saved volume
         self.saved_volume = 0.0
-        # Alwas start with volume in 0
+        # Always start with volume in 0
         self.set_volume(0)
 
         # Set SoundObject.uri as player uri
