@@ -28,6 +28,12 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
+                <property name="action-name">app.preferences</property>
+                <property name="title" translatable="yes">Preferences</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
                 <property name="action-name">win.show-help-overlay</property>
                 <property name="title" translatable="yes">Keyboard shortcus</property>
               </object>

@@ -119,7 +119,8 @@ class Application(Adw.Application):
             },
             {
                 'name': 'preferences',
-                'func': self.on_preferences
+                'func': self.on_preferences,
+                'accels': ['<Ctl>comma']
             },
             {
                 'name': 'about',
