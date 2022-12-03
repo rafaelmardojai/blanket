@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Generated with glade 3.22.1 -->
 <interface>
-  <object class="GtkShortcutsWindow" id="shortcuts">
+  <object class="GtkShortcutsWindow" id="help_overlay">
     <child>
       <object class="GtkShortcutsSection">
         <property name="section-name">shortcuts</property>
@@ -24,6 +24,12 @@
               <object class="GtkShortcutsShortcut">
                 <property name="accelerator">&lt;ctrl&gt;W</property>
                 <property name="title" translatable="yes">Close window</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="action-name">win.show-help-overlay</property>
+                <property name="title" translatable="yes">Keyboard shortcus</property>
               </object>
             </child>
             <child>
