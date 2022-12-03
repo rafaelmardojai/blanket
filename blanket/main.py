@@ -122,10 +122,6 @@ class Application(Adw.Application):
                 'func': self.on_preferences
             },
             {
-                'name': 'shortcuts',
-                'func': self.on_shortcuts
-            },
-            {
                 'name': 'about',
                 'func': self.on_about
             },
@@ -219,15 +215,6 @@ class Application(Adw.Application):
     def on_preferences(self, _action, _param):
         window = PreferencesWindow(self.window)
         window.set_transient_for(self.window)
-        window.set_modal(True)
-        window.present()
-
-    def on_shortcuts(self, _action, _param):
-        window = Gtk.Builder.new_from_resource(
-            '/com/rafaelmardojai/Blanket/shortcuts.ui'
-        ).get_object('shortcuts')
-        window.set_transient_for(self.window)
-        window.props.section_name = 'shortcuts'
         window.set_modal(True)
         window.present()
 
