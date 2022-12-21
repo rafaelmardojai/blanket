@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="GtkListItem">
+    <property name="child">
+      <object class="SoundItem">
+
+        <binding name="playing">
+          <lookup name="playing" type="SoundObject">
+            <lookup name="item">GtkListItem</lookup>
+          </lookup>
+        </binding>
+
+        <binding name="title">
+          <lookup name="title" type="SoundObject">
+            <lookup name="item">GtkListItem</lookup>
+          </lookup>
+        </binding>
+
+        <binding name="icon-name">
+          <lookup name="icon-name" type="SoundObject">
+            <lookup name="item">GtkListItem</lookup>
+          </lookup>
+        </binding>
+
+      </object>
+    </property>
+  </template>
+</interface>

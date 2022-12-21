@@ -1,4 +1,30 @@
 
+.sound-bar {
+    padding: 24px;
+}
+
+button.playpause {
+    padding: 9px;
+}
+
+.sound-view {
+    background: @window_bg_color;
+    padding: 0 12px 12px;
+}
+
+.sound-view-scrolled undershoot.top {
+    border-top: 1px solid @borders;
+}
+
+.sound-item image {
+    border-radius: 76px;
+    padding: 12px;
+}
+
+.sound-item image.accent {
+    background: alpha(@accent_bg_color, 0.2);
+}
+
 .soundrow {
     padding: 8px;
 }

@@ -52,6 +52,11 @@ class SoundObject(GObject.Object):
     """
     __gtype_name__ = 'SoundObject'
 
+    playing = GObject.Property(type=bool, default=False)
+    title = GObject.Property(type=str)
+    icon_name = GObject.Property(type=str)
+
+
     def __init__(self, name, uri=None, title=None, mainplayer=None,
                  custom=False, **kwargs):
         super().__init__(**kwargs)
@@ -59,12 +64,19 @@ class SoundObject(GObject.Object):
         resource_tmpl = 'resource:/com/rafaelmardojai/Blanket/sounds/{}.ogg'
         icon_tmpl = 'com.rafaelmardojai.Blanket-{}'
 
+        self.player = None
+
         self.name = name
         self.uri = uri if uri else resource_tmpl.format(name)
         self.title = title if title else name
         self.icon_name = icon_tmpl.format('sound-wave' if custom else name)
         self.mainplayer = mainplayer
         self.custom = custom
+
+        self.connect('notify::playing', self._playing_changed)
+        # Set saved playing state
+        if not self.saved_mute:
+            self.playing = not self.saved_mute
 
     @property
     def saved_volume(self):
@@ -85,6 +97,23 @@ class SoundObject(GObject.Object):
     def remove(self):
         if self.custom:
             Settings.get().remove_custom_audio(self.name)
+
+    def _playing_changed(self, _object, _pspec):
+        if self.player is None:
+            self.player = SoundPlayer(self)
+
+        # Toggle player mute state
+        if self.playing:
+            if self.saved_volume > 0:
+                # self.player.set_virtual_volume(self.saved_volume)
+                self.player.set_virtual_volume(0.5)
+            else:
+                self.player.set_virtual_volume(0.5)
+                self.saved_volume = 0.5
+        else:
+            self.player.set_virtual_volume(0)
+
+        self.saved_mute = not self.playing  # Save playing state
 
 
 class SoundPlayer(GstPlay.Play):
