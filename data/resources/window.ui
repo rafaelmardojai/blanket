@@ -135,17 +135,12 @@
   <menu id="volume-menu">
     <section>
       <item>
-        <attribute name="custom">global_volume</attribute>
-      </item>
-    </section>
-    <section>
-      <item>
         <attribute name="custom">volumes</attribute>
       </item>
     </section>
     <section>
       <item>
-        <attribute name="label" translatable="yes">Reset Volume Levels</attribute>
+        <attribute name="label" translatable="yes">Reset Sounds</attribute>
         <attribute name="action">app.reset-volumes</attribute>
       </item>
     </section>
@@ -172,16 +167,37 @@
   <object class="GtkPopoverMenu" id="volumes">
     <property name="menu-model">volume-menu</property>
     <property name="width-request">250</property>
-    <child type="global_volume">
-      <object class="GtkScale" id="volume">
-        <property name="hexpand">True</property>
-        <property name="adjustment">volume_adjustment</property>
-        <property name="draw_value">False</property>
-      </object>
-    </child>
+
     <child type="volumes">
       <object class="GtkBox">
         <property name="orientation">vertical</property>
+        <property name="spacing">6</property>
+
+        <child>
+          <object class="GtkScale" id="volume">
+            <property name="hexpand">True</property>
+            <property name="adjustment">volume_adjustment</property>
+            <property name="draw_value">False</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkBox" id="volume_box">
+            <property name="orientation">vertical</property>
+            <property name="visible">False</property>
+
+            <child>
+              <object class="GtkSeparator"></object>
+            </child>
+
+            <child>
+              <object class="GtkListBox" id="volume_list">
+                <property name="selection-mode">none</property>
+              </object>
+            </child>
+          </object>
+        </child>
+
       </object>
     </child>
   </object>

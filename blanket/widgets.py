@@ -59,6 +59,17 @@ class SoundItem(Gtk.Box):
             self.icon.add_css_class('accent')
 
 
+@Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/volume-row.ui')
+class VolumeRow(Gtk.ListBoxRow):
+    __gtype_name__ = 'VolumeRow'
+
+    title = GObject.Property(type=str)
+    volume = GObject.Property(type=float)
+
+    def __init__(self):
+        super().__init__()
+
+
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/sound-row.ui')
 class SoundRow(Gtk.ListBoxRow):
     __gtype_name__ = 'SoundRow'
