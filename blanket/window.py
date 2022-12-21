@@ -4,11 +4,11 @@
 import os
 
 from gettext import gettext as _
-from gi.repository import Gio, GLib, GObject, Gtk, Adw
+from gi.repository import GLib, GObject, Gtk, Adw
 
 from blanket.settings import Settings
 from blanket.sound import MainPlayer, SoundObject
-from blanket.widgets import PlayPauseButton
+from blanket.widgets import PlayPauseButton, VolumeRow
 from blanket.presets import PresetChooser
 
 
@@ -20,7 +20,10 @@ class BlanketWindow(Adw.ApplicationWindow):
     grid = Gtk.Template.Child()
     playpause_btn: PlayPauseButton = Gtk.Template.Child()
     menu = Gtk.Template.Child()
+    volumes = Gtk.Template.Child()
     volume = Gtk.Template.Child()
+    volume_box = Gtk.Template.Child()
+    volume_list = Gtk.Template.Child()
     presets_chooser: PresetChooser = Gtk.Template.Child()
 
     name_binding = None
@@ -50,6 +53,23 @@ class BlanketWindow(Adw.ApplicationWindow):
         self.grid.props.model = selection
         self.grid.connect('activate', self._on_grid_activate)
 
+        # Wire playpause button
+        MainPlayer.get().bind_property(
+            'playing', self.playpause_btn, 'playing',
+            GObject.BindingFlags.SYNC_CREATE
+        )
+
+        # Setup presets widgets
+        self.setup_presets()
+        # Setup volume
+        self.setup_volume_menu()
+
+    def setup_presets(self):
+        self.presets_chooser.connect('selected', self._on_preset_selected)
+        self.update_title(self.presets_chooser.selected)
+        self.mpris.update_title(self.presets_chooser.selected.name)
+
+    def setup_volume_menu(self):
         # Get volume scale adjustment
         vol_adjustment = self.volume.get_adjustment()
         # Bind volume scale value with main player volume
@@ -59,24 +79,25 @@ class BlanketWindow(Adw.ApplicationWindow):
         # Set volume scale value on first run
         self.volume.set_value(MainPlayer.get().volume)
 
-        # Wire playpause button
-        MainPlayer.get().bind_property(
-            'playing', self.playpause_btn, 'playing',
-            GObject.BindingFlags.SYNC_CREATE
+        # Setup volume list
+        self.volume_filter = Gtk.CustomFilter.new(
+            match_func=lambda item: item.playing
+        )
+        model = Gtk.FilterListModel(
+            model=MainPlayer.get(),
+            filter=self.volume_filter
+        )
+        model.connect('items-changed', self._volume_model_changed)
+        self.volume_box.props.visible = model.get_n_items() > 0
+        self.volume_list.bind_model(model, self._create_vol_row)
+
+        # Connect mainplayer reset-volumes signal
+        MainPlayer.get().connect(
+            'reset-volumes',
+            self._on_reset_volumes
         )
 
-        # Setup presets widgets
-        self.setup_presets()
-        # Setup included/saved sounds
-        self.setup_sounds()
-
-    def setup_presets(self):
-        self.presets_chooser.connect('selected', self._on_preset_selected)
-        self.update_title(self.presets_chooser.selected)
-        self.mpris.update_title(self.presets_chooser.selected.name)
-
-
-
+        self.volumes.connect('closed', self._volumes_popup_closed)
 
     def open_audio(self):
         def on_response(_filechooser, _id):
@@ -130,17 +151,50 @@ class BlanketWindow(Adw.ApplicationWindow):
         else:
             self.set_title(_('Blanket'))
 
+    def _create_vol_row(self, sound):
+        row = VolumeRow()
+
+        row.volume = sound.saved_volume
+        sound.bind_property(
+            'saved_volume',
+            row,
+            'volume',
+            GObject.BindingFlags.BIDIRECTIONAL
+        )
+
+        sound.bind_property(
+            'title',
+            row,
+            'title',
+            GObject.BindingFlags.SYNC_CREATE
+        )
+
+        return row
+
     def _on_grid_activate(self, _grid, position):
         sound = MainPlayer.get().get_item(position)
         sound.playing = not sound.playing
+
+        # Update volumes list
+        self.volume_filter.changed(Gtk.FilterChange.DIFFERENT)
+
+    def _on_reset_volumes(self, _player):
+        self.volume_filter.changed(Gtk.FilterChange.DIFFERENT)
+
+    def _volume_model_changed(self, model, _pos, _del, _add):
+        # Hide volumes list if empty
+        self.volume_box.props.visible = model.get_n_items() > 0
+
+    def _volumes_popup_closed(self, _popover):
+        # Disable sounds with volume = 0
+        MainPlayer.get().mute_vol_zero()
+        # Update volumes list
+        self.volume_filter.changed(Gtk.FilterChange.DIFFERENT)
 
     def _on_preset_selected(self, _chooser, preset):
         MainPlayer.get().preset_changed()
         self.update_title(preset)
         self.mpris.update_title(preset.name)
-
-    def _on_reset_volumes(self, _control, _preset):
-        MainPlayer.get().reset_volumes()
 
     def _on_add_sound_clicked(self, _group):
         self.open_audio()

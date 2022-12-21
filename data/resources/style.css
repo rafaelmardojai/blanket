@@ -3,6 +3,19 @@
     padding: 24px;
 }
 
+.volume-row {
+    padding: 0;
+}
+.volume-row:hover {
+    background: none;
+}
+.volume-row label {
+    padding: 12px 0 0 12px;
+}
+.volume-row scale {
+    padding: 6px 12px 12px;
+}
+
 button.playpause {
     padding: 9px;
 }

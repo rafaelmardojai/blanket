@@ -136,6 +136,11 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
             sound = SoundObject(name, uri=uri, custom=True)
             self.append(sound)
 
+    def mute_vol_zero(self):
+        for sound in self:
+            if sound.saved_volume == 0:
+                sound.playing = False
+
     def preset_changed(self):
         self.playing = True
         self.emit('preset-changed')
@@ -144,6 +149,9 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         self.emit('reset-volumes')
 
     def _on_playing(self, _player, _param):
+        """
+        Toggle suspension inhibition when playing
+        """
         app = Gtk.Application.get_default()
 
         if self.playing:
@@ -191,14 +199,13 @@ class SoundObject(GObject.Object):
     title = GObject.Property(type=str)
     icon_name = GObject.Property(type=str)
 
-
     def __init__(self, name, uri=None, title=None, custom=False, **kwargs):
         super().__init__(**kwargs)
 
         resource_tmpl = 'resource:/com/rafaelmardojai/Blanket/sounds/{}.ogg'
         icon_tmpl = 'com.rafaelmardojai.Blanket-{}'
 
-        self.player = None
+        self._player = None
 
         self.name = name
         self.uri = uri if uri else resource_tmpl.format(name)
@@ -211,12 +218,26 @@ class SoundObject(GObject.Object):
         if not self.saved_mute:
             self.playing = not self.saved_mute
 
+        # Connect mainplayer reset-volumes signal
+        MainPlayer.get().connect(
+            'reset-volumes',
+            self._on_reset_volumes
+        )
+
     @property
+    def player(self):
+        if self._player is None:
+            self._player = SoundPlayer(self)
+        return self._player
+
+    @GObject.Property(type=float)
     def saved_volume(self):
         return Settings.get().get_sound_volume(self.name)
 
     @saved_volume.setter
     def saved_volume(self, volume):
+        volume = round(volume, 2)
+        self.player.set_virtual_volume(volume)
         Settings.get().set_sound_volume(self.name, volume)
 
     @property
@@ -232,14 +253,10 @@ class SoundObject(GObject.Object):
             Settings.get().remove_custom_audio(self.name)
 
     def _playing_changed(self, _object, _pspec):
-        if self.player is None:
-            self.player = SoundPlayer(self)
-
         # Toggle player mute state
         if self.playing:
             if self.saved_volume > 0:
-                # self.player.set_virtual_volume(self.saved_volume)
-                self.player.set_virtual_volume(0.5)
+                self.player.set_virtual_volume(self.saved_volume)
             else:
                 self.player.set_virtual_volume(0.5)
                 self.saved_volume = 0.5
@@ -247,6 +264,10 @@ class SoundObject(GObject.Object):
             self.player.set_virtual_volume(0)
 
         self.saved_mute = not self.playing  # Save playing state
+
+    def _on_reset_volumes(self, _player):
+        self.saved_volume = 0.0
+        self.playing = False
 
 
 class SoundPlayer(GstPlay.Play):
