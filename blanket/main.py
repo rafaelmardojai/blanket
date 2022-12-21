@@ -72,8 +72,6 @@ class Application(Adw.Application):
         self.window_hidden = False
         # App version
         self.version = version
-        # App main player
-        self.mainplayer = None
 
     def do_startup(self):
         # Startup application
@@ -83,9 +81,6 @@ class Application(Adw.Application):
         # if the system doesn't support libadwaita color schemes, fall back to our setting
         if Settings.get().dark_mode and not style_manager.props.system_supports_color_schemes:
             style_manager.props.color_scheme = Adw.ColorScheme.FORCE_DARK
-
-        # App main player
-        self.mainplayer = MainPlayer()
 
         # Start MPRIS server
         self.mpris = MPRIS(self)
@@ -155,7 +150,7 @@ class Application(Adw.Application):
     def do_activate(self):
         self.window = self.props.active_window
         if not self.window:
-            self.window = BlanketWindow(self.mainplayer, self.mpris, application=self)
+            self.window = BlanketWindow(self.mpris, application=self)
 
         self.window.props.hide_on_close = Settings.get().background
 
@@ -169,8 +164,8 @@ class Application(Adw.Application):
         self.window.connect('close-request', self._on_window_close_request)
 
         # Load saved props
-        self.mainplayer.volume = Settings.get().volume
-        self.mainplayer.playing = Settings.get().playing
+        MainPlayer.get().volume = Settings.get().volume
+        MainPlayer.get().playing = Settings.get().playing
 
     def do_command_line(self, command_line):
         options = command_line.get_options_dict()
@@ -187,20 +182,20 @@ class Application(Adw.Application):
 
     def on_playpause(self, _action=None, _param=None):
         # Reverse self.playing bool value
-        playing = self.mainplayer.playing
+        playing = MainPlayer.get().playing
         playing = False if playing else True
 
         # Change mainplayer playing
-        self.mainplayer.playing = playing
+        MainPlayer.get().playing = playing
 
     def on_play(self, _action=None, _param=None):
-        self.mainplayer.playing = True
+        MainPlayer.get().playing = True
 
     def on_pause(self, _action=None, _param=None):
-        self.mainplayer.playing = False
+        MainPlayer.get().playing = False
 
     def on_reset_volumes(self, _action, _param):
-        self.mainplayer.reset_volumes()
+        MainPlayer.get().reset_volumes()
 
     def on_add_preset(self, _action, _param):
         dialog = PresetDialog()
@@ -244,9 +239,9 @@ class Application(Adw.Application):
 
     def _save_settings(self):
         # Save mainplayer volume
-        Settings.get().volume = self.mainplayer.volume
+        Settings.get().volume = MainPlayer.get().volume
         # Save mainplayer playing state
-        Settings.get().playing = self.mainplayer.playing
+        Settings.get().playing = MainPlayer.get().playing
         # Save presets settings
         Settings.get().save_presets()
 

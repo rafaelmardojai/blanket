@@ -10,6 +10,9 @@ class MainPlayer(GObject.GObject):
     """
     Virtual app sounds player
     """
+    _instance = None
+    _cookie = 0
+
     __gtype_name__ = 'MainPlayer'
     __gsignals__ = {
         'preset-changed': (GObject.SIGNAL_RUN_FIRST, None, ()),
@@ -22,9 +25,14 @@ class MainPlayer(GObject.GObject):
     def __init__(self):
         super().__init__()
 
-        self.cookie = 0
-
         self.connect('notify::playing', self._on_playing)
+
+    @classmethod
+    def get(cls):
+        """Return an active instance of Settings."""
+        if cls._instance is None:
+            cls._instance = MainPlayer()
+        return cls._instance
 
     def preset_changed(self):
         self.playing = True
@@ -37,13 +45,13 @@ class MainPlayer(GObject.GObject):
         app = Gtk.Application.get_default()
 
         if self.playing:
-            self.cookie = app.inhibit(
+            self._cookie = app.inhibit(
                 None,
                 Gtk.ApplicationInhibitFlags.SUSPEND,
                 'Playback in progress'
             )
-        elif self.cookie != 0:
-            app.uninhibit(self.cookie)
+        elif self._cookie != 0:
+            app.uninhibit(self._cookie)
 
 
 class SoundObject(GObject.Object):
@@ -57,8 +65,7 @@ class SoundObject(GObject.Object):
     icon_name = GObject.Property(type=str)
 
 
-    def __init__(self, name, uri=None, title=None, mainplayer=None,
-                 custom=False, **kwargs):
+    def __init__(self, name, uri=None, title=None, custom=False, **kwargs):
         super().__init__(**kwargs)
 
         resource_tmpl = 'resource:/com/rafaelmardojai/Blanket/sounds/{}.ogg'
@@ -70,7 +77,6 @@ class SoundObject(GObject.Object):
         self.uri = uri if uri else resource_tmpl.format(name)
         self.title = title if title else name
         self.icon_name = icon_tmpl.format('sound-wave' if custom else name)
-        self.mainplayer = mainplayer
         self.custom = custom
 
         self.connect('notify::playing', self._playing_changed)
@@ -142,11 +148,11 @@ class SoundPlayer(GstPlay.Play):
         bus.connect('message', self._on_bus_message)
 
         # Connect mainplayer volume signal
-        self.volume_hdlr = self.sound.mainplayer.connect(
+        self.volume_hdlr = MainPlayer.get().connect(
             'notify::volume',
             self._on_main_volume_changed)
         # Connect mainplayer muted signal
-        self.playing_hdlr = self.sound.mainplayer.connect(
+        self.playing_hdlr = MainPlayer.get().connect(
             'notify::playing',
             self._on_playing_changed)
 
@@ -157,7 +163,7 @@ class SoundPlayer(GstPlay.Play):
         # Get last saved sound volume
         self.saved_volume = volume
         # Multiply sound volume with mainplayer volume
-        volume = self.saved_volume * self.sound.mainplayer.volume
+        volume = self.saved_volume * MainPlayer.get().volume
         # Set final volume to player
         self.set_volume(volume)
 
@@ -165,26 +171,26 @@ class SoundPlayer(GstPlay.Play):
         # Stop player
         self.stop()
         # Disconnect main player signals
-        self.sound.mainplayer.disconnect(self.volume_hdlr)
-        self.sound.mainplayer.disconnect(self.playing_hdlr)
+        MainPlayer.get().disconnect(self.volume_hdlr)
+        MainPlayer.get().disconnect(self.playing_hdlr)
 
     def _on_playing_changed(self, _player, _volume):
         if not self.__vol_zero():
-            if self.sound.mainplayer.playing:
+            if MainPlayer.get().playing:
                 self.play()
             else:
                 self.pause()
 
     def _on_volume_changed(self, _player, _volume):
         # Fix external changes to player volume
-        volume = self.saved_volume * self.sound.mainplayer.volume
+        volume = self.saved_volume * MainPlayer.get().volume
         if volume > 0 and self.get_volume() == 0.0:
             self.set_volume(volume)
             return
         # Only play if volume > 0
         if self.__vol_zero():
             self.pause()
-        elif self.sound.mainplayer.playing:
+        elif MainPlayer.get().playing:
             self.play()
 
     def _on_main_volume_changed(self, _player, _volume):

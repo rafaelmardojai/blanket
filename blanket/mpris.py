@@ -14,6 +14,8 @@ from gi.repository import Gio, GLib, Gtk
 
 from random import randint
 
+from blanket.sound import MainPlayer
+
 
 class Server:
 
@@ -150,10 +152,10 @@ class MPRIS(Server):
                                        None)
         Server.__init__(self, self.__bus, self.__MPRIS_PATH)
 
-        self.app.mainplayer.connect(
+        MainPlayer.get().connect(
             "notify::playing", self._on_playing_changed
         )
-        self.app.mainplayer.connect("notify::volume", self._on_volume_changed)
+        MainPlayer.get().connect("notify::volume", self._on_volume_changed)
 
     def Raise(self):
         self.app.window.present_with_time(Gtk.get_current_event_time())
@@ -185,7 +187,7 @@ class MPRIS(Server):
             return GLib.Variant("a{sv}", self.__metadata)
         elif property_name == "Volume":
             return GLib.Variant(
-                "d", self.app.mainplayer.volume
+                "d", MainPlayer.get().volume
             )
         else:
             return GLib.Variant("b", False)
@@ -210,7 +212,7 @@ class MPRIS(Server):
 
     def Set(self, interface, property_name, new_value):
         if property_name == "Volume":
-            self.app.mainplayer.volume = new_value
+            MainPlayer.get().volume = new_value
 
     def PropertiesChanged(self, interface_name, changed_properties,
                           invalidated_properties):
@@ -233,7 +235,7 @@ class MPRIS(Server):
         self.PropertiesChanged(self.__MPRIS_PLAYER_IFACE, changed_properties, [])
 
     def _get_status(self):
-        playing = self.app.mainplayer.playing
+        playing = MainPlayer.get().playing
         if playing:
             return "Playing"
         else:
@@ -245,7 +247,7 @@ class MPRIS(Server):
             {
                 "Volume": GLib.Variant(
                     "d",
-                    self.app.mainplayer.volume
+                    MainPlayer.get().volume
                 ),
             },
             []

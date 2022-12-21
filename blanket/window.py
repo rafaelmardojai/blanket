@@ -7,7 +7,7 @@ from gettext import gettext as _
 from gi.repository import Gio, GLib, GObject, Gtk, Adw
 
 from blanket.settings import Settings
-from blanket.sound import SoundObject
+from blanket.sound import MainPlayer, SoundObject
 from blanket.widgets import PlayPauseButton
 from blanket.presets import PresetChooser
 
@@ -104,14 +104,13 @@ class BlanketWindow(Adw.ApplicationWindow):
 
     name_binding = None
 
-    def __init__(self, mainplayer, mpris, **kwargs):
+    def __init__(self, mpris, **kwargs):
         super().__init__(**kwargs)
 
         # Set default window icon for window managers
         self.set_default_icon_name('com.rafaelmardojai.Blanket')
 
         # Main player & MPRIS server object
-        self.mainplayer = mainplayer
         self.mpris = mpris
 
         # Setup widgets
@@ -134,14 +133,14 @@ class BlanketWindow(Adw.ApplicationWindow):
         # Get volume scale adjustment
         vol_adjustment = self.volume.get_adjustment()
         # Bind volume scale value with main player volume
-        vol_adjustment.bind_property('value', self.mainplayer,
+        vol_adjustment.bind_property('value', MainPlayer.get(),
                                      'volume',
                                      GObject.BindingFlags.BIDIRECTIONAL)
         # Set volume scale value on first run
-        self.volume.set_value(self.mainplayer.volume)
+        self.volume.set_value(MainPlayer.get().volume)
 
         # Wire playpause button
-        self.mainplayer.bind_property(
+        MainPlayer.get().bind_property(
             'playing', self.playpause_btn, 'playing',
             GObject.BindingFlags.SYNC_CREATE
         )
@@ -164,16 +163,13 @@ class BlanketWindow(Adw.ApplicationWindow):
             # Iterate sounds
             for s in g['sounds']:
                 # Create a new SoundObject
-                sound = SoundObject(s['name'], title=s['title'],
-                                    mainplayer=self.mainplayer)
+                sound = SoundObject(s['name'], title=s['title'])
                 self.model.append(sound)
 
         # Load saved custom audios
         for name, uri in Settings.get().custom_audios.items():
             # Create a new SoundObject
-            sound = SoundObject(
-                name, uri=uri, mainplayer=self.mainplayer, custom=True
-            )
+            sound = SoundObject(name, uri=uri, custom=True)
             self.model.append(sound)
 
     def open_audio(self):
@@ -185,9 +181,7 @@ class BlanketWindow(Adw.ApplicationWindow):
                 uri = gfile.get_uri()
 
                 # Create a new SoundObject
-                sound = SoundObject(
-                    name, uri=uri, mainplayer=self.mainplayer, custom=True
-                )
+                sound = SoundObject(name, uri=uri, custom=True)
                 # Save to settings
                 GLib.idle_add(Settings.get().add_custom_audio,
                               sound.name, sound.uri)
@@ -235,12 +229,12 @@ class BlanketWindow(Adw.ApplicationWindow):
         sound.playing = not sound.playing
 
     def _on_preset_selected(self, _chooser, preset):
-        self.mainplayer.preset_changed()
+        MainPlayer.get().preset_changed()
         self.update_title(preset)
         self.mpris.update_title(preset.name)
 
     def _on_reset_volumes(self, _control, _preset):
-        self.mainplayer.reset_volumes()
+        MainPlayer.get().reset_volumes()
 
     def _on_add_sound_clicked(self, _group):
         self.open_audio()
