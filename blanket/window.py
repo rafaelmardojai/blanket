@@ -11,85 +11,6 @@ from blanket.sound import MainPlayer, SoundObject
 from blanket.widgets import PlayPauseButton
 from blanket.presets import PresetChooser
 
-SOUNDS = [
-    {
-        'name': _('Nature'),
-        'sounds': [
-            {
-                'name': 'rain',
-                'title': _('Rain')
-            },
-            {
-                'name': 'storm',
-                'title': _('Storm')
-            },
-            {
-                'name': 'wind',
-                'title': _('Wind')
-            },
-            {
-                'name': 'waves',
-                'title': _('Waves')
-            },
-            {
-                'name': 'stream',
-                'title': _('Stream')
-            },
-            {
-                'name': 'birds',
-                'title': _('Birds')
-            },
-            {
-                'name': 'summer-night',
-                'title': _('Summer Night')
-            }
-        ]
-    },
-    {
-        'name': _('Travel'),
-        'sounds': [
-            {
-                'name': 'train',
-                'title': _('Train')
-            },
-            {
-                'name': 'boat',
-                'title': _('Boat')
-            },
-            {
-                'name': 'city',
-                'title': _('City')
-            }
-        ]
-    },
-    {
-        'name': _('Interiors'),
-        'sounds': [
-            {
-                'name': 'coffee-shop',
-                'title': _('Coffee Shop')
-            },
-            {
-                'name': 'fireplace',
-                'title': _('Fireplace')
-            }
-        ]
-    },
-    {
-        'name': _('Noise'),
-        'sounds': [
-            {
-                'name': 'pink-noise',
-                'title': _('Pink Noise')
-            },
-            {
-                'name': 'white-noise',
-                'title': _('White Noise')
-            }
-        ]
-    }
-]
-
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/window.ui')
 class BlanketWindow(Adw.ApplicationWindow):
@@ -117,11 +38,10 @@ class BlanketWindow(Adw.ApplicationWindow):
         self.setup()
 
     def setup(self):
-        # Sounds model
-        self.model = Gio.ListStore(item_type=SoundObject)
-
         # Setup grid
-        selection = Gtk.NoSelection(model=self.model)
+        model = MainPlayer.get()
+        model.populate_sounds()
+        selection = Gtk.NoSelection(model=model)
         factory = Gtk.BuilderListItemFactory.new_from_resource(
             None, '/com/rafaelmardojai/Blanket/grid-item.ui'
         )
@@ -155,22 +75,8 @@ class BlanketWindow(Adw.ApplicationWindow):
         self.update_title(self.presets_chooser.selected)
         self.mpris.update_title(self.presets_chooser.selected.name)
 
-        items = self.presets_chooser.model.get_n_items()
 
-    def setup_sounds(self):
-        # Setup default sounds
-        for g in SOUNDS:
-            # Iterate sounds
-            for s in g['sounds']:
-                # Create a new SoundObject
-                sound = SoundObject(s['name'], title=s['title'])
-                self.model.append(sound)
 
-        # Load saved custom audios
-        for name, uri in Settings.get().custom_audios.items():
-            # Create a new SoundObject
-            sound = SoundObject(name, uri=uri, custom=True)
-            self.model.append(sound)
 
     def open_audio(self):
         def on_response(_filechooser, _id):
@@ -186,7 +92,7 @@ class BlanketWindow(Adw.ApplicationWindow):
                 GLib.idle_add(Settings.get().add_custom_audio,
                               sound.name, sound.uri)
                 # Add SoundObject to SoundsGroup
-                self.model.append(sound)
+                MainPlayer.get().append(sound)
 
         filters = {
             'Ogg': ['audio/ogg'],
@@ -225,7 +131,7 @@ class BlanketWindow(Adw.ApplicationWindow):
             self.set_title(_('Blanket'))
 
     def _on_grid_activate(self, _grid, position):
-        sound = self.model.get_item(position)
+        sound = MainPlayer.get().get_item(position)
         sound.playing = not sound.playing
 
     def _on_preset_selected(self, _chooser, preset):

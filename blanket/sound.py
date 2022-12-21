@@ -1,17 +1,101 @@
 # Copyright 2020-2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import GObject, Gtk, Gst, GstPlay
+from gettext import gettext as _
+from gi.repository import Gio, GObject, Gtk, Gst, GstPlay
 
 from blanket.settings import Settings
 
 
-class MainPlayer(GObject.GObject):
+SOUNDS = [
+    {
+        'name': _('Nature'),
+        'sounds': [
+            {
+                'name': 'rain',
+                'title': _('Rain')
+            },
+            {
+                'name': 'storm',
+                'title': _('Storm')
+            },
+            {
+                'name': 'wind',
+                'title': _('Wind')
+            },
+            {
+                'name': 'waves',
+                'title': _('Waves')
+            },
+            {
+                'name': 'stream',
+                'title': _('Stream')
+            },
+            {
+                'name': 'birds',
+                'title': _('Birds')
+            },
+            {
+                'name': 'summer-night',
+                'title': _('Summer Night')
+            }
+        ]
+    },
+    {
+        'name': _('Travel'),
+        'sounds': [
+            {
+                'name': 'train',
+                'title': _('Train')
+            },
+            {
+                'name': 'boat',
+                'title': _('Boat')
+            },
+            {
+                'name': 'city',
+                'title': _('City')
+            }
+        ]
+    },
+    {
+        'name': _('Interiors'),
+        'sounds': [
+            {
+                'name': 'coffee-shop',
+                'title': _('Coffee Shop')
+            },
+            {
+                'name': 'fireplace',
+                'title': _('Fireplace')
+            }
+        ]
+    },
+    {
+        'name': _('Noise'),
+        'sounds': [
+            {
+                'name': 'pink-noise',
+                'title': _('Pink Noise')
+            },
+            {
+                'name': 'white-noise',
+                'title': _('White Noise')
+            }
+        ]
+    }
+]
+
+
+class MainPlayer(GObject.GObject, Gio.ListModel):
     """
     Virtual app sounds player
+
+    It also implements Gio.ListModel and stores the app sound list.
     """
     _instance = None
     _cookie = 0
+    _sounds = []  # SoundObject list
 
     __gtype_name__ = 'MainPlayer'
     __gsignals__ = {
@@ -22,17 +106,35 @@ class MainPlayer(GObject.GObject):
     playing = GObject.Property(type=bool, default=True)
     volume = GObject.Property(type=float, default=0)
 
-    def __init__(self):
-        super().__init__()
-
-        self.connect('notify::playing', self._on_playing)
-
     @classmethod
     def get(cls):
         """Return an active instance of Settings."""
         if cls._instance is None:
             cls._instance = MainPlayer()
         return cls._instance
+
+    def __init__(self):
+        super().__init__()
+        self.connect('notify::playing', self._on_playing)
+
+    def populate_sounds(self):
+        """
+        Populate default and saved sounds
+        """
+
+        # Self populate
+        for g in SOUNDS:
+            # Iterate sounds
+            for s in g['sounds']:
+                # Create a new SoundObject
+                sound = SoundObject(s['name'], title=s['title'])
+                self.append(sound)
+
+        # Load saved custom audios
+        for name, uri in Settings.get().custom_audios.items():
+            # Create a new SoundObject
+            sound = SoundObject(name, uri=uri, custom=True)
+            self.append(sound)
 
     def preset_changed(self):
         self.playing = True
@@ -52,6 +154,31 @@ class MainPlayer(GObject.GObject):
             )
         elif self._cookie != 0:
             app.uninhibit(self._cookie)
+
+    """
+    ListModel methods
+    """
+
+    def __iter__(self):
+        return iter(self._sounds)
+
+    def do_get_item(self, position):
+        return self._sounds[position]
+
+    def do_get_item_type(self):
+        return SoundObject
+
+    def do_get_n_items(self):
+        return len(self._sounds)
+
+    def append(self, sound):
+        if isinstance(sound, SoundObject):
+            self._sounds.append(sound)
+            self.items_changed(len(self._sounds) - 1, 0, 1)
+
+    def remove(self, position):
+        del self._sounds[position]
+        self.items_changed(position, 1, 0)
 
 
 class SoundObject(GObject.Object):
