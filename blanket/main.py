@@ -243,8 +243,6 @@ class Application(Adw.Application):
         self.quit()
 
     def _save_settings(self):
-        # Save scroll position
-        Settings.get().scroll_position = self.window.vscroll.get_value()
         # Save mainplayer volume
         Settings.get().volume = self.mainplayer.volume
         # Save mainplayer playing state

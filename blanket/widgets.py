@@ -15,6 +15,10 @@ class PlayPauseButton(Gtk.Button):
     def __init__(self):
         super().__init__()
 
+        self.add_css_class('playpause')
+        self.add_css_class('circular')
+        self.add_css_class('suggested-action')
+
         self.connect('notify::playing', self._on_playing_changed)
 
     def _on_playing_changed(self, _object, _pspec):
@@ -22,6 +26,37 @@ class PlayPauseButton(Gtk.Button):
             self.set_icon_name('media-playback-pause-symbolic')
         else:
             self.set_icon_name('media-playback-start-symbolic')
+
+
+class SoundItem(Gtk.Box):
+    __gtype_name__ = 'SoundItem'
+
+    playing = GObject.Property(type=bool, default=False)
+    title = GObject.Property(type=str)
+    icon_name = GObject.Property(type=str)
+
+    def __init__(self):
+        super().__init__()
+
+        self.props.orientation = Gtk.Orientation.VERTICAL
+        self.props.spacing = 6
+        self.add_css_class('sound-item')
+
+        self.connect('notify::playing', self._playing_changed)
+
+        self.icon = Gtk.Image(pixel_size=64, halign=Gtk.Align.CENTER)
+        self.bind_property('icon_name', self.icon, 'icon_name', GObject.BindingFlags.SYNC_CREATE)
+        self.append(self.icon)
+
+        self.label = Gtk.Label()
+        self.bind_property('title', self.label, 'label', GObject.BindingFlags.SYNC_CREATE)
+        self.append(self.label)
+
+    def _playing_changed(self, _object, _pspec):
+        if not self.playing:
+            self.icon.remove_css_class('accent')
+        elif not self.icon.has_css_class('accent'):
+            self.icon.add_css_class('accent')
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/sound-row.ui')

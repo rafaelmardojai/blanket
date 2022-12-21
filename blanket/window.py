@@ -4,11 +4,11 @@
 import os
 
 from gettext import gettext as _
-from gi.repository import GLib, GObject, Gtk, Adw
+from gi.repository import Gio, GLib, GObject, Gtk, Adw
 
 from blanket.settings import Settings
 from blanket.sound import SoundObject
-from blanket.widgets import PlayPauseButton, SoundsGroup
+from blanket.widgets import PlayPauseButton
 from blanket.presets import PresetChooser
 
 SOUNDS = [
@@ -96,11 +96,8 @@ class BlanketWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'BlanketWindow'
 
     headerbar = Gtk.Template.Child()
-    scrolled_window = Gtk.Template.Child()
-    box = Gtk.Template.Child()
-
+    grid = Gtk.Template.Child()
     playpause_btn: PlayPauseButton = Gtk.Template.Child()
-
     menu = Gtk.Template.Child()
     volume = Gtk.Template.Child()
     presets_chooser: PresetChooser = Gtk.Template.Child()
@@ -121,6 +118,19 @@ class BlanketWindow(Adw.ApplicationWindow):
         self.setup()
 
     def setup(self):
+        # Sounds model
+        self.model = Gio.ListStore(item_type=SoundObject)
+
+        # Setup grid
+        selection = Gtk.NoSelection(model=self.model)
+        factory = Gtk.BuilderListItemFactory.new_from_resource(
+            None, '/com/rafaelmardojai/Blanket/grid-item.ui'
+        )
+
+        self.grid.props.factory = factory
+        self.grid.props.model = selection
+        self.grid.connect('activate', self._on_grid_activate)
+
         # Get volume scale adjustment
         vol_adjustment = self.volume.get_adjustment()
         # Bind volume scale value with main player volume
@@ -140,14 +150,6 @@ class BlanketWindow(Adw.ApplicationWindow):
         self.setup_presets()
         # Setup included/saved sounds
         self.setup_sounds()
-        self.setup_custom_sounds()
-
-        # Get saved scroll position
-        saved_scroll = Settings.get().scroll_position
-        # Get scrolled window vertical adjustment
-        self.vscroll = self.scrolled_window.get_vadjustment()
-        # Set saved scroll to vertical adjustment
-        self.vscroll.set_value(saved_scroll)
 
     def setup_presets(self):
         self.presets_chooser.connect('selected', self._on_preset_selected)
@@ -159,24 +161,12 @@ class BlanketWindow(Adw.ApplicationWindow):
     def setup_sounds(self):
         # Setup default sounds
         for g in SOUNDS:
-            # Create a new SoundsGroup
-            group = SoundsGroup(g['name'])
             # Iterate sounds
             for s in g['sounds']:
                 # Create a new SoundObject
                 sound = SoundObject(s['name'], title=s['title'],
                                     mainplayer=self.mainplayer)
-                # Add SoundObject to SoundsGroup
-                group.add(sound)
-
-            # Add SoundsGroup to the window's main box
-            self.box.append(group)
-
-    def setup_custom_sounds(self):
-        # Setup user custom sounds
-        self.custom_sounds = SoundsGroup(_('Custom'), True)
-        self.custom_sounds.connect('add-clicked', self._on_add_sound_clicked)
-        self.box.append(self.custom_sounds)
+                self.model.append(sound)
 
         # Load saved custom audios
         for name, uri in Settings.get().custom_audios.items():
@@ -184,8 +174,7 @@ class BlanketWindow(Adw.ApplicationWindow):
             sound = SoundObject(
                 name, uri=uri, mainplayer=self.mainplayer, custom=True
             )
-            # Add SoundObject to SoundsGroup
-            self.custom_sounds.add(sound)
+            self.model.append(sound)
 
     def open_audio(self):
         def on_response(_filechooser, _id):
@@ -203,7 +192,7 @@ class BlanketWindow(Adw.ApplicationWindow):
                 GLib.idle_add(Settings.get().add_custom_audio,
                               sound.name, sound.uri)
                 # Add SoundObject to SoundsGroup
-                self.custom_sounds.add(sound)
+                self.model.append(sound)
 
         filters = {
             'Ogg': ['audio/ogg'],
@@ -240,6 +229,10 @@ class BlanketWindow(Adw.ApplicationWindow):
             )
         else:
             self.set_title(_('Blanket'))
+
+    def _on_grid_activate(self, _grid, position):
+        sound = self.model.get_item(position)
+        sound.playing = not sound.playing
 
     def _on_preset_selected(self, _chooser, preset):
         self.mainplayer.preset_changed()

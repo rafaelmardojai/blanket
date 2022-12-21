@@ -9,11 +9,6 @@
         <property name="orientation">vertical</property>
         <child>
           <object class="AdwHeaderBar" id="headerbar">
-            <child type="start">
-              <object class="PlayPauseButton" id="playpause_btn">
-                <property name="action_name">app.playpause</property>
-              </object>
-            </child>
             <child type="end">
               <object class="GtkMenuButton">
                 <property name="popover">menu</property>
@@ -22,28 +17,68 @@
             </child>
           </object>
         </child>
+
         <child>
-          <object class="GtkScrolledWindow" id="scrolled_window">
+          <object class="GtkCenterBox">
+            <style>
+              <class name="sound-bar"/>
+            </style>
+
+            <child type="center">
+              <object class="GtkBox">
+                <property name="spacing">24</property>
+
+                <child>
+                  <object class="GtkMenuButton">
+                    <property name="popover">volumes</property>
+                    <property name="valign">center</property>
+                    <property name="icon_name">audio-speakers-symbolic</property>
+
+                    <style>
+                      <class name="circular"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="PlayPauseButton" id="playpause_btn">
+                    <property name="action_name">app.playpause</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkMenuButton">
+                    <property name="menu-model">more-menu</property>
+                    <property name="valign">center</property>
+                    <property name="icon_name">view-more-symbolic</property>
+
+                    <style>
+                      <class name="circular"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+
+          </object>
+        </child>
+
+        <child>
+          <object class="GtkScrolledWindow">
             <property name="hscrollbar_policy">never</property>
             <property name="hexpand">True</property>
             <property name="vexpand">True</property>
+
+            <style>
+              <class name="sound-view-scrolled" />
+            </style>
+
+
             <child>
-              <object class="GtkViewport">
-                <property name="scroll_to_focus">True</property>
-                <child>
-                  <object class="AdwClamp">
-                    <child>
-                      <object class="GtkBox" id="box">
-                        <property name="orientation">vertical</property>
-                        <property name="spacing">24</property>
-                        <property name="margin_top">24</property>
-                        <property name="margin_bottom">24</property>
-                        <property name="margin_start">6</property>
-                        <property name="margin_end">6</property>
-                      </object>
-                    </child>
-                  </object>
-                </child>
+              <object class="GtkGridView" id="grid">
+                <property name="single-click-activate">True</property>
+
+                <style>
+                  <class name="sound-view"/>
+                </style>
               </object>
             </child>
           </object>
@@ -53,11 +88,6 @@
   </template>
 
   <menu id="primary-menu">
-    <section>
-      <item>
-        <attribute name="custom">volume_preference</attribute>
-      </item>
-    </section>
     <section>
       <submenu>
         <attribute name="label" translatable="yes">Presets</attribute>
@@ -73,10 +103,6 @@
           </item>
         </section>
       </submenu>
-      <item>
-        <attribute name="label" translatable="yes">Reset Volume Levels</attribute>
-        <attribute name="action">app.reset-volumes</attribute>
-      </item>
     </section>
     <section>
       <item>
@@ -105,34 +131,61 @@
       </item>
     </section>
   </menu>
+
+  <menu id="volume-menu">
+    <section>
+      <item>
+        <attribute name="custom">global_volume</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="custom">volumes</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Reset Volume Levels</attribute>
+        <attribute name="action">app.reset-volumes</attribute>
+      </item>
+    </section>
+  </menu>
+
+  <menu id="more-menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Save as New Preset...</attribute>
+        <attribute name="action">app.</attribute>
+      </item>
+    </section>
+  </menu>
+
   <object class="GtkPopoverMenu" id="menu">
     <property name="menu-model">primary-menu</property>
-    <child type="volume_preference">
-      <object class="GtkBox" id="volume_preference">
-        <property name="margin_start">6</property>
-        <property name="margin_end">6</property>
-        <property name="margin_top">6</property>
-        <property name="margin_bottom">6</property>
-        <child>
-          <object class="GtkImage">
-            <property name="icon_name">audio-speakers-symbolic</property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkScale" id="volume">
-            <property name="hexpand">True</property>
-            <property name="adjustment">volume_adjustment</property>
-            <property name="draw_value">False</property>
-          </object>
-        </child>
-      </object>
-    </child>
     <child type="presets_chooser">
       <object class="PresetChooser" id="presets_chooser">
         <property name="margin_top">6</property>
       </object>
     </child>
   </object>
+
+  <object class="GtkPopoverMenu" id="volumes">
+    <property name="menu-model">volume-menu</property>
+    <property name="width-request">250</property>
+    <child type="global_volume">
+      <object class="GtkScale" id="volume">
+        <property name="hexpand">True</property>
+        <property name="adjustment">volume_adjustment</property>
+        <property name="draw_value">False</property>
+      </object>
+    </child>
+    <child type="volumes">
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+      </object>
+    </child>
+  </object>
+
   <object class="GtkAdjustment" id="volume_adjustment">
     <property name="lower">0</property>
     <property name="upper">1</property>
