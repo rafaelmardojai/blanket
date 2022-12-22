@@ -3,9 +3,9 @@
 
 from gi.repository import Gio, GObject, Gtk
 
+from blanket.main_player import MainPlayer
 from blanket.preset import Preset
 from blanket.settings import Settings
-from blanket.sound import MainPlayer
 from blanket.widgets.preset_row import PresetRow
 
 

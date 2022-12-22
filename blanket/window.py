@@ -6,9 +6,89 @@ import os
 from gettext import gettext as _
 from gi.repository import GLib, GObject, Gtk, Adw
 
+from blanket.main_player import MainPlayer
 from blanket.settings import Settings
-from blanket.sound import MainPlayer, SoundObject
+from blanket.sound import Sound
 from blanket.widgets import PlayPauseButton, PresetChooser, VolumeRow
+
+SOUNDS = [
+    {
+        'name': _('Nature'),
+        'sounds': [
+            {
+                'name': 'rain',
+                'title': _('Rain')
+            },
+            {
+                'name': 'storm',
+                'title': _('Storm')
+            },
+            {
+                'name': 'wind',
+                'title': _('Wind')
+            },
+            {
+                'name': 'waves',
+                'title': _('Waves')
+            },
+            {
+                'name': 'stream',
+                'title': _('Stream')
+            },
+            {
+                'name': 'birds',
+                'title': _('Birds')
+            },
+            {
+                'name': 'summer-night',
+                'title': _('Summer Night')
+            }
+        ]
+    },
+    {
+        'name': _('Travel'),
+        'sounds': [
+            {
+                'name': 'train',
+                'title': _('Train')
+            },
+            {
+                'name': 'boat',
+                'title': _('Boat')
+            },
+            {
+                'name': 'city',
+                'title': _('City')
+            }
+        ]
+    },
+    {
+        'name': _('Interiors'),
+        'sounds': [
+            {
+                'name': 'coffee-shop',
+                'title': _('Coffee Shop')
+            },
+            {
+                'name': 'fireplace',
+                'title': _('Fireplace')
+            }
+        ]
+    },
+    {
+        'name': _('Noise'),
+        'sounds': [
+            {
+                'name': 'pink-noise',
+                'title': _('Pink Noise')
+            },
+            {
+                'name': 'white-noise',
+                'title': _('White Noise')
+            }
+        ]
+    }
+]
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/window.ui')
@@ -32,12 +112,14 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         # Setup widgets
         self.setup()
+        # Setup volume
+        self.setup_volume_menu()
+        # Populate sounds
+        self.populate_sounds()
 
     def setup(self):
         # Setup grid
-        model = MainPlayer.get()
-        model.populate_sounds()
-        selection = Gtk.NoSelection(model=model)
+        selection = Gtk.NoSelection(model=MainPlayer.get())
         factory = Gtk.BuilderListItemFactory.new_from_resource(
             None, '/com/rafaelmardojai/Blanket/grid-item.ui'
         )
@@ -51,9 +133,6 @@ class BlanketWindow(Adw.ApplicationWindow):
             'playing', self.playpause_btn, 'playing',
             GObject.BindingFlags.SYNC_CREATE
         )
-
-        # Setup volume
-        self.setup_volume_menu()
 
     def setup_volume_menu(self):
         # Get volume scale adjustment
@@ -90,6 +169,25 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         self.volumes.connect('closed', self._volumes_popup_closed)
 
+    def populate_sounds(self):
+        """
+        Populate default and saved sounds
+        """
+
+        # Self populate
+        for g in SOUNDS:
+            # Iterate sounds
+            for s in g['sounds']:
+                # Create a new Sound
+                sound = Sound(s['name'], title=s['title'])
+                MainPlayer.get().append(sound)
+
+        # Load saved custom audios
+        for name, uri in Settings.get().custom_audios.items():
+            # Create a new Sound
+            sound = Sound(name, uri=uri, custom=True)
+            MainPlayer.get().append(sound)
+
     def open_audio(self):
         def on_response(_filechooser, _id):
             gfile = self.filechooser.get_file()
@@ -98,12 +196,12 @@ class BlanketWindow(Adw.ApplicationWindow):
                 name = os.path.basename(filename).split('.')[0]
                 uri = gfile.get_uri()
 
-                # Create a new SoundObject
-                sound = SoundObject(name, uri=uri, custom=True)
+                # Create a new Sound
+                sound = Sound(name, uri=uri, custom=True)
                 # Save to settings
                 GLib.idle_add(Settings.get().add_custom_audio,
                               sound.name, sound.uri)
-                # Add SoundObject to SoundsGroup
+                # Add Sound to SoundsGroup
                 MainPlayer.get().append(sound)
 
         filters = {
