@@ -3,11 +3,20 @@
 
   <template class="PresetChooser" parent="GtkMenuButton">
     <property name="popover">popover</property>
-    <binding name="label">
-      <lookup name="name" type="Preset">
-        <lookup name="selected">PresetChooser</lookup>
-      </lookup>
-    </binding>
+    <property name="always-show-arrow">True</property>
+
+    <child>
+      <object class="GtkLabel">
+        <property name="ellipsize">end</property>
+
+        <binding name="label">
+          <lookup name="name" type="Preset">
+            <lookup name="selected">PresetChooser</lookup>
+          </lookup>
+        </binding>
+      </object>
+    </child>
+
   </template>
 
   <object class="GtkPopover" id="popover">
