@@ -56,6 +56,10 @@ class BlanketWindow(Adw.ApplicationWindow):
             GObject.BindingFlags.SYNC_CREATE
         )
 
+        # Show preset chooser
+        self.presets_chooser.props.visible = len(Settings.get().presets) > 1
+        Settings.get().connect('changed::presets', self._on_presets_changed)
+
     def setup_volume_menu(self):
         # Get volume scale adjustment
         vol_adjustment = self.volume.get_adjustment()
@@ -176,6 +180,9 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         # Update volumes list
         self.__update_volume_model()
+
+    def _on_presets_changed(self, _settings, _key):
+        self.presets_chooser.props.visible = len(Settings.get().presets) > 1
 
     def _on_preset_changed(self, _player, preset):
         self.__update_volume_model()
