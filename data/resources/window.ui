@@ -182,12 +182,23 @@
             <property name="visible">False</property>
 
             <child>
-              <object class="GtkSeparator"></object>
+              <object class="GtkSeparator">
+                <style>
+                  <class name="volume-separator"/>
+                </style>
+              </object>
             </child>
+
+            <child>
+              <object class="GtkScrolledWindow">
+                <property name="propagate-natural-height">True</property>
+                <property name="max-content-height">320</property>
 
             <child>
               <object class="GtkListBox" id="volume_list">
                 <property name="selection-mode">none</property>
+                  </object>
+                </child>
               </object>
             </child>
 

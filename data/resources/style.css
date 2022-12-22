@@ -11,6 +11,10 @@
     padding: 24px;
 }
 
+.volume-separator {
+    margin-bottom: 0;
+}
+
 .volume-row {
     padding: 0;
 }
