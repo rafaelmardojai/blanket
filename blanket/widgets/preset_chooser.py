@@ -42,9 +42,7 @@ class PresetChooser(Gtk.MenuButton):
     def _on_preset_activated(self, _listbox, row):
         index = 0 if row is None else row.get_index()
         preset = self.model.get_item(index)
-
         self.selected = preset
-        MainPlayer.get().change_preset(preset)
 
     def _on_selected_changed(self, _chooser, _pspec):
         if self.selected is not None:
@@ -54,6 +52,8 @@ class PresetChooser(Gtk.MenuButton):
         for i in range(self.model.get_n_items()):
             row = self.presets_list.get_row_at_index(i)
             row.selected = row.preset.id == self.selected.id
+
+        MainPlayer.get().change_preset(self.selected)
 
     def _create_widget(self, preset):
         widget = PresetRow(preset)
