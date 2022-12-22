@@ -181,12 +181,7 @@ class Application(Adw.Application):
         self.window.open_audio()
 
     def on_playpause(self, _action=None, _param=None):
-        # Reverse self.playing bool value
-        playing = MainPlayer.get().playing
-        playing = False if playing else True
-
-        # Change mainplayer playing
-        MainPlayer.get().playing = playing
+        MainPlayer.get().playing = not MainPlayer.get().playing
 
     def on_play(self, _action=None, _param=None):
         MainPlayer.get().playing = True
