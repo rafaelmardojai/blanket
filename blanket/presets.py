@@ -4,6 +4,7 @@
 from gettext import gettext as _
 from gi.repository import Gio, GObject, Gtk, Adw
 
+from blanket.sound import MainPlayer
 from blanket.settings import Settings
 
 
@@ -33,9 +34,7 @@ class PresetObject(GObject.Object):
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preset-chooser.ui')
 class PresetChooser(Gtk.MenuButton):
     __gtype_name__ = 'PresetChooser'
-    __gsignals__ = {
-        'selected': (GObject.SIGNAL_RUN_FIRST, None, (PresetObject,))
-    }
+
     selected = GObject.Property(type=PresetObject)
 
     presets_list = Gtk.Template.Child()
@@ -67,6 +66,7 @@ class PresetChooser(Gtk.MenuButton):
         preset = self.model.get_item(index)
 
         self.selected = preset
+        MainPlayer.get().change_preset(preset)
 
     def _on_selected_changed(self, _chooser, _pspec):
         if self.selected is not None:
@@ -76,8 +76,6 @@ class PresetChooser(Gtk.MenuButton):
         for i in range(self.model.get_n_items()):
             row = self.presets_list.get_row_at_index(i)
             row.selected = row.preset.id == self.selected.id
-
-        self.emit('selected', self.selected)
 
     def _create_widget(self, preset):
         widget = PresetRow(preset)
