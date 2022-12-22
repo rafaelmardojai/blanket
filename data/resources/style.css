@@ -45,7 +45,3 @@ button.playpause {
 .sound-item image.accent {
     background: alpha(@accent_bg_color, 0.2);
 }
-
-.soundrow {
-    padding: 8px;
-}

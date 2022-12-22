@@ -20,7 +20,7 @@ from blanket.sound import MainPlayer
 from blanket.settings import Settings
 from blanket.window import BlanketWindow
 from blanket.preferences import PreferencesWindow
-from blanket.presets import PresetDialog
+from blanket.widgets import PresetDialog
 
 
 AUTHORS = [
