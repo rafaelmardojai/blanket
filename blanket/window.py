@@ -62,7 +62,6 @@ class BlanketWindow(Adw.ApplicationWindow):
         self.setup_volume_menu()
 
     def setup_presets(self):
-        self.presets_chooser.connect('selected', self._on_preset_selected)
         self.mpris.update_title(self.presets_chooser.selected.name)
 
     def setup_volume_menu(self):
@@ -87,6 +86,11 @@ class BlanketWindow(Adw.ApplicationWindow):
         self.volume_box.props.visible = model.get_n_items() > 0
         self.volume_list.bind_model(model, self._create_vol_row)
 
+        # Connect mainplayer preset-changed signal
+        MainPlayer.get().connect(
+            'preset-changed',
+            self._on_preset_changed
+        )
         # Connect mainplayer reset-volumes signal
         MainPlayer.get().connect(
             'reset-volumes',
@@ -160,10 +164,14 @@ class BlanketWindow(Adw.ApplicationWindow):
         sound.playing = not sound.playing
 
         # Update volumes list
-        self.volume_filter.changed(Gtk.FilterChange.DIFFERENT)
+        self.__update_volume_model()
+
+    def _on_preset_changed(self, _player, preset):
+        self.mpris.update_title(preset.name)
+        self.__update_volume_model()
 
     def _on_reset_volumes(self, _player):
-        self.volume_filter.changed(Gtk.FilterChange.DIFFERENT)
+        self.__update_volume_model()
 
     def _volume_model_changed(self, model, _pos, _del, _add):
         # Hide volumes list if empty
@@ -172,14 +180,10 @@ class BlanketWindow(Adw.ApplicationWindow):
     def _volumes_popup_closed(self, _popover):
         # Disable sounds with volume = 0
         MainPlayer.get().mute_vol_zero()
-        # Update volumes list
-        self.volume_filter.changed(Gtk.FilterChange.DIFFERENT)
-
-    def _on_preset_selected(self, _chooser, preset):
-        MainPlayer.get().preset_changed()
-        self.mpris.update_title(preset.name)
-        # Update volumes list
-        self.volume_filter.changed(Gtk.FilterChange.DIFFERENT)
+        self.__update_volume_model()
 
     def _on_add_sound_clicked(self, _group):
         self.open_audio()
+
+    def __update_volume_model(self):
+        self.volume_filter.changed(Gtk.FilterChange.DIFFERENT)

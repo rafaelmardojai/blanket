@@ -171,7 +171,7 @@ class SoundRow(Gtk.ListBoxRow):
         elif not self.icon.has_css_class('accent'):
             self.icon.add_css_class('accent')
 
-    def _on_preset_changed(self, _player):
+    def _on_preset_changed(self, _player, _preset):
         self.first_load = True
         self.volume.set_value(self.sound.saved_volume)
 

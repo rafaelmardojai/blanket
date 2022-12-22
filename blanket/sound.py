@@ -99,7 +99,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
 
     __gtype_name__ = 'MainPlayer'
     __gsignals__ = {
-        'preset-changed': (GObject.SIGNAL_RUN_FIRST, None, ()),
+        'preset-changed': (GObject.SIGNAL_RUN_FIRST, None, (GObject.Object,)),
         'reset-volumes': (GObject.SIGNAL_RUN_FIRST, None, ())
     }
 
@@ -141,9 +141,8 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
             if sound.saved_volume == 0:
                 sound.playing = False
 
-    def preset_changed(self):
-        self.playing = True
-        self.emit('preset-changed')
+    def change_preset(self, preset):
+        self.emit('preset-changed', preset)
 
     def reset_volumes(self):
         self.emit('reset-volumes')
@@ -271,7 +270,7 @@ class SoundObject(GObject.Object):
 
         self.saved_mute = not self.playing  # Save playing state
 
-    def _on_preset_changed(self, _player):
+    def _on_preset_changed(self, _player, _preset):
         self.notify('saved_volume')
         self.playing = not self.saved_mute
 
