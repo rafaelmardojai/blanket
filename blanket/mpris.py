@@ -14,6 +14,7 @@ from gi.repository import Gio, GLib, Gtk
 
 from random import randint
 
+from blanket.settings import Settings
 from blanket.sound import MainPlayer
 
 
@@ -137,7 +138,7 @@ class MPRIS(Server):
             "o",
             "/com/rafaelmardojai/Blanket/Track/%s" % track_id)
         self.__metadata["xesam:title"] = GLib.Variant(
-            "s", _("Listen to different sounds")
+            "s", _(Settings.get().active_preset_name)
         )
         self.__metadata["xesam:album"] = GLib.Variant(
             "s", _("Listen to different sounds")
@@ -152,6 +153,9 @@ class MPRIS(Server):
                                        None)
         Server.__init__(self, self.__bus, self.__MPRIS_PATH)
 
+        MainPlayer.get().connect(
+            "preset-changed", self._on_preset_changed
+        )
         MainPlayer.get().connect(
             "notify::playing", self._on_playing_changed
         )
@@ -228,18 +232,17 @@ class MPRIS(Server):
     def Introspect(self):
         return self.__doc__
 
-    def update_title(self, title):
-        # Used when changing presets
-        self.__metadata["xesam:title"] = GLib.Variant("s", _(title))
-        changed_properties = {"Metadata": GLib.Variant("a{sv}", self.__metadata)}
-        self.PropertiesChanged(self.__MPRIS_PLAYER_IFACE, changed_properties, [])
-
     def _get_status(self):
         playing = MainPlayer.get().playing
         if playing:
             return "Playing"
         else:
             return "Paused"
+
+    def _on_preset_changed(self, _player, preset):
+        self.__metadata["xesam:title"] = GLib.Variant("s", preset.name)
+        changed_properties = {"Metadata": GLib.Variant("a{sv}", self.__metadata)}
+        self.PropertiesChanged(self.__MPRIS_PLAYER_IFACE, changed_properties, [])
 
     def _on_volume_changed(self, player, volume):
         self.PropertiesChanged(

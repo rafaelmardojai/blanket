@@ -24,14 +24,11 @@ class BlanketWindow(Adw.ApplicationWindow):
     volume_list = Gtk.Template.Child()
     presets_chooser: PresetChooser = Gtk.Template.Child()
 
-    def __init__(self, mpris, **kwargs):
+    def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
         # Set default window icon for window managers
         self.set_default_icon_name('com.rafaelmardojai.Blanket')
-
-        # Main player & MPRIS server object
-        self.mpris = mpris
 
         # Setup widgets
         self.setup()
@@ -55,13 +52,8 @@ class BlanketWindow(Adw.ApplicationWindow):
             GObject.BindingFlags.SYNC_CREATE
         )
 
-        # Setup presets widgets
-        self.setup_presets()
         # Setup volume
         self.setup_volume_menu()
-
-    def setup_presets(self):
-        self.mpris.update_title(self.presets_chooser.selected.name)
 
     def setup_volume_menu(self):
         # Get volume scale adjustment
@@ -166,7 +158,6 @@ class BlanketWindow(Adw.ApplicationWindow):
         self.__update_volume_model()
 
     def _on_preset_changed(self, _player, preset):
-        self.mpris.update_title(preset.name)
         self.__update_volume_model()
 
     def _on_reset_volumes(self, _player):
