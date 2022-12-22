@@ -12,9 +12,9 @@ class PresetRow(Gtk.ListBoxRow):
     __gtype_name__ = 'PresetRow'
 
     custom = GObject.Property(type=bool, default=False)
+    selected = GObject.Property(type=bool, default=False)
 
     name = Gtk.Template.Child()
-    indicator = Gtk.Template.Child()
     rename_btn = Gtk.Template.Child()
     delete_btn = Gtk.Template.Child()
 
@@ -28,17 +28,17 @@ class PresetRow(Gtk.ListBoxRow):
         self.delete_btn.connect('clicked', self._on_delete_preset)
 
         preset.bind_property(
+            'active', self, 'selected', GObject.BindingFlags.SYNC_CREATE
+        )
+
+        preset.bind_property(
             'name', self.name, 'label', GObject.BindingFlags.SYNC_CREATE
         )
 
-    @property
-    def selected(self):
-        return self.indicator.get_visible()
+        self.connect('notify::selected', self._on_selected_changed)
 
-    @selected.setter
-    def selected(self, value):
-        self.indicator.set_visible(value)
-        if value:
+    def _on_selected_changed(self, _row, _pspec):
+        if self.selected:
             self.add_css_class('selected')
         else:
             self.remove_css_class('selected')

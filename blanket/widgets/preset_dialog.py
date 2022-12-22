@@ -60,7 +60,7 @@ class PresetDialog(Adw.Window):
             chooser = self.window.presets_chooser
             preset_id = Settings.get().add_preset(name)  # Save new preset
             # Add preset to model
-            preset = Preset(preset_id, chooser.model)
+            preset = Preset(preset_id)
             chooser.model.append(preset)
 
             # Select new preset

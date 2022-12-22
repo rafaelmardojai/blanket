@@ -10,12 +10,17 @@ class Preset(GObject.Object):
     __gtype_name__ = 'Preset'
 
     name = GObject.Property(type=str)
+    active = GObject.Property(type=bool, default=False)
 
-    def __init__(self, preset_id, model):
+    def __init__(self, preset_id):
         super().__init__()
 
         self.id = preset_id
-        self.model = model
+
+        self.active = Settings.get().active_preset == self.id
+        Settings.get().connect(
+            'changed::active-preset', self._on_active_preset_changed
+        )
 
         # Bind preset name with settings one
         Settings.get().get_preset_settings(self.id).bind(
@@ -27,3 +32,6 @@ class Preset(GObject.Object):
             index = Settings.get().remove_preset(self.id)
             return index  # Return the index where the preset where positioned
         return None
+
+    def _on_active_preset_changed(self, _settings, _key):
+        self.active = Settings.get().active_preset == self.id

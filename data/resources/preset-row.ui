@@ -21,9 +21,13 @@
         </child>
 
         <child>
-          <object class="GtkImage" id="indicator">
+          <object class="GtkImage">
             <property name="halign">start</property>
             <property name="icon-name">object-select-symbolic</property>
+
+            <binding name="visible">
+              <lookup name="selected">PresetRow</lookup>
+            </binding>
           </object>
         </child>
 
