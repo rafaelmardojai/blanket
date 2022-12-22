@@ -150,7 +150,7 @@ class Application(Adw.Application):
     def do_activate(self):
         self.window = self.props.active_window
         if not self.window:
-            self.window = BlanketWindow(self.mpris, application=self)
+            self.window = BlanketWindow(application=self)
 
         self.window.props.hide_on_close = Settings.get().background
 
