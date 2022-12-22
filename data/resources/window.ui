@@ -110,7 +110,7 @@
   <menu id="primary-menu">
     <section>
       <item>
-        <attribute name="label" translatable="yes">Keep Playing When Closed</attribute>
+        <attribute name="label" translatable="yes">Keep Playing when Closed</attribute>
         <attribute name="action">app.background-playback</attribute>
       </item>
     </section>
@@ -156,6 +156,10 @@
         <attribute name="label" translatable="yes">Save as New Preset...</attribute>
         <attribute name="action">app.add-preset</attribute>
       </item>
+      <item>
+        <attribute name="label" translatable="yes">Add Sound...</attribute>
+        <attribute name="action">app.open</attribute>
+      </item>
     </section>
   </menu>
 
@@ -194,9 +198,9 @@
                 <property name="propagate-natural-height">True</property>
                 <property name="max-content-height">320</property>
 
-            <child>
-              <object class="GtkListBox" id="volume_list">
-                <property name="selection-mode">none</property>
+                <child>
+                  <object class="GtkListBox" id="volume_list">
+                    <property name="selection-mode">none</property>
                   </object>
                 </child>
               </object>
