@@ -15,6 +15,7 @@ from gi.repository import GLib, Gst, Gio, Gtk, Adw
 # Init GStreamer
 Gst.init(None)
 
+from blanket.define import AUTHORS, ARTISTS, SOUND_ARTISTS, SOUND_EDITORS
 from blanket.main_player import MainPlayer
 from blanket.mpris import MPRIS
 from blanket.preferences import PreferencesWindow
@@ -22,37 +23,6 @@ from blanket.settings import Settings
 from blanket.widgets import PresetDialog
 from blanket.window import BlanketWindow
 
-
-AUTHORS = [
-    'Rafael Mardojai CM'
-]
-
-ARTISTS = {
-    'Jakub Steiner': [_('Sounds icons')],
-    'Rafael Mardojai CM': [_('App icon')]
-}
-
-SOUND_ARTISTS = {
-    'alex36917': [_('Rain')],
-    'Digifish music': [_('Storm')],
-    'ezwa': [_('Fireplace')],
-    'Falcet': [_('Boat')],
-    'gezortenplotz': [_('City')],
-    'gluckose': [_('Stream')],
-    'Jorge Stolfi': [_('White Noise')],
-    'kvgarlic': [_('Birds')],
-    'Lisa Redfern': [_('Summer Night')],
-    'Luftrum': [_('Waves')],
-    'stephan': [_('Coffee Shop')],
-    'Omegatron': [_('Pink Noise')],
-    'felix.blume': [_('Wind')],
-    'vahid': [_('Train')],
-}
-
-SOUND_EDITORS = {
-    'Porrumentzio': [
-        _('Birds'), _('Rain'), _('Storm'), _('Waves'), _('Boat'), _('City'), _('Wind')]
-}
 
 class Application(Adw.Application):
     def __init__(self, version):

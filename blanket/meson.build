@@ -25,6 +25,7 @@ configure_file(
 # Python sources
 sources = [
   '__init__.py',
+  'define.py',
   'main_player.py',
   'main.py',
   'window.py',
