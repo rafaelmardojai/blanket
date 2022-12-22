@@ -17,6 +17,7 @@ from random import randint
 from blanket.main_player import MainPlayer
 from blanket.settings import Settings
 
+
 class Server:
 
     def __init__(self, con, path):
@@ -240,8 +241,12 @@ class MPRIS(Server):
 
     def _on_preset_changed(self, _player, preset):
         self.__metadata["xesam:title"] = GLib.Variant("s", preset.name)
-        changed_properties = {"Metadata": GLib.Variant("a{sv}", self.__metadata)}
-        self.PropertiesChanged(self.__MPRIS_PLAYER_IFACE, changed_properties, [])
+        changed_properties = {
+            "Metadata": GLib.Variant("a{sv}", self.__metadata)
+        }
+        self.PropertiesChanged(
+            self.__MPRIS_PLAYER_IFACE, changed_properties, []
+        )
 
     def _on_volume_changed(self, player, volume):
         self.PropertiesChanged(

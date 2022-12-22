@@ -148,7 +148,7 @@ class BlanketWindow(Adw.ApplicationWindow):
                 audio_filter.add_mime_type(mt)
             self.filechooser.add_filter(audio_filter)
 
-        response = self.filechooser.show()
+        self.filechooser.show()
 
     def _create_vol_row(self, sound):
         row = VolumeRow()

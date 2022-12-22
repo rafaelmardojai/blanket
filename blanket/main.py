@@ -4,16 +4,18 @@
 import sys
 import gi
 
-gi.require_version('Gst', '1.0')
-gi.require_version('GstPlay', '1.0')
-gi.require_version('Gdk', '4.0')
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
-
 from gettext import gettext as _
-from gi.repository import GLib, Gst, Gio, Gtk, Adw
-# Init GStreamer
-Gst.init(None)
+try:
+    gi.require_version('Gst', '1.0')
+    gi.require_version('GstPlay', '1.0')
+    gi.require_version('Gdk', '4.0')
+    gi.require_version('Gtk', '4.0')
+    gi.require_version('Adw', '1')
+    from gi.repository import GLib, Gst, Gio, Gtk, Adw
+    # Init GStreamer
+    Gst.init(None)
+except ImportError or ValueError as exc:
+    print('Error: Dependencies not met.', exc)
 
 from blanket.define import AUTHORS, ARTISTS, SOUND_ARTISTS, SOUND_EDITORS
 from blanket.main_player import MainPlayer
@@ -48,8 +50,12 @@ class Application(Adw.Application):
         Adw.Application.do_startup(self)
 
         style_manager = Adw.StyleManager.get_default()
-        # if the system doesn't support libadwaita color schemes, fall back to our setting
-        if Settings.get().dark_mode and not style_manager.props.system_supports_color_schemes:
+        # if the system doesn't support libadwaita color schemes,
+        # fall back to our setting
+        if (
+            Settings.get().dark_mode and
+            not style_manager.props.system_supports_color_schemes
+        ):
             style_manager.props.color_scheme = Adw.ColorScheme.FORCE_DARK
 
         # Start MPRIS server
@@ -180,7 +186,9 @@ class Application(Adw.Application):
         window.present()
 
     def on_about(self, _action, _param):
-        builder = Gtk.Builder.new_from_resource('/com/rafaelmardojai/Blanket/about.ui')
+        builder = Gtk.Builder.new_from_resource(
+            '/com/rafaelmardojai/Blanket/about.ui'
+        )
         about = builder.get_object('about')
 
         artists = self.__get_credits_list(ARTISTS)
