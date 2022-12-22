@@ -14,9 +14,8 @@ from gi.repository import Gio, GLib, Gtk
 
 from random import randint
 
+from blanket.main_player import MainPlayer
 from blanket.settings import Settings
-from blanket.sound import MainPlayer
-
 
 class Server:
 

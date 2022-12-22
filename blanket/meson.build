@@ -25,8 +25,10 @@ configure_file(
 # Python sources
 sources = [
   '__init__.py',
+  'main_player.py',
   'main.py',
   'window.py',
+  'player.py',
   'preferences.py',
   'preset.py',
   'sound.py',

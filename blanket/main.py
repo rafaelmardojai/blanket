@@ -11,16 +11,16 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gettext import gettext as _
-from gi.repository import GLib, Gst, Gdk, Gio, Gtk, Adw
+from gi.repository import GLib, Gst, Gio, Gtk, Adw
 # Init GStreamer
 Gst.init(None)
 
+from blanket.main_player import MainPlayer
 from blanket.mpris import MPRIS
-from blanket.sound import MainPlayer
-from blanket.settings import Settings
-from blanket.window import BlanketWindow
 from blanket.preferences import PreferencesWindow
+from blanket.settings import Settings
 from blanket.widgets import PresetDialog
+from blanket.window import BlanketWindow
 
 
 AUTHORS = [
