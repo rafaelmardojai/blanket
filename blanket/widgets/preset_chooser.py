@@ -32,8 +32,8 @@ class PresetChooser(Gtk.MenuButton):
 
     def load_presets(self):
         presets = Settings.get().get_presets_dict()
-        for index, (preset_id, name) in enumerate(presets.items()):
-            preset = Preset(preset_id, self.model)
+        for preset_id in presets:
+            preset = Preset(preset_id)
             self.model.append(preset)
 
             if preset_id == Settings.get().active_preset:
@@ -48,10 +48,6 @@ class PresetChooser(Gtk.MenuButton):
         if self.selected is not None:
             if Settings.get().active_preset != self.selected.id:
                 Settings.get().active_preset = self.selected.id
-
-        for i in range(self.model.get_n_items()):
-            row = self.presets_list.get_row_at_index(i)
-            row.selected = row.preset.id == self.selected.id
 
         MainPlayer.get().change_preset(self.selected)
 
