@@ -14,7 +14,9 @@
           <object class="AdwHeaderBar" id="headerbar">
 
             <child>
-              <object class="PresetChooser" id="presets_chooser"></object>
+              <object class="PresetChooser" id="presets_chooser">
+                <property name="visible">False</property>
+              </object>
             </child>
 
             <child type="end">
