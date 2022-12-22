@@ -4,7 +4,7 @@
   <template class="PresetChooser" parent="GtkMenuButton">
     <property name="popover">popover</property>
     <binding name="label">
-      <lookup name="name" type="PresetObject">
+      <lookup name="name" type="Preset">
         <lookup name="selected">PresetChooser</lookup>
       </lookup>
     </binding>

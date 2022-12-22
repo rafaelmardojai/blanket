@@ -8,8 +8,7 @@ from gi.repository import GLib, GObject, Gtk, Adw
 
 from blanket.settings import Settings
 from blanket.sound import MainPlayer, SoundObject
-from blanket.widgets import PlayPauseButton, VolumeRow
-from blanket.presets import PresetChooser
+from blanket.widgets import PlayPauseButton, PresetChooser, VolumeRow
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/window.ui')
