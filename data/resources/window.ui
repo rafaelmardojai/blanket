@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.0 -->
 <interface>
+
   <template class="BlanketWindow" parent="AdwApplicationWindow">
+
     <property name="default_width">600</property>
     <property name="default_height">600</property>
+
     <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>
+
         <child>
           <object class="AdwHeaderBar" id="headerbar">
+
+            <child>
+              <object class="PresetChooser" id="presets_chooser"></object>
+            </child>
+
             <child type="end">
               <object class="GtkMenuButton">
-                <property name="popover">menu</property>
+                <property name="menu-model">primary-menu</property>
                 <property name="icon_name">open-menu-symbolic</property>
               </object>
             </child>
+
           </object>
         </child>
 
         <child>
           <object class="GtkCenterBox">
+
             <style>
               <class name="sound-bar"/>
             </style>
@@ -37,13 +47,16 @@
                     <style>
                       <class name="circular"/>
                     </style>
+
                   </object>
                 </child>
+
                 <child>
                   <object class="PlayPauseButton" id="playpause_btn">
                     <property name="action_name">app.playpause</property>
                   </object>
                 </child>
+
                 <child>
                   <object class="GtkMenuButton">
                     <property name="menu-model">more-menu</property>
@@ -53,8 +66,10 @@
                     <style>
                       <class name="circular"/>
                     </style>
+
                   </object>
                 </child>
+
               </object>
             </child>
 
@@ -71,7 +86,6 @@
               <class name="sound-view-scrolled" />
             </style>
 
-
             <child>
               <object class="GtkGridView" id="grid">
                 <property name="single-click-activate">True</property>
@@ -79,31 +93,19 @@
                 <style>
                   <class name="sound-view"/>
                 </style>
+
               </object>
             </child>
+
           </object>
         </child>
+
       </object>
     </child>
+
   </template>
 
   <menu id="primary-menu">
-    <section>
-      <submenu>
-        <attribute name="label" translatable="yes">Presets</attribute>
-        <section>
-          <item>
-            <attribute name="custom">presets_chooser</attribute>
-          </item>
-        </section>
-        <section>
-          <item>
-            <attribute name="label" translatable="yes">Add Preset…</attribute>
-            <attribute name="action">app.add-preset</attribute>
-          </item>
-        </section>
-      </submenu>
-    </section>
     <section>
       <item>
         <attribute name="label" translatable="yes">Keep Playing When Closed</attribute>
@@ -150,19 +152,10 @@
     <section>
       <item>
         <attribute name="label" translatable="yes">Save as New Preset...</attribute>
-        <attribute name="action">app.</attribute>
+        <attribute name="action">app.add-preset</attribute>
       </item>
     </section>
   </menu>
-
-  <object class="GtkPopoverMenu" id="menu">
-    <property name="menu-model">primary-menu</property>
-    <child type="presets_chooser">
-      <object class="PresetChooser" id="presets_chooser">
-        <property name="margin_top">6</property>
-      </object>
-    </child>
-  </object>
 
   <object class="GtkPopoverMenu" id="volumes">
     <property name="menu-model">volume-menu</property>
@@ -195,6 +188,7 @@
                 <property name="selection-mode">none</property>
               </object>
             </child>
+
           </object>
         </child>
 
@@ -208,4 +202,5 @@
     <property name="step_increment">0.01</property>
     <property name="page_increment">0.01</property>
   </object>
+
 </interface>

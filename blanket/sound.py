@@ -218,6 +218,12 @@ class SoundObject(GObject.Object):
         if not self.saved_mute:
             self.playing = not self.saved_mute
 
+        # Connect mainplayer preset-changed signal
+        MainPlayer.get().connect(
+            'preset-changed',
+            self._on_preset_changed
+        )
+
         # Connect mainplayer reset-volumes signal
         MainPlayer.get().connect(
             'reset-volumes',
@@ -264,6 +270,10 @@ class SoundObject(GObject.Object):
             self.player.set_virtual_volume(0)
 
         self.saved_mute = not self.playing  # Save playing state
+
+    def _on_preset_changed(self, _player):
+        self.notify('saved_volume')
+        self.playing = not self.saved_mute
 
     def _on_reset_volumes(self, _player):
         self.saved_volume = 0.0

@@ -19,14 +19,11 @@ class BlanketWindow(Adw.ApplicationWindow):
     headerbar = Gtk.Template.Child()
     grid = Gtk.Template.Child()
     playpause_btn: PlayPauseButton = Gtk.Template.Child()
-    menu = Gtk.Template.Child()
     volumes = Gtk.Template.Child()
     volume = Gtk.Template.Child()
     volume_box = Gtk.Template.Child()
     volume_list = Gtk.Template.Child()
     presets_chooser: PresetChooser = Gtk.Template.Child()
-
-    name_binding = None
 
     def __init__(self, mpris, **kwargs):
         super().__init__(**kwargs)
@@ -66,7 +63,6 @@ class BlanketWindow(Adw.ApplicationWindow):
 
     def setup_presets(self):
         self.presets_chooser.connect('selected', self._on_preset_selected)
-        self.update_title(self.presets_chooser.selected)
         self.mpris.update_title(self.presets_chooser.selected.name)
 
     def setup_volume_menu(self):
@@ -139,18 +135,6 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         response = self.filechooser.show()
 
-    def update_title(self, preset):
-        if self.name_binding is not None:
-            self.name_binding.unbind()
-
-        if preset.id != Settings.get().default_preset:
-            self.name_binding = preset.bind_property(
-                'name', self, 'title',
-                GObject.BindingFlags.SYNC_CREATE
-            )
-        else:
-            self.set_title(_('Blanket'))
-
     def _create_vol_row(self, sound):
         row = VolumeRow()
 
@@ -193,8 +177,9 @@ class BlanketWindow(Adw.ApplicationWindow):
 
     def _on_preset_selected(self, _chooser, preset):
         MainPlayer.get().preset_changed()
-        self.update_title(preset)
         self.mpris.update_title(preset.name)
+        # Update volumes list
+        self.volume_filter.changed(Gtk.FilterChange.DIFFERENT)
 
     def _on_add_sound_clicked(self, _group):
         self.open_audio()

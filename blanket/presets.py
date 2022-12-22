@@ -31,7 +31,7 @@ class PresetObject(GObject.Object):
 
 
 @Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preset-chooser.ui')
-class PresetChooser(Gtk.Box):
+class PresetChooser(Gtk.MenuButton):
     __gtype_name__ = 'PresetChooser'
     __gsignals__ = {
         'selected': (GObject.SIGNAL_RUN_FIRST, None, (PresetObject,))
@@ -104,14 +104,11 @@ class PresetDialog(Adw.Window):
         self.window = app.get_active_window()
 
         # Wire widgets
-        self.cancel_btn.connect(
-            'clicked',
-            lambda _button: self.destroy()
-        )
+        self.cancel_btn.connect('clicked', lambda _button: self.destroy())
         self.name_entry.connect('changed', self._on_entry_changed)
 
         if self.preset is None:
-            self.set_title(_('Add Preset'))
+            self.set_title(_('New Preset'))
             self.accept_btn.set_label(_('Create'))
             # Wire buttons
             self.accept_btn.connect('clicked', self._on_create_preset)
@@ -179,20 +176,21 @@ class PresetDialog(Adw.Window):
 class PresetRow(Gtk.ListBoxRow):
     __gtype_name__ = 'PresetRow'
 
+    custom = GObject.Property(type=bool, default=False)
+
     name = Gtk.Template.Child()
     indicator = Gtk.Template.Child()
     rename_btn = Gtk.Template.Child()
     delete_btn = Gtk.Template.Child()
-    revealer = Gtk.Template.Child()
 
     def __init__(self, preset):
         super().__init__()
 
         self.preset = preset
+        self.custom = self.preset.id != Settings.get().default_preset
 
         self.rename_btn.connect('clicked', self._on_show_rename)
         self.delete_btn.connect('clicked', self._on_delete_preset)
-        self.revealer.props.reveal_child = self.preset.id != Settings.get().default_preset
 
         preset.bind_property(
             'name', self.name, 'label', GObject.BindingFlags.SYNC_CREATE

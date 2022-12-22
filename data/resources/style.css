@@ -1,4 +1,12 @@
 
+.preset-row {
+    padding: 6px 12px;
+    min-height: 40px;
+}
+.preset-row.selected label {
+    font-weight: bold;
+}
+
 .sound-bar {
     padding: 24px;
 }
@@ -40,8 +48,4 @@ button.playpause {
 
 .soundrow {
     padding: 8px;
-}
-
-.preset-selector.selected label {
-    font-weight: bold;
 }
