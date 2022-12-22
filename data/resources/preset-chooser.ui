@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.0 -->
 <interface>
-  <template class="PresetChooser" parent="GtkBox">
-    <property name="orientation">vertical</property>
-    <child>
-      <object class="GtkListBox" id="presets_list">
-        <property name="selection-mode">none</property>
-      </object>
-    </child>
+
+  <template class="PresetChooser" parent="GtkMenuButton">
+    <property name="popover">popover</property>
+    <binding name="label">
+      <lookup name="name" type="PresetObject">
+        <lookup name="selected">PresetChooser</lookup>
+      </lookup>
+    </binding>
   </template>
+
+  <object class="GtkPopover" id="popover">
+    <property name="width-request">250</property>
+
+    <style>
+      <class name="menu"/>
+    </style>
+
+    <property name="child">
+      <object class="GtkScrolledWindow">
+        <property name="propagate-natural-height">True</property>
+        <property name="max-content-height">400</property>
+
+        <child>
+          <object class="GtkListBox" id="presets_list">
+            <property name="selection-mode">none</property>
+          </object>
+        </child>
+      </object>
+    </property>
+  </object>
+
 </interface>

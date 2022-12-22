@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.0 -->
 <interface>
   <template class="PresetRow" parent="GtkListBoxRow">
+
     <style>
-      <class name="preset-selector"/>
+      <class name="preset-row"/>
     </style>
+
     <child>
       <object class="GtkBox">
         <property name="hexpand">True</property>
         <property name="valign">center</property>
         <property name="spacing">6</property>
+
         <child>
           <object class="GtkLabel" id="name">
             <property name="ellipsize">end</property>
@@ -17,48 +19,59 @@
             <property name="max-width-chars">16</property>
           </object>
         </child>
+
         <child>
           <object class="GtkImage" id="indicator">
             <property name="halign">start</property>
             <property name="icon-name">object-select-symbolic</property>
-            <property name="margin-start">6</property>
           </object>
         </child>
+
         <child>
-          <object class="GtkRevealer" id="revealer">
-            <property name="transition-type">crossfade</property>
-            <property name="child">
-              <object class="GtkBox">
-                <property name="hexpand">True</property>
-                <property name="halign">end</property>
-                <property name="spacing">6</property>
-                <property name="margin-top">6</property>
-                <property name="margin-bottom">6</property>
-                <child>
-                  <object class="GtkButton" id="rename_btn">
-                    <property name="icon_name">document-edit-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Rename Preset</property>
-                    <style>
-                      <class name="flat"/>
-                      <class name="circular"/>
-                    </style>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkButton" id="delete_btn">
-                    <property name="icon_name">edit-delete-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Delete Preset</property>
-                    <style>
-                      <class name="flat"/>
-                      <class name="circular"/>
-                    </style>
-                  </object>
-                </child>
+          <object class="GtkBox">
+            <property name="hexpand">True</property>
+            <property name="halign">end</property>
+            <property name="spacing">6</property>
+
+            <child>
+              <object class="GtkButton" id="rename_btn">
+                <property name="icon_name">document-edit-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Rename Preset</property>
+
+                <binding name="visible">
+                  <lookup name="custom">PresetRow</lookup>
+                </binding>
+
+                <style>
+                  <class name="flat"/>
+                  <class name="circular"/>
+                </style>
+
               </object>
-            </property>
+            </child>
+
+            <child>
+              <object class="GtkButton" id="delete_btn">
+                <property name="icon_name">edit-delete-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Delete Preset</property>
+
+                <binding name="visible">
+                  <lookup name="custom">PresetRow</lookup>
+                </binding>
+
+                <style>
+                  <class name="flat"/>
+                  <class name="circular"/>
+                </style>
+
+              </object>
+            </child>
+
           </object>
         </child>
+
       </object>
     </child>
+
   </template>
 </interface>

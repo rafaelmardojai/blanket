@@ -158,7 +158,13 @@ class Settings(Gio.Settings):
         saved_presets.append(preset_id)
         self.presets = saved_presets
 
+        # Set new preset name
         self.set_preset_name(preset_id, name)
+        # Clone current preset to new
+        current_volumes = self.get_preset_volumes(self.active_preset)
+        current_mutes = self.get_preset_mutes(self.active_preset)
+        self.set_preset_volumes(preset_id, current_volumes)
+        self.set_preset_mutes(preset_id, current_mutes)
 
         return preset_id
 
@@ -227,9 +233,8 @@ class Settings(Gio.Settings):
         # If sound is set on mute dict
         if name in mutes:
             mute = mutes[name]
-            if mute:
-                return mute
-        return False
+            return mute
+        return True
 
     def set_sound_mute(self, name, mute):
         saved_mutes = self.get_preset_mutes(self.active_preset)
