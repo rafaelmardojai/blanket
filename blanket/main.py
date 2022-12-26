@@ -64,64 +64,56 @@ class Application(Adw.Application):
         self.setup_actions()
 
     def setup_actions(self):
-        actions = [
-            {
-                'name': 'open',
-                'func': self.on_open,
-                'accels': ['<Ctl>o']
-            },
-            {
-                'name': 'playpause',
-                'func': self.on_playpause,
-                'accels': ['<Ctl>m', 'space']
-            },
-            {
-                'name': 'reset-volumes',
-                'func': self.on_reset_volumes,
-            },
-            {
-                'name': 'add-preset',
-                'func': self.on_add_preset,
-            },
-            {
-                'name': 'background-playback',
-                'func': self.on_background,
-                'state': True
-            },
-            {
-                'name': 'preferences',
-                'func': self.on_preferences,
-                'accels': ['<Ctl>comma']
-            },
-            {
-                'name': 'about',
-                'func': self.on_about
-            },
-            {
-                'name': 'close',
-                'func': self.on_close,
-                'accels': ['<Ctl>w']
-            },
-            {
-                'name': 'quit',
-                'func': self.on_quit,
-                'accels': ['<Ctl>q']
-            }
-        ]
+        # Quit application
+        action = Gio.SimpleAction.new('quit', None)
+        action.connect('activate', self.on_quit)
+        self.add_action(action)
 
-        for a in actions:
-            if 'state' in a:
-                action = Gio.SimpleAction.new_stateful(
-                    a['name'], None, Settings.get().get_value(a['name']))
-                action.connect('change-state', a['func'])
-            else:
-                action = Gio.SimpleAction.new(a['name'], None)
-                action.connect('activate', a['func'])
+        # Show about window
+        action = Gio.SimpleAction.new('about', None)
+        action.connect('activate', self.on_about)
+        self.add_action(action)
 
-            self.add_action(action)
+        # Show preferences window
+        action = Gio.SimpleAction.new('preferences', None)
+        action.connect('activate', self.on_preferences)
+        self.add_action(action)
 
-            if 'accels' in a:
-                self.set_accels_for_action('app.' + a['name'], a['accels'])
+        # Toggle background-playback setting
+        action = Gio.SimpleAction.new_stateful(
+             'background-playback',
+             None,
+             Settings.get().get_value('background-playback')
+        )
+        action.connect('change-state', self.on_background)
+        self.add_action(action)
+
+        # Toggle playback
+        action = Gio.SimpleAction.new('playpause', None)
+        action.connect('activate', self.on_playpause)
+        self.add_action(action)
+
+        # Create new preset from active
+        action = Gio.SimpleAction.new('add-preset', None)
+        action.connect('activate', self.on_add_preset)
+        self.add_action(action)
+
+        # Reset active preset volumes
+        action = Gio.SimpleAction.new('reset-volumes', None)
+        action.connect('activate', self.on_reset_volumes)
+        self.add_action(action)
+
+        # Add sound file
+        action = Gio.SimpleAction.new('open', None)
+        action.connect('activate', self.on_open)
+        self.add_action(action)
+
+        # Setup accelerator
+        self.set_accels_for_action('app.quit', ['<Ctl>q'])
+        self.set_accels_for_action('app.preferences', ['<Ctl>comma'])
+        self.set_accels_for_action('app.playpause', ['<Ctl>m', 'space'])
+        self.set_accels_for_action('app.open', ['<Ctl>o'])
+        self.set_accels_for_action('win.close', ['<Ctl>w'])
 
     def do_activate(self):
         self.window = self.props.active_window
@@ -203,9 +195,6 @@ class Application(Adw.Application):
 
         about.set_transient_for(self.window)
         about.present()
-
-    def on_close(self, _action, _param):
-        self.window.close()
 
     def on_quit(self, _action, _param):
         self.quit()
