@@ -4,7 +4,7 @@
 import os
 
 from gettext import gettext as _
-from gi.repository import GLib, GObject, Gtk, Adw
+from gi.repository import Gio, GLib, GObject, Gtk, Adw
 
 from blanket.define import SOUNDS
 from blanket.main_player import MainPlayer
@@ -34,6 +34,7 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         # Setup widgets
         self.setup()
+        self.setup_actions()
         # Setup volume
         self.setup_volume_menu()
         # Populate sounds
@@ -59,6 +60,12 @@ class BlanketWindow(Adw.ApplicationWindow):
         # Show preset chooser
         self.presets_chooser.props.visible = len(Settings.get().presets) > 1
         Settings.get().connect('changed::presets', self._on_presets_changed)
+
+    def setup_actions(self):
+        # Close window action
+        action = Gio.SimpleAction.new('close', None)
+        action.connect('activate', lambda _action, _param: self.close())
+        self.add_action(action)
 
     def setup_volume_menu(self):
         # Get volume scale adjustment
