@@ -25,7 +25,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
 
     @classmethod
     def get(cls):
-        """Return an active instance of Settings."""
+        """Return an active instance of MainPlayer."""
         if cls._instance is None:
             cls._instance = MainPlayer()
         return cls._instance
@@ -83,3 +83,10 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
     def remove(self, position):
         del self._sounds[position]
         self.items_changed(position, 1, 0)
+
+    def get_by_name(self, name):
+        for position, sound in enumerate(self._sounds):
+            if sound.name == name:
+                return (sound, position)
+
+        return None

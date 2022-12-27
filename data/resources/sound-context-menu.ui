@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+
+  <menu id="context-menu">
+    <section>
+      <item>
+        <attribute name="custom">volume</attribute>
+      </item>
+    </section>
+  </menu>
+
+  <template class="SoundContextMenu" parent="GtkPopoverMenu">
+    <property name="menu-model">context-menu</property>
+    <property name="has-arrow">False</property>
+    <property name="position">right</property>
+    <property name="valign">start</property>
+    <property name="width-request">200</property>
+
+    <signal name="show" handler="on_opened" swapped="no" />
+
+    <child type="volume">
+      <object class="GtkScale" id="volume">
+        <property name="hexpand">True</property>
+        <property name="adjustment">volume_adjustment</property>
+        <property name="draw_value">False</property>
+      </object>
+    </child>
+
+  </template>
+
+  <object class="GtkAdjustment" id="volume_adjustment">
+    <property name="lower">0</property>
+    <property name="upper">1</property>
+    <property name="step_increment">0.01</property>
+    <property name="page_increment">0.01</property>
+  </object>
+
+</interface>

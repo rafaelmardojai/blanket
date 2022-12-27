@@ -66,6 +66,9 @@ class Sound(GObject.Object):
         self.player.set_virtual_volume(volume)
         Settings.get().set_sound_volume(self.name, volume)
 
+        if volume != 0 and not self.playing:
+            self.playing = True
+
     @property
     def saved_mute(self):
         return Settings.get().get_sound_mute(self.name)
@@ -76,6 +79,7 @@ class Sound(GObject.Object):
 
     def remove(self):
         if self.custom:
+            self.player.set_virtual_volume(0)
             Settings.get().remove_custom_audio(self.name)
 
     def _playing_changed(self, _object, _pspec):
