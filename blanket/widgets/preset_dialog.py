@@ -4,11 +4,12 @@
 from gettext import gettext as _
 from gi.repository import Gio, Gtk, Adw
 
+from blanket.define import RES_PATH
 from blanket.preset import Preset
 from blanket.settings import Settings
 
 
-@Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preset-dialog.ui')
+@Gtk.Template(resource_path=f'{RES_PATH}/preset-dialog.ui')
 class PresetDialog(Adw.Window):
     __gtype_name__ = 'PresetDialog'
 

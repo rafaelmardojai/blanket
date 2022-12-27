@@ -6,14 +6,14 @@ import os
 from gettext import gettext as _
 from gi.repository import Gio, GLib, GObject, Gtk, Adw
 
-from blanket.define import SOUNDS
+from blanket.define import RES_PATH, SOUNDS
 from blanket.main_player import MainPlayer
 from blanket.settings import Settings
 from blanket.sound import Sound
 from blanket.widgets import PlayPauseButton, PresetChooser, VolumeRow
 
 
-@Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/window.ui')
+@Gtk.Template(resource_path=f'{RES_PATH}/window.ui')
 class BlanketWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'BlanketWindow'
 
@@ -44,7 +44,7 @@ class BlanketWindow(Adw.ApplicationWindow):
         # Setup grid
         selection = Gtk.NoSelection(model=MainPlayer.get())
         factory = Gtk.BuilderListItemFactory.new_from_resource(
-            None, '/com/rafaelmardojai/Blanket/grid-item.ui'
+            None, f'{RES_PATH}/grid-item.ui'
         )
 
         self.grid.props.factory = factory

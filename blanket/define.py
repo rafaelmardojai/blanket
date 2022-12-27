@@ -4,6 +4,8 @@
 from gettext import gettext as _
 
 
+RES_PATH = '/com/rafaelmardojai/Blanket'
+
 SOUNDS = [
     {
         'name': _('Nature'),

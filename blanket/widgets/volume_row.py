@@ -3,8 +3,9 @@
 
 from gi.repository import GObject, Gtk
 
+from blanket.define import RES_PATH
 
-@Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/volume-row.ui')
+@Gtk.Template(resource_path=f'{RES_PATH}/volume-row.ui')
 class VolumeRow(Gtk.ListBoxRow):
     __gtype_name__ = 'VolumeRow'
 

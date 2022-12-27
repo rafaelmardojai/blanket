@@ -3,13 +3,14 @@
 
 from gi.repository import Gio, GObject, Gtk
 
+from blanket.define import RES_PATH
 from blanket.main_player import MainPlayer
 from blanket.preset import Preset
 from blanket.settings import Settings
 from blanket.widgets.preset_row import PresetRow
 
 
-@Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preset-chooser.ui')
+@Gtk.Template(resource_path=f'{RES_PATH}/preset-chooser.ui')
 class PresetChooser(Gtk.MenuButton):
     __gtype_name__ = 'PresetChooser'
 

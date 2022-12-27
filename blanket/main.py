@@ -17,7 +17,9 @@ try:
 except ImportError or ValueError as exc:
     print('Error: Dependencies not met.', exc)
 
-from blanket.define import AUTHORS, ARTISTS, SOUND_ARTISTS, SOUND_EDITORS
+from blanket.define import (
+    AUTHORS, ARTISTS, RES_PATH, SOUND_ARTISTS, SOUND_EDITORS
+)
 from blanket.main_player import MainPlayer
 from blanket.mpris import MPRIS
 from blanket.preferences import PreferencesWindow
@@ -179,7 +181,7 @@ class Application(Adw.Application):
 
     def on_about(self, _action, _param):
         builder = Gtk.Builder.new_from_resource(
-            '/com/rafaelmardojai/Blanket/about.ui'
+            f'{RES_PATH}/about.ui'
         )
         about = builder.get_object('about')
 
