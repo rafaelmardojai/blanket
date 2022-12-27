@@ -7,10 +7,11 @@ from random import randint
 from gettext import gettext as _
 from gi.repository import Gio, GLib, Gtk, Adw
 
+from blanket.define import RES_PATH
 from blanket.settings import Settings
 
 
-@Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preferences.ui')
+@Gtk.Template(resource_path=f'{RES_PATH}/preferences.ui')
 class PreferencesWindow(Adw.PreferencesWindow):
     __gtype_name__ = 'PreferencesWindow'
 

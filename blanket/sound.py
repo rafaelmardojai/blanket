@@ -3,6 +3,7 @@
 
 from gi.repository import GObject
 
+from blanket.define import RES_PATH
 from blanket.main_player import MainPlayer
 from blanket.player import Player
 from blanket.settings import Settings
@@ -21,15 +22,15 @@ class Sound(GObject.Object):
     def __init__(self, name, uri=None, title=None, custom=False, **kwargs):
         super().__init__(**kwargs)
 
-        resource_tmpl = 'resource:/com/rafaelmardojai/Blanket/sounds/{}.ogg'
-        icon_tmpl = 'com.rafaelmardojai.Blanket-{}'
+        resource = f'resource:{RES_PATH}/sounds/{name}.ogg'
+        icon = 'com.rafaelmardojai.Blanket-{}'
 
         self._player = None
 
         self.name = name
-        self.uri = uri if uri else resource_tmpl.format(name)
+        self.uri = uri if uri else resource
         self.title = title if title else name
-        self.icon_name = icon_tmpl.format('sound-wave' if custom else name)
+        self.icon_name = icon.format('sound-wave' if custom else name)
         self.custom = custom
 
         self.connect('notify::playing', self._playing_changed)

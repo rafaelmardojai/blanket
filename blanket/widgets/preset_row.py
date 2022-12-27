@@ -3,11 +3,12 @@
 
 from gi.repository import Gio, GObject, Gtk
 
+from blanket.define import RES_PATH
 from blanket.settings import Settings
 from blanket.widgets.preset_dialog import PresetDialog
 
 
-@Gtk.Template(resource_path='/com/rafaelmardojai/Blanket/preset-row.ui')
+@Gtk.Template(resource_path=f'{RES_PATH}/preset-row.ui')
 class PresetRow(Gtk.ListBoxRow):
     __gtype_name__ = 'PresetRow'
 

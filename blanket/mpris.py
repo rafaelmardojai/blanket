@@ -14,6 +14,7 @@ from gi.repository import Gio, GLib, Gtk
 
 from random import randint
 
+from blanket.define import RES_PATH
 from blanket.main_player import MainPlayer
 from blanket.settings import Settings
 
@@ -136,7 +137,7 @@ class MPRIS(Server):
         track_id = 0 + randint(10000000, 90000000)
         self.__metadata["mpris:trackid"] = GLib.Variant(
             "o",
-            "/com/rafaelmardojai/Blanket/Track/%s" % track_id)
+            f"{RES_PATH}/Track/{track_id}")
         self.__metadata["xesam:title"] = GLib.Variant(
             "s", _(Settings.get().active_preset_name)
         )
