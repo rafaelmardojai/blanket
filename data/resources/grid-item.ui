@@ -4,6 +4,10 @@
     <property name="child">
       <object class="SoundItem">
 
+        <binding name="sound">
+          <lookup name="item">GtkListItem</lookup>
+        </binding>
+
         <binding name="playing">
           <lookup name="playing" type="Sound">
             <lookup name="item">GtkListItem</lookup>

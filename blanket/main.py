@@ -110,6 +110,11 @@ class Application(Adw.Application):
         action.connect('activate', self.on_open)
         self.add_action(action)
 
+        # Add sound file
+        action = Gio.SimpleAction.new('remove-sound', GLib.VariantType('s'))
+        action.connect('activate', self.on_remove_sound)
+        self.add_action(action)
+
         # Setup accelerator
         self.set_accels_for_action('app.quit', ['<Ctl>q'])
         self.set_accels_for_action('app.preferences', ['<Ctl>comma'])
@@ -167,6 +172,11 @@ class Application(Adw.Application):
         dialog.set_transient_for(self.window)
         dialog.set_modal(True)
         dialog.present()
+
+    def on_remove_sound(self, _action, name):
+        sound, index = MainPlayer.get().get_by_name(name.get_string())
+        sound.remove()
+        MainPlayer.get().remove(index)
 
     def on_background(self, action, value):
         action.set_state(value)

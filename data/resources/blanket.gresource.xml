@@ -11,14 +11,12 @@
     <file alias="gtk/help-overlay.ui">shortcuts.ui</file>
     <file>volume-row.ui</file>
     <file>grid-item.ui</file>
+    <file>sound-context-menu.ui</file>
 
     <!-- CSS -->
     <file>style.css</file>
 
     <!-- Icons -->
-    <file preprocess="xml-stripblanks">icons/scalable/actions/com.rafaelmardojai.Blanket-remove-symbolic.svg</file>
-
-    <!-- Sounds Icons -->
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-rain-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-storm-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-wind-symbolic.svg</file>
