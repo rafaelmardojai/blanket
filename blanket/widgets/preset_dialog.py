@@ -32,13 +32,11 @@ class PresetDialog(Adw.Window):
 
         if self.preset is None:
             self.set_title(_('New Preset'))
-            self.accept_btn.set_label(_('Create'))
             # Wire buttons
             self.accept_btn.connect('clicked', self._on_create_preset)
         else:
             self.set_title(_('Edit Preset'))
             self.title_widget.set_subtitle(self.preset.name)
-            self.accept_btn.set_label(_('Save'))
             self.name_entry.set_text(self.preset.name)
             # Wire buttons
             self.accept_btn.connect('clicked', self._on_rename_preset)

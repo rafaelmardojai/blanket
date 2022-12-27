@@ -2,7 +2,7 @@
 <!-- Generated with glade 3.22.0 -->
 <interface>
   <template class="PresetDialog" parent="AdwWindow">
-    <property name="default_width">500</property>
+    <property name="default_width">400</property>
     <property name="modal">True</property>
     <property name="destroy_with_parent">True</property>
     <property name="focus_widget">name_entry</property>
@@ -26,6 +26,7 @@
             <child type="end">
               <object class="GtkButton" id="accept_btn">
                 <property name="sensitive">False</property>
+                <property name="label" translatable="yes">Save</property>
                 <style>
                   <class name="suggested-action"/>
                 </style>
@@ -34,28 +35,13 @@
           </object>
         </child>
         <child>
-          <object class="AdwClamp">
-            <property name="maximum-size">400</property>
-            <property name="tightening-threshold">400</property>
+          <object class="AdwPreferencesPage">
             <child>
-              <object class="GtkBox" id="box">
-                <property name="orientation">vertical</property>
-                <property name="spacing">24</property>
-                <property name="margin_top">24</property>
-                <property name="margin_bottom">24</property>
-                <property name="margin_start">6</property>
-                <property name="margin_end">6</property>
+              <object class="AdwPreferencesGroup">
                 <child>
-                  <object class="GtkListBox">
-                    <style>
-                      <class name="content"/>
-                    </style>
-                    <child>
-                      <object class="AdwEntryRow" id="name_entry">
-                        <property name="title" translatable="yes">Preset Name</property>
-                        <property name="selectable">False</property>
-                      </object>
-                    </child>
+                  <object class="AdwEntryRow" id="name_entry">
+                    <property name="title" translatable="yes">Preset Name</property>
+                    <property name="selectable">False</property>
                   </object>
                 </child>
               </object>
