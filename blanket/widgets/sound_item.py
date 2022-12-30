@@ -3,10 +3,12 @@
 
 from gi.repository import Gdk, GObject, Gtk
 
+from blanket.define import RES_PATH
 from blanket.sound import Sound
 from blanket.widgets.sound_context_menu import SoundContextMenu
 
 
+@Gtk.Template(resource_path=f'{RES_PATH}/sound-item.ui')
 class SoundItem(Gtk.Box):
     __gtype_name__ = 'SoundItem'
 
@@ -15,29 +17,24 @@ class SoundItem(Gtk.Box):
     icon_name = GObject.Property(type=str)
     sound = GObject.Property(type=Sound)
 
+    icon = Gtk.Template.Child()
+    label = Gtk.Template.Child()
+
     def __init__(self):
         super().__init__()
-
-        self.props.orientation = Gtk.Orientation.VERTICAL
-        self.props.spacing = 6
-        self.add_css_class('sound-item')
 
         self.connect('notify::playing', self._playing_changed)
 
         # Icon
-        self.icon = Gtk.Image(pixel_size=64, halign=Gtk.Align.CENTER)
         self.bind_property(
             'icon_name', self.icon, 'icon_name',
             GObject.BindingFlags.SYNC_CREATE
         )
-        self.append(self.icon)
 
         # Label
-        self.label = Gtk.Label()
         self.bind_property(
             'title', self.label, 'label', GObject.BindingFlags.SYNC_CREATE
         )
-        self.append(self.label)
 
         click = Gtk.GestureClick()
         click.set_button(3)  # Listen to secondary button (aka right-click)
