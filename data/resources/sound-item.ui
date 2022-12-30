@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="SoundItem" parent="GtkBox">
+    <property name="orientation">vertical</property>
+    <property name="spacing">6</property>
+
+    <style>
+      <class name="sound-item"/>
+    </style>
+
+    <child>
+      <object class="GtkImage" id="icon">
+        <property name="halign">center</property>
+        <property name="pixel_size">64</property>
+      </object>
+    </child>
+
+    <child>
+      <object class="GtkLabel" id="label">
+        <property name="ellipsize">end</property>
+        <property name="wrap">True</property>
+        <property name="lines">2</property>
+        <property name="justify">center</property>
+      </object>
+    </child>
+
+  </template>
+</interface>
