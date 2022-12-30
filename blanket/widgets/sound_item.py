@@ -19,9 +19,12 @@ class SoundItem(Gtk.Box):
 
     icon = Gtk.Template.Child()
     label = Gtk.Template.Child()
+    volume = Gtk.Template.Child()
 
     def __init__(self):
         super().__init__()
+
+        self._sound = None
 
         self.connect('notify::playing', self._playing_changed)
 
@@ -30,7 +33,6 @@ class SoundItem(Gtk.Box):
             'icon_name', self.icon, 'icon_name',
             GObject.BindingFlags.SYNC_CREATE
         )
-
         # Label
         self.bind_property(
             'title', self.label, 'label', GObject.BindingFlags.SYNC_CREATE
@@ -40,6 +42,33 @@ class SoundItem(Gtk.Box):
         click.set_button(3)  # Listen to secondary button (aka right-click)
         click.connect('pressed', self._on_secondary_click)
         self.add_controller(click)
+
+    @GObject.Property(type=Sound)
+    def sound(self):
+        return self._sound
+
+    @sound.setter
+    def sound(self, value):
+        self._sound = value
+
+        if self._sound:
+            vol_adjustment = self.volume.get_adjustment()
+
+            vol_adjustment.props.value = self._sound.saved_volume
+            self.volume.props.sensitive = self._sound.playing
+
+            self._sound.bind_property(
+                'saved_volume',
+                vol_adjustment,
+                'value',
+                GObject.BindingFlags.BIDIRECTIONAL
+            )
+            self._sound.bind_property(
+                'playing',
+                self.volume,
+                'sensitive',
+                GObject.BindingFlags.DEFAULT
+            )
 
     def _playing_changed(self, _object, _pspec):
         if not self.playing:

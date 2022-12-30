@@ -161,6 +161,12 @@
         <attribute name="action">app.open</attribute>
       </item>
     </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Show Volume Controls</attribute>
+        <attribute name="action">win.show-volumes</attribute>
+      </item>
+    </section>
   </menu>
 
   <object class="GtkPopoverMenu" id="volumes">
