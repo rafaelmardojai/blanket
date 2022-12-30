@@ -24,5 +24,27 @@
       </object>
     </child>
 
+    <child>
+      <object class="GtkScale" id="volume">
+        <property name="hexpand">True</property>
+        <property name="adjustment">volume_adjustment</property>
+        <property name="draw_value">False</property>
+
+        <binding name="visible">
+          <lookup name="show-volumes" type="BlanketWindow">
+            <lookup name="root" type="SoundItem">
+            </lookup>
+          </lookup>
+        </binding>
+      </object>
+    </child>
+
   </template>
+
+  <object class="GtkAdjustment" id="volume_adjustment">
+    <property name="lower">0</property>
+    <property name="upper">1</property>
+    <property name="step_increment">0.01</property>
+    <property name="page_increment">0.01</property>
+  </object>
 </interface>
