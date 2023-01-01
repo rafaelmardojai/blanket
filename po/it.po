@@ -7,13 +7,12 @@
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
 # albanobattistella <albano_battistella@hotmail.com>, 2022
 # 
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"PO-Revision-Date: 2023-01-01 14:43+0100\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>, 2022\n"
 "Language-Team: Italian (https://www.transifex.com/rafaelmardojai/teams/135055/it/)\n"
 "MIME-Version: 1.0\n"
@@ -163,7 +162,7 @@ msgstr "Preimpostazioni"
 
 #: data/resources/window.ui:71
 msgid "Add Preset…"
-msgstr "Aggiungi preimpostazione..."
+msgstr "Aggiungi preimpostazione…"
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
@@ -317,7 +316,7 @@ msgstr "Salva"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
-msgstr "Icone suoni"
+msgstr "Suoni icone"
 
 #: blanket/about.py:13
 msgid "App icon"
@@ -335,4 +334,4 @@ msgstr "Suoni modificati da"
 
 #: blanket/widgets.py:184
 msgid "Add Custom Sound…"
-msgstr "Aggiungi suono personalizzato..."
+msgstr "Aggiungi suono personalizzato…"
