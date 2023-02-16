@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blanket package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# John Kap, 2022
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: blanket\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-29 11:33-0500\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
+"Language-Team: English (United States) (https://www.transifex.com/rafaelmardojai/teams/135055/en_US/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:3
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
+#: blanket/window.py:242 blanket/mpris.py:141
+msgid "Blanket"
+msgstr "Blanket"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:4
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7 data/resources/about.ui:7
+#: blanket/mpris.py:136 blanket/mpris.py:139
+msgid "Listen to different sounds"
+msgstr "Listen to different sounds"
+
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
+#: data/com.rafaelmardojai.Blanket.desktop.in:10
+msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
+msgstr "Concentrate;Focus;Noise;Productivity;Sleep;"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+msgid ""
+"Improve focus and increase your productivity by listening to different "
+"sounds"
+msgstr ""
+"Improve focus and increase your productivity by listening to different "
+"sounds"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
+msgid "Also can help you to fall asleep in a noisy environment."
+msgstr "Also can help you to fall asleep in a noisy environment."
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
+msgid "Features:"
+msgstr "Features:"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
+msgid "Save presets"
+msgstr "Save presets"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
+msgid "Add custom sounds"
+msgstr "Add custom sounds"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
+msgid "Auto start in background"
+msgstr "Auto start in background"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+msgid "MPRIS integration"
+msgstr "MPRIS integration"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
+msgid "Included Sounds:"
+msgstr "Included Sounds:"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
+#: blanket/about.py:24 blanket/about.py:35
+msgid "Birds"
+msgstr "Birds"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:21 blanket/window.py:57
+#: blanket/about.py:20 blanket/about.py:35
+msgid "Boat"
+msgstr "Boat"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:22 blanket/window.py:61
+#: blanket/about.py:21 blanket/about.py:35
+msgid "City"
+msgstr "City"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:23 blanket/window.py:70
+#: blanket/about.py:27
+msgid "Coffee Shop"
+msgstr "Coffee Shop"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:24 blanket/window.py:74
+#: blanket/about.py:19
+msgid "Fireplace"
+msgstr "Fireplace"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/window.py:83
+#: blanket/about.py:28
+msgid "Pink Noise"
+msgstr "Pink Noise"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:26 blanket/window.py:20
+#: blanket/about.py:17 blanket/about.py:35
+msgid "Rain"
+msgstr "Rain"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:27 blanket/window.py:44
+#: blanket/about.py:25
+msgid "Summer Night"
+msgstr "Summer Night"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:28 blanket/window.py:24
+#: blanket/about.py:18 blanket/about.py:35
+msgid "Storm"
+msgstr "Storm"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/window.py:36
+#: blanket/about.py:22
+msgid "Stream"
+msgstr "Stream"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/window.py:53
+#: blanket/about.py:30
+msgid "Train"
+msgstr "Train"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:31 blanket/window.py:32
+#: blanket/about.py:26 blanket/about.py:35
+msgid "Waves"
+msgstr "Waves"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:32 blanket/window.py:87
+#: blanket/about.py:23
+msgid "White Noise"
+msgstr "White Noise"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:33 blanket/window.py:28
+#: blanket/about.py:29 blanket/about.py:35
+msgid "Wind"
+msgstr "Wind"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:40
+msgid "Rafael Mardojai CM"
+msgstr "Rafael Mardojai CM"
+
+#. Translators: Keep single quote please!
+#: data/com.rafaelmardojai.Blanket.gschema.xml:42
+msgctxt "visible-name"
+msgid "'Default'"
+msgstr "'Default'"
+
+#: data/resources/window.ui:63
+msgid "Presets"
+msgstr "Presets"
+
+#: data/resources/window.ui:71
+msgid "Add Preset…"
+msgstr "Add Preset…"
+
+#: data/resources/window.ui:77
+msgid "Reset Volume Levels"
+msgstr "Reset Volume Levels"
+
+#: data/resources/window.ui:83
+msgid "Keep Playing When Closed"
+msgstr "Keep Playing When Closed"
+
+#: data/resources/window.ui:89
+msgid "Preferences"
+msgstr "Preferences"
+
+#: data/resources/window.ui:93
+msgid "Keyboard Shortcuts"
+msgstr "Keyboard Shortcuts"
+
+#: data/resources/window.ui:97
+msgid "About Blanket"
+msgstr "About Blanket"
+
+#: data/resources/window.ui:103 data/resources/shortcuts.ui:32
+msgid "Quit"
+msgstr "Quit"
+
+#: data/resources/preferences.ui:12
+msgid "Appearance"
+msgstr "Appearance"
+
+#: data/resources/preferences.ui:15
+msgid "Dark Mode"
+msgstr "Dark Mode"
+
+#: data/resources/preferences.ui:28
+msgid "Behavior"
+msgstr "Behavior"
+
+#: data/resources/preferences.ui:31
+msgid "Autostart in background"
+msgstr "Autostart in background"
+
+#: data/resources/preset-dialog.ui:23
+msgid "Cancel"
+msgstr "Cancel"
+
+#: data/resources/preset-dialog.ui:55
+msgid "Preset Name"
+msgstr "Preset Name"
+
+#: data/resources/preset-row.ui:40
+msgid "Rename Preset"
+msgstr "Rename Preset"
+
+#: data/resources/preset-row.ui:50
+msgid "Delete Preset"
+msgstr "Delete Preset"
+
+#: data/resources/about.ui:8
+msgid "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
+
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
+#: data/resources/about.ui:12
+msgctxt "Add your names here, do not remove previous names!"
+msgid "translator-credits"
+msgstr "translator-credits"
+
+#: data/resources/shortcuts.ui:10
+msgid "General"
+msgstr "General"
+
+#: data/resources/shortcuts.ui:14
+msgid "Play/Pause sounds"
+msgstr "Play/Pause sounds"
+
+#: data/resources/shortcuts.ui:20
+msgid "Add custom sound"
+msgstr "Add custom sound"
+
+#: data/resources/shortcuts.ui:26
+msgid "Close window"
+msgstr "Close window"
+
+#: blanket/window.py:16
+msgid "Nature"
+msgstr "Nature"
+
+#: blanket/window.py:49
+msgid "Travel"
+msgstr "Nature"
+
+#: blanket/window.py:66
+msgid "Interiors"
+msgstr "Interiors"
+
+#: blanket/window.py:79
+msgid "Noise"
+msgstr "Noise"
+
+#. Setup user custom sounds
+#: blanket/window.py:177
+msgid "Custom"
+msgstr "Custom"
+
+#: blanket/window.py:216
+msgid "Open audio"
+msgstr "Open audio"
+
+#: blanket/preferences.py:68
+msgid "Autostart Blanket in background."
+msgstr "Autostart Blanket in background."
+
+#: blanket/preferences.py:96 blanket/preferences.py:131
+msgid "Request error"
+msgstr "Request error"
+
+#: blanket/preferences.py:100 blanket/preferences.py:135
+msgid "The autostart request failed."
+msgstr "The autostart request failed."
+
+#: blanket/preferences.py:119
+msgid "Authorization failed"
+msgstr "Authorization failed"
+
+#: blanket/preferences.py:123
+msgid ""
+"Make sure Blanket has permission to run in \n"
+"the background in Settings → Applications → \n"
+"Blanket and try again."
+msgstr ""
+"Make sure Blanket has permission to run in \n"
+"the background in Settings → Applications → \n"
+"Blanket and try again."
+
+#: blanket/presets.py:114
+msgid "Add Preset"
+msgstr "Add Preset"
+
+#: blanket/presets.py:115
+msgid "Create"
+msgstr "Create"
+
+#: blanket/presets.py:119
+msgid "Edit Preset"
+msgstr "Edit Preset"
+
+#: blanket/presets.py:121
+msgid "Save"
+msgstr "Save"
+
+#: blanket/about.py:12
+msgid "Sounds icons"
+msgstr "Sounds icons"
+
+#: blanket/about.py:13
+msgid "App icon"
+msgstr "App icon"
+
+#. Set sound artists list
+#: blanket/about.py:58
+msgid "Sounds by"
+msgstr "Sounds by"
+
+#. Set sound editors list
+#: blanket/about.py:60
+msgid "Sounds edited by"
+msgstr "Sounds edited by"
+
+#: blanket/widgets.py:184
+msgid "Add Custom Sound…"
+msgstr "Add Custom Sound…"
