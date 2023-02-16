@@ -1,22 +1,27 @@
-# Portuguese (BR) translation for Blanket.
-# Copyright (C) 2020 Rafael Mardojai CM
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# Pedro Fleck <pedrohk@ufcspa.edu.br>, 2020-2021.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# AbdullahWCS Abdullah, 2022
+# Fúlvio Alves <fga.fulvio@gmail.com>, 2023
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-03-27 13:49-0300\n"
-"Last-Translator: Pedro Fleck <pedrohk@ufcspa.edu.br>\n"
-"Language-Team: Brazilian Portuguese <pedrohk@ufcspa.edu.br>\n"
-"Language: pt_BR\n"
+"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/rafaelmardojai/teams/135055/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 3.38.0\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
@@ -30,49 +35,48 @@ msgstr "Blanket"
 msgid "Listen to different sounds"
 msgstr "Escute diferentes sons"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Concentração;Foco;Ruído;Produtividade;Sono;"
+msgstr ""
+"Concentração;Foco;Ruído;Produtividade;Sono;Concentrate;Focus;Noise;Productivity;Sleep;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
+"Improve focus and increase your productivity by listening to different "
+"sounds"
 msgstr ""
-"Melhore seu foco e aumente sua produtividade ouvindo diferentes sons. Ou "
-"permita-se cair no sono em um ambiente ruidoso."
+"Melhorar o foco e aumentar a sua produtividade ouvindo diferentes sons"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Também pode ajudá-lo a dormir em um ambiente barulhento."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Natureza"
+msgstr "Funcionalidades:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr ""
+msgstr "Guardar predefinições"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "Adicionar som personalizado"
+msgstr "Adicionar sons personalizados"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "Iniciar automaticamente em segundo plano"
+msgstr "Início automático em segundo plano"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "Integração com MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Sons incluídos:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -152,24 +156,23 @@ msgstr "Rafael Mardojai C. M."
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Padrão'"
 
 #: data/resources/window.ui:63
 msgid "Presets"
-msgstr ""
+msgstr "Predefinições"
 
 #: data/resources/window.ui:71
 msgid "Add Preset…"
-msgstr ""
+msgstr "Adicionar predefinição…"
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
-msgstr ""
+msgstr "Redefinir níveis de volume"
 
 #: data/resources/window.ui:83
-#, fuzzy
 msgid "Keep Playing When Closed"
-msgstr "Continuar reproduzindo ao fechar"
+msgstr "Continue reproduzindo depois de fechado"
 
 #: data/resources/window.ui:89
 msgid "Preferences"
@@ -189,11 +192,11 @@ msgstr "Sair"
 
 #: data/resources/preferences.ui:12
 msgid "Appearance"
-msgstr ""
+msgstr "Aparência"
 
 #: data/resources/preferences.ui:15
 msgid "Dark Mode"
-msgstr ""
+msgstr "Modo escuro"
 
 #: data/resources/preferences.ui:28
 msgid "Behavior"
@@ -205,31 +208,33 @@ msgstr "Iniciar automaticamente em segundo plano"
 
 #: data/resources/preset-dialog.ui:23
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: data/resources/preset-dialog.ui:55
 msgid "Preset Name"
-msgstr ""
+msgstr "Nome da predefinição"
 
 #: data/resources/preset-row.ui:40
 msgid "Rename Preset"
-msgstr ""
+msgstr "Renomear predefinição"
 
 #: data/resources/preset-row.ui:50
 msgid "Delete Preset"
-msgstr ""
+msgstr "Excluir predefinição"
 
 #: data/resources/about.ui:8
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Direitos autorais 2020-2021 Rafael Mardojai CM"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr ""
 "Pedro Fleck <freckts@gmail.com>, 2021\n"
-"Gustavo Costa <gusta@null.net>"
+"Gustavo Costa <gusta@null.net>\n"
+"Fúlvio Alves <fga.fulvio@gmail.com>, 2023"
 
 #: data/resources/shortcuts.ui:10
 msgid "General"
@@ -273,9 +278,8 @@ msgid "Open audio"
 msgstr "Abrir áudio"
 
 #: blanket/preferences.py:68
-#, fuzzy
 msgid "Autostart Blanket in background."
-msgstr "Iniciar Blanket em segundo plano."
+msgstr "Iniciar automaticamente Blanket em segundo plano"
 
 #: blanket/preferences.py:96 blanket/preferences.py:131
 msgid "Request error"
@@ -301,19 +305,19 @@ msgstr ""
 
 #: blanket/presets.py:114
 msgid "Add Preset"
-msgstr ""
+msgstr "Adicionar predefinição"
 
 #: blanket/presets.py:115
 msgid "Create"
-msgstr ""
+msgstr "Criar"
 
 #: blanket/presets.py:119
 msgid "Edit Preset"
-msgstr ""
+msgstr "Criar predefinição"
 
 #: blanket/presets.py:121
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 #: blanket/about.py:12
 msgid "Sounds icons"
@@ -334,13 +338,5 @@ msgid "Sounds edited by"
 msgstr "Sons editados por"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "Adicionar som personalizado"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "Ruído rosa"
-
-#~ msgid "Unknown"
-#~ msgstr "Desconhecido"
+msgstr "Adicionar som personalizado…"
