@@ -4,7 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
+# Milo Ivir <mail@milotype.de>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -12,8 +13,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2022-04-07 14:43+0000\n"
-"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022\n"
+"PO-Revision-Date: 2023-02-16 03:00+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>, 2023\n"
 "Language-Team: Croatian (https://www.transifex.com/rafaelmardojai/teams/135055/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,11 +45,13 @@ msgstr "Koncentracija;fokusiranje;buka;produktivnost;spavanje;"
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds"
-msgstr "Fokusiraj se i povećaj produktivnost slušajući razne zvukove"
+msgstr ""
+"Poboljšaj fokusiranje na posao i povećaj produktivnost slušajući razne "
+"zvukove"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr "Također može pomoći da zaspiš u bučnom okruženju."
+msgstr "Također ti može pomoći zaspati u bučnom okruženju."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
@@ -255,7 +258,7 @@ msgstr "Putovanje"
 
 #: blanket/window.py:66
 msgid "Interiors"
-msgstr "Zatvoreni prostor"
+msgstr "Zatvoreni prostori"
 
 #: blanket/window.py:79
 msgid "Noise"
@@ -276,7 +279,7 @@ msgstr "Pokreni „Pokrivač” automatski u pozadini."
 
 #: blanket/preferences.py:96 blanket/preferences.py:131
 msgid "Request error"
-msgstr "Greška zahtjeva"
+msgstr "Greška u zahtjevu"
 
 #: blanket/preferences.py:100 blanket/preferences.py:135
 msgid "The autostart request failed."
@@ -323,12 +326,12 @@ msgstr "Ikona programa"
 #. Set sound artists list
 #: blanket/about.py:58
 msgid "Sounds by"
-msgstr "Autori zvukova"
+msgstr "Autori zvukova:"
 
 #. Set sound editors list
 #: blanket/about.py:60
 msgid "Sounds edited by"
-msgstr "Urednici zvukova"
+msgstr "Urednici zvukova:"
 
 #: blanket/widgets.py:184
 msgid "Add Custom Sound…"
