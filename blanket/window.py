@@ -206,6 +206,13 @@ class BlanketWindow(Adw.ApplicationWindow):
                 self.custom_sounds.add(sound)
 
         filters = {
+            'Supported audio files': [
+                'audio/ogg',
+                'audio/flac',
+                'audio/x-wav',
+                'audio/wav',
+                'audio/mpeg'
+            ],
             'Ogg': ['audio/ogg'],
             'FLAC': ['audio/flac'],
             'WAV': ['audio/x-wav', 'audio/wav'],
