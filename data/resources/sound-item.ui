@@ -29,13 +29,6 @@
         <property name="hexpand">True</property>
         <property name="adjustment">volume_adjustment</property>
         <property name="draw_value">False</property>
-
-        <binding name="visible">
-          <lookup name="show-volumes" type="BlanketWindow">
-            <lookup name="root" type="SoundItem">
-            </lookup>
-          </lookup>
-        </binding>
       </object>
     </child>
 

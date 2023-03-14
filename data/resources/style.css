@@ -7,10 +7,6 @@
     font-weight: bold;
 }
 
-.sound-bar {
-    padding: 24px;
-}
-
 .volume-separator {
     margin-bottom: 0;
 }
@@ -28,17 +24,20 @@
     padding: 6px 12px 12px;
 }
 
+.soundbar {
+    border-top: 1px solid @borders;
+}
+
 button.playpause {
-    padding: 9px;
+    padding: 6px;
 }
 
 .sound-view {
     background: @window_bg_color;
-    padding: 0 12px 12px;
 }
 
-.sound-view-scrolled undershoot.top {
-    border-top: 1px solid @borders;
+.sound-item  {
+    padding: 12px;
 }
 
 .sound-item image {
@@ -48,4 +47,16 @@ button.playpause {
 
 .sound-item image.accent {
     background: alpha(@accent_bg_color, 0.2);
+}
+
+.sound-item scale trough {
+    min-height: 12px;
+}
+
+.sound-item scale slider {
+    background: transparent;
+    outline-color: transparent;
+    border-color: transparent;
+    color: transparent;
+    box-shadow: none;
 }

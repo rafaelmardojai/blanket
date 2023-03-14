@@ -17,8 +17,6 @@ from blanket.widgets import PlayPauseButton, PresetChooser, VolumeRow
 class BlanketWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'BlanketWindow'
 
-    show_volumes = GObject.Property(type=bool, default=False)
-
     headerbar = Gtk.Template.Child()
     grid = Gtk.Template.Child()
     playpause_btn: PlayPauseButton = Gtk.Template.Child()
@@ -64,23 +62,9 @@ class BlanketWindow(Adw.ApplicationWindow):
         Settings.get().connect('changed::presets', self._on_presets_changed)
 
     def setup_actions(self):
-
-        def on_show_volumes(action, value):
-            action.set_state(value)
-            self.show_volumes = value
-
         # Close window action
         action = Gio.SimpleAction.new('close', None)
         action.connect('activate', lambda _action, _param: self.close())
-        self.add_action(action)
-
-        # Show volumes
-        action = Gio.SimpleAction.new_stateful(
-            'show-volumes',
-            None,
-            GLib.Variant.new_boolean(self.show_volumes)
-        )
-        action.connect('change-state', on_show_volumes)
         self.add_action(action)
 
     def setup_volume_menu(self):
