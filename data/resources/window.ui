@@ -30,10 +30,35 @@
         </child>
 
         <child>
+          <object class="GtkScrolledWindow">
+            <property name="hscrollbar_policy">never</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+
+            <style>
+              <class name="sound-view-scrolled" />
+            </style>
+
+            <child>
+              <object class="GtkGridView" id="grid">
+                <property name="single-click-activate">True</property>
+
+                <style>
+                  <class name="sound-view"/>
+                </style>
+
+              </object>
+            </child>
+
+          </object>
+        </child>
+
+        <child>
           <object class="GtkCenterBox">
 
             <style>
-              <class name="sound-bar"/>
+              <class name="soundbar"/>
+              <class name="toolbar"/>
             </style>
 
             <child type="center">
@@ -71,30 +96,6 @@
 
                   </object>
                 </child>
-
-              </object>
-            </child>
-
-          </object>
-        </child>
-
-        <child>
-          <object class="GtkScrolledWindow">
-            <property name="hscrollbar_policy">never</property>
-            <property name="hexpand">True</property>
-            <property name="vexpand">True</property>
-
-            <style>
-              <class name="sound-view-scrolled" />
-            </style>
-
-            <child>
-              <object class="GtkGridView" id="grid">
-                <property name="single-click-activate">True</property>
-
-                <style>
-                  <class name="sound-view"/>
-                </style>
 
               </object>
             </child>
@@ -159,12 +160,6 @@
       <item>
         <attribute name="label" translatable="yes">Add Sound...</attribute>
         <attribute name="action">app.open</attribute>
-      </item>
-    </section>
-    <section>
-      <item>
-        <attribute name="label" translatable="yes">Show Volume Controls</attribute>
-        <attribute name="action">win.show-volumes</attribute>
       </item>
     </section>
   </menu>
