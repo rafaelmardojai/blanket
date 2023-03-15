@@ -26,6 +26,7 @@
 
 .soundbar {
     border-top: 1px solid @borders;
+    padding: 12px;
 }
 
 button.playpause {
@@ -34,9 +35,6 @@ button.playpause {
 
 .sound-view {
     background: @window_bg_color;
-}
-
-.sound-item  {
     padding: 12px;
 }
 
@@ -49,8 +47,17 @@ button.playpause {
     background: alpha(@accent_bg_color, 0.2);
 }
 
+.sound-item scale {
+    padding: 12px 6px 6px;
+}
+
 .sound-item scale trough {
     min-height: 12px;
+}
+
+.sound-item scale highlight:disabled {
+    color: @window_fg_color;
+    background: alpha(currentColor, .30);
 }
 
 .sound-item scale slider {
@@ -59,4 +66,6 @@ button.playpause {
     border-color: transparent;
     color: transparent;
     box-shadow: none;
+    min-width: 16px;
+    min-height: 16px;
 }
