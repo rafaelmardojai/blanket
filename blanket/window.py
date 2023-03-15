@@ -10,7 +10,9 @@ from blanket.define import RES_PATH, SOUNDS
 from blanket.main_player import MainPlayer
 from blanket.settings import Settings
 from blanket.sound import Sound
-from blanket.widgets import PlayPauseButton, PresetChooser, VolumeRow
+from blanket.widgets import (
+    PlayPauseButton, PresetChooser, SoundItem, VolumeRow
+)
 
 
 @Gtk.Template(resource_path=f'{RES_PATH}/window.ui')
@@ -42,14 +44,8 @@ class BlanketWindow(Adw.ApplicationWindow):
 
     def setup(self):
         # Setup grid
-        selection = Gtk.NoSelection(model=MainPlayer.get())
-        factory = Gtk.BuilderListItemFactory.new_from_resource(
-            None, f'{RES_PATH}/grid-item.ui'
-        )
-
-        self.grid.props.factory = factory
-        self.grid.props.model = selection
-        self.grid.connect('activate', self._on_grid_activate)
+        self.grid.bind_model(MainPlayer.get(), self._create_sound_item)
+        self.grid.connect('child-activated', self._on_sound_activate)
 
         # Wire playpause button
         MainPlayer.get().bind_property(
@@ -181,9 +177,21 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         return row
 
-    def _on_grid_activate(self, _grid, position):
-        sound = MainPlayer.get().get_item(position)
-        sound.playing = not sound.playing
+    def _create_sound_item(self, sound):
+        item = SoundItem()
+        item.sound = sound
+
+        sound.bind_property('playing', item, 'playing',
+                            GObject.BindingFlags.SYNC_CREATE)
+        sound.bind_property('title', item, 'title',
+                            GObject.BindingFlags.SYNC_CREATE)
+        sound.bind_property('icon_name', item, 'icon_name',
+                            GObject.BindingFlags.SYNC_CREATE)
+
+        return item
+
+    def _on_sound_activate(self, _grid, item):
+        item.sound.playing = not item.sound.playing
 
         # Update volumes list
         self.__update_volume_model()

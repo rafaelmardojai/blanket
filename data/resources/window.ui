@@ -35,13 +35,13 @@
             <property name="hexpand">True</property>
             <property name="vexpand">True</property>
 
-            <style>
-              <class name="sound-view-scrolled" />
-            </style>
-
             <child>
-              <object class="GtkGridView" id="grid">
-                <property name="single-click-activate">True</property>
+              <object class="GtkFlowBox" id="grid">
+                <property name="activate-on-single-click">True</property>
+                <property name="column-spacing">12</property>
+                <property name="row-spacing">12</property>
+                <property name="selection-mode">none</property>
+                <property name="valign">start</property>
 
                 <style>
                   <class name="sound-view"/>
@@ -70,6 +70,7 @@
                     <property name="popover">volumes</property>
                     <property name="valign">center</property>
                     <property name="icon_name">audio-speakers-symbolic</property>
+                    <property name="direction">up</property>
 
                     <style>
                       <class name="circular"/>
@@ -89,6 +90,7 @@
                     <property name="menu-model">more-menu</property>
                     <property name="valign">center</property>
                     <property name="icon_name">view-more-symbolic</property>
+                    <property name="direction">up</property>
 
                     <style>
                       <class name="circular"/>

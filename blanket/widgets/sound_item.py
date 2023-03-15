@@ -9,7 +9,7 @@ from blanket.widgets.sound_context_menu import SoundContextMenu
 
 
 @Gtk.Template(resource_path=f'{RES_PATH}/sound-item.ui')
-class SoundItem(Gtk.Box):
+class SoundItem(Gtk.FlowBoxChild):
     __gtype_name__ = 'SoundItem'
 
     playing = GObject.Property(type=bool, default=False)
