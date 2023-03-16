@@ -62,7 +62,7 @@ button.playpause {
 }
 
 .sound-item scale trough {
-    min-height: 12px;
+    min-height: 9px;
 }
 
 .sound-item scale highlight:disabled {
