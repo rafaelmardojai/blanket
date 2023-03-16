@@ -3,8 +3,8 @@
 
   <template class="BlanketWindow" parent="AdwApplicationWindow">
 
-    <property name="default_width">480</property>
-    <property name="default_height">650</property>
+    <property name="default_width">520</property>
+    <property name="default_height">600</property>
 
     <child>
       <object class="GtkBox">
