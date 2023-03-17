@@ -11,19 +11,19 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="action-name">app.playpause</property>
-                <property name="title" translatable="yes">Play/Pause sounds</property>
+                <property name="title" translatable="yes">Play/Pause Sounds</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="action-name">app.open</property>
-                <property name="title" translatable="yes">Add custom sound</property>
+                <property name="title" translatable="yes">Add Custom Sound</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="action-name">app.close</property>
-                <property name="title" translatable="yes">Close window</property>
+                <property name="title" translatable="yes">Close Window</property>
               </object>
             </child>
             <child>
@@ -35,7 +35,7 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="action-name">win.show-help-overlay</property>
-                <property name="title" translatable="yes">Keyboard shortcus</property>
+                <property name="title" translatable="yes">Keyboard Shortcus</property>
               </object>
             </child>
             <child>
@@ -50,4 +50,3 @@
     </child>
   </object>
 </interface>
-
