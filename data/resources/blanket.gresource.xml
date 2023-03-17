@@ -33,7 +33,7 @@
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-fireplace-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-pink-noise-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-white-noise-symbolic.svg</file>
-    
+
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-sound-wave-symbolic.svg</file>
 
     <!-- Sounds -->
