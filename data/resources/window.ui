@@ -16,6 +16,7 @@
             <child>
               <object class="PresetChooser" id="presets_chooser">
                 <property name="visible">False</property>
+                <property name="tooltip-text" translatable="yes">Presets Menu</property>
               </object>
             </child>
 
@@ -23,6 +24,7 @@
               <object class="GtkMenuButton">
                 <property name="menu-model">primary-menu</property>
                 <property name="icon_name">open-menu-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Main Menu</property>
               </object>
             </child>
 
@@ -71,6 +73,7 @@
                     <property name="valign">center</property>
                     <property name="icon_name">audio-speakers-symbolic</property>
                     <property name="direction">up</property>
+                    <property name="tooltip-text" translatable="yes">Volume Menu</property>
 
                     <style>
                       <class name="circular"/>
@@ -82,6 +85,7 @@
                 <child>
                   <object class="PlayPauseButton" id="playpause_btn">
                     <property name="action_name">app.playpause</property>
+                    <property name="tooltip-text" translatable="yes">Play/Pause Sounds</property>
                   </object>
                 </child>
 
@@ -91,6 +95,7 @@
                     <property name="valign">center</property>
                     <property name="icon_name">view-more-symbolic</property>
                     <property name="direction">up</property>
+                    <property name="tooltip-text" translatable="yes">Sounds Menu</property>
 
                     <style>
                       <class name="circular"/>
