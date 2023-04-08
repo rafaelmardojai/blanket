@@ -6,13 +6,13 @@ name: CI
 jobs:
   flatpak-builder:
     name: "Flatpak Builder"
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     container:
       image: bilelmoussaoui/flatpak-github-actions:gnome-nightly
       options: --privileged
     steps:
     - uses: actions/checkout@v2
-    - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v4
+    - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v6
       with:
         bundle: "blanket-devel.flatpak"
         manifest-path: "com.rafaelmardojai.Blanket.json"
