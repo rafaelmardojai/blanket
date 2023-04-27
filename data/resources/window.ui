@@ -57,11 +57,10 @@
         </child>
 
         <child>
-          <object class="GtkCenterBox">
+          <object class="GtkActionBar">
 
             <style>
               <class name="soundbar"/>
-              <class name="toolbar"/>
             </style>
 
             <child type="center">
