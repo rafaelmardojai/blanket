@@ -24,8 +24,7 @@
     padding: 6px 12px 12px;
 }
 
-.soundbar {
-    border-top: 1px solid @borders;
+.soundbar  > revealer > box {
     padding: 12px;
 }
 
