@@ -34,6 +34,9 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         super().__init__()
         self.connect('notify::playing', self._on_playing)
 
+        self.__add_item = GObject.GObject()  # Fake sound that adds new sounds
+        self.__add_item.playing = False
+
     def mute_vol_zero(self):
         for sound in self:
             if sound.saved_volume == 0:
@@ -62,19 +65,23 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
 
     """
     ListModel methods
+
+    This model keeps a fake last item that serves for the add sound item
     """
 
     def __iter__(self):
         return iter(self._sounds)
 
     def do_get_item(self, position):
+        if position == len(self._sounds):
+            return self.__add_item  # Return plain GObject of Add sound item
         return self._sounds[position]
 
     def do_get_item_type(self):
         return GObject.Object
 
     def do_get_n_items(self):
-        return len(self._sounds)
+        return len(self._sounds) + 1  # Add fake sound to total of items
 
     def append(self, sound):
         self._sounds.append(sound)

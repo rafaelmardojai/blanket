@@ -51,7 +51,7 @@ class SoundItem(Gtk.FlowBoxChild):
     def sound(self, value):
         self._sound = value
 
-        if self._sound:
+        if self._sound is not None:
             vol_adjustment = self.volume.get_adjustment()
 
             vol_adjustment.props.value = self._sound.saved_volume
@@ -70,6 +70,8 @@ class SoundItem(Gtk.FlowBoxChild):
                 GObject.BindingFlags.DEFAULT
             )
 
+            self.volume.props.visible = True
+
     def _playing_changed(self, _object, _pspec):
         if not self.playing:
             self.icon.remove_css_class('accent')
@@ -80,14 +82,15 @@ class SoundItem(Gtk.FlowBoxChild):
         self._context_popover(x, y)
 
     def _context_popover(self, x, y):
-        menu = SoundContextMenu(self.sound)
+        if self._sound is not None:
+            menu = SoundContextMenu(self.sound)
 
-        rec = Gdk.Rectangle()
-        rec.x = x
-        rec.y = y
-        rec.width = 0
-        rec.height = 0
+            rec = Gdk.Rectangle()
+            rec.x = x
+            rec.y = y
+            rec.width = 0
+            rec.height = 0
 
-        menu.set_parent(self)
-        menu.set_pointing_to(rec)
-        menu.show()
+            menu.set_parent(self)
+            menu.set_pointing_to(rec)
+            menu.show()
