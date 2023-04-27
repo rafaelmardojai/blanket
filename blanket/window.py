@@ -179,22 +179,34 @@ class BlanketWindow(Adw.ApplicationWindow):
 
     def _create_sound_item(self, sound):
         item = SoundItem()
-        item.sound = sound
 
-        sound.bind_property('playing', item, 'playing',
-                            GObject.BindingFlags.SYNC_CREATE)
-        sound.bind_property('title', item, 'title',
-                            GObject.BindingFlags.SYNC_CREATE)
-        sound.bind_property('icon_name', item, 'icon_name',
-                            GObject.BindingFlags.SYNC_CREATE)
+        if isinstance(sound, Sound):
+            # Actual sound items
+            item.sound = sound
+
+            sound.bind_property('playing', item, 'playing',
+                                GObject.BindingFlags.SYNC_CREATE)
+            sound.bind_property('title', item, 'title',
+                                GObject.BindingFlags.SYNC_CREATE)
+            sound.bind_property('icon_name', item, 'icon_name',
+                                GObject.BindingFlags.SYNC_CREATE)
+        else:
+            # Add new sound item
+            item.title = _('Add…')
+            item.icon_name = 'com.rafaelmardojai.Blanket-add'
 
         return item
 
     def _on_sound_activate(self, _grid, item):
-        item.sound.playing = not item.sound.playing
-
-        # Update volumes list
-        self.__update_volume_model()
+        # If item sound is None, then it's the Add sound item
+        if item.sound is not None:
+            # Toggle sound playing state
+            item.sound.playing = not item.sound.playing
+            # Update volumes list
+            self.__update_volume_model()
+        else:
+            # Open add sound file chooser
+            self.open_audio()
 
     def _on_presets_changed(self, _settings, _key):
         self.presets_chooser.props.visible = len(Settings.get().presets) > 1
