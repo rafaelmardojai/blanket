@@ -41,6 +41,7 @@ button.playpause {
 .sound-item {
     border-radius: 12px;
     padding: 12px;
+    padding-bottom: 6px;
 }
 
 .sound-item:hover {
@@ -56,26 +57,21 @@ button.playpause {
     background: alpha(@accent_bg_color, 0.2);
 }
 
-.sound-item scale {
-    margin-top: 6px;
-    padding: 0;
+.sound-item > box scale {
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.sound-item scale trough {
+.sound-item > box scale trough slider {
+    opacity: 0;
+}
+
+.sound-item > box scale trough highlight {
     min-height: 9px;
+    min-width: 9px;
 }
 
-.sound-item scale highlight:disabled {
+.sound-item > box scale trough highlight:disabled {
     color: @window_fg_color;
     background: alpha(currentColor, .30);
-}
-
-.sound-item scale slider {
-    background: transparent;
-    outline-color: transparent;
-    border-color: transparent;
-    color: transparent;
-    box-shadow: none;
-    min-width: 16px;
-    min-height: 16px;
 }

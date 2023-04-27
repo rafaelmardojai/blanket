@@ -42,6 +42,7 @@
                 <property name="activate-on-single-click">True</property>
                 <property name="column-spacing">12</property>
                 <property name="row-spacing">12</property>
+                <property name="homogeneous">True</property>
                 <property name="selection-mode">none</property>
                 <property name="valign">start</property>
 

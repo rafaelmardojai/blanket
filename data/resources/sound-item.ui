@@ -22,9 +22,8 @@
         <child>
           <object class="GtkLabel" id="label">
             <property name="ellipsize">end</property>
-            <property name="wrap">True</property>
-            <property name="lines">2</property>
             <property name="justify">center</property>
+            <property name="max-width-chars">10</property>
           </object>
         </child>
 
