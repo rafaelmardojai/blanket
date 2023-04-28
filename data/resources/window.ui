@@ -59,10 +59,6 @@
         <child>
           <object class="GtkActionBar">
 
-            <style>
-              <class name="soundbar"/>
-            </style>
-
             <child type="center">
               <object class="GtkBox">
                 <property name="spacing">24</property>
