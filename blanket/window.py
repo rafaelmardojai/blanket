@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import os
+from urllib.parse import unquote, urlparse
 
 from gettext import gettext as _
 from gi.repository import Gio, GLib, GObject, Gtk, Adw
@@ -113,9 +114,12 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         # Load saved custom audios
         for name, uri in Settings.get().custom_audios.items():
-            # Create a new Sound
-            sound = Sound(name, uri=uri, custom=True)
-            MainPlayer.get().append(sound)
+            # Check if file actually exists
+            path = unquote(urlparse(uri).path)
+            if os.path.exists(path):
+                # Create a new Sound
+                sound = Sound(name, uri=uri, custom=True)
+                MainPlayer.get().append(sound)
 
     def open_audio(self):
         def on_response(_filechooser, _id):
