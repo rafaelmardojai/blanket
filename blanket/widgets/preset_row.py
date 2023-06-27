@@ -45,11 +45,16 @@ class PresetRow(Gtk.ListBoxRow):
             self.remove_css_class('selected')
 
     def _on_show_rename(self, _button):
+        # Close popover
+        popover = self.get_native()
+        if popover is not None:
+            popover.popdown()
+
+        # Open edit dialog
         app = Gio.Application.get_default()
         window = app.get_active_window()
         dialog = PresetDialog(self.preset)
         dialog.set_transient_for(window)
-        dialog.set_modal(True)
         dialog.present()
 
     def _on_delete_preset(self, _button):
