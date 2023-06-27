@@ -1,0 +1,41 @@
+using Gtk 4.0;
+
+ShortcutsWindow help_overlay {
+  ShortcutsSection {
+    section-name: "shortcuts";
+
+    ShortcutsGroup {
+      title: _("General");
+
+      ShortcutsShortcut {
+        action-name: "app.playpause";
+        title: _("Play/Pause Sounds");
+      }
+
+      ShortcutsShortcut {
+        action-name: "app.open";
+        title: _("Add Custom Sound");
+      }
+
+      ShortcutsShortcut {
+        action-name: "win.close";
+        title: _("Close Window");
+      }
+
+      ShortcutsShortcut {
+        action-name: "app.preferences";
+        title: _("Preferences");
+      }
+
+      ShortcutsShortcut {
+        action-name: "win.show-help-overlay";
+        title: _("Keyboard Shortcus");
+      }
+
+      ShortcutsShortcut {
+        action-name: "app.quit";
+        title: _("Quit");
+      }
+    }
+  }
+}

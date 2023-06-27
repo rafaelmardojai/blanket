@@ -1,0 +1,186 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $BlanketWindow : Adw.ApplicationWindow {
+  default-width: 520;
+  default-height: 600;
+
+  Box {
+    orientation: vertical;
+
+    Adw.HeaderBar headerbar {
+      $PresetChooser presets_chooser {
+        visible: "False";
+        tooltip-text: _("Presets Menu");
+      }
+
+      [end]
+      MenuButton {
+        menu-model: primary-menu;
+        icon-name: "open-menu-symbolic";
+        tooltip-text: _("Main Menu");
+      }
+    }
+
+    ScrolledWindow {
+      hscrollbar-policy: never;
+      hexpand: true;
+      vexpand: true;
+
+      FlowBox grid {
+        activate-on-single-click: true;
+        column-spacing: 12;
+        row-spacing: 12;
+        homogeneous: true;
+        selection-mode: none;
+        valign: start;
+
+        styles [
+          "sound-view",
+        ]
+      }
+    }
+
+    ActionBar {
+      [center]
+      Box {
+        spacing: 24;
+
+        MenuButton {
+          popover: volumes;
+          valign: center;
+          icon-name: "audio-speakers-symbolic";
+          direction: up;
+          tooltip-text: _("Volume Menu");
+
+          styles [
+            "circular",
+          ]
+        }
+
+        $PlayPauseButton playpause_btn {
+          action-name: "app.playpause";
+          tooltip-text: _("Play/Pause Sounds");
+        }
+
+        MenuButton {
+          menu-model: more-menu;
+          valign: center;
+          icon-name: "view-more-symbolic";
+          direction: up;
+          tooltip-text: _("Sounds Menu");
+
+          styles [
+            "circular",
+          ]
+        }
+      }
+    }
+  }
+}
+
+menu primary-menu {
+  section {
+    item {
+      label: _("Keep Playing when Closed");
+      action: "app.background-playback";
+    }
+  }
+
+  section {
+    item {
+      label: _("Preferences");
+      action: "app.preferences";
+    }
+
+    item {
+      label: _("Keyboard Shortcuts");
+      action: "win.show-help-overlay";
+    }
+
+    item {
+      label: _("About Blanket");
+      action: "app.about";
+    }
+  }
+
+  section {
+    item {
+      label: _("Quit");
+      action: "app.quit";
+    }
+  }
+}
+
+menu volume-menu {
+  section {
+    item {
+      custom: "volumes";
+    }
+  }
+
+  section {
+    item {
+      label: _("Reset Sounds");
+      action: "app.reset-volumes";
+    }
+  }
+}
+
+menu more-menu {
+  section {
+    item {
+      label: _("Save as New Preset...");
+      action: "app.add-preset";
+    }
+
+    item {
+      label: _("Add Sound...");
+      action: "app.open";
+    }
+  }
+}
+
+PopoverMenu volumes {
+  menu-model: volume-menu;
+  width-request: 250;
+
+  [volumes]
+  Box {
+    orientation: vertical;
+    spacing: 6;
+
+    Scale volume {
+      hexpand: true;
+      adjustment: volume_adjustment;
+      draw-value: false;
+    }
+
+    Box volume_box {
+      orientation: vertical;
+      visible: false;
+
+      Separator {
+        styles [
+          "volume-separator",
+        ]
+      }
+
+      ScrolledWindow {
+        propagate-natural-height: true;
+        max-content-height: 320;
+
+        ListBox volume_list {
+          selection-mode: none;
+        }
+      }
+    }
+  }
+}
+
+Adjustment volume_adjustment {
+  lower: 0;
+  upper: 1;
+  step-increment: 0.01;
+  page-increment: 0.01;
+}

@@ -1,0 +1,37 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $PreferencesWindow : Adw.PreferencesWindow {
+  default-height: 300;
+  default-width: 500;
+  modal: true;
+  search-enabled: false;
+
+  Adw.PreferencesPage {
+    Adw.PreferencesGroup dark_group {
+      title: _("Appearance");
+
+      Adw.ActionRow {
+        title: _("Dark Mode");
+        activatable-widget: dark;
+
+        Switch dark {
+          valign: center;
+        }
+      }
+    }
+
+    Adw.PreferencesGroup {
+      title: _("Behavior");
+
+      Adw.ActionRow {
+        title: _("Autostart in background");
+        activatable-widget: autostart;
+
+        Switch autostart {
+          valign: center;
+        }
+      }
+    }
+  }
+}

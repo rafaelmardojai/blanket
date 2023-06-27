@@ -1,0 +1,32 @@
+using Gtk 4.0;
+
+menu context-menu {
+  section {
+    item {
+      custom: "volume";
+    }
+  }
+}
+
+template $SoundContextMenu : PopoverMenu {
+  menu-model: context-menu;
+  has-arrow: false;
+  position: right;
+  valign: start;
+  width-request: 200;
+  show => $on_opened();
+
+  [volume]
+  Scale volume {
+    hexpand: true;
+    adjustment: volume_adjustment;
+    draw-value: false;
+  }
+}
+
+Adjustment volume_adjustment {
+  lower: 0;
+  upper: 1;
+  step-increment: 0.01;
+  page-increment: 0.01;
+}

@@ -1,0 +1,53 @@
+using Gtk 4.0;
+
+template $PresetRow : ListBoxRow {
+  styles [
+    "preset-row",
+  ]
+
+  Box {
+    hexpand: true;
+    valign: center;
+    spacing: 6;
+
+    Label name {
+      ellipsize: end;
+      xalign: 0;
+      max-width-chars: 16;
+    }
+
+    Image {
+      halign: start;
+      icon-name: "object-select-symbolic";
+      visible: bind template.selected;
+    }
+
+    Box {
+      hexpand: true;
+      halign: end;
+      spacing: 6;
+
+      Button rename_btn {
+        icon-name: "document-edit-symbolic";
+        tooltip-text: _("Rename Preset");
+        visible: bind template.custom;
+
+        styles [
+          "flat",
+          "circular",
+        ]
+      }
+
+      Button delete_btn {
+        icon-name: "edit-delete-symbolic";
+        tooltip-text: _("Delete Preset");
+        visible: bind template.custom;
+
+        styles [
+          "flat",
+          "circular",
+        ]
+      }
+    }
+  }
+}

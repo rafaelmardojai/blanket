@@ -1,0 +1,30 @@
+using Gtk 4.0;
+
+template $PresetChooser : MenuButton {
+  popover: popover;
+  always-show-arrow: true;
+
+  Label {
+    ellipsize: end;
+    label: bind template.selected as <$Preset>.name as <string>;
+  }
+}
+
+Popover popover {
+  width-request: 250;
+  child: ScrolledWindow {
+    propagate-natural-width: true;
+    propagate-natural-height: true;
+    max-content-width: 300;
+    max-content-height: 400;
+    width-request: 300;
+
+    ListBox presets_list {
+      selection-mode: none;
+    }
+  };
+
+  styles [
+    "menu",
+  ]
+}

@@ -1,0 +1,44 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $PresetDialog : Adw.Window {
+  default-width: 400;
+  modal: true;
+  destroy-with-parent: true;
+  focus-widget: name_entry;
+
+  Box {
+    orientation: vertical;
+
+    Adw.HeaderBar headerbar {
+      show-start-title-buttons: false;
+      show-end-title-buttons: false;
+      title-widget: Adw.WindowTitle title_widget {
+        title: bind-property template.title;
+      };
+
+      Button cancel_btn {
+        label: _("Cancel");
+      }
+
+      [end]
+      Button accept_btn {
+        sensitive: false;
+        label: _("Save");
+
+        styles [
+          "suggested-action",
+        ]
+      }
+    }
+
+    Adw.PreferencesPage {
+      Adw.PreferencesGroup {
+        Adw.EntryRow name_entry {
+          title: _("Preset Name");
+          selectable: false;
+        }
+      }
+    }
+  }
+}
