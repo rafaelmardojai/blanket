@@ -3,33 +3,19 @@ using Adw 1;
 
 template $PresetDialog : Adw.Window {
   default-width: 400;
+  width-request: 360;
+  height-request: 220;
   modal: true;
   destroy-with-parent: true;
   focus-widget: name_entry;
 
-  Box {
-    orientation: vertical;
+  Adw.ToolbarView {
 
+    [top]
     Adw.HeaderBar headerbar {
-      show-start-title-buttons: false;
-      show-end-title-buttons: false;
       title-widget: Adw.WindowTitle title_widget {
         title: bind-property template.title;
       };
-
-      Button cancel_btn {
-        label: _("Cancel");
-      }
-
-      [end]
-      Button accept_btn {
-        sensitive: false;
-        label: _("Save");
-
-        styles [
-          "suggested-action",
-        ]
-      }
     }
 
     Adw.PreferencesPage {
@@ -39,6 +25,24 @@ template $PresetDialog : Adw.Window {
           selectable: false;
         }
       }
+    }
+
+    [bottom]
+    Gtk.ActionBar {
+
+      [center]
+      Button accept_btn {
+          sensitive: false;
+          label: _("Save");
+          halign: center;
+          margin-top: 6;
+          margin-bottom: 6;
+
+          styles [
+            "suggested-action",
+            "pill"
+          ]
+        }
     }
   }
 }

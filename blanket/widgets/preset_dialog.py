@@ -16,7 +16,6 @@ class PresetDialog(Adw.Window):
     headerbar = Gtk.Template.Child()
     title_widget = Gtk.Template.Child()
     accept_btn = Gtk.Template.Child()
-    cancel_btn = Gtk.Template.Child()
     name_entry = Gtk.Template.Child()
 
     def __init__(self, preset=None, **kwargs):
@@ -27,7 +26,6 @@ class PresetDialog(Adw.Window):
         self.window = app.get_active_window()
 
         # Wire widgets
-        self.cancel_btn.connect('clicked', lambda _button: self.destroy())
         self.name_entry.connect('changed', self._on_entry_changed)
 
         if self.preset is None:

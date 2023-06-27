@@ -5,9 +5,9 @@ template $BlanketWindow : Adw.ApplicationWindow {
   default-width: 520;
   default-height: 600;
 
-  Box {
-    orientation: vertical;
+  Adw.ToolbarView {
 
+    [top]
     Adw.HeaderBar headerbar {
       $PresetChooser presets_chooser {
         visible: "False";
@@ -41,6 +41,7 @@ template $BlanketWindow : Adw.ApplicationWindow {
       }
     }
 
+    [bottom]
     ActionBar {
       [center]
       Box {
