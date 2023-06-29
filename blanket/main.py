@@ -95,6 +95,10 @@ class Application(Adw.Application):
         action.connect('activate', self.on_playpause)
         self.add_action(action)
 
+        action = Gio.SimpleAction.new('play', None)
+        action.connect('activate', self.on_play)
+        self.add_action(action)
+
         # Create new preset from active
         action = Gio.SimpleAction.new('add-preset', None)
         action.connect('activate', self.on_add_preset)
