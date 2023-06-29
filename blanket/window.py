@@ -21,6 +21,7 @@ class BlanketWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'BlanketWindow'
 
     headerbar = Gtk.Template.Child()
+    toast_overlay = Gtk.Template.Child()
     grid = Gtk.Template.Child()
     playpause_btn: PlayPauseButton = Gtk.Template.Child()
     volumes = Gtk.Template.Child()
@@ -28,6 +29,7 @@ class BlanketWindow(Adw.ApplicationWindow):
     volume_box = Gtk.Template.Child()
     volume_list = Gtk.Template.Child()
     presets_chooser: PresetChooser = Gtk.Template.Child()
+    power_toast = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -242,3 +244,9 @@ class BlanketWindow(Adw.ApplicationWindow):
 
     def __update_volume_model(self):
         self.volume_filter.changed(Gtk.FilterChange.DIFFERENT)
+
+    def show_power_toast(self):
+        self.toast_overlay.add_toast(self.power_toast)
+
+    def hide_power_toast(self):
+        self.power_toast.dismiss()

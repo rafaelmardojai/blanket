@@ -38,6 +38,11 @@ class Application(Adw.Application):
         # Connect app shutdown signal
         self.connect('shutdown', self._on_shutdown)
 
+        # Track power status
+        self.power_monitor = Gio.PowerProfileMonitor.dup_default()
+        self.power_monitor.connect('notify::power-saver-enabled',
+                                   self._on_notify_power_saver_enabled)
+
         # Add --hidden command line option
         self.add_main_option('hidden', b'h', GLib.OptionFlags.NONE,
                              GLib.OptionArg.NONE, 'Start window hidden', None)
@@ -161,12 +166,15 @@ class Application(Adw.Application):
 
     def on_playpause(self, _action=None, _param=None):
         MainPlayer.get().playing = not MainPlayer.get().playing
+        self.window.hide_power_toast()
 
     def on_play(self, _action=None, _param=None):
         MainPlayer.get().playing = True
+        self.window.hide_power_toast()
 
     def on_pause(self, _action=None, _param=None):
         MainPlayer.get().playing = False
+        self.window.hide_power_toast()
 
     def on_reset_volumes(self, _action, _param):
         MainPlayer.get().reset_volumes()
@@ -214,6 +222,17 @@ class Application(Adw.Application):
 
     def on_quit(self, _action, _param):
         self.quit()
+
+    def _on_notify_power_saver_enabled(self, obj, pspec):
+        if (
+            self.power_monitor.get_power_saver_enabled() and
+            MainPlayer.get().playing
+        ):
+            # Pause playback if the system enters power saver mode, as audio
+            # playback uses quite a lot of power. Don’t re-enable it when
+            # exiting power saver mode, as that would be jarring for the user.
+            MainPlayer.get().playing = False
+            self.window.show_power_toast()
 
     def _save_settings(self):
         # Save mainplayer volume

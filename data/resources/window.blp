@@ -23,22 +23,24 @@ template $BlanketWindow : Adw.ApplicationWindow {
       }
     }
 
-    ScrolledWindow {
-      hscrollbar-policy: never;
-      hexpand: true;
-      vexpand: true;
+    Adw.ToastOverlay toast_overlay {
+      ScrolledWindow {
+        hscrollbar-policy: never;
+        hexpand: true;
+        vexpand: true;
 
-      FlowBox grid {
-        activate-on-single-click: true;
-        column-spacing: 12;
-        row-spacing: 12;
-        homogeneous: true;
-        selection-mode: none;
-        valign: start;
+        FlowBox grid {
+          activate-on-single-click: true;
+          column-spacing: 12;
+          row-spacing: 12;
+          homogeneous: true;
+          selection-mode: none;
+          valign: start;
 
-        styles [
-          "sound-view",
-        ]
+          styles [
+            "sound-view",
+          ]
+        }
       }
     }
 
@@ -185,4 +187,10 @@ Adjustment volume_adjustment {
   upper: 1;
   step-increment: 0.01;
   page-increment: 0.01;
+}
+
+Adw.Toast power_toast {
+  title: _("Paused to save power");
+  action-name: "app.play";
+  button-label: _("_Resume Playing");
 }
