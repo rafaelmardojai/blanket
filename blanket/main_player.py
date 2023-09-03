@@ -3,6 +3,8 @@
 
 from gi.repository import Gio, GObject, Gtk
 
+from blanket.preset import Preset
+
 
 class MainPlayer(GObject.GObject, Gio.ListModel):
     """
@@ -10,6 +12,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
 
     It also implements Gio.ListModel and stores the app sound list.
     """
+
     _instance = None
     _cookie = 0
     _sounds = []  # Sound list
@@ -17,11 +20,11 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
     __gtype_name__ = 'MainPlayer'
     __gsignals__ = {
         'preset-changed': (GObject.SIGNAL_RUN_FIRST, None, (GObject.Object,)),
-        'reset-volumes': (GObject.SIGNAL_RUN_FIRST, None, ())
+        'reset-volumes': (GObject.SIGNAL_RUN_FIRST, None, ()),
     }
 
-    playing = GObject.Property(type=bool, default=True)
-    volume = GObject.Property(type=float, default=0)
+    playing: bool = GObject.Property(type=bool, default=True)  # type: ignore
+    volume: float = GObject.Property(type=float, default=0)  # type: ignore
 
     @classmethod
     def get(cls):
@@ -35,14 +38,14 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         self.connect('notify::playing', self._on_playing)
 
         self.__add_item = GObject.GObject()  # Fake sound that adds new sounds
-        self.__add_item.playing = False
+        self.__add_item.playing = False  # type: ignore
 
     def mute_vol_zero(self):
         for sound in self:
             if sound.saved_volume == 0:
                 sound.playing = False
 
-    def change_preset(self, preset):
+    def change_preset(self, preset: Preset):
         self.emit('preset-changed', preset)
 
     def reset_volumes(self):
@@ -54,14 +57,13 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         """
         app = Gtk.Application.get_default()
 
-        if self.playing:
-            self._cookie = app.inhibit(
-                None,
-                Gtk.ApplicationInhibitFlags.SUSPEND,
-                'Playback in progress'
-            )
-        elif self._cookie != 0:
-            app.uninhibit(self._cookie)
+        if app:
+            if self.playing:
+                self._cookie = app.inhibit(  # type: ignore
+                    None, Gtk.ApplicationInhibitFlags.SUSPEND, 'Playback in progress'
+                )
+            elif self._cookie != 0:
+                app.uninhibit(self._cookie)  # type: ignore
 
     """
     ListModel methods
@@ -72,7 +74,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
     def __iter__(self):
         return iter(self._sounds)
 
-    def do_get_item(self, position):
+    def do_get_item(self, position: int) -> GObject.Object:
         if position == len(self._sounds):
             return self.__add_item  # Return plain GObject of Add sound item
         return self._sounds[position]
@@ -80,18 +82,18 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
     def do_get_item_type(self):
         return GObject.Object
 
-    def do_get_n_items(self):
+    def do_get_n_items(self) -> int:
         return len(self._sounds) + 1  # Add fake sound to total of items
 
-    def append(self, sound):
+    def append(self, sound: GObject.Object):
         self._sounds.append(sound)
         self.items_changed(len(self._sounds) - 1, 0, 1)
 
-    def remove(self, position):
+    def remove(self, position: int):
         del self._sounds[position]
         self.items_changed(position, 1, 0)
 
-    def get_by_name(self, name):
+    def get_by_name(self, name: str) -> tuple[GObject.Object, int] | None:
         for position, sound in enumerate(self._sounds):
             if sound.name == name:
                 return (sound, position)

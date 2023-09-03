@@ -14,9 +14,9 @@ from blanket.widgets.preset_row import PresetRow
 class PresetChooser(Gtk.MenuButton):
     __gtype_name__ = 'PresetChooser'
 
-    selected = GObject.Property(type=Preset)
+    selected: Preset = GObject.Property(type=Preset)  # type: ignore
 
-    presets_list = Gtk.Template.Child()
+    presets_list: Gtk.ListBox = Gtk.Template.Child()  # type: ignore
 
     def __init__(self):
         super().__init__()
@@ -40,10 +40,11 @@ class PresetChooser(Gtk.MenuButton):
             if preset_id == Settings.get().active_preset:
                 self.selected = preset
 
-    def _on_preset_activated(self, _listbox, row):
+    def _on_preset_activated(self, _listbox, row: PresetRow):
         index = 0 if row is None else row.get_index()
         preset = self.model.get_item(index)
-        self.selected = preset
+        if preset:
+            self.selected = preset  # type: ignore
 
     def _on_selected_changed(self, _chooser, _pspec):
         if self.selected is not None:
@@ -52,7 +53,7 @@ class PresetChooser(Gtk.MenuButton):
 
         MainPlayer.get().change_preset(self.selected)
 
-    def _create_widget(self, preset):
+    def _create_widget(self, preset: Preset) -> Gtk.Widget:
         widget = PresetRow(preset)
         if preset.id == Settings.get().active_preset:
             widget.selected = True

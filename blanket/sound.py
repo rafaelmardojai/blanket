@@ -13,14 +13,21 @@ class Sound(GObject.Object):
     """
     Describe a sound with it's properties
     """
+
     __gtype_name__ = 'Sound'
 
     playing = GObject.Property(type=bool, default=False)
     title = GObject.Property(type=str)
     icon_name = GObject.Property(type=str)
 
-    def __init__(self, name, uri=None, title=None, custom=False, **kwargs):
-        super().__init__(**kwargs)
+    def __init__(
+        self,
+        name: str,
+        uri: str | None = None,
+        title: str | None = None,
+        custom: bool | None = False,
+    ):
+        super().__init__()
 
         resource = f'resource:{RES_PATH}/sounds/{name}.ogg'
         icon = 'com.rafaelmardojai.Blanket-{}'
@@ -39,29 +46,23 @@ class Sound(GObject.Object):
             self.playing = not self.saved_mute
 
         # Connect mainplayer preset-changed signal
-        MainPlayer.get().connect(
-            'preset-changed',
-            self._on_preset_changed
-        )
+        MainPlayer.get().connect('preset-changed', self._on_preset_changed)
 
         # Connect mainplayer reset-volumes signal
-        MainPlayer.get().connect(
-            'reset-volumes',
-            self._on_reset_volumes
-        )
+        MainPlayer.get().connect('reset-volumes', self._on_reset_volumes)
 
     @property
-    def player(self):
+    def player(self) -> Player:
         if self._player is None:
             self._player = Player(self)
         return self._player
 
     @GObject.Property(type=float)
-    def saved_volume(self):
+    def saved_volume(self) -> float:  # type: ignore
         return Settings.get().get_sound_volume(self.name)
 
     @saved_volume.setter
-    def saved_volume(self, volume):
+    def saved_volume(self, volume: float):
         volume = round(volume, 2)
         self.player.set_virtual_volume(volume)
         Settings.get().set_sound_volume(self.name, volume)
@@ -70,11 +71,11 @@ class Sound(GObject.Object):
             self.playing = True
 
     @property
-    def saved_mute(self):
+    def saved_mute(self) -> bool:
         return Settings.get().get_sound_mute(self.name)
 
     @saved_mute.setter
-    def saved_mute(self, mute):
+    def saved_mute(self, mute: bool):
         Settings.get().set_sound_mute(self.name, mute)
 
     def remove(self):

@@ -11,23 +11,21 @@ from blanket.define import RES_PATH, SOUNDS
 from blanket.main_player import MainPlayer
 from blanket.settings import Settings
 from blanket.sound import Sound
-from blanket.widgets import (
-    PlayPauseButton, PresetChooser, SoundItem, VolumeRow
-)
+from blanket.widgets import PlayPauseButton, PresetChooser, SoundItem, VolumeRow
 
 
 @Gtk.Template(resource_path=f'{RES_PATH}/window.ui')
 class BlanketWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'BlanketWindow'
 
-    headerbar = Gtk.Template.Child()
-    toast_overlay = Gtk.Template.Child()
-    grid = Gtk.Template.Child()
+    headerbar: Gtk.HeaderBar = Gtk.Template.Child()
+    toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
+    grid: Gtk.FlowBox = Gtk.Template.Child()
     playpause_btn: PlayPauseButton = Gtk.Template.Child()
-    volumes = Gtk.Template.Child()
-    volume = Gtk.Template.Child()
-    volume_box = Gtk.Template.Child()
-    volume_list = Gtk.Template.Child()
+    volumes: Gtk.Popover = Gtk.Template.Child()
+    volume: Gtk.Scale = Gtk.Template.Child()
+    volume_box: Gtk.Box = Gtk.Template.Child()
+    volume_list: Gtk.ListBox = Gtk.Template.Child()
     presets_chooser: PresetChooser = Gtk.Template.Child()
     power_toast = Gtk.Template.Child()
 
@@ -52,8 +50,7 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         # Wire playpause button
         MainPlayer.get().bind_property(
-            'playing', self.playpause_btn, 'playing',
-            GObject.BindingFlags.SYNC_CREATE
+            'playing', self.playpause_btn, 'playing', GObject.BindingFlags.SYNC_CREATE
         )
 
         # Show preset chooser
@@ -70,34 +67,23 @@ class BlanketWindow(Adw.ApplicationWindow):
         # Get volume scale adjustment
         vol_adjustment = self.volume.get_adjustment()
         # Bind volume scale value with main player volume
-        vol_adjustment.bind_property('value', MainPlayer.get(),
-                                     'volume',
-                                     GObject.BindingFlags.BIDIRECTIONAL)
+        vol_adjustment.bind_property(
+            'value', MainPlayer.get(), 'volume', GObject.BindingFlags.BIDIRECTIONAL
+        )
         # Set volume scale value on first run
         self.volume.set_value(MainPlayer.get().volume)
 
         # Setup volume list
-        self.volume_filter = Gtk.CustomFilter.new(
-            match_func=lambda item: item.playing
-        )
-        model = Gtk.FilterListModel(
-            model=MainPlayer.get(),
-            filter=self.volume_filter
-        )
+        self.volume_filter = Gtk.CustomFilter.new(match_func=lambda item: item.playing)
+        model = Gtk.FilterListModel(model=MainPlayer.get(), filter=self.volume_filter)
         model.connect('items-changed', self._volume_model_changed)
         self.volume_box.props.visible = model.get_n_items() > 0
         self.volume_list.bind_model(model, self._create_vol_row)
 
         # Connect mainplayer preset-changed signal
-        MainPlayer.get().connect(
-            'preset-changed',
-            self._on_preset_changed
-        )
+        MainPlayer.get().connect('preset-changed', self._on_preset_changed)
         # Connect mainplayer reset-volumes signal
-        MainPlayer.get().connect(
-            'reset-volumes',
-            self._on_reset_volumes
-        )
+        MainPlayer.get().connect('reset-volumes', self._on_reset_volumes)
 
         self.volumes.connect('closed', self._volumes_popup_closed)
 
@@ -128,16 +114,18 @@ class BlanketWindow(Adw.ApplicationWindow):
             gfile = self.filechooser.get_file()
             if gfile:
                 filename = gfile.get_path()
-                name = os.path.basename(filename).split('.')[0]
-                uri = gfile.get_uri()
+                if filename:
+                    name = os.path.basename(filename).split('.')[0]
+                    uri = gfile.get_uri()
 
-                # Create a new Sound
-                sound = Sound(name, uri=uri, custom=True)
-                # Save to settings
-                GLib.idle_add(Settings.get().add_custom_audio,
-                              sound.name, sound.uri)
-                # Add Sound to SoundsGroup
-                MainPlayer.get().append(sound)
+                    # Create a new Sound
+                    sound = Sound(name, uri=uri, custom=True)
+                    # Save to settings
+                    GLib.idle_add(
+                        Settings.get().add_custom_audio, sound.name, sound.uri
+                    )
+                    # Add Sound to SoundsGroup
+                    MainPlayer.get().append(sound)
 
         filters = {
             'Supported audio files': [
@@ -145,7 +133,7 @@ class BlanketWindow(Adw.ApplicationWindow):
                 'audio/flac',
                 'audio/x-wav',
                 'audio/wav',
-                'audio/mpeg'
+                'audio/mpeg',
             ],
             'Ogg': ['audio/ogg'],
             'FLAC': ['audio/flac'],
@@ -153,12 +141,9 @@ class BlanketWindow(Adw.ApplicationWindow):
             'MP3': ['audio/mpeg'],
         }
 
-        self.filechooser = Gtk.FileChooserNative.new(
-            _('Open audio'),
-            self,
-            Gtk.FileChooserAction.OPEN,
-            None,
-            None)
+        self.filechooser = Gtk.FileChooserNative.new(  # type: ignore
+            _('Open audio'), self, Gtk.FileChooserAction.OPEN, None, None
+        )
         self.filechooser.connect('response', on_response)
 
         for f, mts in filters.items():
@@ -175,18 +160,10 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         row.volume = sound.saved_volume
         sound.bind_property(
-            'saved_volume',
-            row,
-            'volume',
-            GObject.BindingFlags.BIDIRECTIONAL
+            'saved_volume', row, 'volume', GObject.BindingFlags.BIDIRECTIONAL
         )
 
-        sound.bind_property(
-            'title',
-            row,
-            'title',
-            GObject.BindingFlags.SYNC_CREATE
-        )
+        sound.bind_property('title', row, 'title', GObject.BindingFlags.SYNC_CREATE)
 
         return row
 
@@ -197,12 +174,15 @@ class BlanketWindow(Adw.ApplicationWindow):
             # Actual sound items
             item.sound = sound
 
-            sound.bind_property('playing', item, 'playing',
-                                GObject.BindingFlags.SYNC_CREATE)
-            sound.bind_property('title', item, 'title',
-                                GObject.BindingFlags.SYNC_CREATE)
-            sound.bind_property('icon_name', item, 'icon_name',
-                                GObject.BindingFlags.SYNC_CREATE)
+            sound.bind_property(
+                'playing', item, 'playing', GObject.BindingFlags.SYNC_CREATE
+            )
+            sound.bind_property(
+                'title', item, 'title', GObject.BindingFlags.SYNC_CREATE
+            )
+            sound.bind_property(
+                'icon_name', item, 'icon_name', GObject.BindingFlags.SYNC_CREATE
+            )
         else:
             # Add new sound item
             item.title = _('Add…')

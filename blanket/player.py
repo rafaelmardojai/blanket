@@ -10,6 +10,7 @@ class Player(GstPlay.Play):
     """
     GstPlayer.Player with modifications
     """
+
     __gtype_name__ = 'SoundPlayer'
 
     def __init__(self, sound):
@@ -33,17 +34,17 @@ class Player(GstPlay.Play):
 
         # Connect mainplayer volume signal
         self.volume_hdlr = MainPlayer.get().connect(
-            'notify::volume',
-            self._on_main_volume_changed)
+            'notify::volume', self._on_main_volume_changed
+        )
         # Connect mainplayer muted signal
         self.playing_hdlr = MainPlayer.get().connect(
-            'notify::playing',
-            self._on_playing_changed)
+            'notify::playing', self._on_playing_changed
+        )
 
         # Connect volume-changed signal
         self.connect('notify::volume', self._on_volume_changed)
 
-    def set_virtual_volume(self, volume):
+    def set_virtual_volume(self, volume: float):
         # Get last saved sound volume
         self.saved_volume = volume
         # Multiply sound volume with mainplayer volume
@@ -82,26 +83,20 @@ class Player(GstPlay.Play):
             # Set volume again when mainplayer volume changes
             self.set_virtual_volume(self.saved_volume)
 
-    def _on_bus_message(self, _bus, message):
+    def _on_bus_message(self, _bus, message: Gst.Message):
         if message:
             if message.type is Gst.MessageType.SEGMENT_DONE:
-                self.pipeline.seek_simple(
-                    Gst.Format.TIME,
-                    Gst.SeekFlags.SEGMENT,
-                    0
-                )
+                self.pipeline.seek_simple(Gst.Format.TIME, Gst.SeekFlags.SEGMENT, 0)
 
             if message.type is Gst.MessageType.ASYNC_DONE:
                 if not self.prerolled:
                     self.pipeline.seek_simple(
-                        Gst.Format.TIME,
-                        Gst.SeekFlags.FLUSH | Gst.SeekFlags.SEGMENT,
-                        0
+                        Gst.Format.TIME, Gst.SeekFlags.FLUSH | Gst.SeekFlags.SEGMENT, 0
                     )
                     self.prerolled = True
 
             return True
 
-    def __vol_zero(self, volume=None):
+    def __vol_zero(self, volume: float | None = None):
         volume = volume if volume else self.get_volume()
         return True if volume == 0 else False

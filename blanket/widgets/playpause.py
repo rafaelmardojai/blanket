@@ -7,7 +7,7 @@ from gi.repository import GObject, Gtk
 class PlayPauseButton(Gtk.Button):
     __gtype_name__ = 'PlayPauseButton'
 
-    playing = GObject.Property(type=bool, default=True)
+    playing: bool = GObject.Property(type=bool, default=True)  # type: ignore
 
     def __init__(self):
         super().__init__()

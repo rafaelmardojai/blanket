@@ -9,8 +9,8 @@ from blanket.settings import Settings
 class Preset(GObject.Object):
     __gtype_name__ = 'Preset'
 
-    name = GObject.Property(type=str)
-    active = GObject.Property(type=bool, default=False)
+    name: str = GObject.Property(type=str)  # type: ignore
+    active: bool = GObject.Property(type=bool, default=False)  # type: ignore
 
     def __init__(self, preset_id):
         super().__init__()
@@ -18,9 +18,7 @@ class Preset(GObject.Object):
         self.id = preset_id
 
         self.active = Settings.get().active_preset == self.id
-        Settings.get().connect(
-            'changed::active-preset', self._on_active_preset_changed
-        )
+        Settings.get().connect('changed::active-preset', self._on_active_preset_changed)
 
         # Bind preset name with settings one
         Settings.get().get_preset_settings(self.id).bind(

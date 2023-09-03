@@ -5,6 +5,7 @@ import sys
 import gi
 
 from gettext import gettext as _
+
 try:
     gi.require_version('Gst', '1.0')
     gi.require_version('GstPlay', '1.0')
@@ -12,14 +13,13 @@ try:
     gi.require_version('Gtk', '4.0')
     gi.require_version('Adw', '1')
     from gi.repository import GLib, Gst, Gio, Gtk, Adw
+
     # Init GStreamer
     Gst.init(None)
 except ImportError or ValueError as exc:
     print('Error: Dependencies not met.', exc)
 
-from blanket.define import (
-    AUTHORS, ARTISTS, RES_PATH, SOUND_ARTISTS, SOUND_EDITORS
-)
+from blanket.define import AUTHORS, ARTISTS, RES_PATH, SOUND_ARTISTS, SOUND_EDITORS
 from blanket.main_player import MainPlayer
 from blanket.mpris import MPRIS
 from blanket.preferences import PreferencesWindow
@@ -30,11 +30,16 @@ from blanket.window import BlanketWindow
 
 class Application(Adw.Application):
     def __init__(self, version):
-        super().__init__(application_id='com.rafaelmardojai.Blanket',
-                         flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
+        super().__init__(
+            application_id='com.rafaelmardojai.Blanket',
+            flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE,
+        )
         GLib.set_application_name(_('Blanket'))
-        GLib.setenv('PULSE_PROP_application.icon_name',
-                    'com.rafaelmardojai.Blanket-symbolic', True)
+        GLib.setenv(
+            'PULSE_PROP_application.icon_name',
+            'com.rafaelmardojai.Blanket-symbolic',
+            True,
+        )
         # Connect app shutdown signal
         self.connect('shutdown', self._on_shutdown)
 
@@ -44,10 +49,16 @@ class Application(Adw.Application):
                                    self._on_notify_power_saver_enabled)
 
         # Add --hidden command line option
-        self.add_main_option('hidden', b'h', GLib.OptionFlags.NONE,
-                             GLib.OptionArg.NONE, 'Start window hidden', None)
+        self.add_main_option(
+            'hidden',
+            b'h',
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.NONE,
+            'Start window hidden',
+            None,
+        )
         # App window
-        self.window = None
+        self.window: Gtk.Window | None = None
         self.window_hidden = False
         # App version
         self.version = version
@@ -60,8 +71,8 @@ class Application(Adw.Application):
         # if the system doesn't support libadwaita color schemes,
         # fall back to our setting
         if (
-            Settings.get().dark_mode and
-            not style_manager.props.system_supports_color_schemes
+            Settings.get().dark_mode
+            and not style_manager.props.system_supports_color_schemes
         ):
             style_manager.props.color_scheme = Adw.ColorScheme.FORCE_DARK
 
@@ -88,9 +99,7 @@ class Application(Adw.Application):
 
         # Toggle background-playback setting
         action = Gio.SimpleAction.new_stateful(
-             'background-playback',
-             None,
-             Settings.get().get_value('background-playback')
+            'background-playback', None, Settings.get().get_value('background-playback')
         )
         action.connect('change-state', self.on_background)
         self.add_action(action)
@@ -162,7 +171,8 @@ class Application(Adw.Application):
         return 0
 
     def on_open(self, _action, _param):
-        self.window.open_audio()
+        if self.window:
+            self.window.open_audio()  # type: ignore
 
     def on_playpause(self, _action=None, _param=None):
         MainPlayer.get().playing = not MainPlayer.get().playing
@@ -185,7 +195,7 @@ class Application(Adw.Application):
         dialog.set_modal(True)
         dialog.present()
 
-    def on_remove_sound(self, _action, name):
+    def on_remove_sound(self, _action, name: GLib.Variant):
         sound, index = MainPlayer.get().get_by_name(name.get_string())
         sound.remove()
         MainPlayer.get().remove(index)
@@ -202,9 +212,7 @@ class Application(Adw.Application):
         window.present()
 
     def on_about(self, _action, _param):
-        builder = Gtk.Builder.new_from_resource(
-            f'{RES_PATH}/about.ui'
-        )
+        builder = Gtk.Builder.new_from_resource(f'{RES_PATH}/about.ui')
         about = builder.get_object('about')
 
         artists = self.__get_credits_list(ARTISTS)

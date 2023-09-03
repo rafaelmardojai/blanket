@@ -1,6 +1,7 @@
 # Copyright 2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+from typing import Self
 import uuid
 
 from gi.repository import Gio, GLib
@@ -10,18 +11,15 @@ class Settings(Gio.Settings):
     instance = None
     presets_settings = {}
 
-    def __init__(self):
-        Gio.Settings.__init__(self)
-
-    @staticmethod
-    def new():
+    @classmethod
+    def new(cls) -> Self:
         """Create a new instance of Settings."""
         g_settings = Gio.Settings.new('com.rafaelmardojai.Blanket')
         g_settings.__class__ = Settings
-        return g_settings
+        return g_settings  # type: ignore
 
-    @staticmethod
-    def get():
+    @classmethod
+    def get(cls) -> Self:
         """Return an active instance of Settings."""
         if Settings.instance is None:
             Settings.instance = Settings.new()
@@ -30,70 +28,78 @@ class Settings(Gio.Settings):
         return Settings.instance
 
     """ Autostart """
+
     @property
-    def autostart(self):
+    def autostart(self) -> bool:
         return self.get_boolean('autostart')
 
     @autostart.setter
-    def autostart(self, autostart):
+    def autostart(self, autostart: bool):
         self.set_boolean('autostart', autostart)
 
     """ Dark Mode """
+
     @property
-    def dark_mode(self):
+    def dark_mode(self) -> bool:
         return self.get_boolean('dark-mode')
 
     @dark_mode.setter
-    def dark_mode(self, dark):
+    def dark_mode(self, dark: bool):
         self.set_boolean('dark-mode', dark)
 
     """ Sounds view scroll position """
+
     @property
-    def scroll_position(self):
+    def scroll_position(self) -> float:
         return self.get_double('scroll-position')
 
     @scroll_position.setter
-    def scroll_position(self, position):
+    def scroll_position(self, position: float):
         self.set_double('scroll-position', position)
 
     """ General volume level """
+
     @property
-    def volume(self):
+    def volume(self) -> float:
         return self.get_double('volume')
 
     @volume.setter
-    def volume(self, volume):
+    def volume(self, volume: float):
         self.set_double('volume', volume)
 
     """ Playing state """
+
     @property
-    def playing(self):
+    def playing(self) -> bool:
         return self.get_boolean('playing')
 
     @playing.setter
-    def playing(self, state):
+    def playing(self, state: bool):
         self.set_boolean('playing', state)
 
     """ Background playing """
+
     @property
-    def background(self):
+    def background(self) -> bool:
         return self.get_boolean('background-playback')
 
     @background.setter
-    def background(self, background):
+    def background(self, background: bool):
         self.set_boolean('background-playback', background)
 
     """ Custom sounds """
+
     @property
-    def custom_audios(self):
+    def custom_audios(self) -> dict[str, str]:
         return dict(self.get_value('custom-audios'))
 
     @custom_audios.setter
-    def custom_audios(self, audios):
+    def custom_audios(self, audios: dict[str, str]):
         self.set_value('custom-audios', GLib.Variant('a{ss}', audios))
 
     """ Custom sounds helper functions  """
-    def add_custom_audio(self, name, uri):
+
+    def add_custom_audio(self, name: str, uri: str):
         # Add the audio if the name is not already present
         if name not in self.custom_audios:
             saved_audios = self.custom_audios
@@ -103,7 +109,7 @@ class Settings(Gio.Settings):
             # TODO: Do something if True
             pass
 
-    def remove_custom_audio(self, name):
+    def remove_custom_audio(self, name: str):
         if name in self.custom_audios:
             saved_audios = self.custom_audios
             del saved_audios[name]
@@ -116,42 +122,44 @@ class Settings(Gio.Settings):
             """
 
     """ Presets """
+
     @property
-    def presets(self):
+    def presets(self) -> list[str]:
         return list(self.get_strv('presets'))
 
     @presets.setter
-    def presets(self, presets):
+    def presets(self, presets: list[str]):
         self.set_strv('presets', presets)
 
     @property
-    def active_preset(self):
+    def active_preset(self) -> str:
         return self.get_string('active-preset')
 
     @active_preset.setter
-    def active_preset(self, preset):
+    def active_preset(self, preset: str):
         self.set_string('active-preset', preset)
 
     @property
-    def active_preset_name(self):
+    def active_preset_name(self) -> str:
         return self.get_preset_name(self.active_preset)
 
     @property
-    def default_preset(self):
-        """ Return the default preset ID. """
-        return self.get_default_value('active-preset').get_string()
+    def default_preset(self) -> str:
+        """Return the default preset ID."""
+        return self.get_default_value('active-preset').get_string()  # type: ignore
 
     """ Presets helper functions  """
-    def get_presets_dict(self):
-        """ Return the presets formatted as dict: ID => name. """
+
+    def get_presets_dict(self) -> dict[str, str]:
+        """Return the presets formatted as dict: ID => name."""
         presets_dict = {}
         for preset in self.presets:
             presets_dict[preset] = self.get_preset_name(preset)
 
         return presets_dict
 
-    def add_preset(self, name):
-        """ Create a new Preset. """
+    def add_preset(self, name: str) -> str:
+        """Create a new Preset."""
         preset_id = str(uuid.uuid4())
 
         saved_presets = self.presets
@@ -168,7 +176,7 @@ class Settings(Gio.Settings):
 
         return preset_id
 
-    def remove_preset(self, preset_id):
+    def remove_preset(self, preset_id: str) -> None | int:
         index = None
 
         if preset_id in self.presets:
@@ -184,33 +192,34 @@ class Settings(Gio.Settings):
         # Return the index where the preset where positioned
         return index
 
-    def get_preset_name(self, preset_id):
+    def get_preset_name(self, preset_id: str) -> str:
         settings = self.get_preset_settings(preset_id)
         return settings.get_string('visible-name')
 
-    def set_preset_name(self, preset_id, name):
+    def set_preset_name(self, preset_id: str, name: str):
         preset = self.get_preset_settings(preset_id)
         preset.set_string('visible-name', name)
         preset.apply()  # Always apply changes on name change
 
-    def get_preset_volumes(self, preset_id):
+    def get_preset_volumes(self, preset_id: str) -> dict[str, float]:
         settings = self.get_preset_settings(preset_id)
         return dict(settings.get_value('sounds-volume'))
 
-    def set_preset_volumes(self, preset_id, volumes):
+    def set_preset_volumes(self, preset_id: str, volumes: dict[str, float]):
         settings = self.get_preset_settings(preset_id)
         settings.set_value('sounds-volume', GLib.Variant('a{sd}', volumes))
 
-    def get_preset_mutes(self, preset_id):
+    def get_preset_mutes(self, preset_id: str) -> dict[str, bool]:
         settings = self.get_preset_settings(preset_id)
         return dict(settings.get_value('sounds-mute'))
 
-    def set_preset_mutes(self, preset_id, mutes):
+    def set_preset_mutes(self, preset_id: str, mutes: dict[str, bool]):
         settings = self.get_preset_settings(preset_id)
         settings.set_value('sounds-mute', GLib.Variant('a{sb}', mutes))
 
     """ Preset sound volume """
-    def get_sound_volume(self, name):
+
+    def get_sound_volume(self, name: str):
         volumes = self.get_preset_volumes(self.active_preset)
         # If sound is set on volume dict
         if name in volumes:
@@ -219,7 +228,7 @@ class Settings(Gio.Settings):
                 return volume
         return 0.0
 
-    def set_sound_volume(self, name, volume):
+    def set_sound_volume(self, name: str, volume: float):
         saved_volumes = self.get_preset_volumes(self.active_preset)
         saved_volumes[name] = volume
         self.set_preset_volumes(self.active_preset, saved_volumes)
@@ -228,7 +237,8 @@ class Settings(Gio.Settings):
             self.set_sound_mute(name, False)
 
     """ Preset sound mute """
-    def get_sound_mute(self, name):
+
+    def get_sound_mute(self, name: str) -> bool:
         mutes = self.get_preset_mutes(self.active_preset)
         # If sound is set on mute dict
         if name in mutes:
@@ -236,14 +246,15 @@ class Settings(Gio.Settings):
             return mute
         return True
 
-    def set_sound_mute(self, name, mute):
+    def set_sound_mute(self, name: str, mute: bool):
         saved_mutes = self.get_preset_mutes(self.active_preset)
         saved_mutes[name] = mute
         self.set_preset_mutes(self.active_preset, saved_mutes)
 
     """ Preset settings helper functions """
-    def get_preset_settings(self, preset_id=None):
-        """ Get Preset Gio.Settings instance. """
+
+    def get_preset_settings(self, preset_id: str | None = None) -> Gio.Settings:
+        """Get Preset Gio.Settings instance."""
 
         # By default return active preset
         if preset_id is None:
@@ -254,7 +265,7 @@ class Settings(Gio.Settings):
             if not path.endswith('/'):
                 path += '/'
             path += preset_id + '/'
-            self.presets_settings[preset_id] = Gio.Settings(
+            self.presets_settings[preset_id] = Gio.Settings.new_with_path(
                 'com.rafaelmardojai.Blanket.preset', path
             )
             # Set on ‘delay-apply’ mode so it only applies changes when we want
@@ -262,9 +273,9 @@ class Settings(Gio.Settings):
 
         return self.presets_settings[preset_id]
 
-    def save_presets(self, preset_id=None):
-        """ Apply all the changes made to presets,
-            or to a specific preset. """
+    def save_presets(self, preset_id: str | None = None):
+        """Apply all the changes made to presets,
+        or to a specific preset."""
 
         if preset_id is not None and preset_id in self.presets_settings:
             self.presets_settings[preset_id].apply()
@@ -273,16 +284,17 @@ class Settings(Gio.Settings):
                 settings.apply()
 
     """ Legacy sounds volume """
+
     @property
-    def legacy_sounds_volume(self):
+    def legacy_sounds_volume(self) -> dict[str, float]:
         return dict(self.get_value('sounds-volume'))
 
     @legacy_sounds_volume.setter
-    def legacy_sounds_volume(self, volumes_dict):
+    def legacy_sounds_volume(self, volumes_dict: dict[str, float]):
         self.set_value('sounds-volume', GLib.Variant('a{sd}', volumes_dict))
 
     def migrate_legacy_volumes(self):
-        """ Migrate legacy volumes to Default preset. """
+        """Migrate legacy volumes to Default preset."""
         legacy_volumes = self.legacy_sounds_volume
         if legacy_volumes:
             self.set_preset_volumes(self.default_preset, legacy_volumes)
