@@ -46,6 +46,6 @@ If your sounds passed the criterion, you can add the sounds in your cloned local
 ### Icons
 Sounds must have a hair-style symbolic icon. 
 
-If you don't have an icon and your sound has been aproved, you can wait for someone in the communty to contribute one. But no sound will be included in the app without a proper icon.
+If you don't have an icon and your sound has been approved, you can wait for someone in the community to contribute one. But no sound will be included in the app without a proper icon.
 _______
 _More documentation here:_ [**Sounds_documentation.md**](https://github.com/rafaelmardojai/blanket/blob/master/doc/Sound_documentation.md)
