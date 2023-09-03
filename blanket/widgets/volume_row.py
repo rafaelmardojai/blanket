@@ -10,8 +10,8 @@ from blanket.define import RES_PATH
 class VolumeRow(Gtk.ListBoxRow):
     __gtype_name__ = 'VolumeRow'
 
-    title = GObject.Property(type=str)
-    volume = GObject.Property(type=float)
+    title: str = GObject.Property(type=str)  # type: ignore
+    volume: float = GObject.Property(type=float)  # type: ignore
 
     def __init__(self):
         super().__init__()

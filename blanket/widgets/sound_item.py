@@ -12,14 +12,14 @@ from blanket.widgets.sound_context_menu import SoundContextMenu
 class SoundItem(Gtk.FlowBoxChild):
     __gtype_name__ = 'SoundItem'
 
-    playing = GObject.Property(type=bool, default=False)
-    title = GObject.Property(type=str)
-    icon_name = GObject.Property(type=str)
-    sound = GObject.Property(type=Sound)
+    playing: bool = GObject.Property(type=bool, default=False)  # type: ignore
+    title: str = GObject.Property(type=str)  # type: ignore
+    icon_name: str = GObject.Property(type=str)  # type: ignore
+    sound: Sound = GObject.Property(type=Sound)  # type: ignore
 
-    icon = Gtk.Template.Child()
-    label = Gtk.Template.Child()
-    volume = Gtk.Template.Child()
+    icon: Gtk.Image = Gtk.Template.Child()
+    label: Gtk.Label = Gtk.Template.Child()
+    volume: Gtk.Scale = Gtk.Template.Child()
 
     def __init__(self):
         super().__init__()
@@ -30,8 +30,7 @@ class SoundItem(Gtk.FlowBoxChild):
 
         # Icon
         self.bind_property(
-            'icon_name', self.icon, 'icon_name',
-            GObject.BindingFlags.SYNC_CREATE
+            'icon_name', self.icon, 'icon_name', GObject.BindingFlags.SYNC_CREATE
         )
         # Label
         self.bind_property(
@@ -61,13 +60,10 @@ class SoundItem(Gtk.FlowBoxChild):
                 'saved_volume',
                 vol_adjustment,
                 'value',
-                GObject.BindingFlags.BIDIRECTIONAL
+                GObject.BindingFlags.BIDIRECTIONAL,
             )
             self._sound.bind_property(
-                'playing',
-                self.volume,
-                'sensitive',
-                GObject.BindingFlags.DEFAULT
+                'playing', self.volume, 'sensitive', GObject.BindingFlags.DEFAULT
             )
 
             self.volume.props.visible = True

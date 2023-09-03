@@ -11,7 +11,7 @@ from blanket.define import RES_PATH
 class SoundContextMenu(Gtk.PopoverMenu):
     __gtype_name__ = 'SoundContextMenu'
 
-    volume = Gtk.Template.Child()
+    volume: Gtk.Scale = Gtk.Template.Child()
 
     def __init__(self, sound):
         super().__init__()
@@ -23,8 +23,7 @@ class SoundContextMenu(Gtk.PopoverMenu):
             custom_section = Gio.Menu()
             remove_item = Gio.MenuItem.new(_('Remove'), None)
             remove_item.set_action_and_target_value(
-                'app.remove-sound',
-                GLib.Variant.new_string(self.sound.name)
+                'app.remove-sound', GLib.Variant.new_string(self.sound.name)
             )
             custom_section.insert_item(-1, remove_item)
             self.props.menu_model.append_section(None, custom_section)
@@ -35,10 +34,7 @@ class SoundContextMenu(Gtk.PopoverMenu):
 
         vol_adjustment = self.volume.get_adjustment()
         self.vol_bind = self.sound.bind_property(
-            'saved_volume',
-            vol_adjustment,
-            'value',
-            GObject.BindingFlags.BIDIRECTIONAL
+            'saved_volume', vol_adjustment, 'value', GObject.BindingFlags.BIDIRECTIONAL
         )
 
     def do_closed(self):

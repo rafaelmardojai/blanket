@@ -12,12 +12,12 @@ from blanket.widgets.preset_dialog import PresetDialog
 class PresetRow(Gtk.ListBoxRow):
     __gtype_name__ = 'PresetRow'
 
-    custom = GObject.Property(type=bool, default=False)
-    selected = GObject.Property(type=bool, default=False)
+    custom: bool = GObject.Property(type=bool, default=False)  # type: ignore
+    selected: bool = GObject.Property(type=bool, default=False)  # type: ignore
 
-    name = Gtk.Template.Child()
-    rename_btn = Gtk.Template.Child()
-    delete_btn = Gtk.Template.Child()
+    name: Gtk.Label = Gtk.Template.Child()
+    rename_btn: Gtk.Button = Gtk.Template.Child()
+    delete_btn: Gtk.Button = Gtk.Template.Child()
 
     def __init__(self, preset):
         super().__init__()
