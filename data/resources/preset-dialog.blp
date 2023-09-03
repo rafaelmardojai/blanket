@@ -13,9 +13,28 @@ template $PresetDialog : Adw.Window {
 
     [top]
     Adw.HeaderBar headerbar {
+      show-end-title-buttons: false;
+      show-start-title-buttons: false;
+
       title-widget: Adw.WindowTitle title_widget {
         title: bind-property template.title;
       };
+
+      Button {
+        label: _("Cancel");
+
+        clicked => $_on_cancel_clicked();
+      }
+
+      [end]
+      Button accept_btn {
+        sensitive: false;
+        label: _("Save");
+
+        styles [
+          "suggested-action"
+        ]
+      }
     }
 
     Adw.PreferencesPage {
@@ -23,26 +42,10 @@ template $PresetDialog : Adw.Window {
         Adw.EntryRow name_entry {
           title: _("Preset Name");
           selectable: false;
+
+          changed => $_on_entry_changed();
         }
       }
-    }
-
-    [bottom]
-    Gtk.ActionBar {
-
-      [center]
-      Button accept_btn {
-          sensitive: false;
-          label: _("Save");
-          halign: center;
-          margin-top: 6;
-          margin-bottom: 6;
-
-          styles [
-            "suggested-action",
-            "pill"
-          ]
-        }
     }
   }
 }

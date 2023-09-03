@@ -13,10 +13,10 @@ from blanket.settings import Settings
 class PresetDialog(Adw.Window):
     __gtype_name__ = 'PresetDialog'
 
-    headerbar = Gtk.Template.Child()
-    title_widget = Gtk.Template.Child()
-    accept_btn = Gtk.Template.Child()
-    name_entry = Gtk.Template.Child()
+    headerbar: Adw.HeaderBar = Gtk.Template.Child()
+    title_widget: Adw.WindowTitle = Gtk.Template.Child()
+    accept_btn: Gtk.Button = Gtk.Template.Child()
+    name_entry: Adw.EntryRow = Gtk.Template.Child()
 
     def __init__(self, preset=None, **kwargs):
         super().__init__()
@@ -24,9 +24,6 @@ class PresetDialog(Adw.Window):
         self.preset = preset
         app = Gio.Application.get_default()
         self.window = app.get_active_window()
-
-        # Wire widgets
-        self.name_entry.connect('changed', self._on_entry_changed)
 
         if self.preset is None:
             self.set_title(_('New Preset'))
@@ -39,6 +36,11 @@ class PresetDialog(Adw.Window):
             # Wire buttons
             self.accept_btn.connect('clicked', self._on_rename_preset)
 
+    @Gtk.Template.Callback()
+    def _on_cancel_clicked(self, _button):
+        self.close()
+
+    @Gtk.Template.Callback()
     def _on_entry_changed(self, _entry):
         name = self.__get_name()
 
