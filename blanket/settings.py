@@ -37,6 +37,16 @@ class Settings(Gio.Settings):
     def autostart(self, autostart: bool):
         self.set_boolean('autostart', autostart)
 
+    """ Start in Pause """
+
+    @property
+    def start_paused(self) -> bool:
+        return self.get_boolean('start-paused')
+
+    @start_paused.setter
+    def start_paused(self, paused: bool):
+        self.set_boolean('start-paused', paused)
+
     """ Dark Mode """
 
     @property

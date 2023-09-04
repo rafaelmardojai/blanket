@@ -5,6 +5,9 @@
         <key type="b" name="autostart">
             <default>false</default>
         </key>
+        <key type="b" name="start-paused">
+            <default>false</default>
+        </key>
         <key type="b" name="dark-mode">
             <default>false</default>
         </key>

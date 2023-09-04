@@ -160,7 +160,9 @@ class Application(Adw.Application):
 
         # Load saved props
         MainPlayer.get().volume = Settings.get().volume
-        MainPlayer.get().playing = Settings.get().playing
+        MainPlayer.get().playing = (
+            Settings.get().playing and not Settings.get().start_paused
+        )
 
     def do_command_line(self, command_line):
         options = command_line.get_options_dict()

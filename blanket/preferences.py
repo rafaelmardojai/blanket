@@ -16,13 +16,18 @@ class PreferencesWindow(Adw.PreferencesWindow):
     __gtype_name__ = 'PreferencesWindow'
 
     dark_group: Adw.PreferencesGroup = Gtk.Template.Child()  # type: ignore
-    dark: Gtk.Switch = Gtk.Template.Child()  # type: ignore
-    autostart: Gtk.Switch = Gtk.Template.Child()  # type: ignore
+    dark: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
+    autostart: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
+    start_paused: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
 
     def __init__(self, window, **kwargs):
         super().__init__(**kwargs)
 
         self.window = window
+
+        Settings.get().bind(
+            'start-paused', self.start_paused, 'active', Gio.SettingsBindFlags.DEFAULT
+        )
 
         Settings.get().bind(
             'dark-mode', self.dark, 'active', Gio.SettingsBindFlags.DEFAULT

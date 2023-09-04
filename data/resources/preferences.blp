@@ -11,26 +11,20 @@ template $PreferencesWindow : Adw.PreferencesWindow {
     Adw.PreferencesGroup dark_group {
       title: _("Appearance");
 
-      Adw.ActionRow {
+      Adw.SwitchRow dark {
         title: _("Dark Mode");
-        activatable-widget: dark;
-
-        Switch dark {
-          valign: center;
-        }
       }
     }
 
     Adw.PreferencesGroup {
       title: _("Behavior");
 
-      Adw.ActionRow {
-        title: _("Autostart in background");
-        activatable-widget: autostart;
+      Adw.SwitchRow autostart {
+        title: _("Autostart in Background");
+      }
 
-        Switch autostart {
-          valign: center;
-        }
+      Adw.SwitchRow start_paused {
+        title: _("Start in Pause");
       }
     }
   }
