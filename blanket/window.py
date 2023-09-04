@@ -35,9 +35,9 @@ class BlanketWindow(Adw.ApplicationWindow):
         # Set default window icon for window managers
         self.set_default_icon_name('com.rafaelmardojai.Blanket')
 
+        self.setup_actions()
         # Setup widgets
         self.setup()
-        self.setup_actions()
         # Setup volume
         self.setup_volume_menu()
         # Populate sounds
@@ -45,7 +45,13 @@ class BlanketWindow(Adw.ApplicationWindow):
 
     def setup(self):
         # Setup grid
-        self.grid.bind_model(MainPlayer.get(), self._create_sound_item)
+        self.sounds_filter = Gtk.CustomFilter.new(
+            match_func=self._hide_inactive_sounds_filter
+        )
+        self.sounds_model = Gtk.FilterListModel.new(
+            model=MainPlayer.get(), filter=self.sounds_filter
+        )
+        self.grid.bind_model(self.sounds_model, self._create_sound_item)
         self.grid.connect('child-activated', self._on_sound_activate)
 
         # Wire playpause button
@@ -61,6 +67,17 @@ class BlanketWindow(Adw.ApplicationWindow):
         # Close window action
         action = Gio.SimpleAction.new('close', None)
         action.connect('activate', lambda _action, _param: self.close())
+        self.add_action(action)
+
+        # Hide non active sounds
+        action = Gio.SimpleAction.new_stateful(
+            'hide-inactive',
+            None,
+            Settings.get()
+            .get_preset_settings(Settings.get().active_preset)
+            .get_value('hide-inactive'),
+        )
+        action.connect('change-state', self._on_hide_non_active)
         self.add_action(action)
 
     def setup_volume_menu(self):
@@ -81,9 +98,9 @@ class BlanketWindow(Adw.ApplicationWindow):
         self.volume_list.bind_model(model, self._create_vol_row)
 
         # Connect mainplayer preset-changed signal
-        MainPlayer.get().connect('preset-changed', self._on_preset_changed)
+        MainPlayer.get().connect_after('preset-changed', self._on_preset_changed)
         # Connect mainplayer reset-volumes signal
-        MainPlayer.get().connect('reset-volumes', self._on_reset_volumes)
+        MainPlayer.get().connect_after('reset-volumes', self._on_reset_volumes)
 
         self.volumes.connect('closed', self._volumes_popup_closed)
 
@@ -155,6 +172,18 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         self.filechooser.show()
 
+    def _hide_inactive_sounds_filter(self, item):
+        return (
+            not Settings.get().get_preset_hide_inactive(Settings.get().active_preset)
+            or item.playing
+        )
+
+    def _on_hide_non_active(self, action, value: bool):
+        action.set_state(value)
+        Settings.get().set_preset_hide_inactive(Settings.get().active_preset, value)
+
+        self.__update_filters()
+
     def _create_vol_row(self, sound):
         row = VolumeRow()
 
@@ -196,7 +225,7 @@ class BlanketWindow(Adw.ApplicationWindow):
             # Toggle sound playing state
             item.sound.playing = not item.sound.playing
             # Update volumes list
-            self.__update_volume_model()
+            self.__update_filters()
         else:
             # Open add sound file chooser
             self.open_audio()
@@ -205,10 +234,10 @@ class BlanketWindow(Adw.ApplicationWindow):
         self.presets_chooser.props.visible = len(Settings.get().presets) > 1
 
     def _on_preset_changed(self, _player, preset):
-        self.__update_volume_model()
+        self.__update_filters()
 
     def _on_reset_volumes(self, _player):
-        self.__update_volume_model()
+        self.__update_filters()
 
     def _volume_model_changed(self, model, _pos, _del, _add):
         # Hide volumes list if empty
@@ -217,12 +246,13 @@ class BlanketWindow(Adw.ApplicationWindow):
     def _volumes_popup_closed(self, _popover):
         # Disable sounds with volume = 0
         MainPlayer.get().mute_vol_zero()
-        self.__update_volume_model()
+        self.__update_filters()
 
     def _on_add_sound_clicked(self, _group):
         self.open_audio()
 
-    def __update_volume_model(self):
+    def __update_filters(self):
+        self.sounds_filter.changed(Gtk.FilterChange.DIFFERENT)
         self.volume_filter.changed(Gtk.FilterChange.DIFFERENT)
 
     def show_power_toast(self):

@@ -217,6 +217,14 @@ class Settings(Gio.Settings):
         settings = self.get_preset_settings(preset_id)
         settings.set_value('sounds-mute', GLib.Variant('a{sb}', mutes))
 
+    def get_preset_hide_inactive(self, preset_id: str) -> bool:
+        settings = self.get_preset_settings(preset_id)
+        return settings.get_boolean('hide-inactive')
+
+    def set_preset_hide_inactive(self, preset_id: str, hide: bool):
+        settings = self.get_preset_settings(preset_id)
+        settings.set_boolean('hide-inactive', hide)
+
     """ Preset sound volume """
 
     def get_sound_volume(self, name: str):

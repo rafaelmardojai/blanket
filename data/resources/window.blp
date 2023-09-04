@@ -134,10 +134,16 @@ menu volume-menu {
 menu more-menu {
   section {
     item {
+      label: _("Hide Inactive Sounds");
+      action: "win.hide-inactive";
+    }
+
+    item {
       label: _("Save as New Preset...");
       action: "app.add-preset";
     }
-
+  }
+  section {
     item {
       label: _("Add Sound...");
       action: "app.open";

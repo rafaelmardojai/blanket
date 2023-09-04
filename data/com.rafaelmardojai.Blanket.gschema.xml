@@ -48,5 +48,9 @@
         <key type="a{sb}" name="sounds-mute">
             <default>{}</default>
         </key>
+
+        <key type="b" name="hide-inactive">
+            <default>false</default>
+        </key>
     </schema>
 </schemalist>
