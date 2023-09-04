@@ -27,6 +27,7 @@ class BlanketWindow(Adw.ApplicationWindow):
     volume_box: Gtk.Box = Gtk.Template.Child()
     volume_list: Gtk.ListBox = Gtk.Template.Child()
     presets_chooser: PresetChooser = Gtk.Template.Child()
+    labels_group: Gtk.SizeGroup = Gtk.Template.Child()
     power_toast = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
@@ -198,6 +199,8 @@ class BlanketWindow(Adw.ApplicationWindow):
 
     def _create_sound_item(self, sound):
         item = SoundItem()
+        # Add label to size group
+        self.labels_group.add_widget(item.label)
 
         if isinstance(sound, Sound):
             # Actual sound items
