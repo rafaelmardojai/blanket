@@ -4,7 +4,6 @@
 from gi.repository import Gio, GObject, Gtk
 
 from blanket.define import RES_PATH
-from blanket.main_player import MainPlayer
 from blanket.preset import Preset
 from blanket.settings import Settings
 from blanket.widgets.preset_row import PresetRow
@@ -28,6 +27,7 @@ class PresetChooser(Gtk.MenuButton):
 
         # Wire widgets
         self.presets_list.connect('row-activated', self._on_preset_activated)
+        Settings.get().connect('preset-changed', self._on_saved_changed)
 
         self.load_presets()
 
@@ -46,12 +46,15 @@ class PresetChooser(Gtk.MenuButton):
         if preset:
             self.selected = preset  # type: ignore
 
+    def _on_saved_changed(self, _settings, _id):
+        for preset in self.model:
+            if preset.active:
+                self.selected = preset
+
     def _on_selected_changed(self, _chooser, _pspec):
         if self.selected is not None:
             if Settings.get().active_preset != self.selected.id:
                 Settings.get().active_preset = self.selected.id
-
-        MainPlayer.get().change_preset(self.selected)
 
     def _create_widget(self, preset: Preset) -> Gtk.Widget:
         widget = PresetRow(preset)

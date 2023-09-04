@@ -4,28 +4,27 @@
 from typing import Self
 import uuid
 
-from gi.repository import Gio, GLib
+from gi.repository import Gio, GLib, GObject
 
 
 class Settings(Gio.Settings):
-    instance = None
-    presets_settings = {}
+    _instance = None
+    _presets_settings = {}
 
-    @classmethod
-    def new(cls) -> Self:
-        """Create a new instance of Settings."""
-        g_settings = Gio.Settings.new('com.rafaelmardojai.Blanket')
-        g_settings.__class__ = Settings
-        return g_settings  # type: ignore
+    __gsignals__ = {
+        'preset-changed': (GObject.SIGNAL_RUN_FIRST, None, (str,)),
+    }
 
     @classmethod
     def get(cls) -> Self:
         """Return an active instance of Settings."""
-        if Settings.instance is None:
-            Settings.instance = Settings.new()
-            Settings.instance.migrate_legacy_volumes()
+        if cls._instance is None:
+            cls._instance = Settings()
+        return cls._instance
 
-        return Settings.instance
+    def __init__(self):
+        super().__init__(schema_id='com.rafaelmardojai.Blanket')
+        self.migrate_legacy_volumes()
 
     """ Autostart """
 
@@ -148,6 +147,7 @@ class Settings(Gio.Settings):
     @active_preset.setter
     def active_preset(self, preset: str):
         self.set_string('active-preset', preset)
+        self.emit('preset-changed', preset)
 
     @property
     def active_preset_name(self) -> str:
@@ -196,8 +196,8 @@ class Settings(Gio.Settings):
             self.presets = saved_presets
 
             # Remove settings instance
-            if preset_id in self.presets_settings:
-                del self.presets_settings[preset_id]
+            if preset_id in self._presets_settings:
+                del self._presets_settings[preset_id]
 
         # Return the index where the preset where positioned
         return index
@@ -278,27 +278,27 @@ class Settings(Gio.Settings):
         if preset_id is None:
             preset_id = self.active_preset
 
-        if preset_id not in self.presets_settings:
+        if preset_id not in self._presets_settings:
             path = self.get_property('path')
             if not path.endswith('/'):
                 path += '/'
             path += preset_id + '/'
-            self.presets_settings[preset_id] = Gio.Settings.new_with_path(
+            self._presets_settings[preset_id] = Gio.Settings.new_with_path(
                 'com.rafaelmardojai.Blanket.preset', path
             )
             # Set on ‘delay-apply’ mode so it only applies changes when we want
-            self.presets_settings[preset_id].delay()
+            self._presets_settings[preset_id].delay()
 
-        return self.presets_settings[preset_id]
+        return self._presets_settings[preset_id]
 
     def save_presets(self, preset_id: str | None = None):
         """Apply all the changes made to presets,
         or to a specific preset."""
 
-        if preset_id is not None and preset_id in self.presets_settings:
-            self.presets_settings[preset_id].apply()
+        if preset_id is not None and preset_id in self._presets_settings:
+            self._presets_settings[preset_id].apply()
         else:
-            for key, settings in self.presets_settings.items():
+            for key, settings in self._presets_settings.items():
                 settings.apply()
 
     """ Legacy sounds volume """

@@ -4,6 +4,7 @@
 from gi.repository import Gio, GObject, Gtk
 
 from blanket.preset import Preset
+from blanket.settings import Settings
 
 
 class MainPlayer(GObject.GObject, Gio.ListModel):
@@ -36,6 +37,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
     def __init__(self):
         super().__init__()
         self.connect('notify::playing', self._on_playing)
+        Settings.get().connect('preset-changed', self._on_preset_changed)
 
         self.__add_item = GObject.GObject()  # Fake sound that adds new sounds
         self.__add_item.playing = False  # type: ignore
@@ -45,11 +47,38 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
             if sound.saved_volume == 0:
                 sound.playing = False
 
-    def change_preset(self, preset: Preset):
-        self.emit('preset-changed', preset)
-
     def reset_volumes(self):
         self.emit('reset-volumes')
+
+    def next_preset(self):
+        if not self.can_next:
+            return
+
+        presets = Settings.get().presets
+        index = presets.index(Settings.get().active_preset)
+        Settings.get().active_preset = presets[index + 1]
+
+    def prev_preset(self):
+        if not self.can_prev:
+            return
+
+        presets = Settings.get().presets
+        index = presets.index(Settings.get().active_preset)
+        Settings.get().active_preset = presets[index - 1]
+
+    @property
+    def can_next(self) -> bool:
+        presets = Settings.get().presets
+        index = presets.index(Settings.get().active_preset)
+
+        return index != len(presets) - 1 and len(presets) > 1
+
+    @property
+    def can_prev(self) -> bool:
+        presets = Settings.get().presets
+        index = presets.index(Settings.get().active_preset)
+
+        return index > 0 and len(presets) > 1
 
     def _on_playing(self, _player, _param):
         """
@@ -64,6 +93,9 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
                 )
             elif self._cookie != 0:
                 app.uninhibit(self._cookie)  # type: ignore
+
+    def _on_preset_changed(self, _settings, preset_id):
+        self.emit('preset-changed', Preset(preset_id))
 
     """
     ListModel methods

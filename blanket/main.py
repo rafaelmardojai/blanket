@@ -190,6 +190,12 @@ class Application(Adw.Application):
         MainPlayer.get().playing = False
         self.window.hide_power_toast()
 
+    def on_next(self, _action=None, _param=None):
+        MainPlayer.get().next_preset()
+
+    def on_prev(self, _action=None, _param=None):
+        MainPlayer.get().prev_preset()
+
     def on_reset_volumes(self, _action, _param):
         MainPlayer.get().reset_volumes()
 
