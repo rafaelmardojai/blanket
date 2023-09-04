@@ -18,6 +18,7 @@ try:
     Gst.init(None)
 except ImportError or ValueError as exc:
     print('Error: Dependencies not met.', exc)
+    exit()
 
 from blanket.define import AUTHORS, ARTISTS, RES_PATH, SOUND_ARTISTS, SOUND_EDITORS
 from blanket.main_player import MainPlayer
@@ -52,14 +53,14 @@ class Application(Adw.Application):
         # Add --hidden command line option
         self.add_main_option(
             'hidden',
-            b'h',
+            ord('h'),
             GLib.OptionFlags.NONE,
             GLib.OptionArg.NONE,
             'Start window hidden',
             None,
         )
         # App window
-        self.window: Gtk.Window | None = None
+        self.window: BlanketWindow | None = None
         self.window_hidden = False
         # App version
         self.version = version
@@ -143,7 +144,7 @@ class Application(Adw.Application):
         self.set_accels_for_action('win.hide-inactive', ['<Ctl>h'])
 
     def do_activate(self):
-        self.window = self.props.active_window
+        self.window = self.props.active_window  # type: ignore
         if not self.window:
             self.window = BlanketWindow(application=self)
 
@@ -180,15 +181,18 @@ class Application(Adw.Application):
 
     def on_playpause(self, _action=None, _param=None):
         MainPlayer.get().playing = not MainPlayer.get().playing
-        self.window.hide_power_toast()
+        if self.window:
+            self.window.hide_power_toast()
 
     def on_play(self, _action=None, _param=None):
         MainPlayer.get().playing = True
-        self.window.hide_power_toast()
+        if self.window:
+            self.window.hide_power_toast()
 
     def on_pause(self, _action=None, _param=None):
         MainPlayer.get().playing = False
-        self.window.hide_power_toast()
+        if self.window:
+            self.window.hide_power_toast()
 
     def on_next(self, _action=None, _param=None):
         MainPlayer.get().next_preset()
@@ -207,13 +211,16 @@ class Application(Adw.Application):
 
     def on_remove_sound(self, _action, name: GLib.Variant):
         sound, index = MainPlayer.get().get_by_name(name.get_string())
-        sound.remove()
-        MainPlayer.get().remove(index)
+
+        if sound and index:
+            sound.remove()  # type: ignore
+            MainPlayer.get().remove(index)
 
     def on_background(self, action, value):
         action.set_state(value)
         Settings.get().background = value
-        self.window.props.hide_on_close = value
+        if self.window:
+            self.window.props.hide_on_close = value
 
     def on_preferences(self, _action, _param):
         window = PreferencesWindow(self.window)
@@ -223,7 +230,7 @@ class Application(Adw.Application):
 
     def on_about(self, _action, _param):
         builder = Gtk.Builder.new_from_resource(f'{RES_PATH}/about.ui')
-        about = builder.get_object('about')
+        about: Adw.AboutWindow = builder.get_object('about')  # type: ignore
 
         artists = self.__get_credits_list(ARTISTS)
         sound_artists = self.__get_credits_list(SOUND_ARTISTS)
@@ -247,7 +254,8 @@ class Application(Adw.Application):
             # playback uses quite a lot of power. Don’t re-enable it when
             # exiting power saver mode, as that would be jarring for the user.
             MainPlayer.get().playing = False
-            self.window.show_power_toast()
+            if self.window:
+                self.window.show_power_toast()
 
     def _save_settings(self):
         # Save mainplayer volume

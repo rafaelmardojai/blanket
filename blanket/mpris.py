@@ -10,7 +10,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
-from gi.repository import Gio, GLib, Gtk
+from gi.repository import Gio, GLib, Gdk
 
 from random import randint
 
@@ -23,7 +23,7 @@ class Server:
     def __init__(self, con, path):
         method_outargs = {}
         method_inargs = {}
-        for interface in Gio.DBusNodeInfo.new_for_xml(self.__doc__).interfaces:
+        for interface in Gio.DBusNodeInfo.new_for_xml(self.__doc__ or "").interfaces:
             for method in interface.methods:
                 method_outargs[method.name] = (
                     "(" + "".join([arg.signature for arg in method.out_args]) + ")"
@@ -165,7 +165,7 @@ class MPRIS(Server):
         MainPlayer.get().connect("notify::volume", self._on_volume_changed)
 
     def Raise(self):
-        self.app.window.present_with_time(Gtk.get_current_event_time())
+        self.app.window.present_with_time(Gdk.CURRENT_TIME)
 
     def Quit(self):
         self.app.quit()
@@ -244,7 +244,7 @@ class MPRIS(Server):
             "PropertiesChanged",
             GLib.Variant.new_tuple(
                 GLib.Variant("s", interface_name),
-                GLib.Variant("a{sv}", changed_properties),
+                GLib.Variant("a{sv}", changed_properties),  # type: ignore
                 GLib.Variant("as", invalidated_properties),
             ),
         )

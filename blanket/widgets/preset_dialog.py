@@ -13,17 +13,17 @@ from blanket.settings import Settings
 class PresetDialog(Adw.Window):
     __gtype_name__ = 'PresetDialog'
 
-    headerbar: Adw.HeaderBar = Gtk.Template.Child()
-    title_widget: Adw.WindowTitle = Gtk.Template.Child()
-    accept_btn: Gtk.Button = Gtk.Template.Child()
-    name_entry: Adw.EntryRow = Gtk.Template.Child()
+    headerbar: Adw.HeaderBar = Gtk.Template.Child()  # type: ignore
+    title_widget: Adw.WindowTitle = Gtk.Template.Child()  # type: ignore
+    accept_btn: Gtk.Button = Gtk.Template.Child()  # type: ignore
+    name_entry: Adw.EntryRow = Gtk.Template.Child()  # type: ignore
 
     def __init__(self, preset=None, **kwargs):
         super().__init__()
 
         self.preset = preset
         app = Gio.Application.get_default()
-        self.window = app.get_active_window()
+        self.window = app.get_active_window()  # type: ignore
 
         if self.preset is None:
             self.set_title(_('New Preset'))
@@ -74,12 +74,13 @@ class PresetDialog(Adw.Window):
         self.destroy()
 
     def _on_rename_preset(self, _button):
-        name = self.__get_name()
-        if name:
-            Settings.get().set_preset_name(self.preset.id, name)
-        else:
-            self.__invalid_name()
-            return
+        if self.preset:
+            name = self.__get_name()
+            if name:
+                Settings.get().set_preset_name(self.preset.id, name)
+            else:
+                self.__invalid_name()
+                return
 
         self.destroy()
 

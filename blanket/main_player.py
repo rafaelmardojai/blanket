@@ -125,9 +125,9 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         del self._sounds[position]
         self.items_changed(position, 1, 0)
 
-    def get_by_name(self, name: str) -> tuple[GObject.Object, int] | None:
+    def get_by_name(self, name: str) -> tuple[GObject.Object, int] | tuple[None, None]:
         for position, sound in enumerate(self._sounds):
             if sound.name == name:
                 return (sound, position)
 
-        return None
+        return (None, None)

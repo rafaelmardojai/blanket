@@ -16,9 +16,9 @@ class Sound(GObject.Object):
 
     __gtype_name__ = 'Sound'
 
-    playing = GObject.Property(type=bool, default=False)
-    title = GObject.Property(type=str)
-    icon_name = GObject.Property(type=str)
+    playing: bool = GObject.Property(type=bool, default=False)  # type: ignore
+    title: str = GObject.Property(type=str)  # type: ignore
+    icon_name: str = GObject.Property(type=str)  # type: ignore
 
     def __init__(
         self,
@@ -32,27 +32,29 @@ class Sound(GObject.Object):
         resource = f'resource:{RES_PATH}/sounds/{name}.ogg'
         icon = 'com.rafaelmardojai.Blanket-{}'
 
+        # Internal player
         self._player = None
 
+        # Sound properties
         self.name = name
         self.uri = uri if uri else resource
         self.title = title if title else name
         self.icon_name = icon.format('sound-wave' if custom else name)
         self.custom = custom
 
+        # Playing state
         self.connect('notify::playing', self._playing_changed)
-        # Set saved playing state
         if not self.saved_mute:
-            self.playing = not self.saved_mute
+            self.playing = True
 
         # Connect mainplayer preset-changed signal
         MainPlayer.get().connect('preset-changed', self._on_preset_changed)
-
         # Connect mainplayer reset-volumes signal
         MainPlayer.get().connect('reset-volumes', self._on_reset_volumes)
 
     @property
     def player(self) -> Player:
+        """Internal player"""
         if self._player is None:
             self._player = Player(self)
         return self._player
@@ -79,6 +81,7 @@ class Sound(GObject.Object):
         Settings.get().set_sound_mute(self.name, mute)
 
     def remove(self):
+        """Remove sound if it is custom"""
         if self.custom:
             self.player.set_virtual_volume(0)
             Settings.get().remove_custom_audio(self.name)

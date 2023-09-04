@@ -15,9 +15,9 @@ class PresetRow(Gtk.ListBoxRow):
     custom: bool = GObject.Property(type=bool, default=False)  # type: ignore
     selected: bool = GObject.Property(type=bool, default=False)  # type: ignore
 
-    name: Gtk.Label = Gtk.Template.Child()
-    rename_btn: Gtk.Button = Gtk.Template.Child()
-    delete_btn: Gtk.Button = Gtk.Template.Child()
+    name: Gtk.Label = Gtk.Template.Child()  # type: ignore
+    rename_btn: Gtk.Button = Gtk.Template.Child()  # type: ignore
+    delete_btn: Gtk.Button = Gtk.Template.Child()  # type: ignore
 
     def __init__(self, preset):
         super().__init__()
@@ -46,27 +46,31 @@ class PresetRow(Gtk.ListBoxRow):
 
     def _on_show_rename(self, _button):
         # Close popover
-        popover = self.get_native()
+        popover: Gtk.Popover = self.get_native()  # type: ignore
         if popover is not None:
             popover.popdown()
 
         # Open edit dialog
         app = Gio.Application.get_default()
-        window = app.get_active_window()
-        dialog = PresetDialog(self.preset)
-        dialog.set_transient_for(window)
-        dialog.present()
+        if app:
+            window = app.get_active_window()  # type: ignore
+            if window:
+                dialog = PresetDialog(self.preset)
+                dialog.set_transient_for(window)
+                dialog.present()
 
     def _on_delete_preset(self, _button):
         app = Gio.Application.get_default()
-        window = app.get_active_window()
-        active = self.preset.id == Settings.get().active_preset
-        index = self.preset.remove()
+        if app:
+            window = app.get_active_window()  # type: ignore
+            if window:
+                active = self.preset.id == Settings.get().active_preset
+                index = self.preset.remove()
 
-        if index is not None:
-            chooser = window.presets_chooser
-            chooser.model.remove(index)
+                if index is not None:
+                    chooser = window.presets_chooser
+                    chooser.model.remove(index)
 
-            # Select default preset row
-            if active:
-                chooser.selected = chooser.model.get_item(0)
+                    # Select default preset row
+                    if active:
+                        chooser.selected = chooser.model.get_item(0)

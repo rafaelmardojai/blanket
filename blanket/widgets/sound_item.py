@@ -17,14 +17,14 @@ class SoundItem(Gtk.FlowBoxChild):
     icon_name: str = GObject.Property(type=str)  # type: ignore
     sound: Sound = GObject.Property(type=Sound)  # type: ignore
 
-    icon: Gtk.Image = Gtk.Template.Child()
-    label: Gtk.Label = Gtk.Template.Child()
-    volume: Gtk.Scale = Gtk.Template.Child()
+    icon: Gtk.Image = Gtk.Template.Child()  # type: ignore
+    label: Gtk.Label = Gtk.Template.Child()  # type: ignore
+    volume: Gtk.Scale = Gtk.Template.Child()  # type: ignore
 
     def __init__(self):
         super().__init__()
 
-        self._sound = None
+        self._sound: Sound | None = None
 
         self.connect('notify::playing', self._playing_changed)
 
@@ -43,11 +43,11 @@ class SoundItem(Gtk.FlowBoxChild):
         self.add_controller(click)
 
     @GObject.Property(type=Sound)
-    def sound(self):
+    def sound(self) -> Sound | None:  # type: ignore
         return self._sound
 
     @sound.setter
-    def sound(self, value):
+    def sound(self, value: Sound):
         self._sound = value
 
         if self._sound is not None:
@@ -74,11 +74,11 @@ class SoundItem(Gtk.FlowBoxChild):
         elif not self.icon.has_css_class('accent'):
             self.icon.add_css_class('accent')
 
-    def _on_secondary_click(self, _ctrl, _n, x, y):
+    def _on_secondary_click(self, _ctrl, _n, x: int, y: int):
         self._context_popover(x, y)
 
-    def _context_popover(self, x, y):
-        if self._sound is not None:
+    def _context_popover(self, x: int, y: int):
+        if self.sound is not None:
             menu = SoundContextMenu(self.sound)
 
             rec = Gdk.Rectangle()

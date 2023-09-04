@@ -11,7 +11,7 @@ from blanket.define import RES_PATH
 class SoundContextMenu(Gtk.PopoverMenu):
     __gtype_name__ = 'SoundContextMenu'
 
-    volume: Gtk.Scale = Gtk.Template.Child()
+    volume: Gtk.Scale = Gtk.Template.Child()  # type: ignore
 
     def __init__(self, sound):
         super().__init__()
@@ -26,7 +26,8 @@ class SoundContextMenu(Gtk.PopoverMenu):
                 'app.remove-sound', GLib.Variant.new_string(self.sound.name)
             )
             custom_section.insert_item(-1, remove_item)
-            self.props.menu_model.append_section(None, custom_section)
+
+            self.props.menu_model.append_section(None, custom_section)  # type: ignore
 
     @Gtk.Template.Callback()
     def on_opened(self, _popup):

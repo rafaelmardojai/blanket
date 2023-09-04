@@ -8,13 +8,14 @@ from blanket.main_player import MainPlayer
 
 class Player(GstPlay.Play):
     """
-    GstPlayer.Player with modifications
+    GstPlay.Play with modifications
     """
 
     __gtype_name__ = 'SoundPlayer'
 
     def __init__(self, sound):
         super().__init__()
+
         self.sound = sound
         # Create a var to save saved volume
         self.saved_volume = 0.0

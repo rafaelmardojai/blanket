@@ -18,17 +18,17 @@ from blanket.widgets import PlayPauseButton, PresetChooser, SoundItem, VolumeRow
 class BlanketWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'BlanketWindow'
 
-    headerbar: Gtk.HeaderBar = Gtk.Template.Child()
-    toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
-    grid: Gtk.FlowBox = Gtk.Template.Child()
-    playpause_btn: PlayPauseButton = Gtk.Template.Child()
-    volumes: Gtk.Popover = Gtk.Template.Child()
-    volume: Gtk.Scale = Gtk.Template.Child()
-    volume_box: Gtk.Box = Gtk.Template.Child()
-    volume_list: Gtk.ListBox = Gtk.Template.Child()
-    presets_chooser: PresetChooser = Gtk.Template.Child()
-    labels_group: Gtk.SizeGroup = Gtk.Template.Child()
-    power_toast = Gtk.Template.Child()
+    headerbar: Gtk.HeaderBar = Gtk.Template.Child()  # type: ignore
+    toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()  # type: ignore
+    grid: Gtk.FlowBox = Gtk.Template.Child()  # type: ignore
+    playpause_btn: PlayPauseButton = Gtk.Template.Child()  # type: ignore
+    volumes: Gtk.Popover = Gtk.Template.Child()  # type: ignore
+    volume: Gtk.Scale = Gtk.Template.Child()  # type: ignore
+    volume_box: Gtk.Box = Gtk.Template.Child()  # type: ignore
+    volume_list: Gtk.ListBox = Gtk.Template.Child()  # type: ignore
+    presets_chooser: PresetChooser = Gtk.Template.Child()  # type: ignore
+    labels_group: Gtk.SizeGroup = Gtk.Template.Child()  # type: ignore
+    power_toast: Adw.Toast = Gtk.Template.Child()  # type: ignore
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

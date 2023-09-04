@@ -25,35 +25,36 @@ class PreferencesWindow(Adw.PreferencesWindow):
 
         self.window = window
 
-        Settings.get().bind(
-            'start-paused', self.start_paused, 'active', Gio.SettingsBindFlags.DEFAULT
+        # Show dark theme preference if system does not support color schemes
+        self.dark_group.props.visible = (
+            not Adw.StyleManager.get_default().props.system_supports_color_schemes
         )
-
+        # Dark theme
         Settings.get().bind(
             'dark-mode', self.dark, 'active', Gio.SettingsBindFlags.DEFAULT
         )
         self.dark.connect('notify::active', self._toggle_dark)
 
-        style_manager = Adw.StyleManager.get_default()
-        self.dark_group.props.visible = (
-            not style_manager.props.system_supports_color_schemes
-        )
-
+        # Autostart
         self.autostart_failed = False
         self.autostart_saved = Settings.get().autostart
-        self.autostart.set_active(self.autostart_saved)
+        self.autostart.props.active = self.autostart_saved
         self.autostart.connect('notify::active', self._toggle_autostart)
 
-    def _toggle_dark(self, switch: Gtk.Switch, _active):
+        # Start paused
+        Settings.get().bind(
+            'start-paused', self.start_paused, 'active', Gio.SettingsBindFlags.DEFAULT
+        )
+
+    def _toggle_dark(self, switch: Adw.SwitchRow, _pspec):
         style_manager = Adw.StyleManager.get_default()
-        if switch.get_active():
+        if switch.props.active:
             style_manager.props.color_scheme = Adw.ColorScheme.FORCE_DARK
         else:
             style_manager.props.color_scheme = Adw.ColorScheme.PREFER_LIGHT
 
-    def _toggle_autostart(self, switch: Gtk.Switch, _active):
-        active = switch.get_active()
-        self.__request_autostart(active)
+    def _toggle_autostart(self, switch: Adw.SwitchRow, _pspec):
+        self.__request_autostart(switch.props.active)
 
     def __request_autostart(self, active: bool):
         if self.autostart_failed:

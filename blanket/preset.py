@@ -12,11 +12,12 @@ class Preset(GObject.Object):
     name: str = GObject.Property(type=str)  # type: ignore
     active: bool = GObject.Property(type=bool, default=False)  # type: ignore
 
-    def __init__(self, preset_id):
+    def __init__(self, preset_id: str):
         super().__init__()
 
         self.id = preset_id
 
+        # Active state
         self.active = Settings.get().active_preset == self.id
         Settings.get().connect('changed::active-preset', self._on_active_preset_changed)
 
@@ -25,7 +26,7 @@ class Preset(GObject.Object):
             'visible-name', self, 'name', Gio.SettingsBindFlags.DEFAULT
         )
 
-    def remove(self):
+    def remove(self) -> int | None:
         if self.id != Settings.get().default_preset:
             index = Settings.get().remove_preset(self.id)
             return index  # Return the index where the preset where positioned
