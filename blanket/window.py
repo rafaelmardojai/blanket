@@ -126,6 +126,21 @@ class BlanketWindow(Adw.ApplicationWindow):
                 # Create a new Sound
                 sound = Sound(name, uri=uri, custom=True)
                 MainPlayer.get().append(sound)
+            else:
+                Settings.get().remove_custom_audio(name)
+
+                message = Adw.MessageDialog.new(
+                    self,
+                    _('Sound Automatically Removed'),
+                    _(
+                        'The {name} sound is no longer accessible, so it has been removed'
+                    ).format(name=f'<b><i>{name}</i></b>'),
+                )
+                message.add_response('accept', _('Accept'))
+                message.props.body_use_markup = True
+                message.props.default_response = 'accept'
+                message.props.close_response = 'accept'
+                message.present()
 
     def open_audio(self):
         def on_response(_filechooser, _id):
