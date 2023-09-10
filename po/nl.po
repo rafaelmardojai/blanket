@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
-# Heimen Stoffels <vistausss@fastmail.com>, 2022
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
+# Heimen Stoffels <vistausss@fastmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -13,9 +13,9 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2022-04-07 14:43+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2022\n"
-"Language-Team: Dutch (https://www.transifex.com/rafaelmardojai/teams/135055/nl/)\n"
+"PO-Revision-Date: 2023-02-16 03:00+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2023\n"
+"Language-Team: Dutch (https://app.transifex.com/rafaelmardojai/teams/135055/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,8 +46,8 @@ msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds"
 msgstr ""
-"Verbeter je focus en verhoog je productiviteit of val sneller in slaap door "
-"te luisteren naar verschillende geluiden."
+"Verbeter je focus, verhoog je productiviteit of val sneller in slaap door te"
+" luisteren naar verschillende geluiden."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
@@ -155,7 +155,7 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "'Standaard'"
+msgstr "‘Standaard’"
 
 #: data/resources/window.ui:63
 msgid "Presets"
