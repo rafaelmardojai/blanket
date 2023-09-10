@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
-# heidi.wenger, 2022
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -13,9 +13,9 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2022-04-07 14:43+0000\n"
-"Last-Translator: heidi.wenger, 2022\n"
-"Language-Team: Finnish (https://www.transifex.com/rafaelmardojai/teams/135055/fi/)\n"
+"PO-Revision-Date: 2023-02-16 03:00+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>, 2023\n"
+"Language-Team: Finnish (https://app.transifex.com/rafaelmardojai/teams/135055/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -179,7 +179,7 @@ msgstr "Asetukset"
 
 #: data/resources/window.ui:93
 msgid "Keyboard Shortcuts"
-msgstr "Näppäinoikopolut"
+msgstr "Pikanäppäimet"
 
 #: data/resources/window.ui:97
 msgid "About Blanket"
@@ -199,7 +199,7 @@ msgstr "Tumma"
 
 #: data/resources/preferences.ui:28
 msgid "Behavior"
-msgstr "Käyttäytyminen"
+msgstr "Toiminta"
 
 #: data/resources/preferences.ui:31
 msgid "Autostart in background"
@@ -207,7 +207,7 @@ msgstr "Käynnistä taustalla automaattisesti"
 
 #: data/resources/preset-dialog.ui:23
 msgid "Cancel"
-msgstr "Keskeytä"
+msgstr "Peru"
 
 #: data/resources/preset-dialog.ui:55
 msgid "Preset Name"
@@ -321,7 +321,7 @@ msgstr "Äänikuvakkeet"
 
 #: blanket/about.py:13
 msgid "App icon"
-msgstr "Ohjelmakuvake"
+msgstr "Sovelluskuvake"
 
 #. Set sound artists list
 #: blanket/about.py:58
