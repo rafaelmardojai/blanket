@@ -4,7 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# John Kap, 2022
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
+# John Kap, 2023
 # 
 #, fuzzy
 msgid ""
@@ -12,9 +13,9 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2022-04-07 14:43+0000\n"
-"Last-Translator: John Kap, 2022\n"
-"Language-Team: Greek (https://www.transifex.com/rafaelmardojai/teams/135055/el/)\n"
+"PO-Revision-Date: 2023-02-16 03:00+0000\n"
+"Last-Translator: John Kap, 2023\n"
+"Language-Team: Greek (https://app.transifex.com/rafaelmardojai/teams/135055/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -38,20 +39,20 @@ msgstr "Ακούστε διαφορετικούς ήχους"
 #. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Συγκεντρωθείτε;Συγκεντρωθείτε;Θόρυβος;Παραγωγηκότητα;Ύπνος"
+msgstr "Συγκεντρωθείτε;Συγκεντρωθείτε;Θόρυβος;Παραγωγικότητα;Ύπνος"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds"
 msgstr ""
-"Αυξήστε την συγκέντρωση σας και την παραγωγηκότητα σας ακούγωντας σε "
+"Αυξήστε την συγκέντρωση σας και την παραγωγικότητα σας ακούγοντας σε "
 "διαφορετικούς ήχους"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
 msgstr ""
-"Επήσεις μπορεί να σας βοηθήσει να κοιμηθήτε σε ενα θορυβώδες περιβάλον"
+"Επείσεις μπορεί να σας βοηθήσει να κοιμηθείτε σε ένα θορυβώδες περιβάλλον"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
@@ -67,15 +68,15 @@ msgstr "Προσθέστε δικού σας ήχους"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
-msgstr "Αυτόματη έναρξη στο παρασκήνειο"
+msgstr "Αυτόματη έναρξη στο παρασκήνιο"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr "ενσωμάτωμενο MPRIS"
+msgstr "ενσωματωμένο MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr "Συμπεριλαμβανομένοι ήχοι:"
+msgstr "Συμπεριλαμβανημένοι ήχοι:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -105,7 +106,7 @@ msgstr "Τζάκι"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/window.py:83
 #: blanket/about.py:28
 msgid "Pink Noise"
-msgstr "Ρόζ ήχος"
+msgstr "Ροζ ήχος"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:26 blanket/window.py:20
 #: blanket/about.py:17 blanket/about.py:35
@@ -171,7 +172,7 @@ msgstr "Επαναφορά επιπέδων ήχου"
 
 #: data/resources/window.ui:83
 msgid "Keep Playing When Closed"
-msgstr "Συνέχεια παιξήματος ενω κλειστό"
+msgstr "Συνέχεια παιξίματος ενώ κλειστό"
 
 #: data/resources/window.ui:89
 msgid "Preferences"
@@ -191,7 +192,7 @@ msgstr "Έξοδος"
 
 #: data/resources/preferences.ui:12
 msgid "Appearance"
-msgstr "Εμφάνηση"
+msgstr "Εμφάνιση"
 
 #: data/resources/preferences.ui:15
 msgid "Dark Mode"
@@ -203,7 +204,7 @@ msgstr "Συμπεριφορά"
 
 #: data/resources/preferences.ui:31
 msgid "Autostart in background"
-msgstr "Αυτόματη έναρξη στο παρασκήνειο"
+msgstr "Αυτόματη έναρξη στο παρασκήνιο"
 
 #: data/resources/preset-dialog.ui:23
 msgid "Cancel"
@@ -246,7 +247,7 @@ msgstr "Προσθήκη ήχου"
 
 #: data/resources/shortcuts.ui:26
 msgid "Close window"
-msgstr "Κλήσειμο παραθύρου"
+msgstr "Κλείσιμο παραθύρου"
 
 #: blanket/window.py:16
 msgid "Nature"
@@ -275,7 +276,7 @@ msgstr "Άνοιγμα ήχου"
 
 #: blanket/preferences.py:68
 msgid "Autostart Blanket in background."
-msgstr "Αυτόματη έναρξη του Blanket στο παρασκήνειο"
+msgstr "Αυτόματη έναρξη του Blanket στο παρασκήνιο"
 
 #: blanket/preferences.py:96 blanket/preferences.py:131
 msgid "Request error"
@@ -296,7 +297,7 @@ msgid ""
 "Blanket and try again."
 msgstr ""
 "Βεβαιωθείτε ότι το Blanket έχει άδεια να τρέξει\n"
-"στο παρασκήνειο στις Ρυθμίσεις → Εφαρμογές →\n"
+"στο παρασκήνιο στις Ρυθμίσεις → Εφαρμογές →\n"
 "Blanket και δοκίμασε ξανά."
 
 #: blanket/presets.py:114
@@ -309,7 +310,7 @@ msgstr "Δημιουργήστε"
 
 #: blanket/presets.py:119
 msgid "Edit Preset"
-msgstr "Επεξεργασία προκαθορησμένου"
+msgstr "Επεξεργασία προκαθορισμένου"
 
 #: blanket/presets.py:121
 msgid "Save"
@@ -326,12 +327,12 @@ msgstr "Εικονίδιο εφαρμογής"
 #. Set sound artists list
 #: blanket/about.py:58
 msgid "Sounds by"
-msgstr "Ήχοι απο"
+msgstr "Ήχοι από"
 
 #. Set sound editors list
 #: blanket/about.py:60
 msgid "Sounds edited by"
-msgstr "Επεξεργασία ήχου απο"
+msgstr "Επεξεργασία ήχου από"
 
 #: blanket/widgets.py:184
 msgid "Add Custom Sound…"
