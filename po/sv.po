@@ -1,21 +1,25 @@
-# Swedish translation for com.rafaelmardojai.Blanket.
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# Åke Engelbrektson <eson@svenskasprakfiler.se>, 2021.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
+# Luna Jernberg <bittin@cafe8bitar.se>, 2023
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2021-09-18 07:45+0200\n"
-"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
-"Language-Team: \n"
-"Language: sv\n"
+"PO-Revision-Date: 2023-02-16 03:00+0000\n"
+"Last-Translator: Luna Jernberg <bittin@cafe8bitar.se>, 2023\n"
+"Language-Team: Swedish (https://app.transifex.com/rafaelmardojai/teams/135055/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
@@ -30,50 +34,47 @@ msgstr "Blanket"
 msgid "Listen to different sounds"
 msgstr "Lyssna på olika ljud"
 
-#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#. Translators: These are search terms to find this application. Do NOT
+#. translate or localize the semicolons. The list MUST also end with a
+#. semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Koncentrera; Fokusera; Brus; Produktivitet. Sov;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
-"Improve focus and increase your productivity by listening to different sounds"
+"Improve focus and increase your productivity by listening to different "
+"sounds"
 msgstr ""
-"Förbättra fokus och öka din produktivitet genom att lyssna på olika ljud. "
-"Eller låt dig somna i en bullrig miljö."
+"Förbättra fokus och öka din produktivitet genom att lyssna på olika ljud"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Kan också hjälpa dig att somna i en bullrig miljö."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Natur"
+msgstr "Funktioner:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "Sparade förinställningar"
+msgstr "Spara förinställningar"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "Lägga till anpassat ljud"
+msgstr "Lägg till anpassade ljud"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "Starta automatiskt i bakgrunden"
+msgstr "Autostarta i bakgrunden"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS integration"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds:"
-msgstr ""
+msgstr "Inkluderade ljud:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/window.py:40
 #: blanket/about.py:24 blanket/about.py:35
@@ -156,14 +157,12 @@ msgid "'Default'"
 msgstr "'Standard'"
 
 #: data/resources/window.ui:63
-#, fuzzy
 msgid "Presets"
-msgstr "Lägg till förinställning"
+msgstr "Förinställningar"
 
 #: data/resources/window.ui:71
-#, fuzzy
 msgid "Add Preset…"
-msgstr "Lägg till förinställning"
+msgstr "Lägg till förinställningar..."
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
@@ -225,11 +224,15 @@ msgstr "Ta bort förinställning"
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
 msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
-#. Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#. Replace me with your names, You can make a mailto link: translator-name
+#. <user@domain.org>
 #: data/resources/about.ui:12
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "Åke Engelbrektson <eson@svenskasprakfiler.se>"
+msgstr ""
+"Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
+"Rafael Mardojai CM\n"
+"Luna Jernberg <droidbittin@gmail.com>"
 
 #: data/resources/shortcuts.ui:10
 msgid "General"
@@ -333,13 +336,5 @@ msgid "Sounds edited by"
 msgstr "Ljud redigerade av"
 
 #: blanket/widgets.py:184
-#, fuzzy
 msgid "Add Custom Sound…"
-msgstr "Lägga till anpassat ljud"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "Rosa brus"
-
-#~ msgid "Add Preset..."
-#~ msgstr "Lägg till förinställning..."
+msgstr "Lägg till anpassat ljud..."
