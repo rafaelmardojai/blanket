@@ -4,8 +4,6 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# AbdullahWCS Abdullah, 2022
-# Fúlvio Alves <fga.fulvio@gmail.com>, 2023
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 # 
 #, fuzzy
@@ -14,9 +12,9 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2022-04-07 14:43+0000\n"
+"PO-Revision-Date: 2023-02-16 03:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/rafaelmardojai/teams/135055/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (https://app.transifex.com/rafaelmardojai/teams/135055/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
