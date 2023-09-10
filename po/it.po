@@ -4,22 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
-# albanobattistella <albano_battistella@hotmail.com>, 2022
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 # 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2023-01-01 14:43+0100\n"
-"Last-Translator: albanobattistella <albano_battistella@hotmail.com>, 2022\n"
-"Language-Team: Italian (https://www.transifex.com/rafaelmardojai/teams/135055/it/)\n"
+"PO-Revision-Date: 2023-02-16 03:00+0000\n"
+"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
+"Language-Team: Italian (https://app.transifex.com/rafaelmardojai/teams/135055/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: it\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
