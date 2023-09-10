@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Hiding Fox, 2022
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -12,9 +12,9 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2022-04-07 14:43+0000\n"
-"Last-Translator: Hiding Fox, 2022\n"
-"Language-Team: Russian (https://www.transifex.com/rafaelmardojai/teams/135055/ru/)\n"
+"PO-Revision-Date: 2023-02-16 03:00+0000\n"
+"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
+"Language-Team: Russian (https://app.transifex.com/rafaelmardojai/teams/135055/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
