@@ -4,7 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022
+# Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
+# Adolfo Jayme-Barrientos, 2023
 # 
 #, fuzzy
 msgid ""
@@ -12,14 +13,14 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-29 11:33-0500\n"
-"PO-Revision-Date: 2022-04-07 14:43+0000\n"
-"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2022\n"
-"Language-Team: Spanish (https://www.transifex.com/rafaelmardojai/teams/135055/es/)\n"
+"PO-Revision-Date: 2023-02-16 03:00+0000\n"
+"Last-Translator: Adolfo Jayme-Barrientos, 2023\n"
+"Language-Team: Spanish (https://app.transifex.com/rafaelmardojai/teams/135055/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:31
@@ -45,7 +46,7 @@ msgid ""
 "Improve focus and increase your productivity by listening to different "
 "sounds"
 msgstr ""
-"Mejora la concentración y aumente su productividad escuchando diferentes "
+"Mejore su concentración y aumente su productividad escuchando diferentes "
 "sonidos"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
@@ -58,11 +59,11 @@ msgstr "Funcionalidades:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr "Guardar ajustes preestablecidos"
+msgstr "Guardar preconfiguraciones"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
 msgid "Add custom sounds"
-msgstr "Agregar sonidos personalizados"
+msgstr "Añadir sonidos personalizados"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
@@ -104,7 +105,7 @@ msgstr "Chimenea"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/window.py:83
 #: blanket/about.py:28
 msgid "Pink Noise"
-msgstr "Ruido Rosa"
+msgstr "Ruido rosa"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:26 blanket/window.py:20
 #: blanket/about.py:17 blanket/about.py:35
@@ -114,7 +115,7 @@ msgstr "Lluvia"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:27 blanket/window.py:44
 #: blanket/about.py:25
 msgid "Summer Night"
-msgstr "Noche de Verano"
+msgstr "Noche de verano"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:28 blanket/window.py:24
 #: blanket/about.py:18 blanket/about.py:35
@@ -139,7 +140,7 @@ msgstr "Olas"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:32 blanket/window.py:87
 #: blanket/about.py:23
 msgid "White Noise"
-msgstr "Ruido Blanco"
+msgstr "Ruido blanco"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:33 blanket/window.py:28
 #: blanket/about.py:29 blanket/about.py:35
@@ -154,15 +155,15 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:42
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "'Por defecto'"
+msgstr "'Predeterminado'"
 
 #: data/resources/window.ui:63
 msgid "Presets"
-msgstr "Ajustes preestablecidos"
+msgstr "Preconfiguraciones"
 
 #: data/resources/window.ui:71
 msgid "Add Preset…"
-msgstr "Agregar preestablecido..."
+msgstr "Añadir preconfiguración…"
 
 #: data/resources/window.ui:77
 msgid "Reset Volume Levels"
@@ -194,7 +195,7 @@ msgstr "Apariencia"
 
 #: data/resources/preferences.ui:15
 msgid "Dark Mode"
-msgstr "Modo Oscuro"
+msgstr "Modo oscuro"
 
 #: data/resources/preferences.ui:28
 msgid "Behavior"
@@ -210,19 +211,19 @@ msgstr "Cancelar"
 
 #: data/resources/preset-dialog.ui:55
 msgid "Preset Name"
-msgstr "Nombre de preestablecido"
+msgstr "Nombre de preconfiguración"
 
 #: data/resources/preset-row.ui:40
 msgid "Rename Preset"
-msgstr "Renombrar preestablecido"
+msgstr "Cambiar nombre de preconfiguración"
 
 #: data/resources/preset-row.ui:50
 msgid "Delete Preset"
-msgstr "Eliminar preestablecido"
+msgstr "Eliminar preconfiguración"
 
 #: data/resources/about.ui:8
 msgid "Copyright 2020-2021 Rafael Mardojai CM"
-msgstr "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "© 2020-2021 Rafael Mardojai CM"
 
 #. Replace me with your names, You can make a mailto link: translator-name
 #. <user@domain.org>
@@ -237,11 +238,11 @@ msgstr "General"
 
 #: data/resources/shortcuts.ui:14
 msgid "Play/Pause sounds"
-msgstr "Reproducir/Pausar sonidos"
+msgstr "Reproducir/pausar sonidos"
 
 #: data/resources/shortcuts.ui:20
 msgid "Add custom sound"
-msgstr "Agregar sonido personalizado"
+msgstr "Añadir sonido personalizado"
 
 #: data/resources/shortcuts.ui:26
 msgid "Close window"
@@ -296,11 +297,11 @@ msgid ""
 msgstr ""
 "Asegúrese de que Blanket tenga permiso para ejecutarse\n"
 "en segundo plano en Configuración → Aplicaciones →\n"
-"Blanket y vuelve a intentarlo. "
+"Blanket y vuelva a intentarlo. "
 
 #: blanket/presets.py:114
 msgid "Add Preset"
-msgstr "Agregar preestablecido"
+msgstr "Agregar preconfiguración"
 
 #: blanket/presets.py:115
 msgid "Create"
@@ -308,7 +309,7 @@ msgstr "Crear"
 
 #: blanket/presets.py:119
 msgid "Edit Preset"
-msgstr "Editar preestablecido"
+msgstr "Editar preconfiguración"
 
 #: blanket/presets.py:121
 msgid "Save"
@@ -334,4 +335,4 @@ msgstr "Sonidos editados por"
 
 #: blanket/widgets.py:184
 msgid "Add Custom Sound…"
-msgstr "Agregar sonido personalizado..."
+msgstr "Añadir sonido personalizado…"
