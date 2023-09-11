@@ -57,7 +57,11 @@ sudo ninja -C builddir install
 ```
 
 ## Translations
-Blanket is translated into several languages. If your language is missing or incomplete, please help to [translate Blanket in Transifex](https://www.transifex.com/rafaelmardojai/blanket/).
+Blanket is translated into several languages. If your language is missing or incomplete, please help to [translate Blanket in Weblate](https://hosted.weblate.org/engage/blanket/).
+
+<a href="https://hosted.weblate.org/engage/blanket/">
+<img src="https://hosted.weblate.org/widget/blanket/blanket/horizontal-auto.svg" alt="Translation status" />
+</a>
 
 ## Credits
 Developed by **[Rafael Mardojai CM](https://github.com/rafaelmardojai)** and [contributors](https://github.com/rafaelmardojai/blanket/graphs/contributors).
