@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:00-0500\n"
-"PO-Revision-Date: 2023-09-11 13:59+0000\n"
+"PO-Revision-Date: 2023-09-11 14:16+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/blanket/blanket/"
 "es/>\n"
@@ -20,8 +20,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
-"0) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
+" ? 1 : 2);\n"
 "X-Generator: Weblate 5.0.1-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
@@ -62,7 +62,7 @@ msgstr "Funcionalidades:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr "Guardar preconfiguraciones"
+msgstr "Guardar preajustes"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
 msgid "Add custom sounds"
@@ -201,15 +201,15 @@ msgstr "Guardar"
 
 #: data/resources/preset-dialog.blp:43
 msgid "Preset Name"
-msgstr "Nombre de preconfiguración"
+msgstr "Nombre de preajuste"
 
 #: data/resources/preset-row.blp:32
 msgid "Rename Preset"
-msgstr "Cambiar nombre de preconfiguración"
+msgstr "Cambiar nombre de preajuste"
 
 #: data/resources/preset-row.blp:43
 msgid "Delete Preset"
-msgstr "Eliminar preconfiguración"
+msgstr "Eliminar preajuste"
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
@@ -276,12 +276,10 @@ msgid "Hide Inactive Sounds"
 msgstr "Ocultar sonidos inactivos"
 
 #: data/resources/window.blp:142
-#, fuzzy
 msgid "Save as New Preset…"
 msgstr "Guardar como nuevo preajuste…"
 
 #: data/resources/window.blp:148
-#, fuzzy
 msgid "Add Sound…"
 msgstr "Agregar sonido…"
 
@@ -380,7 +378,7 @@ msgstr "Nuevo preajuste"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
-msgstr "Editar preconfiguración"
+msgstr "Editar preajuste"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
