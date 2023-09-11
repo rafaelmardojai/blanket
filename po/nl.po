@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 08:32-0500\n"
+"POT-Creation-Date: 2023-09-11 09:00-0500\n"
 "PO-Revision-Date: 2023-02-16 03:00+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/rafaelmardojai/teams/135055/"
@@ -289,12 +289,13 @@ msgstr "Meegeleverde geluiden:"
 
 #: data/resources/window.blp:142
 #, fuzzy
-msgid "Save as New Preset..."
+msgid "Save as New Preset…"
 msgstr "Voorinstellingen opslaan"
 
 #: data/resources/window.blp:148
-msgid "Add Sound..."
-msgstr ""
+#, fuzzy
+msgid "Add Sound…"
+msgstr "Eigen geluid toevoegen…"
 
 #: data/resources/window.blp:203
 msgid "Paused to save power"

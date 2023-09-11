@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket v0.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 08:32-0500\n"
+"POT-Creation-Date: 2023-09-11 09:00-0500\n"
 "PO-Revision-Date: 2021-04-29 22:48+0530\n"
 "Last-Translator: SURVESH VRL <123SURVESH@GMAIL.COM>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -285,12 +285,13 @@ msgstr ""
 
 #: data/resources/window.blp:142
 #, fuzzy
-msgid "Save as New Preset..."
+msgid "Save as New Preset…"
 msgstr "சேமிக்கப்பட்ட முன்தொகுப்புகள்"
 
 #: data/resources/window.blp:148
-msgid "Add Sound..."
-msgstr ""
+#, fuzzy
+msgid "Add Sound…"
+msgstr "தனிப்பயனுடைய ஒளியை சேறுக"
 
 #: data/resources/window.blp:203
 msgid "Paused to save power"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 08:32-0500\n"
+"POT-Creation-Date: 2023-09-11 09:00-0500\n"
 "PO-Revision-Date: 2022-MO-DA HO:MI+ZONE\n"
 "Last-Translator: farmer87 <richard.chu.kh@gmail.com>\n"
 "Language-Team: \n"
@@ -283,12 +283,13 @@ msgstr ""
 
 #: data/resources/window.blp:142
 #, fuzzy
-msgid "Save as New Preset..."
+msgid "Save as New Preset…"
 msgstr "已存預設"
 
 #: data/resources/window.blp:148
-msgid "Add Sound..."
-msgstr ""
+#, fuzzy
+msgid "Add Sound…"
+msgstr "新增自訂聲音"
 
 #: data/resources/window.blp:203
 msgid "Paused to save power"

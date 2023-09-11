@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 08:32-0500\n"
+"POT-Creation-Date: 2023-09-11 09:00-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -267,11 +267,11 @@ msgid "Hide Inactive Sounds"
 msgstr ""
 
 #: data/resources/window.blp:142
-msgid "Save as New Preset..."
+msgid "Save as New Preset…"
 msgstr ""
 
 #: data/resources/window.blp:148
-msgid "Add Sound..."
+msgid "Add Sound…"
 msgstr ""
 
 #: data/resources/window.blp:203
