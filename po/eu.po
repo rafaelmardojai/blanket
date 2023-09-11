@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2023-02-16 03:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
 "Language-Team: Basque (https://app.transifex.com/rafaelmardojai/teams/135055/"
@@ -238,9 +238,8 @@ msgstr "Itxi leihoa"
 msgid "Preferences"
 msgstr "Hobespenak"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "Laster-teklak"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -269,10 +268,6 @@ msgstr "Soinuak"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "Jarraitu erreproduzitzen ixtean"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "Laster-teklak"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -398,6 +393,10 @@ msgstr "Editatu aurrehautaketa"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "Laster-teklak"
 
 #~ msgid "Add Preset…"
 #~ msgstr "Aurrehautaketa gehitu…"

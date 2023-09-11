@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2023-02-16 03:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
 "Language-Team: Hebrew (https://app.transifex.com/rafaelmardojai/teams/135055/"
@@ -236,9 +236,8 @@ msgstr "סגירת חלון"
 msgid "Preferences"
 msgstr "העדפות"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "מקשי קיצור"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -267,10 +266,6 @@ msgstr "צלילים מאת"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "להמשיך לנגן כשסגור"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "מקשי קיצור"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -396,6 +391,10 @@ msgstr "עריכת ערכה"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "מקשי קיצור"
 
 #~ msgid "Add Preset…"
 #~ msgstr "הוספת ערכה…"

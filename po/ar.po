@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: mohammed ait laarebi <gionmed025@gmail.com>\n"
 "Language-Team: Arabic\n"
@@ -234,9 +234,8 @@ msgstr "إغلاق النافذة"
 msgid "Preferences"
 msgstr "الإعدادات"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "اختصارات لوحة المفاتيح"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -264,10 +263,6 @@ msgstr "أصوات من"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "الاشتغال المستمر بعد الإغلاق"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "اختصارات لوحة المفاتيح"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -391,6 +386,10 @@ msgstr ""
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "اختصارات لوحة المفاتيح"
 
 #~ msgid "Add custom sound"
 #~ msgstr "إضافة صوت مخصص"

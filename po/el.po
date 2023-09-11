@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2023-02-16 03:00+0000\n"
 "Last-Translator: John Kap, 2023\n"
 "Language-Team: Greek (https://app.transifex.com/rafaelmardojai/teams/135055/"
@@ -239,9 +239,8 @@ msgstr "Κλείσιμο παραθύρου"
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "Συντομεύσεις πληκτρολογίου"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -270,10 +269,6 @@ msgstr "Ήχοι από"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "Συνέχεια παιξίματος ενώ κλειστό"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "Συντομεύσεις πληκτρολογίου"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -399,6 +394,10 @@ msgstr "Επεξεργασία προκαθορισμένου"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "Συντομεύσεις πληκτρολογίου"
 
 #~ msgid "Add Preset…"
 #~ msgstr "Προσθέστε προκαθορισμένα..."

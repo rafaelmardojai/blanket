@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2021-09-28 15:58+1000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -237,9 +237,8 @@ msgstr "Dún fuinneog"
 msgid "Preferences"
 msgstr "Roghanna"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "Aicearraí Méarchláir"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -268,10 +267,6 @@ msgstr "Fuaimeanna le"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "Lean ag seinm i ndiaidh dúnadh"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "Aicearraí Méarchláir"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -398,6 +393,10 @@ msgstr "Athraigh Réamhshocrú"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "Aicearraí Méarchláir"
 
 #, fuzzy
 #~ msgid "Add Preset…"

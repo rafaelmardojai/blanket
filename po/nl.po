@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2023-02-16 03:00+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2023\n"
 "Language-Team: Dutch (https://app.transifex.com/rafaelmardojai/teams/135055/"
@@ -238,9 +238,8 @@ msgstr "Venster sluiten"
 msgid "Preferences"
 msgstr "Voorkeuren"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "Sneltoetsen"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -269,10 +268,6 @@ msgstr "Geluiden van"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "Doorgaan met afspelen na afsluiten"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "Sneltoetsen"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -398,6 +393,10 @@ msgstr "Bewerken"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "Sneltoetsen"
 
 #~ msgid "Add Preset…"
 #~ msgstr "Voorinstelling toevoegen…"

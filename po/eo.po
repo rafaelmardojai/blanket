@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2020-09-28 16:59+0200\n"
 "Last-Translator: Porrumentzio <porrumentzio@riseup.net>\n"
 "Language-Team: \n"
@@ -235,9 +235,8 @@ msgstr "Fermi fenestron"
 msgid "Preferences"
 msgstr "Preferoj"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "Ŝparvojoj"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -265,10 +264,6 @@ msgstr "Sonoj de"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "Plu ludi kiam fermite"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "Ŝparvojoj"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -392,6 +387,10 @@ msgstr ""
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "Ŝparvojoj"
 
 #~ msgid "Add custom sound"
 #~ msgstr "Aldoni personecigitan sonon"

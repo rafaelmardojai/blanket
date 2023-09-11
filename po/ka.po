@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2021-10-22 12:04+0400\n"
 "Last-Translator: Jacob Gogichaishvili <jggsecondary@gmail.com>\n"
 "Language-Team: Georgian <>\n"
@@ -237,9 +237,8 @@ msgstr "დახურვა"
 msgid "Preferences"
 msgstr "პარამეტრები"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "კლავიატურის მალსახმობები"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -268,10 +267,6 @@ msgstr "ხმები ამათგან"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "დახურვისას დაკვრის განაგრძობა"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "კლავიატურის მალსახმობები"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -396,6 +391,10 @@ msgstr "არჩევნების რედაქტირება"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "კლავიატურის მალსახმობები"
 
 #, fuzzy
 #~ msgid "Add Preset…"

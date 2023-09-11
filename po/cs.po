@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2023-02-16 03:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
 "Language-Team: Czech (https://app.transifex.com/rafaelmardojai/teams/135055/"
@@ -237,9 +237,8 @@ msgstr "Zavřít okno"
 msgid "Preferences"
 msgstr "Předvolby"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "Klávesové zkratky"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -268,10 +267,6 @@ msgstr "Zvuky"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "Pokračovat v přehrávání po zavření"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "Klávesové zkratky"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -397,6 +392,10 @@ msgstr "Upravit přednastavení"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "Klávesové zkratky"
 
 #~ msgid "Add Preset…"
 #~ msgstr "Přidat přednastavení…"

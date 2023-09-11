@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -222,8 +222,8 @@ msgstr ""
 msgid "Preferences"
 msgstr ""
 
-#: data/resources/shortcuts.blp:32
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr ""
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -248,10 +248,6 @@ msgstr ""
 
 #: data/resources/window.blp:89
 msgid "Keep Playing when Closed"
-msgstr ""
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
 msgstr ""
 
 #: data/resources/window.blp:106

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2023-02-16 03:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
 "Language-Team: Bengali (India) (https://app.transifex.com/rafaelmardojai/"
@@ -235,9 +235,8 @@ msgstr "উইন্ডো ক্লোজ করুন"
 msgid "Preferences"
 msgstr "পছন্দসমূহ"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "কীবোর্ড শর্টকাট"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -266,10 +265,6 @@ msgstr "সাউন্ডস্‌ বাই"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "বন্ধ করা হলেও চালিয়ে যান"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "কীবোর্ড শর্টকাট"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -395,6 +390,10 @@ msgstr "প্রিসেট এডিট করুন"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "কীবোর্ড শর্টকাট"
 
 #~ msgid "Add Preset…"
 #~ msgstr "প্রিসেট যোগ করুন..."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2023-09-11 14:16+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/blanket/blanket/"
@@ -20,8 +20,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
-" ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
+"0) ? 1 : 2);\n"
 "X-Generator: Weblate 5.0.1-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
@@ -231,8 +231,8 @@ msgstr "Cerrar ventana"
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: data/resources/shortcuts.blp:32
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "Atajos de teclado"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -258,10 +258,6 @@ msgstr "Menú de sonidos"
 #: data/resources/window.blp:89
 msgid "Keep Playing when Closed"
 msgstr "Continuar reproduciendo al cerrar"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "Atajos de teclado"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -383,6 +379,9 @@ msgstr "Editar preajuste"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr "Eliminar"
+
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "Atajos de teclado"
 
 #~ msgid "Add Preset…"
 #~ msgstr "Añadir preconfiguración…"

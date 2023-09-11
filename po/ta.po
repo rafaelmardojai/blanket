@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket v0.4.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2021-04-29 22:48+0530\n"
 "Last-Translator: SURVESH VRL <123SURVESH@GMAIL.COM>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -235,9 +235,8 @@ msgstr "சாளரத்தை மூடுக"
 msgid "Preferences"
 msgstr "விருப்பங்கள்"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -266,10 +265,6 @@ msgstr "ஒலிகளை இயற்றியவர்"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "மூடிய பின்பும் ஓடிக்கொண்டிருக்கட்டும்"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -395,6 +390,10 @@ msgstr "முன்தொகுப்பை திருத்து"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "விசைப்பலகை குறுக்குவழிகள்"
 
 #, fuzzy
 #~ msgid "Add Preset…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2021-12-23 01:43+0530\n"
 "Last-Translator: Pipo Sipo <ray779@tuta.io>\n"
 "Language-Team: Hindi <LL@li.org>\n"
@@ -235,9 +235,8 @@ msgstr "खिड़की बंद करें"
 msgid "Preferences"
 msgstr "विन्यास"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "कुंजीपटल अल्प-मार्ग"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -266,10 +265,6 @@ msgstr "के द्वारा ध्वनि"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "बंद होने पर भी बजातें रहें"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "कुंजीपटल अल्प-मार्ग"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -394,6 +389,10 @@ msgstr "पूर्वनिश्चित संपादित करें"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "कुंजीपटल अल्प-मार्ग"
 
 #, fuzzy
 #~ msgid "Add Preset…"

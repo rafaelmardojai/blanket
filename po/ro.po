@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2023-02-16 03:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
 "Language-Team: Romanian (https://app.transifex.com/rafaelmardojai/"
@@ -238,9 +238,8 @@ msgstr "Închide fereastra"
 msgid "Preferences"
 msgstr "Preferinţe"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "Scurtături de tastatură"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -269,10 +268,6 @@ msgstr "Sunete de"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "Continuă să redați când este închis"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "Scurtături de tastatură"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -398,6 +393,10 @@ msgstr "Editează Presetarea"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "Scurtături de tastatură"
 
 #~ msgid "Add Preset…"
 #~ msgstr "Adaugă Presetare"

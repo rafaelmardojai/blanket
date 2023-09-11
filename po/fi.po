@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:00-0500\n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2023-02-16 03:00+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>, 2023\n"
 "Language-Team: Finnish (https://app.transifex.com/rafaelmardojai/"
@@ -238,9 +238,8 @@ msgstr "Sulje ikkuna"
 msgid "Preferences"
 msgstr "Asetukset"
 
-#: data/resources/shortcuts.blp:32
-#, fuzzy
-msgid "Keyboard Shortcus"
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
 msgstr "Pikanäppäimet"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
@@ -269,10 +268,6 @@ msgstr "Äänet toimitti"
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "Jatka toistoa sulkemisen jälkeen"
-
-#: data/resources/window.blp:101
-msgid "Keyboard Shortcuts"
-msgstr "Pikanäppäimet"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -398,6 +393,10 @@ msgstr "Muokkaa vakiota"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Keyboard Shortcus"
+#~ msgstr "Pikanäppäimet"
 
 #~ msgid "Add Preset…"
 #~ msgstr "Lisää vakio..."
