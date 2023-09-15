@@ -188,6 +188,15 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         self.filechooser.show()
 
+    @Gtk.Template.Callback()
+    def _on_narrow_window_apply(self, _breakpoint):
+        if len(Settings.get().presets) > 1:
+            self.headerbar.props.show_title = False
+
+    @Gtk.Template.Callback()
+    def _on_narrow_window_unapply(self, _breakpoint):
+        self.headerbar.props.show_title = True
+
     def _hide_inactive_sounds_filter(self, item):
         return (
             not Settings.get().get_preset_hide_inactive(Settings.get().active_preset)
