@@ -167,11 +167,13 @@ class BlanketWindow(Adw.ApplicationWindow):
                 'audio/x-wav',
                 'audio/wav',
                 'audio/mpeg',
+                'audio/aac',
             ],
             'Ogg': ['audio/ogg'],
             'FLAC': ['audio/flac'],
             'WAV': ['audio/x-wav', 'audio/wav'],
             'MP3': ['audio/mpeg'],
+            'AAC': ['audio/aac'],
         }
 
         self.filechooser = Gtk.FileChooserNative.new(  # type: ignore
