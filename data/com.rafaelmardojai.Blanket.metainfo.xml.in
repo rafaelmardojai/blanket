@@ -58,7 +58,7 @@
 
   <releases>
     <release version="0.6.0" date="2022-04-13">
-      <description>
+      <description translatable="no">
         <ul>
           <li>App ported to GTK 4 and libadwaita</li>
           <li>User interface refinements</li>
@@ -68,7 +68,7 @@
       </description>
     </release>
     <release version="0.5.0" date="2021-09-28">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added new Presets feature</li>
           <li>Now you can toggle sounds by clicking the row</li>
@@ -90,7 +90,7 @@
       </description>
     </release>
     <release version="0.4.1" date="2021-04-26">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Turkish translation</li>
           <li>Added Occitan translation</li>
@@ -99,7 +99,7 @@
       </description>
     </release>
     <release version="0.4.0" date="2021-04-15">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added autostart on background feature</li>
           <li>Added six new sounds</li>
@@ -118,7 +118,7 @@
       </description>
     </release>
     <release version="0.3.1" date="2020-09-12">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Brazilian Portuguese translation</li>
           <li>Bug fixes</li>
@@ -126,7 +126,7 @@
       </description>
     </release>
     <release version="0.3.0" date="2020-09-11">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added play/pause action</li>
           <li>Added general volume control</li>
@@ -142,7 +142,7 @@
       </description>
     </release>
     <release version="0.2.0" date="2020-09-02">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Better White Noise</li>
           <li>Added Italian translation</li>
@@ -152,7 +152,7 @@
       </description>
     </release>
     <release version="0.1.0" date="2020-09-01">
-      <description>
+      <description translatable="no">
         <p>Initial release.</p>
       </description>
     </release>
