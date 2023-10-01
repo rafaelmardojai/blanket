@@ -6,21 +6,21 @@
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-02-16 03:00+0000\n"
-"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
-"Language-Team: Occitan (post 1500) (https://app.transifex.com/rafaelmardojai/"
-"teams/135055/oc/)\n"
+"PO-Revision-Date: 2023-10-01 17:12+0000\n"
+"Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
+"Language-Team: Occitan <https://hosted.weblate.org/projects/blanket/blanket/"
+"oc/>\n"
 "Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -39,22 +39,20 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Concentracion;focalizar;soscar;bruch;productivitat;dormir;som;somi;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "Escotar diferents sons"
+msgstr "Escotar de sons d’ambient"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
 "Melhoratz vòstra concentracion e aumentatz vòstra productivitat en escotant "
-"diferents sons"
+"de sons d’ambient"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr "Pòt tanben vos ajudar a vos endormir dins un entorn brusent. "
+msgstr "Pòt tanben vos ajudar a vos endormir dins un entorn brusent."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
@@ -77,9 +75,8 @@ msgid "MPRIS integration"
 msgstr "Integracion MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
-#, fuzzy
 msgid "Included Sounds in the App:"
-msgstr "Sons incluses :"
+msgstr "Sons incluses dins l’aplicacion :"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -163,9 +160,8 @@ msgid "'Default'"
 msgstr "'Per defaut'"
 
 #: data/resources/about.blp:8
-#, fuzzy
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "Copyright 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:16
@@ -186,13 +182,12 @@ msgid "Behavior"
 msgstr "Compòrtament"
 
 #: data/resources/preferences.blp:23
-#, fuzzy
 msgid "Autostart in Background"
 msgstr "Aviada automatica en rèireplan"
 
 #: data/resources/preferences.blp:27
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "Totjorn aviar en pausa"
 
 #: data/resources/preset-dialog.blp:24
 msgid "Cancel"
@@ -219,17 +214,14 @@ msgid "General"
 msgstr "General"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:67
-#, fuzzy
 msgid "Play/Pause Sounds"
-msgstr "Lectura/Pausa"
+msgstr "Lectura/Pausa dels sons"
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
-msgstr "Apondre sons personalizats…"
+msgstr "Apondre sons personalizats"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
 msgstr "Tampar la fenèstra"
 
@@ -246,25 +238,22 @@ msgid "Quit"
 msgstr "Quitar"
 
 #: data/resources/window.blp:15
-#, fuzzy
 msgid "Presets Menu"
-msgstr "Prereglatges"
+msgstr "Menú de prereglatges"
 
 #: data/resources/window.blp:22
 msgid "Main Menu"
-msgstr ""
+msgstr "Menú principal"
 
 #: data/resources/window.blp:58
 msgid "Volume Menu"
-msgstr ""
+msgstr "Menú volum"
 
 #: data/resources/window.blp:75
-#, fuzzy
 msgid "Sounds Menu"
-msgstr "Son per"
+msgstr "Menú de son"
 
 #: data/resources/window.blp:89
-#, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "Téner de legir un còp tampat"
 
@@ -274,30 +263,27 @@ msgstr "A prepaus de Blanket"
 
 #: data/resources/window.blp:128
 msgid "Reset Sounds"
-msgstr ""
+msgstr "Reïnicializar los sons"
 
 #: data/resources/window.blp:137
-#, fuzzy
 msgid "Hide Inactive Sounds"
-msgstr "Sons incluses :"
+msgstr "Rescondre los sons inactius"
 
 #: data/resources/window.blp:142
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "Enregistrar prereglatges"
+msgstr "Enregistrar coma prereglatge novèl…"
 
 #: data/resources/window.blp:148
-#, fuzzy
 msgid "Add Sound…"
-msgstr "Apondre sons personalizats…"
+msgstr "Apondre un son…"
 
 #: data/resources/window.blp:203
 msgid "Paused to save power"
-msgstr ""
+msgstr "En pausa per estalviar d’energia"
 
 #: data/resources/window.blp:205
 msgid "_Resume Playing"
-msgstr ""
+msgstr "_Reprendre la lectura"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -359,16 +345,16 @@ msgstr ""
 
 #: blanket/window.py:134
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "Son automaticament levat"
 
 #: blanket/window.py:136
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "Lo son {name} es pas mai accessible, es estat levat"
 
 #: blanket/window.py:139
 msgid "Accept"
-msgstr ""
+msgstr "Acceptar"
 
 #. type: ignore
 #: blanket/window.py:178
@@ -378,12 +364,11 @@ msgstr "Dobrir àudio"
 #. Add new sound item
 #: blanket/window.py:235
 msgid "Add…"
-msgstr ""
+msgstr "Apondre…"
 
 #: blanket/widgets/preset_dialog.py:29
-#, fuzzy
 msgid "New Preset"
-msgstr "Prereglatges"
+msgstr "Prereglatge novèl"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
@@ -391,7 +376,7 @@ msgstr "Modificar prereglatge"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
+msgstr "Levar"
 
 #, fuzzy
 #~ msgid "Keyboard Shortcus"
