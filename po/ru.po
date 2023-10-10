@@ -6,23 +6,23 @@
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-02-16 03:00+0000\n"
-"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
-"Language-Team: Russian (https://app.transifex.com/rafaelmardojai/"
-"teams/135055/ru/)\n"
+"PO-Revision-Date: 2023-10-11 18:01+0000\n"
+"Last-Translator: firekonstantin <firekonstantin@mail.ru>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/blanket/blanket/"
+"ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || ("
+"n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -41,16 +41,16 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Концентрация;Фокусирование;Шум;Продуктивность;Сон"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "Слушайте разные звуки"
+msgstr "Слушайте звуки окружающей среды"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
-msgstr "Улучшить фокусировку и увеличить продуктивность, слушая разные звуки"
+msgstr ""
+"Улучшите концентрацию внимания и повысьте свою продуктивность, слушая "
+"различные звуки окружающей среды"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
@@ -77,9 +77,8 @@ msgid "MPRIS integration"
 msgstr "Внедрение в MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
-#, fuzzy
 msgid "Included Sounds in the App:"
-msgstr "Добавлены звуки:"
+msgstr "Включенные в приложение звуки:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -192,7 +191,7 @@ msgstr "Автозапуск в фоновом режиме"
 
 #: data/resources/preferences.blp:27
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "Всегда запускать на паузе"
 
 #: data/resources/preset-dialog.blp:24
 msgid "Cancel"
@@ -219,7 +218,6 @@ msgid "General"
 msgstr "Общее"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:67
-#, fuzzy
 msgid "Play/Pause Sounds"
 msgstr "Воспроизведение/Пауза"
 
@@ -246,17 +244,16 @@ msgid "Quit"
 msgstr "Выход"
 
 #: data/resources/window.blp:15
-#, fuzzy
 msgid "Presets Menu"
 msgstr "Профили"
 
 #: data/resources/window.blp:22
 msgid "Main Menu"
-msgstr ""
+msgstr "Главное меню"
 
 #: data/resources/window.blp:58
 msgid "Volume Menu"
-msgstr ""
+msgstr "Меню громкости"
 
 #: data/resources/window.blp:75
 #, fuzzy
@@ -274,7 +271,7 @@ msgstr "О приложении"
 
 #: data/resources/window.blp:128
 msgid "Reset Sounds"
-msgstr ""
+msgstr "Сбросить звуки"
 
 #: data/resources/window.blp:137
 #, fuzzy
@@ -293,11 +290,11 @@ msgstr "Добавить свои звуки..."
 
 #: data/resources/window.blp:203
 msgid "Paused to save power"
-msgstr ""
+msgstr "Приостановлено для энергосбережения"
 
 #: data/resources/window.blp:205
 msgid "_Resume Playing"
-msgstr ""
+msgstr "_Возобновить прослушивание"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -359,16 +356,16 @@ msgstr ""
 
 #: blanket/window.py:134
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "Звук автоматически удалён"
 
 #: blanket/window.py:136
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "Звук {name} больше не доступен, поэтому он был удалён"
 
 #: blanket/window.py:139
 msgid "Accept"
-msgstr ""
+msgstr "Принять"
 
 #. type: ignore
 #: blanket/window.py:178
@@ -378,7 +375,7 @@ msgstr "Выберите аудио"
 #. Add new sound item
 #: blanket/window.py:235
 msgid "Add…"
-msgstr ""
+msgstr "Добавить…"
 
 #: blanket/widgets/preset_dialog.py:29
 #, fuzzy
@@ -391,7 +388,7 @@ msgstr "Редактировать профиль"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
+msgstr "Удалить"
 
 #, fuzzy
 #~ msgid "Keyboard Shortcus"
