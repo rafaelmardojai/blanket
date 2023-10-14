@@ -6,21 +6,21 @@
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-02-16 03:00+0000\n"
-"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
-"Language-Team: Turkish (https://app.transifex.com/rafaelmardojai/"
-"teams/135055/tr/)\n"
+"PO-Revision-Date: 2023-10-16 04:19+0000\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/blanket/blanket/"
+"tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -163,9 +163,8 @@ msgid "'Default'"
 msgstr "'Varsayılan'"
 
 #: data/resources/about.blp:8
-#, fuzzy
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "Telif Hakkı 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:16
@@ -188,13 +187,12 @@ msgid "Behavior"
 msgstr "Davranış"
 
 #: data/resources/preferences.blp:23
-#, fuzzy
 msgid "Autostart in Background"
-msgstr "Arka planda otomatik başlat"
+msgstr "Arka planda kendiliğinden başlat"
 
 #: data/resources/preferences.blp:27
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "Her Zaman Duraklatılmış Başlat"
 
 #: data/resources/preset-dialog.blp:24
 msgid "Cancel"
@@ -221,14 +219,12 @@ msgid "General"
 msgstr "Genel"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:67
-#, fuzzy
 msgid "Play/Pause Sounds"
 msgstr "Sesleri Oynat/Duraklat"
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
-msgstr "Özel ses ekle"
+msgstr "Özel Ses Ekle"
 
 #: data/resources/shortcuts.blp:22
 #, fuzzy
