@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-11-03 21:33+0000\n"
+"PO-Revision-Date: 2023-11-04 23:34+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/blanket/blanket/"
 "tr/>\n"
@@ -68,7 +68,7 @@ msgstr "Özel ses ekle"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
-msgstr "Arka planda otomatik başlat"
+msgstr "Arka planda kendiliğinden başlat"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
@@ -157,7 +157,7 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "'Varsayılan'"
+msgstr "'Öntanımlı'"
 
 #: data/resources/about.blp:8
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
@@ -178,7 +178,7 @@ msgstr "Görünüm"
 
 #: data/resources/preferences.blp:15
 msgid "Dark Mode"
-msgstr "Karanlık Mod"
+msgstr "Koyu Kip"
 
 #: data/resources/preferences.blp:20
 msgid "Behavior"
@@ -186,7 +186,7 @@ msgstr "Davranış"
 
 #: data/resources/preferences.blp:23
 msgid "Autostart in Background"
-msgstr "Arka planda kendiliğinden başlat"
+msgstr "Arka Planda Kendiliğinden Başlat"
 
 #: data/resources/preferences.blp:27
 msgid "Always Start on Pause"
@@ -238,7 +238,7 @@ msgstr "Klavye Kısayolları"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
 msgid "Quit"
-msgstr "Çıkış"
+msgstr "Çık"
 
 #: data/resources/window.blp:15
 msgid "Presets Menu"
@@ -250,7 +250,7 @@ msgstr "Ana Menü"
 
 #: data/resources/window.blp:58
 msgid "Volume Menu"
-msgstr "Ses Menüsü"
+msgstr "Ses Düzeyi Menüsü"
 
 #: data/resources/window.blp:75
 msgid "Sounds Menu"
@@ -322,15 +322,15 @@ msgstr "Ses düzenlemeleri"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "Blanket'i arka planda otomatik başlat."
+msgstr "Battaniye’yi arka planda kendiliğinden başlat."
 
 #: blanket/preferences.py:110 blanket/preferences.py:149
 msgid "Request error"
-msgstr "İstem hatası"
+msgstr "İstek hatası"
 
 #: blanket/preferences.py:114 blanket/preferences.py:153
 msgid "The autostart request failed."
-msgstr "Otomatik başlatma isteği başarısız oldu."
+msgstr "Kendiliğinden başlatma isteği başarısız oldu."
 
 #: blanket/preferences.py:134
 msgid "Authorization failed"
@@ -362,7 +362,7 @@ msgstr "Kabul"
 #. type: ignore
 #: blanket/window.py:178
 msgid "Open audio"
-msgstr "Ses dosyası seçin"
+msgstr "Ses dosyası aç"
 
 #. Add new sound item
 #: blanket/window.py:235
