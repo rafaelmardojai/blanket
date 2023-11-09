@@ -61,14 +61,15 @@
   </keywords>
 
   <screenshots>
-    <screenshot  type="default">
-      <image>https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshot-1.png</image>
+    <screenshot type="default">
+      <image type="source">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshot-1.png</image>
+      <image type="source" xml:lang="ru">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots/ru/screenshot-1-ru.z.png</image>
+      <caption>The default screen in light theme</caption>
     </screenshot>
     <screenshot>
-      <image xml:lang="ru">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots/ru/screenshot-1-ru.z.png</image>
-    </screenshot>
-    <screenshot>
-      <image xml:lang="ru">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots/ru/screenshot-2-ru.z.png</image>
+      <image type="source">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshot-1-dark.png</image>
+      <image type="source" xml:lang="ru">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots/ru/screenshot-1-ru.z-dark.png</image>
+      <caption>The default screen in dark theme</caption>
     </screenshot>
   </screenshots>
 
