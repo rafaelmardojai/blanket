@@ -64,6 +64,7 @@
     <screenshot type="default">
       <image type="source">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshot-1.png</image>
       <image type="source" xml:lang="ru">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots/ru/screenshot-1-ru.z.png</image>
+      <image type="source" xml:lang="tr">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshots/tr/screenshot-1-tr.z.png</image>
       <caption>The default screen in light theme</caption>
     </screenshot>
     <screenshot>
