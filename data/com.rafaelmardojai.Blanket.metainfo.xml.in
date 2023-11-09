@@ -37,12 +37,28 @@
   <url type="bugtracker">https://github.com/rafaelmardojai/blanket/issues</url>
   <url type="translate">https://hosted.weblate.org/engage/blanket/</url>
   <url type="donation">https://rafaelmardojai.com/donate/</url>
-  <developer_name>Rafael Mardojai CM</developer_name>
+  <url type="vcs-browser">https://github.com/rafaelmardojai/blanket</url>
+  <developer_name translatable="no">Rafael Mardojai CM</developer_name>
   <update_contact>email_AT_rafaelmardojai.com</update_contact>
   <content_rating type="oars-1.1" />
 
   <launchable type="desktop-id">com.rafaelmardojai.Blanket.desktop</launchable>
   <translation type="gettext">blanket</translation>
+
+  <categories>
+    <category>AudioVideo</category>
+    <category>Audio</category>
+    <category>GTK</category>
+  </categories>
+
+  <keywords>
+    <keyword translate="no">Blanket</keyword>
+    <keyword>Concentrate</keyword>
+    <keyword>Focus</keyword>
+    <keyword>Noise</keyword>
+    <keyword>Productivity</keyword>
+    <keyword>Sleep</keyword>
+  </keywords>
 
   <screenshots>
     <screenshot  type="default">
