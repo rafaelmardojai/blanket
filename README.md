@@ -29,7 +29,7 @@ Improve focus and increase your productivity by listening to different sounds. O
 | Distribution | Package | Maintainer |
 |:-:|:-:|:-:|
 | Alpine Linux (edge) | [`blanket`](https://pkgs.alpinelinux.org/packages?name=blanket) | mio |
-| Arch Linux (community) | [`blanket`](https://archlinux.org/packages/community/any/blanket/) | [Balló György](https://github.com/City-busz) |
+| Arch Linux (extra) | [`blanket`](https://archlinux.org/packages/extra/any/blanket/) | [Balló György](https://github.com/City-busz) |
 | Fedora (Copr) | Copr: [`tuxino/Blob`](https://copr.fedorainfracloud.org/coprs/tuxino/Blob/), package: `blanket` | Tuxino |
 | NixOS | [`blanket`](https://search.nixos.org/packages?channel=unstable&show=blanket&from=0&size=50&sort=relevance&type=packages&query=blanket) | onny |
 | openSUSE  | [`blanket`](https://build.opensuse.org/package/show/multimedia%3Aapps/blanket) | [Michael Vetter](https://github.com/jubalh) |
