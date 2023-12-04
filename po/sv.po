@@ -7,21 +7,21 @@
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 # Luna Jernberg <bittin@cafe8bitar.se>, 2023
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-02-16 03:00+0000\n"
-"Last-Translator: Luna Jernberg <bittin@cafe8bitar.se>, 2023\n"
-"Language-Team: Swedish (https://app.transifex.com/rafaelmardojai/"
-"teams/135055/sv/)\n"
+"PO-Revision-Date: 2023-12-05 09:03+0000\n"
+"Last-Translator: bittin1ddc447d824349b2 <bittin@reimu.nl>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/blanket/blanket/"
+"sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.3-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -40,17 +40,16 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Koncentrera; Fokusera; Brus; Produktivitet. Sov;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "Lyssna på olika ljud"
+msgstr "Lyssna på omgivande ljud"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
-"Förbättra fokus och öka din produktivitet genom att lyssna på olika ljud"
+"Förbättra fokus och öka din produktivitet genom att lyssna på olika "
+"omgivande ljud"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
@@ -77,9 +76,8 @@ msgid "MPRIS integration"
 msgstr "MPRIS integration"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
-#, fuzzy
 msgid "Included Sounds in the App:"
-msgstr "Inkluderade ljud:"
+msgstr "Inkluderade ljud i detta program:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -163,9 +161,8 @@ msgid "'Default'"
 msgstr "'Standard'"
 
 #: data/resources/about.blp:8
-#, fuzzy
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "Copyright 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:16
@@ -189,13 +186,12 @@ msgid "Behavior"
 msgstr "Beteende"
 
 #: data/resources/preferences.blp:23
-#, fuzzy
 msgid "Autostart in Background"
-msgstr "Starta automatiskt i bakgrunden"
+msgstr "Automatisk start i bakgrunden"
 
 #: data/resources/preferences.blp:27
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "Starta Alltid Pausad"
 
 #: data/resources/preset-dialog.blp:24
 msgid "Cancel"
@@ -222,17 +218,14 @@ msgid "General"
 msgstr "Allmänt"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:67
-#, fuzzy
 msgid "Play/Pause Sounds"
-msgstr "Spela upp/Pausa ljud"
+msgstr "Spela/Pausa ljud"
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
-msgstr "Lägg till anpassat ljud..."
+msgstr "Lägg till anpassat ljud"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
 msgstr "Stäng fönster"
 
@@ -249,9 +242,8 @@ msgid "Quit"
 msgstr "Avsluta"
 
 #: data/resources/window.blp:15
-#, fuzzy
 msgid "Presets Menu"
-msgstr "Förinställningar"
+msgstr "Meny för förinställningar"
 
 #: data/resources/window.blp:22
 msgid "Main Menu"
@@ -259,17 +251,15 @@ msgstr ""
 
 #: data/resources/window.blp:58
 msgid "Volume Menu"
-msgstr ""
+msgstr "Volymmeny"
 
 #: data/resources/window.blp:75
-#, fuzzy
 msgid "Sounds Menu"
-msgstr "Ljud av"
+msgstr "Ljud meny"
 
 #: data/resources/window.blp:89
-#, fuzzy
 msgid "Keep Playing when Closed"
-msgstr "Fortsätt spela efter avslut"
+msgstr "Fortsätt spela när det är avstängt"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -277,30 +267,27 @@ msgstr "Om Blanket"
 
 #: data/resources/window.blp:128
 msgid "Reset Sounds"
-msgstr ""
+msgstr "Återställ ljud"
 
 #: data/resources/window.blp:137
-#, fuzzy
 msgid "Hide Inactive Sounds"
-msgstr "Inkluderade ljud:"
+msgstr "Dölj inaktiva ljud"
 
 #: data/resources/window.blp:142
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "Spara förinställningar"
+msgstr "Spara som ny förinställning…"
 
 #: data/resources/window.blp:148
-#, fuzzy
 msgid "Add Sound…"
-msgstr "Lägg till anpassat ljud..."
+msgstr "Lägg till ljud…"
 
 #: data/resources/window.blp:203
 msgid "Paused to save power"
-msgstr ""
+msgstr "Pausad för att spara ström"
 
 #: data/resources/window.blp:205
 msgid "_Resume Playing"
-msgstr ""
+msgstr "_Fortsätt spela"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -362,16 +349,16 @@ msgstr ""
 
 #: blanket/window.py:134
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "Ljud automatiskt borttaget"
 
 #: blanket/window.py:136
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "Ljudet {name} är inte längre tillgängligt, så det har tagits bort"
 
 #: blanket/window.py:139
 msgid "Accept"
-msgstr ""
+msgstr "Acceptera"
 
 #. type: ignore
 #: blanket/window.py:178
@@ -381,12 +368,11 @@ msgstr "Öppna ljud"
 #. Add new sound item
 #: blanket/window.py:235
 msgid "Add…"
-msgstr ""
+msgstr "Lägg till…"
 
 #: blanket/widgets/preset_dialog.py:29
-#, fuzzy
 msgid "New Preset"
-msgstr "Förinställningar"
+msgstr "Ny förinställning"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
@@ -394,7 +380,7 @@ msgstr "Redigera förinställning"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
+msgstr "Ta bort"
 
 #, fuzzy
 #~ msgid "Keyboard Shortcus"
