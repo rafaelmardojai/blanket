@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
 "PO-Revision-Date: 2023-12-05 09:03+0000\n"
-"Last-Translator: bittin1ddc447d824349b2 <bittin@reimu.nl>\n"
+"Last-Translator: Thorsten Andresson <ge7a81yxq@mozmail.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/blanket/blanket/"
 "sv/>\n"
 "Language: sv\n"
@@ -247,7 +247,7 @@ msgstr "Meny för förinställningar"
 
 #: data/resources/window.blp:22
 msgid "Main Menu"
-msgstr ""
+msgstr "Huvudmeny"
 
 #: data/resources/window.blp:58
 msgid "Volume Menu"
