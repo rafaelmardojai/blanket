@@ -6,21 +6,21 @@
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-02-16 03:00+0000\n"
-"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
-"Language-Team: Albanian (https://app.transifex.com/rafaelmardojai/"
-"teams/135055/sq/)\n"
+"PO-Revision-Date: 2023-12-14 14:09+0000\n"
+"Last-Translator: Roxwize <biscordbro@gmail.com>\n"
+"Language-Team: Albanian <https://hosted.weblate.org/projects/blanket/blanket/"
+"sq/>\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.3\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -36,7 +36,7 @@ msgstr "Dëgjo tinguj të ndryshëm"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Përqendrim;Fokus;Zhurmë;Produktivitet;Gjumë"
+msgstr "Përqendrim;Fokus;Zhurmë;Produktivitet;Gjumë;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
 #, fuzzy
