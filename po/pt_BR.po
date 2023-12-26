@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-12-26 04:11+0000\n"
+"PO-Revision-Date: 2023-12-27 05:07+0000\n"
 "Last-Translator: Filipe Motta <luiz_filipe_motta@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "blanket/blanket/pt_BR/>\n"
@@ -172,7 +172,8 @@ msgid "translator-credits"
 msgstr ""
 "Pedro Fleck <freckts@gmail.com>, 2021\n"
 "Gustavo Costa <gusta@null.net>\n"
-"Fúlvio Alves <fga.fulvio@gmail.com>, 2023"
+"Fúlvio Alves <fga.fulvio@gmail.com>, 2023\n"
+"Filipe Motta <luizfilipemotta@gmail.com>, 2023"
 
 #: data/resources/preferences.blp:12
 msgid "Appearance"
@@ -260,7 +261,7 @@ msgstr "Menu de sons"
 
 #: data/resources/window.blp:89
 msgid "Keep Playing when Closed"
-msgstr "Continuar reproduzindo depois de fechado"
+msgstr "Continuar reproduzindo quando fechado"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -268,7 +269,7 @@ msgstr "Sobre o Blanket"
 
 #: data/resources/window.blp:128
 msgid "Reset Sounds"
-msgstr "Resetar sons"
+msgstr "Redefinir sons"
 
 #: data/resources/window.blp:137
 msgid "Hide Inactive Sounds"
@@ -288,7 +289,7 @@ msgstr "Pausado para economizar energia"
 
 #: data/resources/window.blp:205
 msgid "_Resume Playing"
-msgstr "_Resumir"
+msgstr "_Retomar reprodução"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -324,7 +325,7 @@ msgstr "Sons editados por"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "Iniciar automaticamente Blanket em segundo plano."
+msgstr "Iniciar Blanket automaticamente em segundo plano."
 
 #: blanket/preferences.py:110 blanket/preferences.py:149
 msgid "Request error"
@@ -332,7 +333,7 @@ msgstr "Erro de solicitação"
 
 #: blanket/preferences.py:114 blanket/preferences.py:153
 msgid "The autostart request failed."
-msgstr "A solicitação para rodar em segundo plano falhou."
+msgstr "A solicitação para iniciar automaticamente falhou."
 
 #: blanket/preferences.py:134
 msgid "Authorization failed"
@@ -355,7 +356,7 @@ msgstr "Som automaticamente removido"
 #: blanket/window.py:136
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr "O som {name} não está mais acessível, portanto foi removido"
+msgstr "O som {name} não pode mais acessado e por isso foi removido"
 
 #: blanket/window.py:139
 msgid "Accept"
@@ -377,7 +378,7 @@ msgstr "Nova predefinição"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
-msgstr "Criar predefinição"
+msgstr "Editar predefinição"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
