@@ -45,21 +45,6 @@
   <launchable type="desktop-id">com.rafaelmardojai.Blanket.desktop</launchable>
   <translation type="gettext">blanket</translation>
 
-  <categories>
-    <category>AudioVideo</category>
-    <category>Audio</category>
-    <category>GTK</category>
-  </categories>
-
-  <keywords>
-    <keyword translate="no">Blanket</keyword>
-    <keyword>Concentrate</keyword>
-    <keyword>Focus</keyword>
-    <keyword>Noise</keyword>
-    <keyword>Productivity</keyword>
-    <keyword>Sleep</keyword>
-  </keywords>
-
   <screenshots>
     <screenshot type="default">
       <image type="source">https://raw.githubusercontent.com/rafaelmardojai/blanket/master/brand/screenshot-1.png</image>
