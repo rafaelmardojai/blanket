@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2024-01-10 13:06+0000\n"
+"PO-Revision-Date: 2024-01-14 15:06+0000\n"
 "Last-Translator: Radoŝ Porka <animatorzPolski@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/blanket/"
 "blanket/eo/>\n"
@@ -28,47 +28,42 @@ msgstr "Blanket"
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
 #: blanket/mpris.py:153
 msgid "Listen to different sounds"
-msgstr "Aŭskultu diversajn sonojn"
+msgstr "Aŭskulti diversajn sonojn"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Koncentriĝi;Atenton;Bruo;Sono;Produktemo;Dormi;"
+msgstr "Koncentriĝi;Fokusiĝi;Bruo;Sono;Produktemo;Dormo;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "Aŭskultu diversajn sonojn"
+msgstr "Aŭskulti sonojn de ĉirkaŭaĵo"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
-"Plibonigu vian atenton kaj produktemon aŭskultante diversajn sonojn. Aŭ "
-"helpos al vi endormiĝi en bruaj medioj."
+"Plibonigi vian fokuson kaj produktemon aŭskultante diversajn sonojn de "
+"ĉirkaŭaĵo"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Ankaŭ povas helpi vin endormiĝi en bruaj medioj."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Naturo"
+msgstr "Kapabloj:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr ""
+msgstr "Konservi"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "Aldoni personecigitan sonon"
+msgstr "Aldoni proprajn sonojn"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
 msgstr "Aŭtolanĉi en la fono"
 
@@ -159,12 +154,11 @@ msgstr "Rafael Mardojai CM"
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Defaŭlta'"
 
 #: data/resources/about.blp:8
-#, fuzzy
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "Aŭtorrajto 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:16
@@ -174,18 +168,17 @@ msgstr "Porrumentzio <porrumentzio@riseup.net>"
 
 #: data/resources/preferences.blp:12
 msgid "Appearance"
-msgstr ""
+msgstr "Aspekto"
 
 #: data/resources/preferences.blp:15
 msgid "Dark Mode"
-msgstr ""
+msgstr "Malhela reĝimo"
 
 #: data/resources/preferences.blp:20
 msgid "Behavior"
 msgstr "Konduto"
 
 #: data/resources/preferences.blp:23
-#, fuzzy
 msgid "Autostart in Background"
 msgstr "Aŭtolanĉi en la fono"
 
@@ -195,11 +188,11 @@ msgstr ""
 
 #: data/resources/preset-dialog.blp:24
 msgid "Cancel"
-msgstr ""
+msgstr "Rezigni"
 
 #: data/resources/preset-dialog.blp:32
 msgid "Save"
-msgstr ""
+msgstr "Konservi"
 
 #: data/resources/preset-dialog.blp:43
 msgid "Preset Name"
@@ -215,20 +208,17 @@ msgstr ""
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
-msgstr "Ĝenerala"
+msgstr "Ĝeneralaj"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:67
-#, fuzzy
 msgid "Play/Pause Sounds"
 msgstr "Ludi/Paŭzigi sonojn"
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
-msgstr "Aldoni personecigitan sonon"
+msgstr "Aldoni propran sonon"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
 msgstr "Fermi fenestron"
 
@@ -250,16 +240,15 @@ msgstr ""
 
 #: data/resources/window.blp:22
 msgid "Main Menu"
-msgstr ""
+msgstr "Ĉefa menuo"
 
 #: data/resources/window.blp:58
 msgid "Volume Menu"
 msgstr ""
 
 #: data/resources/window.blp:75
-#, fuzzy
 msgid "Sounds Menu"
-msgstr "Sonoj de"
+msgstr "Menuo de sonoj"
 
 #: data/resources/window.blp:89
 #, fuzzy
@@ -284,7 +273,7 @@ msgstr ""
 
 #: data/resources/window.blp:148
 msgid "Add Sound…"
-msgstr "Aldoni propran sonon…"
+msgstr "Aldoni sonon…"
 
 #: data/resources/window.blp:203
 msgid "Paused to save power"
@@ -312,11 +301,11 @@ msgstr "Bruo"
 
 #: blanket/define.py:48
 msgid "Sounds icons"
-msgstr "Ikonoj por sonoj de"
+msgstr "Bildsimboloj de sonoj"
 
 #: blanket/define.py:48
 msgid "App icon"
-msgstr "Ikono por aplikacio"
+msgstr "Aplikaĵa bildsimbolo"
 
 #: blanket/main.py:242
 msgid "Sounds by"
@@ -327,7 +316,6 @@ msgid "Sounds edited by"
 msgstr "Sonoj redaktitaj de"
 
 #: blanket/preferences.py:79
-#, fuzzy
 msgid "Autostart Blanket in background."
 msgstr "Aŭtolanĉi Blanket en la fono."
 
@@ -350,7 +338,7 @@ msgid ""
 "Blanket and try again."
 msgstr ""
 "Kontroli ĉu Blanket estas permesita funkcii \n"
-"en la fono, en Agordoj → Aplikacioj → \n"
+"en la fono, en Agordoj → Aplikaĵoj → \n"
 "Blanket, kaj reprovu."
 
 #: blanket/window.py:134
@@ -364,7 +352,7 @@ msgstr ""
 
 #: blanket/window.py:139
 msgid "Accept"
-msgstr ""
+msgstr "Akcepti"
 
 #. type: ignore
 #: blanket/window.py:178
@@ -374,7 +362,7 @@ msgstr "Malfermi sondosieron"
 #. Add new sound item
 #: blanket/window.py:235
 msgid "Add…"
-msgstr ""
+msgstr "Aldoni…"
 
 #: blanket/widgets/preset_dialog.py:29
 msgid "New Preset"
@@ -386,7 +374,7 @@ msgstr ""
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
+msgstr "Forigi"
 
 #, fuzzy
 #~ msgid "Keyboard Shortcus"
