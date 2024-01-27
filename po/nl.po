@@ -7,21 +7,22 @@
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 # Heimen Stoffels <vistausss@fastmail.com>, 2023
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-02-16 03:00+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>, 2023\n"
-"Language-Team: Dutch (https://app.transifex.com/rafaelmardojai/teams/135055/"
-"nl/)\n"
+"PO-Revision-Date: 2024-01-28 20:01+0000\n"
+"Last-Translator: Luka van der Plas <lukavdplas@users.noreply.hosted.weblate."
+"org>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/blanket/blanket/nl/"
+">\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -45,13 +46,12 @@ msgid "Listen to ambient sounds"
 msgstr "Luister naar verschillende geluiden"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
-"Verbeter je focus, verhoog je productiviteit of val sneller in slaap door te "
-"luisteren naar verschillende geluiden."
+"Verbeter je focus en verhoog je productiviteit door te luisteren naar "
+"verschillende geluiden"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
@@ -213,7 +213,7 @@ msgstr "Naam wijzigen"
 
 #: data/resources/preset-row.blp:43
 msgid "Delete Preset"
-msgstr "Verwijderen"
+msgstr "Voorinstelling verwijderen"
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
@@ -225,9 +225,8 @@ msgid "Play/Pause Sounds"
 msgstr "Geluiden afspelen/onderbreken"
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
-msgstr "Eigen geluid toevoegen…"
+msgstr "Eigen geluid toevoegen"
 
 #: data/resources/shortcuts.blp:22
 #, fuzzy
@@ -253,7 +252,7 @@ msgstr "Voorinstellingen"
 
 #: data/resources/window.blp:22
 msgid "Main Menu"
-msgstr ""
+msgstr "Hoofdmenu"
 
 #: data/resources/window.blp:58
 msgid "Volume Menu"
@@ -278,19 +277,16 @@ msgid "Reset Sounds"
 msgstr ""
 
 #: data/resources/window.blp:137
-#, fuzzy
 msgid "Hide Inactive Sounds"
-msgstr "Meegeleverde geluiden:"
+msgstr "Inactieve Geluiden Verbergen"
 
 #: data/resources/window.blp:142
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "Voorinstellingen opslaan"
+msgstr "Opslaan als nieuwe voorsinstelling…"
 
 #: data/resources/window.blp:148
-#, fuzzy
 msgid "Add Sound…"
-msgstr "Eigen geluid toevoegen…"
+msgstr "Geluid toevoegen…"
 
 #: data/resources/window.blp:203
 msgid "Paused to save power"
@@ -360,12 +356,12 @@ msgstr ""
 
 #: blanket/window.py:134
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "Geluid automatisch verwijderd"
 
 #: blanket/window.py:136
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "Het geluid {name} is niet meer beschikbaar, dus het is verwijderd"
 
 #: blanket/window.py:139
 msgid "Accept"
@@ -379,7 +375,7 @@ msgstr "Audio openen"
 #. Add new sound item
 #: blanket/window.py:235
 msgid "Add…"
-msgstr ""
+msgstr "Toevoegen…"
 
 #: blanket/widgets/preset_dialog.py:29
 #, fuzzy
@@ -392,7 +388,7 @@ msgstr "Bewerken"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
+msgstr "Verwijderen"
 
 #, fuzzy
 #~ msgid "Keyboard Shortcus"
