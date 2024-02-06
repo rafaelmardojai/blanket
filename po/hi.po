@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2021-12-23 01:43+0530\n"
-"Last-Translator: Pipo Sipo <ray779@tuta.io>\n"
-"Language-Team: Hindi <LL@li.org>\n"
+"PO-Revision-Date: 2024-02-07 02:29+0000\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
+"Language-Team: Hindi <https://hosted.weblate.org/projects/blanket/blanket/hi/"
+">\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -34,50 +36,44 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "एकाग्र;केंद्रित;शोर;उत्पादकता;निद्रा;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "विभिन्न ध्वनियों को सुनें"
+msgstr "परिवेशीय ध्वनियों को सुनें"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
-"ध्यान केंद्रित करनें में सुधार करें और विभिन्न ध्वनियों को सुनकर अपनी उत्पादकता बढ़ाएँ। और "
-"आपको एक कोलाहलमय वातावरण में सोने की सहायता करे।"
+"विभिन्न परिवेशीय ध्वनियों को सुनकर फोकस में सुधार करें और अपनी उत्पादकता "
+"बढ़ाएँ"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "साथ ही यह आपको शोर-शराबे वाले माहौल में भी सोने में मदद कर सकता है।"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "प्रकृति"
+msgstr "विशेषताएँ:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "सहेजे गए पूर्वनिश्चित"
+msgstr "प्रीसेट सहेजें"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "तदनुकूल ध्वनि जोड़ें"
+msgstr "कस्टम ध्वनियाँ जोड़ें"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "पृष्ठभूमि में स्व-आरंभ करें"
+msgstr "पृष्ठभूमि में स्वतः प्रारंभ"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "एमपीआरआईएस एकीकरण"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
-msgstr ""
+msgstr "ऐप में शामिल ध्वनियाँ:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -161,9 +157,8 @@ msgid "'Default'"
 msgstr "'प्रारंभिक'"
 
 #: data/resources/about.blp:8
-#, fuzzy
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "प्रतिलिप्यधिकार २०२०-२०२१ राफेल मर्दोजाई सीएम"
+msgstr "कॉपीराइट 2020-2022 राफेल मर्दोजई सीएम"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:16
@@ -184,13 +179,12 @@ msgid "Behavior"
 msgstr "व्यवहार"
 
 #: data/resources/preferences.blp:23
-#, fuzzy
 msgid "Autostart in Background"
-msgstr "पृष्ठभूमि में स्व-आरंभ करें"
+msgstr "पृष्ठभूमि में स्वतः प्रारंभ"
 
 #: data/resources/preferences.blp:27
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "हमेशा विराम पर प्रारंभ करें"
 
 #: data/resources/preset-dialog.blp:24
 msgid "Cancel"
@@ -217,19 +211,16 @@ msgid "General"
 msgstr "साधारण"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:67
-#, fuzzy
 msgid "Play/Pause Sounds"
-msgstr "ध्वनि बजाएँ/ठहराएँ"
+msgstr "ध्वनियाँ चलाएँ/रोकें"
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
-msgstr "तदनुकूल ध्वनि जोड़ें"
+msgstr "कस्टम ध्वनि जोड़ें"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
-msgstr "खिड़की बंद करें"
+msgstr "विंडो बंद"
 
 #: data/resources/shortcuts.blp:27 data/resources/window.blp:96
 msgid "Preferences"
@@ -244,27 +235,24 @@ msgid "Quit"
 msgstr "निस्तार"
 
 #: data/resources/window.blp:15
-#, fuzzy
 msgid "Presets Menu"
-msgstr "पूर्वनिश्चित जोड़ें"
+msgstr "प्रीसेट मेनू"
 
 #: data/resources/window.blp:22
 msgid "Main Menu"
-msgstr ""
+msgstr "मुख्य मेन्यू"
 
 #: data/resources/window.blp:58
 msgid "Volume Menu"
-msgstr ""
+msgstr "वॉल्यूम मेनू"
 
 #: data/resources/window.blp:75
-#, fuzzy
 msgid "Sounds Menu"
-msgstr "के द्वारा ध्वनि"
+msgstr "ध्वनि मेनू"
 
 #: data/resources/window.blp:89
-#, fuzzy
 msgid "Keep Playing when Closed"
-msgstr "बंद होने पर भी बजातें रहें"
+msgstr "बंद होने पर बजाना जारी रखें"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
@@ -272,29 +260,27 @@ msgstr "कंबल के बारे में"
 
 #: data/resources/window.blp:128
 msgid "Reset Sounds"
-msgstr ""
+msgstr "ध्वनियाँ रीसेट करें"
 
 #: data/resources/window.blp:137
 msgid "Hide Inactive Sounds"
-msgstr ""
+msgstr "निष्क्रिय ध्वनियाँ छिपाएँ"
 
 #: data/resources/window.blp:142
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "सहेजे गए पूर्वनिश्चित"
+msgstr "नए प्रीसेट के रूप में सहेजें…"
 
 #: data/resources/window.blp:148
-#, fuzzy
 msgid "Add Sound…"
-msgstr "तदनुकूल ध्वनि जोड़ें"
+msgstr "ध्वनि जोड़ें…"
 
 #: data/resources/window.blp:203
 msgid "Paused to save power"
-msgstr ""
+msgstr "बिजली बचाने के लिए रुका"
 
 #: data/resources/window.blp:205
 msgid "_Resume Playing"
-msgstr ""
+msgstr "_बजाना फिर से शुरू करें"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -356,16 +342,16 @@ msgstr ""
 
 #: blanket/window.py:134
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "ध्वनि स्वतः हटा दी गई"
 
 #: blanket/window.py:136
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "{name} ध्वनि अब पहुंच योग्य नहीं है, इसलिए इसे हटा दिया गया है"
 
 #: blanket/window.py:139
 msgid "Accept"
-msgstr ""
+msgstr "स्वीकार करें"
 
 #. type: ignore
 #: blanket/window.py:178
@@ -375,12 +361,11 @@ msgstr "श्रव्य खोलें"
 #. Add new sound item
 #: blanket/window.py:235
 msgid "Add…"
-msgstr ""
+msgstr "जोड़ें…"
 
 #: blanket/widgets/preset_dialog.py:29
-#, fuzzy
 msgid "New Preset"
-msgstr "पूर्वनिश्चित जोड़ें"
+msgstr "नया प्रीसेट"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
@@ -388,7 +373,7 @@ msgstr "पूर्वनिश्चित संपादित करें"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
+msgstr "हटाएँ"
 
 #, fuzzy
 #~ msgid "Keyboard Shortcus"
