@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2024-02-07 02:29+0000\n"
-"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
+"PO-Revision-Date: 2024-02-11 18:02+0000\n"
+"Last-Translator: Nitin Khalia <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/blanket/blanket/hi/"
 ">\n"
 "Language: hi\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
 #: blanket/mpris.py:155
 msgid "Blanket"
-msgstr "कंबल"
+msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
 #: blanket/mpris.py:153
@@ -49,7 +49,7 @@ msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr "साथ ही यह आपको शोर-शराबे वाले माहौल में भी सोने में मदद कर सकता है।"
+msgstr "साथ ही यह आपको शोर-शराबे वाले माहौल में भी सोने में मदद करता है।"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
@@ -69,7 +69,7 @@ msgstr "पृष्ठभूमि में स्वतः प्रारं
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr "एमपीआरआईएस एकीकरण"
+msgstr "MPRIS एकीकरण"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
@@ -88,12 +88,12 @@ msgstr "नौका"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:22 blanket/define.py:27
 #: blanket/define.py:55 blanket/define.py:74
 msgid "City"
-msgstr "पट्टनम्"
+msgstr "शहर"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:23 blanket/define.py:33
 #: blanket/define.py:61
 msgid "Coffee Shop"
-msgstr "कहवा का मण्डपक"
+msgstr "कॉफ़ी शॉप"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:24 blanket/define.py:34
 #: blanket/define.py:53
@@ -103,7 +103,7 @@ msgstr "अंगीठी"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/define.py:40
 #: blanket/define.py:62
 msgid "Pink Noise"
-msgstr "पाटल परिघोष"
+msgstr "गुलाबी शोर"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:26 blanket/define.py:13
 #: blanket/define.py:51 blanket/define.py:70
@@ -113,12 +113,12 @@ msgstr "वर्षा"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:27 blanket/define.py:19
 #: blanket/define.py:59
 msgid "Summer Night"
-msgstr "ग्रीष्म-ऋतु की रात्रि"
+msgstr "ग्रीष्म रात्रि"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:28 blanket/define.py:14
 #: blanket/define.py:52 blanket/define.py:71
 msgid "Storm"
-msgstr "वात्या"
+msgstr "तूफ़ान"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/define.py:17
 #: blanket/define.py:56
@@ -133,12 +133,12 @@ msgstr "रेलगाड़ी"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:31 blanket/define.py:16
 #: blanket/define.py:60 blanket/define.py:72
 msgid "Waves"
-msgstr "ऊर्मि"
+msgstr "लहरें"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:32 blanket/define.py:41
 #: blanket/define.py:57
 msgid "White Noise"
-msgstr "श्वेत परिघोष"
+msgstr "सफ़ेद शोर"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:33 blanket/define.py:15
 #: blanket/define.py:63 blanket/define.py:75
@@ -148,31 +148,31 @@ msgstr "वायु"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:40
 #: data/resources/about.blp:9
 msgid "Rafael Mardojai CM"
-msgstr "राफेल मर्दोजाई सीएम"
+msgstr "राफेल मर्दोजाई CM"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "'प्रारंभिक'"
+msgstr "'डिफ़ॉल्ट'"
 
 #: data/resources/about.blp:8
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "कॉपीराइट 2020-2022 राफेल मर्दोजई सीएम"
+msgstr "कॉपीराइट 2020-2022 राफेल मर्दोजई CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:16
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "अनुवादक-आभार सूची"
+msgstr "Scrambled777 <weblate.scrambled777@simplelogin.com>"
 
 #: data/resources/preferences.blp:12
 msgid "Appearance"
-msgstr "रूप"
+msgstr "दिखावट"
 
 #: data/resources/preferences.blp:15
 msgid "Dark Mode"
-msgstr "काला रंग"
+msgstr "डार्क मोड"
 
 #: data/resources/preferences.blp:20
 msgid "Behavior"
@@ -196,19 +196,19 @@ msgstr "सहेजें"
 
 #: data/resources/preset-dialog.blp:43
 msgid "Preset Name"
-msgstr "पूर्वनिश्चित का नाम"
+msgstr "प्रीसेट का नाम"
 
 #: data/resources/preset-row.blp:32
 msgid "Rename Preset"
-msgstr "पूर्वनिश्चित का पुनःनामकरण करें"
+msgstr "प्रीसेट का नाम बदलें"
 
 #: data/resources/preset-row.blp:43
 msgid "Delete Preset"
-msgstr "पूर्वनिश्चित नष्ट करें"
+msgstr "प्रीसेट हटाएँ"
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
-msgstr "साधारण"
+msgstr "जनरल"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:67
 msgid "Play/Pause Sounds"
@@ -224,15 +224,15 @@ msgstr "विंडो बंद"
 
 #: data/resources/shortcuts.blp:27 data/resources/window.blp:96
 msgid "Preferences"
-msgstr "विन्यास"
+msgstr "प्राथमिकताएँ"
 
 #: data/resources/shortcuts.blp:32 data/resources/window.blp:101
 msgid "Keyboard Shortcuts"
-msgstr "कुंजीपटल अल्प-मार्ग"
+msgstr "कीबोर्ड शॉर्टकट"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:113
 msgid "Quit"
-msgstr "निस्तार"
+msgstr "छोड़ें"
 
 #: data/resources/window.blp:15
 msgid "Presets Menu"
@@ -256,7 +256,7 @@ msgstr "बंद होने पर बजाना जारी रखें"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
-msgstr "कंबल के बारे में"
+msgstr "Blanket के बारे में"
 
 #: data/resources/window.blp:128
 msgid "Reset Sounds"
@@ -296,27 +296,27 @@ msgstr "अभ्यंतर"
 
 #: blanket/define.py:38
 msgid "Noise"
-msgstr "परिघोष"
+msgstr "शोर"
 
 #: blanket/define.py:48
 msgid "Sounds icons"
-msgstr "ध्वनि के अनुप्रतीक"
+msgstr "ध्वनि चिह्न"
 
 #: blanket/define.py:48
 msgid "App icon"
-msgstr "अनुप्रयोग का अनुप्रतीक"
+msgstr "ऐप आइकन"
 
 #: blanket/main.py:242
 msgid "Sounds by"
-msgstr "के द्वारा ध्वनि"
+msgstr "ध्वनि इनके द्वारा"
 
 #: blanket/main.py:243
 msgid "Sounds edited by"
-msgstr "के द्वारा ध्वनि संपादित की गई"
+msgstr "ध्वनि इनके द्वारा संपादित"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "पृष्ठभूमि में कंबल को स्व-आरंभ करें।"
+msgstr "पृष्ठभूमि में ऑटोस्टार्ट Blanket।"
 
 #: blanket/preferences.py:110 blanket/preferences.py:149
 msgid "Request error"
@@ -324,7 +324,7 @@ msgstr "अनुरोध में त्रुटि"
 
 #: blanket/preferences.py:114 blanket/preferences.py:153
 msgid "The autostart request failed."
-msgstr "स्व-आरंभ अनुरोध विफल रहा।"
+msgstr "स्वतः प्रारंभ अनुरोध विफल रहा।"
 
 #: blanket/preferences.py:134
 msgid "Authorization failed"
@@ -336,9 +336,9 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"सुनिश्चित करें कि कंबल को पृष्ठभूमि में चलने की अनुमति है, \n"
-"विन्यास → अनुप्रयोग → कंबल में \n"
-"और पुनः प्रयास करें।"
+"सुनिश्चित करें कि Blanket को पृष्ठभूमि में चलने की\n"
+"अनुमति है. सेटिंग्स → एप्लिकेशन → \n"
+"Blanket और पुनः प्रयास करें।"
 
 #: blanket/window.py:134
 msgid "Sound Automatically Removed"
@@ -356,7 +356,7 @@ msgstr "स्वीकार करें"
 #. type: ignore
 #: blanket/window.py:178
 msgid "Open audio"
-msgstr "श्रव्य खोलें"
+msgstr "ऑडियो खोलें"
 
 #. Add new sound item
 #: blanket/window.py:235
@@ -369,7 +369,7 @@ msgstr "नया प्रीसेट"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
-msgstr "पूर्वनिश्चित संपादित करें"
+msgstr "प्रीसेट संपादित करें"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
