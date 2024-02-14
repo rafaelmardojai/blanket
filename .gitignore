@@ -1,6 +1,7 @@
 
 builddir/
 .flatpak/
+.flatpak-builder
 _build/
 
 
