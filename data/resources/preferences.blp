@@ -1,12 +1,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-template $PreferencesWindow : Adw.PreferencesWindow {
-  default-height: 300;
-  default-width: 500;
-  modal: true;
-  search-enabled: false;
-
+template $PreferencesDialog : Adw.PreferencesDialog {
   Adw.PreferencesPage {
     Adw.PreferencesGroup dark_group {
       title: _("Appearance");

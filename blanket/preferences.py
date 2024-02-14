@@ -12,8 +12,8 @@ from blanket.settings import Settings
 
 
 @Gtk.Template(resource_path=f'{RES_PATH}/preferences.ui')
-class PreferencesWindow(Adw.PreferencesWindow):
-    __gtype_name__ = 'PreferencesWindow'
+class PreferencesDialog(Adw.PreferencesDialog):
+    __gtype_name__ = 'PreferencesDialog'
 
     dark_group: Adw.PreferencesGroup = Gtk.Template.Child()  # type: ignore
     dark: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
@@ -104,16 +104,9 @@ class PreferencesWindow(Adw.PreferencesWindow):
         except Exception as e:
             print(e)
 
-            error_dialog = Gtk.MessageDialog(
-                message_type=Gtk.MessageType.WARNING,
-                buttons=Gtk.ButtonsType.OK,
-                text=_('Request error'),
-            )
-            error_dialog.props.transient_for = self
-            error_dialog.props.modal = True
-            error_dialog.props.secondary_text = _('The autostart request failed.')
-            error_dialog.connect('response', self.__on_dialog_response)
-            error_dialog.present()
+            error_dialog = Adw.AlertDialog.new(_('Request error'), _('The autostart request failed.'))
+            error_dialog.add_response('ok', _('Ok'))
+            error_dialog.present(self.window)
             self.autostart_failed = True
             self.autostart.set_active(self.autostart_saved)
 
@@ -128,39 +121,17 @@ class PreferencesWindow(Adw.PreferencesWindow):
             pass
         elif state == 1:
             if active:
-                error_dialog = Gtk.MessageDialog(
-                    message_type=Gtk.MessageType.WARNING,
-                    buttons=Gtk.ButtonsType.OK,
-                    text=_('Authorization failed'),
-                )
-                error_dialog.props.transient_for = self
-                error_dialog.props.modal = True
-                error_dialog.props.secondary_text = _(
-                    'Make sure Blanket has permission to run in '
-                    '\nthe background in Settings → Applications → '
-                    '\nBlanket and try again.'
-                )
-                error_dialog.connect('response', self.__on_dialog_response)
-                error_dialog.present()
+                error_dialog = Adw.AlertDialog.new(_('Authorization failed'), _('Make sure Blanket has permission to run in the background in Settings → Applications → Blanket and try again.'))
+                error_dialog.add_response('ok', _('Ok'))
+                error_dialog.present(self.window)
         elif state == 2:
-            error_dialog = Gtk.MessageDialog(
-                message_type=Gtk.MessageType.WARNING,
-                buttons=Gtk.ButtonsType.OK,
-                text=_('Request error'),
-            )
-            error_dialog.props.transient_for = self
-            error_dialog.props.modal = True
-            error_dialog.props.secondary_text = _('The autostart request failed.')
-            error_dialog.connect('response', self.__on_dialog_response)
-            error_dialog.present()
+            error_dialog = Adw.AlertDialog.new(_('Request error'), _('The autostart request failed.'))
+            error_dialog.add_response('ok', _('Ok'))
+            error_dialog.present(self.window)
 
         self.autostart.set_active(autostart)
         Settings.get().autostart = autostart
         return
-
-    def __on_dialog_response(self, dialog, response_id):
-        if response_id == Gtk.ResponseType.OK:
-            dialog.destroy()
 
     def __get_window_identifier(self):
         session = os.getenv('XDG_SESSION_TYPE')
