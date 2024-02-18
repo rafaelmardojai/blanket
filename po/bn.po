@@ -1,0 +1,368 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the blanket package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: blanket\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-11 09:16-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:3
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
+#: blanket/mpris.py:155
+msgid "Blanket"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
+#: blanket/mpris.py:153
+msgid "Listen to different sounds"
+msgstr ""
+
+#. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
+#: data/com.rafaelmardojai.Blanket.desktop.in:10
+msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
+msgid "Listen to ambient sounds"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
+msgid ""
+"Improve focus and increase your productivity by listening to different "
+"ambient sounds"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
+msgid "Also can help you to fall asleep in a noisy environment."
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
+msgid "Features:"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
+msgid "Save presets"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
+msgid "Add custom sounds"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
+msgid "Auto start in background"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
+msgid "MPRIS integration"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
+msgid "Included Sounds in the App:"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
+#: blanket/define.py:58 blanket/define.py:69
+msgid "Birds"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:21 blanket/define.py:26
+#: blanket/define.py:54 blanket/define.py:73
+msgid "Boat"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:22 blanket/define.py:27
+#: blanket/define.py:55 blanket/define.py:74
+msgid "City"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:23 blanket/define.py:33
+#: blanket/define.py:61
+msgid "Coffee Shop"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:24 blanket/define.py:34
+#: blanket/define.py:53
+msgid "Fireplace"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/define.py:40
+#: blanket/define.py:62
+msgid "Pink Noise"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:26 blanket/define.py:13
+#: blanket/define.py:51 blanket/define.py:70
+msgid "Rain"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:27 blanket/define.py:19
+#: blanket/define.py:59
+msgid "Summer Night"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:28 blanket/define.py:14
+#: blanket/define.py:52 blanket/define.py:71
+msgid "Storm"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/define.py:17
+#: blanket/define.py:56
+msgid "Stream"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/define.py:25
+#: blanket/define.py:64
+msgid "Train"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:31 blanket/define.py:16
+#: blanket/define.py:60 blanket/define.py:72
+msgid "Waves"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:32 blanket/define.py:41
+#: blanket/define.py:57
+msgid "White Noise"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:33 blanket/define.py:15
+#: blanket/define.py:63 blanket/define.py:75
+msgid "Wind"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:40
+#: data/resources/about.blp:9
+msgid "Rafael Mardojai CM"
+msgstr ""
+
+#. Translators: Keep single quote please!
+#: data/com.rafaelmardojai.Blanket.gschema.xml:45
+msgctxt "visible-name"
+msgid "'Default'"
+msgstr ""
+
+#: data/resources/about.blp:8
+msgid "Copyright 2020-2022 Rafael Mardojai CM"
+msgstr ""
+
+#. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
+#: data/resources/about.blp:16
+msgctxt "Add your names here, do not remove previous names!"
+msgid "translator-credits"
+msgstr ""
+
+#: data/resources/preferences.blp:12
+msgid "Appearance"
+msgstr ""
+
+#: data/resources/preferences.blp:15
+msgid "Dark Mode"
+msgstr ""
+
+#: data/resources/preferences.blp:20
+msgid "Behavior"
+msgstr ""
+
+#: data/resources/preferences.blp:23
+msgid "Autostart in Background"
+msgstr ""
+
+#: data/resources/preferences.blp:27
+msgid "Always Start on Pause"
+msgstr ""
+
+#: data/resources/preset-dialog.blp:24
+msgid "Cancel"
+msgstr ""
+
+#: data/resources/preset-dialog.blp:32
+msgid "Save"
+msgstr ""
+
+#: data/resources/preset-dialog.blp:43
+msgid "Preset Name"
+msgstr ""
+
+#: data/resources/preset-row.blp:32
+msgid "Rename Preset"
+msgstr ""
+
+#: data/resources/preset-row.blp:43
+msgid "Delete Preset"
+msgstr ""
+
+#: data/resources/shortcuts.blp:8
+msgid "General"
+msgstr ""
+
+#: data/resources/shortcuts.blp:12 data/resources/window.blp:67
+msgid "Play/Pause Sounds"
+msgstr ""
+
+#: data/resources/shortcuts.blp:17
+msgid "Add Custom Sound"
+msgstr ""
+
+#: data/resources/shortcuts.blp:22
+msgid "Close Window"
+msgstr ""
+
+#: data/resources/shortcuts.blp:27 data/resources/window.blp:96
+msgid "Preferences"
+msgstr ""
+
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: data/resources/shortcuts.blp:37 data/resources/window.blp:113
+msgid "Quit"
+msgstr ""
+
+#: data/resources/window.blp:15
+msgid "Presets Menu"
+msgstr ""
+
+#: data/resources/window.blp:22
+msgid "Main Menu"
+msgstr ""
+
+#: data/resources/window.blp:58
+msgid "Volume Menu"
+msgstr ""
+
+#: data/resources/window.blp:75
+msgid "Sounds Menu"
+msgstr ""
+
+#: data/resources/window.blp:89
+msgid "Keep Playing when Closed"
+msgstr ""
+
+#: data/resources/window.blp:106
+msgid "About Blanket"
+msgstr ""
+
+#: data/resources/window.blp:128
+msgid "Reset Sounds"
+msgstr ""
+
+#: data/resources/window.blp:137
+msgid "Hide Inactive Sounds"
+msgstr ""
+
+#: data/resources/window.blp:142
+msgid "Save as New Preset…"
+msgstr ""
+
+#: data/resources/window.blp:148
+msgid "Add Sound…"
+msgstr ""
+
+#: data/resources/window.blp:203
+msgid "Paused to save power"
+msgstr ""
+
+#: data/resources/window.blp:205
+msgid "_Resume Playing"
+msgstr ""
+
+#: blanket/define.py:11
+msgid "Nature"
+msgstr ""
+
+#: blanket/define.py:23
+msgid "Travel"
+msgstr ""
+
+#: blanket/define.py:31
+msgid "Interiors"
+msgstr ""
+
+#: blanket/define.py:38
+msgid "Noise"
+msgstr ""
+
+#: blanket/define.py:48
+msgid "Sounds icons"
+msgstr ""
+
+#: blanket/define.py:48
+msgid "App icon"
+msgstr ""
+
+#: blanket/main.py:242
+msgid "Sounds by"
+msgstr ""
+
+#: blanket/main.py:243
+msgid "Sounds edited by"
+msgstr ""
+
+#: blanket/preferences.py:79
+msgid "Autostart Blanket in background."
+msgstr ""
+
+#: blanket/preferences.py:110 blanket/preferences.py:149
+msgid "Request error"
+msgstr ""
+
+#: blanket/preferences.py:114 blanket/preferences.py:153
+msgid "The autostart request failed."
+msgstr ""
+
+#: blanket/preferences.py:134
+msgid "Authorization failed"
+msgstr ""
+
+#: blanket/preferences.py:139
+msgid ""
+"Make sure Blanket has permission to run in \n"
+"the background in Settings → Applications → \n"
+"Blanket and try again."
+msgstr ""
+
+#: blanket/window.py:134
+msgid "Sound Automatically Removed"
+msgstr ""
+
+#: blanket/window.py:136
+#, python-brace-format
+msgid "The {name} sound is no longer accessible, so it has been removed"
+msgstr ""
+
+#: blanket/window.py:139
+msgid "Accept"
+msgstr ""
+
+#. type: ignore
+#: blanket/window.py:178
+msgid "Open audio"
+msgstr ""
+
+#. Add new sound item
+#: blanket/window.py:235
+msgid "Add…"
+msgstr ""
+
+#: blanket/widgets/preset_dialog.py:29
+msgid "New Preset"
+msgstr ""
+
+#: blanket/widgets/preset_dialog.py:33
+msgid "Edit Preset"
+msgstr ""
+
+#: blanket/widgets/sound_context_menu.py:24
+msgid "Remove"
+msgstr ""
