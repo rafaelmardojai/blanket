@@ -20,80 +20,80 @@ msgstr ""
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
 #: blanket/mpris.py:155
 msgid "Blanket"
-msgstr ""
+msgstr "ব্লাঙ্কেট"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
 #: blanket/mpris.py:153
 msgid "Listen to different sounds"
-msgstr ""
+msgstr "বিভিন্ন ধরনের শব্দ শুনুন"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr ""
+msgstr "মনোনিবেশ;ফোকাস;শব্দ;কার্যক্ষমতা;ঘুম;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
 msgid "Listen to ambient sounds"
-msgstr ""
+msgstr "পরিবেষ্টিত শব্দ শুনুন"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
-msgstr ""
+msgstr "বিভিন্ন ধরনের শব্দ শুনে আপনার মনোযোগ এবং কার্যক্ষমতা বাড়িয়ে তুলুন"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "এছাড়াও কোলাহলপূর্ণ পরিবেশে আপনাকে দ্রুত ঘুমিয়ে পড়তে সাহায্য করে।"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
-msgstr ""
+msgstr "বৈশিষ্ট্য:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr ""
+msgstr "প্রিসেট সেভ করুন"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
 msgid "Add custom sounds"
-msgstr ""
+msgstr "নিজের মতো শব্দ যোগ করুন"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
-msgstr ""
+msgstr "ব্যাকগ্রাউন্ডে অটো স্টার্ট করুন"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS সংযুক্তিকরণ"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
-msgstr ""
+msgstr "অন্তর্ভুক্ত শব্দগুলি:" 
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
 msgid "Birds"
-msgstr ""
+msgstr "পাখি"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:21 blanket/define.py:26
 #: blanket/define.py:54 blanket/define.py:73
 msgid "Boat"
-msgstr ""
+msgstr "নৌকা"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:22 blanket/define.py:27
 #: blanket/define.py:55 blanket/define.py:74
 msgid "City"
-msgstr ""
+msgstr "শহর"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:23 blanket/define.py:33
 #: blanket/define.py:61
 msgid "Coffee Shop"
-msgstr ""
+msgstr "কফির দোকান"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:24 blanket/define.py:34
 #: blanket/define.py:53
 msgid "Fireplace"
-msgstr ""
+msgstr "চুল্লি"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/define.py:40
 #: blanket/define.py:62
