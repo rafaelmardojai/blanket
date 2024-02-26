@@ -23,7 +23,7 @@ except ImportError or ValueError as exc:
 from blanket.define import AUTHORS, ARTISTS, RES_PATH, SOUND_ARTISTS, SOUND_EDITORS
 from blanket.main_player import MainPlayer
 from blanket.mpris import MPRIS
-from blanket.preferences import PreferencesWindow
+from blanket.preferences import PreferencesDialog
 from blanket.settings import Settings
 from blanket.widgets import PresetDialog
 from blanket.window import BlanketWindow
@@ -89,12 +89,12 @@ class Application(Adw.Application):
         action.connect('activate', self.on_quit)
         self.add_action(action)
 
-        # Show about window
+        # Show about dialog
         action = Gio.SimpleAction.new('about', None)
         action.connect('activate', self.on_about)
         self.add_action(action)
 
-        # Show preferences window
+        # Show preferences dialog
         action = Gio.SimpleAction.new('preferences', None)
         action.connect('activate', self.on_preferences)
         self.add_action(action)
@@ -223,14 +223,12 @@ class Application(Adw.Application):
             self.window.props.hide_on_close = value
 
     def on_preferences(self, _action, _param):
-        window = PreferencesWindow(self.window)
-        window.set_transient_for(self.window)
-        window.set_modal(True)
-        window.present()
+        prefs = PreferencesDialog(self.window)
+        prefs.present(self.window)
 
     def on_about(self, _action, _param):
         builder = Gtk.Builder.new_from_resource(f'{RES_PATH}/about.ui')
-        about: Adw.AboutWindow = builder.get_object('about')  # type: ignore
+        about: Adw.AboutDialog = builder.get_object('about')  # type: ignore
 
         artists = self.__get_credits_list(ARTISTS)
         sound_artists = self.__get_credits_list(SOUND_ARTISTS)
@@ -239,11 +237,11 @@ class Application(Adw.Application):
         about.set_version(self.version)
         about.set_developers(AUTHORS)
         about.set_designers(artists)
+        about.add_link(_('Source Code'), 'https://github.com/rafaelmardojai/blanket')
         about.add_credit_section(_('Sounds by'), sound_artists)
         about.add_credit_section(_('Sounds edited by'), sound_editors)
 
-        about.set_transient_for(self.window)
-        about.present()
+        about.present(self.window)
 
     def on_quit(self, _action, _param):
         self.quit()
