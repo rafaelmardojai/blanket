@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2024-02-26 22:38+0000\n"
-"Last-Translator: Pronay <pronaycoding@gmail.com>\n"
+"PO-Revision-Date: 2024-02-26 22:48+0000\n"
+"Last-Translator: Archisman Panigrahi <apandada1@gmail.com>\n"
 "Language-Team: Bengali <https://hosted.weblate.org/projects/blanket/blanket/"
 "bn/>\n"
 "Language: bn\n"
@@ -26,7 +26,7 @@ msgstr ""
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
 #: blanket/mpris.py:155
 msgid "Blanket"
-msgstr "কম্বল"
+msgstr "ব্ল্যাঙ্কেট"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
 #: blanket/mpris.py:153
@@ -36,11 +36,11 @@ msgstr "বিভিন্ন ধরনের শব্দ শুনুন"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "মনোনিবেশ;ফোকাস;শব্দ;কার্যক্ষমতা;ঘুম;"
+msgstr "মনোনিবেশ;মনোযোগ;শব্দ;কার্যক্ষমতা;ঘুম;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
 msgid "Listen to ambient sounds"
-msgstr "বিভিন্ন ধরনের শব্দ শুনুন"
+msgstr "বিভিন্ন পারিপার্শ্বিক শব্দ শুনুন"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
@@ -134,7 +134,7 @@ msgstr "রেলগাড়ি"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:31 blanket/define.py:16
 #: blanket/define.py:60 blanket/define.py:72
 msgid "Waves"
-msgstr "ঢেউ"
+msgstr "ঊর্মিমালা"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:32 blanket/define.py:41
 #: blanket/define.py:57
@@ -257,7 +257,7 @@ msgstr "বন্ধ করা হলেও শব্দ চালু থাক"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
-msgstr "ব্লাঙ্কেট সম্বন্ধে"
+msgstr "ব্ল্যাঙ্কেট সম্বন্ধে"
 
 #: data/resources/window.blp:128
 msgid "Reset Sounds"
@@ -317,7 +317,7 @@ msgstr "শব্দ সম্পাদনায়"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "ব্লাঙ্কেটকে ব্যাকগ্রাউন্ডে অটো স্টার্ট করুন।"
+msgstr "ব্ল্যাঙ্কেটকে ব্যাকগ্রাউন্ডে অটো স্টার্ট করুন।"
 
 #: blanket/preferences.py:110 blanket/preferences.py:149
 msgid "Request error"
@@ -337,7 +337,7 @@ msgid ""
 "the background in Settings → Applications → \n"
 "Blanket and try again."
 msgstr ""
-"ব্লাঙ্কেটের ব্যাকগ্রাউন্ডে চলার অনুমতি আছে কিনা \n"
+"ব্ল্যাঙ্কেটের ব্যাকগ্রাউন্ডে চলার অনুমতি আছে কিনা \n"
 "তা সেটিংস → অ্যাপ্লিকেশন থেকে নিশ্চিত করুন \n"
 "এবং পুনরায় চেষ্টা করুন।"
 
@@ -352,7 +352,7 @@ msgstr "{name} শব্দটি খুঁজে পাওয়া যাচ্�
 
 #: blanket/window.py:139
 msgid "Accept"
-msgstr "মেনে নিলাম"
+msgstr "আচ্ছা, বেশ"
 
 #. type: ignore
 #: blanket/window.py:178
