@@ -124,7 +124,7 @@ msgstr "ঝড়"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/define.py:17
 #: blanket/define.py:56
 msgid "Stream"
-msgstr "জলপ্রবাহ"
+msgstr "ছোট জলপ্রবাহ"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/define.py:25
 #: blanket/define.py:64
@@ -221,7 +221,7 @@ msgstr "নিজের মতো শব্দ যোগ করুন"
 
 #: data/resources/shortcuts.blp:22
 msgid "Close Window"
-msgstr "জানালা বন্ধ"
+msgstr "উইন্ডো বন্ধ"
 
 #: data/resources/shortcuts.blp:27 data/resources/window.blp:96
 msgid "Preferences"
