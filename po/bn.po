@@ -26,7 +26,7 @@ msgstr ""
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
 #: blanket/mpris.py:155
 msgid "Blanket"
-msgstr "ব্লাঙ্কেট"
+msgstr "ব্ল্যাঙ্কেট"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
 #: blanket/mpris.py:153
@@ -124,7 +124,7 @@ msgstr "ঝড়"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/define.py:17
 #: blanket/define.py:56
 msgid "Stream"
-msgstr "ছোট্ট জলস্রোত"
+msgstr "জলপ্রবাহ"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/define.py:25
 #: blanket/define.py:64
@@ -185,7 +185,7 @@ msgstr "ব্যাকগ্রাউন্ডে অটো স্টার্�
 
 #: data/resources/preferences.blp:27
 msgid "Always Start on Pause"
-msgstr "বিরত অবস্থায় শুরু করুন"
+msgstr "সর্বদা বিরত অবস্থায় শুরু করুন"
 
 #: data/resources/preset-dialog.blp:24
 msgid "Cancel"
@@ -209,7 +209,7 @@ msgstr "প্রিসেট ডিলিট"
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
-msgstr "সবরকম"
+msgstr "সাধারণ"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:67
 msgid "Play/Pause Sounds"
@@ -217,11 +217,11 @@ msgstr "শব্দ চালু/বিরতি"
 
 #: data/resources/shortcuts.blp:17
 msgid "Add Custom Sound"
-msgstr "নিজের মতো শব্দ যোগ"
+msgstr "নিজের মতো শব্দ যোগ করুন"
 
 #: data/resources/shortcuts.blp:22
 msgid "Close Window"
-msgstr "উইন্ডো বন্ধ"
+msgstr "জানালা বন্ধ"
 
 #: data/resources/shortcuts.blp:27 data/resources/window.blp:96
 msgid "Preferences"
@@ -241,7 +241,7 @@ msgstr "প্রিসেট মেনু"
 
 #: data/resources/window.blp:22
 msgid "Main Menu"
-msgstr "মূল বিভাগ"
+msgstr "মূল মেনু"
 
 #: data/resources/window.blp:58
 msgid "Volume Menu"
@@ -257,7 +257,7 @@ msgstr "বন্ধ করা হলেও শব্দ চালু থাক"
 
 #: data/resources/window.blp:106
 msgid "About Blanket"
-msgstr "ব্লাঙ্কেট সম্বন্ধে"
+msgstr "ব্ল্যাঙ্কেট সম্বন্ধে"
 
 #: data/resources/window.blp:128
 msgid "Reset Sounds"
@@ -265,7 +265,7 @@ msgstr "সমস্ত শব্দ পুনস্থাপন করুন"
 
 #: data/resources/window.blp:137
 msgid "Hide Inactive Sounds"
-msgstr "নিষ্ক্রিয় শব্দসমূহ"
+msgstr "নিষ্ক্রিয় শব্দসমূহ লুকান"
 
 #: data/resources/window.blp:142
 msgid "Save as New Preset…"
@@ -343,12 +343,12 @@ msgstr ""
 
 #: blanket/window.py:134
 msgid "Sound Automatically Removed"
-msgstr "শব্দটি মুছে দেওয়া হয়েছে"
+msgstr "শব্দটি স্বয়ংক্রিয়ভাবে সরানো হয়েছে"
 
 #: blanket/window.py:136
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr "{name} শব্দটি খুঁজে পাওয়া যাচ্ছে না, তাই দেখানো হল না"
+msgstr "{name} শব্দটি খুঁজে পাওয়া যাচ্ছে না, তাই সরানো হল"
 
 #: blanket/window.py:139
 msgid "Accept"
