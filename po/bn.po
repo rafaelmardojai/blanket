@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2024-02-26 22:48+0000\n"
+"PO-Revision-Date: 2024-02-26 22:49+0000\n"
 "Last-Translator: Archisman Panigrahi <apandada1@gmail.com>\n"
 "Language-Team: Bengali <https://hosted.weblate.org/projects/blanket/blanket/"
 "bn/>\n"
@@ -36,7 +36,7 @@ msgstr "বিভিন্ন ধরনের শব্দ শুনুন"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "মনোনিবেশ;মনোযোগ;শব্দ;কার্যক্ষমতা;ঘুম;"
+msgstr "মনোনিবেশ;একাগ্রতা;শব্দ;কার্যক্ষমতা;ঘুম;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
 msgid "Listen to ambient sounds"
