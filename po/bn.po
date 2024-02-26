@@ -11,22 +11,22 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2024-02-19 17:01+0000\n"
-"Last-Translator: Archisman Panigrahi <apandada1@gmail.com>\n"
-"Language-Team: Bengali (India) <https://hosted.weblate.org/projects/blanket/"
-"blanket/bn_IN/>\n"
-"Language: bn_IN\n"
+"PO-Revision-Date: 2024-02-26 22:38+0000\n"
+"Last-Translator: Pronay <pronaycoding@gmail.com>\n"
+"Language-Team: Bengali <https://hosted.weblate.org/projects/blanket/blanket/"
+"bn/>\n"
+"Language: bn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 5.5-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
 #: blanket/mpris.py:155
 msgid "Blanket"
-msgstr "ব্লাঙ্কেট"
+msgstr "কম্বল"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
 #: blanket/mpris.py:153
