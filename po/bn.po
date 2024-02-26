@@ -343,7 +343,7 @@ msgstr ""
 
 #: blanket/window.py:134
 msgid "Sound Automatically Removed"
-msgstr "শব্দটি স্বয়ংক্রিয়ভাবে সরানো মুছে দেওয়া হয়েছে"
+msgstr "শব্দটি স্বয়ংক্রিয়ভাবে মুছে দেওয়া হয়েছে"
 
 #: blanket/window.py:136
 #, python-brace-format
