@@ -6,21 +6,21 @@
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-02-16 03:00+0000\n"
-"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
-"Language-Team: Chinese (China) (https://app.transifex.com/rafaelmardojai/"
-"teams/135055/zh_CN/)\n"
+"PO-Revision-Date: 2024-03-19 03:02+0000\n"
+"Last-Translator: 复予 <clonewith@qq.com>\n"
+"Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
+"blanket/blanket/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -39,16 +39,14 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "专注;集中注意力;白噪音;效率;助眠;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "聆听不同的声音"
+msgstr "聆听环境声音"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
-msgstr "通过白噪音使您集中注意力并提高生产力，"
+msgstr "通过白噪音使您集中注意力并提高生产力"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
@@ -75,9 +73,8 @@ msgid "MPRIS integration"
 msgstr "MPRIS集成"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
-#, fuzzy
 msgid "Included Sounds in the App:"
-msgstr "包含以下音频："
+msgstr "应用包含以下声音："
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -161,9 +158,8 @@ msgid "'Default'"
 msgstr "'默认'"
 
 #: data/resources/about.blp:8
-#, fuzzy
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Copyright 2020-2021 Rafael Mardojai CM"
+msgstr "版权所有 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:16
@@ -184,13 +180,12 @@ msgid "Behavior"
 msgstr "行为"
 
 #: data/resources/preferences.blp:23
-#, fuzzy
 msgid "Autostart in Background"
 msgstr "系统启动后自动在后台运行"
 
 #: data/resources/preferences.blp:27
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "启动时总处于暂停"
 
 #: data/resources/preset-dialog.blp:24
 msgid "Cancel"
@@ -217,17 +212,14 @@ msgid "General"
 msgstr "全局快捷键"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:67
-#, fuzzy
 msgid "Play/Pause Sounds"
-msgstr "播放/暂停"
+msgstr "播放/暂停声音"
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
-msgstr "添加自定义音频"
+msgstr "添加自定义声音"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
 msgstr "关闭窗口"
 
@@ -244,25 +236,22 @@ msgid "Quit"
 msgstr "退出"
 
 #: data/resources/window.blp:15
-#, fuzzy
 msgid "Presets Menu"
-msgstr "预设"
+msgstr "预设菜单"
 
 #: data/resources/window.blp:22
 msgid "Main Menu"
-msgstr ""
+msgstr "主菜单"
 
 #: data/resources/window.blp:58
 msgid "Volume Menu"
-msgstr ""
+msgstr "音量菜单"
 
 #: data/resources/window.blp:75
-#, fuzzy
 msgid "Sounds Menu"
-msgstr "音频提供者"
+msgstr "声音菜单"
 
 #: data/resources/window.blp:89
-#, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "关闭窗口后继续播放"
 
@@ -272,30 +261,27 @@ msgstr "关于Blanket"
 
 #: data/resources/window.blp:128
 msgid "Reset Sounds"
-msgstr ""
+msgstr "重置声音"
 
 #: data/resources/window.blp:137
-#, fuzzy
 msgid "Hide Inactive Sounds"
-msgstr "包含以下音频："
+msgstr "隐藏不活跃声音"
 
 #: data/resources/window.blp:142
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "保存预设"
+msgstr "另存为新预设…"
 
 #: data/resources/window.blp:148
-#, fuzzy
 msgid "Add Sound…"
-msgstr "添加自定义音频"
+msgstr "添加声音…"
 
 #: data/resources/window.blp:203
 msgid "Paused to save power"
-msgstr ""
+msgstr "已暂停以省电"
 
 #: data/resources/window.blp:205
 msgid "_Resume Playing"
-msgstr ""
+msgstr "继续播放 (_R)"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -357,16 +343,16 @@ msgstr ""
 
 #: blanket/window.py:134
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "已自动移除声音"
 
 #: blanket/window.py:136
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "声音 {name} 无法再被访问，因此已将其移除"
 
 #: blanket/window.py:139
 msgid "Accept"
-msgstr ""
+msgstr "接受"
 
 #. type: ignore
 #: blanket/window.py:178
@@ -376,12 +362,11 @@ msgstr "打开音频"
 #. Add new sound item
 #: blanket/window.py:235
 msgid "Add…"
-msgstr ""
+msgstr "添加…"
 
 #: blanket/widgets/preset_dialog.py:29
-#, fuzzy
 msgid "New Preset"
-msgstr "预设"
+msgstr "新预设"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
@@ -389,7 +374,7 @@ msgstr "编辑"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 #, fuzzy
 #~ msgid "Keyboard Shortcus"
