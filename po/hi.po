@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2024-03-28 17:02+0000\n"
+"PO-Revision-Date: 2024-04-04 18:01+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/blanket/blanket/hi/"
 ">\n"
@@ -188,7 +188,7 @@ msgstr "हमेशा विराम पर प्रारंभ करे�
 
 #: data/resources/preset-dialog.blp:24
 msgid "Cancel"
-msgstr "रद्द करें"
+msgstr "रद्द"
 
 #: data/resources/preset-dialog.blp:32
 msgid "Save"
@@ -316,7 +316,7 @@ msgstr "ध्वनि इनके द्वारा संपादित"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "पृष्ठभूमि में ऑटोस्टार्ट Blanket।"
+msgstr "Blanket को पृष्ठभूमि में स्वतः प्रारंभ करें।"
 
 #: blanket/preferences.py:110 blanket/preferences.py:149
 msgid "Request error"
@@ -337,7 +337,7 @@ msgid ""
 "Blanket and try again."
 msgstr ""
 "सुनिश्चित करें कि Blanket को पृष्ठभूमि में चलने की\n"
-"अनुमति है. सेटिंग्स → एप्लिकेशन → \n"
+"अनुमति है। सेटिंग्स → एप्लिकेशन → \n"
 "Blanket और पुनः प्रयास करें।"
 
 #: blanket/window.py:134
