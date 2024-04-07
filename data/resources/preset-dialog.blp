@@ -1,12 +1,9 @@
 using Gtk 4.0;
 using Adw 1;
 
-template $PresetDialog : Adw.Window {
-  default-width: 400;
+template $PresetDialog : Adw.Dialog {
   width-request: 360;
   height-request: 220;
-  modal: true;
-  destroy-with-parent: true;
   focus-widget: name_entry;
 
   Adw.ToolbarView {

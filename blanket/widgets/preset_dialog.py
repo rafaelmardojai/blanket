@@ -10,7 +10,7 @@ from blanket.settings import Settings
 
 
 @Gtk.Template(resource_path=f'{RES_PATH}/preset-dialog.ui')
-class PresetDialog(Adw.Window):
+class PresetDialog(Adw.Dialog):
     __gtype_name__ = 'PresetDialog'
 
     headerbar: Adw.HeaderBar = Gtk.Template.Child()  # type: ignore
@@ -71,7 +71,7 @@ class PresetDialog(Adw.Window):
         # Clear name entry
         self.name_entry.set_text('')
 
-        self.destroy()
+        self.close()
 
     def _on_rename_preset(self, _button):
         if self.preset:
@@ -82,7 +82,7 @@ class PresetDialog(Adw.Window):
                 self.__invalid_name()
                 return
 
-        self.destroy()
+        self.close()
 
     def __get_name(self):
         name = self.name_entry.get_text()

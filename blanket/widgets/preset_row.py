@@ -56,8 +56,7 @@ class PresetRow(Gtk.ListBoxRow):
             window = app.get_active_window()  # type: ignore
             if window:
                 dialog = PresetDialog(self.preset)
-                dialog.set_transient_for(window)
-                dialog.present()
+                dialog.present(window)
 
     def _on_delete_preset(self, _button):
         app = Gio.Application.get_default()
