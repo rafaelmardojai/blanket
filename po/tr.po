@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-03-21 21:02+0000\n"
+"PO-Revision-Date: 2024-04-09 20:01+0000\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/blanket/blanket/"
 "tr/>\n"
@@ -150,11 +150,11 @@ msgstr "Rüzgar"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "Öntanımlı ekran, açık tema ile"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "Öntanımlı ekran, koyu tema ile"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -317,7 +317,7 @@ msgstr "Uygulama simgesi"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "Kaynak Kodu"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -342,21 +342,19 @@ msgstr "Kendiliğinden başlatma isteği başarısız oldu."
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "Tamam"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "Yetkilendirme başarısız oldu"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Battaniye’nin arka planda çalışma iznine sahip \n"
-"olduğunu Ayarlar → Uygulamalar → Battaniye \n"
-"yoluyla denetleyip tekrar deneyin."
+"Battaniye’nin arka planda çalışma iznine sahip olduğunu Ayarlar → "
+"Uygulamalar → Battaniye yoluyla denetleyip tekrar deneyin."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
