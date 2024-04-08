@@ -1,3 +1,9 @@
+blanket (0.7.0) jammy; urgency=medium
+
+  * New version
+
+ -- Rafael Mardojai CM <email@rafaelmardojai.com> Thu, 14 Apr 2021 12:04:42 +0530
+
 blanket (0.6.0) jammy; urgency=medium
 
   * New version - GTK4

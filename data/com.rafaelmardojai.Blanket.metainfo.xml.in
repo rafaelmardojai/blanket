@@ -69,6 +69,20 @@
   </branding>
 
   <releases>
+    <release version="0.7.0" date="2024-04-07">
+      <description translate="no">
+        <ul>
+          <li>Redesign the user interface and use latest GNOME patterns</li>
+          <li>Inhibit suspension when playing</li>
+          <li>Pause playback if the system enters power saver mode</li>
+          <li>MPRIS: Implement Play, Pause and Stop methods in addition to PlayPause</li>
+          <li>MPRIS: Implement Next and Prev methods for navigating presets </li>
+          <li>Updated Pink Noise sample</li>
+          <li>Changed train sound</li>
+          <li>Added preference to always start on pause</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.6.0" date="2022-04-13">
       <description translate="no">
         <ul>
