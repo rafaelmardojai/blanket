@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-04-04 18:01+0000\n"
+"PO-Revision-Date: 2024-04-08 16:55+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/blanket/blanket/hi/"
 ">\n"
@@ -145,11 +145,11 @@ msgstr "वायु"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "हल्की थीम में डिफ़ॉल्ट स्क्रीन"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "गहरी थीम में डिफ़ॉल्ट स्क्रीन"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -309,7 +309,7 @@ msgstr "ऐप आइकन"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "सोर्स कोड"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -334,21 +334,19 @@ msgstr "स्वतः प्रारंभ अनुरोध विफल �
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "ठीक है"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "अधिकृतीकरण विफल"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"सुनिश्चित करें कि Blanket को पृष्ठभूमि में चलने की\n"
-"अनुमति है। सेटिंग्स → एप्लिकेशन → \n"
-"Blanket और पुनः प्रयास करें।"
+"सुनिश्चित करें कि Blanket को पृष्ठभूमि में चलने की अनुमति है। सेटिंग्स → "
+"एप्लिकेशन → Blanket और पुनः प्रयास करें।"
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
