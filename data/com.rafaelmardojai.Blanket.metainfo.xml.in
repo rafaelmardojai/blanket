@@ -63,6 +63,11 @@
     </screenshot>
   </screenshots>
 
+  <branding>
+    <color type="primary" scheme_preference="light">#c0dcff</color>
+    <color type="primary" scheme_preference="dark">#0d3d76</color>
+  </branding>
+
   <releases>
     <release version="0.6.0" date="2022-04-13">
       <description translate="no">
