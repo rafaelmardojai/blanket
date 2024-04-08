@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-03-15 22:01+0000\n"
-"Last-Translator: Unknowwed <unknowwed202@gmail.com>\n"
+"PO-Revision-Date: 2024-04-08 16:55+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/blanket/blanket/"
 "fi/>\n"
 "Language: fi\n"
@@ -37,21 +37,21 @@ msgstr "Kuuntele eri ääniä"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Keskity;Huomion kohdistus;Melu;Uni;"
+msgstr ""
+"Concentrate;Focus;Noise;Productivity;Sleep;Keskity;Huomion "
+"kohdistus;Melu;Uni;Tuottavuus;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "Kuuntele eri ääniä"
+msgstr "Kuuntele ympäröiviä ääniä"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
-"Paranna keskittymistasoasi ja korota tuottavuuttasi kuuntelemalla erilaisia "
-"ääniä "
+"Paranna keskittymistasoasi ja korota tuottavuuttasi kuuntelemalla ympäristön "
+"ääniä"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
@@ -63,11 +63,11 @@ msgstr "Ominaisuudet:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr "Tallenna vakiot"
+msgstr "Tallenna esiasetukset"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
 msgid "Add custom sounds"
-msgstr "Lisää omat äänet"
+msgstr "Lisää omia ääniä"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
@@ -75,10 +75,9 @@ msgstr "Käynnistä automaattisesti taustalla"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr "MPRIS-sulautus"
+msgstr "MPRIS-integraatio"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
-#, fuzzy
 msgid "Included Sounds in the App:"
 msgstr "Sisällytetyt äänet:"
 
@@ -154,11 +153,11 @@ msgstr "Tuuli"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "Oletusnäkymä vaalealla teemalla"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "Oletusnäkymä tummalla teemalla"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -167,15 +166,16 @@ msgid "'Default'"
 msgstr "'Vakio'"
 
 #: data/resources/about.blp:7
-#, fuzzy
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Tekijänoikeus 2020-2021 Rafael Mardojai CM"
+msgstr "Tekijänoikeus 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "Heidi Wenger <heidi.wenger@protonmail.com>"
+msgstr ""
+"Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
+"Heidi Wenger <heidi.wenger@protonmail.com>"
 
 #: data/resources/preferences.blp:7
 msgid "Appearance"
@@ -190,13 +190,12 @@ msgid "Behavior"
 msgstr "Toiminta"
 
 #: data/resources/preferences.blp:18
-#, fuzzy
 msgid "Autostart in Background"
 msgstr "Käynnistä taustalla automaattisesti"
 
 #: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "Käynnistä aina keskeytettynä"
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
@@ -208,32 +207,29 @@ msgstr "Tallenna"
 
 #: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
-msgstr "Vakion nimi"
+msgstr "Esiasetuksen nimi"
 
 #: data/resources/preset-row.blp:32
 msgid "Rename Preset"
-msgstr "Vakioäänen uudelleennimeäminen"
+msgstr "Nimeä esiasetus uudelleen"
 
 #: data/resources/preset-row.blp:43
 msgid "Delete Preset"
-msgstr "Poista vakio"
+msgstr "Poista esiasetus"
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
 msgstr "Yleiset"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
-#, fuzzy
 msgid "Play/Pause Sounds"
-msgstr "Toista/tauota äänet"
+msgstr "Toista/keskeytä äänet"
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
-msgstr "Lisää oma ääni..."
+msgstr "Lisää mukautettu ääni"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
 msgstr "Sulje ikkuna"
 
@@ -250,53 +246,48 @@ msgid "Quit"
 msgstr "Lopeta"
 
 #: data/resources/window.blp:24
-#, fuzzy
 msgid "Presets Menu"
-msgstr "Vakiot"
+msgstr "Esiasetusten valikko"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
-msgstr ""
+msgstr "Päävalikko"
 
 #: data/resources/window.blp:67
-#, fuzzy
 msgid "Volume Menu"
-msgstr "Ääni valikko"
+msgstr "Äänenvoimakkuuden valikko"
 
 #: data/resources/window.blp:84
-#, fuzzy
 msgid "Sounds Menu"
-msgstr "Äänet toimitti"
+msgstr "Äänivalikko"
 
 #: data/resources/window.blp:98
-#, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "Jatka toistoa sulkemisen jälkeen"
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
-msgstr "Tietoja Blanket-ohjelmasta"
+msgstr "Tietoja - Blanket"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr ""
+msgstr "Nollaa äänet"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
-msgstr "Piilota epäaktiiviset äänet"
+msgstr "Piilota passiiviset äänet"
 
 #: data/resources/window.blp:151
 msgid "Save as New Preset…"
-msgstr "Tallenna uutena vakiona…"
+msgstr "Tallenna uutena esiasetuksena…"
 
 #: data/resources/window.blp:157
-#, fuzzy
 msgid "Add Sound…"
-msgstr "Lisää oma ääni…"
+msgstr "Lisää ääni…"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
-msgstr "Pysäytetty säästääkseen virtaa"
+msgstr "Keskeytetty virransäästön vuoksi"
 
 #: data/resources/window.blp:214
 msgid "_Resume Playing"
@@ -328,7 +319,7 @@ msgstr "Sovelluskuvake"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "Lähdekoodi"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -340,7 +331,7 @@ msgstr "Äänet muokkasi"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "Käynnistä Blanket järjestelmän taustalla automaattisesti"
+msgstr "Käynnistä Blanket taustalla automaattisesti."
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
@@ -353,21 +344,19 @@ msgstr "Pyyntö automaattikäynnistykselle epäonnistui."
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "OK"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
-msgstr "Valtuutus epäonnistui"
+msgstr "Valtuuttaminen epäonnistui"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Varmista että Blanketilla on tarvittavat luvat ajettavaksi \n"
-"taustalla → Ohjelmat → \n"
-"Blanket ja koeta uudelleen."
+"Varmista, että Blanketilla on tarvittavat luvat ajettavaksi taustalla "
+"Asetukset → Sovellukset → Blanket ja yritä uudelleen."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
@@ -376,11 +365,11 @@ msgstr "Ääni automaattisesti poistettu"
 #: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "Ääni {name} ei ole enää käytettävissä, joten se on poistettu"
 
 #: blanket/window.py:138
 msgid "Accept"
-msgstr ""
+msgstr "Hyväksy"
 
 #. type: ignore
 #: blanket/window.py:179
@@ -390,20 +379,19 @@ msgstr "Avaa ääntä"
 #. Add new sound item
 #: blanket/window.py:246
 msgid "Add…"
-msgstr ""
+msgstr "Lisää…"
 
 #: blanket/widgets/preset_dialog.py:29
-#, fuzzy
 msgid "New Preset"
-msgstr "Vakiot"
+msgstr "Uusi esiasetus"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
-msgstr "Muokkaa vakiota"
+msgstr "Muokkaa esiasetusta"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
+msgstr "Poista"
 
 #~ msgid "Rafael Mardojai CM"
 #~ msgstr "Rafael Mardojai CM"
