@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-04-04 18:01+0000\n"
+"PO-Revision-Date: 2024-04-09 20:01+0000\n"
 "Last-Translator: twlvnn <kraft_werk@tutanota.com>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/blanket/"
 "blanket/bg/>\n"
@@ -149,11 +149,11 @@ msgstr "Вятър"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "Стандартния екран в светлата тема"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "Стандартния екран в тъмната тема"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -313,7 +313,7 @@ msgstr "Икона на приложението"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "Изходен код"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -338,22 +338,19 @@ msgstr "Заявката за автоматично стартиране е н�
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "Добре"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "Упълномощаването е неуспешно"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Уверете се, че \"Одеяло\" има разрешение да\n"
-"работи във фонов режим в\n"
-"Настройки → Приложения → Одеяло и\n"
-"опитайте отново."
+"Уверете се, че \"Одеяло\" има разрешение да работи във фонов режим в "
+"Настройки → Приложения → Одеяло и опитайте отново."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
