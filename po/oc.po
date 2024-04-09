@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2023-10-01 17:12+0000\n"
+"PO-Revision-Date: 2024-04-09 20:01+0000\n"
 "Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
 "Language-Team: Occitan <https://hosted.weblate.org/projects/blanket/blanket/"
 "oc/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -150,11 +150,11 @@ msgstr "Vent"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "L'ecran per defaut amb lo tèma clar"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "L'ecran per defaut amb lo tèma escur"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -314,7 +314,7 @@ msgstr "Icòna d'aplicacion"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "Còdi font"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -339,21 +339,19 @@ msgstr "La requèsta d'aviada automatica a fracassat."
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "D'acòrdi"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "Fracàs de l'autorizacion"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Asseguratz-vos que Blancket a la permission de s'executar en\n"
-"rèireplan dins Paramètres → Aplicacions → \n"
-"Blanket e tornatz ensajar."
+"Asseguratz-vos que Blancket a la permission de s'executar en rèireplan dins "
+"Paramètres → Aplicacions → Blanket e tornatz ensajar."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
