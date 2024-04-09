@@ -72,3 +72,8 @@ For detailed information about sounds licensing, [check this file](https://githu
 
 ## Donate
 If you want to support my work, you can donate me, [here you can find how](https://rafaelmardojai.com/donate/).
+
+## Related Projects
+- [feeltheblow](https://feeltheblow.web.app/) - Web App inspired by Blanket
+- [Soothing Noise Player](https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/) - Android app inspired by Blanket
+- [Blanket Web](https://apps.roanapur.de/blanket/) - Web clone of Blanket
