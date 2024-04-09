@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-04-08 16:55+0000\n"
-"Last-Translator: Nicolás Ron <ronnicolas01@gmail.com>\n"
+"PO-Revision-Date: 2024-04-10 01:59+0000\n"
+"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/blanket/blanket/"
 "es/>\n"
 "Language: es\n"
@@ -152,11 +152,11 @@ msgstr "Viento"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "La pantalla predeterminada en tema claro"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "La pantalla predeterminada en tema oscuro"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
