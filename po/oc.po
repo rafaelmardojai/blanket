@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-04-09 20:01+0000\n"
+"PO-Revision-Date: 2024-04-10 14:41+0000\n"
 "Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
 "Language-Team: Occitan <https://hosted.weblate.org/projects/blanket/blanket/"
 "oc/>\n"
@@ -86,7 +86,7 @@ msgstr "Ausèls"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:21 blanket/define.py:26
 #: blanket/define.py:54 blanket/define.py:73
 msgid "Boat"
-msgstr "Batèu"
+msgstr "Batèl"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:22 blanket/define.py:27
 #: blanket/define.py:55 blanket/define.py:74
@@ -96,7 +96,7 @@ msgstr "Vila"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:23 blanket/define.py:33
 #: blanket/define.py:61
 msgid "Coffee Shop"
-msgstr "Bar"
+msgstr "Cafè"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:24 blanket/define.py:34
 #: blanket/define.py:53
@@ -126,7 +126,7 @@ msgstr "Tempèsta"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/define.py:17
 #: blanket/define.py:56
 msgid "Stream"
-msgstr "Aiga corrent"
+msgstr "Riu"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/define.py:25
 #: blanket/define.py:64
@@ -222,7 +222,7 @@ msgstr "Lectura/Pausa dels sons"
 
 #: data/resources/shortcuts.blp:17
 msgid "Add Custom Sound"
-msgstr "Apondre sons personalizats"
+msgstr "Apondre un son personalizat"
 
 #: data/resources/shortcuts.blp:22
 msgid "Close Window"
@@ -254,7 +254,7 @@ msgstr "Menú volum"
 
 #: data/resources/window.blp:84
 msgid "Sounds Menu"
-msgstr "Menú de son"
+msgstr "Menú dels sons"
 
 #: data/resources/window.blp:98
 msgid "Keep Playing when Closed"
