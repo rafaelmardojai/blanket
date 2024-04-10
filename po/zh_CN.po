@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-03-19 03:02+0000\n"
+"PO-Revision-Date: 2024-04-10 02:14+0000\n"
 "Last-Translator: 复予 <clonewith@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "blanket/blanket/zh_Hans/>\n"
@@ -148,11 +148,11 @@ msgstr "大风"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "浅色主题的默认界面"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "深色主题的默认界面"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -312,7 +312,7 @@ msgstr "程序图标"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "源代码"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -337,21 +337,18 @@ msgstr "开机自动运行请求失败"
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "好的"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "验证失败"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
-msgstr ""
-"请确保Blanket有权限在\n"
-"后台运行，并重试\n"
-"打开 设置 → 应用程序 → Blanket 进行设置"
+msgstr "请确保 Blanket 有权限在后台运行，打开 设置 → 应用程序 → Blanket "
+"进行设置后重试。"
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
