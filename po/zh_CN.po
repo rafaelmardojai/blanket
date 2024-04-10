@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-04-10 02:14+0000\n"
+"PO-Revision-Date: 2024-04-10 02:18+0000\n"
 "Last-Translator: 复予 <clonewith@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "blanket/blanket/zh_Hans/>\n"
@@ -324,7 +324,7 @@ msgstr "音频剪辑者"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "系统启动后自动在后台运行"
+msgstr "系统启动后自动在后台运行 Blanket。"
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
@@ -332,7 +332,7 @@ msgstr "请求发生错误"
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
-msgstr "开机自动运行请求失败"
+msgstr "自启动运行请求失败。"
 
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
