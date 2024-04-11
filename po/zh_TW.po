@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the blanket package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2022-MO-DA HO:MI+ZONE\n"
-"Last-Translator: farmer87 <richard.chu.kh@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2024-04-12 16:27+0000\n"
+"Last-Translator: happylittle7 <Lance20501@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"blanket/blanket/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -50,9 +52,8 @@ msgid "Also can help you to fall asleep in a noisy environment."
 msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "自然"
+msgstr "功能："
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 #, fuzzy
@@ -75,7 +76,7 @@ msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
-msgstr ""
+msgstr "這個應用程式包含以下聲音："
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -149,11 +150,11 @@ msgstr "風吹"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "淺色主題的預設界面"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "深色主題的預設界面"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -251,11 +252,11 @@ msgstr "預設名稱"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
-msgstr ""
+msgstr "主選單"
 
 #: data/resources/window.blp:67
 msgid "Volume Menu"
-msgstr ""
+msgstr "音量選單"
 
 #: data/resources/window.blp:84
 #, fuzzy
@@ -273,21 +274,19 @@ msgstr "關於 Blanket"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr ""
+msgstr "重置聲音"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
 msgstr ""
 
 #: data/resources/window.blp:151
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "已存預設"
+msgstr "另存為新的預設…"
 
 #: data/resources/window.blp:157
-#, fuzzy
 msgid "Add Sound…"
-msgstr "新增自訂聲音"
+msgstr "新增聲音…"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
@@ -323,7 +322,7 @@ msgstr "程式圖示"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "原始碼"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -335,7 +334,7 @@ msgstr "聲音剪輯"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "在背景自動執行 Blanket"
+msgstr "啟動後自動在背景執行 Blanket。"
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
@@ -366,7 +365,7 @@ msgstr ""
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "已自動移除聲音"
 
 #: blanket/window.py:135
 #, python-brace-format
