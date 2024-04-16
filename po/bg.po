@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-04-09 20:01+0000\n"
+"PO-Revision-Date: 2024-04-16 21:27+0000\n"
 "Last-Translator: twlvnn <kraft_werk@tutanota.com>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/blanket/"
 "blanket/bg/>\n"
@@ -261,7 +261,7 @@ msgstr "Продължаване на възпроизвеждането при 
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
-msgstr "Относно \"Одеяло\""
+msgstr "Относно „Одеяло“"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
@@ -325,7 +325,7 @@ msgstr "Звуци, редактирани от"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "Автоматично стартиране на \"Одеяло\" във фонов режим."
+msgstr "Автоматично стартиране на „Одеяло“ във фонов режим."
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
@@ -349,8 +349,8 @@ msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Уверете се, че \"Одеяло\" има разрешение да работи във фонов режим в "
-"Настройки → Приложения → Одеяло и опитайте отново."
+"Уверете се, че „Одеяло“ има разрешение да работи във фонов режим в Настройки "
+"→ Приложения → Одеяло и опитайте отново."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
