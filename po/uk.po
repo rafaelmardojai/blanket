@@ -6,24 +6,24 @@
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2023-02-16 03:00+0000\n"
-"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
-"Language-Team: Ukrainian (https://app.transifex.com/rafaelmardojai/"
-"teams/135055/uk/)\n"
+"PO-Revision-Date: 2024-04-19 15:51+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/blanket/"
+"blanket/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
-"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
-"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
-"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 "
+"? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
+"14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
+"100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -44,16 +44,16 @@ msgstr ""
 "Productivity;Sleep;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "Слухайте різні звуки"
+msgstr "Слухайте звуки довкілля"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
-msgstr "Зосередьтеся та підвищіть продуктивність слухаючи різні звуки"
+msgstr ""
+"Поліпшуйте зосередженість і підвищуйте свою продуктивність, слухаючи різні "
+"звуки довкілля"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
@@ -80,9 +80,8 @@ msgid "MPRIS integration"
 msgstr "Інтеграція MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
-#, fuzzy
 msgid "Included Sounds in the App:"
-msgstr "Включені звуки:"
+msgstr "Звуки, наявні в застосунку:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -156,11 +155,11 @@ msgstr "Вітер"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "Екран типово у світлій темі"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "Екран типово у темній темі"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -169,9 +168,8 @@ msgid "'Default'"
 msgstr "'Типово'"
 
 #: data/resources/about.blp:7
-#, fuzzy
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Усі права застережено 2020-2021 Rafael Mardojai CM"
+msgstr "Авторські права 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:15
@@ -192,13 +190,12 @@ msgid "Behavior"
 msgstr "Поведінка"
 
 #: data/resources/preferences.blp:18
-#, fuzzy
 msgid "Autostart in Background"
 msgstr "Автозапуск у фоні"
 
 #: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "Завжди запускати на паузі"
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
@@ -225,17 +222,14 @@ msgid "General"
 msgstr "Зальні"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
-#, fuzzy
 msgid "Play/Pause Sounds"
-msgstr "Відтворити/Зупинити"
+msgstr "Відтворити/Зупинити звуки"
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
-msgstr "Додати власні звуки…"
+msgstr "Додати власний звук"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
 msgstr "Закрити вікно"
 
@@ -252,25 +246,22 @@ msgid "Quit"
 msgstr "Вийти"
 
 #: data/resources/window.blp:24
-#, fuzzy
 msgid "Presets Menu"
-msgstr "Поєднання"
+msgstr "Меню поєднань"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
-msgstr ""
+msgstr "Головне меню"
 
 #: data/resources/window.blp:67
 msgid "Volume Menu"
-msgstr ""
+msgstr "Меню гучності"
 
 #: data/resources/window.blp:84
-#, fuzzy
 msgid "Sounds Menu"
-msgstr "Звуки від"
+msgstr "Меню звуків"
 
 #: data/resources/window.blp:98
-#, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "Продовжувати відтворення після закриття"
 
@@ -280,30 +271,27 @@ msgstr "Про Blanket"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr ""
+msgstr "Скинути звуки"
 
 #: data/resources/window.blp:146
-#, fuzzy
 msgid "Hide Inactive Sounds"
-msgstr "Включені звуки:"
+msgstr "Сховати неактивні звуки"
 
 #: data/resources/window.blp:151
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "Зберегти поєднання"
+msgstr "Зберегти як нове поєднання…"
 
 #: data/resources/window.blp:157
-#, fuzzy
 msgid "Add Sound…"
-msgstr "Додати власні звуки…"
+msgstr "Додати звук…"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
-msgstr ""
+msgstr "Призупинено для енергозаощадження"
 
 #: data/resources/window.blp:214
 msgid "_Resume Playing"
-msgstr ""
+msgstr "_Відновити відтворення"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -331,7 +319,7 @@ msgstr "Піктограма програми"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "Початковий код"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -356,34 +344,32 @@ msgstr "Не вдалося надіслати запит на автозапу�
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "Гаразд"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "Не вдалося авторизуватись"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Переконайтеся, що Blanket має дозвіл на \n"
-"роботу у фоні в Налаштування → Застосунки → \n"
-"Blanket та повторіть спробу."
+"Переконайтеся, що Blanket має дозвіл на роботу у фоні в Налаштування → "
+"Застосунки → Blanket та повторіть спробу."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "Звук автоматично вилучено"
 
 #: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "Звук {name} більше не доступний, оскільки він вилучений"
 
 #: blanket/window.py:138
 msgid "Accept"
-msgstr ""
+msgstr "Погодитися"
 
 #. type: ignore
 #: blanket/window.py:179
@@ -393,12 +379,11 @@ msgstr "Відкрити звуки"
 #. Add new sound item
 #: blanket/window.py:246
 msgid "Add…"
-msgstr ""
+msgstr "Додати…"
 
 #: blanket/widgets/preset_dialog.py:29
-#, fuzzy
 msgid "New Preset"
-msgstr "Поєднання"
+msgstr "Нове поєднання"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
@@ -406,7 +391,7 @@ msgstr "Редагувати поєднання"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
+msgstr "Вилучити"
 
 #~ msgid "Rafael Mardojai CM"
 #~ msgstr "Rafael Mardojai CM"
