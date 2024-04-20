@@ -6,21 +6,21 @@
 # Translators:
 # Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2023-02-16 03:00+0000\n"
-"Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
-"Language-Team: Basque (https://app.transifex.com/rafaelmardojai/teams/135055/"
-"eu/)\n"
+"PO-Revision-Date: 2024-04-21 19:07+0000\n"
+"Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
+"Language-Team: Basque <https://hosted.weblate.org/projects/blanket/blanket/"
+"eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -39,9 +39,8 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Kontzentratu;Arreta;Zarata;Soinua;Produktibitatea;Lo;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "Entzun hainbat soinu"
+msgstr "Entzun inguruneko soinuak"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 #, fuzzy
