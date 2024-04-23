@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-04-22 20:07+0000\n"
+"PO-Revision-Date: 2024-04-24 08:07+0000\n"
 "Last-Translator: Stanisław Styszyński <pashimito@gazeta.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/blanket/blanket/"
 "pl/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.5.1-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -214,17 +214,14 @@ msgid "General"
 msgstr "Ogólne"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
-#, fuzzy
 msgid "Play/Pause Sounds"
 msgstr "Odtwórz/Zatrzymaj dźwięki"
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
 msgstr "Dodaj własny dźwięk"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
 msgstr "Zamknij okno"
 
@@ -259,7 +256,6 @@ msgid "Sounds Menu"
 msgstr "Dźwięki stworzone przez"
 
 #: data/resources/window.blp:98
-#, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "Graj Dalej Po Zamknięciu"
 
@@ -269,7 +265,7 @@ msgstr "O Blanket"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr ""
+msgstr "Zresetuj dźwięki"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
@@ -281,9 +277,8 @@ msgid "Save as New Preset…"
 msgstr "Zapisane Profile"
 
 #: data/resources/window.blp:157
-#, fuzzy
 msgid "Add Sound…"
-msgstr "Dodaj własny dźwięk"
+msgstr "Dodaj dźwięk"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
