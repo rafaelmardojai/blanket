@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-04-13 18:01+0000\n"
-"Last-Translator: Lionel Martin <lioweblate@lionelmartin.eu>\n"
+"PO-Revision-Date: 2024-05-05 09:15+0000\n"
+"Last-Translator: m3957 <m.grlic@outlook.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/blanket/blanket/"
 "fr/>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
 "1000000 == 0 ? 1 : 2;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -40,7 +40,6 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Concentration ;Focus ;Bruit ;Productivité ;Sommeil ;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
 msgstr "Écoutez différents sons d’ambiance"
 
@@ -294,11 +293,11 @@ msgstr "Ajouter un son personnalisé..."
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
-msgstr "Mis en pause pour économiser la batterie"
+msgstr "Mise en pause pour économiser la batterie"
 
 #: data/resources/window.blp:214
 msgid "_Resume Playing"
-msgstr "_Continuer la lecture"
+msgstr "_Reprendre la lecture"
 
 #: blanket/define.py:11
 msgid "Nature"
