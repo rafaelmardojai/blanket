@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-01-28 20:01+0000\n"
-"Last-Translator: Christoph Klassen <christoph-klassen@mail.de>\n"
+"PO-Revision-Date: 2024-05-05 09:15+0000\n"
+"Last-Translator: \"Maya Ella A.\" <zrezlon@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/blanket/blanket/"
 "de/>\n"
 "Language: de\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -153,7 +153,7 @@ msgstr "Wind"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "Das Hauptmenü mit dem hellem Theme"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
@@ -190,13 +190,12 @@ msgid "Behavior"
 msgstr "Verhalten"
 
 #: data/resources/preferences.blp:18
-#, fuzzy
 msgid "Autostart in Background"
 msgstr "Im Hintergrund starten"
 
 #: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "Pausiert starten"
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
@@ -223,7 +222,6 @@ msgid "General"
 msgstr "Allgemein"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
-#, fuzzy
 msgid "Play/Pause Sounds"
 msgstr "Klänge abspielen/pausieren"
 
@@ -284,14 +282,12 @@ msgid "Hide Inactive Sounds"
 msgstr "Mitgelieferte Geräusche:"
 
 #: data/resources/window.blp:151
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "Voreinstellungen speichern"
+msgstr "Einstellung als Vorlage speichern…"
 
 #: data/resources/window.blp:157
-#, fuzzy
 msgid "Add Sound…"
-msgstr "Eigenes Geräusch hinzufügen..."
+msgstr "Eigenes Geräusch hinzufügen…"
 
 #: data/resources/window.blp:212
 #, fuzzy
@@ -348,7 +344,7 @@ msgstr "Fehler bei der Anfrage"
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
-msgstr "Die Anfrage zum Autostarten ist fehlgeschlagen"
+msgstr "Die Anfrage zum Autostarten ist fehlgeschlagen."
 
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
