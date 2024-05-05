@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
 "PO-Revision-Date: 2024-05-06 10:07+0000\n"
-"Last-Translator: Luatic <fischerdavid196@gmail.com>\n"
+"Last-Translator: Demohstens <demohstens@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/blanket/blanket/"
 "de/>\n"
 "Language: de\n"
@@ -227,7 +227,6 @@ msgid "Add Custom Sound"
 msgstr "Eigenes Geräusch hinzufügen"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
 msgstr "Fenster schließen"
 
@@ -260,9 +259,8 @@ msgid "Sounds Menu"
 msgstr "Klänge-Menü"
 
 #: data/resources/window.blp:98
-#, fuzzy
 msgid "Keep Playing when Closed"
-msgstr "Nach Schließen weiterspielen"
+msgstr "Im Hintergrund weiter abspielen"
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
@@ -338,7 +336,7 @@ msgstr "Fehler bei der Anfrage"
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
-msgstr "Die Anfrage zum Autostarten ist fehlgeschlagen."
+msgstr "Das Konfigurieren zum Autostarten ist fehlgeschlagen."
 
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
