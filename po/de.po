@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-05-05 09:15+0000\n"
-"Last-Translator: Demohstens <demohstens@gmail.com>\n"
+"PO-Revision-Date: 2024-05-06 10:07+0000\n"
+"Last-Translator: \"Maya Ella A.\" <zrezlon@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/blanket/blanket/"
 "de/>\n"
 "Language: de\n"
@@ -75,7 +75,6 @@ msgid "MPRIS integration"
 msgstr "MPRIS-Integration"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
-#, fuzzy
 msgid "Included Sounds in the App:"
 msgstr "Mitgelieferte Geräusche:"
 
@@ -155,7 +154,7 @@ msgstr "Das Hauptmenü mit dem hellem Theme"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "Das Hauptmenü mit dem dunkelem Theme"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -245,9 +244,8 @@ msgid "Quit"
 msgstr "Beenden"
 
 #: data/resources/window.blp:24
-#, fuzzy
 msgid "Presets Menu"
-msgstr "Voreinstellungen"
+msgstr "Vorlagen Menü"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
@@ -275,9 +273,8 @@ msgid "Reset Sounds"
 msgstr "Klänge zurücksetzen"
 
 #: data/resources/window.blp:146
-#, fuzzy
 msgid "Hide Inactive Sounds"
-msgstr "Mitgelieferte Geräusche:"
+msgstr "Verstecke stumme Geräusche"
 
 #: data/resources/window.blp:151
 msgid "Save as New Preset…"
@@ -288,7 +285,6 @@ msgid "Add Sound…"
 msgstr "Eigenes Geräusch hinzufügen…"
 
 #: data/resources/window.blp:212
-#, fuzzy
 msgid "Paused to save power"
 msgstr "Pausiert, um Strom zu sparen"
 
@@ -322,7 +318,7 @@ msgstr "Anwendungssymbol"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "Quellcode"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -347,33 +343,30 @@ msgstr "Die Anfrage zum Autostarten ist fehlgeschlagen."
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "Autorisierung fehlgeschlagen"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Überprüfe unter Einstellungen → Anwendungen →\n"
-"Blanket, ob Blanket die Berechtigung hat, im \n"
-"Hintergrund zu laufen und versuche es erneut."
+"Überprüfe, ob Blanket im Hintergrund laufen darf unter Einstellungen → "
+"Anwendungen → Blanket, und versuche es erneut."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
 msgstr "Klang automatisch entfernt"
 
 #: blanket/window.py:135
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr "Der Klang „[name}\" ist nicht mehr verfügbar und wurde entfernt."
+msgstr "Der Klang „{name}\" ist nicht mehr verfügbar und wurde entfernt"
 
 #: blanket/window.py:138
-#, fuzzy
 msgid "Accept"
 msgstr "Akzeptieren"
 
