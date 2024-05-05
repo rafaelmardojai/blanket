@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
 "PO-Revision-Date: 2024-05-05 09:15+0000\n"
-"Last-Translator: Christoph Klassen <christoph-klassen@mail.de>\n"
+"Last-Translator: Demohstens <demohstens@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/blanket/blanket/"
 "de/>\n"
 "Language: de\n"
@@ -43,13 +43,12 @@ msgid "Listen to ambient sounds"
 msgstr "Höre dir Umgebungsgeräusche an"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
-"Hilft dir dich zu konzentrieren und deine Produktivität zu erhöhen indem "
-"verschiedene Geräusche abgespielt werden"
+"Verbessere deinen Fokus und deine Produktivität, indem du dir verschiedene "
+"Umgebungsgeräusche anhörst"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
