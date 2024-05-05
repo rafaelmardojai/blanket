@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
 "PO-Revision-Date: 2024-05-06 10:07+0000\n"
-"Last-Translator: \"Maya Ella A.\" <zrezlon@gmail.com>\n"
+"Last-Translator: Luatic <fischerdavid196@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/blanket/blanket/"
 "de/>\n"
 "Language: de\n"
@@ -381,9 +381,8 @@ msgid "Add…"
 msgstr "Hinzufügen…"
 
 #: blanket/widgets/preset_dialog.py:29
-#, fuzzy
 msgid "New Preset"
-msgstr "Voreinstellungen"
+msgstr "Neue Voreinstellung"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
