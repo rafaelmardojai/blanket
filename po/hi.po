@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-04-08 16:55+0000\n"
+"PO-Revision-Date: 2024-05-06 10:07+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/blanket/blanket/hi/"
 ">\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -43,7 +43,9 @@ msgstr "परिवेशीय ध्वनियों को सुनें
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
-msgstr "विभिन्न परिवेशीय ध्वनियों को सुनकर फोकस में सुधार करें और अपनी उत्पादकता बढ़ाएँ"
+msgstr ""
+"विभिन्न परिवेशीय ध्वनियों को सुनकर ध्यान में सुधार करें और अपनी उत्पादकता "
+"बढ़ाएं"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
@@ -51,7 +53,7 @@ msgstr "साथ ही यह आपको शोर-शराबे वाल
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
-msgstr "विशेषताएँ:"
+msgstr "विशेषताएं:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
@@ -59,7 +61,7 @@ msgstr "प्रीसेट सहेजें"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
 msgid "Add custom sounds"
-msgstr "कस्टम ध्वनियाँ जोड़ें"
+msgstr "तदनुकूल ध्वनियां जोड़ें"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
@@ -71,12 +73,12 @@ msgstr "MPRIS एकीकरण"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
-msgstr "ऐप में शामिल ध्वनियाँ:"
+msgstr "ऐप में शामिल ध्वनियां:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
 msgid "Birds"
-msgstr "चिड़ियाँ"
+msgstr "चिड़ियां"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:21 blanket/define.py:26
 #: blanket/define.py:54 blanket/define.py:73
@@ -91,7 +93,7 @@ msgstr "शहर"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:23 blanket/define.py:33
 #: blanket/define.py:61
 msgid "Coffee Shop"
-msgstr "कॉफ़ी शॉप"
+msgstr "कॉफी शॉप"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:24 blanket/define.py:34
 #: blanket/define.py:53
@@ -145,17 +147,17 @@ msgstr "वायु"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr "हल्की थीम में डिफ़ॉल्ट स्क्रीन"
+msgstr "हल्की थीम में तयशुदा स्क्रीन"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr "गहरी थीम में डिफ़ॉल्ट स्क्रीन"
+msgstr "गहरी थीम में तयशुदा स्क्रीन"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "'डिफ़ॉल्ट'"
+msgstr "'तयशुदा'"
 
 #: data/resources/about.blp:7
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
@@ -189,7 +191,7 @@ msgstr "हमेशा विराम पर प्रारंभ करे�
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
-msgstr "रद्द"
+msgstr "रद्द करें"
 
 #: data/resources/preset-dialog.blp:29
 msgid "Save"
@@ -205,27 +207,27 @@ msgstr "प्रीसेट का नाम बदलें"
 
 #: data/resources/preset-row.blp:43
 msgid "Delete Preset"
-msgstr "प्रीसेट हटाएँ"
+msgstr "प्रीसेट मिटाएं"
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
-msgstr "जनरल"
+msgstr "सामान्य"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
 msgid "Play/Pause Sounds"
-msgstr "ध्वनियाँ चलाएँ/रोकें"
+msgstr "ध्वनियां चलाएं/रोकें"
 
 #: data/resources/shortcuts.blp:17
 msgid "Add Custom Sound"
-msgstr "कस्टम ध्वनि जोड़ें"
+msgstr "तदनुकूल ध्वनि जोड़ें"
 
 #: data/resources/shortcuts.blp:22
 msgid "Close Window"
-msgstr "विंडो बंद"
+msgstr "विंडो बंद करें"
 
 #: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
-msgstr "प्राथमिकताएँ"
+msgstr "प्राथमिकताएं"
 
 #: data/resources/shortcuts.blp:32 data/resources/window.blp:110
 msgid "Keyboard Shortcuts"
@@ -241,11 +243,11 @@ msgstr "प्रीसेट मेनू"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
-msgstr "मुख्य मेन्यू"
+msgstr "मुख्य मेनू"
 
 #: data/resources/window.blp:67
 msgid "Volume Menu"
-msgstr "वॉल्यूम मेनू"
+msgstr "आवाज मेनू"
 
 #: data/resources/window.blp:84
 msgid "Sounds Menu"
@@ -261,11 +263,11 @@ msgstr "Blanket के बारे में"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr "ध्वनियाँ रीसेट करें"
+msgstr "ध्वनियां रीसेट करें"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
-msgstr "निष्क्रिय ध्वनियाँ छिपाएँ"
+msgstr "निष्क्रिय ध्वनियां छिपाएं"
 
 #: data/resources/window.blp:151
 msgid "Save as New Preset…"
@@ -309,7 +311,7 @@ msgstr "ऐप आइकन"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr "सोर्स कोड"
+msgstr "स्रोत कोड"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -359,7 +361,7 @@ msgstr "{name} ध्वनि अब पहुंच योग्य नही�
 
 #: blanket/window.py:138
 msgid "Accept"
-msgstr "स्वीकार करें"
+msgstr "स्वीकारें"
 
 #. type: ignore
 #: blanket/window.py:179
@@ -381,7 +383,7 @@ msgstr "प्रीसेट संपादन"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr "हटाएँ"
+msgstr "हटाएं"
 
 #~ msgid "Rafael Mardojai CM"
 #~ msgstr "राफेल मर्दोजाई CM"
