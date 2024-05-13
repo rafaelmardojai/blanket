@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-04-30 13:07+0000\n"
+"PO-Revision-Date: 2024-05-14 03:00+0000\n"
 "Last-Translator: Koshan Othman <koshan0othman@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://hosted.weblate.org/projects/"
 "blanket/blanket/ckb/>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.3-dev\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
 #: blanket/mpris.py:156
 msgid "Blanket"
-msgstr "Blanket"
+msgstr "بلانکێت"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
 #: blanket/mpris.py:154
@@ -146,11 +146,11 @@ msgstr "با"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr "ڕوونمای بنەڕەت لە تەوەرەی ڕووناک"
+msgstr "ڕوونمای بنەڕەت لە ڕووکاری ڕووناک"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr "ڕوونمای بنەڕەت لە تەوەرەی تاریک"
+msgstr "ڕوونمای بنەڕەت لە ڕووکاری تاریک"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -258,7 +258,7 @@ msgstr "بەردەوامبە لە لێدان کاتێک داخراوە"
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
-msgstr "دەربارەی Blanket"
+msgstr "دەربارەی بلانکێت"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
