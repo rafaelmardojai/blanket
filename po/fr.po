@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
 "PO-Revision-Date: 2024-06-06 01:34+0000\n"
-"Last-Translator: m3957 <m.grlic@outlook.com>\n"
+"Last-Translator: Jules Girard <julesgirard@laposte.net>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/blanket/blanket/"
 "fr/>\n"
 "Language: fr\n"
@@ -37,7 +37,7 @@ msgstr "Écoutez différents sons d’ambiance"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Concentration ;Focus ;Bruit ;Productivité ;Sommeil ;"
+msgstr "Concentration;Focus;Bruit;Productivité;Sommeil;Bruit blanc;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
 msgid "Listen to ambient sounds"
