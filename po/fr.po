@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-06-06 01:34+0000\n"
+"PO-Revision-Date: 2024-06-06 10:54+0000\n"
 "Last-Translator: Jules Girard <julesgirard@laposte.net>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/blanket/blanket/"
 "fr/>\n"
@@ -77,7 +77,7 @@ msgstr "Intégration MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
-msgstr "Sons inclus dans l'application:"
+msgstr "Sons inclus dans l'application :"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -188,7 +188,6 @@ msgid "Behavior"
 msgstr "Comportement"
 
 #: data/resources/preferences.blp:18
-#, fuzzy
 msgid "Autostart in Background"
 msgstr "Démarrage automatique en arrière-plan"
 
@@ -286,9 +285,8 @@ msgid "Save as New Preset…"
 msgstr "Sauvegarder les préréglages"
 
 #: data/resources/window.blp:157
-#, fuzzy
 msgid "Add Sound…"
-msgstr "Ajouter un son personnalisé..."
+msgstr "Ajouter un son…"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
