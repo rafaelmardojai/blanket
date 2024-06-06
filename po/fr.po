@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-05-05 09:15+0000\n"
+"PO-Revision-Date: 2024-06-06 01:34+0000\n"
 "Last-Translator: m3957 <m.grlic@outlook.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/blanket/blanket/"
 "fr/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
 "1000000 == 0 ? 1 : 2;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -76,9 +76,8 @@ msgid "MPRIS integration"
 msgstr "Intégration MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
-#, fuzzy
 msgid "Included Sounds in the App:"
-msgstr "Sons inclus :"
+msgstr "Sons inclus dans l'application:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
