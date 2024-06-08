@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-06-06 10:54+0000\n"
-"Last-Translator: m3957 <m.grlic@outlook.com>\n"
+"PO-Revision-Date: 2024-06-09 18:09+0000\n"
+"Last-Translator: Delopa <delopa@users.noreply.hosted.weblate.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/blanket/blanket/"
 "fr/>\n"
 "Language: fr\n"
@@ -220,7 +220,6 @@ msgid "General"
 msgstr "Général"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
-#, fuzzy
 msgid "Play/Pause Sounds"
 msgstr "Lire/Mettre en pause les sons"
 
@@ -229,7 +228,6 @@ msgid "Add Custom Sound"
 msgstr "Ajouter un son personnalisé"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
 msgstr "Fermer la fenêtre"
 
@@ -246,9 +244,8 @@ msgid "Quit"
 msgstr "Quitter"
 
 #: data/resources/window.blp:24
-#, fuzzy
 msgid "Presets Menu"
-msgstr "Préréglages"
+msgstr "Menu des préréglages"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
