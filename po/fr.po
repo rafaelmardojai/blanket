@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
 "PO-Revision-Date: 2024-06-09 18:09+0000\n"
-"Last-Translator: Delopa <delopa@users.noreply.hosted.weblate.org>\n"
+"Last-Translator: m3957 <m.grlic@outlook.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/blanket/blanket/"
 "fr/>\n"
 "Language: fr\n"
@@ -260,9 +260,8 @@ msgid "Sounds Menu"
 msgstr "Sons"
 
 #: data/resources/window.blp:98
-#, fuzzy
 msgid "Keep Playing when Closed"
-msgstr "Continuer à lire après fermeture"
+msgstr "Continuer à lire après la fermeture"
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
@@ -277,9 +276,8 @@ msgid "Hide Inactive Sounds"
 msgstr "Cacher les sons inactifs"
 
 #: data/resources/window.blp:151
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "Sauvegarder les préréglages"
+msgstr "Enregistrer comme nouveau préréglage…"
 
 #: data/resources/window.blp:157
 msgid "Add Sound…"
@@ -344,7 +342,7 @@ msgstr "La requête de démarrage automatique a échouée."
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
