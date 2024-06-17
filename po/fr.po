@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-06-09 18:09+0000\n"
-"Last-Translator: m3957 <m.grlic@outlook.com>\n"
+"PO-Revision-Date: 2024-06-18 13:09+0000\n"
+"Last-Translator: Remi Bart <remi.bart.lpv@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/blanket/blanket/"
 "fr/>\n"
 "Language: fr\n"
@@ -150,12 +150,14 @@ msgid "Wind"
 msgstr "Vent"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
+#, fuzzy
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "L'écran principal en mode clair"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
+#, fuzzy
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "L'écran principal en mode sombre"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -349,13 +351,12 @@ msgid "Authorization failed"
 msgstr "Échec de l’autorisation"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Assurez-vous que Blanket a la permission de s’exécuter en\n"
-"arrière-plan dans Paramètres → Applications →\n"
+"Assurez-vous que Blanket a la permission de s’exécuter en arrière-plan dans "
+"Paramètres → Applications →\n"
 "Blanket et réessayez."
 
 #: blanket/window.py:133
