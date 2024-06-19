@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2023-10-07 07:10+0000\n"
+"PO-Revision-Date: 2024-06-20 06:09+0000\n"
 "Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/blanket/blanket/"
 "sk/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n "
 ">= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.6-rc\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -150,11 +150,11 @@ msgstr "Vietor"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "Predvolená obrazovka v svetelnej téme"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "Predvolená obrazovka v tmavých témach"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -315,7 +315,7 @@ msgstr "Ikona aplikácie"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "Zdrojový kód"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -340,14 +340,13 @@ msgstr "Požiadavka na automatické spustenie zlyhala."
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "Okno"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "Autorizácia zlyhala"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
