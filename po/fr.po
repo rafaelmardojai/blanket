@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
 "PO-Revision-Date: 2024-06-24 11:09+0000\n"
-"Last-Translator: Mounzor <jb.mounier@yahoo.com>\n"
+"Last-Translator: m3957 <m.grlic@outlook.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/blanket/blanket/"
 "fr/>\n"
 "Language: fr\n"
@@ -150,9 +150,8 @@ msgid "Wind"
 msgstr "Vent"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
-#, fuzzy
 msgid "The default screen in light theme"
-msgstr "L'écran principal en mode clair"
+msgstr "L'écran par défaut dans le thème clair"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 #, fuzzy
