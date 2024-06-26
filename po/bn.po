@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-02-26 22:49+0000\n"
+"PO-Revision-Date: 2024-06-27 20:09+0000\n"
 "Last-Translator: Archisman Panigrahi <apandada1@gmail.com>\n"
 "Language-Team: Bengali <https://hosted.weblate.org/projects/blanket/blanket/"
 "bn/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -162,7 +162,7 @@ msgstr "'পূর্বনির্ধারিত'"
 
 #: data/resources/about.blp:7
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "স্বত্বাধিকার 2020-2021 রাফায়েল মার্দোহাই সিএম"
+msgstr "স্বত্বাধিকার 2020-2022 রাফায়েল মার্দোহাই সিএম"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:15
@@ -312,7 +312,7 @@ msgstr "অ্যাপের চিহ্ন"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "সোর্স কোড"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -337,21 +337,19 @@ msgstr "অটো স্টার্ট প্রচেষ্টা ব্যর
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "আচ্ছা"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "অনুমোদন ব্যর্থ হয়েছে"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"ব্ল্যাঙ্কেটের ব্যাকগ্রাউন্ডে চলার অনুমতি আছে কিনা \n"
-"তা সেটিংস → অ্যাপ্লিকেশন থেকে নিশ্চিত করুন \n"
-"এবং পুনরায় চেষ্টা করুন।"
+"ব্ল্যাঙ্কেটের ব্যাকগ্রাউন্ডে চলার অনুমতি আছে কিনা তা সেটিংস → অ্যাপ্লিকেশন "
+"থেকে নিশ্চিত করুন এবং পুনরায় চেষ্টা করুন।"
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
