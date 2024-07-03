@@ -8,22 +8,23 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2021-09-28 15:58+1000\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: ga_IE\n"
+"PO-Revision-Date: 2024-07-04 16:09+0000\n"
+"Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@gmail.com>\n"
+"Language-Team: Irish <https://hosted.weblate.org/projects/blanket/blanket/ga/"
+">\n"
+"Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"Plural-Forms: nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n>=3 && n<=6 ? 2 : "
-"n>=7 && n<=10 ? 3 : 4);\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : (n>2 && n<7) ? 2 :("
+"n>6 && n<11) ? 3 : 4;\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
 #: blanket/mpris.py:156
 msgid "Blanket"
-msgstr "Blanket"
+msgstr "Blaincéad"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
 #: blanket/mpris.py:154
@@ -36,50 +37,46 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "Díriú Airde;Torann;Táirgiúlacht;Codladh;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "Éist le fuaimeanna éagsúla"
+msgstr "Éist le fuaimeanna na timpeallachta"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
-"Bí níos dírithe ar do chuid oibre agus níos táirgiúla trí éisteacht le "
-"fuaimeanna éagsúla. Nó téigh a chodladh gan stró in áit torannach."
+"Fócas a fheabhsú agus do tháirgiúlacht a mhéadú trí éisteacht le fuaimeanna "
+"comhthimpeallacha éagsúla"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
 msgstr ""
+"Chomh maith leis sin is féidir cabhrú leat titim i do chodladh i "
+"dtimpeallacht noisy."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Dúlra"
+msgstr "Gnéithe:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "Réamhshocruithe Sábháilte"
+msgstr "Sábháil réamhshocruithe"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "Cuir fuaim shaincheaptha leis"
+msgstr "Cuir fuaimeanna saincheaptha leis"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "Uath-thosú sa chúlra"
+msgstr "Tosú uathoibríoch sa chúlra"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "Comhtháthú MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
-msgstr ""
+msgstr "Fuaimeanna san áireamh san aip:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -153,11 +150,11 @@ msgstr "Gaoth"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "An scáileán réamhshocraithe sa téama éadrom"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "An scáileán réamhshocraithe i téama dorcha"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -166,9 +163,8 @@ msgid "'Default'"
 msgstr "'Réamhshocrú'"
 
 #: data/resources/about.blp:7
-#, fuzzy
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Cóipcheart 2020-2021 Rafael Mardojai CM"
+msgstr "Cóipcheart 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:15
@@ -189,13 +185,12 @@ msgid "Behavior"
 msgstr "Iompraíocht"
 
 #: data/resources/preferences.blp:18
-#, fuzzy
 msgid "Autostart in Background"
-msgstr "Uath-thosú sa chúlra"
+msgstr "Tosú uathoibríoch sa Chúlra"
 
 #: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "Tosaigh i gcónaí ar Sos"
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
@@ -222,19 +217,16 @@ msgid "General"
 msgstr "Ginearálta"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
-#, fuzzy
 msgid "Play/Pause Sounds"
-msgstr "Seinn/Cuir ar sos"
+msgstr "Seinn/Cuir Fuaimeanna ar Sos"
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
-msgstr "Cuir fuaim shaincheaptha leis"
+msgstr "Cuir Fuaim Chustaim leis"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
-msgstr "Dún fuinneog"
+msgstr "Dún an Fhuinneog"
 
 #: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
@@ -249,27 +241,24 @@ msgid "Quit"
 msgstr "Scoir"
 
 #: data/resources/window.blp:24
-#, fuzzy
 msgid "Presets Menu"
-msgstr "Cuir Réamhshocrú Leis"
+msgstr "Roghchlár Réamhshocruithe"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
-msgstr ""
+msgstr "Príomhroghchlár"
 
 #: data/resources/window.blp:67
 msgid "Volume Menu"
-msgstr ""
+msgstr "Roghchlár Imleabhar"
 
 #: data/resources/window.blp:84
-#, fuzzy
 msgid "Sounds Menu"
-msgstr "Fuaimeanna le"
+msgstr "Roghchlár Fuaimeanna"
 
 #: data/resources/window.blp:98
-#, fuzzy
 msgid "Keep Playing when Closed"
-msgstr "Lean ag seinm i ndiaidh dúnadh"
+msgstr "Lean ort ag imirt nuair a bhíonn sé Dúnta"
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
@@ -277,29 +266,27 @@ msgstr "Maidir le Blanket"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr ""
+msgstr "Fuaimeanna Athshocraigh"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
-msgstr ""
+msgstr "Folaigh Fuaimeanna Neamhghníomhacha"
 
 #: data/resources/window.blp:151
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "Réamhshocruithe Sábháilte"
+msgstr "Sábháil mar Réamhshocrú Nua…"
 
 #: data/resources/window.blp:157
-#, fuzzy
 msgid "Add Sound…"
-msgstr "Cuir fuaim shaincheaptha leis"
+msgstr "Cuir Fuaim leis…"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
-msgstr ""
+msgstr "Stoptha chun cumhacht a shábháil"
 
 #: data/resources/window.blp:214
 msgid "_Resume Playing"
-msgstr ""
+msgstr "_Lean Ag imirt"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -327,7 +314,7 @@ msgstr "Deilbhín an Chláir"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "Cód foinse"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -338,9 +325,8 @@ msgid "Sounds edited by"
 msgstr "Fuaimeanna curtha in eagar ag"
 
 #: blanket/preferences.py:79
-#, fuzzy
 msgid "Autostart Blanket in background."
-msgstr "Uath-thosaigh Blanket sa chúlra."
+msgstr "Blaincéad Autostart sa chúlra."
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
@@ -353,7 +339,7 @@ msgstr "Theip ar an iarratas uath-thosaithe."
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "Ceart go leor"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
@@ -361,27 +347,25 @@ msgstr "Theip ar údarú"
 
 # I use Cinnamon, not Gnome, so not sure how these are translated.
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Cinntigh go bhfuil cead ag Blanket rith sa\n"
-"chúlra — féach Sainroghanna → Feidhmchláir → \n"
-"Blanket is bain triail eile as."
+"Cinntigh go bhfuil cead ag Blanket rith sa chúlra i Socruithe → Feidhmchláir "
+"→ Blanket agus bain triail eile as."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "Fuaim Bainte Uathoibríoch"
 
 #: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "Níl an fhuaim {name} inrochtana a thuilleadh, mar sin baineadh í"
 
 #: blanket/window.py:138
 msgid "Accept"
-msgstr ""
+msgstr "Glac"
 
 #. type: ignore
 #: blanket/window.py:179
@@ -391,12 +375,11 @@ msgstr "Oscail fuaim"
 #. Add new sound item
 #: blanket/window.py:246
 msgid "Add…"
-msgstr ""
+msgstr "Cuir…"
 
 #: blanket/widgets/preset_dialog.py:29
-#, fuzzy
 msgid "New Preset"
-msgstr "Cuir Réamhshocrú Leis"
+msgstr "Réamhshocraithe Nua"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
@@ -404,7 +387,7 @@ msgstr "Athraigh Réamhshocrú"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
+msgstr "Bain"
 
 #~ msgid "Rafael Mardojai CM"
 #~ msgstr "Rafael Mardojai CM"
