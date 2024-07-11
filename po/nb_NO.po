@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2023-09-16 15:41+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2024-07-12 21:09+0000\n"
+"Last-Translator: Brage Fuglseth <brage.fuglseth@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/blanket/"
 "blanket/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -28,34 +28,37 @@ msgstr "Blanket"
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
 #: blanket/mpris.py:154
 msgid "Listen to different sounds"
-msgstr "Lytt til ulike lyder"
+msgstr "Finn roen med bakgrunnslyder"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Konsentrasjon;fokus;støy;produktivitet;søvn;"
+msgstr ""
+"Ambient;Omgivelseslyder;Bakgrunnslyder;Sove;Søvn;White Noise;Bakgrunnsstøy;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
 msgid "Listen to ambient sounds"
-msgstr "Lytt til omgivelseslyder"
+msgstr "Finn roen med bakgrunnslyder"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
-msgstr "Øk fokus og produktivitet ved å lytte til ulike omgivelseslyder"
+msgstr ""
+"Fokuser bedre og øk produktiviteten din ved å lytte til forskjellige "
+"beroligende bakgrunnslyder."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr "Hjelper deg også å sovne i støyende omgivelser."
+msgstr "Blanket kan også hjelpe deg med å sovne i bråkete omgivelser."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
-msgstr "Funksjoner:"
+msgstr "Her er noen av grunnene til at du vil elske denne appen:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr "Lagre forvalg"
+msgstr "Lagre lydkombinasjoner til senere lytting"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
 msgid "Add custom sounds"
@@ -63,16 +66,15 @@ msgstr "Legg til egne lyder"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
-msgstr "Autostart i bakgrunnen"
+msgstr "Automatisk oppstart i bakgrunnen"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr "MPRIS-integrasjon"
+msgstr "God integrering med systemet"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
-#, fuzzy
 msgid "Included Sounds in the App:"
-msgstr "Inkluderte lyder i programmet:"
+msgstr "Innebygde lyder:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -102,7 +104,7 @@ msgstr "Peis"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/define.py:40
 #: blanket/define.py:62
 msgid "Pink Noise"
-msgstr "Rosa brus"
+msgstr "Rosa støy"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:26 blanket/define.py:13
 #: blanket/define.py:51 blanket/define.py:70
@@ -121,9 +123,8 @@ msgstr "Storm"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/define.py:17
 #: blanket/define.py:56
-#, fuzzy
 msgid "Stream"
-msgstr "Bekk"
+msgstr "Elv"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/define.py:25
 #: blanket/define.py:64
@@ -147,28 +148,27 @@ msgstr "Vind"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "Avspilling av lyder"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "Avspilling av lyder"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
-#, fuzzy
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "'Forvalg'"
+msgstr "'Standard'"
 
 #: data/resources/about.blp:7
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Opphavsrett 2020–2022 Rafael Mardojai CM"
+msgstr "Opphavsrett 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "Allan Nordhøy <epost@anotheragency.no>"
+msgstr "Brage Fuglseth https://bragefuglseth.dev"
 
 #: data/resources/preferences.blp:7
 msgid "Appearance"
@@ -176,7 +176,7 @@ msgstr "Utseende"
 
 #: data/resources/preferences.blp:10
 msgid "Dark Mode"
-msgstr "Mørk drakt"
+msgstr "Mørk modus"
 
 #: data/resources/preferences.blp:15
 msgid "Behavior"
@@ -184,12 +184,11 @@ msgstr "Oppførsel"
 
 #: data/resources/preferences.blp:18
 msgid "Autostart in Background"
-msgstr "Autostart i bakgrunnen"
+msgstr "Start automatisk i bakgrunnen"
 
 #: data/resources/preferences.blp:22
-#, fuzzy
 msgid "Always Start on Pause"
-msgstr "Start pauset"
+msgstr "Start lydløst"
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
@@ -200,17 +199,16 @@ msgid "Save"
 msgstr "Lagre"
 
 #: data/resources/preset-dialog.blp:40
-#, fuzzy
 msgid "Preset Name"
-msgstr "Navn på forvalg"
+msgstr "Navn"
 
 #: data/resources/preset-row.blp:32
 msgid "Rename Preset"
-msgstr "Gi forvalget nytt navn"
+msgstr "Endre navn"
 
 #: data/resources/preset-row.blp:43
 msgid "Delete Preset"
-msgstr "Slett forvalg"
+msgstr "Slett kombinasjon"
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
@@ -218,7 +216,7 @@ msgstr "Generelt"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
 msgid "Play/Pause Sounds"
-msgstr "Spill/sett lyder på pause"
+msgstr "Spill/stopp lyder"
 
 #: data/resources/shortcuts.blp:17
 msgid "Add Custom Sound"
@@ -242,7 +240,7 @@ msgstr "Avslutt"
 
 #: data/resources/window.blp:24
 msgid "Presets Menu"
-msgstr "Meny for forvalg"
+msgstr "Kombinasjonsmeny"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
@@ -250,17 +248,15 @@ msgstr "Hovedmeny"
 
 #: data/resources/window.blp:67
 msgid "Volume Menu"
-msgstr "Lydstyrkemeny"
+msgstr "Lydnivå"
 
 #: data/resources/window.blp:84
-#, fuzzy
 msgid "Sounds Menu"
-msgstr "Meny for lyder"
+msgstr "Lydmeny"
 
 #: data/resources/window.blp:98
-#, fuzzy
 msgid "Keep Playing when Closed"
-msgstr "Fortsett å spille ved lukking"
+msgstr "Fortsett spilling ved lukking"
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
@@ -271,26 +267,24 @@ msgid "Reset Sounds"
 msgstr "Tilbakestill lyder"
 
 #: data/resources/window.blp:146
-#, fuzzy
 msgid "Hide Inactive Sounds"
 msgstr "Skjul inaktive lyder"
 
 #: data/resources/window.blp:151
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "Sett som nytt forvalg …"
+msgstr "Lagre ny kombinasjon…"
 
 #: data/resources/window.blp:157
 msgid "Add Sound…"
-msgstr "Legg til lyd …"
+msgstr "Legg til lyd…"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
-msgstr "Pauset for å spare strøm"
+msgstr "Satt på pause for å spare strøm"
 
 #: data/resources/window.blp:214
 msgid "_Resume Playing"
-msgstr "_Forsett å spille"
+msgstr "_Fortsett avspilling"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -302,28 +296,27 @@ msgstr "Reise"
 
 #: blanket/define.py:31
 msgid "Interiors"
-msgstr "Interiør"
+msgstr "Rom"
 
 #: blanket/define.py:38
 msgid "Noise"
 msgstr "Støy"
 
 #: blanket/define.py:48
-#, fuzzy
 msgid "Sounds icons"
-msgstr "Lydikoner"
+msgstr "Lydikoner designet av"
 
 #: blanket/define.py:48
 msgid "App icon"
-msgstr "Programikon"
+msgstr "Appikon designet av"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "Kodelager"
 
 #: blanket/main.py:239
 msgid "Sounds by"
-msgstr "Lyder av"
+msgstr "Lyder produsert av"
 
 #: blanket/main.py:240
 msgid "Sounds edited by"
@@ -331,48 +324,45 @@ msgstr "Lyder redigert av"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "Autostart Blanket i bakgrunnen."
+msgstr "Start Blanket automatisk i bakgrunnen."
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
-msgstr "Forespørselsfeil"
+msgstr "Forespørsel mislyktes"
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
-msgstr "Kunne ikke sende autostart-forespørsel."
+msgstr "Sending av forespørsel om å starte automatisk mislyktes."
 
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "Lukk"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
-msgstr "Identitetsbekreftelse mislyktes"
+msgstr "Autorisering mislyktes"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Forsikre deg om at Blanket har tilgang til å kjøres\n"
-"i bakgrunnen i «Innstillinger → Programmer →\n"
-"Blanket» og prøv igjen."
+"Pass på at Blanket har tillatelse til å starte i bakgrunnen i Innstillinger."
 
 #: blanket/window.py:133
-#, fuzzy
 msgid "Sound Automatically Removed"
-msgstr "Automatisk fjernet lyd"
+msgstr "Lyd fjernet automatisk"
 
 #: blanket/window.py:135
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr "{name} lyden er ikke lenger tilgjengelig, så den har blitt fjernet."
+msgstr ""
+"Lyden «{name}» er ikke tilgjengelig lenger, og har blitt fjernet automatisk"
 
 #: blanket/window.py:138
 msgid "Accept"
-msgstr "Godta"
+msgstr "Fortsett"
 
 #. type: ignore
 #: blanket/window.py:179
@@ -382,15 +372,15 @@ msgstr "Åpne lyd"
 #. Add new sound item
 #: blanket/window.py:246
 msgid "Add…"
-msgstr "Legg til …"
+msgstr "Legg til…"
 
 #: blanket/widgets/preset_dialog.py:29
 msgid "New Preset"
-msgstr "Nytt forvalg"
+msgstr "Ny kombinasjon"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
-msgstr "Rediger forvalg"
+msgstr "Rediger kombinasjon"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
