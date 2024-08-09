@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-02-19 17:01+0000\n"
+"PO-Revision-Date: 2024-08-10 04:09+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://hosted.weblate.org/projects/blanket/blanket/"
 "ka/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -355,14 +355,12 @@ msgid "Authorization failed"
 msgstr "ავტორიზაცია ვერ მოხერხდა"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"დარწმუნდით რომ საბანს უფლება აქვს რომ\n"
-"დახურვის შემდეგ დაკვრა შეუძლია პარამეტრებში →\n"
-"აპლიკაციები → საბანი და ხელახლა ცადეთ."
+"დარწმუნდით, რო Blanket-ს აქვს უფლება, ფონურად გაეშვას. მენიუში: მორგება → "
+"აპლიკაციები → Blanket და თავიდან სცადეთ."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
