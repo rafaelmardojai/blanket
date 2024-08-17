@@ -48,6 +48,16 @@
 
   <launchable type="desktop-id">com.rafaelmardojai.Blanket.desktop</launchable>
   <translation type="gettext">blanket</translation>
+  
+  <requires>
+    <internet>offline-only</internet>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </supports>
 
   <screenshots>
     <screenshot type="default">
