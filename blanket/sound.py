@@ -30,7 +30,7 @@ class Sound(GObject.Object):
         super().__init__()
 
         resource = f'resource:{RES_PATH}/sounds/{name}.ogg'
-        icon = 'com.rafaelmardojai.Blanket-{}'
+        icon = 'com.rafaelmardojai.Blanket-{}-symbolic'
 
         # Internal player
         self._player = None

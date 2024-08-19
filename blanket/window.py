@@ -244,7 +244,7 @@ class BlanketWindow(Adw.ApplicationWindow):
         else:
             # Add new sound item
             item.title = _('Add…')
-            item.icon_name = 'com.rafaelmardojai.Blanket-add'
+            item.icon_name = 'com.rafaelmardojai.Blanket-add-symbolic'
 
         return item
 
