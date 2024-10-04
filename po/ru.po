@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-08-31 22:09+0000\n"
-"Last-Translator: bl4ckd4y <bl4ckd4yfm@gmail.com>\n"
+"PO-Revision-Date: 2024-10-05 19:16+0000\n"
+"Last-Translator: Stepan Kashuba <ihaterabbids@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/blanket/blanket/"
 "ru/>\n"
 "Language: ru\n"
@@ -277,12 +277,11 @@ msgstr "Скрыть неактивные звуки"
 
 #: data/resources/window.blp:151
 msgid "Save as New Preset…"
-msgstr "Сохранить как новый пресет"
+msgstr "Сохранить как новый пресет…"
 
 #: data/resources/window.blp:157
-#, fuzzy
 msgid "Add Sound…"
-msgstr "Добавить свои звуки…"
+msgstr "Добавить звук…"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
