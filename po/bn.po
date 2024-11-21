@@ -124,7 +124,7 @@ msgstr "ঝড়"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/define.py:17
 #: blanket/define.py:56
 msgid "Stream"
-msgstr "ছোট্ট জলস্রোত"
+msgstr "ছোট জলপ্রবাহ"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/define.py:25
 #: blanket/define.py:64
@@ -188,7 +188,7 @@ msgstr "ব্যাকগ্রাউন্ডে অটো স্টার্�
 
 #: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
-msgstr "বিরত অবস্থায় শুরু করুন"
+msgstr "সর্বদা বিরত অবস্থায় শুরু করুন"
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
@@ -212,7 +212,7 @@ msgstr "প্রিসেট ডিলিট"
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
-msgstr "সবরকম"
+msgstr "সাধারণ"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
 msgid "Play/Pause Sounds"
@@ -220,7 +220,7 @@ msgstr "শব্দ চালু/বিরতি"
 
 #: data/resources/shortcuts.blp:17
 msgid "Add Custom Sound"
-msgstr "নিজের মতো শব্দ যোগ"
+msgstr "নিজের মতো শব্দ যোগ করুন"
 
 #: data/resources/shortcuts.blp:22
 msgid "Close Window"
@@ -244,7 +244,7 @@ msgstr "প্রিসেট মেনু"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
-msgstr "মূল বিভাগ"
+msgstr "মূল মেনু"
 
 #: data/resources/window.blp:67
 msgid "Volume Menu"
@@ -268,7 +268,7 @@ msgstr "সমস্ত শব্দ পুনস্থাপন করুন"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
-msgstr "নিষ্ক্রিয় শব্দসমূহ"
+msgstr "নিষ্ক্রিয় শব্দসমূহ লুকান"
 
 #: data/resources/window.blp:151
 msgid "Save as New Preset…"
@@ -353,7 +353,7 @@ msgstr ""
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
-msgstr "শব্দটি মুছে দেওয়া হয়েছে"
+msgstr "শব্দটি স্বয়ংক্রিয়ভাবে মুছে দেওয়া হয়েছে"
 
 #: blanket/window.py:135
 #, python-brace-format
