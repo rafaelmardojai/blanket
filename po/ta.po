@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the blanket package.
 # SURVESH VRL <123SURVESH@GMAIL.COM>, 2021
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket v0.4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2021-04-29 22:48+0530\n"
-"Last-Translator: SURVESH VRL <123SURVESH@GMAIL.COM>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2024-12-09 18:54+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/blanket/blanket/ta/"
+">\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.9-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -34,50 +36,43 @@ msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr "ஆழ்ந்த கவனம்;கவனம்;இரைச்சல்;உற்பத்தித்திறன்;தூக்கம்;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "வெவ்வேறு ஒலிகளை கேள்"
+msgstr "அமைதி சூழ் ஒலிகளை கேள்"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
-#, fuzzy
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
-"வெவ்வேறு ஒலிகளை கேட்டு, உங்கள் கவனத்தை மேம்படுத்தி உற்பத்தித்திறனை\n"
-"அதிகரியுங்கள். அல்லது இரைச்சலான ஒரு இடத்தில், தூங்குவதற்கு பயன்படுத்தலாம்."
+"வெவ்வேறு ஒலிகளைக் கேட்டு, உங்கள் கவனத்தை மேம்படுத்தி உற்பத்தித்திறனை அதிகரியுங்கள்"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "மேலும், ஒரு சத்தமான சூழலில் தூங்கவும் உதவும்."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "இயற்கை"
+msgstr "பண்புகள்:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "சேமிக்கப்பட்ட முன்தொகுப்புகள்"
+msgstr "முன்னமைவுகளை சேமிக்கவும்"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "தனிப்பயனுடைய ஒளியை சேறுக"
+msgstr "தனிப்பயன் ஒலிகளைச் சேர்க்கவும்"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "பின்னணியில் தானாக துவங்கு"
+msgstr "பின்னணியில் ஆட்டோ தொடக்க"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS ஒருங்கிணைப்பு"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
-msgstr ""
+msgstr "பயன்பாட்டில் ஒலிகள் சேர்க்கப்பட்டுள்ளன:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -151,11 +146,11 @@ msgstr "காற்று"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "ஒளி கருப்பொருளில் இயல்புநிலை திரை"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "இருண்ட கருப்பொருளில் இயல்புநிலை திரை"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -164,9 +159,8 @@ msgid "'Default'"
 msgstr "'இயல்புநிலை'"
 
 #: data/resources/about.blp:7
-#, fuzzy
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "பதிப்புரிமை 2020-2021 ரபேல் மார்டோசாய் சிஎம்"
+msgstr "பதிப்புரிமை 2020-2022 ரஃபேல் மார்டோசாய் சி.எம்"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:15
@@ -187,13 +181,12 @@ msgid "Behavior"
 msgstr "நடத்தை"
 
 #: data/resources/preferences.blp:18
-#, fuzzy
 msgid "Autostart in Background"
-msgstr "பின்னணியில் தானாக துவங்கு"
+msgstr "பின்னணியில் ஆட்டோச்டார்ட்"
 
 #: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "எப்போதும் இடைநிறுத்தத்தைத் தொடங்குங்கள்"
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
@@ -220,19 +213,16 @@ msgid "General"
 msgstr "பொதுவானவை"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
-#, fuzzy
 msgid "Play/Pause Sounds"
-msgstr "ஒலிகளை கேள்/நிறுத்து"
+msgstr "ஒலி/இடைநிறுத்தங்கள்"
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
-msgstr "தனிப்பயனுடைய ஒளியை சேறுக"
+msgstr "தனிப்பயன் ஒலியைச் சேர்க்கவும்"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
-msgstr "சாளரத்தை மூடுக"
+msgstr "சாளரத்தை மூடு"
 
 #: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
@@ -247,57 +237,52 @@ msgid "Quit"
 msgstr "விட்டுச்செல்"
 
 #: data/resources/window.blp:24
-#, fuzzy
 msgid "Presets Menu"
-msgstr "முன்தொகுப்பை சேர்"
+msgstr "முன்னமைவு பட்டியல்"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
-msgstr ""
+msgstr "பட்டியல் விளையாடுங்கள்"
 
 #: data/resources/window.blp:67
 msgid "Volume Menu"
-msgstr ""
+msgstr "தொகுதி பட்டியல்"
 
 #: data/resources/window.blp:84
-#, fuzzy
 msgid "Sounds Menu"
-msgstr "ஒலிகளை இயற்றியவர்"
+msgstr "பட்டியல் ஒலிக்கிறது"
 
 #: data/resources/window.blp:98
-#, fuzzy
 msgid "Keep Playing when Closed"
-msgstr "மூடிய பின்பும் ஓடிக்கொண்டிருக்கட்டும்"
+msgstr "மூடும்போது தொடர்ந்து விளையாடுங்கள்"
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
-msgstr "பிளாங்கெட்டைப்  பத்தி"
+msgstr "பிளாங்கெட்டைப் பத்தி"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr ""
+msgstr "ஒலிகளை மீட்டமை"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
-msgstr ""
+msgstr "செயலற்ற ஒலிகளை மறைக்கவும்"
 
 #: data/resources/window.blp:151
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "சேமிக்கப்பட்ட முன்தொகுப்புகள்"
+msgstr "புதிய முன்னமைக்கப்பட்டதாக சேமிக்கவும்…"
 
 #: data/resources/window.blp:157
-#, fuzzy
 msgid "Add Sound…"
-msgstr "தனிப்பயனுடைய ஒளியை சேறுக"
+msgstr "ஒலி சேர்க்கவும்…"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
-msgstr ""
+msgstr "சக்தியைக் காப்பாற்ற இடைநிறுத்தப்பட்டது"
 
 #: data/resources/window.blp:214
 msgid "_Resume Playing"
-msgstr ""
+msgstr "_ ரெசூம் விளையாடுவது"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -325,7 +310,7 @@ msgstr "செயலியின் சின்னம்"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "மூலக் குறியீடு"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -336,9 +321,8 @@ msgid "Sounds edited by"
 msgstr "ஒலிகளை திருத்தியவர்"
 
 #: blanket/preferences.py:79
-#, fuzzy
 msgid "Autostart Blanket in background."
-msgstr "பிளாங்கெட்டை பின்னணியில் தானாக துவங்கு"
+msgstr "பின்னணியில் ஆட்டோச்டார்ட் வெற்று."
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
@@ -346,39 +330,36 @@ msgstr "கோரிக்கை பிழை"
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
-msgstr "தானியக்க கோரிக்கை தோல்வியுற்றது"
+msgstr "தானியக்க கோரிக்கை தோல்வியுற்றது."
 
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "சரி"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "அங்கீகரிப்பு தோல்வியுற்றது"
 
 #: blanket/preferences.py:124
-#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"பிளாங்கெட்டிற்கு பின்னணியில் இயங்க அனுமதி உள்ளதா என\n"
-"அமைப்புகள் → பயன்பாடுகள் → பிளாங்கெட் இல் உறுதி செய்தப்பின்\n"
-"மீண்டும் முயற்சிக்கவும்."
+"அமைப்புகள் → பயன்பாடுகள் → போர்வையில் பின்னணியில் இயக்க போர்வைக்கு இசைவு இருப்பதை உறுதிசெய்து மீண்டும் முயற்சிக்கவும்."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "ஒலி தானாக அகற்றப்படும்"
 
 #: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "{name} ஒலி இனி அணுக முடியாது, எனவே அது அகற்றப்பட்டது"
 
 #: blanket/window.py:138
 msgid "Accept"
-msgstr ""
+msgstr "ஏற்றுக்கொள்"
 
 #. type: ignore
 #: blanket/window.py:179
@@ -388,12 +369,11 @@ msgstr "ஒளியை திற"
 #. Add new sound item
 #: blanket/window.py:246
 msgid "Add…"
-msgstr ""
+msgstr "சேர்க்கவும்…"
 
 #: blanket/widgets/preset_dialog.py:29
-#, fuzzy
 msgid "New Preset"
-msgstr "முன்தொகுப்பை சேர்"
+msgstr "புதிய முன்னமைவு"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
@@ -401,7 +381,7 @@ msgstr "முன்தொகுப்பை திருத்து"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
+msgstr "அகற்று"
 
 #~ msgid "Rafael Mardojai CM"
 #~ msgstr "ரபேல் மார்டோசாய் சிஎம்"
