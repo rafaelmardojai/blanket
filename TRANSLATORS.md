@@ -1,6 +1,6 @@
 # Translators
 
-You can contribute translations joining us in [Transifex](https://www.transifex.com/rafaelmardojai/blanket/) or sending pull requests to GitHub.
+You can contribute translations by joining us on [Weblate](https://hosted.weblate.org/projects/blanket/) or sending pull requests to GitHub.
 
 
 | Code  | Language             | Maintainers (GitHub usernames) |
@@ -8,6 +8,7 @@ You can contribute translations joining us in [Transifex](https://www.transifex.
 | ca    | Catalan              | @fitojb @juxuanu               |
 | cs    | Czech                | @pervoj                        |
 | de    | German               | @eladyn                        |
+| en_GB | English (UK)         | @andibing                      |
 | eo    | Esperanto            | @Porrumentzio                  |
 | es    | Spanish              | @rafaelmardojai                |
 | eu    | Basque               | @Porrumentzio                  |
@@ -16,6 +17,7 @@ You can contribute translations joining us in [Transifex](https://www.transifex.
 | fr    | French               | @maoschanz @julroy67           |
 | ga    | Irish                | @Moilleadoir                   |
 | gl    | Galician             | @frandieguez                   |
+| gr    | Greek                | @Its-Juice                     |
 | hr    | Croatian             | @milotype                      |
 | hu    | Hungarian            | @osiixy                        |
 | id    | Indonesian           | @cho2                          |
@@ -35,4 +37,4 @@ You can contribute translations joining us in [Transifex](https://www.transifex.
 | tr    | Turkish              | @caglarturali                  |
 | uk    | Ukrainian            | @IhorHordiichuk                |
 | zh_CN | Simplified Chinese   | @apocelipes                    |
-| gr    | Greek                | @Its-Juice
+
