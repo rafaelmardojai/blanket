@@ -142,9 +142,14 @@ class BlanketWindow(Adw.ApplicationWindow):
                 alert.present(self)
 
     def open_audio(self):
-        def on_response(_filechooser, _id):
-            gfile = self.filechooser.get_file()
-            if gfile:
+        def on_response(dialog, result):
+            try:
+                gfiles = dialog.open_multiple_finish(result)
+            except GLib.Error as e:
+                if e.code != Gtk.DialogError.DISMISSED:
+                    print(f"Error: {e.message}")
+                return
+            for gfile in gfiles:
                 filename = gfile.get_path()
                 if filename:
                     name = os.path.basename(filename).split('.')[0]
@@ -175,20 +180,21 @@ class BlanketWindow(Adw.ApplicationWindow):
             'AAC': ['audio/aac'],
         }
 
-        self.filechooser = Gtk.FileChooserNative.new(  # type: ignore
-            _('Open audio'), self, Gtk.FileChooserAction.OPEN, None, None
-        )
+        self.filechooser = Gtk.FileDialog.new()
+        self.filechooser.set_title(_('Open audio'))
         self.filechooser.set_modal(True)
-        self.filechooser.connect('response', on_response)
 
+        filter_store = Gio.ListStore.new(Gtk.FileFilter)
         for f, mts in filters.items():
             audio_filter = Gtk.FileFilter()
             audio_filter.set_name(f)
             for mt in mts:
                 audio_filter.add_mime_type(mt)
-            self.filechooser.add_filter(audio_filter)
+            filter_store.append(audio_filter)
 
-        self.filechooser.show()
+        self.filechooser.set_filters(filter_store)
+
+        self.filechooser.open_multiple(self, None, on_response)
 
     @Gtk.Template.Callback()
     def _on_narrow_window_apply(self, _breakpoint):
