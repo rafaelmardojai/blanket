@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-07 19:36-0500\n"
+"POT-Creation-Date: 2025-01-28 03:31-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:39
 #: blanket/mpris.py:156
 msgid "Blanket"
 msgstr ""
@@ -141,11 +141,11 @@ msgstr ""
 msgid "Wind"
 msgstr ""
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:67
 msgid "The default screen in light theme"
 msgstr ""
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:72
 msgid "The default screen in dark theme"
 msgstr ""
 
@@ -186,10 +186,12 @@ msgid "Always Start on Pause"
 msgstr ""
 
 #: data/resources/preset-dialog.blp:21
+#: data/resources/sound-rename-dialog.blp:21
 msgid "Cancel"
 msgstr ""
 
 #: data/resources/preset-dialog.blp:29
+#: data/resources/sound-rename-dialog.blp:29
 msgid "Save"
 msgstr ""
 
@@ -231,6 +233,10 @@ msgstr ""
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:122
 msgid "Quit"
+msgstr ""
+
+#: data/resources/sound-rename-dialog.blp:40
+msgid "Sound Name"
 msgstr ""
 
 #: data/resources/window.blp:24
@@ -305,15 +311,15 @@ msgstr ""
 msgid "App icon"
 msgstr ""
 
-#: blanket/main.py:238
+#: blanket/main.py:257
 msgid "Source Code"
 msgstr ""
 
-#: blanket/main.py:239
+#: blanket/main.py:258
 msgid "Sounds by"
 msgstr ""
 
-#: blanket/main.py:240
+#: blanket/main.py:259
 msgid "Sounds edited by"
 msgstr ""
 
@@ -357,13 +363,12 @@ msgstr ""
 msgid "Accept"
 msgstr ""
 
-#. type: ignore
-#: blanket/window.py:179
+#: blanket/window.py:185
 msgid "Open audio"
 msgstr ""
 
 #. Add new sound item
-#: blanket/window.py:246
+#: blanket/window.py:253
 msgid "Add…"
 msgstr ""
 
@@ -375,6 +380,15 @@ msgstr ""
 msgid "Edit Preset"
 msgstr ""
 
-#: blanket/widgets/sound_context_menu.py:24
+#: blanket/widgets/sound_context_menu.py:26
+msgid "Rename"
+msgstr ""
+
+#: blanket/widgets/sound_context_menu.py:31
 msgid "Remove"
+msgstr ""
+
+#. type: ignore
+#: blanket/widgets/sound_rename_dialog.py:28
+msgid "Rename Sound"
 msgstr ""

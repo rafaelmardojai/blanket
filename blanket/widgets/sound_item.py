@@ -79,15 +79,17 @@ class SoundItem(Gtk.FlowBoxChild):
         self._context_popover(x, y)
 
     def _context_popover(self, x: int, y: int):
-        if self.sound is not None:
-            if self._menu is None:
-                self._menu = SoundContextMenu(self.sound)
+        if self.sound is None:
+            return
 
-                rec = Gdk.Rectangle()
-                rec.x = x
-                rec.y = y
+        if self._menu is None:
+            self._menu = SoundContextMenu(self.sound)
 
-                self._menu.set_parent(self)
-                self._menu.set_pointing_to(rec)
+            rec = Gdk.Rectangle()
+            rec.x = x
+            rec.y = y
 
-            self._menu.popup()
+            self._menu.set_parent(self)
+            self._menu.set_pointing_to(rec)
+
+        self._menu.popup()

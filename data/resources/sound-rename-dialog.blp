@@ -1,0 +1,48 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $SoundRenameDialog : Adw.Dialog {
+  width-request: 360;
+  height-request: 148;
+  focus-widget: name_entry;
+
+  Adw.ToolbarView {
+
+    [top]
+    Adw.HeaderBar headerbar {
+      show-end-title-buttons: false;
+      show-start-title-buttons: false;
+
+      title-widget: Adw.WindowTitle title_widget {
+        title: bind template.title;
+      };
+
+      Button {
+        label: _("Cancel");
+
+        clicked => $_on_cancel_clicked();
+      }
+
+      [end]
+      Button accept_btn {
+        sensitive: false;
+        label: _("Save");
+
+        styles [
+          "suggested-action"
+        ]
+      }
+    }
+
+    Adw.PreferencesPage {
+      Adw.PreferencesGroup {
+        Adw.EntryRow name_entry {
+          title: _("Sound Name");
+          selectable: false;
+
+          changed => $_on_entry_changed();
+        }
+      }
+    }
+  }
+}

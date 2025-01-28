@@ -131,3 +131,9 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
                 return (sound, position)
 
         return (None, None)
+
+    def get_index(self, name: str) -> int | None:
+        return self.get_by_name(name)[1]
+
+    def get_by_index(self, index: int) -> GObject.Object:
+        return self._sounds[index]
