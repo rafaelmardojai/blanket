@@ -260,6 +260,12 @@ class Application(Adw.Application):
 
         about.present(self.window)
 
+    def set_space_accel(self, _action):
+        self.set_accels_for_action('app.playpause', ['<Ctl>m', 'space'])
+
+    def unset_space_accel(self, _action):
+        self.set_accels_for_action('app.playpause', ['<Ctl>m'])
+
     def on_quit(self, _action, _param):
         self.quit()
 
