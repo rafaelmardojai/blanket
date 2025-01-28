@@ -8,6 +8,7 @@ data/resources/preset-dialog.blp
 data/resources/preset-row.blp
 data/resources/shortcuts.blp
 data/resources/sound-context-menu.blp
+data/resources/sound-rename-dialog.blp
 data/resources/sound-item.blp
 data/resources/volume-row.blp
 data/resources/window.blp
@@ -27,5 +28,6 @@ blanket/widgets/preset_chooser.py
 blanket/widgets/preset_dialog.py
 blanket/widgets/preset_row.py
 blanket/widgets/sound_context_menu.py
+blanket/widgets/sound_rename_dialog.py
 blanket/widgets/sound_item.py
 blanket/widgets/volume_row.py

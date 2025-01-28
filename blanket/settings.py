@@ -130,6 +130,20 @@ class Settings(Gio.Settings):
                 del self.volume[name]
             """
 
+    def rename_custom_audio(self, old_name: str, new_name: str):
+        if old_name not in self.custom_audios:
+            return
+
+        if new_name in self.custom_audios:
+            # TODO: Do something if True
+            return
+
+        saved_audios = self.custom_audios
+        uri = saved_audios[old_name]
+        del saved_audios[old_name]
+        saved_audios[new_name] = uri
+        self.custom_audios = saved_audios
+
     """ Presets """
 
     @property
