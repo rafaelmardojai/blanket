@@ -152,7 +152,8 @@ class BlanketWindow(Adw.ApplicationWindow):
             for gfile in gfiles:
                 filename = gfile.get_path()
                 if filename:
-                    name = os.path.basename(filename).split('.')[0]
+                    basename = os.path.basename(filename)
+                    name = basename[:basename.rfind('.')]
                     uri = gfile.get_uri()
 
                     # Create a new Sound
