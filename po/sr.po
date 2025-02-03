@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2021-10-03 19:28+0200\n"
-"Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2025-02-04 20:02+0000\n"
+"Last-Translator: Compact / Naomi <webmaster@compactbunker.org>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/blanket/blanket/"
+"sr/>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -39,9 +40,8 @@ msgstr ""
 "Usredsredjivanje;Buka;Produktivnost;Spavanje;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "Слушајте различите звукове"
+msgstr "Слушајте звукове околине"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 #, fuzzy
@@ -54,35 +54,31 @@ msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Може вам и помоћи да лакше заспите у гласном окружењу."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
-#, fuzzy
 msgid "Features:"
-msgstr "Природа"
+msgstr "Карактеристике:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
 msgstr "Сачувани шаблони"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "Додај прилагођени звук"
+msgstr "Додај прилагођене звукове"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
 msgstr "Самопокрени у позадини"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS интеграција"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
-msgstr ""
+msgstr "Звуци који долазе уз апликацију:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -156,11 +152,11 @@ msgstr "Ветар"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "Апликација са светлом темом"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "Апликација са тамном темом"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -169,9 +165,8 @@ msgid "'Default'"
 msgstr "'Подразумевано'"
 
 #: data/resources/about.blp:7
-#, fuzzy
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Право на копирање 2020-2021 Rafael Mardojai CM"
+msgstr "Право на копирање 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:15
@@ -195,13 +190,12 @@ msgid "Behavior"
 msgstr "Понашање"
 
 #: data/resources/preferences.blp:18
-#, fuzzy
 msgid "Autostart in Background"
 msgstr "Самопокрени у позадини"
 
 #: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "Увек почни паузиран"
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
@@ -261,16 +255,15 @@ msgstr "Додај шаблон"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
-msgstr ""
+msgstr "Главни мени"
 
 #: data/resources/window.blp:67
 msgid "Volume Menu"
-msgstr ""
+msgstr "Мени јачине звука"
 
 #: data/resources/window.blp:84
-#, fuzzy
 msgid "Sounds Menu"
-msgstr "Звукове снимили"
+msgstr "Мени звукова"
 
 #: data/resources/window.blp:98
 #, fuzzy
@@ -283,16 +276,15 @@ msgstr "О Ћебенцету"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr ""
+msgstr "Ресетуј звукове"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
-msgstr ""
+msgstr "Сакри неактиве звукове"
 
 #: data/resources/window.blp:151
-#, fuzzy
 msgid "Save as New Preset…"
-msgstr "Сачувани шаблони"
+msgstr "Сачувај као нови шаблон…"
 
 #: data/resources/window.blp:157
 #, fuzzy
@@ -300,12 +292,14 @@ msgid "Add Sound…"
 msgstr "Додај прилагођени звук"
 
 #: data/resources/window.blp:212
+#, fuzzy
 msgid "Paused to save power"
-msgstr ""
+msgstr "Паузирај да чуваш енергију"
 
 #: data/resources/window.blp:214
+#, fuzzy
 msgid "_Resume Playing"
-msgstr ""
+msgstr "_Настави пуштање"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -333,7 +327,7 @@ msgstr "Иконица програма"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "Изворни код"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -357,8 +351,9 @@ msgstr "Захтев за самопокретањем није успео."
 
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
+#, fuzzy
 msgid "Ok"
-msgstr ""
+msgstr "У реду"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
@@ -375,17 +370,18 @@ msgstr ""
 "Ћебенце па покушајте поново."
 
 #: blanket/window.py:133
+#, fuzzy
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "Звук аутоматски уклоњен"
 
 #: blanket/window.py:135
-#, python-brace-format
+#, fuzzy, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "Звук {name} више није доступан, па је зато уклоњен"
 
 #: blanket/window.py:138
 msgid "Accept"
-msgstr ""
+msgstr "Прихвати"
 
 #. type: ignore
 #: blanket/window.py:179
@@ -395,7 +391,7 @@ msgstr "Отвори аудио"
 #. Add new sound item
 #: blanket/window.py:246
 msgid "Add…"
-msgstr ""
+msgstr "Додај…"
 
 #: blanket/widgets/preset_dialog.py:29
 #, fuzzy
@@ -408,7 +404,7 @@ msgstr "Уреди шаблон"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
+msgstr "Уклони"
 
 #~ msgid "Rafael Mardojai CM"
 #~ msgstr "Rafael Mardojai CM"
