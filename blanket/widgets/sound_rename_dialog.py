@@ -42,7 +42,7 @@ class SoundRenameDialog(Adw.Dialog):
     def _on_entry_changed(self, _entry):
         name = self.__get_name()
 
-        if self.sound is not None and self.sound.name == name:
+        if self.sound is not None and (self.sound.name == name or name in Settings.get().custom_audios):
             self.accept_btn.set_sensitive(False)
             return
 
