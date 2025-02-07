@@ -223,15 +223,11 @@ class Application(Adw.Application):
 
     def on_rename_sound(self, _action, index_variant: GLib.Variant):
         # Open edit dialog
-        app = Gio.Application.get_default()
-        if app:
-            window = app.get_active_window()  # type: ignore
-            if window:
-                index = index_variant.get_uint32()
-                sound = MainPlayer.get().get_by_index(index)
-                if sound and index:
-                    dialog = SoundRenameDialog(sound, index)
-                    dialog.present(window)
+        index = index_variant.get_uint32()
+        sound = MainPlayer.get().get_by_index(index)
+        if sound and index:
+            dialog = SoundRenameDialog(sound, index)
+            dialog.present(self.window)
 
     def on_background(self, action, value):
         action.set_state(value)
