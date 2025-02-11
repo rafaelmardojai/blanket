@@ -8,8 +8,9 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2025-01-17 19:00+0000\n"
-"Last-Translator: Jakub Fabijan <jakubfabijan@tuta.io>\n"
+"PO-Revision-Date: 2025-02-11 20:34+0000\n"
+"Last-Translator: \"Fredy Ivan Sucari-Callohuanca (fredsu92)\" "
+"<fredsu92@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/blanket/"
 "blanket/eo/>\n"
 "Language: eo\n"
@@ -73,7 +74,7 @@ msgstr "MPRIS-integrado"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
-msgstr ""
+msgstr "Sonoroj inkluditaj en la aplikaĵo:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -147,11 +148,11 @@ msgstr "Vento"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "La defaŭlta ekrano en klara temo"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "La defaŭlta ekrano en nokta temo"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -187,7 +188,7 @@ msgstr "Aŭtolanĉi en la fono"
 
 #: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "Ĉiam komenci en paŭzo"
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
