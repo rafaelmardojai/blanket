@@ -22,7 +22,7 @@ Improve focus and increase your productivity by listening to different sounds. O
 
 ## Install
 
-<a href="https://flathub.org/apps/details/com.rafaelmardojai.Blanket"><img width="200" alt="Download on Flathub" src="https://flathub.org/assets/badges/flathub-badge-en.png"/></a>
+<a href="https://flathub.org/apps/details/com.rafaelmardojai.Blanket"><img width="200" alt="Download on Flathub" src="https://flathub.org/api/badge?svg&locale=en"/></a>
 
 ### Third Party Packages 
 
@@ -45,7 +45,7 @@ You can clone and run from GNOME Builder.
 - Python 3 `python`
 - PyGObject `python-gobject`
 - GTK4 `gtk4`
-- libadwaita (>= 1.1.0) `libadwaita`
+- libadwaita (>= 1.5.0) `libadwaita`
 - GStreamer 1.0 `gstreamer`
 - Meson `meson`
 - Ninja `ninja`
@@ -72,3 +72,9 @@ For detailed information about sounds licensing, [check this file](https://githu
 
 ## Donate
 If you want to support my work, you can donate me, [here you can find how](https://rafaelmardojai.com/donate/).
+
+## Related Projects
+- [Blankie](https://github.com/codybrom/blankie) - Native macOS app inspired by Blanket
+- [feeltheblow](https://feeltheblow.web.app/) - Web App inspired by Blanket
+- [Soothing Noise Player](https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/) - Android app inspired by Blanket
+- [Blanket Web](https://apps.roanapur.de/blanket/) - Web clone of Blanket

@@ -1,52 +1,49 @@
-# Georgian Translation for Blanket
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the blanket package.
-# Jacob Gogichaishvili <jggsecondary@gmail.com>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-08-10 04:09+0000\n"
-"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
-"Language-Team: Georgian <https://hosted.weblate.org/projects/blanket/blanket/"
-"ka/>\n"
-"Language: ka\n"
+"PO-Revision-Date: 2025-02-05 23:01+0000\n"
+"Last-Translator: \"Emilio S.\" <emism.translations@gmail.com>\n"
+"Language-Team: Interlingua <https://hosted.weblate.org/projects/blanket/"
+"blanket/ia/>\n"
+"Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
 #: blanket/mpris.py:156
 msgid "Blanket"
-msgstr "საბანი"
+msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
 #: blanket/mpris.py:154
 msgid "Listen to different sounds"
-msgstr "მოუსმინეთ სხვადასხვა ხმებს"
+msgstr "Ascolta sonos differente"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "კონცენტრირება;ფოქუსი;ხმა;პროდუქტიოლობა;ძილი;"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "მოუსმინეთ სხვადასხვა ხმებს"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
-"გააუმჯობესეთ ფოკუსი და გაზარდეთ თქვენი პროდუქტიულობა სხვადასხვა ხმების "
-"მოსმენით"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
@@ -54,26 +51,23 @@ msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
-msgstr "თვისებები:"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
-#, fuzzy
 msgid "Save presets"
-msgstr "შენახული არჩევნები"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
-#, fuzzy
 msgid "Add custom sounds"
-msgstr "თქვენი ხმების დამატება"
+msgstr "Adder sonos personalisate"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
-#, fuzzy
 msgid "Auto start in background"
-msgstr "აპლიკაციის ავტომატური ჩართვა"
+msgstr "Initio automatic in secunde plano"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "Integration MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
@@ -82,73 +76,72 @@ msgstr ""
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
 msgid "Birds"
-msgstr "ჩიტები"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:21 blanket/define.py:26
 #: blanket/define.py:54 blanket/define.py:73
 msgid "Boat"
-msgstr "ნავი"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:22 blanket/define.py:27
 #: blanket/define.py:55 blanket/define.py:74
 msgid "City"
-msgstr "ქალაქი"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:23 blanket/define.py:33
 #: blanket/define.py:61
-#, fuzzy
 msgid "Coffee Shop"
-msgstr "კაფე"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:24 blanket/define.py:34
 #: blanket/define.py:53
 msgid "Fireplace"
-msgstr "ბუხარი"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/define.py:40
 #: blanket/define.py:62
 msgid "Pink Noise"
-msgstr "ვარდისფერი ხმაური"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:26 blanket/define.py:13
 #: blanket/define.py:51 blanket/define.py:70
 msgid "Rain"
-msgstr "წვიმა"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:27 blanket/define.py:19
 #: blanket/define.py:59
 msgid "Summer Night"
-msgstr "ზაფხულის ღამე"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:28 blanket/define.py:14
 #: blanket/define.py:52 blanket/define.py:71
 msgid "Storm"
-msgstr "ჭექა-ქუხილი"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/define.py:17
 #: blanket/define.py:56
 msgid "Stream"
-msgstr "ნაკადი"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/define.py:25
 #: blanket/define.py:64
 msgid "Train"
-msgstr "მატარებელი"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:31 blanket/define.py:16
 #: blanket/define.py:60 blanket/define.py:72
 msgid "Waves"
-msgstr "ტალღები"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:32 blanket/define.py:41
 #: blanket/define.py:57
 msgid "White Noise"
-msgstr "თეტრი ხმაური"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:33 blanket/define.py:15
 #: blanket/define.py:63 blanket/define.py:75
 msgid "Wind"
-msgstr "წარი"
+msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
 msgid "The default screen in light theme"
@@ -162,116 +155,109 @@ msgstr ""
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr "ნაგულისხმევი"
+msgstr ""
 
 #: data/resources/about.blp:7
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "საავტორო უფლებებები 2020-2022 რაფაელ მარდოჯაი ც.მ"
+msgstr ""
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "Jacob Gogichaishvili <iakob.gogichaishvili@gmail.com>"
+msgstr ""
 
 #: data/resources/preferences.blp:7
 msgid "Appearance"
-msgstr "გარეგნობა"
+msgstr "Apparentia"
 
 #: data/resources/preferences.blp:10
 msgid "Dark Mode"
-msgstr "მუქი რეჟიმი"
+msgstr "Modo obscur"
 
 #: data/resources/preferences.blp:15
 msgid "Behavior"
-msgstr "მოქმედეა"
+msgstr "Comportamento"
 
 #: data/resources/preferences.blp:18
-#, fuzzy
 msgid "Autostart in Background"
-msgstr "აპლიკაციის ავტომატური ჩართვა"
+msgstr "Initiar automaticamente in secunde plano"
 
 #: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "Sempre initiar in pausa"
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
-msgstr "გაუქმება"
+msgstr "Cancellar"
 
 #: data/resources/preset-dialog.blp:29
 msgid "Save"
-msgstr "შენახვა"
+msgstr "Salvar"
 
 #: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
-msgstr "არჩევნების სახელი"
+msgstr ""
 
 #: data/resources/preset-row.blp:32
 msgid "Rename Preset"
-msgstr "არჩევნების სახელის შეცვლა"
+msgstr ""
 
 #: data/resources/preset-row.blp:43
 msgid "Delete Preset"
-msgstr "არჩევნების წაშლა"
+msgstr ""
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
-msgstr "ძირითადი"
+msgstr "General"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
-#, fuzzy
 msgid "Play/Pause Sounds"
-msgstr "დაკვრა/პაუზა ხმების"
+msgstr ""
 
 #: data/resources/shortcuts.blp:17
-#, fuzzy
 msgid "Add Custom Sound"
-msgstr "თქვენი ხმების დამატება"
+msgstr "Adder sono personalisate"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
-msgstr "დახურვა"
+msgstr "Clauder fenestra"
 
 #: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
-msgstr "პარამეტრები"
+msgstr "Preferentias"
 
 #: data/resources/shortcuts.blp:32 data/resources/window.blp:110
 msgid "Keyboard Shortcuts"
-msgstr "კლავიატურის მალსახმობები"
+msgstr "Commandos curte de claviero"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:122
 msgid "Quit"
-msgstr "მთილიანად დახურვა"
+msgstr "Quitar"
 
 #: data/resources/window.blp:24
-#, fuzzy
 msgid "Presets Menu"
-msgstr "არჩევმენოს შენახვა"
+msgstr ""
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
-msgstr ""
+msgstr "Menu principal"
 
 #: data/resources/window.blp:67
 msgid "Volume Menu"
-msgstr ""
+msgstr "Menu de volumine"
 
 #: data/resources/window.blp:84
-#, fuzzy
 msgid "Sounds Menu"
-msgstr "ხმები ამათგან"
+msgstr "Menu de sonos"
 
 #: data/resources/window.blp:98
-#, fuzzy
 msgid "Keep Playing when Closed"
-msgstr "დახურვისას დაკვრის განაგრძობა"
+msgstr ""
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
-msgstr "საბანის შესახებ"
+msgstr "A proposito de Blanket"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
@@ -283,11 +269,11 @@ msgstr ""
 
 #: data/resources/window.blp:151
 msgid "Save as New Preset…"
-msgstr "შენახვა ახალი პრესეტის სახით…"
+msgstr ""
 
 #: data/resources/window.blp:157
 msgid "Add Sound…"
-msgstr "ხმის დამატება…"
+msgstr "Adder sono…"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
@@ -295,72 +281,70 @@ msgstr ""
 
 #: data/resources/window.blp:214
 msgid "_Resume Playing"
-msgstr ""
+msgstr "_Resumer reproduction"
 
 #: blanket/define.py:11
 msgid "Nature"
-msgstr "ბუნება"
+msgstr ""
 
 #: blanket/define.py:23
 msgid "Travel"
-msgstr "მოგზაურობა"
+msgstr ""
 
 #: blanket/define.py:31
 msgid "Interiors"
-msgstr "შენონების შიგნით"
+msgstr ""
 
 #: blanket/define.py:38
 msgid "Noise"
-msgstr "ბგერევი"
+msgstr ""
 
 #: blanket/define.py:48
 msgid "Sounds icons"
-msgstr "ხმების ხატულები"
+msgstr "Icones de sonos"
 
 #: blanket/define.py:48
 msgid "App icon"
-msgstr "აპლიკაციის ხატულა"
+msgstr "Icone de application"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr ""
+msgstr "Codice fonte"
 
 #: blanket/main.py:239
 msgid "Sounds by"
-msgstr "ხმები ამათგან"
+msgstr "Sonos per"
 
 #: blanket/main.py:240
 msgid "Sounds edited by"
-msgstr "ხმების რედაქტირება ამათგან"
+msgstr ""
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "საბანის ავტომატური ჩართვა."
+msgstr ""
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
-msgstr "მოთხოვნა ვერ მოხერხდა"
+msgstr ""
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
-msgstr "ავტოჩართვის მოთხოვნა ვერ მოხერხდა."
+msgstr ""
 
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "De accordo"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
-msgstr "ავტორიზაცია ვერ მოხერხდა"
+msgstr ""
 
 #: blanket/preferences.py:124
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"დარწმუნდით, რო Blanket-ს აქვს უფლება, ფონურად გაეშვას. მენიუში: მორგება → "
-"აპლიკაციები → Blanket და თავიდან სცადეთ."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
@@ -373,60 +357,26 @@ msgstr ""
 
 #: blanket/window.py:138
 msgid "Accept"
-msgstr ""
+msgstr "Acceptar"
 
 #. type: ignore
 #: blanket/window.py:179
 msgid "Open audio"
-msgstr "აუდიოს გახსნა"
+msgstr "Aperir audio"
 
 #. Add new sound item
 #: blanket/window.py:246
 msgid "Add…"
-msgstr ""
+msgstr "Adder…"
 
 #: blanket/widgets/preset_dialog.py:29
-#, fuzzy
 msgid "New Preset"
-msgstr "არჩევმენოს შენახვა"
+msgstr ""
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
-msgstr "არჩევნების რედაქტირება"
+msgstr ""
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
-msgstr ""
-
-#~ msgid "Rafael Mardojai CM"
-#~ msgstr "Rafael Mardojai CM"
-
-#, fuzzy
-#~ msgid "Keyboard Shortcus"
-#~ msgstr "კლავიატურის მალსახმობები"
-
-#, fuzzy
-#~ msgid "Add Preset…"
-#~ msgstr "არჩევმენოს შენახვა"
-
-#~ msgid "Reset Volume Levels"
-#~ msgstr "ხმის დონების დაბრუნება"
-
-#~ msgid "Add custom sound"
-#~ msgstr "თქვენი ხმების დამატება"
-
-#~ msgid "Custom"
-#~ msgstr "მორგებული"
-
-#~ msgid "Add Preset"
-#~ msgstr "არჩევმენოს შენახვა"
-
-#~ msgid "Create"
-#~ msgstr "შექმნა"
-
-#, fuzzy
-#~ msgid "Pink noise"
-#~ msgstr "ვარდისფერი ხმაური"
-
-#~ msgid "Add Preset..."
-#~ msgstr "არჩევნების შენახვა…"
+msgstr "Remover"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:16-0500\n"
+"POT-Creation-Date: 2024-04-07 19:36-0500\n"
 "PO-Revision-Date: 2023-02-16 03:00+0000\n"
 "Last-Translator: Rafael Mardojai CM <mardojai.cardenas@gmail.com>, 2023\n"
 "Language-Team: Nepali (https://app.transifex.com/rafaelmardojai/teams/135055/"
@@ -24,12 +24,12 @@ msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
-#: blanket/mpris.py:155
+#: blanket/mpris.py:156
 msgid "Blanket"
 msgstr "Blanket"
 
-#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
-#: blanket/mpris.py:153
+#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
+#: blanket/mpris.py:154
 msgid "Listen to different sounds"
 msgstr "बिभिन्न आवाज सुन्नुहोस्"
 
@@ -149,10 +149,13 @@ msgstr "सेतो आवाज"
 msgid "Wind"
 msgstr "हावा"
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:40
-#: data/resources/about.blp:9
-msgid "Rafael Mardojai CM"
-msgstr "राफेल मार्डोजाई सीएम"
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
+msgid "The default screen in light theme"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
+msgid "The default screen in dark theme"
+msgstr ""
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -160,47 +163,47 @@ msgctxt "visible-name"
 msgid "'Default'"
 msgstr "'पूर्वनिर्धारित'"
 
-#: data/resources/about.blp:8
+#: data/resources/about.blp:7
 #, fuzzy
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
 msgstr "प्रतिलिपि अधिकार २०२०-२०२१ राफेल मार्डोजाई सीएम"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
-#: data/resources/about.blp:16
+#: data/resources/about.blp:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr "IBA4 <nabin7076@protonmail.com>"
 
-#: data/resources/preferences.blp:12
+#: data/resources/preferences.blp:7
 msgid "Appearance"
 msgstr "उपस्थिती"
 
-#: data/resources/preferences.blp:15
+#: data/resources/preferences.blp:10
 msgid "Dark Mode"
 msgstr "डार्क मोड"
 
-#: data/resources/preferences.blp:20
+#: data/resources/preferences.blp:15
 msgid "Behavior"
 msgstr "व्यवहार"
 
-#: data/resources/preferences.blp:23
+#: data/resources/preferences.blp:18
 #, fuzzy
 msgid "Autostart in Background"
 msgstr "पृष्ठभूमिमा अटोस्टार्ट होस्।"
 
-#: data/resources/preferences.blp:27
+#: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
 msgstr ""
 
-#: data/resources/preset-dialog.blp:24
+#: data/resources/preset-dialog.blp:21
 msgid "Cancel"
 msgstr "रद्द गर्नुहोस्"
 
-#: data/resources/preset-dialog.blp:32
+#: data/resources/preset-dialog.blp:29
 msgid "Save"
 msgstr "सेभ"
 
-#: data/resources/preset-dialog.blp:43
+#: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
 msgstr "प्रिसेटको नाम"
 
@@ -216,7 +219,7 @@ msgstr "प्रिसेटहरु मेटाऊनुहोस्"
 msgid "General"
 msgstr "साधारण"
 
-#: data/resources/shortcuts.blp:12 data/resources/window.blp:67
+#: data/resources/shortcuts.blp:12 data/resources/window.blp:76
 #, fuzzy
 msgid "Play/Pause Sounds"
 msgstr "आवाजहरू प्ले / पज  गर्ने"
@@ -231,69 +234,69 @@ msgstr "आफू अनुकूल ध्वनि थप्नुहोस्
 msgid "Close Window"
 msgstr "विन्डो बन्द गर्नुहोस्"
 
-#: data/resources/shortcuts.blp:27 data/resources/window.blp:96
+#: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
 msgstr "अभिरुचिहरु"
 
-#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:110
 msgid "Keyboard Shortcuts"
 msgstr "कीबोर्ड शर्टकटहरू"
 
-#: data/resources/shortcuts.blp:37 data/resources/window.blp:113
+#: data/resources/shortcuts.blp:37 data/resources/window.blp:122
 msgid "Quit"
 msgstr "छोड्नुहोस्"
 
-#: data/resources/window.blp:15
+#: data/resources/window.blp:24
 #, fuzzy
 msgid "Presets Menu"
 msgstr "प्रिसेटहरु"
 
-#: data/resources/window.blp:22
+#: data/resources/window.blp:31
 msgid "Main Menu"
 msgstr ""
 
-#: data/resources/window.blp:58
+#: data/resources/window.blp:67
 msgid "Volume Menu"
 msgstr ""
 
-#: data/resources/window.blp:75
+#: data/resources/window.blp:84
 #, fuzzy
 msgid "Sounds Menu"
 msgstr "ध्वनि"
 
-#: data/resources/window.blp:89
+#: data/resources/window.blp:98
 #, fuzzy
 msgid "Keep Playing when Closed"
 msgstr "बन्द हुँदा पनि बजाई राख्नुहोस्"
 
-#: data/resources/window.blp:106
+#: data/resources/window.blp:115
 msgid "About Blanket"
 msgstr "Blanketको बारेमा"
 
-#: data/resources/window.blp:128
+#: data/resources/window.blp:137
 msgid "Reset Sounds"
 msgstr ""
 
-#: data/resources/window.blp:137
+#: data/resources/window.blp:146
 #, fuzzy
 msgid "Hide Inactive Sounds"
 msgstr "समावेश गरिएको ध्वनिहरू:"
 
-#: data/resources/window.blp:142
+#: data/resources/window.blp:151
 #, fuzzy
 msgid "Save as New Preset…"
 msgstr "प्रिसेटहरू सुरक्षित गर्नुहोस्"
 
-#: data/resources/window.blp:148
+#: data/resources/window.blp:157
 #, fuzzy
 msgid "Add Sound…"
 msgstr "आफू अनुकूल ध्वनि थप्नुहोस्..."
 
-#: data/resources/window.blp:203
+#: data/resources/window.blp:212
 msgid "Paused to save power"
 msgstr ""
 
-#: data/resources/window.blp:205
+#: data/resources/window.blp:214
 msgid "_Resume Playing"
 msgstr ""
 
@@ -321,11 +324,15 @@ msgstr "ध्वनि आइकनहरु"
 msgid "App icon"
 msgstr "एप आइकन"
 
-#: blanket/main.py:242
+#: blanket/main.py:238
+msgid "Source Code"
+msgstr ""
+
+#: blanket/main.py:239
 msgid "Sounds by"
 msgstr "ध्वनि"
 
-#: blanket/main.py:243
+#: blanket/main.py:240
 msgid "Sounds edited by"
 msgstr "ध्वनि सम्पादन"
 
@@ -333,48 +340,53 @@ msgstr "ध्वनि सम्पादन"
 msgid "Autostart Blanket in background."
 msgstr "Blanket पृष्ठभूमिमा अटोस्टार्ट होस्।"
 
-#: blanket/preferences.py:110 blanket/preferences.py:149
+#: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
 msgstr "अनुरोध त्रुटि"
 
-#: blanket/preferences.py:114 blanket/preferences.py:153
+#: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
 msgstr "अटोस्टार्ट अनुरोध असफल भयो।"
 
-#: blanket/preferences.py:134
+#: blanket/preferences.py:108 blanket/preferences.py:125
+#: blanket/preferences.py:129
+msgid "Ok"
+msgstr ""
+
+#: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "प्राधिकरण असफल भयो"
 
-#: blanket/preferences.py:139
+#: blanket/preferences.py:124
+#, fuzzy
 msgid ""
-"Make sure Blanket has permission to run in \n"
-"the background in Settings → Applications → \n"
-"Blanket and try again."
+"Make sure Blanket has permission to run in the background in Settings → "
+"Applications → Blanket and try again."
 msgstr ""
 "सेटिंग्समा निश्चित गर्नुहोस् कि Blanketलाई \n"
 "पृष्ठभूमिमा चल्न अनुमति छ Settings → Applications → \n"
 "Blanket and try again."
 
-#: blanket/window.py:134
+#: blanket/window.py:133
 msgid "Sound Automatically Removed"
 msgstr ""
 
-#: blanket/window.py:136
+#: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
 msgstr ""
 
-#: blanket/window.py:139
+#: blanket/window.py:138
 msgid "Accept"
 msgstr ""
 
 #. type: ignore
-#: blanket/window.py:178
+#: blanket/window.py:179
 msgid "Open audio"
 msgstr "अडियो खोल्नुहोस्"
 
 #. Add new sound item
-#: blanket/window.py:235
+#: blanket/window.py:246
 msgid "Add…"
 msgstr ""
 
@@ -390,6 +402,9 @@ msgstr "प्रिसेट सम्पादन गर्नुहोस्"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr ""
+
+#~ msgid "Rafael Mardojai CM"
+#~ msgstr "राफेल मार्डोजाई सीएम"
 
 #, fuzzy
 #~ msgid "Keyboard Shortcus"

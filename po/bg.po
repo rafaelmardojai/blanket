@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-09-15 04:23+0000\n"
-"Last-Translator: UrtsiSantsi <urtsi.santsi@proton.me>\n"
+"POT-Creation-Date: 2024-04-07 19:36-0500\n"
+"PO-Revision-Date: 2024-04-16 21:27+0000\n"
+"Last-Translator: twlvnn <kraft_werk@tutanota.com>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/blanket/"
 "blanket/bg/>\n"
 "Language: bg\n"
@@ -17,16 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.1-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
-#: blanket/mpris.py:155
+#: blanket/mpris.py:156
 msgid "Blanket"
 msgstr "Одеяло"
 
-#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
-#: blanket/mpris.py:153
+#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
+#: blanket/mpris.py:154
 msgid "Listen to different sounds"
 msgstr "Слушайте различни звуци"
 
@@ -34,8 +34,8 @@ msgstr "Слушайте различни звуци"
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
 msgstr ""
-"Концентрация;Фокус;Шум;Продуктивност;Сън;Concentrate;Focus;Noise;Productivity"
-";Sleep;"
+"Концентрация;Фокус;Шум;Продуктивност;Сън;Concentrate;Focus;Noise;"
+"Productivity;Sleep;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
 msgid "Listen to ambient sounds"
@@ -71,7 +71,7 @@ msgstr "Автоматично стартиране във фонов режим
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr "Интграция с MPRIS"
+msgstr "Интеграция с MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
@@ -147,10 +147,13 @@ msgstr "Бял шум"
 msgid "Wind"
 msgstr "Вятър"
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:40
-#: data/resources/about.blp:9
-msgid "Rafael Mardojai CM"
-msgstr "Rafael Mardojai CM"
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
+msgid "The default screen in light theme"
+msgstr "Стандартния екран в светлата тема"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
+msgid "The default screen in dark theme"
+msgstr "Стандартния екран в тъмната тема"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -158,45 +161,45 @@ msgctxt "visible-name"
 msgid "'Default'"
 msgstr "'Стандартен'"
 
-#: data/resources/about.blp:8
+#: data/resources/about.blp:7
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
 msgstr "Авторски права 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
-#: data/resources/about.blp:16
+#: data/resources/about.blp:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr "Urtsi Santsi <urtsi.santsi@proton.me>"
 
-#: data/resources/preferences.blp:12
+#: data/resources/preferences.blp:7
 msgid "Appearance"
 msgstr "Външен вид"
 
-#: data/resources/preferences.blp:15
+#: data/resources/preferences.blp:10
 msgid "Dark Mode"
 msgstr "Тъмен режим"
 
-#: data/resources/preferences.blp:20
+#: data/resources/preferences.blp:15
 msgid "Behavior"
 msgstr "Поведение"
 
-#: data/resources/preferences.blp:23
+#: data/resources/preferences.blp:18
 msgid "Autostart in Background"
 msgstr "Автоматично стартиране във фонов режим"
 
-#: data/resources/preferences.blp:27
+#: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
 msgstr "Винаги започвай на пауза"
 
-#: data/resources/preset-dialog.blp:24
+#: data/resources/preset-dialog.blp:21
 msgid "Cancel"
 msgstr "Отмяна"
 
-#: data/resources/preset-dialog.blp:32
+#: data/resources/preset-dialog.blp:29
 msgid "Save"
 msgstr "Запазване"
 
-#: data/resources/preset-dialog.blp:43
+#: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
 msgstr "Име на шаблон"
 
@@ -212,7 +215,7 @@ msgstr "Изтрий шаблон"
 msgid "General"
 msgstr "Общи"
 
-#: data/resources/shortcuts.blp:12 data/resources/window.blp:67
+#: data/resources/shortcuts.blp:12 data/resources/window.blp:76
 msgid "Play/Pause Sounds"
 msgstr "Пускане/пауза на звуци"
 
@@ -224,63 +227,63 @@ msgstr "Добавете свои звуци"
 msgid "Close Window"
 msgstr "Затваряне на прозореца"
 
-#: data/resources/shortcuts.blp:27 data/resources/window.blp:96
+#: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
 msgstr "Настройки"
 
-#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:110
 msgid "Keyboard Shortcuts"
 msgstr "Клавишни комбинации"
 
-#: data/resources/shortcuts.blp:37 data/resources/window.blp:113
+#: data/resources/shortcuts.blp:37 data/resources/window.blp:122
 msgid "Quit"
 msgstr "Спиране на приложението"
 
-#: data/resources/window.blp:15
+#: data/resources/window.blp:24
 msgid "Presets Menu"
 msgstr "Меню за шаблони"
 
-#: data/resources/window.blp:22
+#: data/resources/window.blp:31
 msgid "Main Menu"
 msgstr "Главно меню"
 
-#: data/resources/window.blp:58
+#: data/resources/window.blp:67
 msgid "Volume Menu"
 msgstr "Меню за сила на звука"
 
-#: data/resources/window.blp:75
+#: data/resources/window.blp:84
 msgid "Sounds Menu"
 msgstr "Меню за звуци"
 
-#: data/resources/window.blp:89
+#: data/resources/window.blp:98
 msgid "Keep Playing when Closed"
 msgstr "Продължаване на възпроизвеждането при затваряне"
 
-#: data/resources/window.blp:106
+#: data/resources/window.blp:115
 msgid "About Blanket"
-msgstr "Относно \"Одеяло\""
+msgstr "Относно „Одеяло“"
 
-#: data/resources/window.blp:128
+#: data/resources/window.blp:137
 msgid "Reset Sounds"
 msgstr "Нулиране на нивата на звуците"
 
-#: data/resources/window.blp:137
+#: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
 msgstr "Скриване на неактивни звуци"
 
-#: data/resources/window.blp:142
+#: data/resources/window.blp:151
 msgid "Save as New Preset…"
 msgstr "Запазване като нов шаблон…"
 
-#: data/resources/window.blp:148
+#: data/resources/window.blp:157
 msgid "Add Sound…"
 msgstr "Добавяне на звук…"
 
-#: data/resources/window.blp:203
+#: data/resources/window.blp:212
 msgid "Paused to save power"
 msgstr "На пауза за пестене на енергия"
 
-#: data/resources/window.blp:205
+#: data/resources/window.blp:214
 msgid "_Resume Playing"
 msgstr "_Възобновяване на възпроизвеждането"
 
@@ -308,61 +311,67 @@ msgstr "Икони за звуци"
 msgid "App icon"
 msgstr "Икона на приложението"
 
-#: blanket/main.py:242
+#: blanket/main.py:238
+msgid "Source Code"
+msgstr "Изходен код"
+
+#: blanket/main.py:239
 msgid "Sounds by"
 msgstr "Звуци от"
 
-#: blanket/main.py:243
+#: blanket/main.py:240
 msgid "Sounds edited by"
 msgstr "Звуци, редактирани от"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "Автоматично стартиране на \"Одеяло\" във фонов режим."
+msgstr "Автоматично стартиране на „Одеяло“ във фонов режим."
 
-#: blanket/preferences.py:110 blanket/preferences.py:149
+#: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
 msgstr "Грешка в заявката"
 
-#: blanket/preferences.py:114 blanket/preferences.py:153
+#: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
 msgstr "Заявката за автоматично стартиране е неуспешна."
 
-#: blanket/preferences.py:134
+#: blanket/preferences.py:108 blanket/preferences.py:125
+#: blanket/preferences.py:129
+msgid "Ok"
+msgstr "Добре"
+
+#: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "Упълномощаването е неуспешно"
 
-#: blanket/preferences.py:139
+#: blanket/preferences.py:124
 msgid ""
-"Make sure Blanket has permission to run in \n"
-"the background in Settings → Applications → \n"
-"Blanket and try again."
+"Make sure Blanket has permission to run in the background in Settings → "
+"Applications → Blanket and try again."
 msgstr ""
-"Уверете се, че \"Одеяло\" има разрешение да\n"
-"работи във фонов режим в\n"
-"Настройки → Приложения → Одеяло и\n"
-"опитайте отново."
+"Уверете се, че „Одеяло“ има разрешение да работи във фонов режим в Настройки "
+"→ Приложения → Одеяло и опитайте отново."
 
-#: blanket/window.py:134
+#: blanket/window.py:133
 msgid "Sound Automatically Removed"
 msgstr "Автоматично премахнат звук"
 
-#: blanket/window.py:136
+#: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
 msgstr "Звукът {name} вече не е достъпен и затова е премахнат"
 
-#: blanket/window.py:139
+#: blanket/window.py:138
 msgid "Accept"
 msgstr "Приемане"
 
 #. type: ignore
-#: blanket/window.py:178
+#: blanket/window.py:179
 msgid "Open audio"
 msgstr "Отваряне на аудио"
 
 #. Add new sound item
-#: blanket/window.py:235
+#: blanket/window.py:246
 msgid "Add…"
 msgstr "Добавяне…"
 
@@ -377,3 +386,6 @@ msgstr "Редактиране на шаблон"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr "Премахване"
+
+#~ msgid "Rafael Mardojai CM"
+#~ msgstr "Rafael Mardojai CM"

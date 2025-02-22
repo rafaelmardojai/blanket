@@ -205,9 +205,7 @@ class Application(Adw.Application):
 
     def on_add_preset(self, _action, _param):
         dialog = PresetDialog()
-        dialog.set_transient_for(self.window)
-        dialog.set_modal(True)
-        dialog.present()
+        dialog.present(self.window)
 
     def on_remove_sound(self, _action, name: GLib.Variant):
         sound, index = MainPlayer.get().get_by_name(name.get_string())

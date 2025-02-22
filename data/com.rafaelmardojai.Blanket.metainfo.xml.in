@@ -39,15 +39,25 @@
   <url type="donation">https://rafaelmardojai.com/donate/</url>
   <url type="vcs-browser">https://github.com/rafaelmardojai/blanket</url>
   <!-- developer_name tag deprecated with Appstream 1.0 -->
-  <developer_name translatable="no">Rafael Mardojai CM</developer_name>
-  <developer id="github.com">
-      <name translatable="no">Rafael Mardojai CM</name>
+  <developer_name translate="no">Rafael Mardojai CM</developer_name>
+  <developer id="com.mardojai">
+      <name translate="no">Rafael Mardojai CM</name>
   </developer>
   <update_contact>email_AT_rafaelmardojai.com</update_contact>
   <content_rating type="oars-1.1" />
 
   <launchable type="desktop-id">com.rafaelmardojai.Blanket.desktop</launchable>
   <translation type="gettext">blanket</translation>
+  
+  <requires>
+    <internet>offline-only</internet>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </supports>
 
   <screenshots>
     <screenshot type="default">
@@ -63,9 +73,28 @@
     </screenshot>
   </screenshots>
 
+  <branding>
+    <color type="primary" scheme_preference="light">#c0dcff</color>
+    <color type="primary" scheme_preference="dark">#0d3d76</color>
+  </branding>
+
   <releases>
+    <release version="0.7.0" date="2024-04-07">
+      <description translate="no">
+        <ul>
+          <li>Redesign the user interface and use latest GNOME patterns</li>
+          <li>Inhibit suspension when playing</li>
+          <li>Pause playback if the system enters power saver mode</li>
+          <li>MPRIS: Implement Play, Pause and Stop methods in addition to PlayPause</li>
+          <li>MPRIS: Implement Next and Prev methods for navigating presets </li>
+          <li>Updated Pink Noise sample</li>
+          <li>Changed train sound</li>
+          <li>Added preference to always start on pause</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.6.0" date="2022-04-13">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>App ported to GTK 4 and libadwaita</li>
           <li>User interface refinements</li>
@@ -75,7 +104,7 @@
       </description>
     </release>
     <release version="0.5.0" date="2021-09-28">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Added new Presets feature</li>
           <li>Now you can toggle sounds by clicking the row</li>
@@ -97,7 +126,7 @@
       </description>
     </release>
     <release version="0.4.1" date="2021-04-26">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Added Turkish translation</li>
           <li>Added Occitan translation</li>
@@ -106,7 +135,7 @@
       </description>
     </release>
     <release version="0.4.0" date="2021-04-15">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Added autostart on background feature</li>
           <li>Added six new sounds</li>
@@ -125,7 +154,7 @@
       </description>
     </release>
     <release version="0.3.1" date="2020-09-12">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Added Brazilian Portuguese translation</li>
           <li>Bug fixes</li>
@@ -133,7 +162,7 @@
       </description>
     </release>
     <release version="0.3.0" date="2020-09-11">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Added play/pause action</li>
           <li>Added general volume control</li>
@@ -149,7 +178,7 @@
       </description>
     </release>
     <release version="0.2.0" date="2020-09-02">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Better White Noise</li>
           <li>Added Italian translation</li>
@@ -159,7 +188,7 @@
       </description>
     </release>
     <release version="0.1.0" date="2020-09-01">
-      <description translatable="no">
+      <description translate="no">
         <p>Initial release.</p>
       </description>
     </release>

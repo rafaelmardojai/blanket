@@ -119,6 +119,7 @@ class MPRIS(Server):
             <method name="PlayPause"/>
             <method name="Play"/>
             <method name="Pause"/>
+            <method name="Stop"/>
             <property name="PlaybackStatus" type="s" access="read"/>
             <property name="Metadata" type="a{sv}" access="read">
             </property>
@@ -183,6 +184,9 @@ class MPRIS(Server):
         self.app.on_play()
 
     def Pause(self):
+        self.app.on_pause()
+
+    def Stop(self):
         self.app.on_pause()
 
     def Get(self, interface, property_name):

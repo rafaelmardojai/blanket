@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-12-14 14:09+0000\n"
-"Last-Translator: Roxwize <biscordbro@gmail.com>\n"
+"POT-Creation-Date: 2024-04-07 19:36-0500\n"
+"PO-Revision-Date: 2024-06-24 11:09+0000\n"
+"Last-Translator: m3957 <m.grlic@outlook.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/blanket/blanket/"
 "fr/>\n"
 "Language: fr\n"
@@ -21,28 +21,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
 "1000000 == 0 ? 1 : 2;\n"
-"X-Generator: Weblate 5.3\n"
+"X-Generator: Weblate 5.6-rc\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
-#: blanket/mpris.py:155
+#: blanket/mpris.py:156
 msgid "Blanket"
 msgstr "Blanket"
 
-#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
-#: blanket/mpris.py:153
+#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
+#: blanket/mpris.py:154
 msgid "Listen to different sounds"
 msgstr "Écoutez différents sons d’ambiance"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Concentration ;Focus ;Bruit ;Productivité ;Sommeil ;"
+msgstr "Concentration;Focus;Bruit;Productivité;Sommeil;Bruit blanc;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
-#, fuzzy
 msgid "Listen to ambient sounds"
-msgstr "Écoutez différents sons d’ambiance"
+msgstr "Écoutez différentes ambiances sonores"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
@@ -50,7 +49,7 @@ msgid ""
 "ambient sounds"
 msgstr ""
 "Améliorez votre concentration et augmentez votre productivité en écoutant "
-"différents sons d'ambiance"
+"nos diverses ambiances sonores."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
@@ -58,7 +57,7 @@ msgstr "Peut aussi vous aider à vous endormir dans un environnement sonore."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
-msgstr "Fonctionnalités:"
+msgstr "Fonctionnalités :"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
@@ -77,9 +76,8 @@ msgid "MPRIS integration"
 msgstr "Intégration MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
-#, fuzzy
 msgid "Included Sounds in the App:"
-msgstr "Sons inclus :"
+msgstr "Sons inclus :"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -151,10 +149,14 @@ msgstr "Bruit blanc"
 msgid "Wind"
 msgstr "Vent"
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:40
-#: data/resources/about.blp:9
-msgid "Rafael Mardojai CM"
-msgstr "Rafael Mardojai CM"
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
+msgid "The default screen in light theme"
+msgstr "L'écran par défaut dans le thème clair"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
+#, fuzzy
+msgid "The default screen in dark theme"
+msgstr "L'écran principal en mode sombre"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -162,48 +164,47 @@ msgctxt "visible-name"
 msgid "'Default'"
 msgstr "'Par défaut'"
 
-#: data/resources/about.blp:8
+#: data/resources/about.blp:7
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Copyright 2020-2022 Rafael Mardojai CM"
+msgstr "Copyright 2020-2021 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
-#: data/resources/about.blp:16
+#: data/resources/about.blp:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr ""
 "Julien Humbert <julroy67@gmail.com>\n"
 "Romain F. T."
 
-#: data/resources/preferences.blp:12
+#: data/resources/preferences.blp:7
 msgid "Appearance"
 msgstr "Apparence"
 
-#: data/resources/preferences.blp:15
+#: data/resources/preferences.blp:10
 msgid "Dark Mode"
 msgstr "Mode sombre"
 
-#: data/resources/preferences.blp:20
+#: data/resources/preferences.blp:15
 msgid "Behavior"
 msgstr "Comportement"
 
-#: data/resources/preferences.blp:23
-#, fuzzy
+#: data/resources/preferences.blp:18
 msgid "Autostart in Background"
 msgstr "Démarrage automatique en arrière-plan"
 
-#: data/resources/preferences.blp:27
+#: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
 msgstr "Ne pas jouer les sons au démarrage"
 
-#: data/resources/preset-dialog.blp:24
+#: data/resources/preset-dialog.blp:21
 msgid "Cancel"
 msgstr "Annuler"
 
-#: data/resources/preset-dialog.blp:32
+#: data/resources/preset-dialog.blp:29
 msgid "Save"
 msgstr "Enregistrer"
 
-#: data/resources/preset-dialog.blp:43
+#: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
 msgstr "Nom du préréglage"
 
@@ -219,8 +220,7 @@ msgstr "Supprimer le préréglage"
 msgid "General"
 msgstr "Général"
 
-#: data/resources/shortcuts.blp:12 data/resources/window.blp:67
-#, fuzzy
+#: data/resources/shortcuts.blp:12 data/resources/window.blp:76
 msgid "Play/Pause Sounds"
 msgstr "Lire/Mettre en pause les sons"
 
@@ -229,73 +229,68 @@ msgid "Add Custom Sound"
 msgstr "Ajouter un son personnalisé"
 
 #: data/resources/shortcuts.blp:22
-#, fuzzy
 msgid "Close Window"
 msgstr "Fermer la fenêtre"
 
-#: data/resources/shortcuts.blp:27 data/resources/window.blp:96
+#: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
 msgstr "Préférences"
 
-#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:110
 msgid "Keyboard Shortcuts"
 msgstr "Raccourcis claviers"
 
-#: data/resources/shortcuts.blp:37 data/resources/window.blp:113
+#: data/resources/shortcuts.blp:37 data/resources/window.blp:122
 msgid "Quit"
 msgstr "Quitter"
 
-#: data/resources/window.blp:15
-#, fuzzy
+#: data/resources/window.blp:24
 msgid "Presets Menu"
-msgstr "Préréglages"
+msgstr "Menu des préréglages"
 
-#: data/resources/window.blp:22
+#: data/resources/window.blp:31
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: data/resources/window.blp:58
+#: data/resources/window.blp:67
 msgid "Volume Menu"
 msgstr "Volume"
 
-#: data/resources/window.blp:75
+#: data/resources/window.blp:84
 msgid "Sounds Menu"
 msgstr "Sons"
 
-#: data/resources/window.blp:89
-#, fuzzy
+#: data/resources/window.blp:98
 msgid "Keep Playing when Closed"
-msgstr "Continuer à lire après fermeture"
+msgstr "Continuer à lire après la fermeture"
 
-#: data/resources/window.blp:106
+#: data/resources/window.blp:115
 msgid "About Blanket"
 msgstr "À propos de Blanket"
 
-#: data/resources/window.blp:128
+#: data/resources/window.blp:137
 msgid "Reset Sounds"
 msgstr "Réinitialiser les sons"
 
-#: data/resources/window.blp:137
+#: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
 msgstr "Cacher les sons inactifs"
 
-#: data/resources/window.blp:142
-#, fuzzy
+#: data/resources/window.blp:151
 msgid "Save as New Preset…"
-msgstr "Sauvegarder les préréglages"
+msgstr "Enregistrer comme nouveau préréglage…"
 
-#: data/resources/window.blp:148
-#, fuzzy
+#: data/resources/window.blp:157
 msgid "Add Sound…"
-msgstr "Ajouter un son personnalisé..."
+msgstr "Ajouter un son…"
 
-#: data/resources/window.blp:203
+#: data/resources/window.blp:212
 msgid "Paused to save power"
-msgstr "Mis en pause pour économiser la batterie"
+msgstr "Mise en pause pour économiser la batterie"
 
-#: data/resources/window.blp:205
+#: data/resources/window.blp:214
 msgid "_Resume Playing"
-msgstr "_Continuer la lecture"
+msgstr "_Reprendre la lecture"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -321,11 +316,15 @@ msgstr "Icônes de sons"
 msgid "App icon"
 msgstr "Icône de l’application"
 
-#: blanket/main.py:242
+#: blanket/main.py:238
+msgid "Source Code"
+msgstr "Code source"
+
+#: blanket/main.py:239
 msgid "Sounds by"
 msgstr "Sons par"
 
-#: blanket/main.py:243
+#: blanket/main.py:240
 msgid "Sounds edited by"
 msgstr "Sons édités par"
 
@@ -333,48 +332,52 @@ msgstr "Sons édités par"
 msgid "Autostart Blanket in background."
 msgstr "Démarrer automatiquement Blanket en arrière-plan."
 
-#: blanket/preferences.py:110 blanket/preferences.py:149
+#: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
 msgstr "Erreur de requête"
 
-#: blanket/preferences.py:114 blanket/preferences.py:153
+#: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
 msgstr "La requête de démarrage automatique a échouée."
 
-#: blanket/preferences.py:134
+#: blanket/preferences.py:108 blanket/preferences.py:125
+#: blanket/preferences.py:129
+msgid "Ok"
+msgstr "Ok"
+
+#: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "Échec de l’autorisation"
 
-#: blanket/preferences.py:139
+#: blanket/preferences.py:124
 msgid ""
-"Make sure Blanket has permission to run in \n"
-"the background in Settings → Applications → \n"
-"Blanket and try again."
+"Make sure Blanket has permission to run in the background in Settings → "
+"Applications → Blanket and try again."
 msgstr ""
-"Assurez-vous que Blanket a la permission de s’exécuter en\n"
-"arrière-plan dans Paramètres → Applications →\n"
+"Assurez-vous que Blanket a la permission de s’exécuter en arrière-plan dans "
+"Paramètres → Applications →\n"
 "Blanket et réessayez."
 
-#: blanket/window.py:134
+#: blanket/window.py:133
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "Son automatiquement retiré"
 
-#: blanket/window.py:136
+#: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
 msgstr "Le son {name} n'est plus disponible et a donc été retiré"
 
-#: blanket/window.py:139
+#: blanket/window.py:138
 msgid "Accept"
 msgstr "Accepter"
 
 #. type: ignore
-#: blanket/window.py:178
+#: blanket/window.py:179
 msgid "Open audio"
 msgstr "Ouvrir l’audio"
 
 #. Add new sound item
-#: blanket/window.py:235
+#: blanket/window.py:246
 msgid "Add…"
 msgstr "Ajouter…"
 
@@ -389,6 +392,9 @@ msgstr "Modifier le préréglage"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr "Supprimer"
+
+#~ msgid "Rafael Mardojai CM"
+#~ msgstr "Rafael Mardojai CM"
 
 #, fuzzy
 #~ msgid "Keyboard Shortcus"

@@ -10,37 +10,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2024-02-19 17:01+0000\n"
+"POT-Creation-Date: 2024-04-07 19:36-0500\n"
+"PO-Revision-Date: 2024-06-27 20:09+0000\n"
 "Last-Translator: Archisman Panigrahi <apandada1@gmail.com>\n"
-"Language-Team: Bengali (India) <https://hosted.weblate.org/projects/blanket/"
-"blanket/bn_IN/>\n"
-"Language: bn_IN\n"
+"Language-Team: Bengali <https://hosted.weblate.org/projects/blanket/blanket/"
+"bn/>\n"
+"Language: bn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
-#: blanket/mpris.py:155
+#: blanket/mpris.py:156
 msgid "Blanket"
 msgstr "ব্ল্যাঙ্কেট"
 
-#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
-#: blanket/mpris.py:153
+#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
+#: blanket/mpris.py:154
 msgid "Listen to different sounds"
 msgstr "বিভিন্ন ধরনের শব্দ শুনুন"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "মনোনিবেশ;ফোকাস;শব্দ;কার্যক্ষমতা;ঘুম;"
+msgstr "মনোনিবেশ;একাগ্রতা;শব্দ;কার্যক্ষমতা;ঘুম;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
 msgid "Listen to ambient sounds"
-msgstr "বিভিন্ন ধরনের শব্দ শুনুন"
+msgstr "বিভিন্ন পারিপার্শ্বিক শব্দ শুনুন"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
@@ -134,7 +134,7 @@ msgstr "রেলগাড়ি"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:31 blanket/define.py:16
 #: blanket/define.py:60 blanket/define.py:72
 msgid "Waves"
-msgstr "ঢেউ"
+msgstr "ঊর্মিমালা"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:32 blanket/define.py:41
 #: blanket/define.py:57
@@ -146,10 +146,13 @@ msgstr "সাদা ধ্বনি"
 msgid "Wind"
 msgstr "বাতাস"
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:40
-#: data/resources/about.blp:9
-msgid "Rafael Mardojai CM"
-msgstr "রাফায়েল মার্দোহাই সিএম"
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
+msgid "The default screen in light theme"
+msgstr ""
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
+msgid "The default screen in dark theme"
+msgstr ""
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -157,45 +160,45 @@ msgctxt "visible-name"
 msgid "'Default'"
 msgstr "'পূর্বনির্ধারিত'"
 
-#: data/resources/about.blp:8
+#: data/resources/about.blp:7
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "স্বত্বাধিকার 2020-2021 রাফায়েল মার্দোহাই সিএম"
+msgstr "স্বত্বাধিকার 2020-2022 রাফায়েল মার্দোহাই সিএম"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
-#: data/resources/about.blp:16
+#: data/resources/about.blp:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr "অনুবাদ-কৃতিত্ব"
 
-#: data/resources/preferences.blp:12
+#: data/resources/preferences.blp:7
 msgid "Appearance"
 msgstr "রূপ"
 
-#: data/resources/preferences.blp:15
+#: data/resources/preferences.blp:10
 msgid "Dark Mode"
 msgstr "ডার্ক মোড"
 
-#: data/resources/preferences.blp:20
+#: data/resources/preferences.blp:15
 msgid "Behavior"
 msgstr "আচরণ"
 
-#: data/resources/preferences.blp:23
+#: data/resources/preferences.blp:18
 msgid "Autostart in Background"
 msgstr "ব্যাকগ্রাউন্ডে অটো স্টার্ট"
 
-#: data/resources/preferences.blp:27
+#: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
 msgstr "সর্বদা বিরত অবস্থায় শুরু করুন"
 
-#: data/resources/preset-dialog.blp:24
+#: data/resources/preset-dialog.blp:21
 msgid "Cancel"
 msgstr "বাতিল"
 
-#: data/resources/preset-dialog.blp:32
+#: data/resources/preset-dialog.blp:29
 msgid "Save"
 msgstr "সেভ"
 
-#: data/resources/preset-dialog.blp:43
+#: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
 msgstr "প্রিসেটের নাম"
 
@@ -211,7 +214,7 @@ msgstr "প্রিসেট ডিলিট"
 msgid "General"
 msgstr "সাধারণ"
 
-#: data/resources/shortcuts.blp:12 data/resources/window.blp:67
+#: data/resources/shortcuts.blp:12 data/resources/window.blp:76
 msgid "Play/Pause Sounds"
 msgstr "শব্দ চালু/বিরতি"
 
@@ -223,63 +226,63 @@ msgstr "নিজের মতো শব্দ যোগ করুন"
 msgid "Close Window"
 msgstr "উইন্ডো বন্ধ"
 
-#: data/resources/shortcuts.blp:27 data/resources/window.blp:96
+#: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
 msgstr "পছন্দসমূহ"
 
-#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:110
 msgid "Keyboard Shortcuts"
 msgstr "কীবোর্ড শর্টকাট"
 
-#: data/resources/shortcuts.blp:37 data/resources/window.blp:113
+#: data/resources/shortcuts.blp:37 data/resources/window.blp:122
 msgid "Quit"
 msgstr "প্রস্থান"
 
-#: data/resources/window.blp:15
+#: data/resources/window.blp:24
 msgid "Presets Menu"
 msgstr "প্রিসেট মেনু"
 
-#: data/resources/window.blp:22
+#: data/resources/window.blp:31
 msgid "Main Menu"
 msgstr "মূল মেনু"
 
-#: data/resources/window.blp:58
+#: data/resources/window.blp:67
 msgid "Volume Menu"
 msgstr "শব্দের মাত্রা"
 
-#: data/resources/window.blp:75
+#: data/resources/window.blp:84
 msgid "Sounds Menu"
 msgstr "বিভিন্ন শব্দ"
 
-#: data/resources/window.blp:89
+#: data/resources/window.blp:98
 msgid "Keep Playing when Closed"
 msgstr "বন্ধ করা হলেও শব্দ চালু থাক"
 
-#: data/resources/window.blp:106
+#: data/resources/window.blp:115
 msgid "About Blanket"
 msgstr "ব্ল্যাঙ্কেট সম্বন্ধে"
 
-#: data/resources/window.blp:128
+#: data/resources/window.blp:137
 msgid "Reset Sounds"
 msgstr "সমস্ত শব্দ পুনস্থাপন করুন"
 
-#: data/resources/window.blp:137
+#: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
 msgstr "নিষ্ক্রিয় শব্দসমূহ লুকান"
 
-#: data/resources/window.blp:142
+#: data/resources/window.blp:151
 msgid "Save as New Preset…"
 msgstr "প্রিসেট সেভ…"
 
-#: data/resources/window.blp:148
+#: data/resources/window.blp:157
 msgid "Add Sound…"
 msgstr "নিজের মতো শব্দ যোগ…"
 
-#: data/resources/window.blp:203
+#: data/resources/window.blp:212
 msgid "Paused to save power"
 msgstr "ব্যাটারি বাঁচাতে বিরতি"
 
-#: data/resources/window.blp:205
+#: data/resources/window.blp:214
 msgid "_Resume Playing"
 msgstr "_পুনরায় শব্দ চালু"
 
@@ -307,60 +310,67 @@ msgstr "শব্দের চিহ্ন"
 msgid "App icon"
 msgstr "অ্যাপের চিহ্ন"
 
-#: blanket/main.py:242
+#: blanket/main.py:238
+msgid "Source Code"
+msgstr "সোর্স কোড"
+
+#: blanket/main.py:239
 msgid "Sounds by"
 msgstr "শব্দের কৃতিত্ব"
 
-#: blanket/main.py:243
+#: blanket/main.py:240
 msgid "Sounds edited by"
 msgstr "শব্দ সম্পাদনায়"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "ব্লাঙ্কেটকে ব্যাকগ্রাউন্ডে অটো স্টার্ট করুন।"
+msgstr "ব্ল্যাঙ্কেটকে ব্যাকগ্রাউন্ডে অটো স্টার্ট করুন।"
 
-#: blanket/preferences.py:110 blanket/preferences.py:149
+#: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
 msgstr "প্রচেষ্টা ব্যর্থ"
 
-#: blanket/preferences.py:114 blanket/preferences.py:153
+#: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
 msgstr "অটো স্টার্ট প্রচেষ্টা ব্যর্থ হয়েছে।"
 
-#: blanket/preferences.py:134
+#: blanket/preferences.py:108 blanket/preferences.py:125
+#: blanket/preferences.py:129
+msgid "Ok"
+msgstr "আচ্ছা"
+
+#: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "অনুমোদন ব্যর্থ হয়েছে"
 
-#: blanket/preferences.py:139
+#: blanket/preferences.py:124
 msgid ""
-"Make sure Blanket has permission to run in \n"
-"the background in Settings → Applications → \n"
-"Blanket and try again."
+"Make sure Blanket has permission to run in the background in Settings → "
+"Applications → Blanket and try again."
 msgstr ""
-"ব্লাঙ্কেটের ব্যাকগ্রাউন্ডে চলার অনুমতি আছে কিনা \n"
-"তা সেটিংস → অ্যাপ্লিকেশন থেকে নিশ্চিত করুন \n"
-"এবং পুনরায় চেষ্টা করুন।"
+"ব্ল্যাঙ্কেটের ব্যাকগ্রাউন্ডে চলার অনুমতি আছে কিনা তা সেটিংস → অ্যাপ্লিকেশন "
+"থেকে নিশ্চিত করুন এবং পুনরায় চেষ্টা করুন।"
 
-#: blanket/window.py:134
+#: blanket/window.py:133
 msgid "Sound Automatically Removed"
 msgstr "শব্দটি স্বয়ংক্রিয়ভাবে মুছে দেওয়া হয়েছে"
 
-#: blanket/window.py:136
+#: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
 msgstr "{name} শব্দটি খুঁজে পাওয়া যাচ্ছে না, তাই দেখানো হল না"
 
-#: blanket/window.py:139
+#: blanket/window.py:138
 msgid "Accept"
-msgstr "মেনে নিলাম"
+msgstr "আচ্ছা, বেশ"
 
 #. type: ignore
-#: blanket/window.py:178
+#: blanket/window.py:179
 msgid "Open audio"
 msgstr "শব্দটি খুলুন"
 
 #. Add new sound item
-#: blanket/window.py:235
+#: blanket/window.py:246
 msgid "Add…"
 msgstr "যোগ করুন…"
 
@@ -375,6 +385,9 @@ msgstr "প্রিসেট সম্পাদনা"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr "মুছে ফেলা"
+
+#~ msgid "Rafael Mardojai CM"
+#~ msgstr "রাফায়েল মার্দোহাই সিএম"
 
 #, fuzzy
 #~ msgid "Keyboard Shortcus"

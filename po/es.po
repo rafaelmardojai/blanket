@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-09-16 15:41+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"POT-Creation-Date: 2024-04-07 19:36-0500\n"
+"PO-Revision-Date: 2024-06-04 23:10+0000\n"
+"Last-Translator: Pedro De la Iglesia <pedro.yt.99@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/blanket/blanket/"
 "es/>\n"
 "Language: es\n"
@@ -22,16 +22,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
 " ? 1 : 2);\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
-#: blanket/mpris.py:155
+#: blanket/mpris.py:156
 msgid "Blanket"
 msgstr "Blanket"
 
-#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
-#: blanket/mpris.py:153
+#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
+#: blanket/mpris.py:154
 msgid "Listen to different sounds"
 msgstr "Escuche diferentes sonidos"
 
@@ -150,10 +150,13 @@ msgstr "Ruido blanco"
 msgid "Wind"
 msgstr "Viento"
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:40
-#: data/resources/about.blp:9
-msgid "Rafael Mardojai CM"
-msgstr "Rafael Mardojai CM"
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
+msgid "The default screen in light theme"
+msgstr "La pantalla predeterminada en tema claro"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
+msgid "The default screen in dark theme"
+msgstr "La pantalla predeterminada en tema oscuro"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -161,45 +164,45 @@ msgctxt "visible-name"
 msgid "'Default'"
 msgstr "'Predeterminado'"
 
-#: data/resources/about.blp:8
+#: data/resources/about.blp:7
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
 msgstr "© 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
-#: data/resources/about.blp:16
+#: data/resources/about.blp:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr "Rafael Mardojai CM"
 
-#: data/resources/preferences.blp:12
+#: data/resources/preferences.blp:7
 msgid "Appearance"
 msgstr "Apariencia"
 
-#: data/resources/preferences.blp:15
+#: data/resources/preferences.blp:10
 msgid "Dark Mode"
 msgstr "Modo oscuro"
 
-#: data/resources/preferences.blp:20
+#: data/resources/preferences.blp:15
 msgid "Behavior"
 msgstr "Comportamiento"
 
-#: data/resources/preferences.blp:23
+#: data/resources/preferences.blp:18
 msgid "Autostart in Background"
 msgstr "Autoarranque en segundo plano"
 
-#: data/resources/preferences.blp:27
+#: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
 msgstr "Iniciar siempre en pausa"
 
-#: data/resources/preset-dialog.blp:24
+#: data/resources/preset-dialog.blp:21
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: data/resources/preset-dialog.blp:32
+#: data/resources/preset-dialog.blp:29
 msgid "Save"
 msgstr "Guardar"
 
-#: data/resources/preset-dialog.blp:43
+#: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
 msgstr "Nombre de preajuste"
 
@@ -215,7 +218,7 @@ msgstr "Eliminar preajuste"
 msgid "General"
 msgstr "General"
 
-#: data/resources/shortcuts.blp:12 data/resources/window.blp:67
+#: data/resources/shortcuts.blp:12 data/resources/window.blp:76
 msgid "Play/Pause Sounds"
 msgstr "Reproducir/pausar sonidos"
 
@@ -227,63 +230,63 @@ msgstr "Añadir sonido personalizado"
 msgid "Close Window"
 msgstr "Cerrar ventana"
 
-#: data/resources/shortcuts.blp:27 data/resources/window.blp:96
+#: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:110
 msgid "Keyboard Shortcuts"
 msgstr "Atajos de teclado"
 
-#: data/resources/shortcuts.blp:37 data/resources/window.blp:113
+#: data/resources/shortcuts.blp:37 data/resources/window.blp:122
 msgid "Quit"
 msgstr "Salir"
 
-#: data/resources/window.blp:15
+#: data/resources/window.blp:24
 msgid "Presets Menu"
 msgstr "Menú de preajustes"
 
-#: data/resources/window.blp:22
+#: data/resources/window.blp:31
 msgid "Main Menu"
 msgstr "Menú principal"
 
-#: data/resources/window.blp:58
+#: data/resources/window.blp:67
 msgid "Volume Menu"
 msgstr "Menú de volumen"
 
-#: data/resources/window.blp:75
+#: data/resources/window.blp:84
 msgid "Sounds Menu"
 msgstr "Menú de sonidos"
 
-#: data/resources/window.blp:89
+#: data/resources/window.blp:98
 msgid "Keep Playing when Closed"
 msgstr "Continuar reproduciendo al cerrar"
 
-#: data/resources/window.blp:106
+#: data/resources/window.blp:115
 msgid "About Blanket"
 msgstr "Acerca de Blanket"
 
-#: data/resources/window.blp:128
+#: data/resources/window.blp:137
 msgid "Reset Sounds"
 msgstr "Restablecer sonidos"
 
-#: data/resources/window.blp:137
+#: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
 msgstr "Ocultar sonidos inactivos"
 
-#: data/resources/window.blp:142
+#: data/resources/window.blp:151
 msgid "Save as New Preset…"
 msgstr "Guardar como nuevo preajuste…"
 
-#: data/resources/window.blp:148
+#: data/resources/window.blp:157
 msgid "Add Sound…"
 msgstr "Agregar sonido…"
 
-#: data/resources/window.blp:203
+#: data/resources/window.blp:212
 msgid "Paused to save power"
 msgstr "En pausa para ahorrar energía"
 
-#: data/resources/window.blp:205
+#: data/resources/window.blp:214
 msgid "_Resume Playing"
 msgstr "_Reanudar la reproducción"
 
@@ -311,11 +314,15 @@ msgstr "Iconos de sonidos"
 msgid "App icon"
 msgstr "Icono de aplicación"
 
-#: blanket/main.py:242
+#: blanket/main.py:238
+msgid "Source Code"
+msgstr "Código fuente"
+
+#: blanket/main.py:239
 msgid "Sounds by"
 msgstr "Sonidos por"
 
-#: blanket/main.py:243
+#: blanket/main.py:240
 msgid "Sounds edited by"
 msgstr "Sonidos editados por"
 
@@ -323,48 +330,51 @@ msgstr "Sonidos editados por"
 msgid "Autostart Blanket in background."
 msgstr "Iniciar automáticamente Blanket en segundo plano."
 
-#: blanket/preferences.py:110 blanket/preferences.py:149
+#: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
 msgstr "Error de solicitud"
 
-#: blanket/preferences.py:114 blanket/preferences.py:153
+#: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
 msgstr "La solicitud de inicio automático falló."
 
-#: blanket/preferences.py:134
+#: blanket/preferences.py:108 blanket/preferences.py:125
+#: blanket/preferences.py:129
+msgid "Ok"
+msgstr "Ok"
+
+#: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "Autorización fallida"
 
-#: blanket/preferences.py:139
+#: blanket/preferences.py:124
 msgid ""
-"Make sure Blanket has permission to run in \n"
-"the background in Settings → Applications → \n"
-"Blanket and try again."
+"Make sure Blanket has permission to run in the background in Settings → "
+"Applications → Blanket and try again."
 msgstr ""
-"Asegúrese de que Blanket tenga permiso para ejecutarse\n"
-"en segundo plano en Configuración → Aplicaciones →\n"
-"Blanket y vuelva a intentarlo."
+"Asegúrese de que Blanket tenga permiso para ejecutarse en segundo plano en "
+"Configuración → Aplicaciones → Blanket e inténtelo nuevamente."
 
-#: blanket/window.py:134
+#: blanket/window.py:133
 msgid "Sound Automatically Removed"
 msgstr "Sonido eliminado automáticamente"
 
-#: blanket/window.py:136
+#: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
 msgstr "El sonido {name} ya no es accesible, por lo que se ha eliminado"
 
-#: blanket/window.py:139
+#: blanket/window.py:138
 msgid "Accept"
 msgstr "Aceptar"
 
 #. type: ignore
-#: blanket/window.py:178
+#: blanket/window.py:179
 msgid "Open audio"
 msgstr "Abrir audio"
 
 #. Add new sound item
-#: blanket/window.py:235
+#: blanket/window.py:246
 msgid "Add…"
 msgstr "Agregar…"
 
@@ -379,6 +389,9 @@ msgstr "Editar preajuste"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr "Eliminar"
+
+#~ msgid "Rafael Mardojai CM"
+#~ msgstr "Rafael Mardojai CM"
 
 #~ msgid "Keyboard Shortcus"
 #~ msgstr "Atajos de teclado"

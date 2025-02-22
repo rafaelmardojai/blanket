@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-11 09:16-0500\n"
-"PO-Revision-Date: 2023-12-12 14:07+0000\n"
+"POT-Creation-Date: 2024-04-07 19:36-0500\n"
+"PO-Revision-Date: 2024-04-09 20:01+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <https://hosted.weblate.org/projects/blanket/blanket/"
 "fa/>\n"
@@ -20,16 +20,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.3-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
-#: blanket/mpris.py:155
+#: blanket/mpris.py:156
 msgid "Blanket"
 msgstr "پتو"
 
-#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:7
-#: blanket/mpris.py:153
+#: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
+#: blanket/mpris.py:154
 msgid "Listen to different sounds"
 msgstr "گوش دادن به صداهای گوناگون"
 
@@ -72,7 +72,7 @@ msgstr "شروع خودکار در پس‌زمینه"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr "یک‌پارچه‌سازی با MPRIS"
+msgstr "یکپارچه‌سازی با MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
@@ -81,12 +81,12 @@ msgstr "صداهای داخل کاره:"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
 msgid "Birds"
-msgstr "پرندگان"
+msgstr "پرنده"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:21 blanket/define.py:26
 #: blanket/define.py:54 blanket/define.py:73
 msgid "Boat"
-msgstr "کشتی"
+msgstr "قایق"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:22 blanket/define.py:27
 #: blanket/define.py:55 blanket/define.py:74
@@ -96,17 +96,17 @@ msgstr "شهر"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:23 blanket/define.py:33
 #: blanket/define.py:61
 msgid "Coffee Shop"
-msgstr "چایخانه"
+msgstr "قهوه‌فروشی"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:24 blanket/define.py:34
 #: blanket/define.py:53
 msgid "Fireplace"
-msgstr "آتش‌گاه"
+msgstr "آتش"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/define.py:40
 #: blanket/define.py:62
 msgid "Pink Noise"
-msgstr "نویز صورتی"
+msgstr "نوفهٔ صورتی"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:26 blanket/define.py:13
 #: blanket/define.py:51 blanket/define.py:70
@@ -126,7 +126,7 @@ msgstr "طوفان"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/define.py:17
 #: blanket/define.py:56
 msgid "Stream"
-msgstr "جریان"
+msgstr "رود"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/define.py:25
 #: blanket/define.py:64
@@ -141,17 +141,20 @@ msgstr "موج"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:32 blanket/define.py:41
 #: blanket/define.py:57
 msgid "White Noise"
-msgstr "نویز سفید"
+msgstr "نوفهٔ سفید"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:33 blanket/define.py:15
 #: blanket/define.py:63 blanket/define.py:75
 msgid "Wind"
 msgstr "باد"
 
-#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:40
-#: data/resources/about.blp:9
-msgid "Rafael Mardojai CM"
-msgstr "رافائل مردوجای سی‌ام"
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:57
+msgid "The default screen in light theme"
+msgstr "صفحهٔ پیش‌گزیده در زمینهٔ روشن"
+
+#: data/com.rafaelmardojai.Blanket.metainfo.xml.in:62
+msgid "The default screen in dark theme"
+msgstr "صفحهٔ پیش‌گزیده در زمینهٔ تیره"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
@@ -159,47 +162,47 @@ msgctxt "visible-name"
 msgid "'Default'"
 msgstr "'پیش‌گزیده'"
 
-#: data/resources/about.blp:8
+#: data/resources/about.blp:7
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "حق رونوشت ۲۰۲۰-۲۰۲ رافايل مردوجای سی‌ام"
+msgstr "حق رونوشت ۲۰۲۰-۲۰۲ رافائل مردوخای سی‌ام"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
-#: data/resources/about.blp:16
+#: data/resources/about.blp:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
 msgstr ""
 "محمدصالح کامیاب <mskf1383@protonmail.com>\n"
 "دانیال بهزادی <dani.behzi@ubuntu.com>"
 
-#: data/resources/preferences.blp:12
+#: data/resources/preferences.blp:7
 msgid "Appearance"
 msgstr "ظاهر"
 
-#: data/resources/preferences.blp:15
+#: data/resources/preferences.blp:10
 msgid "Dark Mode"
-msgstr "حالت تاریک"
+msgstr "حالت تیره"
 
-#: data/resources/preferences.blp:20
+#: data/resources/preferences.blp:15
 msgid "Behavior"
 msgstr "رفتار"
 
-#: data/resources/preferences.blp:23
+#: data/resources/preferences.blp:18
 msgid "Autostart in Background"
 msgstr "آغاز خودکار در پس‌زمینه"
 
-#: data/resources/preferences.blp:27
+#: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
-msgstr "آغاز همیشه در حال مکث"
+msgstr "آغاز همیشگی در حال مکث"
 
-#: data/resources/preset-dialog.blp:24
+#: data/resources/preset-dialog.blp:21
 msgid "Cancel"
 msgstr "لغو"
 
-#: data/resources/preset-dialog.blp:32
+#: data/resources/preset-dialog.blp:29
 msgid "Save"
 msgstr "ذخیره"
 
-#: data/resources/preset-dialog.blp:43
+#: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
 msgstr "نام پیش‌تنظیم"
 
@@ -215,7 +218,7 @@ msgstr "حذف پیش‌تنظیم"
 msgid "General"
 msgstr "عمومی"
 
-#: data/resources/shortcuts.blp:12 data/resources/window.blp:67
+#: data/resources/shortcuts.blp:12 data/resources/window.blp:76
 msgid "Play/Pause Sounds"
 msgstr "پخش یا مکث صداها"
 
@@ -227,63 +230,63 @@ msgstr "افزودن صدای سفارشی"
 msgid "Close Window"
 msgstr "بستن پنجره"
 
-#: data/resources/shortcuts.blp:27 data/resources/window.blp:96
+#: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
 msgstr "ترجیحات"
 
-#: data/resources/shortcuts.blp:32 data/resources/window.blp:101
+#: data/resources/shortcuts.blp:32 data/resources/window.blp:110
 msgid "Keyboard Shortcuts"
 msgstr "میان‌برهای صفحه‌کلید"
 
-#: data/resources/shortcuts.blp:37 data/resources/window.blp:113
+#: data/resources/shortcuts.blp:37 data/resources/window.blp:122
 msgid "Quit"
 msgstr "ترک"
 
-#: data/resources/window.blp:15
+#: data/resources/window.blp:24
 msgid "Presets Menu"
 msgstr "فهرست پیش‌تنظیم‌ها"
 
-#: data/resources/window.blp:22
+#: data/resources/window.blp:31
 msgid "Main Menu"
 msgstr "فهرست اصلی"
 
-#: data/resources/window.blp:58
+#: data/resources/window.blp:67
 msgid "Volume Menu"
 msgstr "فهرست حجم صدا"
 
-#: data/resources/window.blp:75
+#: data/resources/window.blp:84
 msgid "Sounds Menu"
 msgstr "فهرست صداها"
 
-#: data/resources/window.blp:89
+#: data/resources/window.blp:98
 msgid "Keep Playing when Closed"
 msgstr "ادامهٔ پخش هنگام بستن"
 
-#: data/resources/window.blp:106
+#: data/resources/window.blp:115
 msgid "About Blanket"
 msgstr "دربارهٔ پتو"
 
-#: data/resources/window.blp:128
+#: data/resources/window.blp:137
 msgid "Reset Sounds"
 msgstr "بازنشانی صداها"
 
-#: data/resources/window.blp:137
+#: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
 msgstr "نهفتن صداهای غیرفعّال"
 
-#: data/resources/window.blp:142
+#: data/resources/window.blp:151
 msgid "Save as New Preset…"
 msgstr "ذخیره به عنوان پیش‌تنظیم جدید…"
 
-#: data/resources/window.blp:148
+#: data/resources/window.blp:157
 msgid "Add Sound…"
 msgstr "افزودن صدا…"
 
-#: data/resources/window.blp:203
+#: data/resources/window.blp:212
 msgid "Paused to save power"
 msgstr "مکث شده برای ذخیرهٔ نیرو"
 
-#: data/resources/window.blp:205
+#: data/resources/window.blp:214
 msgid "_Resume Playing"
 msgstr "از _سر گیری پخش"
 
@@ -301,7 +304,7 @@ msgstr "داخلی"
 
 #: blanket/define.py:38
 msgid "Noise"
-msgstr "نویز"
+msgstr "نوفه"
 
 #: blanket/define.py:48
 msgid "Sounds icons"
@@ -311,60 +314,67 @@ msgstr "نقشک‌های صداها"
 msgid "App icon"
 msgstr "نقشک کاره"
 
-#: blanket/main.py:242
-msgid "Sounds by"
-msgstr "صداها توسط"
+#: blanket/main.py:238
+msgid "Source Code"
+msgstr "کد مبدأ"
 
-#: blanket/main.py:243
+#: blanket/main.py:239
+msgid "Sounds by"
+msgstr "صداها به دست"
+
+#: blanket/main.py:240
 msgid "Sounds edited by"
-msgstr "صداها ویرایش شده توسط"
+msgstr "ویرایش صداها به دست"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "شروع خودکار پتو در پس‌زمینه."
+msgstr "آغاز خودکار پتو در پس‌زمینه."
 
-#: blanket/preferences.py:110 blanket/preferences.py:149
+#: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
 msgstr "خطای درخواست"
 
-#: blanket/preferences.py:114 blanket/preferences.py:153
+#: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
 msgstr "درخواست شروع خودکار شکست خورد."
 
-#: blanket/preferences.py:134
+#: blanket/preferences.py:108 blanket/preferences.py:125
+#: blanket/preferences.py:129
+msgid "Ok"
+msgstr "قبول"
+
+#: blanket/preferences.py:124
 msgid "Authorization failed"
 msgstr "گرفتن مجوز شکست خورد"
 
-#: blanket/preferences.py:139
+#: blanket/preferences.py:124
 msgid ""
-"Make sure Blanket has permission to run in \n"
-"the background in Settings → Applications → \n"
-"Blanket and try again."
+"Make sure Blanket has permission to run in the background in Settings → "
+"Applications → Blanket and try again."
 msgstr ""
-"اطمینان حاصل کنید که پتو اجازهٔ اجرا در \n"
-"پس‌زمینه را در تنظیمات ← کاره‌ها ← \n"
-"پتو داشته و دوباره تلاش کنید."
+"مطمئن شوید پتو در تنظیمات ← کاره‌ها ← پتو اجازهٔ اجرا در پس‌زمینه را داشته و "
+"دوباره تلاش کنید."
 
-#: blanket/window.py:134
+#: blanket/window.py:133
 msgid "Sound Automatically Removed"
 msgstr "صدا به صورت خودکار برداشته شد"
 
-#: blanket/window.py:136
+#: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
 msgstr "صدای {name} دیگر در دسترس نیست؛ برای همین برداشته شد"
 
-#: blanket/window.py:139
+#: blanket/window.py:138
 msgid "Accept"
 msgstr "پذیرش"
 
 #. type: ignore
-#: blanket/window.py:178
+#: blanket/window.py:179
 msgid "Open audio"
 msgstr "گشودن صدا"
 
 #. Add new sound item
-#: blanket/window.py:235
+#: blanket/window.py:246
 msgid "Add…"
 msgstr "افزودن…"
 
@@ -379,6 +389,9 @@ msgstr "ویرایش پیش‌تنظیم"
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
 msgstr "برداشتن"
+
+#~ msgid "Rafael Mardojai CM"
+#~ msgstr "رافائل مردوجای سی‌ام"
 
 #, fuzzy
 #~ msgid "Keyboard Shortcus"
