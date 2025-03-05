@@ -12,8 +12,9 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-06-04 23:10+0000\n"
-"Last-Translator: Pedro De la Iglesia <pedro.yt.99@gmail.com>\n"
+"PO-Revision-Date: 2025-03-06 01:58+0000\n"
+"Last-Translator: BMO de Finn la casa del árbol del reino de Ooo "
+"<weblate.dense888@passinbox.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/blanket/blanket/"
 "es/>\n"
 "Language: es\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0)"
 " ? 1 : 2);\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -204,11 +205,11 @@ msgstr "Guardar"
 
 #: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
-msgstr "Nombre de preajuste"
+msgstr "Nombre del preajuste"
 
 #: data/resources/preset-row.blp:32
 msgid "Rename Preset"
-msgstr "Cambiar nombre de preajuste"
+msgstr "Renombrar preajuste"
 
 #: data/resources/preset-row.blp:43
 msgid "Delete Preset"
@@ -328,32 +329,32 @@ msgstr "Sonidos editados por"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "Iniciar automáticamente Blanket en segundo plano."
+msgstr "Autoarrancar Blanket en segundo plano."
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
-msgstr "Error de solicitud"
+msgstr "Solicitud fallida"
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
-msgstr "La solicitud de inicio automático falló."
+msgstr "Falló la solicitud de autoarranque."
 
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr "Ok"
+msgstr "Vale"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
-msgstr "Autorización fallida"
+msgstr "Falló la autorización"
 
 #: blanket/preferences.py:124
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Asegúrese de que Blanket tenga permiso para ejecutarse en segundo plano en "
-"Configuración → Aplicaciones → Blanket e inténtelo nuevamente."
+"Asegúrese de que Blanket tenga permiso de ejecución en segundo plano en "
+"Configuración → Aplicaciones → Blanket e inténtelo de nuevo."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
