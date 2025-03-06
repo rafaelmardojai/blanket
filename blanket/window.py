@@ -7,7 +7,7 @@ from urllib.parse import unquote, urlparse
 from gettext import gettext as _
 from gi.repository import Gio, GLib, GObject, Gtk, Adw
 
-from blanket.define import RES_PATH, SOUNDS
+from blanket.define import NOISES, RES_PATH, SOUNDS
 from blanket.main_player import MainPlayer
 from blanket.settings import Settings
 from blanket.sound import Sound
@@ -117,6 +117,11 @@ class BlanketWindow(Adw.ApplicationWindow):
                 # Create a new Sound
                 sound = Sound(s['name'], title=s['title'])
                 MainPlayer.get().append(sound)
+
+        # Load noises
+        for noise in NOISES:
+            sound = Sound(noise['name'], title=noise['title'], noise=True)
+            MainPlayer.get().append(sound)
 
         # Load saved custom audios
         for name, uri in Settings.get().custom_audios.items():
