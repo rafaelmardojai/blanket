@@ -1,7 +1,7 @@
 using Gtk 4.0;
 using Adw 1;
 
-template $PresetDialog : Adw.Dialog {
+template $SoundRenameDialog : Adw.Dialog {
   width-request: 360;
   height-request: 148;
   focus-widget: name_entry;
@@ -37,7 +37,7 @@ template $PresetDialog : Adw.Dialog {
     Adw.PreferencesPage {
       Adw.PreferencesGroup {
         Adw.EntryRow name_entry {
-          title: _("Preset Name");
+          title: _("Sound Name");
           selectable: false;
 
           changed => $_on_entry_changed();

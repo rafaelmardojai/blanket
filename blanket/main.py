@@ -27,6 +27,7 @@ from blanket.preferences import PreferencesDialog
 from blanket.settings import Settings
 from blanket.widgets import PresetDialog
 from blanket.window import BlanketWindow
+from blanket.widgets.sound_rename_dialog import SoundRenameDialog
 
 
 class Application(Adw.Application):
@@ -130,9 +131,14 @@ class Application(Adw.Application):
         action.connect('activate', self.on_open)
         self.add_action(action)
 
-        # Add sound file
-        action = Gio.SimpleAction.new('remove-sound', GLib.VariantType('s'))
+        # Remove sound file
+        action = Gio.SimpleAction.new('remove-sound', GLib.VariantType('u'))
         action.connect('activate', self.on_remove_sound)
+        self.add_action(action)
+
+        # Rename sound file
+        action = Gio.SimpleAction.new('rename-sound', GLib.VariantType('u'))
+        action.connect('activate', self.on_rename_sound)
         self.add_action(action)
 
         # Setup accelerator
@@ -207,12 +213,21 @@ class Application(Adw.Application):
         dialog = PresetDialog()
         dialog.present(self.window)
 
-    def on_remove_sound(self, _action, name: GLib.Variant):
-        sound, index = MainPlayer.get().get_by_name(name.get_string())
+    def on_remove_sound(self, _action, index_variant: GLib.Variant):
+        index = index_variant.get_uint32()
+        sound = MainPlayer.get().get_by_index(index)
 
         if sound and index:
             sound.remove()  # type: ignore
             MainPlayer.get().remove(index)
+
+    def on_rename_sound(self, _action, index_variant: GLib.Variant):
+        # Open edit dialog
+        index = index_variant.get_uint32()
+        sound = MainPlayer.get().get_by_index(index)
+        if sound and index:
+            dialog = SoundRenameDialog(sound, index)
+            dialog.present(self.window)
 
     def on_background(self, action, value):
         action.set_state(value)
@@ -240,6 +255,12 @@ class Application(Adw.Application):
         about.add_credit_section(_('Sounds edited by'), sound_editors)
 
         about.present(self.window)
+
+    def set_space_accel(self, _action):
+        self.set_accels_for_action('app.playpause', ['<Ctl>m', 'space'])
+
+    def unset_space_accel(self, _action):
+        self.set_accels_for_action('app.playpause', ['<Ctl>m'])
 
     def on_quit(self, _action, _param):
         self.quit()
