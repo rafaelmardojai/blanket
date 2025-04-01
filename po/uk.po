@@ -11,8 +11,9 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-04-19 15:51+0000\n"
-"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
+"PO-Revision-Date: 2025-04-01 19:44+0000\n"
+"Last-Translator: Deleted User <user28574275@users.noreply.hosted.weblate.org>"
+"\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/blanket/"
 "blanket/uk/>\n"
 "Language: uk\n"
@@ -23,7 +24,7 @@ msgstr ""
 "? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
 "14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
 "100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.11-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -34,14 +35,12 @@ msgstr "Blanket"
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
 #: blanket/mpris.py:154
 msgid "Listen to different sounds"
-msgstr "Слухайте різні звуки"
+msgstr "Слухайте різноманітні звуки"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr ""
-"Зосередження;Фокус;Звук;Продуктивність;Сон;Concentrate;Focus;Noise;"
-"Productivity;Sleep;"
+msgstr "Концентрація;Зосередження;Шум;Продуктивність;Сон;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
 msgid "Listen to ambient sounds"
@@ -52,8 +51,8 @@ msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
-"Поліпшуйте зосередженість і підвищуйте свою продуктивність, слухаючи різні "
-"звуки довкілля"
+"Покращіть зосередженість та підвищіть свою продуктивність, слухаючи "
+"різноманітні звуки довкілля"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
@@ -65,11 +64,11 @@ msgstr "Можливості:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr "Зберегти поєднання"
+msgstr "Збереження переднаборів"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
 msgid "Add custom sounds"
-msgstr "Додати власні звуки"
+msgstr "Додавання власних звуків"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
@@ -77,7 +76,7 @@ msgstr "Автозапуск у фоновому режимі"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr "Інтеграція MPRIS"
+msgstr "Інтеграція із MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
@@ -131,7 +130,7 @@ msgstr "Буря"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/define.py:17
 #: blanket/define.py:56
 msgid "Stream"
-msgstr "Потічок"
+msgstr "Струмок"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/define.py:25
 #: blanket/define.py:64
@@ -207,15 +206,15 @@ msgstr "Зберегти"
 
 #: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
-msgstr "Назва поєднання"
+msgstr "Назва переднабору"
 
 #: data/resources/preset-row.blp:32
 msgid "Rename Preset"
-msgstr "Перейменувати поєднання"
+msgstr "Перейменувати переднабір"
 
 #: data/resources/preset-row.blp:43
 msgid "Delete Preset"
-msgstr "Видалити поєднання"
+msgstr "Видалити переднабір"
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
@@ -247,7 +246,7 @@ msgstr "Вийти"
 
 #: data/resources/window.blp:24
 msgid "Presets Menu"
-msgstr "Меню поєднань"
+msgstr "Меню переднаборів"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
@@ -279,7 +278,7 @@ msgstr "Сховати неактивні звуки"
 
 #: data/resources/window.blp:151
 msgid "Save as New Preset…"
-msgstr "Зберегти як нове поєднання…"
+msgstr "Зберегти як новий переднабір…"
 
 #: data/resources/window.blp:157
 msgid "Add Sound…"
@@ -315,11 +314,11 @@ msgstr "Піктограми звуків"
 
 #: blanket/define.py:48
 msgid "App icon"
-msgstr "Піктограма програми"
+msgstr "Піктограма застосунку"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr "Початковий код"
+msgstr "Сирцевий код"
 
 #: blanket/main.py:239
 msgid "Sounds by"
@@ -383,11 +382,11 @@ msgstr "Додати…"
 
 #: blanket/widgets/preset_dialog.py:29
 msgid "New Preset"
-msgstr "Нове поєднання"
+msgstr "Новий переднабір"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
-msgstr "Редагувати поєднання"
+msgstr "Редагувати переднабір"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
