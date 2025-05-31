@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
 "PO-Revision-Date: 2025-05-31 23:39+0000\n"
-"Last-Translator: osiixy <osiixy@gmail.com>\n"
+"Last-Translator: Kis Levente <breadripper@proton.me>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/blanket/"
 "blanket/hu/>\n"
 "Language: hu\n"
@@ -185,7 +185,6 @@ msgid "Behavior"
 msgstr "Viselkedés"
 
 #: data/resources/preferences.blp:18
-#, fuzzy
 msgid "Autostart in Background"
 msgstr "Automatikus indítás a háttérben"
 
@@ -287,7 +286,7 @@ msgstr "Szüneteltetve, hogy energiát takarítson meg"
 
 #: data/resources/window.blp:214
 msgid "_Resume Playing"
-msgstr ""
+msgstr "_Lejátszás Folytatása"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -340,7 +339,7 @@ msgstr "Az automatikus indítási kérelem meghiúsult."
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "Rendben"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
@@ -365,7 +364,7 @@ msgstr "A {name} nevű hang már nem elérhető, így el lett távolítva"
 
 #: blanket/window.py:138
 msgid "Accept"
-msgstr ""
+msgstr "Elfogadás"
 
 #. type: ignore
 #: blanket/window.py:179
@@ -375,7 +374,7 @@ msgstr "Hang megnyitása"
 #. Add new sound item
 #: blanket/window.py:246
 msgid "Add…"
-msgstr ""
+msgstr "Hozzáadás…"
 
 #: blanket/widgets/preset_dialog.py:29
 msgid "New Preset"
