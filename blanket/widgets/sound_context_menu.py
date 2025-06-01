@@ -5,7 +5,8 @@ from gettext import gettext as _
 from gi.repository import Gio, GObject, GLib, Gtk
 
 from blanket.define import RES_PATH
-
+from blanket.sound import Sound
+from blanket.main_player import MainPlayer
 
 @Gtk.Template(resource_path=f'{RES_PATH}/sound-context-menu.ui')
 class SoundContextMenu(Gtk.PopoverMenu):
@@ -13,19 +14,25 @@ class SoundContextMenu(Gtk.PopoverMenu):
 
     volume: Gtk.Scale = Gtk.Template.Child()  # type: ignore
 
-    def __init__(self, sound):
+    def __init__(self, sound: Sound):
         super().__init__()
 
-        self.sound = sound
+        self.sound: Sound = sound
 
         if self.sound.custom:
+            index = MainPlayer.get().get_index(sound.name)
             # Set remove menu item
             custom_section = Gio.Menu()
-            remove_item = Gio.MenuItem.new(_('Remove'), None)
-            remove_item.set_action_and_target_value(
-                'app.remove-sound', GLib.Variant.new_string(self.sound.name)
+            self.rename_item = Gio.MenuItem.new(_('Rename'), None)
+            self.rename_item.set_action_and_target_value(
+                'app.rename-sound', GLib.Variant.new_uint32(index)
             )
-            custom_section.insert_item(-1, remove_item)
+            custom_section.append_item(self.rename_item)
+            self.remove_item = Gio.MenuItem.new(_('Remove'), None)
+            self.remove_item.set_action_and_target_value(
+                'app.remove-sound', GLib.Variant.new_uint32(index)
+            )
+            custom_section.append_item(self.remove_item)
 
             self.props.menu_model.append_section(None, custom_section)  # type: ignore
 
