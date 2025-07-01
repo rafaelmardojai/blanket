@@ -1,41 +1,38 @@
 using Gtk 4.0;
+using Adw 1;
 
-ShortcutsWindow help_overlay {
-  ShortcutsSection {
-    section-name: "shortcuts";
+Adw.ShortcutsDialog shortcuts_dialog {
+  Adw.ShortcutsSection {
+    title: _("General");
 
-    ShortcutsGroup {
-      title: _("General");
+    Adw.ShortcutsItem {
+      action-name: "app.playpause";
+      title: _("Play/Pause Sounds");
+    }
 
-      ShortcutsShortcut {
-        action-name: "app.playpause";
-        title: _("Play/Pause Sounds");
-      }
+    Adw.ShortcutsItem {
+      action-name: "app.open";
+      title: _("Add Custom Sound");
+    }
 
-      ShortcutsShortcut {
-        action-name: "app.open";
-        title: _("Add Custom Sound");
-      }
+    Adw.ShortcutsItem {
+      action-name: "win.close";
+      title: _("Close Window");
+    }
 
-      ShortcutsShortcut {
-        action-name: "win.close";
-        title: _("Close Window");
-      }
+    Adw.ShortcutsItem {
+      action-name: "app.preferences";
+      title: _("Preferences");
+    }
 
-      ShortcutsShortcut {
-        action-name: "app.preferences";
-        title: _("Preferences");
-      }
+    Adw.ShortcutsItem {
+      action-name: "app.shortcuts";
+      title: _("Keyboard Shortcuts");
+    }
 
-      ShortcutsShortcut {
-        action-name: "win.show-help-overlay";
-        title: _("Keyboard Shortcuts");
-      }
-
-      ShortcutsShortcut {
-        action-name: "app.quit";
-        title: _("Quit");
-      }
+    Adw.ShortcutsItem {
+      action-name: "app.quit";
+      title: _("Quit");
     }
   }
 }
