@@ -1,10 +1,10 @@
 {
-    "app-id" : "com.rafaelmardojai.Blanket",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "master",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "blanket",
-    "finish-args" : [
+    "app-id": "com.rafaelmardojai.Blanket",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "master",
+    "sdk": "org.gnome.Sdk",
+    "command": "blanket",
+    "finish-args": [
         "--share=ipc",
         "--device=dri",
         "--socket=fallback-x11",
@@ -13,7 +13,7 @@
         "--device=dri",
         "--own-name=org.mpris.MediaPlayer2.Blanket"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/pkgconfig",
         "/man",
@@ -24,28 +24,28 @@
         "*.la",
         "*.a"
     ],
-    "modules" : [
+    "modules": [
         {
             "name": "blueprint",
             "buildsystem": "meson",
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-                    "tag": "v0.10.0",
-                    "commit": "2a39a16391122af2f3d812e478c1c1398c98b972"
+                    "url": "https://gitlab.gnome.org/GNOME/blueprint-compiler",
+                    "tag": "0.18.0",
+                    "commit": "07c9c9df9cd1b6b4454ecba21ee58211e9144a4b"
                 }
             ]
         },
         {
-            "name" : "blanket",
-            "builddir" : true,
-            "buildsystem" : "meson",
-            "run-tests" : true,
-            "sources" : [
+            "name": "blanket",
+            "builddir": true,
+            "buildsystem": "meson",
+            "run-tests": true,
+            "sources": [
                 {
-                    "type" : "dir",
-                    "path" : "."
+                    "type": "dir",
+                    "path": "."
                 }
             ]
         }
