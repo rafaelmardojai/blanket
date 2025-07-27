@@ -1,5 +1,5 @@
 Name:           blanket
-Version:        0.7.0
+Version:        0.8.0
 Release:        1%{?dist}
 Summary:        White noise audio player
 
@@ -54,4 +54,3 @@ Improve focus and increase your productivity by listening to different sounds. O
 %{_datadir}/metainfo/com.rafaelmardojai.Blanket.metainfo.xml
 
 %changelog
-

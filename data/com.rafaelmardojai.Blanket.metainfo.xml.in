@@ -48,7 +48,7 @@
 
   <launchable type="desktop-id">com.rafaelmardojai.Blanket.desktop</launchable>
   <translation type="gettext">blanket</translation>
-  
+
   <requires>
     <internet>offline-only</internet>
     <display_length compare="ge">360</display_length>
@@ -79,6 +79,15 @@
   </branding>
 
   <releases>
+    <release version="0.8.0" date="2025-07-27">
+      <description translate="no">
+        <ul>
+          <li>Allow renaming custom sounds</li>
+          <li>Make suspension inhibition optional and disabled by default</li>
+          <li>Bug fixes</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.7.0" date="2024-04-07">
       <description translate="no">
         <ul>
