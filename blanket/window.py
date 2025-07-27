@@ -18,7 +18,7 @@ from blanket.widgets import PlayPauseButton, PresetChooser, SoundItem, VolumeRow
 class BlanketWindow(Adw.ApplicationWindow):
     __gtype_name__ = "BlanketWindow"
 
-    headerbar: Gtk.HeaderBar = Gtk.Template.Child()  # type: ignore
+    headerbar: Adw.HeaderBar = Gtk.Template.Child()  # type: ignore
     toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()  # type: ignore
     grid: Gtk.FlowBox = Gtk.Template.Child()  # type: ignore
     playpause_btn: PlayPauseButton = Gtk.Template.Child()  # type: ignore

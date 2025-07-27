@@ -226,7 +226,7 @@ class Application(Adw.Application):
         index = index_variant.get_uint32()
         sound = MainPlayer.get().get_by_index(index)
         if sound and index:
-            dialog = SoundRenameDialog(sound, index)
+            dialog = SoundRenameDialog(sound, index)  # type: ignore
             dialog.present(self.window)
 
     def on_background(self, action, value):

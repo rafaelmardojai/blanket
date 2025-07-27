@@ -47,8 +47,8 @@ class PresetChooser(Gtk.MenuButton):
             self.selected = preset  # type: ignore
 
     def _on_saved_changed(self, _settings, _id):
-        for preset in self.model:  # type: ignore
-            if preset.active:
+        for preset in self.model:
+            if isinstance(preset, Preset) and preset.active:
                 self.selected = preset
 
     def _on_selected_changed(self, _chooser, _pspec):

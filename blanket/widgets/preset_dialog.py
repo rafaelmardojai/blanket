@@ -37,8 +37,8 @@ class PresetDialog(Adw.Dialog):
             # Wire buttons
             self.accept_btn.connect("clicked", self._on_rename_preset)
 
-        self.connect("realize", Gio.Application.get_default().unset_space_accel)
-        self.connect("closed", Gio.Application.get_default().set_space_accel)
+        self.connect("realize", Gio.Application.get_default().unset_space_accel)  # type: ignore
+        self.connect("closed", Gio.Application.get_default().set_space_accel)  # type: ignore
 
     @Gtk.Template.Callback()
     def _on_cancel_clicked(self, _button):

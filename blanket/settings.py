@@ -8,8 +8,8 @@ from gi.repository import Gio, GLib, GObject
 
 
 class Settings(Gio.Settings):
-    _instance = None
-    _presets_settings = {}
+    _instance: Self | None = None
+    _presets_settings: dict[str, Gio.Settings] = {}
 
     __gsignals__ = {
         "preset-changed": (GObject.SIGNAL_RUN_FIRST, None, (str,)),
@@ -19,7 +19,7 @@ class Settings(Gio.Settings):
     def get(cls) -> Self:
         """Return an active instance of Settings."""
         if cls._instance is None:
-            cls._instance = Settings()
+            cls._instance = cls()
         return cls._instance
 
     def __init__(self):

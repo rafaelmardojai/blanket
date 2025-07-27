@@ -1,7 +1,12 @@
 [project]
 name = "Blanket"
 version = "0.7.0"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
+
+[tool.pyright]
+reportMissingModuleSource = false
+reportIncompatibleMethodOverride = false
+typeCheckingMode = "standard"
 
 [dependency-groups]
 dev = [
