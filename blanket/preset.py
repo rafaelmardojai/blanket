@@ -7,7 +7,7 @@ from blanket.settings import Settings
 
 
 class Preset(GObject.Object):
-    __gtype_name__ = 'Preset'
+    __gtype_name__ = "Preset"
 
     name: str = GObject.Property(type=str)  # type: ignore
     active: bool = GObject.Property(type=bool, default=False)  # type: ignore
@@ -19,11 +19,11 @@ class Preset(GObject.Object):
 
         # Active state
         self.active = Settings.get().active_preset == self.id
-        Settings.get().connect('changed::active-preset', self._on_active_preset_changed)
+        Settings.get().connect("changed::active-preset", self._on_active_preset_changed)
 
         # Bind preset name with settings one
         Settings.get().get_preset_settings(self.id).bind(
-            'visible-name', self, 'name', Gio.SettingsBindFlags.DEFAULT
+            "visible-name", self, "name", Gio.SettingsBindFlags.DEFAULT
         )
 
     def remove(self) -> int | None:

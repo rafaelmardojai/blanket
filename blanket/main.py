@@ -2,62 +2,62 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import sys
-import gi
-
 from gettext import gettext as _
 
+import gi
+
 try:
-    gi.require_version('Gst', '1.0')
-    gi.require_version('GstPlay', '1.0')
-    gi.require_version('Gdk', '4.0')
-    gi.require_version('Gtk', '4.0')
-    gi.require_version('Adw', '1')
-    from gi.repository import GLib, Gst, Gio, Gtk, Adw
+    gi.require_version("Adw", "1")
+    gi.require_version("Gdk", "4.0")
+    gi.require_version("Gst", "1.0")
+    gi.require_version("GstPlay", "1.0")
+    gi.require_version("Gtk", "4.0")
+    from gi.repository import Adw, Gio, GLib, Gst, Gtk
 
     # Init GStreamer
     Gst.init(None)
 except ImportError or ValueError as exc:
-    print('Error: Dependencies not met.', exc)
+    print("Error: Dependencies not met.", exc)
     exit()
 
-from blanket.define import AUTHORS, ARTISTS, RES_PATH, SOUND_ARTISTS, SOUND_EDITORS
+from blanket.define import ARTISTS, AUTHORS, RES_PATH, SOUND_ARTISTS, SOUND_EDITORS
 from blanket.main_player import MainPlayer
 from blanket.mpris import MPRIS
 from blanket.preferences import PreferencesDialog
 from blanket.settings import Settings
 from blanket.widgets import PresetDialog
-from blanket.window import BlanketWindow
 from blanket.widgets.sound_rename_dialog import SoundRenameDialog
+from blanket.window import BlanketWindow
 
 
 class Application(Adw.Application):
     def __init__(self, version):
         super().__init__(
-            application_id='com.rafaelmardojai.Blanket',
+            application_id="com.rafaelmardojai.Blanket",
             flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE,
         )
-        GLib.set_application_name(_('Blanket'))
+        GLib.set_application_name(_("Blanket"))
         GLib.setenv(
-            'PULSE_PROP_application.icon_name',
-            'com.rafaelmardojai.Blanket-symbolic',
+            "PULSE_PROP_application.icon_name",
+            "com.rafaelmardojai.Blanket-symbolic",
             True,
         )
         # Connect app shutdown signal
-        self.connect('shutdown', self._on_shutdown)
+        self.connect("shutdown", self._on_shutdown)
 
         # Track power status
         self.power_monitor = Gio.PowerProfileMonitor.dup_default()
         self.power_monitor.connect(
-            'notify::power-saver-enabled', self._on_notify_power_saver_enabled
+            "notify::power-saver-enabled", self._on_notify_power_saver_enabled
         )
 
         # Add --hidden command line option
         self.add_main_option(
-            'hidden',
-            ord('h'),
+            "hidden",
+            ord("h"),
             GLib.OptionFlags.NONE,
             GLib.OptionArg.NONE,
-            'Start window hidden',
+            "Start window hidden",
             None,
         )
         # App window
@@ -86,68 +86,68 @@ class Application(Adw.Application):
 
     def setup_actions(self):
         # Quit application
-        action = Gio.SimpleAction.new('quit', None)
-        action.connect('activate', self.on_quit)
+        action = Gio.SimpleAction.new("quit", None)
+        action.connect("activate", self.on_quit)
         self.add_action(action)
 
         # Show about dialog
-        action = Gio.SimpleAction.new('about', None)
-        action.connect('activate', self.on_about)
+        action = Gio.SimpleAction.new("about", None)
+        action.connect("activate", self.on_about)
         self.add_action(action)
 
         # Show preferences dialog
-        action = Gio.SimpleAction.new('preferences', None)
-        action.connect('activate', self.on_preferences)
+        action = Gio.SimpleAction.new("preferences", None)
+        action.connect("activate", self.on_preferences)
         self.add_action(action)
 
         # Toggle background-playback setting
         action = Gio.SimpleAction.new_stateful(
-            'background-playback', None, Settings.get().get_value('background-playback')
+            "background-playback", None, Settings.get().get_value("background-playback")
         )
-        action.connect('change-state', self.on_background)
+        action.connect("change-state", self.on_background)
         self.add_action(action)
 
         # Toggle playback
-        action = Gio.SimpleAction.new('playpause', None)
-        action.connect('activate', self.on_playpause)
+        action = Gio.SimpleAction.new("playpause", None)
+        action.connect("activate", self.on_playpause)
         self.add_action(action)
 
-        action = Gio.SimpleAction.new('play', None)
-        action.connect('activate', self.on_play)
+        action = Gio.SimpleAction.new("play", None)
+        action.connect("activate", self.on_play)
         self.add_action(action)
 
         # Create new preset from active
-        action = Gio.SimpleAction.new('add-preset', None)
-        action.connect('activate', self.on_add_preset)
+        action = Gio.SimpleAction.new("add-preset", None)
+        action.connect("activate", self.on_add_preset)
         self.add_action(action)
 
         # Reset active preset volumes
-        action = Gio.SimpleAction.new('reset-volumes', None)
-        action.connect('activate', self.on_reset_volumes)
+        action = Gio.SimpleAction.new("reset-volumes", None)
+        action.connect("activate", self.on_reset_volumes)
         self.add_action(action)
 
         # Add sound file
-        action = Gio.SimpleAction.new('open', None)
-        action.connect('activate', self.on_open)
+        action = Gio.SimpleAction.new("open", None)
+        action.connect("activate", self.on_open)
         self.add_action(action)
 
         # Remove sound file
-        action = Gio.SimpleAction.new('remove-sound', GLib.VariantType('u'))
-        action.connect('activate', self.on_remove_sound)
+        action = Gio.SimpleAction.new("remove-sound", GLib.VariantType("u"))
+        action.connect("activate", self.on_remove_sound)
         self.add_action(action)
 
         # Rename sound file
-        action = Gio.SimpleAction.new('rename-sound', GLib.VariantType('u'))
-        action.connect('activate', self.on_rename_sound)
+        action = Gio.SimpleAction.new("rename-sound", GLib.VariantType("u"))
+        action.connect("activate", self.on_rename_sound)
         self.add_action(action)
 
         # Setup accelerator
-        self.set_accels_for_action('app.quit', ['<Ctl>q'])
-        self.set_accels_for_action('app.preferences', ['<Ctl>comma'])
-        self.set_accels_for_action('app.playpause', ['<Ctl>m', 'space'])
-        self.set_accels_for_action('app.open', ['<Ctl>o'])
-        self.set_accels_for_action('win.close', ['<Ctl>w'])
-        self.set_accels_for_action('win.hide-inactive', ['<Ctl>h'])
+        self.set_accels_for_action("app.quit", ["<Ctl>q"])
+        self.set_accels_for_action("app.preferences", ["<Ctl>comma"])
+        self.set_accels_for_action("app.playpause", ["<Ctl>m", "space"])
+        self.set_accels_for_action("app.open", ["<Ctl>o"])
+        self.set_accels_for_action("win.close", ["<Ctl>w"])
+        self.set_accels_for_action("win.hide-inactive", ["<Ctl>h"])
 
     def do_activate(self):
         self.window = self.props.active_window  # type: ignore
@@ -163,7 +163,7 @@ class Application(Adw.Application):
             self.window.present()
 
         # Connect window close-request signal to _on_window_close_request
-        self.window.connect('close-request', self._on_window_close_request)
+        self.window.connect("close-request", self._on_window_close_request)
 
         # Load saved props
         MainPlayer.get().volume = Settings.get().volume
@@ -175,7 +175,7 @@ class Application(Adw.Application):
         options = command_line.get_options_dict()
         options = options.end().unpack()
 
-        if 'hidden' in options and self.window is None:
+        if "hidden" in options and self.window is None:
             self.window_hidden = True
 
         self.activate()
@@ -240,8 +240,8 @@ class Application(Adw.Application):
         prefs.present(self.window)
 
     def on_about(self, _action, _param):
-        builder = Gtk.Builder.new_from_resource(f'{RES_PATH}/about.ui')
-        about: Adw.AboutDialog = builder.get_object('about')  # type: ignore
+        builder = Gtk.Builder.new_from_resource(f"{RES_PATH}/about.ui")
+        about: Adw.AboutDialog = builder.get_object("about")  # type: ignore
 
         artists = self.__get_credits_list(ARTISTS)
         sound_artists = self.__get_credits_list(SOUND_ARTISTS)
@@ -250,17 +250,17 @@ class Application(Adw.Application):
         about.set_version(self.version)
         about.set_developers(AUTHORS)
         about.set_designers(artists)
-        about.add_link(_('Source Code'), 'https://github.com/rafaelmardojai/blanket')
-        about.add_credit_section(_('Sounds by'), sound_artists)
-        about.add_credit_section(_('Sounds edited by'), sound_editors)
+        about.add_link(_("Source Code"), "https://github.com/rafaelmardojai/blanket")
+        about.add_credit_section(_("Sounds by"), sound_artists)
+        about.add_credit_section(_("Sounds edited by"), sound_editors)
 
         about.present(self.window)
 
     def set_space_accel(self, _action):
-        self.set_accels_for_action('app.playpause', ['<Ctl>m', 'space'])
+        self.set_accels_for_action("app.playpause", ["<Ctl>m", "space"])
 
     def unset_space_accel(self, _action):
-        self.set_accels_for_action('app.playpause', ['<Ctl>m'])
+        self.set_accels_for_action("app.playpause", ["<Ctl>m"])
 
     def on_quit(self, _action, _param):
         self.quit()
@@ -296,7 +296,7 @@ class Application(Adw.Application):
     def __get_credits_list(self, dict_):
         credits_list = []
         for k, vs in dict_.items():
-            s = k + ': ' + ', '.join(vs)
+            s = k + ": " + ", ".join(vs)
             credits_list.append(s)
         return credits_list
 

@@ -8,9 +8,9 @@ from blanket.settings import Settings
 from blanket.widgets.preset_dialog import PresetDialog
 
 
-@Gtk.Template(resource_path=f'{RES_PATH}/preset-row.ui')
+@Gtk.Template(resource_path=f"{RES_PATH}/preset-row.ui")
 class PresetRow(Gtk.ListBoxRow):
-    __gtype_name__ = 'PresetRow'
+    __gtype_name__ = "PresetRow"
 
     custom: bool = GObject.Property(type=bool, default=False)  # type: ignore
     selected: bool = GObject.Property(type=bool, default=False)  # type: ignore
@@ -25,24 +25,24 @@ class PresetRow(Gtk.ListBoxRow):
         self.preset = preset
         self.custom = self.preset.id != Settings.get().default_preset
 
-        self.rename_btn.connect('clicked', self._on_show_rename)
-        self.delete_btn.connect('clicked', self._on_delete_preset)
+        self.rename_btn.connect("clicked", self._on_show_rename)
+        self.delete_btn.connect("clicked", self._on_delete_preset)
 
         preset.bind_property(
-            'active', self, 'selected', GObject.BindingFlags.SYNC_CREATE
+            "active", self, "selected", GObject.BindingFlags.SYNC_CREATE
         )
 
         preset.bind_property(
-            'name', self.name, 'label', GObject.BindingFlags.SYNC_CREATE
+            "name", self.name, "label", GObject.BindingFlags.SYNC_CREATE
         )
 
-        self.connect('notify::selected', self._on_selected_changed)
+        self.connect("notify::selected", self._on_selected_changed)
 
     def _on_selected_changed(self, _row, _pspec):
         if self.selected:
-            self.add_css_class('selected')
+            self.add_css_class("selected")
         else:
-            self.remove_css_class('selected')
+            self.remove_css_class("selected")
 
     def _on_show_rename(self, _button):
         # Close popover

@@ -3,6 +3,7 @@ builddir/
 .flatpak/
 .flatpak-builder
 _build/
+.flatplay/
 
 
 #vscode

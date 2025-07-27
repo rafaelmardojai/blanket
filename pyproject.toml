@@ -1,2 +1,11 @@
-[tool.black]
-skip-string-normalization = true
+[project]
+name = "Blanket"
+version = "0.7.0"
+requires-python = ">=3.10"
+
+[dependency-groups]
+dev = [
+    "basedpyright>=1.31.0",
+    "pygobject-stubs>=2.13.0",
+    "ruff>=0.12.5",
+]

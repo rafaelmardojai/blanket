@@ -18,10 +18,10 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
     _cookie = 0
     _sounds = []  # Sound list
 
-    __gtype_name__ = 'MainPlayer'
+    __gtype_name__ = "MainPlayer"
     __gsignals__ = {
-        'preset-changed': (GObject.SIGNAL_RUN_FIRST, None, (GObject.Object,)),
-        'reset-volumes': (GObject.SIGNAL_RUN_FIRST, None, ()),
+        "preset-changed": (GObject.SIGNAL_RUN_FIRST, None, (GObject.Object,)),
+        "reset-volumes": (GObject.SIGNAL_RUN_FIRST, None, ()),
     }
 
     playing: bool = GObject.Property(type=bool, default=True)  # type: ignore
@@ -36,8 +36,8 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
 
     def __init__(self):
         super().__init__()
-        self.connect('notify::playing', self._on_playing)
-        Settings.get().connect('preset-changed', self._on_preset_changed)
+        self.connect("notify::playing", self._on_playing)
+        Settings.get().connect("preset-changed", self._on_preset_changed)
 
         self.__add_item = GObject.GObject()  # Fake sound that adds new sounds
         self.__add_item.playing = False  # type: ignore
@@ -48,7 +48,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
                 sound.playing = False
 
     def reset_volumes(self):
-        self.emit('reset-volumes')
+        self.emit("reset-volumes")
 
     def next_preset(self):
         if not self.can_next:
@@ -89,13 +89,13 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         if app:
             if self.playing:
                 self._cookie = app.inhibit(  # type: ignore
-                    None, Gtk.ApplicationInhibitFlags.SUSPEND, 'Playback in progress'
+                    None, Gtk.ApplicationInhibitFlags.SUSPEND, "Playback in progress"
                 )
             elif self._cookie != 0:
                 app.uninhibit(self._cookie)  # type: ignore
 
     def _on_preset_changed(self, _settings, preset_id):
-        self.emit('preset-changed', Preset(preset_id))
+        self.emit("preset-changed", Preset(preset_id))
 
     """
     ListModel methods

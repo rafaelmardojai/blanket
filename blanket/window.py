@@ -2,10 +2,10 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import os
+from gettext import gettext as _
 from urllib.parse import unquote, urlparse
 
-from gettext import gettext as _
-from gi.repository import Gio, GLib, GObject, Gtk, Adw
+from gi.repository import Adw, Gio, GLib, GObject, Gtk
 
 from blanket.define import RES_PATH, SOUNDS
 from blanket.main_player import MainPlayer
@@ -14,9 +14,9 @@ from blanket.sound import Sound
 from blanket.widgets import PlayPauseButton, PresetChooser, SoundItem, VolumeRow
 
 
-@Gtk.Template(resource_path=f'{RES_PATH}/window.ui')
+@Gtk.Template(resource_path=f"{RES_PATH}/window.ui")
 class BlanketWindow(Adw.ApplicationWindow):
-    __gtype_name__ = 'BlanketWindow'
+    __gtype_name__ = "BlanketWindow"
 
     headerbar: Gtk.HeaderBar = Gtk.Template.Child()  # type: ignore
     toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()  # type: ignore
@@ -34,7 +34,7 @@ class BlanketWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
 
         # Set default window icon for window managers
-        self.set_default_icon_name('com.rafaelmardojai.Blanket')
+        self.set_default_icon_name("com.rafaelmardojai.Blanket")
 
         self.setup_actions()
         # Setup widgets
@@ -53,32 +53,32 @@ class BlanketWindow(Adw.ApplicationWindow):
             model=MainPlayer.get(), filter=self.sounds_filter
         )
         self.grid.bind_model(self.sounds_model, self._create_sound_item)
-        self.grid.connect('child-activated', self._on_sound_activate)
+        self.grid.connect("child-activated", self._on_sound_activate)
 
         # Wire playpause button
         MainPlayer.get().bind_property(
-            'playing', self.playpause_btn, 'playing', GObject.BindingFlags.SYNC_CREATE
+            "playing", self.playpause_btn, "playing", GObject.BindingFlags.SYNC_CREATE
         )
 
         # Show preset chooser
         self.presets_chooser.props.visible = len(Settings.get().presets) > 1
-        Settings.get().connect('changed::presets', self._on_presets_changed)
+        Settings.get().connect("changed::presets", self._on_presets_changed)
 
     def setup_actions(self):
         # Close window action
-        action = Gio.SimpleAction.new('close', None)
-        action.connect('activate', lambda _action, _param: self.close())
+        action = Gio.SimpleAction.new("close", None)
+        action.connect("activate", lambda _action, _param: self.close())
         self.add_action(action)
 
         # Hide non active sounds
         action = Gio.SimpleAction.new_stateful(
-            'hide-inactive',
+            "hide-inactive",
             None,
             Settings.get()
             .get_preset_settings(Settings.get().active_preset)
-            .get_value('hide-inactive'),
+            .get_value("hide-inactive"),
         )
-        action.connect('change-state', self._on_hide_non_active)
+        action.connect("change-state", self._on_hide_non_active)
         self.add_action(action)
 
     def setup_volume_menu(self):
@@ -86,7 +86,7 @@ class BlanketWindow(Adw.ApplicationWindow):
         vol_adjustment = self.volume.get_adjustment()
         # Bind volume scale value with main player volume
         vol_adjustment.bind_property(
-            'value', MainPlayer.get(), 'volume', GObject.BindingFlags.BIDIRECTIONAL
+            "value", MainPlayer.get(), "volume", GObject.BindingFlags.BIDIRECTIONAL
         )
         # Set volume scale value on first run
         self.volume.set_value(MainPlayer.get().volume)
@@ -94,16 +94,16 @@ class BlanketWindow(Adw.ApplicationWindow):
         # Setup volume list
         self.volume_filter = Gtk.CustomFilter.new(match_func=lambda item: item.playing)
         model = Gtk.FilterListModel(model=MainPlayer.get(), filter=self.volume_filter)
-        model.connect('items-changed', self._volume_model_changed)
+        model.connect("items-changed", self._volume_model_changed)
         self.volume_box.props.visible = model.get_n_items() > 0
         self.volume_list.bind_model(model, self._create_vol_row)
 
         # Connect mainplayer preset-changed signal
-        MainPlayer.get().connect_after('preset-changed', self._on_preset_changed)
+        MainPlayer.get().connect_after("preset-changed", self._on_preset_changed)
         # Connect mainplayer reset-volumes signal
-        MainPlayer.get().connect_after('reset-volumes', self._on_reset_volumes)
+        MainPlayer.get().connect_after("reset-volumes", self._on_reset_volumes)
 
-        self.volumes.connect('closed', self._volumes_popup_closed)
+        self.volumes.connect("closed", self._volumes_popup_closed)
 
     def populate_sounds(self):
         """
@@ -113,9 +113,9 @@ class BlanketWindow(Adw.ApplicationWindow):
         # Self populate
         for g in SOUNDS:
             # Iterate sounds
-            for s in g['sounds']:
+            for s in g["sounds"]:
                 # Create a new Sound
-                sound = Sound(s['name'], title=s['title'])
+                sound = Sound(s["name"], title=s["title"])
                 MainPlayer.get().append(sound)
 
         # Load saved custom audios
@@ -130,15 +130,15 @@ class BlanketWindow(Adw.ApplicationWindow):
                 Settings.get().remove_custom_audio(name)
 
                 alert = Adw.AlertDialog.new(
-                    _('Sound Automatically Removed'),
+                    _("Sound Automatically Removed"),
                     _(
-                        'The {name} sound is no longer accessible, so it has been removed'
-                    ).format(name=f'<b><i>{name}</i></b>'),
+                        "The {name} sound is no longer accessible, so it has been removed"
+                    ).format(name=f"<b><i>{name}</i></b>"),
                 )
-                alert.add_response('accept', _('Accept'))
+                alert.add_response("accept", _("Accept"))
                 alert.props.body_use_markup = True
-                alert.props.default_response = 'accept'
-                alert.props.close_response = 'accept'
+                alert.props.default_response = "accept"
+                alert.props.close_response = "accept"
                 alert.present(self)
 
     def open_audio(self):
@@ -153,7 +153,7 @@ class BlanketWindow(Adw.ApplicationWindow):
                 filename = gfile.get_path()
                 if filename:
                     basename = os.path.basename(filename)
-                    name = basename[:basename.rfind('.')]
+                    name = basename[: basename.rfind(".")]
                     uri = gfile.get_uri()
 
                     # Create a new Sound
@@ -166,23 +166,23 @@ class BlanketWindow(Adw.ApplicationWindow):
                     MainPlayer.get().append(sound)
 
         filters = {
-            'Supported audio files': [
-                'audio/ogg',
-                'audio/flac',
-                'audio/x-wav',
-                'audio/wav',
-                'audio/mpeg',
-                'audio/aac',
+            "Supported audio files": [
+                "audio/ogg",
+                "audio/flac",
+                "audio/x-wav",
+                "audio/wav",
+                "audio/mpeg",
+                "audio/aac",
             ],
-            'Ogg': ['audio/ogg'],
-            'FLAC': ['audio/flac'],
-            'WAV': ['audio/x-wav', 'audio/wav'],
-            'MP3': ['audio/mpeg'],
-            'AAC': ['audio/aac'],
+            "Ogg": ["audio/ogg"],
+            "FLAC": ["audio/flac"],
+            "WAV": ["audio/x-wav", "audio/wav"],
+            "MP3": ["audio/mpeg"],
+            "AAC": ["audio/aac"],
         }
 
         self.filechooser = Gtk.FileDialog.new()
-        self.filechooser.set_title(_('Open audio'))
+        self.filechooser.set_title(_("Open audio"))
         self.filechooser.set_modal(True)
 
         filter_store = Gio.ListStore.new(Gtk.FileFilter)
@@ -223,10 +223,10 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         row.volume = sound.saved_volume
         sound.bind_property(
-            'saved_volume', row, 'volume', GObject.BindingFlags.BIDIRECTIONAL
+            "saved_volume", row, "volume", GObject.BindingFlags.BIDIRECTIONAL
         )
 
-        sound.bind_property('title', row, 'title', GObject.BindingFlags.SYNC_CREATE)
+        sound.bind_property("title", row, "title", GObject.BindingFlags.SYNC_CREATE)
 
         return row
 
@@ -240,18 +240,18 @@ class BlanketWindow(Adw.ApplicationWindow):
             item.sound = sound
 
             sound.bind_property(
-                'playing', item, 'playing', GObject.BindingFlags.SYNC_CREATE
+                "playing", item, "playing", GObject.BindingFlags.SYNC_CREATE
             )
             sound.bind_property(
-                'title', item, 'title', GObject.BindingFlags.SYNC_CREATE
+                "title", item, "title", GObject.BindingFlags.SYNC_CREATE
             )
             sound.bind_property(
-                'icon_name', item, 'icon_name', GObject.BindingFlags.SYNC_CREATE
+                "icon_name", item, "icon_name", GObject.BindingFlags.SYNC_CREATE
             )
         else:
             # Add new sound item
-            item.title = _('Add…')
-            item.icon_name = 'com.rafaelmardojai.Blanket-add-symbolic'
+            item.title = _("Add…")
+            item.icon_name = "com.rafaelmardojai.Blanket-add-symbolic"
 
         return item
 

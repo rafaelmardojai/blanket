@@ -2,15 +2,17 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
-from gi.repository import Gio, Gtk, Adw
+
+from gi.repository import Adw, Gio, Gtk
 
 from blanket.define import RES_PATH
-from blanket.sound import Sound
 from blanket.settings import Settings
+from blanket.sound import Sound
 
-@Gtk.Template(resource_path=f'{RES_PATH}/sound-rename-dialog.ui')
+
+@Gtk.Template(resource_path=f"{RES_PATH}/sound-rename-dialog.ui")
 class SoundRenameDialog(Adw.Dialog):
-    __gtype_name__ = 'SoundRenameDialog'
+    __gtype_name__ = "SoundRenameDialog"
 
     headerbar: Adw.HeaderBar = Gtk.Template.Child()  # type: ignore
     title_widget: Adw.WindowTitle = Gtk.Template.Child()  # type: ignore
@@ -25,14 +27,14 @@ class SoundRenameDialog(Adw.Dialog):
         app = Gio.Application.get_default()
         self.window = app.get_active_window()  # type: ignore
 
-        self.set_title(_('Rename Sound'))
+        self.set_title(_("Rename Sound"))
         self.title_widget.set_subtitle(self.sound.name)
         self.name_entry.set_text(self.sound.name)
         # Wire buttons
-        self.accept_btn.connect('clicked', self._on_rename_sound)
+        self.accept_btn.connect("clicked", self._on_rename_sound)
 
-        self.connect('realize', Gio.Application.get_default().unset_space_accel)
-        self.connect('closed', Gio.Application.get_default().set_space_accel)
+        self.connect("realize", Gio.Application.get_default().unset_space_accel)
+        self.connect("closed", Gio.Application.get_default().set_space_accel)
 
     @Gtk.Template.Callback()
     def _on_cancel_clicked(self, _button):
@@ -42,7 +44,9 @@ class SoundRenameDialog(Adw.Dialog):
     def _on_entry_changed(self, _entry):
         name = self.__get_name()
 
-        if self.sound is not None and (self.sound.name == name or name in Settings.get().custom_audios):
+        if self.sound is not None and (
+            self.sound.name == name or name in Settings.get().custom_audios
+        ):
             self.accept_btn.set_sensitive(False)
             return
 

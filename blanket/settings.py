@@ -1,8 +1,8 @@
 # Copyright 2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from typing import Self
 import uuid
+from typing import Self
 
 from gi.repository import Gio, GLib, GObject
 
@@ -12,7 +12,7 @@ class Settings(Gio.Settings):
     _presets_settings = {}
 
     __gsignals__ = {
-        'preset-changed': (GObject.SIGNAL_RUN_FIRST, None, (str,)),
+        "preset-changed": (GObject.SIGNAL_RUN_FIRST, None, (str,)),
     }
 
     @classmethod
@@ -23,88 +23,88 @@ class Settings(Gio.Settings):
         return cls._instance
 
     def __init__(self):
-        super().__init__(schema_id='com.rafaelmardojai.Blanket')
+        super().__init__(schema_id="com.rafaelmardojai.Blanket")
         self.migrate_legacy_volumes()
 
     """ Autostart """
 
     @property
     def autostart(self) -> bool:
-        return self.get_boolean('autostart')
+        return self.get_boolean("autostart")
 
     @autostart.setter
     def autostart(self, autostart: bool):
-        self.set_boolean('autostart', autostart)
+        self.set_boolean("autostart", autostart)
 
     """ Start in Pause """
 
     @property
     def start_paused(self) -> bool:
-        return self.get_boolean('start-paused')
+        return self.get_boolean("start-paused")
 
     @start_paused.setter
     def start_paused(self, paused: bool):
-        self.set_boolean('start-paused', paused)
+        self.set_boolean("start-paused", paused)
 
     """ Dark Mode """
 
     @property
     def dark_mode(self) -> bool:
-        return self.get_boolean('dark-mode')
+        return self.get_boolean("dark-mode")
 
     @dark_mode.setter
     def dark_mode(self, dark: bool):
-        self.set_boolean('dark-mode', dark)
+        self.set_boolean("dark-mode", dark)
 
     """ Sounds view scroll position """
 
     @property
     def scroll_position(self) -> float:
-        return self.get_double('scroll-position')
+        return self.get_double("scroll-position")
 
     @scroll_position.setter
     def scroll_position(self, position: float):
-        self.set_double('scroll-position', position)
+        self.set_double("scroll-position", position)
 
     """ General volume level """
 
     @property
     def volume(self) -> float:
-        return self.get_double('volume')
+        return self.get_double("volume")
 
     @volume.setter
     def volume(self, volume: float):
-        self.set_double('volume', volume)
+        self.set_double("volume", volume)
 
     """ Playing state """
 
     @property
     def playing(self) -> bool:
-        return self.get_boolean('playing')
+        return self.get_boolean("playing")
 
     @playing.setter
     def playing(self, state: bool):
-        self.set_boolean('playing', state)
+        self.set_boolean("playing", state)
 
     """ Background playing """
 
     @property
     def background(self) -> bool:
-        return self.get_boolean('background-playback')
+        return self.get_boolean("background-playback")
 
     @background.setter
     def background(self, background: bool):
-        self.set_boolean('background-playback', background)
+        self.set_boolean("background-playback", background)
 
     """ Custom sounds """
 
     @property
     def custom_audios(self) -> dict[str, str]:
-        return dict(self.get_value('custom-audios'))
+        return dict(self.get_value("custom-audios"))
 
     @custom_audios.setter
     def custom_audios(self, audios: dict[str, str]):
-        self.set_value('custom-audios', GLib.Variant('a{ss}', audios))
+        self.set_value("custom-audios", GLib.Variant("a{ss}", audios))
 
     """ Custom sounds helper functions  """
 
@@ -148,20 +148,20 @@ class Settings(Gio.Settings):
 
     @property
     def presets(self) -> list[str]:
-        return list(self.get_strv('presets'))
+        return list(self.get_strv("presets"))
 
     @presets.setter
     def presets(self, presets: list[str]):
-        self.set_strv('presets', presets)
+        self.set_strv("presets", presets)
 
     @property
     def active_preset(self) -> str:
-        return self.get_string('active-preset')
+        return self.get_string("active-preset")
 
     @active_preset.setter
     def active_preset(self, preset: str):
-        self.set_string('active-preset', preset)
-        self.emit('preset-changed', preset)
+        self.set_string("active-preset", preset)
+        self.emit("preset-changed", preset)
 
     @property
     def active_preset_name(self) -> str:
@@ -170,7 +170,7 @@ class Settings(Gio.Settings):
     @property
     def default_preset(self) -> str:
         """Return the default preset ID."""
-        return self.get_default_value('active-preset').get_string()  # type: ignore
+        return self.get_default_value("active-preset").get_string()  # type: ignore
 
     """ Presets helper functions  """
 
@@ -218,36 +218,36 @@ class Settings(Gio.Settings):
 
     def get_preset_name(self, preset_id: str) -> str:
         settings = self.get_preset_settings(preset_id)
-        return settings.get_string('visible-name')
+        return settings.get_string("visible-name")
 
     def set_preset_name(self, preset_id: str, name: str):
         preset = self.get_preset_settings(preset_id)
-        preset.set_string('visible-name', name)
+        preset.set_string("visible-name", name)
         preset.apply()  # Always apply changes on name change
 
     def get_preset_volumes(self, preset_id: str) -> dict[str, float]:
         settings = self.get_preset_settings(preset_id)
-        return dict(settings.get_value('sounds-volume'))
+        return dict(settings.get_value("sounds-volume"))
 
     def set_preset_volumes(self, preset_id: str, volumes: dict[str, float]):
         settings = self.get_preset_settings(preset_id)
-        settings.set_value('sounds-volume', GLib.Variant('a{sd}', volumes))
+        settings.set_value("sounds-volume", GLib.Variant("a{sd}", volumes))
 
     def get_preset_mutes(self, preset_id: str) -> dict[str, bool]:
         settings = self.get_preset_settings(preset_id)
-        return dict(settings.get_value('sounds-mute'))
+        return dict(settings.get_value("sounds-mute"))
 
     def set_preset_mutes(self, preset_id: str, mutes: dict[str, bool]):
         settings = self.get_preset_settings(preset_id)
-        settings.set_value('sounds-mute', GLib.Variant('a{sb}', mutes))
+        settings.set_value("sounds-mute", GLib.Variant("a{sb}", mutes))
 
     def get_preset_hide_inactive(self, preset_id: str) -> bool:
         settings = self.get_preset_settings(preset_id)
-        return settings.get_boolean('hide-inactive')
+        return settings.get_boolean("hide-inactive")
 
     def set_preset_hide_inactive(self, preset_id: str, hide: bool):
         settings = self.get_preset_settings(preset_id)
-        settings.set_boolean('hide-inactive', hide)
+        settings.set_boolean("hide-inactive", hide)
 
     """ Preset sound volume """
 
@@ -293,12 +293,12 @@ class Settings(Gio.Settings):
             preset_id = self.active_preset
 
         if preset_id not in self._presets_settings:
-            path = self.get_property('path')
-            if not path.endswith('/'):
-                path += '/'
-            path += preset_id + '/'
+            path = self.get_property("path")
+            if not path.endswith("/"):
+                path += "/"
+            path += preset_id + "/"
             self._presets_settings[preset_id] = Gio.Settings.new_with_path(
-                'com.rafaelmardojai.Blanket.preset', path
+                "com.rafaelmardojai.Blanket.preset", path
             )
             # Set on ‘delay-apply’ mode so it only applies changes when we want
             self._presets_settings[preset_id].delay()
@@ -319,11 +319,11 @@ class Settings(Gio.Settings):
 
     @property
     def legacy_sounds_volume(self) -> dict[str, float]:
-        return dict(self.get_value('sounds-volume'))
+        return dict(self.get_value("sounds-volume"))
 
     @legacy_sounds_volume.setter
     def legacy_sounds_volume(self, volumes_dict: dict[str, float]):
-        self.set_value('sounds-volume', GLib.Variant('a{sd}', volumes_dict))
+        self.set_value("sounds-volume", GLib.Variant("a{sd}", volumes_dict))
 
     def migrate_legacy_volumes(self):
         """Migrate legacy volumes to Default preset."""

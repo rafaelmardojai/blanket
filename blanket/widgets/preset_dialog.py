@@ -2,16 +2,17 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
-from gi.repository import Gio, Gtk, Adw
+
+from gi.repository import Adw, Gio, Gtk
 
 from blanket.define import RES_PATH
 from blanket.preset import Preset
 from blanket.settings import Settings
 
 
-@Gtk.Template(resource_path=f'{RES_PATH}/preset-dialog.ui')
+@Gtk.Template(resource_path=f"{RES_PATH}/preset-dialog.ui")
 class PresetDialog(Adw.Dialog):
-    __gtype_name__ = 'PresetDialog'
+    __gtype_name__ = "PresetDialog"
 
     headerbar: Adw.HeaderBar = Gtk.Template.Child()  # type: ignore
     title_widget: Adw.WindowTitle = Gtk.Template.Child()  # type: ignore
@@ -26,18 +27,18 @@ class PresetDialog(Adw.Dialog):
         self.window = app.get_active_window()  # type: ignore
 
         if self.preset is None:
-            self.set_title(_('New Preset'))
+            self.set_title(_("New Preset"))
             # Wire buttons
-            self.accept_btn.connect('clicked', self._on_create_preset)
+            self.accept_btn.connect("clicked", self._on_create_preset)
         else:
-            self.set_title(_('Edit Preset'))
+            self.set_title(_("Edit Preset"))
             self.title_widget.set_subtitle(self.preset.name)
             self.name_entry.set_text(self.preset.name)
             # Wire buttons
-            self.accept_btn.connect('clicked', self._on_rename_preset)
+            self.accept_btn.connect("clicked", self._on_rename_preset)
 
-        self.connect('realize', Gio.Application.get_default().unset_space_accel)
-        self.connect('closed', Gio.Application.get_default().set_space_accel)
+        self.connect("realize", Gio.Application.get_default().unset_space_accel)
+        self.connect("closed", Gio.Application.get_default().set_space_accel)
 
     @Gtk.Template.Callback()
     def _on_cancel_clicked(self, _button):
@@ -72,7 +73,7 @@ class PresetDialog(Adw.Dialog):
             return
 
         # Clear name entry
-        self.name_entry.set_text('')
+        self.name_entry.set_text("")
 
         self.close()
 

@@ -9,9 +9,9 @@ from blanket.settings import Settings
 from blanket.widgets.preset_row import PresetRow
 
 
-@Gtk.Template(resource_path=f'{RES_PATH}/preset-chooser.ui')
+@Gtk.Template(resource_path=f"{RES_PATH}/preset-chooser.ui")
 class PresetChooser(Gtk.MenuButton):
-    __gtype_name__ = 'PresetChooser'
+    __gtype_name__ = "PresetChooser"
 
     selected: Preset = GObject.Property(type=Preset)  # type: ignore
 
@@ -23,11 +23,11 @@ class PresetChooser(Gtk.MenuButton):
         # Create GioListStore to store Presets
         self.model = Gio.ListStore.new(Preset)
         self.presets_list.bind_model(self.model, self._create_widget)
-        self.connect('notify::selected', self._on_selected_changed)
+        self.connect("notify::selected", self._on_selected_changed)
 
         # Wire widgets
-        self.presets_list.connect('row-activated', self._on_preset_activated)
-        Settings.get().connect('preset-changed', self._on_saved_changed)
+        self.presets_list.connect("row-activated", self._on_preset_activated)
+        Settings.get().connect("preset-changed", self._on_saved_changed)
 
         self.load_presets()
 

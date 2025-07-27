@@ -2,15 +2,17 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
-from gi.repository import Gio, GObject, GLib, Gtk
+
+from gi.repository import Gio, GLib, GObject, Gtk
 
 from blanket.define import RES_PATH
-from blanket.sound import Sound
 from blanket.main_player import MainPlayer
+from blanket.sound import Sound
 
-@Gtk.Template(resource_path=f'{RES_PATH}/sound-context-menu.ui')
+
+@Gtk.Template(resource_path=f"{RES_PATH}/sound-context-menu.ui")
 class SoundContextMenu(Gtk.PopoverMenu):
-    __gtype_name__ = 'SoundContextMenu'
+    __gtype_name__ = "SoundContextMenu"
 
     volume: Gtk.Scale = Gtk.Template.Child()  # type: ignore
 
@@ -23,14 +25,14 @@ class SoundContextMenu(Gtk.PopoverMenu):
             index = MainPlayer.get().get_index(sound.name)
             # Set remove menu item
             custom_section = Gio.Menu()
-            self.rename_item = Gio.MenuItem.new(_('Rename'), None)
+            self.rename_item = Gio.MenuItem.new(_("Rename"), None)
             self.rename_item.set_action_and_target_value(
-                'app.rename-sound', GLib.Variant.new_uint32(index)
+                "app.rename-sound", GLib.Variant.new_uint32(index)
             )
             custom_section.append_item(self.rename_item)
-            self.remove_item = Gio.MenuItem.new(_('Remove'), None)
+            self.remove_item = Gio.MenuItem.new(_("Remove"), None)
             self.remove_item.set_action_and_target_value(
-                'app.remove-sound', GLib.Variant.new_uint32(index)
+                "app.remove-sound", GLib.Variant.new_uint32(index)
             )
             custom_section.append_item(self.remove_item)
 
@@ -42,7 +44,7 @@ class SoundContextMenu(Gtk.PopoverMenu):
 
         vol_adjustment = self.volume.get_adjustment()
         self.vol_bind = self.sound.bind_property(
-            'saved_volume', vol_adjustment, 'value', GObject.BindingFlags.BIDIRECTIONAL
+            "saved_volume", vol_adjustment, "value", GObject.BindingFlags.BIDIRECTIONAL
         )
 
     def do_closed(self):

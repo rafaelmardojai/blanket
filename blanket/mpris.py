@@ -10,9 +10,9 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
-from gi.repository import Gio, GLib, Gdk
-
 from random import randint
+
+from gi.repository import Gdk, Gio, GLib
 
 from blanket.define import RES_PATH
 from blanket.main_player import MainPlayer

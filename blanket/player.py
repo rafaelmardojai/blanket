@@ -11,7 +11,7 @@ class Player(GstPlay.Play):
     GstPlay.Play with modifications
     """
 
-    __gtype_name__ = 'SoundPlayer'
+    __gtype_name__ = "SoundPlayer"
 
     def __init__(self, sound):
         super().__init__()
@@ -31,19 +31,19 @@ class Player(GstPlay.Play):
         self.pipeline = self.get_pipeline()
         bus = self.pipeline.get_bus()
         bus.add_signal_watch()
-        bus.connect('message', self._on_bus_message)
+        bus.connect("message", self._on_bus_message)
 
         # Connect mainplayer volume signal
         self.volume_hdlr = MainPlayer.get().connect(
-            'notify::volume', self._on_main_volume_changed
+            "notify::volume", self._on_main_volume_changed
         )
         # Connect mainplayer muted signal
         self.playing_hdlr = MainPlayer.get().connect(
-            'notify::playing', self._on_playing_changed
+            "notify::playing", self._on_playing_changed
         )
 
         # Connect volume-changed signal
-        self.connect('notify::volume', self._on_volume_changed)
+        self.connect("notify::volume", self._on_volume_changed)
 
     def set_virtual_volume(self, volume: float):
         # Get last saved sound volume

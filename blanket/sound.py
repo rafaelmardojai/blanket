@@ -14,7 +14,7 @@ class Sound(GObject.Object):
     Describe a sound with it's properties
     """
 
-    __gtype_name__ = 'Sound'
+    __gtype_name__ = "Sound"
 
     playing: bool = GObject.Property(type=bool, default=False)  # type: ignore
     title: str = GObject.Property(type=str)  # type: ignore
@@ -29,8 +29,8 @@ class Sound(GObject.Object):
     ):
         super().__init__()
 
-        resource = f'resource:{RES_PATH}/sounds/{name}.ogg'
-        icon = 'com.rafaelmardojai.Blanket-{}-symbolic'
+        resource = f"resource:{RES_PATH}/sounds/{name}.ogg"
+        icon = "com.rafaelmardojai.Blanket-{}-symbolic"
 
         # Internal player
         self._player = None
@@ -39,18 +39,18 @@ class Sound(GObject.Object):
         self.name = name
         self.uri = uri if uri else resource
         self.title = title if title else name
-        self.icon_name = icon.format('sound-wave' if custom else name)
+        self.icon_name = icon.format("sound-wave" if custom else name)
         self.custom = custom
 
         # Playing state
-        self.connect('notify::playing', self._playing_changed)
+        self.connect("notify::playing", self._playing_changed)
         if not self.saved_mute:
             self.playing = True
 
         # Connect mainplayer preset-changed signal
-        MainPlayer.get().connect('preset-changed', self._on_preset_changed)
+        MainPlayer.get().connect("preset-changed", self._on_preset_changed)
         # Connect mainplayer reset-volumes signal
-        MainPlayer.get().connect('reset-volumes', self._on_reset_volumes)
+        MainPlayer.get().connect("reset-volumes", self._on_reset_volumes)
 
     @property
     def player(self) -> Player:
@@ -100,7 +100,7 @@ class Sound(GObject.Object):
         self.saved_mute = not self.playing  # Save playing state
 
     def _on_preset_changed(self, _player, _preset):
-        self.notify('saved_volume')
+        self.notify("saved_volume")
         self.playing = not self.saved_mute
 
     def _on_reset_volumes(self, _player):

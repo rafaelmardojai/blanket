@@ -8,9 +8,9 @@ from blanket.sound import Sound
 from blanket.widgets.sound_context_menu import SoundContextMenu
 
 
-@Gtk.Template(resource_path=f'{RES_PATH}/sound-item.ui')
+@Gtk.Template(resource_path=f"{RES_PATH}/sound-item.ui")
 class SoundItem(Gtk.FlowBoxChild):
-    __gtype_name__ = 'SoundItem'
+    __gtype_name__ = "SoundItem"
 
     playing: bool = GObject.Property(type=bool, default=False)  # type: ignore
     title: str = GObject.Property(type=str)  # type: ignore
@@ -27,20 +27,20 @@ class SoundItem(Gtk.FlowBoxChild):
         self._sound: Sound | None = None
         self._menu: None | SoundContextMenu = None
 
-        self.connect('notify::playing', self._playing_changed)
+        self.connect("notify::playing", self._playing_changed)
 
         # Icon
         self.bind_property(
-            'icon_name', self.icon, 'icon_name', GObject.BindingFlags.SYNC_CREATE
+            "icon_name", self.icon, "icon_name", GObject.BindingFlags.SYNC_CREATE
         )
         # Label
         self.bind_property(
-            'title', self.label, 'label', GObject.BindingFlags.SYNC_CREATE
+            "title", self.label, "label", GObject.BindingFlags.SYNC_CREATE
         )
 
         click = Gtk.GestureClick()
         click.set_button(3)  # Listen to secondary button (aka right-click)
-        click.connect('pressed', self._on_secondary_click)
+        click.connect("pressed", self._on_secondary_click)
         self.add_controller(click)
 
     @GObject.Property(type=Sound)
@@ -58,22 +58,22 @@ class SoundItem(Gtk.FlowBoxChild):
             self.volume.props.sensitive = self._sound.playing
 
             self._sound.bind_property(
-                'saved_volume',
+                "saved_volume",
                 vol_adjustment,
-                'value',
+                "value",
                 GObject.BindingFlags.BIDIRECTIONAL,
             )
             self._sound.bind_property(
-                'playing', self.volume, 'sensitive', GObject.BindingFlags.DEFAULT
+                "playing", self.volume, "sensitive", GObject.BindingFlags.DEFAULT
             )
 
             self.volume.props.visible = True
 
     def _playing_changed(self, _object, _pspec):
         if not self.playing:
-            self.icon.remove_css_class('accent')
-        elif not self.icon.has_css_class('accent'):
-            self.icon.add_css_class('accent')
+            self.icon.remove_css_class("accent")
+        elif not self.icon.has_css_class("accent"):
+            self.icon.add_css_class("accent")
 
     def _on_secondary_click(self, _ctrl, _n, x: int, y: int):
         self._context_popover(x, y)
