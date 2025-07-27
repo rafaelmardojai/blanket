@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <schemalist gettext-domain="blanket">
     <!-- Global Settings -->
     <schema id="com.rafaelmardojai.Blanket" path="/com/rafaelmardojai/Blanket/">
@@ -9,6 +9,9 @@
             <default>false</default>
         </key>
         <key type="b" name="dark-mode">
+            <default>false</default>
+        </key>
+        <key type="b" name="inhibit-suspension">
             <default>false</default>
         </key>
         <key type="d" name="scroll-position">

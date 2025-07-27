@@ -38,6 +38,9 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         super().__init__()
         self.connect("notify::playing", self._on_playing)
         Settings.get().connect("preset-changed", self._on_preset_changed)
+        Settings.get().connect(
+            "changed::inhibit-suspension", self._on_settings_inhibition
+        )
 
         self.__add_item = GObject.GObject()  # Fake sound that adds new sounds
         self.__add_item.playing = False  # type: ignore
@@ -80,19 +83,37 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
 
         return index > 0 and len(presets) > 1
 
+    def _inhibit(self, inhibit: bool):
+        """
+        Set suspension inhibition
+        """
+        app = Gtk.Application.get_default()
+        if inhibit:
+            if self._cookie:
+                return
+
+            self._cookie = app.inhibit(  # type: ignore
+                None, Gtk.ApplicationInhibitFlags.SUSPEND, "Playback in progress"
+            )
+        elif self._cookie != 0:
+            app.uninhibit(self._cookie)  # type: ignore
+            self._cookie = 0
+
     def _on_playing(self, _player, _param):
         """
         Toggle suspension inhibition when playing
         """
-        app = Gtk.Application.get_default()
+        if Settings.get().inhibit_suspension:
+            self._inhibit(self.playing)
 
-        if app:
-            if self.playing:
-                self._cookie = app.inhibit(  # type: ignore
-                    None, Gtk.ApplicationInhibitFlags.SUSPEND, "Playback in progress"
-                )
-            elif self._cookie != 0:
-                app.uninhibit(self._cookie)  # type: ignore
+    def _on_settings_inhibition(self, _settings: Settings, _key: str):
+        """
+        Toggle suspension inhibition when settings changes
+        """
+        if Settings.get().inhibit_suspension:
+            self._inhibit(self.playing)
+        else:
+            self._inhibit(False)
 
     def _on_preset_changed(self, _settings, preset_id):
         self.emit("preset-changed", Preset(preset_id))

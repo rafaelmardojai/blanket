@@ -56,6 +56,16 @@ class Settings(Gio.Settings):
     def dark_mode(self, dark: bool):
         self.set_boolean("dark-mode", dark)
 
+    """ Inhibit suspension """
+
+    @property
+    def inhibit_suspension(self) -> bool:
+        return self.get_boolean("inhibit-suspension")
+
+    @inhibit_suspension.setter
+    def inhibit_suspension(self, val: bool):
+        self.set_boolean("inhibit-suspension", val)
+
     """ Sounds view scroll position """
 
     @property

@@ -19,6 +19,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
     dark: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
     autostart: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
     start_paused: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
+    inhibition: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
 
     def __init__(self, window, **kwargs):
         super().__init__(**kwargs)
@@ -44,6 +45,14 @@ class PreferencesDialog(Adw.PreferencesDialog):
         # Start paused
         Settings.get().bind(
             "start-paused", self.start_paused, "active", Gio.SettingsBindFlags.DEFAULT
+        )
+
+        # Inhibition
+        Settings.get().bind(
+            "inhibit-suspension",
+            self.inhibition,
+            "active",
+            Gio.SettingsBindFlags.DEFAULT,
         )
 
     def _toggle_dark(self, switch: Adw.SwitchRow, _pspec):
