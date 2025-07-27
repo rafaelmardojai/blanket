@@ -8,7 +8,7 @@
     <file>preset-dialog.ui</file>
     <file>preset-row.ui</file>
     <file>about.ui</file>
-    <file alias="gtk/help-overlay.ui">shortcuts.ui</file>
+    <file alias="shortcuts-dialog.ui">shortcuts.ui</file>
     <file>volume-row.ui</file>
     <file>sound-item.ui</file>
     <file>sound-context-menu.ui</file>

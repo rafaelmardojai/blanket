@@ -7,6 +7,8 @@ project(
   ],
 )
 
+dependency('libadwaita-1', version: '>= 1.8.beta')
+
 i18n = import('i18n')
 
 subdir('data')
