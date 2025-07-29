@@ -26,18 +26,6 @@
     ],
     "modules": [
         {
-            "name": "blueprint",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/blueprint-compiler",
-                    "tag": "0.18.0",
-                    "commit": "07c9c9df9cd1b6b4454ecba21ee58211e9144a4b"
-                }
-            ]
-        },
-        {
             "name": "blanket",
             "builddir": true,
             "buildsystem": "meson",
