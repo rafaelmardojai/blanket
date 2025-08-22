@@ -18,7 +18,7 @@
 </p>
 
 ## Description
-Improve focus and increase your productivity by listening to different sounds. Or allows you to fall asleep in a noisy environment.
+Improve focus and increase your productivity by listening to different sounds. Blanket can also be used to help you to fall asleep in a noisy environment.
 
 ## Install
 
