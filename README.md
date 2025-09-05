@@ -76,5 +76,5 @@ If you want to support my work, you can donate me, [here you can find how](https
 ## Related Projects
 - [Blankie](https://github.com/codybrom/blankie) - Native macOS app inspired by Blanket
 - [feeltheblow](https://feeltheblow.web.app/) - Web App inspired by Blanket
-- [Soothing Noise Player](https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/),  [Napify](https://github.com/itsPronay/napify) - Android apps inspired by Blanket
+- [Soothing Noise Player](https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/),  [Napify]([https://github.com/itsPronay/napify](https://play.google.com/store/apps/details?id=com.pronaycoding.blanket_mobile)) - Android apps inspired by Blanket
 - [Blanket Web](https://apps.roanapur.de/blanket/) - Web clone of Blanket
