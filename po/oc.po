@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-04-10 14:41+0000\n"
+"PO-Revision-Date: 2025-10-16 23:07+0000\n"
 "Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
 "Language-Team: Occitan <https://hosted.weblate.org/projects/blanket/blanket/"
 "oc/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.14-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -164,7 +164,7 @@ msgstr "'Per defaut'"
 
 #: data/resources/about.blp:7
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Copyright 2020-2022 Rafael Mardojai CM"
+msgstr "Dreches d’autor 2020–2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:15
