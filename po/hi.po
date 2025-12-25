@@ -8,22 +8,23 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-05-06 10:07+0000\n"
-"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
-"Language-Team: Hindi <https://hosted.weblate.org/projects/blanket/blanket/hi/"
-">\n"
+"PO-Revision-Date: 2025-12-26 06:00+0000\n"
+"Last-Translator: HindiTranslatorOss "
+"<yadavanandanurag@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Hindi <https://hosted.weblate.org/projects/blanket/blanket/"
+"hi/>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
 #: blanket/mpris.py:156
 msgid "Blanket"
-msgstr "Blanket"
+msgstr "ब्लैंकेट"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
 #: blanket/mpris.py:154
@@ -65,7 +66,7 @@ msgstr "तदनुकूल ध्वनियां जोड़ें"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
-msgstr "पृष्ठभूमि में स्वतः प्रारंभ"
+msgstr "पृष्ठ भूमि में स्वतः प्रारंभ"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
