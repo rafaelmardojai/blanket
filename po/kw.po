@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-28 03:31-0300\n"
-"PO-Revision-Date: 2025-12-24 16:00+0000\n"
+"PO-Revision-Date: 2026-01-05 20:01+0000\n"
 "Last-Translator: Flynn <cirilla@tuta.io>\n"
 "Language-Team: Cornish <https://hosted.weblate.org/projects/blanket/blanket/"
 "kw/>\n"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr "Keffrys gallos gweres hwi dhe koska yn unn kerghynnedh trosek."
+msgstr "Keffrys gallos gweres ty dhe koska yn unn kerghynnedh trosek."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
