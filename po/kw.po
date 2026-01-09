@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-28 03:31-0300\n"
-"PO-Revision-Date: 2026-01-05 20:01+0000\n"
+"PO-Revision-Date: 2026-01-10 10:53+0000\n"
 "Last-Translator: Flynn <cirilla@tuta.io>\n"
 "Language-Team: Cornish <https://hosted.weblate.org/projects/blanket/blanket/"
 "kw/>\n"
@@ -50,7 +50,7 @@ msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
-"Gwellhe fog ha kressya agas askorruster erbynn goslowesow dhe sonyow divers "
+"Gwellhe fog ha kressya agas askorruster erbynn ow goslowes dhe sonyow divers "
 "kerghynedhel"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
@@ -267,7 +267,7 @@ msgstr "Rol Sonyow"
 
 #: data/resources/window.blp:98
 msgid "Keep Playing when Closed"
-msgstr "Pesya Senyans p'eur Klosow"
+msgstr "Pesya Senyans p'eur Deges"
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
