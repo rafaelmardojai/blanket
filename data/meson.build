@@ -52,3 +52,13 @@ install_data(
   'com.rafaelmardojai.Blanket-symbolic.svg',
   install_dir: join_paths(get_option('datadir'), 'icons/hicolor/symbolic/apps')
 )
+
+service_conf = configuration_data()
+service_conf.set('bindir', join_paths(get_option('prefix'), get_option('bindir')))
+configure_file(
+  input: 'com.rafaelmardojai.Blanket.service.in',
+  output: 'com.rafaelmardojai.Blanket.service',
+  configuration: service_conf,
+  install: true,
+  install_dir: join_paths(get_option('datadir'), 'dbus-1', 'services')
+)
