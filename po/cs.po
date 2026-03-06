@@ -11,17 +11,17 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-08-14 08:09+0000\n"
-"Last-Translator: Masterix <Masterix@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/blanket/blanket/cs/"
-">\n"
+"PO-Revision-Date: 2026-03-06 11:54+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/blanket/blanket/"
+"cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
 "<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
-"X-Generator: Weblate 5.7-dev\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -53,7 +53,7 @@ msgstr ""
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr "Nebo vám také umožní usnout v hlučném prostředí."
+msgstr "Nebo vám také může pomoci usnout v hlučném prostředí."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
@@ -73,11 +73,11 @@ msgstr "Automatické spuštění na pozadí"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr "Integrace MPRIS"
+msgstr "Ovládání přehrávání napojené na MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
-msgstr "Dostupné Zvuky v Aplikaci:"
+msgstr "Zvuky obsažené už přímo v aplikaci:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
@@ -107,7 +107,7 @@ msgstr "Ohniště"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/define.py:40
 #: blanket/define.py:62
 msgid "Pink Noise"
-msgstr "Růžový Šum"
+msgstr "Růžový šum"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:26 blanket/define.py:13
 #: blanket/define.py:51 blanket/define.py:70
@@ -117,7 +117,7 @@ msgstr "Déšť"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:27 blanket/define.py:19
 #: blanket/define.py:59
 msgid "Summer Night"
-msgstr "Letní Noc"
+msgstr "Letní noc"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:28 blanket/define.py:14
 #: blanket/define.py:52 blanket/define.py:71
@@ -127,7 +127,7 @@ msgstr "Bouřka"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/define.py:17
 #: blanket/define.py:56
 msgid "Stream"
-msgstr "Tok"
+msgstr "Proudící voda"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/define.py:25
 #: blanket/define.py:64
@@ -142,7 +142,7 @@ msgstr "Vlny"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:32 blanket/define.py:41
 #: blanket/define.py:57
 msgid "White Noise"
-msgstr "Bílý Šum"
+msgstr "Bílý šum"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:33 blanket/define.py:15
 #: blanket/define.py:63 blanket/define.py:75
@@ -165,7 +165,7 @@ msgstr "'Výchozí'"
 
 #: data/resources/about.blp:7
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr "Copyright 2020-2022 Rafael Mardojai CM"
+msgstr "Autorská práva 2020-2022 Rafael Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:15
@@ -181,7 +181,7 @@ msgstr "Vzhled"
 
 #: data/resources/preferences.blp:10
 msgid "Dark Mode"
-msgstr "Tmavý Režim"
+msgstr "Tmavý režim"
 
 #: data/resources/preferences.blp:15
 msgid "Behavior"
@@ -189,11 +189,11 @@ msgstr "Chování"
 
 #: data/resources/preferences.blp:18
 msgid "Autostart in Background"
-msgstr "Automaticky Spustit na Pozadí"
+msgstr "Automaticky spouštět na pozadí"
 
 #: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
-msgstr "Vždy při Spuštění Pozastavit"
+msgstr "Aplikaci spustit, ale nepřehrávat ještě zvuk (pozastavený)"
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
@@ -205,15 +205,15 @@ msgstr "Uložit"
 
 #: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
-msgstr "Jméno Přednastavení"
+msgstr "Název přednastavení"
 
 #: data/resources/preset-row.blp:32
 msgid "Rename Preset"
-msgstr "Přejmenovat Přenastavení"
+msgstr "Přejmenovat přednastavení"
 
 #: data/resources/preset-row.blp:43
 msgid "Delete Preset"
-msgstr "Smazat Přednastavení"
+msgstr "Smazat přednastavení"
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
@@ -221,15 +221,15 @@ msgstr "Obecné"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
 msgid "Play/Pause Sounds"
-msgstr "Přehrávat/Pozastavit Zvuky"
+msgstr "Přehrávat/pozastavit zvuky"
 
 #: data/resources/shortcuts.blp:17
 msgid "Add Custom Sound"
-msgstr "Přidat Vlastní Zvuk"
+msgstr "Přidat vlastní zvuk"
 
 #: data/resources/shortcuts.blp:22
 msgid "Close Window"
-msgstr "Zavřít Okno"
+msgstr "Zavřít okno"
 
 #: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
@@ -237,7 +237,7 @@ msgstr "Předvolby"
 
 #: data/resources/shortcuts.blp:32 data/resources/window.blp:110
 msgid "Keyboard Shortcuts"
-msgstr "Klávesové Zkratky"
+msgstr "Klávesové zkratky"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:122
 msgid "Quit"
@@ -245,23 +245,23 @@ msgstr "Ukončit"
 
 #: data/resources/window.blp:24
 msgid "Presets Menu"
-msgstr "Předvolby"
+msgstr "Nabídka přednastavení"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
-msgstr "Hlavní Menu"
+msgstr "Hlavní nabídka"
 
 #: data/resources/window.blp:67
 msgid "Volume Menu"
-msgstr "Nabídka Hlasitosti"
+msgstr "Nabídka hlasitosti"
 
 #: data/resources/window.blp:84
 msgid "Sounds Menu"
-msgstr "Nabídka Zvuků"
+msgstr "Nabídka zvuků"
 
 #: data/resources/window.blp:98
 msgid "Keep Playing when Closed"
-msgstr "Pokračovat v Přehrávání po Zavření"
+msgstr "Pokračovat v přehrávání i po zavření okna aplikace"
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
@@ -269,19 +269,19 @@ msgstr "O aplikaci Blanket"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr "Resetovat Zvuky"
+msgstr "Vrátit zvuky do výchozího stavu"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
-msgstr "Skrýt Neaktivní Zvuky"
+msgstr "Skrýt neaktivní zvuky"
 
 #: data/resources/window.blp:151
 msgid "Save as New Preset…"
-msgstr "Uložit jako Nové Přednastavení…"
+msgstr "Uložit jako nové přednastavení…"
 
 #: data/resources/window.blp:157
 msgid "Add Sound…"
-msgstr "Přidat Zvuk…"
+msgstr "Přidat zvuk…"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
@@ -289,7 +289,7 @@ msgstr "Pozastaveno kvůli úspoře energie"
 
 #: data/resources/window.blp:214
 msgid "_Resume Playing"
-msgstr "_Pokračovat v Přehrávání"
+msgstr "_Pokračovat v přehrávání"
 
 #: blanket/define.py:11
 msgid "Nature"
@@ -317,11 +317,11 @@ msgstr "Ikona aplikace"
 
 #: blanket/main.py:238
 msgid "Source Code"
-msgstr "Zdrojový Kód"
+msgstr "Zdrojové kódy"
 
 #: blanket/main.py:239
 msgid "Sounds by"
-msgstr "Zvuky"
+msgstr "Zvuky nahráli"
 
 #: blanket/main.py:240
 msgid "Sounds edited by"
@@ -329,7 +329,7 @@ msgstr "Zvuky upravili"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "Automaticky spustit Blanket na pozadí."
+msgstr "Automaticky spouštět Blanket na pozadí."
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
@@ -337,33 +337,33 @@ msgstr "Chyba požadavku"
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
-msgstr "Požadavek na automatické spuštění se nezdařil."
+msgstr "Požadavek na automatické spouštění se nezdařil."
 
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr "Ok"
+msgstr "OK"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
-msgstr "Autorizace se nezdařila"
+msgstr "Získání pověření se nezdařilo"
 
 #: blanket/preferences.py:124
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Ujistěte se, že Blanket má oprávnění pro běh na pozadí v Nastavení → "
-"Aplikace → Blanket a zkuste to znovu."
+"Ověřte, že Blanket má oprávnění pro běh na pozadí v Nastavení → Aplikace → "
+"Blanket a zkuste to znovu."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
-msgstr "Zvuk Automaticky Odstraněn"
+msgstr "Zvuk automaticky odstraněn"
 
 #: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr "Zvuk {name} již není dostupný, proto byl odstraněn"
+msgstr "Zvuk {name} už není dostupný, proto byl odstraněn"
 
 #: blanket/window.py:138
 msgid "Accept"
@@ -372,7 +372,7 @@ msgstr "Přijmout"
 #. type: ignore
 #: blanket/window.py:179
 msgid "Open audio"
-msgstr "Otevřít audio"
+msgstr "Otevřít zvuk"
 
 #. Add new sound item
 #: blanket/window.py:246
@@ -381,11 +381,11 @@ msgstr "Přidat…"
 
 #: blanket/widgets/preset_dialog.py:29
 msgid "New Preset"
-msgstr "Nové Přednastavení"
+msgstr "Nové přednastavení"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
-msgstr "Upravit Přednastavení"
+msgstr "Upravit přednastavení"
 
 #: blanket/widgets/sound_context_menu.py:24
 msgid "Remove"
