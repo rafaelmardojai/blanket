@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2026-03-06 14:02+0000\n"
+"PO-Revision-Date: 2026-03-07 19:09+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/blanket/blanket/"
 "cs/>\n"
@@ -253,7 +253,7 @@ msgstr "Hlavní nabídka"
 
 #: data/resources/window.blp:67
 msgid "Volume Menu"
-msgstr "Nabídka hlasitosti"
+msgstr "Nabídka hlasitostí"
 
 #: data/resources/window.blp:84
 msgid "Sounds Menu"
@@ -269,7 +269,7 @@ msgstr "O aplikaci Blanket"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr "Zrušit výběr zvuků a zapomenout hlasitosti"
+msgstr "Zrušit výběr zvuků a hlasitostí"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
@@ -353,8 +353,8 @@ msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
-"Ověřte, že Blanket má oprávnění pro běh na pozadí v Nastavení → Aplikace → "
-"Blanket a zkuste to znovu."
+"Ověřte, že Blanket má oprávnění pro běh na pozadí v (systémovém) Nastavení → "
+"Aplikace → Blanket a zkuste to znovu."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
