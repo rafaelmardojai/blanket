@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2026-03-06 12:57+0000\n"
+"PO-Revision-Date: 2026-03-06 14:02+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/blanket/blanket/"
 "cs/>\n"
@@ -363,7 +363,7 @@ msgstr "Zvuk automaticky odstraněn"
 #: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr "Zvuk {name} už není dostupný, proto byl odstraněn"
+msgstr "Zvuk {name} už není dostupný a proto byl odstraněn"
 
 #: blanket/window.py:138
 msgid "Accept"
