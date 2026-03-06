@@ -12,7 +12,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
 "PO-Revision-Date: 2026-03-06 12:57+0000\n"
-"Last-Translator: Roxwize <biscordbro@gmail.com>\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/blanket/blanket/"
 "cs/>\n"
 "Language: cs\n"
@@ -48,7 +48,8 @@ msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
-"Pomůže vám soustředit se a zvýší vaši produktivitu poslechem různých zvuků"
+"Lépe se soustřeďte a zvyšte svou produktivitu poslechem různých okolních "
+"zvuků"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
@@ -60,19 +61,19 @@ msgstr "Funkce:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr "Ukládejte přednastavení"
+msgstr "Ukládání přednastavení"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
 msgid "Add custom sounds"
-msgstr "Přidávejte vlastní zvuky"
+msgstr "Přidávání vlastních zvuků"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
-msgstr "Automatické spuštění na pozadí"
+msgstr "Automatické spouštění aplikace (na pozadí)"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr "Ovládání přehrávání napojené na MPRIS"
+msgstr "Přehrávání ovladatelné i centrálně přes MPRIS"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
@@ -188,11 +189,11 @@ msgstr "Chování"
 
 #: data/resources/preferences.blp:18
 msgid "Autostart in Background"
-msgstr "Automaticky spouštět na pozadí"
+msgstr "Aplikaci spouštět automaticky (na pozadí)"
 
 #: data/resources/preferences.blp:22
 msgid "Always Start on Pause"
-msgstr "Aplikaci spustit, ale nepřehrávat ještě zvuk (pozastavený)"
+msgstr "Spustit, ale nepřehrávat ještě zvuk (pozastavený)"
 
 #: data/resources/preset-dialog.blp:21
 msgid "Cancel"
@@ -268,7 +269,7 @@ msgstr "O aplikaci Blanket"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr "Vypnout všechny zvuky a zapomenout nastavení hlasitostí"
+msgstr "Zrušit výběr zvuků a zapomenout hlasitosti"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
