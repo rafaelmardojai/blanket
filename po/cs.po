@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2026-03-06 11:54+0000\n"
+"PO-Revision-Date: 2026-03-06 12:11+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/blanket/blanket/"
 "cs/>\n"
@@ -269,7 +269,7 @@ msgstr "O aplikaci Blanket"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr "Vrátit zvuky do výchozího stavu"
+msgstr "Vypnout všechny zvuky a zapomenout nastavení hlasitostí"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
