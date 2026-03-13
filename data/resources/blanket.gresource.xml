@@ -37,6 +37,12 @@
 
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-sound-wave-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-add-symbolic.svg</file>
+    
+    <!-- App icons -->
+    <file preprocess="xml-stripblanks">icons/scalable/apps/com.mardojai.DiccionarioLengua.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/apps/com.mardojai.ForgeSparks.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/apps/com.rafaelmardojai.SharePreview.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/apps/com.rafaelmardojai.WebfontKitGenerator.svg</file>
 
     <!-- Sounds -->
     <file>sounds/rain.ogg</file>
