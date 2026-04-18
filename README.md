@@ -35,6 +35,7 @@ Improve focus and increase your productivity by listening to different sounds. B
 | openSUSE  | [`blanket`](https://build.opensuse.org/package/show/multimedia%3Aapps/blanket) | [Michael Vetter](https://github.com/jubalh) |
 | Ubuntu (PPA) | [`Stable Releases`](https://launchpad.net/~apandada1/+archive/ubuntu/blanket), [`Daily Builds`](https://launchpad.net/~apandada1/+archive/ubuntu/blanket-daily) | [Archisman Panigrahi](https://github.com/apandada1) |
 | MX Linux | [`blanket`](http://mxrepo.com/mx/repo/pool/main/b/blanket/) | [SwampRabbit](https://github.com/SwampRabbit) |
+| Debian (trixie) | [`blanket`](https://packages.debian.org/en/trixie/blanket) | [Debian GNOME Team](https://salsa.debian.org/gnome-team) |
 
 ### Build from source
 
