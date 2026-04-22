@@ -1,0 +1,51 @@
+#!/usr/bin/python3
+
+# Copyright 2020 Rafael Mardojai CM
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+import os
+import sys
+import signal
+import locale
+import gettext
+
+VERSION = '0.8.0'
+REVISION = '0.8.0'
+pkgdatadir = '/home/prabhjot/blanket/_install/share/blanket'
+localedir = '/home/prabhjot/blanket/_install/share/locale'
+
+# Ensure local installs can discover bundled schemas and data files.
+sharedir = os.path.dirname(pkgdatadir)
+schema_dir = os.path.join(sharedir, 'glib-2.0', 'schemas')
+
+if os.path.isdir(schema_dir) and 'GSETTINGS_SCHEMA_DIR' not in os.environ:
+  os.environ['GSETTINGS_SCHEMA_DIR'] = schema_dir
+
+existing_xdg_data_dirs = os.environ.get('XDG_DATA_DIRS', '/usr/local/share:/usr/share')
+if sharedir not in existing_xdg_data_dirs.split(':'):
+  os.environ['XDG_DATA_DIRS'] = f'{sharedir}:{existing_xdg_data_dirs}'
+
+sys.path.insert(1, pkgdatadir)
+signal.signal(signal.SIGINT, signal.SIG_DFL)
+gettext.install('blanket', localedir)
+
+try:
+  locale.bindtextdomain('blanket', localedir)
+  locale.textdomain('blanket')
+except:
+  print('Cannot set locale.')
+try:
+  gettext.bindtextdomain('blanket', localedir)
+  gettext.textdomain('blanket')
+except:
+  print('Cannot load translations.')
+
+if __name__ == '__main__':
+    import gi
+
+    from gi.repository import Gio
+    resource = Gio.Resource.load(os.path.join(pkgdatadir, 'blanket.gresource'))
+    resource._register()
+
+    from blanket import main
+    sys.exit(main.main(REVISION))
