@@ -3,7 +3,7 @@
 
 import sys
 from gettext import gettext as _
-
+from typing import cast
 import gi
 
 try:
@@ -20,7 +20,7 @@ except ImportError or ValueError as exc:
     print("Error: Dependencies not met.", exc)
     exit()
 
-from blanket.define import ARTISTS, AUTHORS, RES_PATH, SOUND_ARTISTS, SOUND_EDITORS
+from blanket.define import ARTISTS, AUTHORS, RES_PATH, SOUND_ARTISTS, SOUND_EDITORS, SOUNDS
 from blanket.main_player import MainPlayer
 from blanket.mpris import MPRIS
 from blanket.preferences import PreferencesDialog
@@ -28,6 +28,9 @@ from blanket.settings import Settings
 from blanket.widgets import PresetDialog
 from blanket.widgets.sound_rename_dialog import SoundRenameDialog
 from blanket.window import BlanketWindow
+
+# added for cli
+from blanket.sound import Sound
 
 
 class Application(Adw.Application):
@@ -60,6 +63,37 @@ class Application(Adw.Application):
             "Start window hidden",
             None,
         )
+
+        # Lists Presets
+        self.add_main_option(
+            "list-presets",
+            0,
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.NONE,
+            "List all sounds",
+            None,
+        )
+
+        # Plays Sound
+        self.add_main_option(
+            "play",
+            0,
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.STRING,
+            "Plays the sound",
+            "SOUND_NAME"
+        )
+
+        # Set master volume
+        self.add_main_option(
+            "volume",
+            0,
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.INT,
+            "Set master volume",
+            "NUMBER"
+        )
+
         # App window
         self.window: BlanketWindow | None = None
         self.window_hidden = False
@@ -177,6 +211,36 @@ class Application(Adw.Application):
 
         if "hidden" in options and self.window is None:
             self.window_hidden = True
+        
+        # playing sounds with cli
+        # lists presets "--list-presets"
+        if "list-presets" in options:
+            for s in [s for g in SOUNDS for s in g["sounds"]]:
+                command_line.print_literal(f"{s['title']} \n ")
+            return 0
+        
+        # plays sound "--play <sound>"
+        if "play" in options:
+            sound_name = options["play"]
+            self.window_hidden = True
+            self.activate()
+            sound, _ = MainPlayer.get().get_by_name(sound_name)
+            if sound:
+                sound = cast(Sound, sound)
+                sound.playing = True
+                MainPlayer.get().playing = True
+                command_line.print_literal(f"Playing {sound_name} \n")
+            else:
+                command_line.print_literal(f"{sound_name} not found \n")
+            return 0
+        
+        # set volume "--volume <NUM: 0-100>"
+        if "volume" in options:
+            volume = options["volume"] / 100
+            MainPlayer.get().volume = volume
+            Settings.get().volume = volume
+            return 0
+        
 
         self.activate()
         return 0
@@ -299,7 +363,6 @@ class Application(Adw.Application):
             s = k + ": " + ", ".join(vs)
             credits_list.append(s)
         return credits_list
-
 
 def main(version):
     app = Application(version)
