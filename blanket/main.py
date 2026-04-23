@@ -254,6 +254,15 @@ class Application(Adw.Application):
         about.add_credit_section(_("Sounds by"), sound_artists)
         about.add_credit_section(_("Sounds edited by"), sound_editors)
 
+        # Translators: Metainfo for the app Diccionario de la Lengua. <https://codeberg.org/rafaelmardojai/diccionario-lengua>
+        about.add_other_app("com.mardojai.DiccionarioLengua", _('Diccionario de la Lengua'), _('Search for terms in the Spanish dictionary'))
+        # Translators: Metainfo for the app Forge Sparks. <https://github.com/rafaelmardojai/forge-sparks>
+        about.add_other_app("com.mardojai.ForgeSparks", _('Forge Sparks'), _('Get Git forges notifications'))
+        # Translators: Metainfo for the app Share Preview. <https://github.com/rafaelmardojai/share-preview/>
+        about.add_other_app("com.rafaelmardojai.SharePreview", _('Share Preview'), _('Test social media cards locally'))
+         # Translators: Metainfo for the app Webfont Kit Generator. <https://github.com/rafaelmardojai/webfont-kit-generator/>
+        about.add_other_app("com.rafaelmardojai.WebfontKitGenerator", _('Webfont Kit Generator'), _('Generate @font-face kits easily'))
+
         about.present(self.window)
 
     def set_space_accel(self, _action):
