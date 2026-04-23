@@ -12,7 +12,7 @@ try:
     gi.require_version("Gst", "1.0")
     gi.require_version("GstPlay", "1.0")
     gi.require_version("Gtk", "4.0")
-    from gi.repository import Adw, Gio, GLib, Gst, Gtk
+    from gi.repository import Adw, Gio, GLib, Gst, Gtk  # pyright: ignore[reportAttributeAccessIssue]
 
     # Init GStreamer
     Gst.init(None)

@@ -23,3 +23,8 @@ meson install -C builddir
 
 ## Compile and run app
 `./_install/bin/blanket`
+
+Command to run on my laptop:
+```
+GSETTINGS_SCHEMA_DIR="$PWD/_install/share/glib-2.0/schemas" XDG_DATA_DIRS="$PWD/_install/share:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}" ./_install/bin/blanket
+```

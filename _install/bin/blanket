@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/home/prabhjot/Documents/GitHub/blanket/.venv/bin/python3
 
 # Copyright 2020 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
@@ -11,19 +11,8 @@ import gettext
 
 VERSION = '0.8.0'
 REVISION = '0.8.0'
-pkgdatadir = '/home/prabhjot/blanket/_install/share/blanket'
-localedir = '/home/prabhjot/blanket/_install/share/locale'
-
-# Ensure local installs can discover bundled schemas and data files.
-sharedir = os.path.dirname(pkgdatadir)
-schema_dir = os.path.join(sharedir, 'glib-2.0', 'schemas')
-
-if os.path.isdir(schema_dir) and 'GSETTINGS_SCHEMA_DIR' not in os.environ:
-  os.environ['GSETTINGS_SCHEMA_DIR'] = schema_dir
-
-existing_xdg_data_dirs = os.environ.get('XDG_DATA_DIRS', '/usr/local/share:/usr/share')
-if sharedir not in existing_xdg_data_dirs.split(':'):
-  os.environ['XDG_DATA_DIRS'] = f'{sharedir}:{existing_xdg_data_dirs}'
+pkgdatadir = '/home/prabhjot/Documents/GitHub/blanket/_install/share/blanket'
+localedir = '/home/prabhjot/Documents/GitHub/blanket/_install/share/locale'
 
 sys.path.insert(1, pkgdatadir)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
