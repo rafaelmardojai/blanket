@@ -74,7 +74,7 @@ class Application(Adw.Application):
             None,
         )
 
-        # Plays Sound(s)
+        # Plays Sound(s). Best to use `&` at the end to keep using terminal
         self.add_main_option(
             "play",
             ord("p"),
@@ -234,11 +234,11 @@ class Application(Adw.Application):
         # lists presets "--list-presets"
         if "list-presets" in options:   
             for s in [s for g in SOUNDS for s in g["sounds"]]:
-                command_line.print_literal(f"{s['name']} \n ")
+                command_line.print_literal(f"{s['name']}\n")
             return 0
         
         # clears previous persisted playback state
-        # plays one or multiple sounds "--play "rain, birds, city...""
+        # plays one or multiple sounds "--play "rain, birds, city..." &"
         if "play" in options:
             self.window_hidden = True
             self.activate()
