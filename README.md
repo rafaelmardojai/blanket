@@ -50,11 +50,17 @@ You can clone and run from GNOME Builder.
 - Meson `meson`
 - Ninja `ninja`
 
-Alternatively, use the following commands to build it with meson.
+Alternatively, use the following commands to build it with meson to use CLI:
 ```bash
-meson builddir --prefix=/usr/local
-sudo ninja -C builddir install
+meson setup builddir --prefix=/usr/local
+meson compile -C builddir
+sudo meson install -C builddir
 ```
+
+After installation, `blanket` should be available from any terminal.
+
+To keep using terminal, end the argument with `&`. For example: `blanket --play rain &`
+To completely run in the background even after terminal is closed: `systemd-run --user --scope blanket --play rain &`
 
 ## Translations
 Blanket is translated into several languages. If your language is missing or incomplete, please help to [translate Blanket in Weblate](https://hosted.weblate.org/engage/blanket/).

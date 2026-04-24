@@ -67,7 +67,7 @@ class Application(Adw.Application):
         # Lists Presets
         self.add_main_option(
             "list-presets",
-            0,
+            ord("l"),
             GLib.OptionFlags.NONE,
             GLib.OptionArg.NONE,
             "List all sounds",
@@ -77,11 +77,20 @@ class Application(Adw.Application):
         # Plays Sound
         self.add_main_option(
             "play",
-            0,
+            ord("p"),
             GLib.OptionFlags.NONE,
             GLib.OptionArg.STRING,
             "Plays the sound",
             "SOUND_NAME"
+        )
+
+        # Stops playing
+        self.add_main_option(
+            "quit",
+            ord("q"),
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.NONE,
+            "Quits the app",
         )
 
         # Set master volume
@@ -232,6 +241,12 @@ class Application(Adw.Application):
                 command_line.print_literal(f"Playing {sound_name} \n")
             else:
                 command_line.print_literal(f"{sound_name} not found \n")
+            return 0
+        
+        # Quit arg "--quit"
+        if "quit" in options:
+            MainPlayer.get().playing = False
+            self.quit()
             return 0
         
         # set volume "--volume <NUM: 0-100>"
