@@ -66,7 +66,7 @@ class Application(Adw.Application):
 
         # Lists Presets
         self.add_main_option(
-            "list-presets",
+            "list-sounds",
             ord("l"),
             GLib.OptionFlags.NONE,
             GLib.OptionArg.NONE,
@@ -232,7 +232,7 @@ class Application(Adw.Application):
         
         # playing sounds with cli
         # lists presets "--list-presets"
-        if "list-presets" in options:   
+        if "list-sounds" in options:   
             for s in [s for g in SOUNDS for s in g["sounds"]]:
                 command_line.print_literal(f"{s['name']}\n")
             return 0
@@ -244,8 +244,12 @@ class Application(Adw.Application):
             self.activate()
             self._clear_playback_state()
 
+            seen = set()
             for sound_name in options["play"].split(","):
-                sound_name = sound_name.strip()                
+                sound_name = sound_name.strip()
+                if not sound_name or sound_name in seen:
+                    continue
+                seen.add(sound_name)
                 sound, _ = MainPlayer.get().get_by_name(sound_name)
                 if sound:
                     sound = cast(Sound, sound)
