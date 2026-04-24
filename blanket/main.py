@@ -74,14 +74,14 @@ class Application(Adw.Application):
             None,
         )
 
-        # Plays Sound
+        # Plays Sound(s)
         self.add_main_option(
             "play",
             ord("p"),
             GLib.OptionFlags.NONE,
             GLib.OptionArg.STRING,
-            "Plays the sound",
-            "SOUND_NAME"
+            "Plays audio",
+            "SOUND_NAME, SOUND_NAME..."
         )
 
         # Stops playing
@@ -108,6 +108,15 @@ class Application(Adw.Application):
         self.window_hidden = False
         # App version
         self.version = version
+
+    def _clear_playback_state(self):
+        # Reset per-sound playback before applying a CLI selection.
+        for sound in MainPlayer.get():
+            sound = cast(Sound, sound)
+            sound.playing = False
+
+        MainPlayer.get().playing = False
+        Settings.get().playing = False
 
     def do_startup(self):
         # Startup application
@@ -223,24 +232,28 @@ class Application(Adw.Application):
         
         # playing sounds with cli
         # lists presets "--list-presets"
-        if "list-presets" in options:
+        if "list-presets" in options:   
             for s in [s for g in SOUNDS for s in g["sounds"]]:
-                command_line.print_literal(f"{s['title']} \n ")
+                command_line.print_literal(f"{s['name']} \n ")
             return 0
         
-        # plays sound "--play <sound>"
+        # clears previous persisted playback state
+        # plays one or multiple sounds "--play "rain, birds, city...""
         if "play" in options:
-            sound_name = options["play"]
             self.window_hidden = True
             self.activate()
-            sound, _ = MainPlayer.get().get_by_name(sound_name)
-            if sound:
-                sound = cast(Sound, sound)
-                sound.playing = True
-                MainPlayer.get().playing = True
-                command_line.print_literal(f"Playing {sound_name} \n")
-            else:
-                command_line.print_literal(f"{sound_name} not found \n")
+            self._clear_playback_state()
+
+            for sound_name in options["play"].split(","):
+                sound_name = sound_name.strip()                
+                sound, _ = MainPlayer.get().get_by_name(sound_name)
+                if sound:
+                    sound = cast(Sound, sound)
+                    sound.playing = True
+                    command_line.print_literal(f"Playing {sound_name} \n")
+                else:
+                    command_line.print_literal(f"{sound_name} not found \n")
+            MainPlayer.get().playing = True
             return 0
         
         # Quit arg "--quit"
