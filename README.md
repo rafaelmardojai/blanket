@@ -79,3 +79,4 @@ If you want to support my work, you can donate me, [here you can find how](https
 - [Soothing Noise Player](https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/),  [Napify](https://github.com/itsPronay/napify) - Android apps inspired by Blanket
 - [Blanket Web](https://apps.roanapur.de/blanket/) - Web clone of Blanket
 - [Blanket+](https://apps.microsoft.com/detail/9P4VKD1WQQ9G?hl=neutral&gl=TR&ocid=pdpshare) - Windows version of blanket
+- [Aria](https://github.com/kosail/Aria) - Android, [Web app](https://aria.korealm.tech) and Desktop app inspired by Blanket. A rewrite built from scratch using Kotlin and Compose Multiplatform.
