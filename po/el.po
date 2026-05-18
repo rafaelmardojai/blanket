@@ -12,16 +12,16 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2025-04-24 13:02+0000\n"
-"Last-Translator: GiannosOB <giannos2105@gmail.com>\n"
-"Language-Team: Greek <https://hosted.weblate.org/projects/blanket/blanket/el/"
-">\n"
+"PO-Revision-Date: 2026-05-19 17:11+0000\n"
+"Last-Translator: vcodesai <vcodesai@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Greek <https://hosted.weblate.org/projects/blanket/blanket/"
+"el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11.1-dev\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -37,7 +37,7 @@ msgstr "Ακούστε διαφορετικούς ήχους"
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr "Συγκεντρωθείτε;Συγκεντρωθείτε;Θόρυβος;Παραγωγικότητα;Ύπνος;"
+msgstr "Συγκεντρωθείτε;Εστιάστε;Θόρυβος;Παραγωγικότητα;Ύπνος;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
 msgid "Listen to ambient sounds"
@@ -66,7 +66,7 @@ msgstr "Αποθηκεύστε προκαθορισμένα"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
 msgid "Add custom sounds"
-msgstr "Προσθέστε δικού σας ήχους"
+msgstr "Προσθέστε δικούς σας ήχους"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
