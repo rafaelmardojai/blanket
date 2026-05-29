@@ -8,386 +8,400 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-28 03:31-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-05-29 19:01+0000\n"
+"Last-Translator: Hosted Weblate user 152808 "
+"<anonymous0474@users.noreply.hosted.weblate.org>\n"
+"Language-Team: Latvian <https://hosted.weblate.org/projects/blanket/blanket/"
+"lv/>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.6.dev0\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:39
 #: blanket/mpris.py:156
 msgid "Blanket"
-msgstr ""
+msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
 #: blanket/mpris.py:154
 msgid "Listen to different sounds"
-msgstr ""
+msgstr "Klausieties dažādas skaņas"
 
 #. Translators: These are search terms to find this application. Do NOT translate or localize the semicolons. The list MUST also end with a semicolon.
 #: data/com.rafaelmardojai.Blanket.desktop.in:10
 msgid "Concentrate;Focus;Noise;Productivity;Sleep;"
-msgstr ""
+msgstr "Koncentrācija;Fokus;Troksnis;Produktivitāte;Miegs;"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:7
 msgid "Listen to ambient sounds"
-msgstr ""
+msgstr "Klausieties apkārtējās vides skaņas"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:9
 msgid ""
 "Improve focus and increase your productivity by listening to different "
 "ambient sounds"
 msgstr ""
+"Uzlabojiet koncentrāciju un paaugstiniet produktivitāti klausoties "
+"apkārtējās vides skaņas"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:10
 msgid "Also can help you to fall asleep in a noisy environment."
-msgstr ""
+msgstr "Arī var palīdzēt jums aizmigt trokšņainā vidē."
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:11
 msgid "Features:"
-msgstr ""
+msgstr "Funkcijas:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr ""
+msgstr "Saglabāt iestatījumu profilus"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
 msgid "Add custom sounds"
-msgstr ""
+msgstr "Pievienot savas skaņas"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
-msgstr ""
+msgstr "Automātiska palaišana fonā"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
-msgstr ""
+msgstr "MPRIS integrācija"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:18
 msgid "Included Sounds in the App:"
-msgstr ""
+msgstr "Lietotnē iekļautās skaņas:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:20 blanket/define.py:18
 #: blanket/define.py:58 blanket/define.py:69
 msgid "Birds"
-msgstr ""
+msgstr "Putni"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:21 blanket/define.py:26
 #: blanket/define.py:54 blanket/define.py:73
 msgid "Boat"
-msgstr ""
+msgstr "Laiva"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:22 blanket/define.py:27
 #: blanket/define.py:55 blanket/define.py:74
 msgid "City"
-msgstr ""
+msgstr "Pilsēta"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:23 blanket/define.py:33
 #: blanket/define.py:61
 msgid "Coffee Shop"
-msgstr ""
+msgstr "Kafejnīca"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:24 blanket/define.py:34
 #: blanket/define.py:53
 msgid "Fireplace"
-msgstr ""
+msgstr "Kamīns"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:25 blanket/define.py:40
 #: blanket/define.py:62
 msgid "Pink Noise"
-msgstr ""
+msgstr "Rozā troksnis"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:26 blanket/define.py:13
 #: blanket/define.py:51 blanket/define.py:70
 msgid "Rain"
-msgstr ""
+msgstr "Lietus"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:27 blanket/define.py:19
 #: blanket/define.py:59
 msgid "Summer Night"
-msgstr ""
+msgstr "Vasaras nakts"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:28 blanket/define.py:14
 #: blanket/define.py:52 blanket/define.py:71
 msgid "Storm"
-msgstr ""
+msgstr "Pērkons"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:29 blanket/define.py:17
 #: blanket/define.py:56
 msgid "Stream"
-msgstr ""
+msgstr "Strauts"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:30 blanket/define.py:25
 #: blanket/define.py:64
 msgid "Train"
-msgstr ""
+msgstr "Vilciens"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:31 blanket/define.py:16
 #: blanket/define.py:60 blanket/define.py:72
 msgid "Waves"
-msgstr ""
+msgstr "Viļņi"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:32 blanket/define.py:41
 #: blanket/define.py:57
 msgid "White Noise"
-msgstr ""
+msgstr "Baltais troksnis"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:33 blanket/define.py:15
 #: blanket/define.py:63 blanket/define.py:75
 msgid "Wind"
-msgstr ""
+msgstr "Vējš"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:67
 msgid "The default screen in light theme"
-msgstr ""
+msgstr "Sākuma ekrāns ar gaišu tēmu"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:72
 msgid "The default screen in dark theme"
-msgstr ""
+msgstr "Sākuma ekrāns ar tumšu tēmu"
 
 #. Translators: Keep single quote please!
 #: data/com.rafaelmardojai.Blanket.gschema.xml:45
 msgctxt "visible-name"
 msgid "'Default'"
-msgstr ""
+msgstr "'Pēc noklusējuma'"
 
 #: data/resources/about.blp:7
 msgid "Copyright 2020-2022 Rafael Mardojai CM"
-msgstr ""
+msgstr "Autortiesības 2020-2022 Rafaels Mardojai CM"
 
 #. Translators: Replace me with your names, You can make a mailto link: translator-name <user@domain.org>
 #: data/resources/about.blp:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr ""
+msgstr "Anonīms"
 
 #: data/resources/preferences.blp:7
 msgid "Appearance"
-msgstr ""
+msgstr "Izskats"
 
 #: data/resources/preferences.blp:10
 msgid "Dark Mode"
-msgstr ""
+msgstr "Tumšais režīms"
 
 #: data/resources/preferences.blp:15
 msgid "Behavior"
-msgstr ""
+msgstr "Uzvedība"
 
 #: data/resources/preferences.blp:18
 msgid "Autostart in Background"
-msgstr ""
+msgstr "Automātiska palaišana fonā"
 
 #: data/resources/preferences.blp:22
+#, fuzzy
 msgid "Always Start on Pause"
-msgstr ""
+msgstr "Vienmēr palaist pēc pauzes"
 
 #: data/resources/preset-dialog.blp:21
 #: data/resources/sound-rename-dialog.blp:21
 msgid "Cancel"
-msgstr ""
+msgstr "Atcelt"
 
 #: data/resources/preset-dialog.blp:29
 #: data/resources/sound-rename-dialog.blp:29
 msgid "Save"
-msgstr ""
+msgstr "Saglabāt"
 
 #: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
-msgstr ""
+msgstr "Iestatījumu profila nosaukums"
 
 #: data/resources/preset-row.blp:32
 msgid "Rename Preset"
-msgstr ""
+msgstr "Pārdēvēt iestatījumu profilu"
 
 #: data/resources/preset-row.blp:43
 msgid "Delete Preset"
-msgstr ""
+msgstr "Izdzēst iestatījumu profilu"
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
-msgstr ""
+msgstr "Vispārīgi"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
+#, fuzzy
 msgid "Play/Pause Sounds"
-msgstr ""
+msgstr "Atskaņot/Pauzēt"
 
 #: data/resources/shortcuts.blp:17
 msgid "Add Custom Sound"
-msgstr ""
+msgstr "Pievienot savu skaņu"
 
 #: data/resources/shortcuts.blp:22
 msgid "Close Window"
-msgstr ""
+msgstr "Aizvērt logu"
 
 #: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
-msgstr ""
+msgstr "Iestatījumi"
 
 #: data/resources/shortcuts.blp:32 data/resources/window.blp:110
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "Taustiņu kombinācijas"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:122
 msgid "Quit"
-msgstr ""
+msgstr "Iziet"
 
 #: data/resources/sound-rename-dialog.blp:40
 msgid "Sound Name"
-msgstr ""
+msgstr "Skaņas nosaukums"
 
 #: data/resources/window.blp:24
 msgid "Presets Menu"
-msgstr ""
+msgstr "Iestatījumu profili"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
-msgstr ""
+msgstr "Galvenā izvēlne"
 
 #: data/resources/window.blp:67
+#, fuzzy
 msgid "Volume Menu"
-msgstr ""
+msgstr "Regulēt skaļumu"
 
 #: data/resources/window.blp:84
 msgid "Sounds Menu"
-msgstr ""
+msgstr "Skaņas"
 
 #: data/resources/window.blp:98
 msgid "Keep Playing when Closed"
-msgstr ""
+msgstr "Turpināt atskaņošanu pēc aizvēršanas"
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
-msgstr ""
+msgstr "Par lietotni"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr ""
+msgstr "Atiestatīt skaņas"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
-msgstr ""
+msgstr "Paslēpt neaktīvās skaņas"
 
 #: data/resources/window.blp:151
 msgid "Save as New Preset…"
-msgstr ""
+msgstr "Saglabāt kā jaunu iestatījumu profilu…"
 
 #: data/resources/window.blp:157
 msgid "Add Sound…"
-msgstr ""
+msgstr "Pievienot skaņu…"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
-msgstr ""
+msgstr "Apturēts, lai taupītu enerģiju"
 
 #: data/resources/window.blp:214
 msgid "_Resume Playing"
-msgstr ""
+msgstr "_Turpināt klausīties"
 
 #: blanket/define.py:11
 msgid "Nature"
-msgstr ""
+msgstr "Daba"
 
 #: blanket/define.py:23
 msgid "Travel"
-msgstr ""
+msgstr "Ceļojums"
 
 #: blanket/define.py:31
 msgid "Interiors"
-msgstr ""
+msgstr "Telpā"
 
 #: blanket/define.py:38
 msgid "Noise"
-msgstr ""
+msgstr "Troksnis"
 
 #: blanket/define.py:48
 msgid "Sounds icons"
-msgstr ""
+msgstr "Skaņas ikonas"
 
 #: blanket/define.py:48
 msgid "App icon"
-msgstr ""
+msgstr "Lietotnes ikona"
 
 #: blanket/main.py:257
 msgid "Source Code"
-msgstr ""
+msgstr "Atvērtais pirmkods"
 
 #: blanket/main.py:258
 msgid "Sounds by"
-msgstr ""
+msgstr "Skaņu autors:"
 
 #: blanket/main.py:259
 msgid "Sounds edited by"
-msgstr ""
+msgstr "Skaņas rediģēja:"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr ""
+msgstr "Automātiski palaist lietotni fonā."
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
-msgstr ""
+msgstr "Pieprasījuma kļūda"
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
-msgstr ""
+msgstr "Automātiskās palaišanas fonā pieprasījums neizdevās."
 
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "OK"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
-msgstr ""
+msgstr "Autorizācija neizdevās"
 
 #: blanket/preferences.py:124
+#, fuzzy
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
+"Atveriet iestatījumus → Aplikācijas → Blanket\n"
+"Pārliecinaties ka lietotnei ir tiesības automātiski palaisties fonā un "
+"pamēģiniet vēlreiz."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "Skaņa tika automātiski izdzēsta"
 
 #: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "Skaņa {name} vairs nav pieejama, tāpēc tas bija izdzēsts"
 
 #: blanket/window.py:138
 msgid "Accept"
-msgstr ""
+msgstr "Pieņemt"
 
 #: blanket/window.py:185
+#, fuzzy
 msgid "Open audio"
-msgstr ""
+msgstr "Atveriet audio"
 
 #. Add new sound item
 #: blanket/window.py:253
 msgid "Add…"
-msgstr ""
+msgstr "Pievienot skaņu…"
 
 #: blanket/widgets/preset_dialog.py:29
+#, fuzzy
 msgid "New Preset"
-msgstr ""
+msgstr "Jauns iestatījumu profils"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
-msgstr ""
+msgstr "Rediģēt iestatījumu profilu"
 
 #: blanket/widgets/sound_context_menu.py:26
 msgid "Rename"
-msgstr ""
+msgstr "Pārdēvēt"
 
 #: blanket/widgets/sound_context_menu.py:31
 msgid "Remove"
-msgstr ""
+msgstr "Izdzēst"
 
 #. type: ignore
 #: blanket/widgets/sound_rename_dialog.py:28
