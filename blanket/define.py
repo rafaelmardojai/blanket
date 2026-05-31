@@ -49,7 +49,7 @@ ARTISTS = {"Jakub Steiner": [_("Sounds icons")], "Rafael Mardojai CM": [_("App i
 SOUND_ARTISTS = {
     "alex36917": [_("Rain")],
     "Digifish music": [_("Storm")],
-    "ezwa": [_("Fireplace")],
+    "reinsamba": [_("Fireplace")],
     "Falcet": [_("Boat")],
     "gezortenplotz": [_("City")],
     "gluckose": [_("Stream")],
@@ -72,5 +72,8 @@ SOUND_EDITORS = {
         _("Boat"),
         _("City"),
         _("Wind"),
+    ],
+    "DancingGeek": [
+        _("Fireplace")
     ]
 }
