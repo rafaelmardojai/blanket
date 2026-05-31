@@ -65,7 +65,8 @@ _________
 | [Train](https://trains.ambient-mixer.com/rainy-train)         | `0.4.0`       | vahid    | CC Sampling + | -27    | 8,7   | -8,1             | None
 | [Stream](https://freesound.org/people/gluckose/sounds/333987/) | `0.4.0`      | gluckose | CC0      | -39,2       | 1     | -15,7            | None
 | [Boat](https://freesound.org/people/Falcet/sounds/439365/)    | `0.4.0`       | Falcet   | CC0      | -50,5       | 6,6   | -26              | +20 dB
-| [City](ttps://freesound.org/people/gezortenplotz/sounds/44796/) | `0.4.0`   | gezortenplotz | CC BY | -38,7       | 4     | -18,9            | +11 dB
+| [City](https://freesound.org/people/gezortenplotz/sounds/44796/) | `0.4.0`   | gezortenplotz | CC BY | -38,7      | 4     | -18,9            | +11 dB
+| [Cat](https://freesound.org/people/adda_records/sounds/519977/) | `0.8.0`     | adda_records | CC BY | -26,7      | 0     | -11,8            | Extract of sound, exported to fit spec
 
 **Replaced sounds:**
 | Sound                                                         | App version | Author    | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications
