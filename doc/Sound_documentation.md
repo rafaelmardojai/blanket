@@ -72,6 +72,7 @@ _________
 | :-:                                                           | :-:         | :-:       | :-:      | :-:         | :-:   | :-:              |  :-:
 | [Rain](https://freesound.org/people/alex36917/sounds/524605/) | `0.4.0`     | alex36917 | CC BY    | -29,3       | 4,6   | 0                | +2 dB & Lim -6,1 dB : 3,2 ms
 | [Wind](https://freesound.org/people/felix.blume/sounds/217506/)| `0.4.2`    | felix.blume | CC0    | -17,9       | 8     | -0,5             | -9 dB (its an extract, not whole clip)
+| [Fireplace](https://freesound.org/people/reinsamba/sounds/18766/)| `0.8.0`  | reinsamba | CC BY    | -32,0       | 3,6   | -6,9             | Extract of sound, exported to fit spec
 
 **Modified sounds:**
 | Sound   | App version | Author         | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications | Needs replacement
@@ -85,6 +86,5 @@ _________
 **For `0.4.2`**
 * Summer night
 * Coffee Shop
-* Fireplace
 * Pink noise
 * White noise
