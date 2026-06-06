@@ -16,6 +16,7 @@ SOUNDS = [
             {"name": "stream", "title": _("Stream")},
             {"name": "birds", "title": _("Birds")},
             {"name": "summer-night", "title": _("Summer Night")},
+            {"name": "cat-purr", "title": _("Cat Purr")},
         ],
     },
     {
@@ -47,9 +48,9 @@ AUTHORS = ["Rafael Mardojai CM"]
 ARTISTS = {"Jakub Steiner": [_("Sounds icons")], "Rafael Mardojai CM": [_("App icon")]}
 
 SOUND_ARTISTS = {
+    "adda_records": [_("Cat Purr")],
     "alex36917": [_("Rain")],
     "Digifish music": [_("Storm")],
-    "ezwa": [_("Fireplace")],
     "Falcet": [_("Boat")],
     "gezortenplotz": [_("City")],
     "gluckose": [_("Stream")],
@@ -57,6 +58,7 @@ SOUND_ARTISTS = {
     "kvgarlic": [_("Birds")],
     "Lisa Redfern": [_("Summer Night")],
     "Luftrum": [_("Waves")],
+    "reinsamba": [_("Fireplace")],
     "stephan": [_("Coffee Shop")],
     "Omegatron": [_("Pink Noise")],
     "felix.blume": [_("Wind")],
@@ -72,5 +74,9 @@ SOUND_EDITORS = {
         _("Boat"),
         _("City"),
         _("Wind"),
+    ],
+    "DancingGeek": [
+        _("Fireplace"),
+        _("Cat Purr"),
     ]
 }

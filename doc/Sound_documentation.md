@@ -65,13 +65,15 @@ _________
 | [Train](https://trains.ambient-mixer.com/rainy-train)         | `0.4.0`       | vahid    | CC Sampling + | -27    | 8,7   | -8,1             | None
 | [Stream](https://freesound.org/people/gluckose/sounds/333987/) | `0.4.0`      | gluckose | CC0      | -39,2       | 1     | -15,7            | None
 | [Boat](https://freesound.org/people/Falcet/sounds/439365/)    | `0.4.0`       | Falcet   | CC0      | -50,5       | 6,6   | -26              | +20 dB
-| [City](ttps://freesound.org/people/gezortenplotz/sounds/44796/) | `0.4.0`   | gezortenplotz | CC BY | -38,7       | 4     | -18,9            | +11 dB
+| [City](https://freesound.org/people/gezortenplotz/sounds/44796/) | `0.4.0`   | gezortenplotz | CC BY | -38,7      | 4     | -18,9            | +11 dB
+| [Cat](https://freesound.org/people/adda_records/sounds/519977/) | `0.8.0`     | adda_records | CC BY | -26,7      | 0     | -11,8            | Extract of sound, exported to fit spec
 
 **Replaced sounds:**
 | Sound                                                         | App version | Author    | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications
 | :-:                                                           | :-:         | :-:       | :-:      | :-:         | :-:   | :-:              |  :-:
 | [Rain](https://freesound.org/people/alex36917/sounds/524605/) | `0.4.0`     | alex36917 | CC BY    | -29,3       | 4,6   | 0                | +2 dB & Lim -6,1 dB : 3,2 ms
 | [Wind](https://freesound.org/people/felix.blume/sounds/217506/)| `0.4.2`    | felix.blume | CC0    | -17,9       | 8     | -0,5             | -9 dB (its an extract, not whole clip)
+| [Fireplace](https://freesound.org/people/reinsamba/sounds/18766/)| `0.8.0`  | reinsamba | CC BY    | -32,0       | 3,6   | -6,9             | Extract of sound, exported to fit spec
 
 **Modified sounds:**
 | Sound   | App version | Author         | License  | LUFS (Int.) | Range | True Peak (dBTP) | Modifications | Needs replacement
@@ -85,6 +87,5 @@ _________
 **For `0.4.2`**
 * Summer night
 * Coffee Shop
-* Fireplace
 * Pink noise
 * White noise
