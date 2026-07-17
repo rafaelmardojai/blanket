@@ -1,7 +1,7 @@
 # Copyright 2020-2022 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gio, GObject, Gtk
+from gi.repository import Gio, GObject, Gtk  # pyright: ignore[reportAttributeAccessIssue]
 
 from blanket.preset import Preset
 from blanket.settings import Settings
