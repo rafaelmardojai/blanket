@@ -83,7 +83,9 @@ class Sound(GObject.Object):
     def remove(self):
         """Remove sound if it is custom"""
         if self.custom:
-            self.player.set_virtual_volume(0)
+            if self._player is not None:
+                self._player.remove()
+                self._player = None
             Settings.get().remove_custom_audio(self.name)
 
     def _playing_changed(self, _object, _pspec):
