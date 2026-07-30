@@ -5,6 +5,12 @@ from gi.repository import GLib, Gst
 
 from blanket.main_player import MainPlayer
 
+# Seconds an inaudible sound keeps its decoder before it is released
+RELEASE_DELAY = 5
+# A sound whose duration is not known yet cannot be looped, so wait for it
+LOOP_RETRY_INTERVAL = 200
+LOOP_RETRIES = 25
+
 
 class Player:
     """
@@ -24,6 +30,7 @@ class Player:
         self._volume = None
         self._mixer_pad = None
         self._looping = False
+        self._release_id = 0
 
         # Connect mainplayer volume signal
         self.volume_hdlr = MainPlayer.get().connect(
@@ -33,17 +40,21 @@ class Player:
     def set_virtual_volume(self, volume: float):
         # Get last saved sound volume
         self.saved_volume = volume
+        # Multiply sound volume with mainplayer volume
+        volume = self.saved_volume * MainPlayer.get().volume
 
-        if self.saved_volume > 0:
+        if volume > 0:
+            self._cancel_release()
             self._attach()
-            # Multiply sound volume with mainplayer volume
-            self._volume.props.volume = self.saved_volume * MainPlayer.get().volume  # type: ignore
+            self._volume.props.volume = volume  # type: ignore
         else:
-            # A silent sound keeps no pipeline around
-            self._detach()
+            # An inaudible sound keeps no decoder around, but dragging a slider
+            # across zero should not tear the branch down and rebuild it
+            self._schedule_release()
 
     def remove(self):
         # Drop the branch from the pipeline
+        self._cancel_release()
         self._detach()
         # Disconnect main player signals
         MainPlayer.get().disconnect(self.volume_hdlr)
@@ -56,13 +67,28 @@ class Player:
     Branch handling
     """
 
+    def _schedule_release(self):
+        if self._bin is None or self._release_id:
+            return
+
+        self._release_id = GLib.timeout_add_seconds(RELEASE_DELAY, self._release)
+
+    def _cancel_release(self):
+        if self._release_id:
+            GLib.source_remove(self._release_id)
+            self._release_id = 0
+
+    def _release(self):
+        self._release_id = 0
+        self._detach()
+        return GLib.SOURCE_REMOVE
+
     def _attach(self):
         if self._bin is not None:
             return
 
         player = MainPlayer.get()
 
-        self._bin = Gst.Bin.new(f"sound-{self.sound.name}")
         decoder = Gst.ElementFactory.make("uridecodebin", None)
         convert = Gst.ElementFactory.make("audioconvert", None)
         # audiomixer does not convert between formats, so a sound recorded at
@@ -72,7 +98,8 @@ class Player:
         volume = Gst.ElementFactory.make("volume", None)
 
         if not all((decoder, convert, resample, caps, volume)):
-            raise RuntimeError("Could not create the GStreamer sound elements")
+            print("Error: could not create the GStreamer elements for a sound")
+            return
 
         decoder.props.uri = self.sound.uri  # type: ignore
         # Every branch has to reach the mixer in the same format, and mixing at
@@ -81,16 +108,21 @@ class Player:
             "audio/x-raw,format=F32LE,rate=44100,channels=2,layout=interleaved"
         )
 
+        # Left unnamed on purpose: a name taken from the sound would clash with
+        # the bin of a branch that is still being torn down, and with a custom
+        # sound sharing the name of a built-in one
+        sound_bin = Gst.Bin.new(None)
         for element in (decoder, convert, resample, caps, volume):
-            self._bin.add(element)
+            sound_bin.add(element)
 
         convert.link(resample)  # type: ignore
         resample.link(caps)  # type: ignore
         caps.link(volume)  # type: ignore
 
+        self._bin = sound_bin
         self._convert = convert
         self._volume = volume
-        self._bin.add_pad(
+        sound_bin.add_pad(
             Gst.GhostPad.new("src", volume.get_static_pad("src"))  # type: ignore
         )
         decoder.connect("pad-added", self._on_pad_added)  # type: ignore
@@ -107,16 +139,32 @@ class Player:
         player.branch_added()
         self._bin.sync_state_with_parent()
 
-    def _detach(self):
+    def release_now(self):
+        """Tear the branch down without waiting for the stream to go idle"""
+        self._cancel_release()
+
         if self._bin is None:
             return
 
         sound_bin, mixer_pad = self._bin, self._mixer_pad
+        MainPlayer.get().branch_detaching(sound_bin)
+        self._forget_branch()
+        self._destroy_branch(sound_bin, mixer_pad)
+
+    def _forget_branch(self):
         self._bin = None
         self._convert = None
         self._volume = None
         self._mixer_pad = None
         self._looping = False
+
+    def _detach(self):
+        if self._bin is None:
+            return
+
+        sound_bin, mixer_pad = self._bin, self._mixer_pad
+        MainPlayer.get().branch_detaching(sound_bin)
+        self._forget_branch()
 
         state = MainPlayer.get().pipeline.get_state(0).state
         if state is not Gst.State.PLAYING:
@@ -140,11 +188,13 @@ class Player:
     def _destroy_branch(self, sound_bin: Gst.Bin, mixer_pad):
         player = MainPlayer.get()
 
+        # Stop the branch before unlinking it, so it does not push into a pad
+        # that is already gone
+        sound_bin.set_state(Gst.State.NULL)
         sound_bin.get_static_pad("src").unlink(mixer_pad)  # type: ignore
         player.mixer.release_request_pad(mixer_pad)  # type: ignore
-        sound_bin.set_state(Gst.State.NULL)
         player.pipeline.remove(sound_bin)
-        player.branch_removed()
+        player.branch_removed(sound_bin)
 
         return GLib.SOURCE_REMOVE
 
@@ -172,33 +222,47 @@ class Player:
         src_pad.add_probe(Gst.PadProbeType.EVENT_DOWNSTREAM, self._on_branch_event)
 
     def _on_first_buffer(self, _pad, _info):
-        GLib.idle_add(self._start_loop)
+        GLib.idle_add(self._start_loop, 0)
         return Gst.PadProbeReturn.REMOVE
 
-    def _start_loop(self):
+    def _start_loop(self, attempt: int):
         if self._bin is None or self._looping:
             return GLib.SOURCE_REMOVE
 
-        if not self._seek(flush=True):
-            return GLib.SOURCE_CONTINUE
+        if self._seek(flush=True):
+            self._looping = True
+        else:
+            self._retry_loop(self._start_loop, attempt)
 
-        self._looping = True
         return GLib.SOURCE_REMOVE
 
-    def _restart_loop(self):
+    def _restart_loop(self, attempt: int):
         if self._bin is None:
             return GLib.SOURCE_REMOVE
 
         if not self._seek(flush=False):
-            return GLib.SOURCE_CONTINUE
+            self._retry_loop(self._restart_loop, attempt)
 
         return GLib.SOURCE_REMOVE
+
+    def _retry_loop(self, callback, attempt: int):
+        """
+        Try again later when the duration is not known yet
+
+        Retrying from the idle callback itself would only spin the main loop,
+        and a sound whose duration never resolves would spin it forever.
+        """
+        if attempt >= LOOP_RETRIES:
+            print(f"Error: could not loop {self.sound.name}, its duration is unknown")
+            return
+
+        GLib.timeout_add(LOOP_RETRY_INTERVAL, callback, attempt + 1)
 
     def _on_branch_event(self, _pad, info: Gst.PadProbeInfo):
         event = info.get_event()
 
         if event and event.type is Gst.EventType.SEGMENT_DONE:
-            GLib.idle_add(self._restart_loop)
+            GLib.idle_add(self._restart_loop, 0)
             return Gst.PadProbeReturn.DROP
 
         if event and event.type is Gst.EventType.EOS:

@@ -1,7 +1,7 @@
 # Copyright 2020-2022 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gio, GObject, Gst, Gtk
+from gi.repository import Gio, GLib, GObject, Gst, Gtk
 
 from blanket.preset import Preset
 from blanket.settings import Settings
@@ -55,6 +55,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         decoded into one stream and go out through a single audio sink.
         """
         self._branches = 0
+        self._detaching = set()
 
         self.pipeline = Gst.Pipeline.new("blanket")
         self.mixer = Gst.ElementFactory.make("audiomixer", "mixer")
@@ -80,7 +81,13 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         self._branches += 1
         self._sync_pipeline_state()
 
-    def branch_removed(self):
+    def branch_detaching(self, sound_bin: Gst.Bin):
+        # A branch that is being unlinked while it still runs reports a
+        # not-linked error on its way out; that one is expected
+        self._detaching.add(sound_bin)
+
+    def branch_removed(self, sound_bin: Gst.Bin):
+        self._detaching.discard(sound_bin)
         self._branches -= 1
         self._sync_pipeline_state()
 
@@ -119,8 +126,64 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         self.pipeline.set_state(Gst.State.NULL)
 
     def _on_pipeline_error(self, _bus, message: Gst.Message):
+        if self._owner(message.src, self._detaching) is not None:
+            return  # Branch on its way out of the pipeline
+
         error, debug = message.parse_error()
         print(f"Error: GStreamer playback failed: {error.message}\n{debug}")
+
+        # Every sound shares this pipeline, so a single unreadable file would
+        # otherwise take the whole mix down with it
+        sound = self._sound_of(message.src)
+        if sound is not None:
+            sound.playing = False
+
+        GLib.idle_add(self._recover)
+
+    def _recover(self):
+        """
+        Bring the pipeline back after an error
+
+        GStreamer will not resume a pipeline that reported one, so it has to go
+        through NULL and have the remaining sounds attached again.
+        """
+        # The whole pipeline goes down first: tearing the branches down one by
+        # one would block on threads the stalled mixer still holds
+        self.pipeline.set_state(Gst.State.NULL)
+
+        for sound in self:
+            player = getattr(sound, "_player", None)
+            if player is not None:
+                player.release_now()
+
+        self._branches = 0
+        self._detaching.clear()
+
+        for sound in self:
+            if sound.playing and sound.saved_volume > 0:  # type: ignore
+                sound.player.set_virtual_volume(sound.saved_volume)  # type: ignore
+
+        return GLib.SOURCE_REMOVE
+
+    def _sound_of(self, element: Gst.Object | None):
+        """Find the sound a pipeline element belongs to, if any"""
+        branches = {}
+        for sound in self:
+            player = getattr(sound, "_player", None)
+            sound_bin = player._bin if player else None
+            if sound_bin is not None:
+                branches[sound_bin] = sound
+
+        return self._owner(element, branches)
+
+    def _owner(self, element: Gst.Object | None, branches):
+        """Walk up from an element to the branch it lives in"""
+        while element is not None:
+            if element in branches:
+                return branches[element] if isinstance(branches, dict) else element
+            element = element.get_parent()
+
+        return None
 
     def mute_vol_zero(self):
         for sound in self:
