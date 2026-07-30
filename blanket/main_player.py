@@ -1,7 +1,7 @@
 # Copyright 2020-2022 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gio, GObject, Gtk
+from gi.repository import Gio, GObject, Gst, Gtk
 
 from blanket.preset import Preset
 from blanket.settings import Settings
@@ -44,6 +44,83 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
 
         self.__add_item = GObject.GObject()  # Fake sound that adds new sounds
         self.__add_item.playing = False  # type: ignore
+
+        self._setup_pipeline()
+
+    def _setup_pipeline(self):
+        """
+        Set up the single pipeline shared by every sound
+
+        Each playing sound is a branch feeding the mixer, so all of them are
+        decoded into one stream and go out through a single audio sink.
+        """
+        self._branches = 0
+
+        self.pipeline = Gst.Pipeline.new("blanket")
+        self.mixer = Gst.ElementFactory.make("audiomixer", "mixer")
+        convert = Gst.ElementFactory.make("audioconvert", None)
+        resample = Gst.ElementFactory.make("audioresample", None)
+        sink = Gst.ElementFactory.make("autoaudiosink", None)
+
+        if not all((self.mixer, convert, resample, sink)):
+            raise RuntimeError("Could not create the GStreamer playback elements")
+
+        for element in (self.mixer, convert, resample, sink):
+            self.pipeline.add(element)
+
+        self.mixer.link(convert)  # type: ignore
+        convert.link(resample)  # type: ignore
+        resample.link(sink)  # type: ignore
+
+        bus = self.pipeline.get_bus()
+        bus.add_signal_watch()
+        bus.connect("message::error", self._on_pipeline_error)
+
+    def branch_added(self):
+        self._branches += 1
+        self._sync_pipeline_state()
+
+    def branch_removed(self):
+        self._branches -= 1
+        self._sync_pipeline_state()
+
+    def branch_offset(self) -> int:
+        """
+        Running time a branch about to be attached has to be shifted by
+
+        The mixer works in running time, so a branch joining a pipeline that
+        already advanced would be mixed in the past and dropped.
+        """
+        state = self.pipeline.get_state(0).state
+
+        if state is Gst.State.PLAYING:
+            offset = self.mixer.get_current_running_time()  # type: ignore
+        elif state is Gst.State.PAUSED:
+            offset = self.pipeline.get_start_time()
+        else:
+            return 0
+
+        return 0 if offset == Gst.CLOCK_TIME_NONE else offset
+
+    def _sync_pipeline_state(self):
+        if not self._branches:
+            # An audiomixer with no pads never prerolls, and it would leave the
+            # next attached branch stuck; keep the pipeline down instead
+            state = Gst.State.NULL
+        elif self.playing:
+            state = Gst.State.PLAYING
+        else:
+            state = Gst.State.PAUSED
+
+        self.pipeline.set_state(state)
+
+    def stop(self):
+        """Release the pipeline, called on app shutdown"""
+        self.pipeline.set_state(Gst.State.NULL)
+
+    def _on_pipeline_error(self, _bus, message: Gst.Message):
+        error, debug = message.parse_error()
+        print(f"Error: GStreamer playback failed: {error.message}\n{debug}")
 
     def mute_vol_zero(self):
         for sound in self:
@@ -101,8 +178,10 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
 
     def _on_playing(self, _player, _param):
         """
-        Toggle suspension inhibition when playing
+        Toggle pipeline state and suspension inhibition when playing
         """
+        self._sync_pipeline_state()
+
         if Settings.get().inhibit_suspension:
             self._inhibit(self.playing)
 

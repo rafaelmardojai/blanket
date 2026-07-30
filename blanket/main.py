@@ -10,7 +10,6 @@ try:
     gi.require_version("Adw", "1")
     gi.require_version("Gdk", "4.0")
     gi.require_version("Gst", "1.0")
-    gi.require_version("GstPlay", "1.0")
     gi.require_version("Gtk", "4.0")
     from gi.repository import Adw, Gio, GLib, Gst, Gtk
 
@@ -292,6 +291,7 @@ class Application(Adw.Application):
 
     def _on_shutdown(self, _app):
         self._save_settings()
+        MainPlayer.get().stop()
 
     def __get_credits_list(self, dict_):
         credits_list = []
