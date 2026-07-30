@@ -34,6 +34,7 @@ class Sound(GObject.Object):
 
         # Internal player
         self._player = None
+        self._removed = False
 
         # Sound properties
         self.name = name
@@ -48,9 +49,13 @@ class Sound(GObject.Object):
             self.playing = True
 
         # Connect mainplayer preset-changed signal
-        MainPlayer.get().connect("preset-changed", self._on_preset_changed)
+        self._preset_hdlr = MainPlayer.get().connect(
+            "preset-changed", self._on_preset_changed
+        )
         # Connect mainplayer reset-volumes signal
-        MainPlayer.get().connect("reset-volumes", self._on_reset_volumes)
+        self._reset_hdlr = MainPlayer.get().connect(
+            "reset-volumes", self._on_reset_volumes
+        )
 
     @property
     def player(self) -> Player:
@@ -65,6 +70,9 @@ class Sound(GObject.Object):
 
     @saved_volume.setter
     def saved_volume(self, volume: float):
+        if self._removed:
+            return
+
         volume = round(volume, 2)
         self.player.set_virtual_volume(volume)
         Settings.get().set_sound_volume(self.name, volume)
@@ -83,12 +91,23 @@ class Sound(GObject.Object):
     def remove(self):
         """Remove sound if it is custom"""
         if self.custom:
+            self._removed = True
+
             if self._player is not None:
                 self._player.remove()
                 self._player = None
+
+            # A removed sound still reachable from a signal closure would
+            # otherwise come back to life on the next preset change
+            MainPlayer.get().disconnect(self._preset_hdlr)
+            MainPlayer.get().disconnect(self._reset_hdlr)
+
             Settings.get().remove_custom_audio(self.name)
 
     def _playing_changed(self, _object, _pspec):
+        if self._removed:
+            return
+
         # Toggle player mute state
         if self.playing:
             if self.saved_volume > 0:
