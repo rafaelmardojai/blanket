@@ -288,6 +288,7 @@ class Application(Adw.Application):
             window.hide()
         else:
             self.quit_from_window = True
+            window.save_window_state()
             self.quit()
 
     def _on_shutdown(self, _app):

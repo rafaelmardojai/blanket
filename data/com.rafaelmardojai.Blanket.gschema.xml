@@ -2,6 +2,11 @@
 <schemalist gettext-domain="blanket">
     <!-- Global Settings -->
     <schema id="com.rafaelmardojai.Blanket" path="/com/rafaelmardojai/Blanket/">
+        <key type="(iib)" name="window-state">
+            <default>(-1, -1, false)</default>
+            <summary>Initial state of the window</summary>
+            <description>A tuple containing the initial width, height and maximize state of the app window.</description>
+        </key>
         <key type="b" name="autostart">
             <default>false</default>
         </key>

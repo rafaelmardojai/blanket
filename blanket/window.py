@@ -29,12 +29,16 @@ class BlanketWindow(Adw.ApplicationWindow):
     presets_chooser: PresetChooser = Gtk.Template.Child()  # type: ignore
     labels_group: Gtk.SizeGroup = Gtk.Template.Child()  # type: ignore
     power_toast: Adw.Toast = Gtk.Template.Child()  # type: ignore
+    settings: Gio.Settings = Settings.get()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
         # Set default window icon for window managers
         self.set_default_icon_name("com.rafaelmardojai.Blanket")
+
+        # Load window state
+        self.load_window_state()
 
         self.setup_actions()
         # Setup widgets
@@ -296,3 +300,30 @@ class BlanketWindow(Adw.ApplicationWindow):
 
     def hide_power_toast(self):
         self.power_toast.dismiss()
+
+    def load_window_state(self):
+        window_state = self.settings.get_value("window-state")
+        width, height, is_maximized = window_state.unpack()
+
+        if (width == -1):
+            width = 520
+
+        if (height == -1):
+            height = 600
+
+        self.set_default_size(width, height)
+
+        if (is_maximized):
+            self.maximize()
+
+    def save_window_state(self):
+        is_maximized = self.is_maximized()
+        width = self.get_width()
+        height = self.get_height()
+
+        if is_maximized:
+            old_variant = self.settings.get_value("window-state")
+            width, height, _ = old_variant.unpack()
+
+        variant = GLib.Variant('(iib)', (width, height, is_maximized))
+        self.settings.set_value("window-state", variant)
