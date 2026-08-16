@@ -4,6 +4,7 @@ builddir/
 .flatpak-builder
 _build/
 .flatplay/
+.ruff_cache/
 
 
 #vscode

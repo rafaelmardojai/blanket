@@ -10,7 +10,6 @@ typeCheckingMode = "standard"
 
 [dependency-groups]
 dev = [
-    "basedpyright>=1.31.0",
-    "pygobject-stubs>=2.13.0",
+    "pygobject-stubs>=2.17.0",
     "ruff>=0.12.5",
 ]
