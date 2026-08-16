@@ -1,7 +1,7 @@
 # Copyright 2020-2022 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Gio, GLib, GObject, Gst, Gtk
+from gi.repository import Gio, GLib, GObject, Gst, GstAudio, Gtk
 
 from blanket.preset import Preset
 from blanket.settings import Settings
@@ -61,21 +61,47 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         self.mixer = Gst.ElementFactory.make("audiomixer", "mixer")
         convert = Gst.ElementFactory.make("audioconvert", None)
         resample = Gst.ElementFactory.make("audioresample", None)
+        volume = Gst.ElementFactory.make("volume", None)
         sink = Gst.ElementFactory.make("autoaudiosink", None)
 
-        if not all((self.mixer, convert, resample, sink)):
+        if not all((self.mixer, convert, resample, volume, sink)):
             raise RuntimeError("Could not create the GStreamer playback elements")
 
-        for element in (self.mixer, convert, resample, sink):
-            self.pipeline.add(element)
+        for element in (self.mixer, convert, resample, volume, sink):
+            self.pipeline.add(element)  # type: ignore
 
         self.mixer.link(convert)  # type: ignore
         convert.link(resample)  # type: ignore
-        resample.link(sink)  # type: ignore
+        resample.link(volume)  # type: ignore
+        volume.link(sink)  # type: ignore
 
         bus = self.pipeline.get_bus()
         bus.add_signal_watch()
         bus.connect("message::error", self._on_pipeline_error)
+
+        # Make main player control sink volume
+        volume.bind_property(  # type: ignore
+            "volume",
+            self,
+            "volume",
+            GObject.BindingFlags.BIDIRECTIONAL,
+            self._vol_to_gst,
+            self._vol_to_ui,
+        )
+
+    def _vol_to_gst(self, _bind, from_val: float) -> float:
+        return GstAudio.StreamVolume.convert_volume(
+            GstAudio.StreamVolumeFormat.LINEAR,
+            GstAudio.StreamVolumeFormat.CUBIC,
+            from_val,
+        )
+
+    def _vol_to_ui(self, _bind, from_val: float) -> float:
+        return GstAudio.StreamVolume.convert_volume(
+            GstAudio.StreamVolumeFormat.CUBIC,
+            GstAudio.StreamVolumeFormat.LINEAR,
+            from_val,
+        )
 
     def branch_added(self):
         self._branches += 1
@@ -160,8 +186,8 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         self._detaching.clear()
 
         for sound in self:
-            if sound.playing and sound.saved_volume > 0:  # type: ignore
-                sound.player.set_virtual_volume(sound.saved_volume)  # type: ignore
+            if sound.playing and sound.saved_volume > 0:
+                sound.player.volume = sound.saved_volume
 
         return GLib.SOURCE_REMOVE
 
