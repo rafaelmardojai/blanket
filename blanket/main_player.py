@@ -242,16 +242,14 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         self.pipeline.set_state(Gst.State.NULL)
 
         for sound in self:
-            player = getattr(sound, "_player", None)
-            if player is not None:
-                player.release_now()
+            sound.release_now()
 
         self._branches = 0
         self._detaching.clear()
 
         for sound in self:
             if sound.playing and sound.saved_volume > 0:
-                sound.player.volume = sound.saved_volume
+                sound.play_now()
 
         return GLib.SOURCE_REMOVE
 
