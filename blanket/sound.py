@@ -74,7 +74,7 @@ class Sound(GObject.Object):
             return
 
         volume = round(volume, 2)
-        self.player.set_virtual_volume(volume)
+        self.player.volume = volume
         Settings.get().set_sound_volume(self.name, volume)
 
         if volume != 0 and not self.playing:
@@ -111,12 +111,12 @@ class Sound(GObject.Object):
         # Toggle player mute state
         if self.playing:
             if self.saved_volume > 0:
-                self.player.set_virtual_volume(self.saved_volume)
+                self.player.volume = self.saved_volume
             else:
-                self.player.set_virtual_volume(0.5)
+                self.player.volume = 0.5
                 self.saved_volume = 0.5
         else:
-            self.player.set_virtual_volume(0)
+            self.player.volume = 0
 
         self.saved_mute = not self.playing  # Save playing state
 

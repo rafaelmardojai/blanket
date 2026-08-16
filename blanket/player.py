@@ -22,9 +22,8 @@ class Player:
 
     def __init__(self, sound):
         self.sound = sound
-        # Create a var to save saved volume
-        self.saved_volume = 0.0
 
+        self._volume_value = 0.0
         self._bin = None
         self._convert = None
         self._volume = None
@@ -32,36 +31,29 @@ class Player:
         self._looping = False
         self._release_id = 0
 
-        # Connect mainplayer volume signal
-        self.volume_hdlr = MainPlayer.get().connect(
-            "notify::volume", self._on_main_volume_changed
-        )
+    @property
+    def volume(self) -> float:
+        return self._volume_value
 
-    def set_virtual_volume(self, volume: float):
-        # Get last saved sound volume
-        self.saved_volume = volume
-        # Multiply sound volume with mainplayer volume
-        volume = self.saved_volume * MainPlayer.get().volume
+    @volume.setter
+    def volume(self, value: float):
+        self._volume_value = value
 
-        if volume > 0:
+        if value > 0:
             self._cancel_release()
             self._attach()
-            self._volume.props.volume = volume  # type: ignore
+            self._volume.props.volume = value  # type: ignore
         else:
             # An inaudible sound keeps no decoder around, but dragging a slider
             # across zero should not tear the branch down and rebuild it
+            if self._volume:
+                self._volume.props.volume = 0.0  # type: ignore
             self._schedule_release()
 
     def remove(self):
         # Drop the branch from the pipeline
         self._cancel_release()
         self._detach()
-        # Disconnect main player signals
-        MainPlayer.get().disconnect(self.volume_hdlr)
-
-    def _on_main_volume_changed(self, _player, _volume):
-        # Set volume again when mainplayer volume changes
-        self.set_virtual_volume(self.saved_volume)
 
     """
     Branch handling
