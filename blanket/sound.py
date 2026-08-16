@@ -1,12 +1,15 @@
 # Copyright 2020-2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import GObject
+from gi.repository import GLib, GObject, Gst
 
 from blanket.define import RES_PATH
 from blanket.main_player import MainPlayer
 from blanket.player import Player
 from blanket.settings import Settings
+
+# Seconds an inaudible sound keeps its decoder before it is released
+RELEASE_DELAY = 5
 
 
 class Sound(GObject.Object):
@@ -33,7 +36,9 @@ class Sound(GObject.Object):
         icon = "com.rafaelmardojai.Blanket-{}-symbolic"
 
         # Internal player
-        self._player = None
+        self._player: Player | None = None
+        self._mixer_pad: Gst.Pad | None = None
+        self._release_id: int = 0
         self._removed = False
 
         # Sound properties
@@ -57,15 +62,8 @@ class Sound(GObject.Object):
             "reset-volumes", self._on_reset_volumes
         )
 
-    @property
-    def player(self) -> Player:
-        """Internal player"""
-        if self._player is None:
-            self._player = Player(self)
-        return self._player
-
     @GObject.Property(type=float)
-    def saved_volume(self) -> float:  # type: ignore
+    def saved_volume(self) -> float:
         return Settings.get().get_sound_volume(self.name)
 
     @saved_volume.setter
@@ -74,7 +72,10 @@ class Sound(GObject.Object):
             return
 
         volume = round(volume, 2)
-        self.player.volume = volume
+
+        if self._player:
+            self._player.volume = volume
+
         Settings.get().set_sound_volume(self.name, volume)
 
         if volume != 0 and not self.playing:
@@ -92,10 +93,8 @@ class Sound(GObject.Object):
         """Remove sound if it is custom"""
         if self.custom:
             self._removed = True
-
-            if self._player is not None:
-                self._player.remove()
-                self._player = None
+            self._cancel_release()
+            self._detach()
 
             # A removed sound still reachable from a signal closure would
             # otherwise come back to life on the next preset change
@@ -110,13 +109,16 @@ class Sound(GObject.Object):
 
         # Toggle player mute state
         if self.playing:
-            if self.saved_volume > 0:
-                self.player.volume = self.saved_volume
-            else:
-                self.player.volume = 0.5
+            if self.saved_volume == 0:
                 self.saved_volume = 0.5
+
+            self._player_up()
+
+            if self._player:
+                self._player.volume = self.saved_volume
+
         else:
-            self.player.volume = 0
+            self._player_down()
 
         self.saved_mute = not self.playing  # Save playing state
 
@@ -127,3 +129,57 @@ class Sound(GObject.Object):
     def _on_reset_volumes(self, _player):
         self.saved_volume = 0.0
         self.playing = False
+
+    """
+    Branch handling
+    """
+
+    def release_now(self):
+        """Tear the branch down without waiting for the stream to go idle"""
+        self._cancel_release()
+        self._detach()
+
+    def play_now(self):
+        """Play the sound immediately"""
+        self._player_up()
+
+    def _player_up(self):
+        self._cancel_release()
+        self._attach()
+
+    def _player_down(self):
+        if self._player is not None:
+            self._player.volume = 0
+            self._schedule_release()
+
+    def _schedule_release(self):
+        if self._player is None or self._release_id:
+            return
+
+        self._release_id = GLib.timeout_add_seconds(RELEASE_DELAY, self._release)
+
+    def _cancel_release(self):
+        if self._release_id:
+            GLib.source_remove(self._release_id)
+            self._release_id = 0
+
+    def _release(self):
+        self._release_id = 0
+        self._detach()
+        return GLib.SOURCE_REMOVE
+
+    def _detach(self):
+        if self._player is None or self._mixer_pad is None:
+            return
+
+        MainPlayer.get().detach_sound_bin(self._player, self._mixer_pad)
+
+        self._mixer_pad = None
+        self._player = None
+
+    def _attach(self):
+        if self._player is not None:
+            return
+
+        self._player = Player(self)
+        self._mixer_pad = MainPlayer.get().attach_sound_bin(self._player)
