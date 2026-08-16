@@ -59,6 +59,11 @@ class Player:
     Branch handling
     """
 
+    def release_now(self):
+        """Tear the branch down without waiting for the stream to go idle"""
+        self._cancel_release()
+        self._detach()
+
     def _schedule_release(self):
         if self._bin is None or self._release_id:
             return
@@ -89,7 +94,7 @@ class Player:
         caps = Gst.ElementFactory.make("capsfilter", None)
         volume = Gst.ElementFactory.make("volume", None)
 
-        if not all((decoder, convert, resample, caps, volume)):
+        if not decoder or not convert or not resample or not caps or not volume:
             print("Error: could not create the GStreamer elements for a sound")
             return
 
@@ -107,88 +112,33 @@ class Player:
         for element in (decoder, convert, resample, caps, volume):
             sound_bin.add(element)
 
-        convert.link(resample)  # type: ignore
-        resample.link(caps)  # type: ignore
-        caps.link(volume)  # type: ignore
+        convert.link(resample)
+        resample.link(caps)
+        caps.link(volume)
 
         self._bin = sound_bin
         self._convert = convert
         self._volume = volume
-        sound_bin.add_pad(
-            Gst.GhostPad.new("src", volume.get_static_pad("src"))  # type: ignore
-        )
-        decoder.connect("pad-added", self._on_pad_added)  # type: ignore
 
-        player.pipeline.add(self._bin)
-        self._mixer_pad = player.mixer.request_pad_simple("sink_%u")  # type: ignore
+        if vol_pad := volume.get_static_pad("src"):
+            sound_bin.add_pad(Gst.GhostPad.new("src", vol_pad))
+        decoder.connect("pad-added", self._on_pad_added)
 
-        src_pad = self._bin.get_static_pad("src")
-        # Shift the branch to where the mixer already is, or it would produce
-        # buffers the mixer considers long past and drops
-        src_pad.set_offset(player.branch_offset())  # type: ignore
-        src_pad.link(self._mixer_pad)  # type: ignore
-
-        player.branch_added()
-        self._bin.sync_state_with_parent()
-
-    def release_now(self):
-        """Tear the branch down without waiting for the stream to go idle"""
-        self._cancel_release()
-
-        if self._bin is None:
+        self._mixer_pad = player.attach_sound_bin(self._bin)
+        if self._mixer_pad is None:
             return
 
-        sound_bin, mixer_pad = self._bin, self._mixer_pad
-        MainPlayer.get().branch_detaching(sound_bin)
-        self._forget_branch()
-        self._destroy_branch(sound_bin, mixer_pad)
+    def _detach(self):
+        if self._bin is None or self._mixer_pad is None:
+            return
 
-    def _forget_branch(self):
+        MainPlayer.get().detach_sound_bin(self._bin, self._mixer_pad)
+
         self._bin = None
         self._convert = None
         self._volume = None
         self._mixer_pad = None
         self._looping = False
-
-    def _detach(self):
-        if self._bin is None:
-            return
-
-        sound_bin, mixer_pad = self._bin, self._mixer_pad
-        MainPlayer.get().branch_detaching(sound_bin)
-        self._forget_branch()
-
-        state = MainPlayer.get().pipeline.get_state(0).state
-        if state is not Gst.State.PLAYING:
-            # Nothing is streaming, so a blocking probe would never be called
-            self._destroy_branch(sound_bin, mixer_pad)
-            return
-
-        # Block the branch before tearing it down, so the mixer never sees a
-        # half-removed pad
-        pad = sound_bin.get_static_pad("src")
-        pad.add_probe(  # type: ignore
-            Gst.PadProbeType.IDLE,
-            lambda _pad, _info: self._on_branch_blocked(sound_bin, mixer_pad),
-        )
-
-    def _on_branch_blocked(self, sound_bin: Gst.Bin, mixer_pad):
-        # States cannot be changed from a streaming thread
-        GLib.idle_add(self._destroy_branch, sound_bin, mixer_pad)
-        return Gst.PadProbeReturn.REMOVE
-
-    def _destroy_branch(self, sound_bin: Gst.Bin, mixer_pad):
-        player = MainPlayer.get()
-
-        # Stop the branch before unlinking it, so it does not push into a pad
-        # that is already gone
-        sound_bin.set_state(Gst.State.NULL)
-        sound_bin.get_static_pad("src").unlink(mixer_pad)  # type: ignore
-        player.mixer.release_request_pad(mixer_pad)  # type: ignore
-        player.pipeline.remove(sound_bin)
-        player.branch_removed(sound_bin)
-
-        return GLib.SOURCE_REMOVE
 
     """
     Loop handling

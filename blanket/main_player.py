@@ -28,7 +28,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
     volume: float = GObject.Property(type=float, default=0)  # type: ignore
 
     @classmethod
-    def get(cls):
+    def get(cls) -> "MainPlayer":
         """Return an active instance of MainPlayer."""
         if cls._instance is None:
             cls._instance = MainPlayer()
@@ -103,31 +103,95 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
             from_val,
         )
 
-    def branch_added(self):
-        self._branches += 1
-        self._sync_pipeline_state()
+    def attach_sound_bin(
+        self,
+        sound_bin: Gst.Bin,
+    ) -> Gst.Pad | None:
+        """Attach a sound player to the pipeline mixer."""
+        if self.mixer is None:
+            return None
 
-    def branch_detaching(self, sound_bin: Gst.Bin):
+        self.pipeline.add(sound_bin)
+
+        mixer_pad = self.mixer.request_pad_simple("sink_%u")
+        src_pad = sound_bin.get_static_pad("src")
+
+        if mixer_pad is None or src_pad is None:
+            return None
+
+        # Shift the branch to where the mixer already is, or it would produce
+        # buffers the mixer considers long past and drops.
+        src_pad.set_offset(self._get_branch_offset())
+        src_pad.link(mixer_pad)
+
+        self._branches += 1  # Increment branch count
+        self._sync_pipeline_state()
+        sound_bin.sync_state_with_parent()
+
+        return mixer_pad
+
+    def detach_sound_bin(self, sound_bin: Gst.Bin, mixer_pad: Gst.Pad) -> None:
+        """Detach a sound player from the pipeline mixer."""
+
         # A branch that is being unlinked while it still runs reports a
-        # not-linked error on its way out; that one is expected
+        # not-linked error on its way out; that one is expected.
         self._detaching.add(sound_bin)
 
-    def branch_removed(self, sound_bin: Gst.Bin):
-        self._detaching.discard(sound_bin)
-        self._branches -= 1
+        state: Gst.State = self.pipeline.get_state(0).state  # type: ignore
+        if state is not Gst.State.PLAYING:
+            # Nothing is streaming, so a blocking probe would never be called,
+            # just destroy the branch immediately.
+            self._destroy_branch(sound_bin, mixer_pad)
+            return
+
+        # Block the branch before tearing it down, so the mixer never sees a
+        # half-removed pad.
+        if pad := sound_bin.get_static_pad("src"):
+            pad.add_probe(
+                Gst.PadProbeType.IDLE,
+                lambda _pad, _info: self._on_branch_blocked(sound_bin, mixer_pad),
+            )
+
+    def _on_branch_blocked(self, sound_bin: Gst.Bin, mixer_pad: Gst.Pad):
+        # States cannot be changed from a streaming thread
+        GLib.idle_add(self._destroy_branch, sound_bin, mixer_pad)
+        return Gst.PadProbeReturn.REMOVE
+
+    def _destroy_branch(self, sound_bin: Gst.Bin, mixer_pad: Gst.Pad):
+        """Destroy a sound branch and remove it from the pipeline."""
+        if self.mixer is None:
+            return
+
+        # Stop the branch before unlinking it, so it does not push into a pad
+        # that is already gone.
+        sound_bin.set_state(Gst.State.NULL)
+        if pad := sound_bin.get_static_pad("src"):
+            pad.unlink(mixer_pad)
+
+        self.mixer.release_request_pad(mixer_pad)
+        self.pipeline.remove(sound_bin)
+
+        self._detaching.discard(sound_bin)  # Remove from detaching set
+        self._branches -= 1  # Decrement branch count
         self._sync_pipeline_state()
 
-    def branch_offset(self) -> int:
+        return GLib.SOURCE_REMOVE
+
+    def _get_branch_offset(self) -> int:
         """
-        Running time a branch about to be attached has to be shifted by
+        A branch about to be attached has to be shifted to match the mixer's
+        current position.
 
         The mixer works in running time, so a branch joining a pipeline that
         already advanced would be mixed in the past and dropped.
         """
-        state = self.pipeline.get_state(0).state
+        if not self.mixer:
+            return 0
+
+        state: Gst.State = self.pipeline.get_state(0).state  # type: ignore
 
         if state is Gst.State.PLAYING:
-            offset = self.mixer.get_current_running_time()  # type: ignore
+            offset = self.mixer.get_current_running_time()
         elif state is Gst.State.PAUSED:
             offset = self.pipeline.get_start_time()
         else:
