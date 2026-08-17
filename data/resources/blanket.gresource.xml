@@ -25,6 +25,7 @@
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-stream-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-birds-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-summer-night-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-cat-purr-symbolic.svg</file>
 
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-train-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-boat-symbolic.svg</file>
@@ -46,6 +47,7 @@
     <file>sounds/stream.ogg</file>
     <file>sounds/birds.ogg</file>
     <file>sounds/summer-night.ogg</file>
+    <file>sounds/cat-purr.ogg</file>
     <file>sounds/train.ogg</file>
     <file>sounds/boat.ogg</file>
     <file>sounds/city.ogg</file>
