@@ -9,7 +9,7 @@ from blanket.settings import Settings
 
 class MainPlayer(GObject.GObject, Gio.ListModel):
     """
-    Virtual app sounds player
+    Blanket's omnipresent sounds player
 
     It also implements Gio.ListModel and stores the app sound list.
     """
@@ -41,9 +41,6 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         Settings.get().connect(
             "changed::inhibit-suspension", self._on_settings_inhibition
         )
-
-        self.__add_item = GObject.GObject()  # Fake sound that adds new sounds
-        self.__add_item.playing = False  # type: ignore
 
         self._setup_pipeline()
 
@@ -358,15 +355,13 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         return iter(self._sounds)
 
     def do_get_item(self, position: int) -> GObject.Object:
-        if position == len(self._sounds):
-            return self.__add_item  # Return plain GObject of Add sound item
         return self._sounds[position]
 
-    def do_get_item_type(self):
+    def do_get_item_type(self) -> type:
         return GObject.Object
 
     def do_get_n_items(self) -> int:
-        return len(self._sounds) + 1  # Add fake sound to total of items
+        return len(self._sounds)
 
     def append(self, sound: GObject.Object):
         self._sounds.append(sound)

@@ -11,6 +11,7 @@ from blanket.define import RES_PATH, SOUNDS
 from blanket.main_player import MainPlayer
 from blanket.settings import Settings
 from blanket.sound import Sound
+from blanket.utils import DummyItemModel
 from blanket.widgets import PlayPauseButton, PresetChooser, SoundItem, VolumeRow
 
 
@@ -53,9 +54,10 @@ class BlanketWindow(Adw.ApplicationWindow):
         self.sounds_filter = Gtk.CustomFilter.new(
             match_func=self._hide_inactive_sounds_filter
         )
-        self.sounds_model = Gtk.FilterListModel.new(
+        sorted_model = Gtk.FilterListModel.new(
             model=MainPlayer.get(), filter=self.sounds_filter
         )
+        self.sounds_model = DummyItemModel(sorted_model, GObject.Object())
         self.grid.bind_model(self.sounds_model, self._create_sound_item)
         self.grid.connect("child-activated", self._on_sound_activate)
 
@@ -305,15 +307,15 @@ class BlanketWindow(Adw.ApplicationWindow):
         window_state = self.settings.get_value("window-state")
         width, height, is_maximized = window_state.unpack()
 
-        if (width == -1):
+        if width == -1:
             width = 520
 
-        if (height == -1):
+        if height == -1:
             height = 600
 
         self.set_default_size(width, height)
 
-        if (is_maximized):
+        if is_maximized:
             self.maximize()
 
     def save_window_state(self):
@@ -325,5 +327,5 @@ class BlanketWindow(Adw.ApplicationWindow):
             old_variant = self.settings.get_value("window-state")
             width, height, _ = old_variant.unpack()
 
-        variant = GLib.Variant('(iib)', (width, height, is_maximized))
+        variant = GLib.Variant("(iib)", (width, height, is_maximized))
         self.settings.set_value("window-state", variant)

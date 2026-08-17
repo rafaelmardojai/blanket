@@ -25,6 +25,7 @@ from blanket.main_player import MainPlayer
 from blanket.mpris import MPRIS
 from blanket.preferences import PreferencesDialog
 from blanket.settings import Settings
+from blanket.sound import Sound
 from blanket.widgets import PresetDialog
 from blanket.widgets.sound_rename_dialog import SoundRenameDialog
 from blanket.window import BlanketWindow
@@ -183,7 +184,7 @@ class Application(Adw.Application):
 
     def on_open(self, _action, _param):
         if self.window:
-            self.window.open_audio()  # type: ignore
+            self.window.open_audio()
 
     def on_playpause(self, _action=None, _param=None):
         MainPlayer.get().playing = not MainPlayer.get().playing
@@ -217,16 +218,16 @@ class Application(Adw.Application):
         index = index_variant.get_uint32()
         sound = MainPlayer.get().get_by_index(index)
 
-        if sound and index:
-            sound.remove()  # type: ignore
+        if isinstance(sound, Sound) and sound and index:
+            sound.remove()
             MainPlayer.get().remove(index)
 
     def on_rename_sound(self, _action, index_variant: GLib.Variant):
         # Open edit dialog
         index = index_variant.get_uint32()
         sound = MainPlayer.get().get_by_index(index)
-        if sound and index:
-            dialog = SoundRenameDialog(sound, index)  # type: ignore
+        if isinstance(sound, Sound) and sound and index:
+            dialog = SoundRenameDialog(sound, index)
             dialog.present(self.window)
 
     def on_background(self, action, value):

@@ -2,7 +2,7 @@ pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.proje
 moduledir = join_paths(pkgdatadir, 'blanket')
 revision = run_command('../build-aux/meson/revision.sh').stdout().strip()
 if revision == ''
-  revision=meson.project_version()
+  revision = meson.project_version()
 endif
 
 python = import('python')
@@ -19,22 +19,23 @@ configure_file(
   output: 'blanket',
   configuration: conf,
   install: true,
-  install_dir: get_option('bindir')
+  install_dir: get_option('bindir'),
 )
 
 # Python sources
 sources = [
   '__init__.py',
   'define.py',
-  'main_player.py',
   'main.py',
-  'window.py',
+  'main_player.py',
+  'mpris.py',
   'player.py',
   'preferences.py',
   'preset.py',
-  'sound.py',
   'settings.py',
-  'mpris.py'
+  'sound.py',
+  'utils.py',
+  'window.py',
 ]
 
 install_data(sources, install_dir: moduledir)
