@@ -15,7 +15,7 @@ class PresetChooser(Gtk.MenuButton):
 
     selected: Preset = GObject.Property(type=Preset)  # type: ignore
 
-    presets_list: Gtk.ListBox = Gtk.Template.Child()  # type: ignore
+    presets_list: Gtk.ListBox = Gtk.Template.Child()
 
     def __init__(self):
         super().__init__()
@@ -44,7 +44,7 @@ class PresetChooser(Gtk.MenuButton):
         index = 0 if row is None else row.get_index()
         preset = self.model.get_item(index)
         if preset:
-            self.selected = preset  # type: ignore
+            self.selected = preset
 
     def _on_saved_changed(self, _settings, _id):
         for preset in self.model:

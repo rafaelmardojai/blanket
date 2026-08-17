@@ -1,10 +1,15 @@
 # Copyright 2020-2022 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+from typing import TYPE_CHECKING, Iterator, Self
+
 from gi.repository import Gio, GLib, GObject, Gst, GstAudio, Gtk
 
 from blanket.preset import Preset
 from blanket.settings import Settings
+
+if TYPE_CHECKING:
+    from blanket.sound import Sound
 
 
 class MainPlayer(GObject.GObject, Gio.ListModel):
@@ -16,7 +21,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
 
     _instance = None
     _cookie = 0
-    _sounds = []  # Sound list
+    _sounds: list["Sound"] = []  # Sound list
 
     __gtype_name__ = "MainPlayer"
     __gsignals__ = {
@@ -28,10 +33,10 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
     volume: float = GObject.Property(type=float, default=0)  # type: ignore
 
     @classmethod
-    def get(cls) -> "MainPlayer":
+    def get(cls) -> Self:
         """Return an active instance of MainPlayer."""
         if cls._instance is None:
-            cls._instance = MainPlayer()
+            cls._instance = cls()
         return cls._instance
 
     def __init__(self):
@@ -51,8 +56,8 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         Each playing sound is a branch feeding the mixer, so all of them are
         decoded into one stream and go out through a single audio sink.
         """
-        self._branches = 0
-        self._detaching = set()
+        self._branches: int = 0
+        self._detaching: set[Gst.Bin] = set()
 
         self.pipeline = Gst.Pipeline.new("blanket")
         self.mixer = Gst.ElementFactory.make("audiomixer", "mixer")
@@ -61,23 +66,23 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         volume = Gst.ElementFactory.make("volume", None)
         sink = Gst.ElementFactory.make("autoaudiosink", None)
 
-        if not all((self.mixer, convert, resample, volume, sink)):
+        if not self.mixer or not convert or not resample or not volume or not sink:
             raise RuntimeError("Could not create the GStreamer playback elements")
 
         for element in (self.mixer, convert, resample, volume, sink):
-            self.pipeline.add(element)  # type: ignore
+            self.pipeline.add(element)
 
-        self.mixer.link(convert)  # type: ignore
-        convert.link(resample)  # type: ignore
-        resample.link(volume)  # type: ignore
-        volume.link(sink)  # type: ignore
+        self.mixer.link(convert)
+        convert.link(resample)
+        resample.link(volume)
+        volume.link(sink)
 
         bus = self.pipeline.get_bus()
         bus.add_signal_watch()
         bus.connect("message::error", self._on_pipeline_error)
 
         # Make main player control sink volume
-        volume.bind_property(  # type: ignore
+        volume.bind_property(
             "volume",
             self,
             "volume",
@@ -312,16 +317,20 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         """
         Set suspension inhibition
         """
-        app = Gtk.Application.get_default()
+        app: Gtk.Application | None = Gtk.Application.get_default()  # type: ignore
+
+        if not app:
+            return
+
         if inhibit:
             if self._cookie:
                 return
 
-            self._cookie = app.inhibit(  # type: ignore
+            self._cookie = app.inhibit(
                 None, Gtk.ApplicationInhibitFlags.SUSPEND, "Playback in progress"
             )
         elif self._cookie != 0:
-            app.uninhibit(self._cookie)  # type: ignore
+            app.uninhibit(self._cookie)
             self._cookie = 0
 
     def _on_playing(self, _player, _param):
@@ -347,11 +356,9 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
 
     """
     ListModel methods
-
-    This model keeps a fake last item that serves for the add sound item
     """
 
-    def __iter__(self):
+    def __iter__(self) -> Iterator[Sound]:
         return iter(self._sounds)
 
     def do_get_item(self, position: int) -> GObject.Object:
@@ -363,7 +370,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
     def do_get_n_items(self) -> int:
         return len(self._sounds)
 
-    def append(self, sound: GObject.Object):
+    def append(self, sound: "Sound"):
         self._sounds.append(sound)
         self.items_changed(len(self._sounds) - 1, 0, 1)
 

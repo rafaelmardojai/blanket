@@ -4,24 +4,28 @@
 import os
 from gettext import gettext as _
 from random import randint
+from typing import TYPE_CHECKING
 
 from gi.repository import Adw, Gio, GLib, Gtk
 
 from blanket.define import RES_PATH
 from blanket.settings import Settings
 
+if TYPE_CHECKING:
+    from blanket.window import BlanketWindow
+
 
 @Gtk.Template(resource_path=f"{RES_PATH}/preferences.ui")
 class PreferencesDialog(Adw.PreferencesDialog):
     __gtype_name__ = "PreferencesDialog"
 
-    dark_group: Adw.PreferencesGroup = Gtk.Template.Child()  # type: ignore
-    dark: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
-    autostart: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
-    start_paused: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
-    inhibition: Adw.SwitchRow = Gtk.Template.Child()  # type: ignore
+    dark_group: Adw.PreferencesGroup = Gtk.Template.Child()
+    dark: Adw.SwitchRow = Gtk.Template.Child()
+    autostart: Adw.SwitchRow = Gtk.Template.Child()
+    start_paused: Adw.SwitchRow = Gtk.Template.Child()
+    inhibition: Adw.SwitchRow = Gtk.Template.Child()
 
-    def __init__(self, window, **kwargs):
+    def __init__(self, window: "BlanketWindow", **kwargs):
         super().__init__(**kwargs)
 
         self.window = window
@@ -155,7 +159,7 @@ class PreferencesDialog(Adw.PreferencesDialog):
         session = os.getenv("XDG_SESSION_TYPE")
         surface = self.window.get_surface()
 
-        if session == "x11":
+        if session == "x11" and surface is not None:
             return f"x11:{str(surface.get_xid())}"
         elif session == "wayland":
             return "wayland:"

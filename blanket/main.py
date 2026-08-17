@@ -237,8 +237,9 @@ class Application(Adw.Application):
             self.window.props.hide_on_close = value
 
     def on_preferences(self, _action, _param):
-        prefs = PreferencesDialog(self.window)
-        prefs.present(self.window)
+        if self.window:
+            prefs = PreferencesDialog(self.window)
+            prefs.present(self.window)
 
     def on_about(self, _action, _param):
         builder = Gtk.Builder.new_from_resource(f"{RES_PATH}/about.ui")

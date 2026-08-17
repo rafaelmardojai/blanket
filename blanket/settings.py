@@ -110,7 +110,7 @@ class Settings(Gio.Settings):
 
     @property
     def custom_audios(self) -> dict[str, str]:
-        return dict(self.get_value("custom-audios"))
+        return dict(self.get_value("custom-audios").unpack())
 
     @custom_audios.setter
     def custom_audios(self, audios: dict[str, str]):
@@ -237,7 +237,7 @@ class Settings(Gio.Settings):
 
     def get_preset_volumes(self, preset_id: str) -> dict[str, float]:
         settings = self.get_preset_settings(preset_id)
-        return dict(settings.get_value("sounds-volume"))
+        return dict(settings.get_value("sounds-volume").unpack())
 
     def set_preset_volumes(self, preset_id: str, volumes: dict[str, float]):
         settings = self.get_preset_settings(preset_id)
@@ -245,7 +245,7 @@ class Settings(Gio.Settings):
 
     def get_preset_mutes(self, preset_id: str) -> dict[str, bool]:
         settings = self.get_preset_settings(preset_id)
-        return dict(settings.get_value("sounds-mute"))
+        return dict(settings.get_value("sounds-mute").unpack())
 
     def set_preset_mutes(self, preset_id: str, mutes: dict[str, bool]):
         settings = self.get_preset_settings(preset_id)
@@ -329,7 +329,7 @@ class Settings(Gio.Settings):
 
     @property
     def legacy_sounds_volume(self) -> dict[str, float]:
-        return dict(self.get_value("sounds-volume"))
+        return dict(self.get_value("sounds-volume").unpack())
 
     @legacy_sounds_volume.setter
     def legacy_sounds_volume(self, volumes_dict: dict[str, float]):

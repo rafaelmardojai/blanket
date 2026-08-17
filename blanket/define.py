@@ -2,10 +2,17 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
+from typing import TypedDict
 
 RES_PATH = "/com/rafaelmardojai/Blanket"
 
-SOUNDS = [
+
+SoundCategory = TypedDict(
+    "SoundCategory", {"name": str, "sounds": list[dict[str, str]]}
+)
+
+
+SOUNDS: list[SoundCategory] = [
     {
         "name": _("Nature"),
         "sounds": [

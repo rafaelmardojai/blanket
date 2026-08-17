@@ -295,7 +295,7 @@ class MPRIS(Server):
             "PropertiesChanged",
             GLib.Variant.new_tuple(
                 GLib.Variant("s", interface_name),
-                GLib.Variant("a{sv}", changed_properties),  # type: ignore
+                GLib.Variant("a{sv}", changed_properties),
                 GLib.Variant("as", invalidated_properties),
             ),
         )

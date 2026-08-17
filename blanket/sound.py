@@ -97,7 +97,7 @@ class Sound(GObject.Object):
             self._detach()
 
             # A removed sound still reachable from a signal closure would
-            # otherwise come back to life on the next preset change
+            # otherwise come back to life on the next preset change.
             MainPlayer.get().disconnect(self._preset_hdlr)
             MainPlayer.get().disconnect(self._reset_hdlr)
 

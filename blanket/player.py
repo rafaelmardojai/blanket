@@ -1,9 +1,12 @@
 # Copyright 2020-2022 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from typing import Callable
+from typing import TYPE_CHECKING, Callable
 
 from gi.repository import GLib, Gst
+
+if TYPE_CHECKING:
+    from blanket.sound import Sound
 
 # A sound whose duration is not known yet cannot be looped, so wait for it
 LOOP_RETRY_INTERVAL = 200
@@ -18,7 +21,7 @@ class Player(Gst.Bin):
     silent sounds cost neither a decoder nor its threads.
     """
 
-    def __init__(self, sound, **kwargs):
+    def __init__(self, sound: "Sound", **kwargs):
         super().__init__(**kwargs)
 
         self._sound = sound

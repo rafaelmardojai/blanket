@@ -15,11 +15,10 @@ class SoundItem(Gtk.FlowBoxChild):
     playing: bool = GObject.Property(type=bool, default=False)  # type: ignore
     title: str = GObject.Property(type=str)  # type: ignore
     icon_name: str = GObject.Property(type=str)  # type: ignore
-    sound: Sound = GObject.Property(type=Sound)  # type: ignore
 
-    icon: Gtk.Image = Gtk.Template.Child()  # type: ignore
-    label: Gtk.Label = Gtk.Template.Child()  # type: ignore
-    volume: Gtk.Scale = Gtk.Template.Child()  # type: ignore
+    icon: Gtk.Image = Gtk.Template.Child()
+    label: Gtk.Label = Gtk.Template.Child()
+    volume: Gtk.Scale = Gtk.Template.Child()
 
     def __init__(self):
         super().__init__()
@@ -44,7 +43,7 @@ class SoundItem(Gtk.FlowBoxChild):
         self.add_controller(click)
 
     @GObject.Property(type=Sound)
-    def sound(self) -> Sound | None:  # type: ignore
+    def sound(self) -> Sound | None:
         return self._sound
 
     @sound.setter

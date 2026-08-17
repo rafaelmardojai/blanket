@@ -14,7 +14,7 @@ from blanket.sound import Sound
 class SoundContextMenu(Gtk.PopoverMenu):
     __gtype_name__ = "SoundContextMenu"
 
-    volume: Gtk.Scale = Gtk.Template.Child()  # type: ignore
+    volume: Gtk.Scale = Gtk.Template.Child()
 
     def __init__(self, sound: Sound):
         super().__init__()
