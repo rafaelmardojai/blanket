@@ -13,8 +13,10 @@ class SoundItem(Gtk.FlowBoxChild):
     __gtype_name__ = "SoundItem"
 
     playing: bool = GObject.Property(type=bool, default=False)  # type: ignore
+    failed: bool = GObject.Property(type=bool, default=False)  # type: ignore
     title: str = GObject.Property(type=str)  # type: ignore
     icon_name: str = GObject.Property(type=str)  # type: ignore
+    error_message: str = GObject.Property(type=str)  # type: ignore
 
     icon: Gtk.Image = Gtk.Template.Child()
     label: Gtk.Label = Gtk.Template.Child()
@@ -27,6 +29,7 @@ class SoundItem(Gtk.FlowBoxChild):
         self._menu: None | SoundContextMenu = None
 
         self.connect("notify::playing", self._playing_changed)
+        self.connect("notify::failed", self._failed_changed)
 
         # Icon
         self.bind_property(
@@ -35,6 +38,10 @@ class SoundItem(Gtk.FlowBoxChild):
         # Label
         self.bind_property(
             "title", self.label, "label", GObject.BindingFlags.SYNC_CREATE
+        )
+        # Error message
+        self.bind_property(
+            "error_message", self, "tooltip_text", GObject.BindingFlags.SYNC_CREATE
         )
 
         click = Gtk.GestureClick()
@@ -73,6 +80,12 @@ class SoundItem(Gtk.FlowBoxChild):
             self.icon.remove_css_class("accent")
         elif not self.icon.has_css_class("accent"):
             self.icon.add_css_class("accent")
+
+    def _failed_changed(self, _object, _pspec):
+        if not self.failed:
+            self.remove_css_class("error")
+        elif not self.has_css_class("error"):
+            self.add_css_class("error")
 
     def _on_secondary_click(self, _ctrl, _n, x: int, y: int):
         self._context_popover(x, y)

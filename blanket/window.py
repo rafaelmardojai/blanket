@@ -128,24 +128,17 @@ class BlanketWindow(Adw.ApplicationWindow):
         for name, uri in Settings.get().custom_audios.items():
             # Check if file actually exists
             path = unquote(urlparse(uri).path)
-            if os.path.exists(path):
-                # Create a new Sound
-                sound = Sound(name, uri=uri, custom=True)
-                MainPlayer.get().append(sound)
-            else:
-                Settings.get().remove_custom_audio(name)
+            exists = os.path.exists(path)
 
-                alert = Adw.AlertDialog.new(
-                    _("Sound Automatically Removed"),
-                    _(
-                        "The {name} sound is no longer accessible, so it has been removed"
-                    ).format(name=f"<b><i>{name}</i></b>"),
-                )
-                alert.add_response("accept", _("Accept"))
-                alert.props.body_use_markup = True
-                alert.props.default_response = "accept"
-                alert.props.close_response = "accept"
-                alert.present(self)
+            # Create a new Sound
+            sound = Sound(
+                name,
+                uri=uri,
+                custom=True,
+                failed=not exists,
+                error_message=None if exists else _("File not found"),
+            )
+            MainPlayer.get().append(sound)
 
     def open_audio(self):
         def on_response(dialog, result):
@@ -249,10 +242,16 @@ class BlanketWindow(Adw.ApplicationWindow):
                 "playing", item, "playing", GObject.BindingFlags.SYNC_CREATE
             )
             sound.bind_property(
+                "failed", item, "failed", GObject.BindingFlags.SYNC_CREATE
+            )
+            sound.bind_property(
                 "title", item, "title", GObject.BindingFlags.SYNC_CREATE
             )
             sound.bind_property(
                 "icon_name", item, "icon_name", GObject.BindingFlags.SYNC_CREATE
+            )
+            sound.bind_property(
+                "error_message", item, "error_message", GObject.BindingFlags.SYNC_CREATE
             )
         else:
             # Add new sound item
@@ -261,11 +260,12 @@ class BlanketWindow(Adw.ApplicationWindow):
 
         return item
 
-    def _on_sound_activate(self, _grid, item):
+    def _on_sound_activate(self, _grid, item: SoundItem):
         # If item sound is None, then it's the Add sound item
         if item.sound is not None:
             # Toggle sound playing state
-            item.sound.playing = not item.sound.playing
+            if not item.sound.failed:
+                item.sound.playing = not item.sound.playing
             # Update volumes list
             self.__update_filters()
         else:

@@ -22,6 +22,7 @@ class Sound(GObject.Object):
     playing: bool = GObject.Property(type=bool, default=False)  # type: ignore
     title: str = GObject.Property(type=str)  # type: ignore
     icon_name: str = GObject.Property(type=str)  # type: ignore
+    error_message: str = GObject.Property(type=str)  # type: ignore
 
     def __init__(
         self,
@@ -29,11 +30,15 @@ class Sound(GObject.Object):
         uri: str | None = None,
         title: str | None = None,
         custom: bool | None = False,
+        failed: bool = False,
+        error_message: str | None = None,
     ):
         super().__init__()
 
         resource = f"resource:{RES_PATH}/sounds/{name}.ogg"
         icon = "com.rafaelmardojai.Blanket-{}-symbolic"
+
+        self._failed = failed
 
         # Internal player
         self._player: Player | None = None
@@ -44,13 +49,14 @@ class Sound(GObject.Object):
         # Sound properties
         self.name = name
         self.uri = uri if uri else resource
+        self.error_message = error_message or ""
         self.title = title if title else name
         self.icon_name = icon.format("sound-wave" if custom else name)
         self.custom = custom
 
         # Playing state
         self.connect("notify::playing", self._playing_changed)
-        if not self.saved_mute:
+        if not self.saved_mute and not self.failed:
             self.playing = True
 
         # Connect mainplayer preset-changed signal
@@ -92,6 +98,17 @@ class Sound(GObject.Object):
     @saved_mute.setter
     def saved_mute(self, mute: bool):
         Settings.get().set_sound_mute(self.name, mute)
+
+    @GObject.Property(type=bool, default=False)
+    def failed(self) -> bool:
+        return self._failed
+
+    @failed.setter
+    def failed(self, value: bool):
+        self._failed = value
+
+        if self.playing and value:
+            self.playing = False
 
     def remove(self):
         """Remove sound if it is custom"""
@@ -157,6 +174,9 @@ class Sound(GObject.Object):
         self._playback_down()
 
     def _playback_up(self):
+        if self.failed:
+            return
+
         self._cancel_detach()
         if self._player is None:
             self._attach()

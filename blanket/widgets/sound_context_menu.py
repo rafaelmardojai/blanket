@@ -46,6 +46,13 @@ class SoundContextMenu(Gtk.PopoverMenu):
         self.vol_bind = self.sound.bind_property(
             "saved_volume", vol_adjustment, "value", GObject.BindingFlags.BIDIRECTIONAL
         )
+        self.vol_failed_bind = self.sound.bind_property(
+            "failed",
+            self.volume,
+            "sensitive",
+            GObject.BindingFlags.INVERT_BOOLEAN | GObject.BindingFlags.SYNC_CREATE,
+        )
 
     def do_closed(self):
         self.vol_bind.unbind()
+        self.vol_failed_bind.unbind()

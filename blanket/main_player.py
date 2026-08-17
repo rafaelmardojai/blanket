@@ -228,7 +228,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         # otherwise take the whole mix down with it
         sound = self._sound_of(message.src)
         if sound is not None:
-            sound.playing = False
+            sound.failed = True
 
         GLib.idle_add(self._recover)
 
@@ -259,8 +259,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         """Find the sound a pipeline element belongs to, if any"""
         branches = {}
         for sound in self:
-            player = getattr(sound, "_player", None)
-            sound_bin = player._bin if player else None
+            sound_bin = getattr(sound, "_player", None)
             if sound_bin is not None:
                 branches[sound_bin] = sound
 
