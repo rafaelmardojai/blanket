@@ -9,7 +9,7 @@ from blanket.player import Player
 from blanket.settings import Settings
 
 # Seconds an inaudible sound keeps its decoder before it is released
-RELEASE_DELAY = 5
+DETACH_DELAY = 5
 
 
 class Sound(GObject.Object):
@@ -38,7 +38,7 @@ class Sound(GObject.Object):
         # Internal player
         self._player: Player | None = None
         self._mixer_pad: Gst.Pad | None = None
-        self._release_id: int = 0
+        self._detach_id: int = 0
         self._removed = False
 
         # Sound properties
@@ -60,6 +60,10 @@ class Sound(GObject.Object):
         # Connect mainplayer reset-volumes signal
         self._reset_hdlr = MainPlayer.get().connect(
             "reset-volumes", self._on_reset_volumes
+        )
+        # Connect mainplayer playing signal
+        self._main_player_playing_hdlr = MainPlayer.get().connect(
+            "notify::playing", self._on_main_player_playing
         )
 
     @GObject.Property(type=float)
@@ -93,13 +97,14 @@ class Sound(GObject.Object):
         """Remove sound if it is custom"""
         if self.custom:
             self._removed = True
-            self._cancel_release()
+            self._cancel_detach()
             self._detach()
 
             # A removed sound still reachable from a signal closure would
             # otherwise come back to life on the next preset change.
             MainPlayer.get().disconnect(self._preset_hdlr)
             MainPlayer.get().disconnect(self._reset_hdlr)
+            MainPlayer.get().disconnect(self._main_player_playing_hdlr)
 
             Settings.get().remove_custom_audio(self.name)
 
@@ -112,15 +117,11 @@ class Sound(GObject.Object):
             if self.saved_volume == 0:
                 self.saved_volume = 0.5
 
-            self._player_up()
-
             if self._player:
                 self._player.volume = self.saved_volume
 
-        else:
-            self._player_down()
-
         self.saved_mute = not self.playing  # Save playing state
+        self._update_playback()
 
     def _on_preset_changed(self, _player, _preset):
         self.notify("saved_volume")
@@ -130,41 +131,57 @@ class Sound(GObject.Object):
         self.saved_volume = 0.0
         self.playing = False
 
+    def _on_main_player_playing(self, _object, _pspec):
+        self._update_playback()
+
     """
     Branch handling
     """
 
     def release_now(self):
         """Tear the branch down without waiting for the stream to go idle"""
-        self._cancel_release()
+        self._cancel_detach()
         self._detach()
 
     def play_now(self):
         """Play the sound immediately"""
-        self._player_up()
+        self._playback_up()
 
-    def _player_up(self):
-        self._cancel_release()
-        self._attach()
+    def _update_playback(self):
+        """Update playback state on sound and main player state"""
+        if self.playing and MainPlayer.get().playing:
+            if self.saved_volume > 0:
+                self._playback_up()
+                return
 
-    def _player_down(self):
+        self._playback_down()
+
+    def _playback_up(self):
+        self._cancel_detach()
+        if self._player is None:
+            self._attach()
+
+        if self._player:
+            self._player.volume = self.saved_volume
+
+    def _playback_down(self):
         if self._player is not None:
             self._player.volume = 0
-            self._schedule_release()
+            self._schedule_detach()
 
-    def _schedule_release(self):
-        if self._player is None or self._release_id:
+    def _schedule_detach(self):
+        if self._player is None or self._detach_id:
             return
 
-        self._release_id = GLib.timeout_add_seconds(RELEASE_DELAY, self._release)
+        self._detach_id = GLib.timeout_add_seconds(DETACH_DELAY, self._detach_timeout)
 
-    def _cancel_release(self):
-        if self._release_id:
-            GLib.source_remove(self._release_id)
-            self._release_id = 0
+    def _cancel_detach(self):
+        if self._detach_id:
+            GLib.source_remove(self._detach_id)
+            self._detach_id = 0
 
-    def _release(self):
-        self._release_id = 0
+    def _detach_timeout(self):
+        self._detach_id = 0
         self._detach()
         return GLib.SOURCE_REMOVE
 

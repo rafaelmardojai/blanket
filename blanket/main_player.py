@@ -29,7 +29,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
         "reset-volumes": (GObject.SIGNAL_RUN_FIRST, None, ()),
     }
 
-    playing: bool = GObject.Property(type=bool, default=True)  # type: ignore
+    playing: bool = GObject.Property(type=bool, default=False)  # type: ignore
     volume: float = GObject.Property(type=float, default=0)  # type: ignore
 
     @classmethod
