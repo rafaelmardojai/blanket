@@ -1,4 +1,4 @@
-# Copyright 2021-2022 Rafael Mardojai CM
+# Copyright 2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gio, GObject, Gtk
