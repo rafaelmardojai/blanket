@@ -26,6 +26,22 @@
     ],
     "modules": [
         {
+            "name": "libportal",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Ddocs=false",
+                "-Dvapi=false",
+                "-Dbackend-gtk4=enabled"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.10.0/libportal-0.10.0.tar.xz",
+                    "sha256": "1c74a3f7becbd4ff745d7f565afd06e97e50eb080a0e268cb14bb55289a745bf"
+                }
+            ]
+        },
+        {
             "name": "blanket",
             "builddir": true,
             "buildsystem": "meson",
