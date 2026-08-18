@@ -3,9 +3,9 @@
 
 from gi.repository import GLib, GObject, Gst
 
+from blanket.audio import LoopBin, NoiseBin, SoundBin
 from blanket.define import RES_PATH
 from blanket.main_player import MainPlayer
-from blanket.player import Player
 from blanket.settings import Settings
 
 # Seconds an inaudible sound keeps its decoder before it is released
@@ -29,6 +29,7 @@ class Sound(GObject.Object):
         name: str,
         uri: str | None = None,
         title: str | None = None,
+        noise: bool | None = False,
         custom: bool | None = False,
         failed: bool = False,
         error_message: str | None = None,
@@ -41,7 +42,7 @@ class Sound(GObject.Object):
         self._failed = failed
 
         # Internal player
-        self._player: Player | None = None
+        self._player: SoundBin | None = None
         self._mixer_pad: Gst.Pad | None = None
         self._detach_id: int = 0
         self._removed = False
@@ -52,6 +53,7 @@ class Sound(GObject.Object):
         self.error_message = error_message or ""
         self.title = title if title else name
         self.icon_name = icon.format("sound-wave" if custom else name)
+        self.noise = noise
         self.custom = custom
 
         # Playing state
@@ -219,5 +221,9 @@ class Sound(GObject.Object):
         if self._player is not None:
             return
 
-        self._player = Player(self)
+        if self.noise:
+            self._player = NoiseBin(self.name)
+        else:
+            self._player = LoopBin(self.uri)
+
         self._mixer_pad = MainPlayer.get().attach_sound_bin(self._player)

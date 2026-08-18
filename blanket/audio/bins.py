@@ -1,30 +1,41 @@
-# Copyright 2020 Rafael Mardojai CM
+# Copyright 2026 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from typing import TYPE_CHECKING, Callable
+from typing import Callable
 
 from gi.repository import GLib, Gst
-
-if TYPE_CHECKING:
-    from blanket.sound import Sound
 
 # A sound whose duration is not known yet cannot be looped, so wait for it
 LOOP_RETRY_INTERVAL = 200
 LOOP_RETRIES = 25
 
 
-class Player(Gst.Bin):
-    """
-    Playback of a single sound, as a branch of the shared pipeline
-
-    The branch is only attached to the mixer while the sound is audible, so
-    silent sounds cost neither a decoder nor its threads.
-    """
-
-    def __init__(self, sound: "Sound", **kwargs):
+class SoundBin(Gst.Bin):
+    def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        self._sound = sound
+        self._caps = Gst.Caps.from_string(
+            "audio/x-raw,format=F32LE,rate=44100,channels=2,layout=interleaved"
+        )
+
+    @property
+    def volume(self) -> float:
+        raise NotImplementedError
+
+    @volume.setter
+    def volume(self, value: float):
+        raise NotImplementedError
+
+
+class LoopBin(SoundBin):
+    """
+    Implementation of looping logic for continuous playback.
+    """
+
+    def __init__(self, uri: str, **kwargs):
+        super().__init__(**kwargs)
+
+        self._uri = uri
         self._looping = False
 
         decoder = Gst.ElementFactory.make("uridecodebin", None)
@@ -39,13 +50,11 @@ class Player(Gst.Bin):
             print("Error: could not create the GStreamer elements for a sound")
             return
 
-        decoder.props.uri = sound.uri  # type: ignore
+        decoder.props.uri = uri  # type: ignore
 
         # Every branch has to reach the mixer in the same format, and mixing at
         # the rate the sounds already are in keeps the resamplers idle.
-        caps.props.caps = Gst.Caps.from_string(  # type: ignore
-            "audio/x-raw,format=F32LE,rate=44100,channels=2,layout=interleaved"
-        )
+        caps.props.caps = self._caps  # type: ignore
 
         for element in (decoder, convert, resample, caps, volume):
             self.add(element)
@@ -118,7 +127,7 @@ class Player(Gst.Bin):
         and a sound whose duration never resolves would spin it forever.
         """
         if attempt >= LOOP_RETRIES:
-            print(f"Error: could not loop {self._sound.name}, its duration is unknown")
+            print(f"Error: could not loop {self._uri}, its duration is unknown")
             return
 
         GLib.timeout_add(LOOP_RETRY_INTERVAL, callback, attempt + 1)
@@ -156,3 +165,53 @@ class Player(Gst.Bin):
             Gst.SeekType.SET,
             duration,
         )
+
+
+class NoiseBin(SoundBin):
+    """
+    Implementation of real-time noise generation.
+    """
+
+    def __init__(self, name: str, **kwargs):
+        super().__init__(**kwargs)
+
+        noise = Gst.ElementFactory.make("audiotestsrc", None)
+        convert = Gst.ElementFactory.make("audioconvert", None)
+        # audiomixer does not convert between formats, so a sound recorded at
+        # another rate has to be resampled before it reaches the mixer
+        resample = Gst.ElementFactory.make("audioresample", None)
+        caps = Gst.ElementFactory.make("capsfilter", None)
+        volume = Gst.ElementFactory.make("volume", None)
+
+        if not noise or not convert or not resample or not caps or not volume:
+            print("Error: could not create the GStreamer elements for a sound")
+            return
+
+        # Set noise properties
+        noise.props.freq = 100  # type: ignore
+        noise.props.wave = name  # type: ignore
+
+        # Every branch has to reach the mixer in the same format, and mixing at
+        # the rate the sounds already are in keeps the resamplers idle.
+        caps.props.caps = self._caps  # type: ignore
+
+        for element in (noise, convert, resample, caps, volume):
+            self.add(element)
+
+        noise.link(convert)
+        convert.link(resample)
+        resample.link(caps)
+        caps.link(volume)
+
+        self._volume = volume
+
+        if vol_pad := volume.get_static_pad("src"):
+            self.add_pad(Gst.GhostPad.new("src", vol_pad))
+
+    @property
+    def volume(self) -> float:
+        return self._volume.props.volume  # type: ignore
+
+    @volume.setter
+    def volume(self, value: float):
+        self._volume.props.volume = value  # type: ignore

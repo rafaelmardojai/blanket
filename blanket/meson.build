@@ -29,7 +29,6 @@ sources = [
   'main.py',
   'main_player.py',
   'mpris.py',
-  'player.py',
   'preferences.py',
   'preset.py',
   'settings.py',
@@ -39,6 +38,9 @@ sources = [
 ]
 
 install_data(sources, install_dir: moduledir)
+
+# Install audio modules
+install_subdir('audio', install_dir: moduledir)
 
 # Install custom widgets
 install_subdir('widgets', install_dir: moduledir)
