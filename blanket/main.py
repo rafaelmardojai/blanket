@@ -22,7 +22,15 @@ except ImportError or ValueError as exc:
     print("Error: Dependencies not met.", exc)
     exit()
 
-from blanket.define import ARTISTS, AUTHORS, RES_PATH, SOUND_ARTISTS, SOUND_EDITORS
+from blanket.define import (
+    APP_ID,
+    ARTISTS,
+    AUTHORS,
+    RES_PATH,
+    SOUND_ARTISTS,
+    SOUND_EDITORS,
+    VERSION,
+)
 from blanket.main_player import MainPlayer
 from blanket.mpris import MPRIS
 from blanket.preferences import PreferencesDialog
@@ -34,9 +42,10 @@ from blanket.window import BlanketWindow
 
 
 class Application(Adw.Application):
-    def __init__(self, version):
+    def __init__(self):
         super().__init__(
-            application_id="com.rafaelmardojai.Blanket",
+            application_id=APP_ID,
+            resource_base_path=RES_PATH,
             flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE,
         )
         GLib.set_application_name(_("Blanket"))
@@ -67,7 +76,7 @@ class Application(Adw.Application):
         self.window: BlanketWindow | None = None
         self.window_hidden = False
         # App version
-        self.version = version
+        self.version = VERSION
 
     def do_startup(self):
         # Startup application
@@ -252,6 +261,7 @@ class Application(Adw.Application):
         sound_editors = self.__get_credits_list(SOUND_EDITORS)
 
         about.set_version(self.version)
+        about.set_application_icon(APP_ID)
         about.set_developers(AUTHORS)
         about.set_designers(artists)
         about.add_link(_("Source Code"), "https://github.com/rafaelmardojai/blanket")
@@ -307,6 +317,6 @@ class Application(Adw.Application):
         return credits_list
 
 
-def main(version):
-    app = Application(version)
+def main() -> int:
+    app = Application()
     return app.run(sys.argv)

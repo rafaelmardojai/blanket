@@ -7,7 +7,7 @@ from urllib.parse import unquote, urlparse
 
 from gi.repository import Adw, Gio, GLib, GObject, Gtk
 
-from blanket.define import NOISES, RES_PATH, SOUNDS
+from blanket.define import APP_ID, NOISES, RES_PATH, SOUNDS
 from blanket.main_player import MainPlayer
 from blanket.settings import Settings
 from blanket.sound import Sound
@@ -36,7 +36,9 @@ class BlanketWindow(Adw.ApplicationWindow):
         super().__init__(**kwargs)
 
         # Set default window icon for window managers
-        self.set_default_icon_name("com.rafaelmardojai.Blanket")
+        self.set_default_icon_name(APP_ID)
+        if APP_ID.endswith("Devel"):
+            self.add_css_class("devel")
 
         # Load window state
         self.load_window_state()
@@ -261,7 +263,7 @@ class BlanketWindow(Adw.ApplicationWindow):
         else:
             # Add new sound item
             item.title = _("Add…")
-            item.icon_name = "com.rafaelmardojai.Blanket-add-symbolic"
+            item.icon_name = "blanket-add-symbolic"
 
         return item
 

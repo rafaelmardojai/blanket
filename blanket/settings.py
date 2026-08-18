@@ -6,6 +6,8 @@ from typing import Self
 
 from gi.repository import Gio, GLib, GObject
 
+from blanket.define import APP_ID
+
 
 class Settings(Gio.Settings):
     _instance: Self | None = None
@@ -23,7 +25,7 @@ class Settings(Gio.Settings):
         return cls._instance
 
     def __init__(self):
-        super().__init__(schema_id="com.rafaelmardojai.Blanket")
+        super().__init__(schema_id=APP_ID)
         self.migrate_legacy_volumes()
 
     """ Autostart """
@@ -308,7 +310,7 @@ class Settings(Gio.Settings):
                 path += "/"
             path += preset_id + "/"
             self._presets_settings[preset_id] = Gio.Settings.new_with_path(
-                "com.rafaelmardojai.Blanket.preset", path
+                f"{APP_ID}.preset", path
             )
             # Set on ‘delay-apply’ mode so it only applies changes when we want
             self._presets_settings[preset_id].delay()

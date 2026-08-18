@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <schemalist gettext-domain="blanket">
     <!-- Global Settings -->
-    <schema id="com.rafaelmardojai.Blanket" path="/com/rafaelmardojai/Blanket/">
+    <schema id="@app-id@" path="/com/rafaelmardojai/Blanket/">
         <key type="(iib)" name="window-state">
             <default>(-1, -1, false)</default>
             <summary>Initial state of the window</summary>
-            <description>A tuple containing the initial width, height and maximize state of the app window.</description>
+            <description>
+              A tuple containing the initial width, height and maximize state of the app window.
+            </description>
         </key>
         <key type="b" name="autostart">
             <default>false</default>
@@ -47,7 +49,7 @@
     </schema>
 
     <!-- Preset -->
-    <schema id="com.rafaelmardojai.Blanket.preset">
+    <schema id="@app-id@.preset">
         <key name="visible-name" type="s">
             <!-- Translators: Keep single quote please! -->
             <default l10n="messages" context="visible-name">'Default'</default>

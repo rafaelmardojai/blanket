@@ -37,7 +37,7 @@ class Sound(GObject.Object):
         super().__init__()
 
         resource = f"resource:{RES_PATH}/sounds/{name}.ogg"
-        icon = "com.rafaelmardojai.Blanket-{}-symbolic"
+        icon = "blanket-{}-symbolic"
 
         self._failed = failed
 

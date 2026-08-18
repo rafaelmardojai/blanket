@@ -357,7 +357,7 @@ class MainPlayer(GObject.GObject, Gio.ListModel):
     ListModel methods
     """
 
-    def __iter__(self) -> Iterator[Sound]:
+    def __iter__(self) -> Iterator["Sound"]:
         return iter(self._sounds)
 
     def do_get_item(self, position: int) -> GObject.Object:

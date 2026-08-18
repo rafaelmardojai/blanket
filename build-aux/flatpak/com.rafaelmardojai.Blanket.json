@@ -1,7 +1,7 @@
 {
     "app-id": "com.rafaelmardojai.Blanket",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "command": "blanket",
     "finish-args": [
@@ -49,7 +49,7 @@
             "sources": [
                 {
                     "type": "dir",
-                    "path": "."
+                    "path": "../../."
                 }
             ]
         }

@@ -14,7 +14,7 @@ from random import randint
 
 from gi.repository import Gdk, Gio, GLib
 
-from blanket.define import RES_PATH
+from blanket.define import APP_ID, RES_PATH
 from blanket.main_player import MainPlayer
 from blanket.settings import Settings
 
@@ -228,7 +228,7 @@ class MPRIS(Server):
         elif property_name == "Identity":
             return GLib.Variant("s", "Blanket")
         elif property_name == "DesktopEntry":
-            return GLib.Variant("s", "com.rafaelmardojai.Blanket")
+            return GLib.Variant("s", APP_ID)
         elif property_name == "PlaybackStatus":
             return GLib.Variant("s", self._get_status())
         elif property_name == "Metadata":
