@@ -15,6 +15,6 @@ jobs:
       - uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v6
         with:
           bundle: "blanket-devel.flatpak"
-          manifest-path: "com.rafaelmardojai.Blanket.Devel.json"
+          manifest-path: "build-aux/flatpak/com.rafaelmardojai.Blanket.Devel.json"
           run-tests: "true"
           cache-key: flatpak-builder-${{ github.sha }}
