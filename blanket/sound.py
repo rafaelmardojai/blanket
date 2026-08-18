@@ -171,7 +171,8 @@ class Sound(GObject.Object):
                 self._playback_up()
                 return
 
-        self._playback_down()
+        if MainPlayer.get().playing:
+            self._playback_down()
 
     def _playback_up(self):
         if self.failed:
