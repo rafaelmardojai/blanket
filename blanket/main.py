@@ -18,7 +18,7 @@ try:
 
     # Init GStreamer
     Gst.init(None)
-except ImportError or ValueError as exc:
+except (ImportError, ValueError) as exc:
     print("Error: Dependencies not met.", exc)
     exit()
 
