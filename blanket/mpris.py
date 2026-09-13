@@ -14,7 +14,7 @@ from random import randint
 
 from gi.repository import Gdk, Gio, GLib
 
-from blanket.define import RES_PATH
+from blanket.define import APP_ID, RES_PATH
 from blanket.main_player import MainPlayer
 from blanket.settings import Settings
 
@@ -72,8 +72,15 @@ class Server:
                 invocation.return_value(variant)
             else:
                 invocation.return_value(None)
+        except GLib.Error as e:
+            # Always answer the caller. A D-Bus method that neither returns a
+            # value nor an error leaves the peer blocked until its own timeout
+            # expires (forever, for peers that set an infinite one).
+            invocation.return_gerror(e)
         except Exception as e:
-            print(e)
+            invocation.return_error_literal(
+                Gio.dbus_error_quark(), Gio.DBusError.FAILED, str(e)
+            )
 
 
 class MPRIS(Server):
@@ -110,8 +117,11 @@ class MPRIS(Server):
             </method>
             <property name="CanQuit" type="b" access="read" />
             <property name="CanRaise" type="b" access="read" />
+            <property name="HasTrackList" type="b" access="read"/>
             <property name="Identity" type="s" access="read"/>
             <property name="DesktopEntry" type="s" access="read"/>
+            <property name="SupportedUriSchemes" type="as" access="read"/>
+            <property name="SupportedMimeTypes" type="as" access="read"/>
         </interface>
         <interface name="org.mpris.MediaPlayer2.Player">
             <method name="Next"/>
@@ -120,10 +130,18 @@ class MPRIS(Server):
             <method name="Play"/>
             <method name="Pause"/>
             <method name="Stop"/>
+            <signal name="Seeked">
+                <arg name="Position" type="x"/>
+            </signal>
             <property name="PlaybackStatus" type="s" access="read"/>
             <property name="Metadata" type="a{sv}" access="read">
             </property>
+            <property name="Position" type="x" access="read"/>
+            <property name="Rate" type="d" access="readwrite"/>
+            <property name="MinimumRate" type="d" access="read"/>
+            <property name="MaximumRate" type="d" access="read"/>
             <property name="Volume" type="d" access="readwrite"/>
+            <property name="CanSeek" type="b" access="read"/>
             <property name="CanGoNext" type="b" access="read"/>
             <property name="CanGoPrevious" type="b" access="read"/>
             <property name="CanPlay" type="b" access="read"/>
@@ -198,6 +216,11 @@ class MPRIS(Server):
             "CanPause",
         ]:
             return GLib.Variant("b", True)
+        elif property_name == "HasTrackList":
+            return GLib.Variant("b", False)
+        elif property_name in ["SupportedUriSchemes", "SupportedMimeTypes"]:
+            # Blanket only plays its own bundled sounds; it opens no URIs.
+            return GLib.Variant("as", [])
         elif property_name == "CanGoNext":
             return GLib.Variant("b", MainPlayer.get().can_next)
         elif property_name == "CanGoPrevious":
@@ -205,26 +228,50 @@ class MPRIS(Server):
         elif property_name == "Identity":
             return GLib.Variant("s", "Blanket")
         elif property_name == "DesktopEntry":
-            return GLib.Variant("s", "com.rafaelmardojai.Blanket")
+            return GLib.Variant("s", APP_ID)
         elif property_name == "PlaybackStatus":
             return GLib.Variant("s", self._get_status())
         elif property_name == "Metadata":
             return GLib.Variant("a{sv}", self.__metadata)
         elif property_name == "Volume":
             return GLib.Variant("d", MainPlayer.get().volume)
-        else:
+        elif property_name == "Position":
+            # Blanket loops ambient sounds and has no seekable timeline.
+            return GLib.Variant("x", 0)
+        elif property_name in ["Rate", "MinimumRate", "MaximumRate"]:
+            return GLib.Variant("d", 1.0)
+        elif property_name == "CanSeek":
             return GLib.Variant("b", False)
+        else:
+            raise GLib.Error.new_literal(
+                Gio.dbus_error_quark(),
+                f"No such property '{property_name}'",
+                Gio.DBusError.UNKNOWN_PROPERTY,
+            )
 
     def GetAll(self, interface):
         ret = {}
         if interface == self.__MPRIS_IFACE:
-            for property_name in ["CanQuit", "CanRaise", "Identity", "DesktopEntry"]:
+            for property_name in [
+                "CanQuit",
+                "CanRaise",
+                "HasTrackList",
+                "Identity",
+                "DesktopEntry",
+                "SupportedUriSchemes",
+                "SupportedMimeTypes",
+            ]:
                 ret[property_name] = self.Get(interface, property_name)
         elif interface == self.__MPRIS_PLAYER_IFACE:
             for property_name in [
                 "PlaybackStatus",
                 "Metadata",
+                "Position",
+                "Rate",
+                "MinimumRate",
+                "MaximumRate",
                 "Volume",
+                "CanSeek",
                 "CanGoNext",
                 "CanGoPrevious",
                 "CanPlay",
@@ -248,7 +295,7 @@ class MPRIS(Server):
             "PropertiesChanged",
             GLib.Variant.new_tuple(
                 GLib.Variant("s", interface_name),
-                GLib.Variant("a{sv}", changed_properties),  # type: ignore
+                GLib.Variant("a{sv}", changed_properties),
                 GLib.Variant("as", invalidated_properties),
             ),
         )

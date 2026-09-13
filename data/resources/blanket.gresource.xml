@@ -18,25 +18,22 @@
     <file>style.css</file>
 
     <!-- Icons -->
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-rain-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-storm-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-wind-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-waves-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-stream-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-birds-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-summer-night-symbolic.svg</file>
-
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-train-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-boat-symbolic.svg</file>
-
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-city-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-coffee-shop-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-fireplace-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-pink-noise-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-white-noise-symbolic.svg</file>
-
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-sound-wave-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/emblems/com.rafaelmardojai.Blanket-add-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-rain-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-storm-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-wind-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-waves-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-stream-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-birds-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-summer-night-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-train-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-boat-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-city-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-coffee-shop-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-fireplace-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-pink-noise-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-white-noise-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-sound-wave-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/blanket-add-symbolic.svg</file>
 
     <!-- Sounds -->
     <file>sounds/rain.ogg</file>

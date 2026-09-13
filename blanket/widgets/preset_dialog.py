@@ -1,4 +1,4 @@
-# Copyright 2021-2022 Rafael Mardojai CM
+# Copyright 2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
@@ -14,10 +14,10 @@ from blanket.settings import Settings
 class PresetDialog(Adw.Dialog):
     __gtype_name__ = "PresetDialog"
 
-    headerbar: Adw.HeaderBar = Gtk.Template.Child()  # type: ignore
-    title_widget: Adw.WindowTitle = Gtk.Template.Child()  # type: ignore
-    accept_btn: Gtk.Button = Gtk.Template.Child()  # type: ignore
-    name_entry: Adw.EntryRow = Gtk.Template.Child()  # type: ignore
+    headerbar: Adw.HeaderBar = Gtk.Template.Child()
+    title_widget: Adw.WindowTitle = Gtk.Template.Child()
+    accept_btn: Gtk.Button = Gtk.Template.Child()
+    name_entry: Adw.EntryRow = Gtk.Template.Child()
 
     def __init__(self, preset=None, **kwargs):
         super().__init__()

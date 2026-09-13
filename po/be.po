@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2026-02-24 22:09+0000\n"
+"PO-Revision-Date: 2026-08-29 20:59+0000\n"
 "Last-Translator: Aliaksandr Kliujeŭ <katoshrodingera@protonmail.ch>\n"
 "Language-Team: Belarusian <https://hosted.weblate.org/projects/blanket/"
 "blanket/be/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.16.1-dev\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -67,7 +67,7 @@ msgstr "Дадаць свае гукі"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
-msgstr "Аўтазапуск у фонавым рэжыме"
+msgstr "Аўтазапуск у фоне"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:16
 msgid "MPRIS integration"
@@ -263,7 +263,7 @@ msgstr "Прайграванне пасля закрыцця"
 
 #: data/resources/window.blp:115
 msgid "About Blanket"
-msgstr "Аб праграме"
+msgstr "Пра Blanket"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
@@ -327,7 +327,7 @@ msgstr "Гукі пад рэдакцыяй"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr "Аўтазапуск Blanket ў фонавым рэжыме."
+msgstr "Аўтазапуск Blanket у фоне."
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
