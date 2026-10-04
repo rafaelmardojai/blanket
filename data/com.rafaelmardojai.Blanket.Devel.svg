@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="128px" viewBox="0 0 128 128" width="128px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter id="a" height="100%" width="100%" x="0%" y="0%">
+            <feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+        </filter>
+        <clipPath id="b">
+            <path d="m 0 0 h 128 v 128 h -128 z m 0 0"/>
+        </clipPath>
+        <image id="c" height="152" width="192" xlink:href="data:image/png;base64,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"/>
+        <clipPath id="d">
+            <rect height="128" width="128"/>
+        </clipPath>
+        <clipPath id="e">
+            <rect height="128" width="128"/>
+        </clipPath>
+        <mask id="f">
+            <g filter="url(#a)">
+                <g clip-path="url(#e)" filter="url(#a)">
+                    <g clip-path="url(#d)">
+                        <g clip-path="url(#b)">
+                            <use transform="matrix(1 0 0 1 -8 -16)" xlink:href="#c"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </mask>
+        <mask id="g">
+            <g filter="url(#a)">
+                <rect fill-opacity="0.8" height="184.32" width="184.32" x="-28.16" y="-28.16"/>
+            </g>
+        </mask>
+        <linearGradient id="h" gradientTransform="matrix(0 0.37 -0.98462 0 295.38501 -30.360001)" gradientUnits="userSpaceOnUse" x1="300" x2="428" y1="235" y2="235">
+            <stop offset="0" stop-color="#f9f06b"/>
+            <stop offset="1" stop-color="#f5c211"/>
+        </linearGradient>
+        <clipPath id="i">
+            <rect height="128" width="128"/>
+        </clipPath>
+        <clipPath id="j">
+            <rect height="128" width="128"/>
+        </clipPath>
+    </defs>
+    <use transform="matrix(1 0 0 1 -8 -16)" xlink:href="#c"/>
+    <g mask="url(#f)">
+        <g clip-path="url(#j)">
+            <g mask="url(#g)">
+                <g clip-path="url(#i)">
+                    <path d="m 128 80.640625 v 47.359375 h -128 v -47.359375 z m 0 0" fill="url(#h)"/>
+                    <path d="m 13.308594 80.640625 l 47.355468 47.359375 h 21.214844 l -47.359375 -47.359375 z m 42.421875 0 l 47.363281 47.359375 h 21.214844 l -47.363282 -47.359375 z m 42.429687 0 l 29.839844 29.839844 v -21.210938 l -8.628906 -8.628906 z m -98.160156 7.90625 v 21.214844 l 18.238281 18.238281 h 21.214844 z m 0 0"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: blanket v0.4.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-07 19:36-0500\n"
-"PO-Revision-Date: 2024-12-09 18:54+0000\n"
-"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
-"Language-Team: Tamil <https://hosted.weblate.org/projects/blanket/blanket/ta/"
-">\n"
+"PO-Revision-Date: 2026-06-22 06:01+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/blanket/blanket/"
+"ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:38
@@ -166,7 +166,7 @@ msgstr "பதிப்புரிமை 2020-2022 ரஃபேல் மார
 #: data/resources/about.blp:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr "SURVESH VRL <123SURVESH@GMAIL.COM>"
+msgstr "தமிழ்நேரம் <TamilNeran247@gmail.com>"
 
 #: data/resources/preferences.blp:7
 msgid "Appearance"

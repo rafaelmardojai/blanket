@@ -1,4 +1,4 @@
-# Copyright 2020-2022 Rafael Mardojai CM
+# Copyright 2020 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gettext import gettext as _
@@ -14,7 +14,7 @@ from blanket.sound import Sound
 class SoundContextMenu(Gtk.PopoverMenu):
     __gtype_name__ = "SoundContextMenu"
 
-    volume: Gtk.Scale = Gtk.Template.Child()  # type: ignore
+    volume: Gtk.Scale = Gtk.Template.Child()
 
     def __init__(self, sound: Sound):
         super().__init__()
@@ -46,6 +46,13 @@ class SoundContextMenu(Gtk.PopoverMenu):
         self.vol_bind = self.sound.bind_property(
             "saved_volume", vol_adjustment, "value", GObject.BindingFlags.BIDIRECTIONAL
         )
+        self.vol_failed_bind = self.sound.bind_property(
+            "failed",
+            self.volume,
+            "sensitive",
+            GObject.BindingFlags.INVERT_BOOLEAN | GObject.BindingFlags.SYNC_CREATE,
+        )
 
     def do_closed(self):
         self.vol_bind.unbind()
+        self.vol_failed_bind.unbind()

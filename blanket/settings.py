@@ -6,6 +6,8 @@ from typing import Self
 
 from gi.repository import Gio, GLib, GObject
 
+from blanket.define import APP_ID
+
 
 class Settings(Gio.Settings):
     _instance: Self | None = None
@@ -23,7 +25,7 @@ class Settings(Gio.Settings):
         return cls._instance
 
     def __init__(self):
-        super().__init__(schema_id="com.rafaelmardojai.Blanket")
+        super().__init__(schema_id=APP_ID)
         self.migrate_legacy_volumes()
 
     """ Autostart """
@@ -110,7 +112,7 @@ class Settings(Gio.Settings):
 
     @property
     def custom_audios(self) -> dict[str, str]:
-        return dict(self.get_value("custom-audios"))
+        return dict(self.get_value("custom-audios").unpack())
 
     @custom_audios.setter
     def custom_audios(self, audios: dict[str, str]):
@@ -237,7 +239,7 @@ class Settings(Gio.Settings):
 
     def get_preset_volumes(self, preset_id: str) -> dict[str, float]:
         settings = self.get_preset_settings(preset_id)
-        return dict(settings.get_value("sounds-volume"))
+        return dict(settings.get_value("sounds-volume").unpack())
 
     def set_preset_volumes(self, preset_id: str, volumes: dict[str, float]):
         settings = self.get_preset_settings(preset_id)
@@ -245,7 +247,7 @@ class Settings(Gio.Settings):
 
     def get_preset_mutes(self, preset_id: str) -> dict[str, bool]:
         settings = self.get_preset_settings(preset_id)
-        return dict(settings.get_value("sounds-mute"))
+        return dict(settings.get_value("sounds-mute").unpack())
 
     def set_preset_mutes(self, preset_id: str, mutes: dict[str, bool]):
         settings = self.get_preset_settings(preset_id)
@@ -308,7 +310,7 @@ class Settings(Gio.Settings):
                 path += "/"
             path += preset_id + "/"
             self._presets_settings[preset_id] = Gio.Settings.new_with_path(
-                "com.rafaelmardojai.Blanket.preset", path
+                f"{APP_ID}.preset", path
             )
             # Set on ‘delay-apply’ mode so it only applies changes when we want
             self._presets_settings[preset_id].delay()
@@ -329,7 +331,7 @@ class Settings(Gio.Settings):
 
     @property
     def legacy_sounds_volume(self) -> dict[str, float]:
-        return dict(self.get_value("sounds-volume"))
+        return dict(self.get_value("sounds-volume").unpack())
 
     @legacy_sounds_volume.setter
     def legacy_sounds_volume(self, volumes_dict: dict[str, float]):

@@ -1,4 +1,4 @@
-# Copyright 2020-2021 Rafael Mardojai CM
+# Copyright 2020 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import os
@@ -7,10 +7,11 @@ from urllib.parse import unquote, urlparse
 
 from gi.repository import Adw, Gio, GLib, GObject, Gtk
 
-from blanket.define import RES_PATH, SOUNDS
+from blanket.define import APP_ID, NOISES, RES_PATH, SOUNDS
 from blanket.main_player import MainPlayer
 from blanket.settings import Settings
 from blanket.sound import Sound
+from blanket.utils import DummyItemModel
 from blanket.widgets import PlayPauseButton, PresetChooser, SoundItem, VolumeRow
 
 
@@ -18,23 +19,29 @@ from blanket.widgets import PlayPauseButton, PresetChooser, SoundItem, VolumeRow
 class BlanketWindow(Adw.ApplicationWindow):
     __gtype_name__ = "BlanketWindow"
 
-    headerbar: Adw.HeaderBar = Gtk.Template.Child()  # type: ignore
-    toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()  # type: ignore
-    grid: Gtk.FlowBox = Gtk.Template.Child()  # type: ignore
-    playpause_btn: PlayPauseButton = Gtk.Template.Child()  # type: ignore
-    volumes: Gtk.Popover = Gtk.Template.Child()  # type: ignore
-    volume: Gtk.Scale = Gtk.Template.Child()  # type: ignore
-    volume_box: Gtk.Box = Gtk.Template.Child()  # type: ignore
-    volume_list: Gtk.ListBox = Gtk.Template.Child()  # type: ignore
-    presets_chooser: PresetChooser = Gtk.Template.Child()  # type: ignore
-    labels_group: Gtk.SizeGroup = Gtk.Template.Child()  # type: ignore
-    power_toast: Adw.Toast = Gtk.Template.Child()  # type: ignore
+    headerbar: Adw.HeaderBar = Gtk.Template.Child()
+    toast_overlay: Adw.ToastOverlay = Gtk.Template.Child()
+    grid: Gtk.FlowBox = Gtk.Template.Child()
+    playpause_btn: PlayPauseButton = Gtk.Template.Child()
+    volumes: Gtk.Popover = Gtk.Template.Child()
+    volume: Gtk.Scale = Gtk.Template.Child()
+    volume_box: Gtk.Box = Gtk.Template.Child()
+    volume_list: Gtk.ListBox = Gtk.Template.Child()
+    presets_chooser: PresetChooser = Gtk.Template.Child()
+    labels_group: Gtk.SizeGroup = Gtk.Template.Child()
+    power_toast: Adw.Toast = Gtk.Template.Child()
+    settings: Gio.Settings = Settings.get()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
         # Set default window icon for window managers
-        self.set_default_icon_name("com.rafaelmardojai.Blanket")
+        self.set_default_icon_name(APP_ID)
+        if APP_ID.endswith("Devel"):
+            self.add_css_class("devel")
+
+        # Load window state
+        self.load_window_state()
 
         self.setup_actions()
         # Setup widgets
@@ -49,9 +56,10 @@ class BlanketWindow(Adw.ApplicationWindow):
         self.sounds_filter = Gtk.CustomFilter.new(
             match_func=self._hide_inactive_sounds_filter
         )
-        self.sounds_model = Gtk.FilterListModel.new(
+        sorted_model = Gtk.FilterListModel.new(
             model=MainPlayer.get(), filter=self.sounds_filter
         )
+        self.sounds_model = DummyItemModel(sorted_model, GObject.Object())
         self.grid.bind_model(self.sounds_model, self._create_sound_item)
         self.grid.connect("child-activated", self._on_sound_activate)
 
@@ -118,28 +126,26 @@ class BlanketWindow(Adw.ApplicationWindow):
                 sound = Sound(s["name"], title=s["title"])
                 MainPlayer.get().append(sound)
 
+        # Load noises
+        for noise in NOISES:
+            sound = Sound(noise["name"], title=noise["title"], noise=True)
+            MainPlayer.get().append(sound)
+
         # Load saved custom audios
         for name, uri in Settings.get().custom_audios.items():
             # Check if file actually exists
             path = unquote(urlparse(uri).path)
-            if os.path.exists(path):
-                # Create a new Sound
-                sound = Sound(name, uri=uri, custom=True)
-                MainPlayer.get().append(sound)
-            else:
-                Settings.get().remove_custom_audio(name)
+            exists = os.path.exists(path)
 
-                alert = Adw.AlertDialog.new(
-                    _("Sound Automatically Removed"),
-                    _(
-                        "The {name} sound is no longer accessible, so it has been removed"
-                    ).format(name=f"<b><i>{name}</i></b>"),
-                )
-                alert.add_response("accept", _("Accept"))
-                alert.props.body_use_markup = True
-                alert.props.default_response = "accept"
-                alert.props.close_response = "accept"
-                alert.present(self)
+            # Create a new Sound
+            sound = Sound(
+                name,
+                uri=uri,
+                custom=True,
+                failed=not exists,
+                error_message=None if exists else _("File not found"),
+            )
+            MainPlayer.get().append(sound)
 
     def open_audio(self):
         def on_response(dialog, result):
@@ -243,23 +249,30 @@ class BlanketWindow(Adw.ApplicationWindow):
                 "playing", item, "playing", GObject.BindingFlags.SYNC_CREATE
             )
             sound.bind_property(
+                "failed", item, "failed", GObject.BindingFlags.SYNC_CREATE
+            )
+            sound.bind_property(
                 "title", item, "title", GObject.BindingFlags.SYNC_CREATE
             )
             sound.bind_property(
                 "icon_name", item, "icon_name", GObject.BindingFlags.SYNC_CREATE
             )
+            sound.bind_property(
+                "error_message", item, "error_message", GObject.BindingFlags.SYNC_CREATE
+            )
         else:
             # Add new sound item
             item.title = _("Add…")
-            item.icon_name = "com.rafaelmardojai.Blanket-add-symbolic"
+            item.icon_name = "blanket-add-symbolic"
 
         return item
 
-    def _on_sound_activate(self, _grid, item):
+    def _on_sound_activate(self, _grid, item: SoundItem):
         # If item sound is None, then it's the Add sound item
         if item.sound is not None:
             # Toggle sound playing state
-            item.sound.playing = not item.sound.playing
+            if not item.sound.failed:
+                item.sound.playing = not item.sound.playing
             # Update volumes list
             self.__update_filters()
         else:
@@ -296,3 +309,30 @@ class BlanketWindow(Adw.ApplicationWindow):
 
     def hide_power_toast(self):
         self.power_toast.dismiss()
+
+    def load_window_state(self):
+        window_state = self.settings.get_value("window-state")
+        width, height, is_maximized = window_state.unpack()
+
+        if width == -1:
+            width = 520
+
+        if height == -1:
+            height = 600
+
+        self.set_default_size(width, height)
+
+        if is_maximized:
+            self.maximize()
+
+    def save_window_state(self):
+        is_maximized = self.is_maximized()
+        width = self.get_width()
+        height = self.get_height()
+
+        if is_maximized:
+            old_variant = self.settings.get_value("window-state")
+            width, height, _ = old_variant.unpack()
+
+        variant = GLib.Variant("(iib)", (width, height, is_maximized))
+        self.settings.set_value("window-state", variant)

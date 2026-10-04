@@ -34,7 +34,9 @@ Improve focus and increase your productivity by listening to different sounds. B
 | NixOS | [`blanket`](https://search.nixos.org/packages?channel=unstable&show=blanket&from=0&size=50&sort=relevance&type=packages&query=blanket) | onny |
 | openSUSE  | [`blanket`](https://build.opensuse.org/package/show/multimedia%3Aapps/blanket) | [Michael Vetter](https://github.com/jubalh) |
 | Ubuntu (PPA) | [`Stable Releases`](https://launchpad.net/~apandada1/+archive/ubuntu/blanket), [`Daily Builds`](https://launchpad.net/~apandada1/+archive/ubuntu/blanket-daily) | [Archisman Panigrahi](https://github.com/apandada1) |
+| Void Linux | [`blanket`](https://voidlinux.org/packages/?q=blanket) | [ndpm13](https://github.com/ndpm13) |
 | MX Linux | [`blanket`](http://mxrepo.com/mx/repo/pool/main/b/blanket/) | [SwampRabbit](https://github.com/SwampRabbit) |
+| Debian (trixie) | [`blanket`](https://packages.debian.org/en/trixie/blanket) | [Debian GNOME Team](https://salsa.debian.org/gnome-team) |
 
 ### Build from source
 
@@ -94,6 +96,7 @@ If you want to support my work, you can donate me, [here you can find how](https
 ## Related Projects
 - [Blankie](https://github.com/codybrom/blankie) - Native macOS app inspired by Blanket
 - [feeltheblow](https://feeltheblow.web.app/) - Web App inspired by Blanket
-- [Soothing Noise Player](https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/),  [Napify](https://github.com/itsPronay/napify) - Android apps inspired by Blanket
+- [Soothing Noise Player](https://f-droid.org/en/packages/ie.delilahsthings.soothingloop/),  [Blankee](https://github.com/itsPronay/Blankee) - Android apps inspired by Blanket
 - [Blanket Web](https://apps.roanapur.de/blanket/) - Web clone of Blanket
 - [Blanket+](https://apps.microsoft.com/detail/9P4VKD1WQQ9G?hl=neutral&gl=TR&ocid=pdpshare) - Windows version of blanket
+- [Aria](https://github.com/kosail/Aria) - Android, [Web app](https://aria.korealm.tech) and Desktop app inspired by Blanket. A rewrite built from scratch using Kotlin and Compose Multiplatform.

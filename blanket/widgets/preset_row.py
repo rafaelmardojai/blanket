@@ -1,4 +1,4 @@
-# Copyright 2021-2022 Rafael Mardojai CM
+# Copyright 2021 Rafael Mardojai CM
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from gi.repository import Gio, GObject, Gtk
@@ -15,9 +15,9 @@ class PresetRow(Gtk.ListBoxRow):
     custom: bool = GObject.Property(type=bool, default=False)  # type: ignore
     selected: bool = GObject.Property(type=bool, default=False)  # type: ignore
 
-    name: Gtk.Label = Gtk.Template.Child()  # type: ignore
-    rename_btn: Gtk.Button = Gtk.Template.Child()  # type: ignore
-    delete_btn: Gtk.Button = Gtk.Template.Child()  # type: ignore
+    name: Gtk.Label = Gtk.Template.Child()
+    rename_btn: Gtk.Button = Gtk.Template.Child()
+    delete_btn: Gtk.Button = Gtk.Template.Child()
 
     def __init__(self, preset):
         super().__init__()
