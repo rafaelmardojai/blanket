@@ -230,9 +230,6 @@ class Application(Adw.Application):
         else:
             self.window.present()
 
-        # Connect window close-request signal to _on_window_close_request
-        self.window.connect("close-request", self._on_window_close_request)
-
         # Load saved props
         MainPlayer.get().volume = Settings.get().volume
         MainPlayer.get().playing = (
