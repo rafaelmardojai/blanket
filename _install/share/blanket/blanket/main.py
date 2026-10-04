@@ -206,8 +206,6 @@ class Application(Adw.Application):
         if not self.window:
             self.window = BlanketWindow(application=self)
 
-            self.window.connect("close-request", self._on_window_close_request)
-
         self.window.props.hide_on_close = Settings.get().background
 
         if self.window_hidden:
