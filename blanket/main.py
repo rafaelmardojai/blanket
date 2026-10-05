@@ -3,7 +3,7 @@
 
 import sys
 from gettext import gettext as _
-
+from typing import cast
 import gi
 
 try:
@@ -12,6 +12,7 @@ try:
     gi.require_version("Gst", "1.0")
     gi.require_version("GstAudio", "1.0")
     gi.require_version("Gtk", "4.0")
+    from gi.repository import Adw, Gio, GLib, Gst, Gtk  # pyright: ignore[reportAttributeAccessIssue]
     gi.require_version("Xdp", "1.0")
     gi.require_version("XdpGtk4", "1.0")
     from gi.repository import Adw, Gio, GLib, Gst, Gtk
@@ -22,6 +23,7 @@ except (ImportError, ValueError) as exc:
     print("Error: Dependencies not met.", exc)
     exit()
 
+from blanket.define import ARTISTS, AUTHORS, RES_PATH, SOUND_ARTISTS, SOUND_EDITORS, SOUNDS
 from blanket.define import (
     APP_ID,
     ARTISTS,
@@ -39,6 +41,9 @@ from blanket.sound import Sound
 from blanket.widgets import PresetDialog
 from blanket.widgets.sound_rename_dialog import SoundRenameDialog
 from blanket.window import BlanketWindow
+
+# added for cli
+from blanket.sound import Sound
 
 
 class Application(Adw.Application):
@@ -72,11 +77,60 @@ class Application(Adw.Application):
             "Start window hidden",
             None,
         )
+
+        # Lists Presets
+        self.add_main_option(
+            "list-sounds",
+            ord("l"),
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.NONE,
+            "List all sounds",
+            None,
+        )
+
+        # Plays Sound(s). Best to use `&` at the end to keep using terminal
+        self.add_main_option(
+            "play",
+            ord("p"),
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.STRING,
+            "Plays audio",
+            "SOUND_NAME, SOUND_NAME..."
+        )
+
+        # Stops playing
+        self.add_main_option(
+            "quit",
+            ord("q"),
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.NONE,
+            "Quits the app",
+        )
+
+        # Set master volume
+        self.add_main_option(
+            "volume",
+            0,
+            GLib.OptionFlags.NONE,
+            GLib.OptionArg.INT,
+            "Set master volume",
+            "NUMBER"
+        )
+
         # App window
         self.window: BlanketWindow | None = None
         self.window_hidden = False
         # App version
         self.version = VERSION
+
+    def _clear_playback_state(self):
+        # Reset per-sound playback before applying a CLI selection.
+        for sound in MainPlayer.get():
+            sound = cast(Sound, sound)
+            sound.playing = False
+
+        MainPlayer.get().playing = False
+        Settings.get().playing = False
 
     def do_startup(self):
         # Startup application
@@ -166,6 +220,8 @@ class Application(Adw.Application):
         if not self.window:
             self.window = BlanketWindow(application=self)
 
+            self.window.connect("close-request", self._on_window_close_request)
+
         self.window.props.hide_on_close = Settings.get().background
 
         if self.window_hidden:
@@ -173,9 +229,6 @@ class Application(Adw.Application):
             self.window_hidden = False
         else:
             self.window.present()
-
-        # Connect window close-request signal to _on_window_close_request
-        self.window.connect("close-request", self._on_window_close_request)
 
         # Load saved props
         MainPlayer.get().volume = Settings.get().volume
@@ -189,6 +242,50 @@ class Application(Adw.Application):
 
         if "hidden" in options and self.window is None:
             self.window_hidden = True
+        
+        # playing sounds with cli
+        # lists presets "--list-presets"
+        if "list-sounds" in options:   
+            for s in [s for g in SOUNDS for s in g["sounds"]]:
+                command_line.print_literal(f"{s['name']}\n")
+            return 0
+        
+        # clears previous persisted playback state
+        # plays one or multiple sounds "--play "rain, birds, city..." &"
+        if "play" in options:
+            self.window_hidden = True
+            self.activate()
+            self._clear_playback_state()
+
+            seen = set()
+            for sound_name in options["play"].split(","):
+                sound_name = sound_name.strip()
+                if not sound_name or sound_name in seen:
+                    continue
+                seen.add(sound_name)
+                sound, _ = MainPlayer.get().get_by_name(sound_name)
+                if sound:
+                    sound = cast(Sound, sound)
+                    sound.playing = True
+                    command_line.print_literal(f"Playing {sound_name} \n")
+                else:
+                    command_line.print_literal(f"{sound_name} not found \n")
+            MainPlayer.get().playing = True
+            return 0
+        
+        # Quit arg "--quit"
+        if "quit" in options:
+            MainPlayer.get().playing = False
+            self.quit()
+            return 0
+        
+        # set volume "--volume <NUM: 0-100>"
+        if "volume" in options:
+            volume = options["volume"] / 100
+            MainPlayer.get().volume = volume
+            Settings.get().volume = volume
+            return 0
+        
 
         self.activate()
         return 0
