@@ -6,6 +6,7 @@ _build/
 .flatplay/
 .ruff_cache/
 *.flatpak
+_install/
 
 
 #vscode
