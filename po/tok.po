@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: blanket\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-01-28 03:31-0300\n"
-"PO-Revision-Date: 2025-12-30 16:00+0000\n"
-"Last-Translator: Mrpalland <Mrpalland@gmail.com>\n"
+"PO-Revision-Date: 2026-10-30 12:51+0000\n"
+"Last-Translator: jan Mika <tenposuno@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Toki Pona <https://hosted.weblate.org/projects/blanket/"
 "blanket/tok/>\n"
 "Language: tok\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:3
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:6 blanket/main.py:39
 #: blanket/mpris.py:156
 msgid "Blanket"
-msgstr "len"
+msgstr "Blanket"
 
 #: data/com.rafaelmardojai.Blanket.desktop.in:4 data/resources/about.blp:6
 #: blanket/mpris.py:154
@@ -55,11 +55,11 @@ msgstr "ijo ilo:"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:13
 msgid "Save presets"
-msgstr "o awen e kon ijo"
+msgstr "o awen e kon ni"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:14
 msgid "Add custom sounds"
-msgstr "o pana e kalama sin sina"
+msgstr "o pana e kalama sin"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:15
 msgid "Auto start in background"
@@ -141,7 +141,7 @@ msgstr "kalama walo"
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:33 blanket/define.py:15
 #: blanket/define.py:63 blanket/define.py:75
 msgid "Wind"
-msgstr "kon"
+msgstr "kon tawa"
 
 #: data/com.rafaelmardojai.Blanket.metainfo.xml.in:67
 msgid "The default screen in light theme"
@@ -165,7 +165,7 @@ msgstr "ilo Copyright 2020-2022 Rafael Mardojai CM"
 #: data/resources/about.blp:15
 msgctxt "Add your names here, do not remove previous names!"
 msgid "translator-credits"
-msgstr ""
+msgstr "ma pona pi toki pona"
 
 #: data/resources/preferences.blp:7
 msgid "Appearance"
@@ -199,19 +199,19 @@ msgstr "o awen e ni"
 
 #: data/resources/preset-dialog.blp:40
 msgid "Preset Name"
-msgstr "nimi pi kon ijo ni"
+msgstr "nimi kon"
 
 #: data/resources/preset-row.blp:32
 msgid "Rename Preset"
-msgstr "o ante e nimi pi kon ijo ni"
+msgstr "o ante e nimi pi kon ni"
 
 #: data/resources/preset-row.blp:43
 msgid "Delete Preset"
-msgstr "o weka e kon ijo ni"
+msgstr "o weka e kon ni"
 
 #: data/resources/shortcuts.blp:8
 msgid "General"
-msgstr ""
+msgstr "lon ale"
 
 #: data/resources/shortcuts.blp:12 data/resources/window.blp:76
 msgid "Play/Pause Sounds"
@@ -227,11 +227,11 @@ msgstr "o weka e lupa"
 
 #: data/resources/shortcuts.blp:27 data/resources/window.blp:105
 msgid "Preferences"
-msgstr "ilo"
+msgstr "ken ilo"
 
 #: data/resources/shortcuts.blp:32 data/resources/window.blp:110
 msgid "Keyboard Shortcuts"
-msgstr ""
+msgstr "kulupu nena"
 
 #: data/resources/shortcuts.blp:37 data/resources/window.blp:122
 msgid "Quit"
@@ -243,19 +243,19 @@ msgstr "nimi kalama"
 
 #: data/resources/window.blp:24
 msgid "Presets Menu"
-msgstr ""
+msgstr "lipu kon"
 
 #: data/resources/window.blp:31
 msgid "Main Menu"
-msgstr ""
+msgstr "lipu open"
 
 #: data/resources/window.blp:67
 msgid "Volume Menu"
-msgstr ""
+msgstr "lipu pi kalama ante"
 
 #: data/resources/window.blp:84
 msgid "Sounds Menu"
-msgstr ""
+msgstr "lipu kalama"
 
 #: data/resources/window.blp:98
 msgid "Keep Playing when Closed"
@@ -267,7 +267,7 @@ msgstr "sona pi ilo len"
 
 #: data/resources/window.blp:137
 msgid "Reset Sounds"
-msgstr ""
+msgstr "o kute ala"
 
 #: data/resources/window.blp:146
 msgid "Hide Inactive Sounds"
@@ -275,7 +275,7 @@ msgstr "o lukin ala e kalama pi kalama ala"
 
 #: data/resources/window.blp:151
 msgid "Save as New Preset…"
-msgstr ""
+msgstr "o awen sona e kon ijo sin…"
 
 #: data/resources/window.blp:157
 msgid "Add Sound…"
@@ -283,114 +283,116 @@ msgstr "o pana e kalama…"
 
 #: data/resources/window.blp:212
 msgid "Paused to save power"
-msgstr ""
+msgstr "o awen e wawa la, kalama ni li pini"
 
 #: data/resources/window.blp:214
 msgid "_Resume Playing"
-msgstr ""
+msgstr "o open e kalama lon awen"
 
 #: blanket/define.py:11
 msgid "Nature"
-msgstr ""
+msgstr "ma"
 
 #: blanket/define.py:23
 msgid "Travel"
-msgstr ""
+msgstr "lon tawa"
 
 #: blanket/define.py:31
 msgid "Interiors"
-msgstr ""
+msgstr "tomo"
 
 #: blanket/define.py:38
 msgid "Noise"
-msgstr ""
+msgstr "kule ala"
 
 #: blanket/define.py:48
 msgid "Sounds icons"
-msgstr ""
+msgstr "sitelen kalama"
 
 #: blanket/define.py:48
 msgid "App icon"
-msgstr ""
+msgstr "sitelen ilo"
 
 #: blanket/main.py:257
 msgid "Source Code"
-msgstr ""
+msgstr "lipu pi toki ilo"
 
 #: blanket/main.py:258
 msgid "Sounds by"
-msgstr ""
+msgstr "jan pali"
 
 #: blanket/main.py:259
 msgid "Sounds edited by"
-msgstr ""
+msgstr "jan pi pali ante"
 
 #: blanket/preferences.py:79
 msgid "Autostart Blanket in background."
-msgstr ""
+msgstr "o open e ilo ni lon monsi."
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "Request error"
-msgstr ""
+msgstr "o wile li ike"
 
 #: blanket/preferences.py:107 blanket/preferences.py:128
 msgid "The autostart request failed."
-msgstr ""
+msgstr "o open li kama ike."
 
 #: blanket/preferences.py:108 blanket/preferences.py:125
 #: blanket/preferences.py:129
 msgid "Ok"
-msgstr ""
+msgstr "pona"
 
 #: blanket/preferences.py:124
 msgid "Authorization failed"
-msgstr ""
+msgstr "o ken ala"
 
 #: blanket/preferences.py:124
 msgid ""
 "Make sure Blanket has permission to run in the background in Settings → "
 "Applications → Blanket and try again."
 msgstr ""
+"sina ken kute awen lon monsi la, o lukin lon lipu ken. lipu ni li lon lipu "
+"pi \"Settings → Applications → Blanket\"."
 
 #: blanket/window.py:133
 msgid "Sound Automatically Removed"
-msgstr ""
+msgstr "tenpo sin la, kalama li weka"
 
 #: blanket/window.py:135
 #, python-brace-format
 msgid "The {name} sound is no longer accessible, so it has been removed"
-msgstr ""
+msgstr "kalama pi nimi {name} li lon ala tan ni: kalama ni li kama weka"
 
 #: blanket/window.py:138
 msgid "Accept"
-msgstr ""
+msgstr "ni li pona"
 
 #: blanket/window.py:185
 msgid "Open audio"
-msgstr ""
+msgstr "o open e kalama"
 
 #. Add new sound item
 #: blanket/window.py:253
 msgid "Add…"
-msgstr ""
+msgstr "o pana…"
 
 #: blanket/widgets/preset_dialog.py:29
 msgid "New Preset"
-msgstr ""
+msgstr "kon sin"
 
 #: blanket/widgets/preset_dialog.py:33
 msgid "Edit Preset"
-msgstr ""
+msgstr "o ante e kon"
 
 #: blanket/widgets/sound_context_menu.py:26
 msgid "Rename"
-msgstr ""
+msgstr "nimi ante"
 
 #: blanket/widgets/sound_context_menu.py:31
 msgid "Remove"
-msgstr ""
+msgstr "o weka"
 
 #. type: ignore
 #: blanket/widgets/sound_rename_dialog.py:28
 msgid "Rename Sound"
-msgstr ""
+msgstr "o ante e nimi kalama"
